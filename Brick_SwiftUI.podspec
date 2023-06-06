@@ -29,8 +29,8 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = "14.0"
-  s.tvos.deployment_target = "14.0"
-  s.watchos.deployment_target = "7.0"
+#  s.tvos.deployment_target = "14.0"
+#  s.watchos.deployment_target = "7.0"
   s.osx.deployment_target = "11.0"
   
   s.swift_versions     = ['5.8','5.7','5.6','5.5']
