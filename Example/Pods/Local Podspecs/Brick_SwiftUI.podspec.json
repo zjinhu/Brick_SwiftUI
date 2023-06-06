@@ -16,8 +16,7 @@
     "tag": "0.0.1"
   },
   "platforms": {
-    "ios": "14.0",
-    "osx": "11.0"
+    "ios": "14.0"
   },
   "swift_versions": [
     "5.8",
