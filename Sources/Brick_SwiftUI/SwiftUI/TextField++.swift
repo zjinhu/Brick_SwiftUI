@@ -2,9 +2,7 @@
 // Copyright (c) Vatsal Manot
 //
 
-import Swift
 import SwiftUI
-
 extension TextField where Label == Text {
     public init(
         _ title: LocalizedStringKey,
