@@ -1,0 +1,6 @@
+framework module Brick_SwiftUI {
+  umbrella header "Brick_SwiftUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

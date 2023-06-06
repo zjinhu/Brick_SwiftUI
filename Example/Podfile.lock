@@ -1,0 +1,24 @@
+PODS:
+  - Brick_SwiftUI (0.1.0):
+    - Brick_SwiftUI/Backports (= 0.1.0)
+    - Brick_SwiftUI/SwiftUI (= 0.1.0)
+    - Brick_SwiftUI/Util (= 0.1.0)
+  - Brick_SwiftUI/Backports (0.1.0):
+    - Brick_SwiftUI/Util
+  - Brick_SwiftUI/SwiftUI (0.1.0):
+    - Brick_SwiftUI/Util
+  - Brick_SwiftUI/Util (0.1.0)
+
+DEPENDENCIES:
+  - Brick_SwiftUI (from `../`)
+
+EXTERNAL SOURCES:
+  Brick_SwiftUI:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Brick_SwiftUI: 72d77764870c85b0375311f1f71aa2e32e3c7822
+
+PODFILE CHECKSUM: 8320eed278fec5e543192f0f9321e03e4aa090fc
+
+COCOAPODS: 1.12.1
