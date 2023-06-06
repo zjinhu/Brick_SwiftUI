@@ -1,4 +1,4 @@
-# ${POD_NAME}
+# Brick_SwiftUI
 
 [![SPM](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager/)
 ![Xcode 14.0+](https://img.shields.io/badge/Xcode-14.0%2B-blue.svg)
@@ -59,15 +59,15 @@
 
 ### cocoapods
 
-1.在 Podfile 中添加 `pod '${POD_NAME}'`
+1.在 Podfile 中添加 `pod 'Brick_SwiftUI'`
 
 2.执行 `pod install 或 pod update`
 
-3.导入 `import ${POD_NAME}`
+3.导入 `import Brick_SwiftUI`
 
 ### Swift Package Manager
 
-从 Xcode 11 开始，集成了 Swift Package Manager，使用起来非常方便。${POD_NAME} 也支持通过 Swift Package Manager 集成。
+从 Xcode 11 开始，集成了 Swift Package Manager，使用起来非常方便。Brick_SwiftUI 也支持通过 Swift Package Manager 集成。
 
 在 Xcode 的菜单栏中选择 `File > Swift Packages > Add Pacakage Dependency`，然后在搜索栏输入
 
@@ -75,12 +75,9 @@
 
 ### 手动集成
 
-${POD_NAME} 也支持手动集成，只需把Sources文件夹中的${POD_NAME}文件夹拖进需要集成的项目即可
+Brick_SwiftUI 也支持手动集成，只需把Sources文件夹中的${POD_NAME}文件夹拖进需要集成的项目即可
 
-
-## 作者
-
-${USER_NAME}, ${USER_EMAIL}
+ 
 
 ## 更多砖块工具加速APP开发
 
@@ -99,4 +96,4 @@ ${USER_NAME}, ${USER_EMAIL}
 
 ## 许可
 
-${POD_NAME} is available under the MIT license. See the LICENSE file for more info.
+Brick_SwiftUI is available under the MIT license. See the LICENSE file for more info.
