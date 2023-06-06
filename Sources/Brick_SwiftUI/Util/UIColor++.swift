@@ -5,7 +5,7 @@
 //  Created by iOS on 25/11/2019.
 //  Copyright © 2019 狄烨 . All rights reserved.
 //
-
+#if os(iOS)
 import UIKit
 public extension UIColor {
     
@@ -52,3 +52,4 @@ public extension UIColor {
         self.init(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: trans)
     }
 }
+#endif

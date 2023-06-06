@@ -5,7 +5,7 @@
 //  Created by iOS on 2023/4/20.
 //  Copyright © 2023 狄烨 . All rights reserved.
 //
-
+#if os(iOS)
 import SwiftUI
 import UIKit
 public extension Color {
@@ -107,3 +107,4 @@ public extension View {
         modifier(DetectThemeChange())
     }
 }
+#endif
