@@ -7,8 +7,8 @@ let package = Package(
     name: "Brick_SwiftUI",
     platforms: [
         .iOS(.v14),
-        .tvOS(.v14),
-        .watchOS(.v7),
+//        .tvOS(.v14),
+//        .watchOS(.v7),
         .macOS(.v11),
     ],
     products: [
