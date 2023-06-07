@@ -27,6 +27,6 @@ struct Router<Screen, RootView: View>: View {
     
     var body: some View {
         rootView
-            .br.navigationDestination(isActive: isActiveBinding, destination: pushedScreens)
+            .ss.navigationDestination(isActive: isActiveBinding, destination: pushedScreens)
     }
 }

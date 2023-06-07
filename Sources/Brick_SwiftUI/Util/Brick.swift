@@ -21,7 +21,7 @@ public struct Brick<Wrapped> {
 }
  
 public extension View {
-    var br: Brick<Self> { .init(self) }
+    var ss: Brick<Self> { .init(self) }
 }
  
 public extension AnyTransition {
@@ -39,5 +39,5 @@ public extension Brick where Wrapped == Any {
 
 public extension NSObjectProtocol {
     /// Wraps an `NSObject` that can be extended to provide backport functionality.
-    var br: Brick<Self> { .init(self) }
+    var ss: Brick<Self> { .init(self) }
 }

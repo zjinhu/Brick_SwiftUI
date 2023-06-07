@@ -156,10 +156,10 @@ public extension Brick where Wrapped == Any {
             ZStack {
                 content(phase)
             }
-            .br.task(id: url) {
+            .ss.task(id: url) {
                 do {
                     guard !Task.isCancelled, let url = url else { return }
-                    let (data, _) = try await URLSession.shared.br.data(from: url)
+                    let (data, _) = try await URLSession.shared.ss.data(from: url)
                     guard !Task.isCancelled else { return }
 
                     #if os(macOS)

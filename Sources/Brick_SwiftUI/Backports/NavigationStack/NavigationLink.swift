@@ -39,7 +39,7 @@ extension Brick where Wrapped == Any {
 @available(tvOS, deprecated: 16)
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
-extension Brick.NavigationLink where Label == Text {
+extension Brick.NavigationLink where Wrapped == Any, Label == Text {
     public init(_ titleKey: LocalizedStringKey, value: P?) {
         self.init(value: value) { Text(titleKey) }
     }

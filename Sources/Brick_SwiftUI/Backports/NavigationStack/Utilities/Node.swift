@@ -34,7 +34,7 @@ struct Node<Screen>: View {
     var body: some View {
         if let screen = allScreens[safe: index] ?? screen {
             DestinationBuilderView(data: screen)
-                .br.navigationDestination(isActive: isActiveBinding, destination: next)
+                .ss.navigationDestination(isActive: isActiveBinding, destination: next)
                 .onAppear { isAppeared = true }
                 .onDisappear { isAppeared = false }
         }

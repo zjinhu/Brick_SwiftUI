@@ -12,7 +12,7 @@ internal struct ToolbarBackgroundModifier: ViewModifier {
             .ancestor(forType: UIViewController.self) { proxy in
                 wrapper.controller = proxy.instance
             }
-            .br.task {
+            .ss.task {
                 updateNavigationBar()
                 updateBottomBar()
                 updateTabBar()

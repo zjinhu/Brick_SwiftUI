@@ -88,7 +88,7 @@ extension Brick where Wrapped == Any {
 @available(tvOS, deprecated: 16)
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
-extension Brick.NavigationStack where Data == AnyHashable {
+extension Brick.NavigationStack where Wrapped == Any, Data == AnyHashable{
     public init(@ViewBuilder root: () -> Root) {
         self.init(path: nil, root: root)
     }
@@ -98,7 +98,7 @@ extension Brick.NavigationStack where Data == AnyHashable {
 @available(tvOS, deprecated: 16)
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
-extension Brick.NavigationStack where Data == AnyHashable {
+extension Brick.NavigationStack where Wrapped == Any, Data == AnyHashable {
     public init(path: Binding<Brick.NavigationPath>, @ViewBuilder root: () -> Root) {
         let path = Binding(
             get: { path.wrappedValue.elements },

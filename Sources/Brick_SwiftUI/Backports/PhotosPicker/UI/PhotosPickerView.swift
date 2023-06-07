@@ -66,7 +66,7 @@ internal struct PhotosPickerView: View {
                 }
             }
         }
-        .br.interactiveDismissDisabled()
+        .ss.interactiveDismissDisabled()
         .onChange(of: source) { newValue in
             selection = source == .albums ? [.init(itemIdentifier: "")] : []
         }
