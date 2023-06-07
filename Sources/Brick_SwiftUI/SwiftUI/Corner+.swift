@@ -17,8 +17,8 @@ public struct RoundedCorner: Shape {
     }
 }
 
-public extension View {
+public extension Brick where Wrapped: View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( RoundedCorner(radius: radius, corners: corners) )
+        wrapped.clipShape( RoundedCorner(radius: radius, corners: corners) )
     }
 }

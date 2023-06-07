@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
-
+import Brick_SwiftUI
+ 
 struct ContentView: View {
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack{
+                NavigationLink("Webview", destination: WebView(url: "https://www.qq.com"))
+                
+                NavigationLink("push", destination: PhotoPickerView())
+            }
         }
-        .padding()
     }
 }
 

@@ -7,27 +7,26 @@
 //
 
 import SwiftUI
-
-extension Text {
+ 
+extension Brick where Wrapped == Text {
     @inlinable
     public func font(_ font: Font, weight: Font.Weight?) -> Text {
         if let weight {
-            return self.font(font.weight(weight))
+            return wrapped.font(font.weight(weight))
         } else {
-            return self.font(font)
+            return wrapped.font(font)
         }
     }
 }
 
-extension View {
-
+extension Brick where Wrapped: View {
     @inlinable
     @ViewBuilder
     public func font(_ font: Font, weight: Font.Weight?) -> some View {
         if let weight {
-            self.font(font.weight(weight))
+            wrapped.font(font.weight(weight))
         } else {
-            self.font(font)
+            wrapped.font(font)
         }
     }
 }
