@@ -1,6 +1,6 @@
 {
   "name": "Brick_SwiftUI",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "summary": "A short description of Brick_SwiftUI.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/jackiehu/Brick_SwiftUI",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/jackiehu/Brick_SwiftUI.git",
-    "tag": "0.0.3"
+    "tag": "0.0.4"
   },
   "platforms": {
     "ios": "14.0"
@@ -61,39 +61,24 @@
         ],
         "Brick_SwiftUI/SwiftUI": [
 
+        ],
+        "Brick_SwiftUI/Utilities": [
+
         ]
       },
       "source_files": "Sources/Brick_SwiftUI/Tools/*",
       "subspecs": [
         {
           "name": "PhotoPicker",
-          "source_files": "Sources/Brick_SwiftUI/Tools/PhotoPicker/*",
-          "subspecs": [
-            {
-              "name": "Core",
-              "source_files": "Sources/Brick_SwiftUI/Tools/PhotoPicker/Core/**/*"
-            }
-          ]
+          "source_files": "Sources/Brick_SwiftUI/Tools/PhotoPicker/**/*"
         },
         {
           "name": "Camera",
-          "source_files": "Sources/Brick_SwiftUI/Tools/Camera/*",
-          "subspecs": [
-            {
-              "name": "Core",
-              "source_files": "Sources/Brick_SwiftUI/Tools/Camera/Core/**/*"
-            }
-          ]
+          "source_files": "Sources/Brick_SwiftUI/Tools/Camera/**/*"
         },
         {
           "name": "UIHosting",
-          "source_files": "Sources/Brick_SwiftUI/Tools/UIHosting/**/*",
-          "subspecs": [
-            {
-              "name": "Cells",
-              "source_files": "Sources/Brick_SwiftUI/Tools/UIHosting/Cells/**/*"
-            }
-          ]
+          "source_files": "Sources/Brick_SwiftUI/Tools/UIHosting/**/*"
         },
         {
           "name": "Toolbar",
@@ -117,39 +102,11 @@
         },
         {
           "name": "NavigationStack",
-          "source_files": "Sources/Brick_SwiftUI/Tools/NavigationStack/*",
-          "subspecs": [
-            {
-              "name": "Utilities",
-              "source_files": "Sources/Brick_SwiftUI/Tools/NavigationStack/Utilities/**/*"
-            }
-          ]
+          "source_files": "Sources/Brick_SwiftUI/Tools/NavigationStack/**/*"
         },
         {
           "name": "Feedback",
-          "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/*",
-          "subspecs": [
-            {
-              "name": "Miscellaneous",
-              "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/Miscellaneous/**/*"
-            },
-            {
-              "name": "Haptic",
-              "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/Haptic/**/*"
-            },
-            {
-              "name": "Flash",
-              "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/Flash/**/*"
-            },
-            {
-              "name": "Feedback",
-              "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/Feedback/**/*"
-            },
-            {
-              "name": "Audio",
-              "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/Audio/**/*"
-            }
-          ]
+          "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/**/*"
         }
       ]
     }

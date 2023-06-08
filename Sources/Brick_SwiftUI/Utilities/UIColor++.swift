@@ -7,15 +7,14 @@
 //
 #if os(iOS)
 import UIKit
-public extension UIColor {
+extension UIColor {
     
     static func dynamicColor(light: UIColor, dark: UIColor) -> UIColor {
-        guard #available(iOS 13.0, *) else { return light }
         return UIColor { $0.userInterfaceStyle == .dark ? dark : light }
     }
     
     ///根据16进制字符串生成颜色.支持 0x 或 # 开头字符串
-    convenience init(_ hex: String) {
+    convenience init(hex: String) {
         var string = ""
         if hex.lowercased().hasPrefix("0x") {
             string =  hex.replacingOccurrences(of: "0x", with: "")

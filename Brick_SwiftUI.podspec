@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Brick_SwiftUI'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'A short description of Brick_SwiftUI.'
   
   # This description is used to generate tags and improve search results.
@@ -55,6 +55,8 @@ Pod::Spec.new do |s|
   s.subspec 'Tools' do |ss|
     ss.dependency 'Brick_SwiftUI/Wrapped'
     ss.dependency 'Brick_SwiftUI/SwiftUI'
+    ss.dependency 'Brick_SwiftUI/Utilities'
+    
     ss.source_files = 'Sources/Brick_SwiftUI/Tools/*'
     
     ss.subspec 'PhotoPicker' do |sss|

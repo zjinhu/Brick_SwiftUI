@@ -8,7 +8,7 @@
 #if os(iOS)
 import UIKit
 
-public extension UIView {
+extension UIView {
 
     var parentController: UIViewController? {
         if let responder = self.next as? UIViewController {
@@ -26,7 +26,7 @@ public extension UIView {
 #if os(macOS)
 import AppKit
 
-public extension NSView {
+extension NSView {
 
     var parentController: NSViewController? {
         if let responder = self.nextResponder as? NSViewController {

@@ -49,8 +49,8 @@ public extension Color {
 
 public extension Color {
     static func dynamic(light: String, dark: String) -> Color {
-        let l = UIColor(light)
-        let d = UIColor(dark)
+        let l = UIColor(hex: light)
+        let d = UIColor(hex: dark)
         return UIColor.dynamicColor(light: l, dark: d).toColor()
     }
     
