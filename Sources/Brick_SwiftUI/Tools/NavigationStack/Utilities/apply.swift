@@ -15,4 +15,8 @@ class PathAppender: ObservableObject {
     var append: ((AnyHashable) -> Void)?
 }
 
+
+public protocol NavigatorScreen: Hashable {}
+
 extension AnyHashable: NavigatorScreen {}
+

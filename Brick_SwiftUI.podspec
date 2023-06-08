@@ -58,24 +58,15 @@ Pod::Spec.new do |s|
     ss.source_files = 'Sources/Brick_SwiftUI/Tools/*'
     
     ss.subspec 'PhotoPicker' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/PhotoPicker/*'
-      sss.subspec 'Core' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/PhotoPicker/Core/**/*'
-      end
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/PhotoPicker/**/*'
     end
     
     ss.subspec 'Camera' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Camera/*'
-      sss.subspec 'Core' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/Camera/Core/**/*'
-      end
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Camera/**/*'
     end
     
     ss.subspec 'UIHosting' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/UIHosting/**/*'
-      sss.subspec 'Cells' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/UIHosting/Cells/**/*'
-      end
     end
     
     ss.subspec 'Toolbar' do |sss|
@@ -99,29 +90,11 @@ Pod::Spec.new do |s|
     end
     
     ss.subspec 'NavigationStack' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/NavigationStack/*'
-      sss.subspec 'Utilities' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/NavigationStack/Utilities/**/*'
-      end
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/NavigationStack/**/*'
     end
     
     ss.subspec 'Feedback' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/*'
-      sss.subspec 'Miscellaneous' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/Miscellaneous/**/*'
-      end
-      sss.subspec 'Haptic' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/Haptic/**/*'
-      end
-      sss.subspec 'Flash' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/Flash/**/*'
-      end
-      sss.subspec 'Feedback' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/Feedback/**/*'
-      end
-      sss.subspec 'Audio' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/Audio/**/*'
-      end
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/**/*'
     end
   end
 end

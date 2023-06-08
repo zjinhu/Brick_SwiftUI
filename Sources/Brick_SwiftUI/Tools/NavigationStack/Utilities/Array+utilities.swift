@@ -51,6 +51,7 @@ public extension Array where Element: NavigatorScreen {
         return true
     }
 }
+
 public extension Array where Element: NavigatorScreen & Equatable {
     /// Pops to the topmost (most recently pushed) screen in the stack
     /// equal to the given screen. If no screens are found,
