@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Brick_SwiftUI
- 
 struct ContentView: View {
 
     var body: some View {

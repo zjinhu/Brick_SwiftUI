@@ -4,10 +4,10 @@
 //
 //  Created by iOS on 2023/6/7.
 //
-
+import UIKit
 import SwiftUI
-import Brick_SwiftUI
 import PhotosUI
+import Brick_SwiftUI
 struct PhotoPickerView: View {
     @State private var selectedItem: PHPickerResult?
     @State private var selectedImage: UIImage?
@@ -18,7 +18,7 @@ struct PhotoPickerView: View {
     @State private var showPicker: Bool = false
     
     var body: some View {
-        VStack{
+        List{
             Button {
                 isPresented.toggle()
             } label: {

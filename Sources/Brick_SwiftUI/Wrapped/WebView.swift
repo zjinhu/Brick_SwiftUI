@@ -70,11 +70,8 @@ public class WebViewController: UIViewController, WKNavigationDelegate, WKUIDele
     }()
 
     deinit {
-        Task {
-            // wait for approved access to actor contained data
-            await self.webView.removeObserver(self, forKeyPath: "estimatedProgress")
-            await cleanAllWebsiteDataStore()
-        }
+        webView.removeObserver(self, forKeyPath: "estimatedProgress")
+        cleanAllWebsiteDataStore()
     }
 
     public override func viewDidLoad() {
