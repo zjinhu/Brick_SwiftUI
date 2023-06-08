@@ -12,9 +12,19 @@ import SwiftUI
  }
  .ss.bottomSafeAreaInset(overlayContent)
  */
-public extension Brick where Wrapped: View {
+extension Brick where Wrapped: View {
     @ViewBuilder
-    func bottomSafeAreaInset<OverlayContent: View>(_ overlayContent: OverlayContent) -> some View {
+    public func bottomSafeAreaInset<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
+        
+        if #available(iOS 15.0, *) {
+            wrapped.safeAreaInset(edge: .bottom, spacing: 0, content: { content() })
+        } else {
+            wrapped.modifier(BottomInsetViewModifier(overlayContent: content()))
+        }
+    }
+    
+    @ViewBuilder
+    public func bottomSafeAreaInset<OverlayContent: View>(_ overlayContent: OverlayContent) -> some View {
         
         if #available(iOS 15.0, *) {
             wrapped.safeAreaInset(edge: .bottom, spacing: 0, content: { overlayContent })

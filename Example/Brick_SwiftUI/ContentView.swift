@@ -16,6 +16,9 @@ struct ContentView: View {
                 
                 NavigationLink("PhotoPickerView", destination: PhotoPickerView())
             }
+            .ss.bottomSafeAreaInset {
+                Text("12")
+            }
         }
     }
 }
