@@ -44,71 +44,12 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Util' do |ss|
-    ss.source_files = 'Sources/Brick_SwiftUI/Util/*'
-    ss.subspec 'Camera' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Util/Camera/**/*'
-    end
-    ss.subspec 'PhotoPicker' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Util/PhotoPicker/**/*'
-    end
+    ss.source_files = 'Sources/Brick_SwiftUI/Util/**/*'
+ 
   end
   
   s.subspec 'Wrapped' do |ss|
-    ss.dependency 'Brick_SwiftUI/Util'
-    
-    ss.source_files = 'Sources/Brick_SwiftUI/Wrapped/*'
-    
-    ss.subspec 'Feedback' do |sss|
-      
-      sss.source_files = 'Sources/Brick_SwiftUI/Wrapped/Feedback/*'
-      
-      sss.subspec 'Audio' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Wrapped/Feedback/Audio/**/*'
-      end
-      sss.subspec 'Feedback' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Wrapped/Feedback/Feedback/**/*'
-      end
-      sss.subspec 'Flash' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Wrapped/Feedback/Flash/**/*'
-      end
-      sss.subspec 'Haptic' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Wrapped/Feedback/Haptic/**/*'
-      end
-      sss.subspec 'Miscellaneous' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Wrapped/Feedback/Miscellaneous/**/*'
-      end
-    end
-    
-    ss.subspec 'NavigationStack' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Wrapped/NavigationStack/*'
-      sss.subspec 'Utilities' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Wrapped/NavigationStack/Utilities/**/*'
-      end
-    end
-    
-    ss.subspec 'Presentation' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Wrapped/Presentation/**/*'
-    end
-    
-    ss.subspec 'ScrollStack' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Wrapped/ScrollStack/**/*'
-    end
-    
-    ss.subspec 'ScrollView' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Wrapped/ScrollView/**/*'
-    end
-    
-    ss.subspec 'ShareLink' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Wrapped/ShareLink/**/*'
-    end
-    
-    ss.subspec 'Toolbar' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Wrapped/Toolbar/**/*'
-    end
-    
-    ss.subspec 'UIHosting' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Wrapped/UIHosting/**/*'
-    end
-    
+    ss.dependency 'Brick_SwiftUI/SwiftUI'
+    ss.source_files = 'Sources/Brick_SwiftUI/Wrapped/**/*'
   end
 end
