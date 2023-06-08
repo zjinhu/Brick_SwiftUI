@@ -7,12 +7,13 @@ PODS:
     - Brick_SwiftUI/Util
   - Brick_SwiftUI/Util (0.0.2):
     - Brick_SwiftUI/Util/Camera (= 0.0.2)
+    - Brick_SwiftUI/Util/PhotoPicker (= 0.0.2)
   - Brick_SwiftUI/Util/Camera (0.0.2)
+  - Brick_SwiftUI/Util/PhotoPicker (0.0.2)
   - Brick_SwiftUI/Wrapped (0.0.2):
     - Brick_SwiftUI/Util
     - Brick_SwiftUI/Wrapped/Feedback (= 0.0.2)
     - Brick_SwiftUI/Wrapped/NavigationStack (= 0.0.2)
-    - Brick_SwiftUI/Wrapped/PhotosPicker (= 0.0.2)
     - Brick_SwiftUI/Wrapped/Presentation (= 0.0.2)
     - Brick_SwiftUI/Wrapped/ScrollStack (= 0.0.2)
     - Brick_SwiftUI/Wrapped/ScrollView (= 0.0.2)
@@ -41,17 +42,6 @@ PODS:
     - Brick_SwiftUI/Wrapped/NavigationStack/Utilities (= 0.0.2)
   - Brick_SwiftUI/Wrapped/NavigationStack/Utilities (0.0.2):
     - Brick_SwiftUI/Util
-  - Brick_SwiftUI/Wrapped/PhotosPicker (0.0.2):
-    - Brick_SwiftUI/Util
-    - Brick_SwiftUI/Wrapped/PhotosPicker/Core (= 0.0.2)
-    - Brick_SwiftUI/Wrapped/PhotosPicker/Fetch (= 0.0.2)
-    - Brick_SwiftUI/Wrapped/PhotosPicker/UI (= 0.0.2)
-  - Brick_SwiftUI/Wrapped/PhotosPicker/Core (0.0.2):
-    - Brick_SwiftUI/Util
-  - Brick_SwiftUI/Wrapped/PhotosPicker/Fetch (0.0.2):
-    - Brick_SwiftUI/Util
-  - Brick_SwiftUI/Wrapped/PhotosPicker/UI (0.0.2):
-    - Brick_SwiftUI/Util
   - Brick_SwiftUI/Wrapped/Presentation (0.0.2):
     - Brick_SwiftUI/Util
   - Brick_SwiftUI/Wrapped/ScrollStack (0.0.2):
@@ -73,7 +63,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Brick_SwiftUI: 21665dd9882545c690211f627a27526084ead601
+  Brick_SwiftUI: 33ba7100e0acb2d6834141cbd19102220753b6cf
 
 PODFILE CHECKSUM: 8320eed278fec5e543192f0f9321e03e4aa090fc
 

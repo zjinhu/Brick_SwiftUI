@@ -48,6 +48,9 @@ Pod::Spec.new do |s|
     ss.subspec 'Camera' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Util/Camera/**/*'
     end
+    ss.subspec 'PhotoPicker' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Util/PhotoPicker/**/*'
+    end
   end
   
   s.subspec 'Wrapped' do |ss|
@@ -80,19 +83,6 @@ Pod::Spec.new do |s|
       sss.source_files = 'Sources/Brick_SwiftUI/Wrapped/NavigationStack/*'
       sss.subspec 'Utilities' do |ssss|
         ssss.source_files = 'Sources/Brick_SwiftUI/Wrapped/NavigationStack/Utilities/**/*'
-      end
-    end
-    
-    ss.subspec 'PhotosPicker' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Wrapped/PhotosPicker/*'
-      sss.subspec 'Core' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Wrapped/PhotosPicker/Core/**/*'
-      end
-      sss.subspec 'Fetch' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Wrapped/PhotosPicker/Fetch/**/*'
-      end
-      sss.subspec 'UI' do |ssss|
-        ssss.source_files = 'Sources/Brick_SwiftUI/Wrapped/PhotosPicker/UI/**/*'
       end
     end
     

@@ -9,12 +9,13 @@ import SwiftUI
 import Brick_SwiftUI
 import PhotosUI
 struct PhotoPickerView: View {
-    @State private var selectedItem: Brick<Any>.PhotosPickerItem?
-    @State private var selectedImageData: Data?
+    @State private var selectedItem: PHPickerResult?
+    @State private var selectedImage: UIImage?
     
     @State private var photoData: Data?
     
     @State private var isPresented: Bool = false
+    @State private var showPicker: Bool = false
     
     var body: some View {
         VStack{
@@ -27,24 +28,19 @@ struct PhotoPickerView: View {
                 CameraView(photoData: $photoData)
             }
 
-            Brick.PhotosPicker(
-                selection: $selectedItem,
-                matching: .images,
-                photoLibrary: .shared()) {
-                    Text("Select a photo")
-                }
-                .onChange(of: selectedItem) { newItem in
-                    Task {
-                        // Retrieve selected asset in the form of Data
-                        if let data = try? await newItem?.loadTransferable(type: Data.self) {
-                            selectedImageData = data
-                        }
-                    }
-                }
+            Button {
+                showPicker.toggle()
+            } label: {
+                Text("Show Picker 1")
+            }
+            .ss.photosPicker(isPresented: $showPicker,
+                             selection: $selectedItem,
+                             matching: .any(of: [.images]))
+
+            PhotoPicker("Show Picker 2", selection: $selectedItem)
             
-            if let selectedImageData,
-               let uiImage = UIImage(data: selectedImageData) {
-                Image(uiImage: uiImage)
+            if let selectedImage {
+                Image(uiImage: selectedImage)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 250, height: 250)
@@ -58,6 +54,12 @@ struct PhotoPickerView: View {
                     .frame(width: 250, height: 250)
             }
         }
+        .onChange(of: selectedItem) { newItem in
+            Task{
+                selectedImage = try? await newItem?.loadTransferable(type: UIImage.self)
+            }
+        }
+        
     }
 }
 

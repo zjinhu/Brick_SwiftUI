@@ -12,10 +12,10 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            VStack{
+            List{
                 NavigationLink("Webview", destination: WebView(url: "https://www.qq.com"))
                 
-                NavigationLink("push", destination: PhotoPickerView())
+                NavigationLink("PhotoPickerView", destination: PhotoPickerView())
             }
         }
     }

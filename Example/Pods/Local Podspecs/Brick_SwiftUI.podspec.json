@@ -47,6 +47,10 @@
         {
           "name": "Camera",
           "source_files": "Sources/Brick_SwiftUI/Util/Camera/**/*"
+        },
+        {
+          "name": "PhotoPicker",
+          "source_files": "Sources/Brick_SwiftUI/Util/PhotoPicker/**/*"
         }
       ]
     },
@@ -92,24 +96,6 @@
             {
               "name": "Utilities",
               "source_files": "Sources/Brick_SwiftUI/Wrapped/NavigationStack/Utilities/**/*"
-            }
-          ]
-        },
-        {
-          "name": "PhotosPicker",
-          "source_files": "Sources/Brick_SwiftUI/Wrapped/PhotosPicker/*",
-          "subspecs": [
-            {
-              "name": "Core",
-              "source_files": "Sources/Brick_SwiftUI/Wrapped/PhotosPicker/Core/**/*"
-            },
-            {
-              "name": "Fetch",
-              "source_files": "Sources/Brick_SwiftUI/Wrapped/PhotosPicker/Fetch/**/*"
-            },
-            {
-              "name": "UI",
-              "source_files": "Sources/Brick_SwiftUI/Wrapped/PhotosPicker/UI/**/*"
             }
           ]
         },
