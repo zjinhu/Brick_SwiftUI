@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Brick_SwiftUI'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'A short description of Brick_SwiftUI.'
   
   # This description is used to generate tags and improve search results.
@@ -38,18 +38,90 @@ Pod::Spec.new do |s|
   s.frameworks   = "UIKit", "Foundation", "SwiftUI" #支持的框架
   
   s.subspec 'SwiftUI' do |ss|
-    ss.dependency 'Brick_SwiftUI/Util'
+    ss.dependency 'Brick_SwiftUI/Utilities'
     ss.source_files = 'Sources/Brick_SwiftUI/SwiftUI/**/*'
     
   end
   
-  s.subspec 'Util' do |ss|
-    ss.source_files = 'Sources/Brick_SwiftUI/Util/**/*'
- 
+  s.subspec 'Utilities' do |ss|
+    ss.source_files = 'Sources/Brick_SwiftUI/Utilities/**/*'
   end
   
   s.subspec 'Wrapped' do |ss|
     ss.dependency 'Brick_SwiftUI/SwiftUI'
     ss.source_files = 'Sources/Brick_SwiftUI/Wrapped/**/*'
+  end
+  
+  s.subspec 'Tools' do |ss|
+    ss.dependency 'Brick_SwiftUI/Wrapped'
+    ss.dependency 'Brick_SwiftUI/SwiftUI'
+    ss.source_files = 'Sources/Brick_SwiftUI/Tools/*'
+    
+    ss.subspec 'PhotoPicker' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/PhotoPicker/*'
+      sss.subspec 'Core' do |ssss|
+        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/PhotoPicker/Core/**/*'
+      end
+    end
+    
+    ss.subspec 'Camera' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Camera/*'
+      sss.subspec 'Core' do |ssss|
+        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/Camera/Core/**/*'
+      end
+    end
+    
+    ss.subspec 'UIHosting' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/UIHosting/**/*'
+      sss.subspec 'Cells' do |ssss|
+        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/UIHosting/Cells/**/*'
+      end
+    end
+    
+    ss.subspec 'Toolbar' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Toolbar/**/*'
+    end
+    
+    ss.subspec 'ShareLink' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/ShareLink/**/*'
+    end
+    
+    ss.subspec 'ScrollView' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/ScrollView/**/*'
+    end
+    
+    ss.subspec 'ScrollStack' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/ScrollStack/**/*'
+    end
+    
+    ss.subspec 'Presentation' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Presentation/**/*'
+    end
+    
+    ss.subspec 'NavigationStack' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/NavigationStack/*'
+      sss.subspec 'Utilities' do |ssss|
+        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/NavigationStack/Utilities/**/*'
+      end
+    end
+    
+    ss.subspec 'Feedback' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/*'
+      sss.subspec 'Miscellaneous' do |ssss|
+        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/Miscellaneous/**/*'
+      end
+      sss.subspec 'Haptic' do |ssss|
+        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/Haptic/**/*'
+      end
+      sss.subspec 'Flash' do |ssss|
+        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/Flash/**/*'
+      end
+      sss.subspec 'Feedback' do |ssss|
+        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/Feedback/**/*'
+      end
+      sss.subspec 'Audio' do |ssss|
+        ssss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/Audio/**/*'
+      end
+    end
   end
 end

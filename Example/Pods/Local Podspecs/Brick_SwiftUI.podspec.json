@@ -34,15 +34,15 @@
     {
       "name": "SwiftUI",
       "dependencies": {
-        "Brick_SwiftUI/Util": [
+        "Brick_SwiftUI/Utilities": [
 
         ]
       },
       "source_files": "Sources/Brick_SwiftUI/SwiftUI/**/*"
     },
     {
-      "name": "Util",
-      "source_files": "Sources/Brick_SwiftUI/Util/**/*"
+      "name": "Utilities",
+      "source_files": "Sources/Brick_SwiftUI/Utilities/**/*"
     },
     {
       "name": "Wrapped",
@@ -52,6 +52,106 @@
         ]
       },
       "source_files": "Sources/Brick_SwiftUI/Wrapped/**/*"
+    },
+    {
+      "name": "Tools",
+      "dependencies": {
+        "Brick_SwiftUI/Wrapped": [
+
+        ],
+        "Brick_SwiftUI/SwiftUI": [
+
+        ]
+      },
+      "source_files": "Sources/Brick_SwiftUI/Tools/*",
+      "subspecs": [
+        {
+          "name": "PhotoPicker",
+          "source_files": "Sources/Brick_SwiftUI/Tools/PhotoPicker/*",
+          "subspecs": [
+            {
+              "name": "Core",
+              "source_files": "Sources/Brick_SwiftUI/Tools/PhotoPicker/Core/**/*"
+            }
+          ]
+        },
+        {
+          "name": "Camera",
+          "source_files": "Sources/Brick_SwiftUI/Tools/Camera/*",
+          "subspecs": [
+            {
+              "name": "Core",
+              "source_files": "Sources/Brick_SwiftUI/Tools/Camera/Core/**/*"
+            }
+          ]
+        },
+        {
+          "name": "UIHosting",
+          "source_files": "Sources/Brick_SwiftUI/Tools/UIHosting/**/*",
+          "subspecs": [
+            {
+              "name": "Cells",
+              "source_files": "Sources/Brick_SwiftUI/Tools/UIHosting/Cells/**/*"
+            }
+          ]
+        },
+        {
+          "name": "Toolbar",
+          "source_files": "Sources/Brick_SwiftUI/Tools/Toolbar/**/*"
+        },
+        {
+          "name": "ShareLink",
+          "source_files": "Sources/Brick_SwiftUI/Tools/ShareLink/**/*"
+        },
+        {
+          "name": "ScrollView",
+          "source_files": "Sources/Brick_SwiftUI/Tools/ScrollView/**/*"
+        },
+        {
+          "name": "ScrollStack",
+          "source_files": "Sources/Brick_SwiftUI/Tools/ScrollStack/**/*"
+        },
+        {
+          "name": "Presentation",
+          "source_files": "Sources/Brick_SwiftUI/Tools/Presentation/**/*"
+        },
+        {
+          "name": "NavigationStack",
+          "source_files": "Sources/Brick_SwiftUI/Tools/NavigationStack/*",
+          "subspecs": [
+            {
+              "name": "Utilities",
+              "source_files": "Sources/Brick_SwiftUI/Tools/NavigationStack/Utilities/**/*"
+            }
+          ]
+        },
+        {
+          "name": "Feedback",
+          "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/*",
+          "subspecs": [
+            {
+              "name": "Miscellaneous",
+              "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/Miscellaneous/**/*"
+            },
+            {
+              "name": "Haptic",
+              "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/Haptic/**/*"
+            },
+            {
+              "name": "Flash",
+              "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/Flash/**/*"
+            },
+            {
+              "name": "Feedback",
+              "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/Feedback/**/*"
+            },
+            {
+              "name": "Audio",
+              "source_files": "Sources/Brick_SwiftUI/Tools/Feedback/Audio/**/*"
+            }
+          ]
+        }
+      ]
     }
   ],
   "swift_version": "5.8"

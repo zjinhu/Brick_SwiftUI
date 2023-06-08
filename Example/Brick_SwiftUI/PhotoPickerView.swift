@@ -37,7 +37,8 @@ struct PhotoPickerView: View {
                              selection: $selectedItem,
                              matching: .any(of: [.images]))
 
-            PhotoPicker("Show Picker 2", selection: $selectedItem)
+            PhotoPicker("Show Picker 2",
+                        selection: $selectedItem)
             
             if let selectedImage {
                 Image(uiImage: selectedImage)
