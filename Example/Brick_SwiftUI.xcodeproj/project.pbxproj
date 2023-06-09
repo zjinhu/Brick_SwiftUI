@@ -13,6 +13,8 @@
 		815DC61E2A0DEF5500DCE83D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815DC61D2A0DEF5500DCE83D /* ContentView.swift */; };
 		815DC6202A0DEF5600DCE83D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815DC61F2A0DEF5600DCE83D /* Assets.xcassets */; };
 		815DC6242A0DEF5600DCE83D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815DC6232A0DEF5600DCE83D /* Preview Assets.xcassets */; };
+		81D9458D2A33173A000E3496 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9458C2A33173A000E3496 /* ImageView.swift */; };
+		81D9458F2A331CF1000E3496 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9458E2A331CF1000E3496 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		815DC6212A0DEF5600DCE83D /* Brick_SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Brick_SwiftUI.entitlements; sourceTree = "<group>"; };
 		815DC6232A0DEF5600DCE83D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		815DC6772A0E3DE100DCE83D /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
+		81D9458C2A33173A000E3496 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		81D9458E2A331CF1000E3496 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		C49C55772795767556BB3BA7 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +78,8 @@
 				815DC61B2A0DEF5500DCE83D /* ExampleApp.swift */,
 				815DC61D2A0DEF5500DCE83D /* ContentView.swift */,
 				813E5DCC2A3063E400BCFB99 /* PhotoPickerView.swift */,
+				81D9458C2A33173A000E3496 /* ImageView.swift */,
+				81D9458E2A331CF1000E3496 /* SwiftUIView.swift */,
 				815DC61F2A0DEF5600DCE83D /* Assets.xcassets */,
 				815DC6212A0DEF5600DCE83D /* Brick_SwiftUI.entitlements */,
 				815DC6222A0DEF5600DCE83D /* Preview Content */,
@@ -212,9 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D9458D2A33173A000E3496 /* ImageView.swift in Sources */,
 				815DC61E2A0DEF5500DCE83D /* ContentView.swift in Sources */,
 				813E5DCD2A3063E400BCFB99 /* PhotoPickerView.swift in Sources */,
 				815DC61C2A0DEF5500DCE83D /* ExampleApp.swift in Sources */,
+				81D9458F2A331CF1000E3496 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

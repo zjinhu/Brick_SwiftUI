@@ -9,6 +9,8 @@ import SwiftUI
 import PhotosUI
 import Brick_SwiftUI
 struct PhotoPickerView: View {
+    @Environment(\.dismiss) private var dismiss
+    
     @State private var selectedItem: PHPickerResult?
     @State private var selectedImage: UIImage?
     
@@ -53,6 +55,15 @@ struct PhotoPickerView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 250, height: 250)
+            }
+        }
+        .toolbar {
+            Brick.ToolbarItem(placement: .cancellationAction) {
+                Button {
+                    dismiss()
+                } label: {
+                    Text("Close")
+                }
             }
         }
         .onChange(of: selectedItem) { newItem in

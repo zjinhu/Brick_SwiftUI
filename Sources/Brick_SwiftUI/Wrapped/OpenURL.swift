@@ -153,6 +153,7 @@ private struct OpenURLKey: EnvironmentKey {
     }
 }
 public extension EnvironmentValues {
+    @_disfavoredOverload
     var openURL: Brick<Any>.OpenURLAction {
         get { self[OpenURLKey.self] }
         set { self[OpenURLKey.self] = newValue }
