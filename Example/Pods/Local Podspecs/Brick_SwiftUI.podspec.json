@@ -1,6 +1,6 @@
 {
   "name": "Brick_SwiftUI",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "summary": "A short description of Brick_SwiftUI.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/jackiehu/Brick_SwiftUI",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/jackiehu/Brick_SwiftUI.git",
-    "tag": "0.0.4"
+    "tag": "0.0.5"
   },
   "platforms": {
     "ios": "14.0"
@@ -66,8 +66,15 @@
 
         ]
       },
-      "source_files": "Sources/Brick_SwiftUI/Tools/*",
       "subspecs": [
+        {
+          "name": "AsyncImage",
+          "source_files": "Sources/Brick_SwiftUI/Tools/AsyncImage/**/*"
+        },
+        {
+          "name": "OpenUrl",
+          "source_files": "Sources/Brick_SwiftUI/Tools/OpenUrl/**/*"
+        },
         {
           "name": "PhotoPicker",
           "source_files": "Sources/Brick_SwiftUI/Tools/PhotoPicker/**/*"

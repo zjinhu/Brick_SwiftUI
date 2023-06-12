@@ -9,59 +9,51 @@ import SwiftUI
 import Brick_SwiftUI
 struct ContentView: View {
 
-    @State private var showSettings = false
+    @State private var showSheet = false
+
+    @State private var url: URL?
+    @State private var selection: URL?
+    let urls = Bundle.main.quicklookUrls
     
-    @Environment(\.openURL) private var openURL
-    @State private var showDiscarded: Bool = false
-    @State private var showHandled: Bool = false
 
     
     var body: some View {
-        NavigationView {
+        Brick.NavigationStack {
             List{
-                NavigationLink("Webview", destination: WebView(url: "https://www.qq.com"))
                 
-                NavigationLink("PhotoPickerView", destination: PhotoPickerView())
+                NavigationLink("NavigationStack", destination: NavigationStack())
+                
+                NavigationLink("OpenURL", destination: OpenURLView())
+                
+                NavigationLink("ShareLink", destination: ShareLinkView())
+                
+                NavigationLink("Photo", destination: PhotoPickerView())
                 
                 NavigationLink("AsyncImage", destination: ImageView())
                 
-                Brick.ShareLink(item: "Can I share this?") {
-                    Text("ShareLink")
-                }
-                .buttonStyle(.plain)
-
-                Brick.ShareLink(item: "Some text to share")
-                Brick.ShareLink("ShareLink", item: URL(string: "https://benkau.com")!)
-                
                 Button {
-                    showSettings.toggle()
+                    showSheet.toggle()
                 } label: {
                     Text("Sheet")
                 }
                 
-                Button {
-                    openURL(URL(string: "https://www.baidu.com")!)
-                } label: {
-                    Text("Baidu")
-                }
                 
-                Link("Shaps Benkau", destination: URL(string: "https://benkau.com")!)
-                    .environment(\.openURL, Brick.OpenURLAction { url in
-                        print("Open \(url)")
-                        return .systemAction
-                    })
-                Link("In-app Safari", destination: URL(string: "https://github.com/shaps80/SwiftUIBackports")!)
-                    .environment(\.openURL, Brick.OpenURLAction.init { url in
-                        .safari(url) { config in
-                            config.tintColor = .red
-                            config.dismissStyle = .close
-                            config.prefersReader = true
-                            config.barCollapsingEnabled = false
-                        }
-                    })
-   
+                Button {
+                    url = urls.randomElement()
+                } label: {
+                    Text("Quicklook URL")
+                }
+                .quickLookPreview($url)
+                
+                Button {
+                    selection = urls.randomElement()
+                } label: {
+                    Text("Quicklook Collection")
+                }
+                .quickLookPreview($selection, in: urls)
+ 
             }
-            .sheet(isPresented: $showSettings) {
+            .sheet(isPresented: $showSheet) {
                 SwiftUIView()
             }
             .ss.bottomSafeAreaInset {
@@ -74,14 +66,25 @@ struct ContentView: View {
                             Color.orange
                         }
                 }
-
+                
             }
         }
+        
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+
+extension Bundle {
+    var quicklookUrls: [URL] {
+        urls(forResourcesWithExtension: "jpg", subdirectory: nil)?
+            .sorted(by: { $0.lastPathComponent < $1.lastPathComponent })
+        ?? []
     }
 }

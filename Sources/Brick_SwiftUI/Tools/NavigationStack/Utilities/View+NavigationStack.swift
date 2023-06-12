@@ -5,7 +5,7 @@ public extension Brick where Wrapped: View {
     /// will be used on all versions, even when the API is available.
     /// - Parameter policy: The policy to use
     /// - Returns: A view with the policy set for all child views via a private environment value.
-    func useNavigationStack(_ policy: UseNavigationStackPolicy) -> some View {
+    func useNavigationStack(_ policy: UseNavigationStackPolicy = .whenAvailable) -> some View {
         wrapped.environment(\.useNavigationStack, policy)
     }
 }

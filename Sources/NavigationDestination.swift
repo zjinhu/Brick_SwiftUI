@@ -4,7 +4,7 @@ import SwiftUI
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
 @available(iOS 14, macOS 11, watchOS 7, tvOS 14, *)
-public extension SwiftBrickWrapper where Wrapped: View {
+public extension Brick where Wrapped: View {
 
     /// Associates a destination view with a presented data type for use within
     /// a navigation stack.
@@ -50,7 +50,7 @@ public extension SwiftBrickWrapper where Wrapped: View {
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
 @available(iOS 14, macOS 11, watchOS 7, tvOS 14, *)
-public extension SwiftBrickWrapper where Wrapped == Any {
+public extension Brick where Wrapped == Any {
     struct NavigationLink<Label, Destination>: View where Label: View, Destination: View {
         @Environment(\.navigationDestinations) private var destinations
 

@@ -20,8 +20,8 @@ struct NavigationWrapper<Content: View>: View {
 }
 
 public enum UseNavigationStackPolicy {
-    case whenAvailable
-    case never
+  case whenAvailable
+  case never
 }
 
 private var supportedNavigationViewStyle: some NavigationViewStyle {

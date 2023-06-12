@@ -7,10 +7,13 @@
 
 import SwiftUI
 import Brick_SwiftUI
+import QuickLook
 struct SwiftUIView: View {
     
     @Environment(\.dismiss) private var dismiss
     
+    @Environment(\.requestReview) private var requestReview
+
     var body: some View {
         
         VScrollStack{
@@ -33,6 +36,12 @@ struct SwiftUIView: View {
             }
             .ss.background {
                 Color.orange
+            }
+
+            Button {
+                requestReview()
+            } label: {
+                Text("Request Review")
             }
         }
  

@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
-
+import Brick_SwiftUI
 @main
 struct ExampleApp: App {
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+
         }
     }
 }
