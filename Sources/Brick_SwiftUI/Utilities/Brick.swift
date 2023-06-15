@@ -41,3 +41,4 @@ public extension NSObjectProtocol {
     /// Wraps an `NSObject` that can be extended to provide backport functionality.
     var ss: Brick<Self> { .init(self) }
 }
+

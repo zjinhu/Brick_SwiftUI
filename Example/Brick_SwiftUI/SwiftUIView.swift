@@ -8,6 +8,7 @@
 import SwiftUI
 import Brick_SwiftUI
 import QuickLook
+
 struct SwiftUIView: View {
     
     @Environment(\.dismiss) private var dismiss
@@ -17,7 +18,7 @@ struct SwiftUIView: View {
     
     var body: some View {
         
-        VScrollStack{
+        VScrollStack(spacing: 20){
             
             Button {
                 dismiss()
@@ -38,9 +39,9 @@ struct SwiftUIView: View {
             .ss.background {
                 Color.orange
             }
-
+            
             Button {
-
+                
                 requestReview()
             } label: {
                 Text("Request Review")
@@ -53,12 +54,12 @@ struct SwiftUIView: View {
                     withAnimation(.easeOut(duration: 10), after: 10) {
                         value.toggle()
                     } completion: {
-                        print("Animation have finished")
+                        
+                        log.log("Animation have finished")
                     }
                 }
-            
         }
- 
+        
     }
 }
 
@@ -67,3 +68,4 @@ struct SwiftUIView_Previews: PreviewProvider {
         SwiftUIView()
     }
 }
+
