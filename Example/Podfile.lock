@@ -1,77 +1,77 @@
 PODS:
-  - Brick_SwiftUI (0.0.5):
-    - Brick_SwiftUI/SwiftUI (= 0.0.5)
-    - Brick_SwiftUI/Tools (= 0.0.5)
-    - Brick_SwiftUI/Utilities (= 0.0.5)
-    - Brick_SwiftUI/Wrapped (= 0.0.5)
-  - Brick_SwiftUI/SwiftUI (0.0.5):
+  - Brick_SwiftUI (0.0.6):
+    - Brick_SwiftUI/SwiftUI (= 0.0.6)
+    - Brick_SwiftUI/Tools (= 0.0.6)
+    - Brick_SwiftUI/Utilities (= 0.0.6)
+    - Brick_SwiftUI/Wrapped (= 0.0.6)
+  - Brick_SwiftUI/SwiftUI (0.0.6):
     - Brick_SwiftUI/Utilities
-  - Brick_SwiftUI/Tools (0.0.5):
+  - Brick_SwiftUI/Tools (0.0.6):
     - Brick_SwiftUI/SwiftUI
-    - Brick_SwiftUI/Tools/AsyncImage (= 0.0.5)
-    - Brick_SwiftUI/Tools/Camera (= 0.0.5)
-    - Brick_SwiftUI/Tools/Feedback (= 0.0.5)
-    - Brick_SwiftUI/Tools/NavigationStack (= 0.0.5)
-    - Brick_SwiftUI/Tools/OpenUrl (= 0.0.5)
-    - Brick_SwiftUI/Tools/PhotoPicker (= 0.0.5)
-    - Brick_SwiftUI/Tools/Presentation (= 0.0.5)
-    - Brick_SwiftUI/Tools/ScrollStack (= 0.0.5)
-    - Brick_SwiftUI/Tools/ScrollView (= 0.0.5)
-    - Brick_SwiftUI/Tools/ShareLink (= 0.0.5)
-    - Brick_SwiftUI/Tools/Toolbar (= 0.0.5)
-    - Brick_SwiftUI/Tools/UIHosting (= 0.0.5)
+    - Brick_SwiftUI/Tools/AsyncImage (= 0.0.6)
+    - Brick_SwiftUI/Tools/Camera (= 0.0.6)
+    - Brick_SwiftUI/Tools/Feedback (= 0.0.6)
+    - Brick_SwiftUI/Tools/NavigationStack (= 0.0.6)
+    - Brick_SwiftUI/Tools/OpenUrl (= 0.0.6)
+    - Brick_SwiftUI/Tools/PhotoPicker (= 0.0.6)
+    - Brick_SwiftUI/Tools/Presentation (= 0.0.6)
+    - Brick_SwiftUI/Tools/ScrollStack (= 0.0.6)
+    - Brick_SwiftUI/Tools/ScrollView (= 0.0.6)
+    - Brick_SwiftUI/Tools/ShareLink (= 0.0.6)
+    - Brick_SwiftUI/Tools/Toolbar (= 0.0.6)
+    - Brick_SwiftUI/Tools/UIHosting (= 0.0.6)
     - Brick_SwiftUI/Utilities
     - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Tools/AsyncImage (0.0.5):
-    - Brick_SwiftUI/SwiftUI
-    - Brick_SwiftUI/Utilities
-    - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Tools/Camera (0.0.5):
+  - Brick_SwiftUI/Tools/AsyncImage (0.0.6):
     - Brick_SwiftUI/SwiftUI
     - Brick_SwiftUI/Utilities
     - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Tools/Feedback (0.0.5):
+  - Brick_SwiftUI/Tools/Camera (0.0.6):
     - Brick_SwiftUI/SwiftUI
     - Brick_SwiftUI/Utilities
     - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Tools/NavigationStack (0.0.5):
+  - Brick_SwiftUI/Tools/Feedback (0.0.6):
     - Brick_SwiftUI/SwiftUI
     - Brick_SwiftUI/Utilities
     - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Tools/OpenUrl (0.0.5):
+  - Brick_SwiftUI/Tools/NavigationStack (0.0.6):
     - Brick_SwiftUI/SwiftUI
     - Brick_SwiftUI/Utilities
     - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Tools/PhotoPicker (0.0.5):
+  - Brick_SwiftUI/Tools/OpenUrl (0.0.6):
     - Brick_SwiftUI/SwiftUI
     - Brick_SwiftUI/Utilities
     - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Tools/Presentation (0.0.5):
+  - Brick_SwiftUI/Tools/PhotoPicker (0.0.6):
     - Brick_SwiftUI/SwiftUI
     - Brick_SwiftUI/Utilities
     - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Tools/ScrollStack (0.0.5):
+  - Brick_SwiftUI/Tools/Presentation (0.0.6):
     - Brick_SwiftUI/SwiftUI
     - Brick_SwiftUI/Utilities
     - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Tools/ScrollView (0.0.5):
+  - Brick_SwiftUI/Tools/ScrollStack (0.0.6):
     - Brick_SwiftUI/SwiftUI
     - Brick_SwiftUI/Utilities
     - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Tools/ShareLink (0.0.5):
+  - Brick_SwiftUI/Tools/ScrollView (0.0.6):
     - Brick_SwiftUI/SwiftUI
     - Brick_SwiftUI/Utilities
     - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Tools/Toolbar (0.0.5):
+  - Brick_SwiftUI/Tools/ShareLink (0.0.6):
     - Brick_SwiftUI/SwiftUI
     - Brick_SwiftUI/Utilities
     - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Tools/UIHosting (0.0.5):
+  - Brick_SwiftUI/Tools/Toolbar (0.0.6):
     - Brick_SwiftUI/SwiftUI
     - Brick_SwiftUI/Utilities
     - Brick_SwiftUI/Wrapped
-  - Brick_SwiftUI/Utilities (0.0.5)
-  - Brick_SwiftUI/Wrapped (0.0.5):
+  - Brick_SwiftUI/Tools/UIHosting (0.0.6):
+    - Brick_SwiftUI/SwiftUI
+    - Brick_SwiftUI/Utilities
+    - Brick_SwiftUI/Wrapped
+  - Brick_SwiftUI/Utilities (0.0.6)
+  - Brick_SwiftUI/Wrapped (0.0.6):
     - Brick_SwiftUI/SwiftUI
 
 DEPENDENCIES:
@@ -82,7 +82,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Brick_SwiftUI: 405cc6dfc7994b95442c349c4fab1f4d038b18fa
+  Brick_SwiftUI: e1ccbb377527c8f7babc41646688e424fbdb5cab
 
 PODFILE CHECKSUM: 8320eed278fec5e543192f0f9321e03e4aa090fc
 

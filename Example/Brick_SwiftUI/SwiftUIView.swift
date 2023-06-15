@@ -13,7 +13,8 @@ struct SwiftUIView: View {
     @Environment(\.dismiss) private var dismiss
     
     @Environment(\.requestReview) private var requestReview
-
+    @State private var value = false
+    
     var body: some View {
         
         VScrollStack{
@@ -39,10 +40,23 @@ struct SwiftUIView: View {
             }
 
             Button {
+
                 requestReview()
             } label: {
                 Text("Request Review")
             }
+            
+            Text("Hello")
+                .scaleEffect(value ? 2 : 1)
+                .onTapGesture {
+                    
+                    withAnimation(.easeOut(duration: 10), after: 10) {
+                        value.toggle()
+                    } completion: {
+                        print("Animation have finished")
+                    }
+                }
+            
         }
  
     }
