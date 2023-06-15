@@ -7,41 +7,12 @@
 
 import SwiftUI
 import Brick_SwiftUI
-struct ImageView: View {
-    @State private var indicatorVisibility: Brick.ScrollIndicatorVisibility = .automatic
-    @State private var dismissMode: Brick.ScrollDismissesKeyboardMode = .automatic
-    @State private var scrollEnabled: Bool = true
+struct AsyncImageView: View {
+
     
     var body: some View {
         VScrollStack{
-            Toggle("Scroll Enabled", isOn: $scrollEnabled)
-            
-            HStack {
-                Text("Scroll Indicators")
-                Spacer()
-                Picker("", selection: $indicatorVisibility) {
-                    ForEach(Brick.ScrollIndicatorVisibility.all, id: \.self) { value in
-                        Text(String(describing: value))
-                            .tag(value)
-                    }
-                }
-            }
-            
-            Section {
-                HStack {
-                    Text("Dismiss Mode")
-                    Spacer()
-                    Picker("", selection: $dismissMode) {
-                        ForEach(Brick.ScrollDismissesKeyboardMode.all, id: \.self) { value in
-                            Text(String(describing: value))
-                                .tag(value)
-                        }
-                    }
-                }
-
-                TextField("Placeholder", text: .constant(""))
-            }
-            
+   
             Brick.AsyncImage(url: URL(string:"https://t7.baidu.com/it/u=2531125946,3055766435&fm=193&f=GIF")!) { image in
                 image
                     .resizable()
@@ -87,28 +58,13 @@ struct ImageView: View {
                 }
             }.frame(width: 250, height: 250, alignment: .center)
             
-            
         }
-        .ss.scrollDismissesKeyboard(dismissMode)
-        .ss.scrollIndicators(indicatorVisibility)
-        .ss.scrollDisabled(!scrollEnabled)
+ 
     }
 }
 
-struct ImageView_Previews: PreviewProvider {
+struct AsyncImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageView()
-    }
-}
-
-extension Brick.ScrollIndicatorVisibility {
-    static var all: [Self] {
-        [.automatic, .visible, .hidden]
-    }
-}
-
-extension Brick.ScrollDismissesKeyboardMode {
-    static var all: [Self] {
-        [.automatic, .immediately, .interactively]
+        AsyncImageView()
     }
 }

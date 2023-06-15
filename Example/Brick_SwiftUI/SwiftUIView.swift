@@ -7,15 +7,13 @@
 
 import SwiftUI
 import Brick_SwiftUI
-import QuickLook
 
 struct SwiftUIView: View {
     
     @Environment(\.dismiss) private var dismiss
     
     @Environment(\.requestReview) private var requestReview
-    @State private var value = false
-    
+
     var body: some View {
         
         VScrollStack(spacing: 20){
@@ -23,7 +21,7 @@ struct SwiftUIView: View {
             Button {
                 dismiss()
             } label: {
-                Text("Go Back")
+                Text("Environment Dismiss")
                     .frame(width: 100, height: 50)
                     .background {
                         Color.orange
@@ -41,23 +39,12 @@ struct SwiftUIView: View {
             }
             
             Button {
-                
                 requestReview()
             } label: {
                 Text("Request Review")
             }
             
-            Text("Hello")
-                .scaleEffect(value ? 2 : 1)
-                .onTapGesture {
-                    
-                    withAnimation(.easeOut(duration: 10), after: 10) {
-                        value.toggle()
-                    } completion: {
-                        
-                        log.log("Animation have finished")
-                    }
-                }
+
         }
         
     }

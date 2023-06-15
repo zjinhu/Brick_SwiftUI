@@ -11,47 +11,51 @@ struct ContentView: View {
 
     @State private var showSheet = false
 
-    @State private var url: URL?
-    @State private var selection: URL?
-    let urls = Bundle.main.quicklookUrls
-    
-
-    
+ 
     var body: some View {
         Brick.NavigationStack {
             List{
                 
-                NavigationLink("NavigationStack", destination: NavigationStack())
-                
-                NavigationLink("OpenURL", destination: OpenURLView())
-                
-                NavigationLink("ShareLink", destination: ShareLinkView())
-                
-                NavigationLink("Photo", destination: PhotoPickerView())
-                
-                NavigationLink("AsyncImage", destination: ImageView())
-                
-                Button {
-                    showSheet.toggle()
-                } label: {
-                    Text("Sheet")
+                Section {
+                    NavigationLink("NavigationStack", destination: NavigationStack())
+                    
+                    NavigationLink("OpenURL", destination: OpenURLView())
+                    
+                    NavigationLink("ShareLink", destination: ShareLinkView())
+                    
+                    NavigationLink("Photo", destination: PhotoPickerView())
+                    
+                    NavigationLink("AsyncImage", destination: AsyncImageView())
+                    
+                    NavigationLink("ScrollView", destination: ScrollsView())
                 }
-                
-                
-                Button {
-                    url = urls.randomElement()
-                } label: {
-                    Text("Quicklook URL")
+
+                Section {
+                    NavigationLink("Quicklook", destination: QuicklookView())
+                    
+                    NavigationLink("BadgeView", destination: BadgeView())
+                    
+                    NavigationLink("SafeAreaPadding", destination: SafeAreaPaddingView())
+                    
+                    NavigationLink("Presentation", destination: PresentationView())
+
+                    NavigationLink("FocusState", destination: FocusStateView())
+                    
+                    NavigationLink("AnimationCompleted", destination: AnimationCompleted())
+                    
+                    NavigationLink("DrrkModelView", destination: DrrkModelView())
                 }
-                .quickLookPreview($url)
-                
-                Button {
-                    selection = urls.randomElement()
-                } label: {
-                    Text("Quicklook Collection")
+
+            }
+            .navigationTitle("Brick_SwiftUI")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button {
+                        showSheet.toggle()
+                    } label: {
+                        Text("Sheet")
+                    }
                 }
-                .quickLookPreview($selection, in: urls)
- 
             }
             .sheet(isPresented: $showSheet) {
                 SwiftUIView()
@@ -60,7 +64,7 @@ struct ContentView: View {
                 Button {
                     
                 } label: {
-                    Text("12")
+                    Text("BottomSafeAreaInset")
                         .frame(width: 100, height: 50)
                         .background {
                             Color.orange
@@ -80,11 +84,3 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-
-extension Bundle {
-    var quicklookUrls: [URL] {
-        urls(forResourcesWithExtension: "jpg", subdirectory: nil)?
-            .sorted(by: { $0.lastPathComponent < $1.lastPathComponent })
-        ?? []
-    }
-}

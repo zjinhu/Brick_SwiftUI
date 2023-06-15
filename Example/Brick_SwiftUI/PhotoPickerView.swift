@@ -58,7 +58,7 @@ struct PhotoPickerView: View {
             }
         }
         .toolbar {
-            Brick.ToolbarItem(placement: .cancellationAction) {
+            ToolbarItem(placement: .cancellationAction) {
                 Button {
                     dismiss()
                 } label: {

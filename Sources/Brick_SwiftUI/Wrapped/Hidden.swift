@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+public extension Brick where Wrapped: View {
+
+    @inlinable
+    func hidden(_ isHidden: Bool) -> some View {
+        wrapped.modifier(HiddenModifier(isHidden: isHidden))
+    }
+}
+
 @frozen
 public struct HiddenModifier: ViewModifier {
     public var isHidden: Bool
@@ -22,14 +30,5 @@ public struct HiddenModifier: ViewModifier {
         } else {
             content
         }
-    }
-}
-
-extension View {
-
-    /// A modifier that conditionally hides a view
-    @inlinable
-    public func hidden(_ isHidden: Bool) -> some View {
-        modifier(HiddenModifier(isHidden: isHidden))
     }
 }
