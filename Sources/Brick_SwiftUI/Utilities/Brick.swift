@@ -25,7 +25,7 @@ public extension View {
 }
  
 public extension AnyTransition {
-    /// Wraps an `AnyTransition` that can be extended to provide backport functionality.
+    /// Wraps an `AnyTransition` that can be extended to provide Brick functionality.
     static var ss: Brick<AnyTransition>{
         Brick(.identity)
     }
@@ -38,7 +38,6 @@ public extension Brick where Wrapped == Any {
 }
 
 public extension NSObjectProtocol {
-    /// Wraps an `NSObject` that can be extended to provide backport functionality.
+    /// Wraps an `NSObject` that can be extended to provide Brick functionality.
     var ss: Brick<Self> { .init(self) }
 }
-

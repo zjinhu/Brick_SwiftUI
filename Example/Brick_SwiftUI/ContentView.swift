@@ -23,7 +23,9 @@ struct ContentView: View {
                     
                     NavigationLink("ShareLink", destination: ShareLinkView())
                     
-                    NavigationLink("Photo", destination: PhotoPickerView())
+                    if #available(iOS 16.0, *) {
+                        NavigationLink("Photo", destination: PhotoPickerView())
+                    }
                     
                     NavigationLink("AsyncImage", destination: AsyncImageView())
                     

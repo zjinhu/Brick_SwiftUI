@@ -48,7 +48,6 @@
 		3EE0555B46CA5926D9B6117F54014FC1 /* AudioFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A6850FFA0F42E6AE12D2D31411B7C /* AudioFeedback.swift */; };
 		3F7ED654C13AF7F674449E1D7A9DF3AA /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D7C498FA339E02BD53ECB8916CEA8E /* Pods-Example-dummy.m */; };
 		40963B2133FEAB97C5E7F497055484A8 /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97DEA91DC2080C58B7C1B054BA5A09 /* Visibility.swift */; };
-		4293C6BAA4E4BD9FB5E2EB8B49A8158C /* SystemOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF09FAA5A51A58C8048A18F1FC94D3 /* SystemOverlays.swift */; };
 		4554A9C5A3ED5809B189A6EE2DC3E3A1 /* UIHostingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B8E140BE57BF600C90121B09C3C26 /* UIHostingConfiguration.swift */; };
 		45E4D93A017993CB0469D8DEE59A65C8 /* View++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC8D4F31BD85558DBCF286015671E4E /* View++.swift */; };
 		473E5DDFC60D3FC6A292D87E59F07A23 /* ToolbarBackground+Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E6BE550146D923B0D195BA0CDF395 /* ToolbarBackground+Environment.swift */; };
@@ -125,7 +124,7 @@
 		C559ABF8BCAB1230E86A877771305720 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6EBA2459FE490015A280D0958019C /* Badge.swift */; };
 		C6FA0F1AA28A44B810B7DFC12D1A9383 /* NavigationLink++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D501506BFA090304884AC04D5062C779 /* NavigationLink++.swift */; };
 		C92E575F5545ED935F069DAEBD62FE61 /* UIColor++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0639E4C73C5D96F19A9798A103C3736 /* UIColor++.swift */; };
-		C935EBC2B4436C197D3A385AD4710950 /* NavigationBackport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725B517E052E5A9A6B48414AF97C06E3 /* NavigationBackport.swift */; };
+		C935EBC2B4436C197D3A385AD4710950 /* NavigationBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725B517E052E5A9A6B48414AF97C06E3 /* NavigationBrick.swift */; };
 		CABB949D763B3ED364016EC8668D3787 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9D6B54EB35BA403010B12AB1B9AEED /* UIKit.framework */; };
 		CBBC70BC4835EB9852E1742A98DF73A9 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631CD5F86D69B118E1DC625B65F25EA6 /* Toolbar.swift */; };
 		CDE341EA48960026D9101815C5844BAA /* Submit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF61DDE36D89879260368C9E7169846 /* Submit.swift */; };
@@ -174,7 +173,7 @@
 		133E0C6A60030E28B9D089C664F7F13D /* Shape++.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Shape++.swift"; path = "Sources/Brick_SwiftUI/SwiftUI/Shape++.swift"; sourceTree = "<group>"; };
 		147112234D3F6A5531D1ADF4F5C7BABB /* TextField++.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TextField++.swift"; path = "Sources/Brick_SwiftUI/SwiftUI/TextField++.swift"; sourceTree = "<group>"; };
 		149B6C46BC5E38265EE0F26ACDF5718E /* apply.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = apply.swift; sourceTree = "<group>"; };
-		179DA5703633D9BAC9A6889D472D5EE1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		179DA5703633D9BAC9A6889D472D5EE1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1C4670D14B01099F8D43BE18890F35C1 /* Brick_SwiftUI */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Brick_SwiftUI; path = Brick_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E41CAF522A6DBC0A350F76DD832471D /* Label++.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Label++.swift"; path = "Sources/Brick_SwiftUI/SwiftUI/Label++.swift"; sourceTree = "<group>"; };
 		1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Example"; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,7 +181,7 @@
 		201D31652582287EC2E8FC166F286383 /* Color+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Color+.swift"; path = "Sources/Brick_SwiftUI/SwiftUI/Color+.swift"; sourceTree = "<group>"; };
 		216721E425583B71B1FEB4BADFADF428 /* Text++.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Text++.swift"; path = "Sources/Brick_SwiftUI/SwiftUI/Text++.swift"; sourceTree = "<group>"; };
 		219690787920FB8DE03FA4039217C5AE /* NavigationStack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationStack.swift; path = Sources/Brick_SwiftUI/Tools/NavigationStack/NavigationStack.swift; sourceTree = "<group>"; };
-		21F3BB7DA57BB0B807C33BB24B7E4B5B /* Brick_SwiftUI.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Brick_SwiftUI.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		21F3BB7DA57BB0B807C33BB24B7E4B5B /* Brick_SwiftUI.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Brick_SwiftUI.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		232F16852168B48C55CCF089F633EFA4 /* ProposedInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProposedInsets.swift; path = Sources/Brick_SwiftUI/Tools/UIHosting/ProposedInsets.swift; sourceTree = "<group>"; };
 		243410B9535472556EA4BB6DBC133A0D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		27AA2F4113AF429EE953B7D86CAEEC51 /* PhotoPicker+View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PhotoPicker+View.swift"; path = "Sources/Brick_SwiftUI/Tools/PhotoPicker/PhotoPicker+View.swift"; sourceTree = "<group>"; };
@@ -238,7 +237,7 @@
 		6714EC31D0320D3E946A943CFE819976 /* URLSession+Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSession+Async.swift"; path = "Sources/Brick_SwiftUI/Tools/AsyncImage/URLSession+Async.swift"; sourceTree = "<group>"; };
 		6D42098D9EC34C31B72AC57EA392150F /* Corner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Corner.swift; path = Sources/Brick_SwiftUI/Wrapped/Corner.swift; sourceTree = "<group>"; };
 		6E9E0C8FEF179F63F0C81CD6561D1DA2 /* Mask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mask.swift; path = Sources/Brick_SwiftUI/Wrapped/Mask.swift; sourceTree = "<group>"; };
-		725B517E052E5A9A6B48414AF97C06E3 /* NavigationBackport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationBackport.swift; sourceTree = "<group>"; };
+		725B517E052E5A9A6B48414AF97C06E3 /* NavigationBrick.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationBrick.swift; sourceTree = "<group>"; };
 		735F6DBC504710A0A56C4E2E7F31B2DA /* Brick.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Brick.swift; path = Sources/Brick_SwiftUI/Utilities/Brick.swift; sourceTree = "<group>"; };
 		73E88AD8D2C9F6B172FA73C44BB75565 /* Hidden.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hidden.swift; path = Sources/Brick_SwiftUI/Wrapped/Hidden.swift; sourceTree = "<group>"; };
 		7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
@@ -271,8 +270,8 @@
 		9A6357C4432E03335E438347B60AFE6C /* Router.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9AF61DDE36D89879260368C9E7169846 /* Submit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Submit.swift; path = Sources/Brick_SwiftUI/Wrapped/Submit.swift; sourceTree = "<group>"; };
 		9CC8D4F31BD85558DBCF286015671E4E /* View++.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "View++.swift"; path = "Sources/Brick_SwiftUI/SwiftUI/View++.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A4B0308F06B071EA65FF29E717AD2B9B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4B0308F06B071EA65FF29E717AD2B9B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A6969947F3B3BFD8B2DA6630E52406F2 /* DestinationBuilderHolder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DestinationBuilderHolder.swift; sourceTree = "<group>"; };
 		A8C36A428D29E0C3231C7AF3A616CAAF /* Brick_SwiftUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Brick_SwiftUI-dummy.m"; sourceTree = "<group>"; };
 		A9048296A50F579B4805B78141FD65DD /* NavigationLinkModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationLinkModifier.swift; sourceTree = "<group>"; };
@@ -324,7 +323,6 @@
 		FAAB886717B90E9C7E7CD0B58010DEAC /* Brick_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Brick_SwiftUI.release.xcconfig; sourceTree = "<group>"; };
 		FCD7C63A06C4616012C9B20B33C6A3E5 /* NavigationWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationWrapper.swift; sourceTree = "<group>"; };
 		FDD6EBA2459FE490015A280D0958019C /* Badge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Badge.swift; path = Sources/Brick_SwiftUI/Wrapped/Badge.swift; sourceTree = "<group>"; };
-		FEEF09FAA5A51A58C8048A18F1FC94D3 /* SystemOverlays.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SystemOverlays.swift; path = Sources/Brick_SwiftUI/Wrapped/SystemOverlays.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -765,7 +763,6 @@
 				7F6D4EF2C6E7E1BB4D1BCF44E5C16E0A /* SafeArea.swift */,
 				3D98C543E4C6F8ABC0899B36CDDBD9BF /* Section.swift */,
 				9AF61DDE36D89879260368C9E7169846 /* Submit.swift */,
-				FEEF09FAA5A51A58C8048A18F1FC94D3 /* SystemOverlays.swift */,
 				4F4C79D18D0FABBEAD48787BE46551C2 /* Task.swift */,
 				DA721961B556B9F5A74AFC1F87227C53 /* ViewFocused.swift */,
 				3C97DEA91DC2080C58B7C1B054BA5A09 /* Visibility.swift */,
@@ -784,7 +781,7 @@
 				3A591DD4A700826632A2EBECA513E8B1 /* DestinationBuilderView.swift */,
 				11C2775C73C564D98D8A3804F524881C /* EnvironmentValues+navigationStack.swift */,
 				3165AF53B351BCA693F7FBAAB37E9DC8 /* LocalDestinationBuilderModifier.swift */,
-				725B517E052E5A9A6B48414AF97C06E3 /* NavigationBackport.swift */,
+				725B517E052E5A9A6B48414AF97C06E3 /* NavigationBrick.swift */,
 				A9048296A50F579B4805B78141FD65DD /* NavigationLinkModifier.swift */,
 				F69664E4AA12FB94466515EEEE515050 /* NavigationPathHolder.swift */,
 				FCD7C63A06C4616012C9B20B33C6A3E5 /* NavigationWrapper.swift */,
@@ -992,7 +989,7 @@
 				6070E69582239BB0E0734DCE83ED6357 /* List++.swift in Sources */,
 				D6BC96D457F20E54E75471D28137C231 /* LocalDestinationBuilderModifier.swift in Sources */,
 				9FB13B3A0FAB8854B606DF22266757EC /* Mask.swift in Sources */,
-				C935EBC2B4436C197D3A385AD4710950 /* NavigationBackport.swift in Sources */,
+				C935EBC2B4436C197D3A385AD4710950 /* NavigationBrick.swift in Sources */,
 				91F47B46D4A0E97414BB33FA77C79073 /* NavigationLink.swift in Sources */,
 				C6FA0F1AA28A44B810B7DFC12D1A9383 /* NavigationLink++.swift in Sources */,
 				BBAD2321AD98253DAC26C1E603568B3D /* NavigationLinkModifier.swift in Sources */,
@@ -1037,7 +1034,6 @@
 				27229B13A5DB1857F9D13D8949D5240B /* Spacer+.swift in Sources */,
 				CDE341EA48960026D9101815C5844BAA /* Submit.swift in Sources */,
 				55C7D45F652B64BF8D2F32B731463338 /* SystemHaptic.swift in Sources */,
-				4293C6BAA4E4BD9FB5E2EB8B49A8158C /* SystemOverlays.swift in Sources */,
 				D9B37DF590D906DD4D37BAB41106092F /* Task.swift in Sources */,
 				CF6B5953C9B87F50DD7C830D74CF9984 /* Text++.swift in Sources */,
 				A9FE475B325A06583CC9F117BB7E3F35 /* TextField++.swift in Sources */,

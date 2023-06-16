@@ -17,7 +17,7 @@ struct ShareLinkView: View {
             .buttonStyle(.plain)
 
             Brick.ShareLink(item: "Some text to share")
-            Brick.ShareLink("ShareLink", item: URL(string: "https://benkau.com")!)
+            Brick.ShareLink("ShareLink", item: URL(string: "https://bing.com")!)
  
         }
     }

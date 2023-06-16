@@ -392,7 +392,7 @@ public extension PhotoPicker<Text> {
 
 extension PHPickerResult{
     
-    public func loadTransferable<T>(type: T.Type) async throws -> T? {
+    public func loadTransfer<T>(type: T.Type) async throws -> T? {
         do {
             let data = try await itemProvider.loadData()
             
@@ -407,6 +407,25 @@ extension PHPickerResult{
             }
         } catch {
             throw PhotoError<T>()
+        }
+    }
+    
+    public func loadTransfer<T>(type: T.Type, completion: @escaping (Result<T?, Error>) -> Void){
+        Task {
+            let data = try? await itemProvider.loadData()
+            switch type {
+            case is UIImage.Type:
+                if let data = data,
+                   let image = UIImage(data: data) {
+                    completion(.success(image as? T))
+                }else{
+                    completion(.failure(PhotoError<T>()))
+                }
+            case is Data.Type:
+                completion(.success( data as? T))
+            default:
+                completion(.failure(PhotoError<T>()))
+            }
         }
     }
     
@@ -465,5 +484,4 @@ extension NSItemProvider {
             }.resume()
         }
     }
-
 }

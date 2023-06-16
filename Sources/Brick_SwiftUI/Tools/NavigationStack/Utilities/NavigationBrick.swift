@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 typealias DestinationBuilder<T> = (T) -> AnyView
-enum NavigationBackport {
+enum NavigationBrick {
     /// Calculates the minimal number of steps to update from one stack of screens to another, within the constraints of SwiftUI.
     /// - Parameters:
     ///   - start: The initial state.

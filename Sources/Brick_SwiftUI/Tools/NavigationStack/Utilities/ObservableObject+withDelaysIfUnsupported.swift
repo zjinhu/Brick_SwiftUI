@@ -75,7 +75,7 @@ public extension ObservableObject {
     }
     
     fileprivate func synchronouslyUpdateIfSupported<Screen>(_ keyPath: WritableKeyPath<Self, [Screen]>, from start: [Screen], to end: [Screen]) -> Bool {
-        guard NavigationBackport.canSynchronouslyUpdate(from: start, to: end) else {
+        guard NavigationBrick.canSynchronouslyUpdate(from: start, to: end) else {
             return false
         }
         // Even though self is known to be a class, the compiler complains that self is immutable

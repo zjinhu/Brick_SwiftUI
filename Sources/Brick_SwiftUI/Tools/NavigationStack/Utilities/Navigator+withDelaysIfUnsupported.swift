@@ -32,7 +32,7 @@ public extension Navigator {
     }
     
     fileprivate func synchronouslyUpdateIfSupported(from start: [Screen], to end: [Screen]) -> Bool {
-        guard NavigationBackport.canSynchronouslyUpdate(from: start, to: end) else {
+        guard NavigationBrick.canSynchronouslyUpdate(from: start, to: end) else {
             return false
         }
         path = end

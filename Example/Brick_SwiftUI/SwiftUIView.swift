@@ -17,7 +17,7 @@ struct SwiftUIView: View {
     var body: some View {
         
         VScrollStack(spacing: 20){
-            
+ 
             Button {
                 dismiss()
             } label: {
@@ -32,6 +32,7 @@ struct SwiftUIView: View {
             
             HStack{
                 Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                    
                 Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
             }
             .ss.background {
@@ -46,7 +47,7 @@ struct SwiftUIView: View {
             
 
         }
-        
+ 
     }
 }
 

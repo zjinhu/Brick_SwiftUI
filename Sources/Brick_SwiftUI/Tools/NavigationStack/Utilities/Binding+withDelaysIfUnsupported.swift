@@ -32,7 +32,7 @@ public extension Binding where Value: Collection {
     }
     
     fileprivate func synchronouslyUpdateIfSupported<Screen>(from start: [Screen], to end: [Screen]) -> Bool where Value == [Screen] {
-        guard NavigationBackport.canSynchronouslyUpdate(from: start, to: end) else {
+        guard NavigationBrick.canSynchronouslyUpdate(from: start, to: end) else {
             return false
         }
         wrappedValue = end
@@ -71,7 +71,7 @@ public extension Binding where Value == Brick<Any>.NavigationPath {
     }
     
     fileprivate func synchronouslyUpdateIfSupported(from start: [AnyHashable], to end: [AnyHashable]) -> Bool {
-        guard NavigationBackport.canSynchronouslyUpdate(from: start, to: end) else {
+        guard NavigationBrick.canSynchronouslyUpdate(from: start, to: end) else {
             return false
         }
         wrappedValue.elements = end
@@ -81,7 +81,7 @@ public extension Binding where Value == Brick<Any>.NavigationPath {
 extension Binding {
     @MainActor
     func withDelaysIfUnsupported<Screen>(from start: [Screen], to end: [Screen], keyPath: WritableKeyPath<Value, [Screen]>) async {
-        let steps = NavigationBackport.calculateSteps(from: start, to: end)
+        let steps = NavigationBrick.calculateSteps(from: start, to: end)
         
         wrappedValue[keyPath: keyPath] = steps.first!
         await scheduleRemainingSteps(steps: Array(steps.dropFirst()), keyPath: keyPath)

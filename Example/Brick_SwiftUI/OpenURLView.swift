@@ -27,7 +27,7 @@ struct OpenURLView: View {
                     return .systemAction
                 })
             
-            Brick.Link("In-app Safari", destination: URL(string: "https://github.com/shaps80/SwiftUIBackports")!)
+            Brick.Link("In-app Safari", destination: URL(string: "https://github.com/jackiehu1122/SwiftBrick")!)
                 .environment(\.openURL, .init { url in
                     .safari(url) { config in
                         config.tintColor = .red
