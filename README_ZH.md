@@ -8,7 +8,47 @@
 
 
 
-### SwiftUI
+### SwiftUI APP加速开发工具包
+
+内置了各种辅助开发的工具，以及iOS15以后新添加的API向iOS14进行了兼容,具体功能请运行Demo查看用法
+
+| ![](Image/1.png) | ![](Image/2.png) |
+| ---------------- | ---------------- |
+|                  |                  |
+
+支持iOS14
+
+- [x] AsyncImage
+
+- [x] Camera拍照获取照片
+
+- [x] CarouselView无限滚动banner
+
+- [x] Feedback 震动按键音反馈
+
+- [x] Loading 加载
+
+- [x] NavigationStack
+
+- [x] OpenUrl
+
+- [x] PhotoPicker
+
+- [x] Presentation
+
+- [x] Refresh
+
+- [x] ScrollStack
+
+- [x] ScrollView
+
+- [x] ShareLink
+
+- [x] Toast
+
+- [x] Badge
+
+- [x] Corner
 
 - [x] @AppStorage扩展
 
@@ -71,11 +111,11 @@
 
 在 Xcode 的菜单栏中选择 `File > Swift Packages > Add Pacakage Dependency`，然后在搜索栏输入
 
-`https://github.com/jackiehu/${POD_NAME}`，即可完成集成
+`https://github.com/jackiehu/Brick_SwiftUI`，即可完成集成
 
 ### 手动集成
 
-Brick_SwiftUI 也支持手动集成，只需把Sources文件夹中的${POD_NAME}文件夹拖进需要集成的项目即可
+Brick_SwiftUI 也支持手动集成，只需把Sources文件夹中的Brick_SwiftUI文件夹拖进需要集成的项目即可
 
  
 

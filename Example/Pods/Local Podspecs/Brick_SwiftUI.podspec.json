@@ -1,6 +1,6 @@
 {
   "name": "Brick_SwiftUI",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A short description of Brick_SwiftUI.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/jackiehu/Brick_SwiftUI",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/jackiehu/Brick_SwiftUI.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "14.0"
@@ -67,6 +67,22 @@
         ]
       },
       "subspecs": [
+        {
+          "name": "CarouselView",
+          "source_files": "Sources/Brick_SwiftUI/Tools/CarouselView/**/*"
+        },
+        {
+          "name": "Loading",
+          "source_files": "Sources/Brick_SwiftUI/Tools/Loading/**/*"
+        },
+        {
+          "name": "Refresh",
+          "source_files": "Sources/Brick_SwiftUI/Tools/Refresh/**/*"
+        },
+        {
+          "name": "Toast",
+          "source_files": "Sources/Brick_SwiftUI/Tools/Toast/**/*"
+        },
         {
           "name": "AsyncImage",
           "source_files": "Sources/Brick_SwiftUI/Tools/AsyncImage/**/*"

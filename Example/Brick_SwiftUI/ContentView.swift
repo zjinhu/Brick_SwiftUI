@@ -30,6 +30,15 @@ struct ContentView: View {
                     NavigationLink("AsyncImage", destination: AsyncImageView())
                     
                     NavigationLink("ScrollView", destination: ScrollsView())
+                    
+                    NavigationLink("BannerView", destination: BannerView())
+                    
+                    NavigationLink("Loading", destination: Loading() .environmentObject(LoadingManager()))
+                    
+                    NavigationLink("Toast", destination: Toast()
+                        .environmentObject(ToastManager()))
+                    
+                    NavigationLink("Refresh", destination: Refresh())
                 }
 
                 Section {
@@ -50,6 +59,7 @@ struct ContentView: View {
 
             }
             .navigationTitle("Brick_SwiftUI")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button {

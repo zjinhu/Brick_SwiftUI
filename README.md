@@ -9,7 +9,47 @@
 
 ## [中文说明](https://github.com/jackiehu/Brick_SwiftUI/blob/main/README_ZH.md)
 
-### SwiftUI
+### SwiftUI APP Acceleration Development Kit
+
+Built-in various auxiliary development tools, and the newly added API after iOS15 is compatible with iOS14, please run the demo to view the usage of specific functions
+
+| ![](Image/1.png) | ![](Image/2.png) |
+| ---------------- | ---------------- |
+|                  |                  |
+
+支持iOS14
+
+- [x] AsyncImage
+
+- [x] Camera (take a photo to get a photo)
+
+- [x] CarouselView (infinite scrolling banner )
+
+- [x] Feedback (Vibration button sound feedback )
+
+- [x] Loading 
+
+- [x] NavigationStack
+
+- [x] OpenUrl
+
+- [x] PhotoPicker
+
+- [x] Presentation
+
+- [x] Refresh
+
+- [x] ScrollStack
+
+- [x] ScrollView
+
+- [x] ShareLink
+
+- [x] Toast
+
+- [x] Badge
+
+- [x] Corner
 
 - [x] @AppStorage extension
 - [x] Color extension
