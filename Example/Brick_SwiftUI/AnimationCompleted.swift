@@ -22,14 +22,14 @@ struct AnimationCompleted: View {
                         value.toggle()
                     } completion: {
                         
-                        log.log("Animation have finished")
+                        logger.log("Animation have finished")
                     }
                 }
             
             Text("onAnimationCompleted")
                 .opacity(introTextOpacity)
                 .onAnimationCompleted(for: introTextOpacity) {
-                    log.log("Animation have finished")
+                    logger.log("Animation have finished")
                 }
         }.onAppear(perform: {
             withAnimation(.easeIn(duration: 3.0)) {
