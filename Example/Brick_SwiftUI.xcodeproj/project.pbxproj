@@ -24,7 +24,7 @@
 		81A7200E2A3B168000A59F37 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7200D2A3B168000A59F37 /* PresentationView.swift */; };
 		81A720142A3B1E4100A59F37 /* FocusStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A720132A3B1E4100A59F37 /* FocusStateView.swift */; };
 		81A720162A3B208E00A59F37 /* AnimationCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A720152A3B208E00A59F37 /* AnimationCompleted.swift */; };
-		81A720182A3B22C200A59F37 /* DrrkModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A720172A3B22C200A59F37 /* DrrkModelView.swift */; };
+		81A720182A3B22C200A59F37 /* DarkModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A720172A3B22C200A59F37 /* DarkModelView.swift */; };
 		81D9458D2A33173A000E3496 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9458C2A33173A000E3496 /* AsyncImageView.swift */; };
 		81D9458F2A331CF1000E3496 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9458E2A331CF1000E3496 /* SwiftUIView.swift */; };
 		81D9459C2A36CCDE000E3496 /* OpenURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9459B2A36CCDE000E3496 /* OpenURLView.swift */; };
@@ -57,7 +57,7 @@
 		81A7200D2A3B168000A59F37 /* PresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		81A720132A3B1E4100A59F37 /* FocusStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusStateView.swift; sourceTree = "<group>"; };
 		81A720152A3B208E00A59F37 /* AnimationCompleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCompleted.swift; sourceTree = "<group>"; };
-		81A720172A3B22C200A59F37 /* DrrkModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrrkModelView.swift; sourceTree = "<group>"; };
+		81A720172A3B22C200A59F37 /* DarkModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModelView.swift; sourceTree = "<group>"; };
 		81D9458C2A33173A000E3496 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		81D9458E2A331CF1000E3496 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		81D9459B2A36CCDE000E3496 /* OpenURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLView.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 				6025988F2A3EE9AB00093705 /* Refresh.swift */,
 				81A720132A3B1E4100A59F37 /* FocusStateView.swift */,
 				81A720092A3B13BF00A59F37 /* BadgeView.swift */,
-				81A720172A3B22C200A59F37 /* DrrkModelView.swift */,
+				81A720172A3B22C200A59F37 /* DarkModelView.swift */,
 				81D9458E2A331CF1000E3496 /* SwiftUIView.swift */,
 				815DC61F2A0DEF5600DCE83D /* Assets.xcassets */,
 				815DC6212A0DEF5600DCE83D /* Brick_SwiftUI.entitlements */,
@@ -299,7 +299,7 @@
 				81D9459C2A36CCDE000E3496 /* OpenURLView.swift in Sources */,
 				81D9458F2A331CF1000E3496 /* SwiftUIView.swift in Sources */,
 				81A720062A3B0DBD00A59F37 /* ScrollsView.swift in Sources */,
-				81A720182A3B22C200A59F37 /* DrrkModelView.swift in Sources */,
+				81A720182A3B22C200A59F37 /* DarkModelView.swift in Sources */,
 				81D945A92A370259000E3496 /* NavigationStack.swift in Sources */,
 				6025988A2A3EE70500093705 /* BannerView.swift in Sources */,
 				81D9459E2A36CD68000E3496 /* ShareLinkView.swift in Sources */,

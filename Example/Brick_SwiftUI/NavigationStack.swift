@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Brick_SwiftUI
-struct NavigationStack: View {
+struct NavigationStackTView: View {
     @EnvironmentObject var navigator: PathNavigator
     
     var body: some View {
@@ -41,9 +41,9 @@ struct NavigationStack: View {
     }
 }
 
-struct NavigationStack_Previews: PreviewProvider {
+struct NavigationStackTView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack()
+        NavigationStackTView()
     }
 }
 

@@ -8,16 +8,15 @@
 import SwiftUI
 import Brick_SwiftUI
 struct ContentView: View {
-
+    
     @State private var showSheet = false
-
- 
+    
+    
     var body: some View {
         Brick.NavigationStack {
             List{
-                
                 Section {
-                    NavigationLink("NavigationStack", destination: NavigationStack())
+                    NavigationLink("NavigationStack", destination: NavigationStackTView())
                     
                     NavigationLink("OpenURL", destination: OpenURLView())
                     
@@ -40,7 +39,7 @@ struct ContentView: View {
                     
                     NavigationLink("Refresh", destination: Refresh())
                 }
-
+                
                 Section {
                     NavigationLink("Quicklook", destination: QuicklookView())
                     
@@ -49,14 +48,14 @@ struct ContentView: View {
                     NavigationLink("SafeAreaPadding", destination: SafeAreaPaddingView())
                     
                     NavigationLink("Presentation", destination: PresentationView())
-
+                    
                     NavigationLink("FocusState", destination: FocusStateView())
                     
                     NavigationLink("AnimationCompleted", destination: AnimationCompleted())
                     
-                    NavigationLink("DrrkModelView", destination: DrrkModelView())
+                    NavigationLink("DrrkModelView", destination: DarkModelView())
                 }
-
+                
             }
             .navigationTitle("Brick_SwiftUI")
             .navigationBarTitleDisplayMode(.inline)
@@ -73,21 +72,25 @@ struct ContentView: View {
                 SwiftUIView()
             }
             .ss.bottomSafeAreaInset {
-                Button {
+                VStack{
+                    Button {
+                        
+                    } label: {
+                        Text("BottomSafeAreaInset")
+                            .frame(width: 100, height: 50)
+                            .background {
+                                Color.orange
+                            }
+                    }
                     
-                } label: {
-                    Text("BottomSafeAreaInset")
-                        .frame(width: 100, height: 50)
-                        .background {
-                            Color.orange
-                        }
+                    Spacer.height(50)
                 }
                 
             }
+            
         }
-        
     }
-
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

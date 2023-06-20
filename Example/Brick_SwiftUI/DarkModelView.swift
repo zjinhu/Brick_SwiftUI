@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Brick_SwiftUI
-struct DrrkModelView: View {
+struct DarkModelView: View {
     @StateObject var colorScheme = AppColorScheme()
     var body: some View {
         List{
@@ -37,6 +37,6 @@ struct DrrkModelView: View {
 
 struct DrrkModelView_Previews: PreviewProvider {
     static var previews: some View {
-        DrrkModelView()
+        DarkModelView()
     }
 }

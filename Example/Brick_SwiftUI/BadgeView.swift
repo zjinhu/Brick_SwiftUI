@@ -8,7 +8,6 @@
 import SwiftUI
 import Brick_SwiftUI
 struct BadgeView: View {
-    
     struct Badge: View {
         var body: some View {
             Circle()
@@ -20,6 +19,7 @@ struct BadgeView: View {
     
     var body: some View {
         VStack(spacing: 44) {
+
             Rectangle()
                 .ss.badge(alignment: .topLeading) {
                     Badge()

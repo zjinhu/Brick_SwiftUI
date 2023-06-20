@@ -12,21 +12,21 @@ import SwiftUI
 @available(macOS, deprecated: 13)
 extension Brick where Wrapped == Any {
     
-    public struct NavigationStack<Root: View, Data: Hashable>: View {
+    public struct NavigationStack<Content: View, Data: Hashable>: View {
         @Binding var externalTypedPath: [Data]
         @State var internalTypedPath: [Data] = []
         @StateObject var path = NavigationPathHolder()
         @StateObject var pathAppender = PathAppender()
         @StateObject var destinationBuilder = DestinationBuilderHolder()
-        var root: Root
+        var content: Content
         var useInternalTypedPath: Bool
         
-        var content: some View {
+        var navigation: some View {
             pathAppender.append = { [weak path] newElement in
                 path?.path.append(newElement)
             }
             return NavigationWrapper {
-                Router(rootView: root, screens: $path.path)
+                Router(rootView: content, screens: $path.path)
             }
             .environmentObject(path)
             .environmentObject(pathAppender)
@@ -35,7 +35,7 @@ extension Brick where Wrapped == Any {
         }
         
         public var body: some View {
-            content
+            navigation
                 .onFirstAppear {
                     path.withDelaysIfUnsupported(\.path) {
                         $0 = externalTypedPath
@@ -76,9 +76,9 @@ extension Brick where Wrapped == Any {
                 }
         }
         
-        public init(path: Binding<[Data]>?, @ViewBuilder root: () -> Root) {
+        public init(path: Binding<[Data]>?, @ViewBuilder content: () -> Content) {
             _externalTypedPath = path ?? .constant([])
-            self.root = root()
+            self.content = content()
             useInternalTypedPath = path == nil
         }
     }
@@ -89,8 +89,8 @@ extension Brick where Wrapped == Any {
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
 extension Brick.NavigationStack where Wrapped == Any, Data == AnyHashable{
-    public init(@ViewBuilder root: () -> Root) {
-        self.init(path: nil, root: root)
+    public init(@ViewBuilder content: () -> Content) {
+        self.init(path: nil, content: content)
     }
 }
 
@@ -99,12 +99,12 @@ extension Brick.NavigationStack where Wrapped == Any, Data == AnyHashable{
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
 extension Brick.NavigationStack where Wrapped == Any, Data == AnyHashable {
-    public init(path: Binding<Brick.NavigationPath>, @ViewBuilder root: () -> Root) {
+    public init(path: Binding<Brick.NavigationPath>, @ViewBuilder content: () -> Content) {
         let path = Binding(
             get: { path.wrappedValue.elements },
             set: { path.wrappedValue.elements = $0 }
         )
-        self.init(path: path, root: root)
+        self.init(path: path, content: content)
     }
 }
 

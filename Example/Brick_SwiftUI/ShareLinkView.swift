@@ -20,6 +20,7 @@ struct ShareLinkView: View {
             Brick.ShareLink("ShareLink", item: URL(string: "https://bing.com")!)
  
         }
+
     }
 }
 
