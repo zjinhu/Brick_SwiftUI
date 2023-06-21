@@ -93,11 +93,7 @@ struct ContentView: View {
             }
             .tabBarItem(tab: Tab.home)
             
-            Button {
- 
-            } label: {
-                Text("TabBar")
-            }
+            Color.white
             .tabBarItem(tab: Tab.game)
             
             Color.green

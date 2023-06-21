@@ -47,13 +47,7 @@ public struct Tabbar<Selection: Tabable, Content: View>: View {
                     .padding(.bottom, geometry.safeAreaInsets.bottom + tabBarBottomPadding)
                 }
                 .edgesIgnoringSafeArea(.bottom)
-                .animation(.linear, value: visibility)
                 .visibility(visibility)
-                .onChange(of: visibility) { newValue in
-                    withAnimation {
-                        visibility = newValue
-                    }
-                }
             }
         }
         .environmentObject(selection)
