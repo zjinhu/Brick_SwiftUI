@@ -64,9 +64,9 @@ extension View {
     public func visibility(_ visibility: TabbarVisible) -> some View {
         switch visibility {
         case .visible:
-            self.transition(.move(edge: .bottom).combined(with: .opacity))
+            self.transition(.move(edge: .bottom))
         case .hidden:
-            hidden().transition(.move(edge: .bottom).combined(with: .opacity))
+            hidden().transition(.move(edge: .bottom))
         }
     }
 }

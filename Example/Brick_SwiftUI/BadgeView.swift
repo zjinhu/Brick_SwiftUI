@@ -24,7 +24,9 @@ struct BadgeView: View {
         VStack(spacing: 44) {
 
             Button {
-                tabVisibility.visibility.toggle()
+                withAnimation(.easeInOut(duration: 0.25)) {
+                    tabVisibility.visibility.toggle()
+                }
             } label: {
                 Text("Hide/Show TabBar")
             }
@@ -69,10 +71,14 @@ struct BadgeView: View {
             .padding(.horizontal)
         }
         .onAppear{
-            tabVisibility.visibility = .hidden
+            withAnimation{
+                tabVisibility.visibility = .hidden
+            }
         }
         .onDisappear{
-            tabVisibility.visibility = .visible
+            withAnimation{
+                tabVisibility.visibility = .visible
+            }
         }
     }
 }

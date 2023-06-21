@@ -45,7 +45,7 @@ struct ContentView: View {
                     Section {
                         NavigationLink("Quicklook", destination: QuicklookView())
                         
-                        NavigationLink("BadgeView", destination: BadgeView())
+                        NavigationLink("BadgeView + Tarbar", destination: BadgeView())
                         
                         NavigationLink("SafeAreaPadding", destination: SafeAreaPaddingView())
                         
@@ -102,16 +102,16 @@ struct ContentView: View {
             Color.orange
                 .tabBarItem(tab: Tab.movie)
         }
-        .tabBarShape(RoundedRectangle(cornerRadius: 10))
-        .tabBarColor(.white)
-        .tabBarShadow(color: .black, radius: 5, x: 0, y: 5)
-        .tabBarHeight(30)
-        .tabBarInPadding(5)
-        .tabBarHorizontalPadding(20)
-        .tabBarBottomPadding(10)
-        .tabBarForeground {
-            LinearGradient(colors: [.purple, .yellow.opacity(0.4)], startPoint: .top, endPoint: .bottom)
-        }
+//        .tabBarShape(RoundedRectangle(cornerRadius: 10))
+//        .tabBarColor(.white)
+//        .tabBarShadow(color: .black, radius: 5, x: 0, y: 5)
+//        .tabBarHeight(30)
+//        .tabBarInPadding(5)
+//        .tabBarHorizontalPadding(20)
+//        .tabBarBottomPadding(10)
+//        .tabBarForeground {
+//            LinearGradient(colors: [.purple, .yellow.opacity(0.4)], startPoint: .top, endPoint: .bottom)
+//        }
     }
     
 }
