@@ -38,14 +38,26 @@ public struct CarouselView<Data, ID, Content> : View where Data : RandomAccessCo
 }
 
 extension CarouselView {
-
+    
+    /// 创建循环滚动banner
+    /// - Parameters:
+    ///   - data: 数据源
+    ///   - id: 标记
+    ///   - index: 指示器
+    ///   - spacing: 间距
+    ///   - headspace: 两边的图片展示距离
+    ///   - sidesScaling: 两边缩小量
+    ///   - isWrap: 是否循环
+    ///   - autoScroll: 自动滚动
+    ///   - canMove: 是否能拖动
+    ///   - content: 闭包
     public init(_ data: Data,
                 id: KeyPath<Data.Element, ID>,
                 index: Binding<Int> = .constant(0),
-                spacing: CGFloat = 10,
-                headspace: CGFloat = 10,
-                sidesScaling: CGFloat = 0.8,
-                isWrap: Bool = false,
+                spacing: CGFloat = 0,
+                headspace: CGFloat = 30,
+                sidesScaling: CGFloat = 0.9,
+                isWrap: Bool = true,
                 autoScroll: CarouselAutoScroll = .inactive,
                 canMove: Bool = true,
                 @ViewBuilder content: @escaping (Data.Element) -> Content) {
@@ -68,10 +80,10 @@ extension CarouselView where ID == Data.Element.ID, Data.Element : Identifiable 
 
     public init(_ data: Data,
                 index: Binding<Int> = .constant(0),
-                spacing: CGFloat = 10,
-                headspace: CGFloat = 10,
-                sidesScaling: CGFloat = 0.8,
-                isWrap: Bool = false,
+                spacing: CGFloat = 0,
+                headspace: CGFloat = 30,
+                sidesScaling: CGFloat = 0.9,
+                isWrap: Bool = true,
                 autoScroll: CarouselAutoScroll = .inactive,
                 canMove: Bool = true,
                 @ViewBuilder content: @escaping (Data.Element) -> Content) {
