@@ -8,6 +8,9 @@
 import SwiftUI
 import Brick_SwiftUI
 struct BadgeView: View {
+    
+    @EnvironmentObject var tabVisibility: TabbarVisibility
+       
     struct Badge: View {
         var body: some View {
             Circle()
@@ -20,6 +23,12 @@ struct BadgeView: View {
     var body: some View {
         VStack(spacing: 44) {
 
+            Button {
+                tabVisibility.visibility.toggle()
+            } label: {
+                Text("Hide/Show TabBar")
+            }
+            
             Rectangle()
                 .ss.badge(alignment: .topLeading) {
                     Badge()
@@ -58,6 +67,12 @@ struct BadgeView: View {
                     }
             }
             .padding(.horizontal)
+        }
+        .onAppear{
+            tabVisibility.visibility = .hidden
+        }
+        .onDisappear{
+            tabVisibility.visibility = .visible
         }
     }
 }

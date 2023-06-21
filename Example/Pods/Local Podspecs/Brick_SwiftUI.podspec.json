@@ -1,6 +1,6 @@
 {
   "name": "Brick_SwiftUI",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "summary": "A short description of Brick_SwiftUI.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/jackiehu/Brick_SwiftUI",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/jackiehu/Brick_SwiftUI.git",
-    "tag": "0.1.1"
+    "tag": "0.1.5"
   },
   "platforms": {
     "ios": "14.0"
@@ -67,6 +67,10 @@
         ]
       },
       "subspecs": [
+        {
+          "name": "Tabbar",
+          "source_files": "Sources/Brick_SwiftUI/Tools/Tabbar/**/*"
+        },
         {
           "name": "CarouselView",
           "source_files": "Sources/Brick_SwiftUI/Tools/CarouselView/**/*"

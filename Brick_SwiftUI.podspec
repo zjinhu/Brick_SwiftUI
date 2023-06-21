@@ -57,6 +57,10 @@ Pod::Spec.new do |s|
     ss.dependency 'Brick_SwiftUI/SwiftUI'
     ss.dependency 'Brick_SwiftUI/Utilities'
     
+    ss.subspec 'Tabbar' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Tabbar/**/*'
+    end
+    
     ss.subspec 'CarouselView' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/CarouselView/**/*'
     end
