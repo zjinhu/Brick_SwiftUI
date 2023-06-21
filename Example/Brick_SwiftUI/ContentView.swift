@@ -55,6 +55,8 @@ struct ContentView: View {
                         
                         NavigationLink("AnimationCompleted", destination: AnimationCompleted())
                         
+                        NavigationLink("ScrollStackView", destination: ScrollStackView())
+                        
                         NavigationLink("DrrkModelView", destination: DarkModelView())
                     }
                     
