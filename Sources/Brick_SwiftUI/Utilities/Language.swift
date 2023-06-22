@@ -8,10 +8,10 @@
 import SwiftUI
 import Foundation
 extension Brick{
-    public struct Locale {
+    public struct Language {
         /// The current language of the system.
         public static var currentLanguage: String? {
-
+            
             if #available(iOS 16, *) {
                 if let languageCode = Foundation.Locale.current.language.languageCode?.identifier {
                     return languageCode
@@ -23,10 +23,7 @@ extension Brick{
             }
             return nil
         }
-
+        
     }
 }
-
-public class AppLocale: ObservableObject {
-   @AppStorage("language") var language = "en"
-}
+ 
