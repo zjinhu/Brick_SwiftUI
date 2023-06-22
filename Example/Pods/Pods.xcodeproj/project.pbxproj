@@ -70,6 +70,8 @@
 		5C8655A482F8BB4AA03F960D45BF3E31 /* CarouselView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A9A9EB4C80895CCBCFB2691487293 /* CarouselView++.swift */; };
 		5DEEAED1554D51B820B3B9A26ACDD3D3 /* Shape++.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14739B0A232EB37E59F59B198457F32 /* Shape++.swift */; };
 		5EB7D5589BFBFE3B4CF96ED98D052BD3 /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB0681FE98615818C7BE4E223584CE /* Alignment.swift */; };
+		60199CE02A44694700FC70DE /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60199CDA2A44694700FC70DE /* Locale.swift */; };
+		60199CE32A44694700FC70DE /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60199CDD2A44694700FC70DE /* Application.swift */; };
 		62B724A805CA17CA8773189BFC085C3C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244EA0E2A035AEA6B8F2432D3F62EEC0 /* LoadingView.swift */; };
 		6398901B4BE4290D19BB36ED2689A517 /* BrickLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB70D29FC9EE5956A77F1D12C9690074 /* BrickLog.swift */; };
 		6585AFD3FAE5810527568EBAF516D4F9 /* SFSymbolName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8C12C74F528F49023EA75AE7E7112 /* SFSymbolName.swift */; };
@@ -242,7 +244,7 @@
 		3B537877DA88D4B3FDA5C4F56CC25822 /* ToolbarBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToolbarBackground.swift; path = Sources/Brick_SwiftUI/Tools/Toolbar/ToolbarBackground.swift; sourceTree = "<group>"; };
 		3C25ADD8F5A4DEA4CC501315995DFE77 /* FailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailView.swift; path = Sources/Brick_SwiftUI/Tools/Loading/FailView.swift; sourceTree = "<group>"; };
 		3E31A5D69F19095B6193FFCB68D0876E /* AppStorage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AppStorage+.swift"; path = "Sources/Brick_SwiftUI/Wrapped/AppStorage+.swift"; sourceTree = "<group>"; };
-		3E60823C533668ADD97BFE48554C8820 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		3E60823C533668ADD97BFE48554C8820 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3E9E1D29E912ACB4E04D752AFCBD7C31 /* View+Haptic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "View+Haptic.swift"; path = "Sources/Brick_SwiftUI/SwiftUI/View+Haptic.swift"; sourceTree = "<group>"; };
 		3F06FAF9D0AB4CD6004DC798553B2085 /* Badge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Badge.swift; path = Sources/Brick_SwiftUI/Wrapped/Badge.swift; sourceTree = "<group>"; };
 		3F6243538AB0393224FB35145F7CC239 /* Brick_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Brick_SwiftUI.release.xcconfig; sourceTree = "<group>"; };
@@ -271,9 +273,11 @@
 		5AC650BE89E97F02E9EF66765F65B21B /* FocusState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FocusState.swift; path = Sources/Brick_SwiftUI/Wrapped/FocusState.swift; sourceTree = "<group>"; };
 		5B9FA53DB8B0F7FCFB8B8BF77584B767 /* Brick_SwiftUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Brick_SwiftUI.modulemap; sourceTree = "<group>"; };
 		5DE28D5253DE36DBFED0649FFE7CE4BD /* TabbarEnvironmentKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabbarEnvironmentKey.swift; path = Sources/Brick_SwiftUI/Tools/Tabbar/TabbarEnvironmentKey.swift; sourceTree = "<group>"; };
+		60199CDA2A44694700FC70DE /* Locale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
+		60199CDD2A44694700FC70DE /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		6079713879A494EB764F4149BEA58049 /* ShareLink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShareLink.swift; path = Sources/Brick_SwiftUI/Tools/ShareLink/ShareLink.swift; sourceTree = "<group>"; };
 		61D95199FF0C0BBDAF168622835016E2 /* DataModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		63988C7094237480BE269BA263278C48 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		63988C7094237480BE269BA263278C48 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		63A255C716151AE116BEE2A74105E224 /* PushTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PushTransition.swift; path = Sources/Brick_SwiftUI/Wrapped/PushTransition.swift; sourceTree = "<group>"; };
 		653E24C7A8759234014734BE145E9C1D /* Items+Label.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Items+Label.swift"; sourceTree = "<group>"; };
 		669675AF335CE34BC610E4379065BF99 /* NavigationPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationPath.swift; path = Sources/Brick_SwiftUI/Tools/NavigationStack/NavigationPath.swift; sourceTree = "<group>"; };
@@ -302,7 +306,7 @@
 		97EDCF46509E901EAAFA8E2D57A6F550 /* FooterKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FooterKey.swift; path = Sources/Brick_SwiftUI/Tools/Refresh/FooterKey.swift; sourceTree = "<group>"; };
 		9CD15517323FE1D84EA0F28069305283 /* ContentInteraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentInteraction.swift; path = Sources/Brick_SwiftUI/Tools/Presentation/ContentInteraction.swift; sourceTree = "<group>"; };
 		9D0466F0BE3EAA700A5A0F2B353C88A2 /* CornerRadius.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CornerRadius.swift; path = Sources/Brick_SwiftUI/Tools/Presentation/CornerRadius.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DA5486687A0A9842F76C5DFD3840593 /* EnvironmentValues+navigationStack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+navigationStack.swift"; sourceTree = "<group>"; };
 		9EB69C4EA31ED4B9FAC9C5AC43A2CAEC /* AudioPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		9FEB39058D809E57E7464CA31935DD47 /* ContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContainerView.swift; path = Sources/Brick_SwiftUI/Tools/Loading/ContainerView.swift; sourceTree = "<group>"; };
@@ -342,7 +346,7 @@
 		C5E88CC7041C4B9E6A2BE4D47A6CF8AB /* Audio.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		C5EB4E21D59A0D89F60DF04FB4499EFE /* Refresh.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Refresh.swift; path = Sources/Brick_SwiftUI/Tools/Refresh/Refresh.swift; sourceTree = "<group>"; };
 		C606A664CBDDD23FA06F0E9DC3F586FB /* SecureField++.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SecureField++.swift"; path = "Sources/Brick_SwiftUI/SwiftUI/SecureField++.swift"; sourceTree = "<group>"; };
-		C63C7B846E371EBD660402200B3BA456 /* Brick_SwiftUI.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Brick_SwiftUI.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C63C7B846E371EBD660402200B3BA456 /* Brick_SwiftUI.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Brick_SwiftUI.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C69B5F17890B3B4510C6CD58608C060E /* UITableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		C7217F967CF7BB3B53D85BD4C14A2A3D /* Node.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		C89EACA14F841A65784FB63F31230505 /* Color+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Color+.swift"; path = "Sources/Brick_SwiftUI/SwiftUI/Color+.swift"; sourceTree = "<group>"; };
@@ -701,6 +705,8 @@
 			isa = PBXGroup;
 			children = (
 				F517634CECCEFF2A79FDE95D069B2948 /* Brick.swift */,
+				60199CDD2A44694700FC70DE /* Application.swift */,
+				60199CDA2A44694700FC70DE /* Locale.swift */,
 				AB70D29FC9EE5956A77F1D12C9690074 /* BrickLog.swift */,
 				71DFABEAC3AA8146A1368B7DDA5AB1B2 /* CGSize++.swift */,
 				B0F8C12C74F528F49023EA75AE7E7112 /* SFSymbolName.swift */,
@@ -1128,6 +1134,7 @@
 				E979A11B5BC032737D9631F855E751F5 /* InteractiveDetent.swift in Sources */,
 				0D9F0EBA8D8D5FA7A0D864E6A244975F /* InteractiveDismiss.swift in Sources */,
 				3CE0B92559D3C227966F9CC457BF170B /* Item.swift in Sources */,
+				60199CE02A44694700FC70DE /* Locale.swift in Sources */,
 				8D8502DFCF58F945F8D5F4540AE2E579 /* Item+Label.swift in Sources */,
 				799AADFD38717A0F76772D808FD59682 /* Items.swift in Sources */,
 				C084B8D495557D5F3664D9961B99EC0A /* Items+Label.swift in Sources */,
@@ -1171,6 +1178,7 @@
 				908CE8830B7AB261D4FAFE90983F8DFF /* SafeArea.swift in Sources */,
 				F328482A2E6EFEEDEF6FC7982AAE2D82 /* Scroll+Environment.swift in Sources */,
 				9E053D4B14F242EC4A6C63F627E2D93A /* ScrollDismissesKeyboardMode.swift in Sources */,
+				60199CE32A44694700FC70DE /* Application.swift in Sources */,
 				15394C251DABE12BF8E703D077AD3956 /* ScrollEnabled.swift in Sources */,
 				66581573F159DA7B34BFEB8D089AEAC5 /* ScrollIndicators.swift in Sources */,
 				7889EF463A1C333DB852CFAFD946ADBD /* ScrollIndicatorVisibility.swift in Sources */,

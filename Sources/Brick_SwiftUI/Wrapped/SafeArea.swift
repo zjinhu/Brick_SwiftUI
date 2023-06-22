@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+extension UIScreen {
+    public static var safeArea: UIEdgeInsets {
+        UIApplication.shared
+            .connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap(\.windows)
+            .first(where: \.isKeyWindow)?
+            .safeAreaInsets ?? .zero
+    }
+}
+
 public extension Brick where Wrapped: View {
 
     @inlinable
