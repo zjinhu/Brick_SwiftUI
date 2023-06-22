@@ -11,6 +11,8 @@
 
 ### SwiftUI APP Acceleration Development Kit
 
+ [Demo](https://github.com/jackiehu/Brick_swiftUI_Demo)
+
 Built-in various auxiliary development tools, and the newly added API after iOS15 is compatible with iOS14, please run the demo to view the usage of specific functions
 
 | ![](Image/1.png) | ![](Image/2.png) |

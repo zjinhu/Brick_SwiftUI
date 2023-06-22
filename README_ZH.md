@@ -10,6 +10,8 @@
 
 ### SwiftUI APP加速开发工具包
 
+ [Demo](https://github.com/jackiehu/Brick_swiftUI_Demo)
+
 内置了各种辅助开发的工具，以及iOS15以后新添加的API向iOS14进行了兼容,具体功能请运行Demo查看用法
 
 | ![](Image/1.png) | ![](Image/2.png) |

@@ -1,9 +1,0 @@
-use_frameworks!
-
-platform :ios, '14.0'
-
-target 'Example' do
-  pod 'Brick_SwiftUI', :path => '../'
-  
-  #pod 'SwiftMesh'
-end
