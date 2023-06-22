@@ -8,7 +8,7 @@
 import SwiftUI
 import Brick_SwiftUI
 struct ContentView: View {
-    
+    @Brick.AppStorage("START_TIME_KEY", store:UserDefaults.standard) var startTime: Date = Date()
     @State private var showSheet = false
     @State private var tabSelection: Tab = .home
 
