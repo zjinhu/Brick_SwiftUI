@@ -17,10 +17,6 @@ extension UIWindow {
             .compactMap { $0.windows.first { $0.isKeyWindow } }
             .first
     }
-    
-    public var rootViewController: UIViewController? {
-        return UIWindow.keyWindow?.rootViewController
-    }
 }
 
 extension UIWindowScene {
