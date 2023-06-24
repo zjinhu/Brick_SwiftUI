@@ -135,6 +135,7 @@ extension Brick.NavigationPath {
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
 extension Brick.NavigationPath.CodableRepresentation: Encodable {
+    
     fileprivate func generalEncodingError(_ description: String) -> EncodingError {
         let context = EncodingError.Context(codingPath: [], debugDescription: description)
         return EncodingError.invalidValue(elements, context)
@@ -168,6 +169,7 @@ extension Brick.NavigationPath.CodableRepresentation: Encodable {
 #endif
         }
     }
+    
 }
 
 @available(iOS, deprecated: 16)
@@ -175,6 +177,7 @@ extension Brick.NavigationPath.CodableRepresentation: Encodable {
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
 extension Brick.NavigationPath.CodableRepresentation: Decodable {
+    
     public init(from decoder: Decoder) throws {
         var container = try decoder.unkeyedContainer()
         elements = []
@@ -208,6 +211,7 @@ extension Brick.NavigationPath.CodableRepresentation: Decodable {
             elements.insert(value, at: 0)
         }
     }
+    
 }
 
 @available(iOS, deprecated: 16)
