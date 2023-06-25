@@ -49,6 +49,22 @@ extension View {
         environment(\.tabBarHeight, height)
     }
     
+    public func tabBarStyle(_ style: TabBarStyle) -> some View {
+        environment(\.tabBarStyle, style)
+    }
+    
+    public func tabBarItemStyle(_ style: TabbarItemStyle) -> some View {
+        environment(\.tabBarItemStyle, style)
+    }
+    
+    public func tabBarFont(_ font: Font) -> some View {
+        environment(\.tabBarFont, font)
+    }
+    
+    public func tabBarIndicatorHidden(_ hidden: Bool) -> some View {
+        environment(\.tabBarIndicatorHidden, hidden)
+    }
+    
     func foreground<V: View>(_ content: @escaping () -> V) -> some View {
         return self
             .overlay {

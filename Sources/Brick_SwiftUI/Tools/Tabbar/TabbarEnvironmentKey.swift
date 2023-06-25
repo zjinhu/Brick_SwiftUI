@@ -29,6 +29,17 @@ extension EnvironmentValues {
     }
 }
  
+struct TabBarIndicatorHiddenEnvironmentKey: EnvironmentKey {
+    static var defaultValue: Bool = true
+}
+
+extension EnvironmentValues {
+    var tabBarIndicatorHidden: Bool {
+        get { self[TabBarIndicatorHiddenEnvironmentKey.self] }
+        set { self[TabBarIndicatorHiddenEnvironmentKey.self] = newValue }
+    }
+}
+
 struct TabBarColorEnvironmentKey: EnvironmentKey {
     static var defaultValue: Color? = nil
 }
@@ -106,5 +117,48 @@ extension EnvironmentValues {
     var tabBarHeight: CGFloat {
         get { self[TabBarHeightEnvironmentKey.self] }
         set { self[TabBarHeightEnvironmentKey.self] = newValue }
+    }
+}
+
+public enum TabBarStyle{
+    case system
+    case bar
+}
+
+struct TabBarStyleEnvironmentKey: EnvironmentKey {
+    static var defaultValue: TabBarStyle = .system
+}
+ 
+extension EnvironmentValues {
+    var tabBarStyle: TabBarStyle {
+        get { self[TabBarStyleEnvironmentKey.self] }
+        set { self[TabBarStyleEnvironmentKey.self] = newValue }
+    }
+}
+
+public enum TabbarItemStyle{
+    case horizontal
+    case vertical
+}
+
+struct TabBarItemStyleEnvironmentKey: EnvironmentKey {
+    static var defaultValue: TabbarItemStyle = .vertical
+}
+ 
+extension EnvironmentValues {
+    var tabBarItemStyle: TabbarItemStyle {
+        get { self[TabBarItemStyleEnvironmentKey.self] }
+        set { self[TabBarItemStyleEnvironmentKey.self] = newValue }
+    }
+}
+
+struct TabBarFontEnvironmentKey: EnvironmentKey {
+    static var defaultValue: Font = .system(size: 15)
+}
+
+extension EnvironmentValues {
+    var tabBarFont: Font {
+        get { self[TabBarFontEnvironmentKey.self] }
+        set { self[TabBarFontEnvironmentKey.self] = newValue }
     }
 }

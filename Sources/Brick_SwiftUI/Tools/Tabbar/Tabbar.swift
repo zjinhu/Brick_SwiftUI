@@ -11,6 +11,11 @@ public struct Tabbar<Selection: Tabable, Content: View>: View {
     @Environment(\.tabBarBottomPadding) private var tabBarBottomPadding
     @Environment(\.tabBarHeight) private var tabBarHeight
     
+    @Environment(\.tabBarStyle) private var tabBarStyle
+    @Environment(\.tabBarItemStyle) private var tabBarItemStyle
+    @Environment(\.tabBarFont) private var tabBarFont
+    @Environment(\.tabBarIndicatorHidden) private var tabBarShapeHidden
+    
     @Namespace private var namespace
     private let selection: TabbarSelection<Selection>
     @State private var items: [Selection] = []
@@ -33,18 +38,40 @@ public struct Tabbar<Selection: Tabable, Content: View>: View {
                 VStack {
                     Spacer()
                     
-                    HStack {
-                        ForEach(items, id: \.hashValue) { tab in
-                            TabbarItem(indicatorShape: anyShapeBar, tab: tab,  namespace: namespace)
+                    switch tabBarStyle{
+                    case .system:
+                        HStack {
+                            ForEach(items, id: \.hashValue) { tab in
+                                VerticalTabbarItem(indicatorShape: anyShapeBar, tab: tab, namespace: namespace, titleFont: tabBarFont, hideShape: tabBarShapeHidden)
+                             }
                         }
+                        .padding(.horizontal, tabBarHorizontalPadding)
+                        .padding(tabBarInPadding)
+                        .background(
+                            tabBarColor.ignoresSafeArea(edges: .bottom)
+                                .shadow(color: tabBarShadow.color, radius: tabBarShadow.radius, x: tabBarShadow.x, y: tabBarShadow.y)
+                        )
+                        .frame(height: tabBarHeight)
+                        .padding(.bottom, geometry.safeAreaInsets.bottom + tabBarBottomPadding)
+                    case .bar:
+                        HStack {
+                            ForEach(items, id: \.hashValue) { tab in
+                                switch tabBarItemStyle{
+                                case .vertical:
+                                    VerticalTabbarItem(indicatorShape: anyShapeBar, tab: tab,  namespace: namespace, titleFont: tabBarFont, hideShape: tabBarShapeHidden)
+                                case .horizontal:
+                                    HorizontalTabbarItem(indicatorShape: anyShapeBar, tab: tab, titleFont: tabBarFont, hideShape: tabBarShapeHidden, namespace: namespace)
+                                }
+                            }
+                        }
+                        .padding(tabBarInPadding)
+                        .background(
+                            GeometryReader(content: backgroundBar(with:))
+                        )
+                        .frame(height: tabBarHeight)
+                        .padding(.horizontal, tabBarHorizontalPadding)
+                        .padding(.bottom, geometry.safeAreaInsets.bottom + tabBarBottomPadding)
                     }
-                    .padding(tabBarInPadding)
-                    .background(
-                        GeometryReader(content: backgroundBar(with:))
-                    )
-                    .frame(height: tabBarHeight)
-                    .padding(.horizontal, tabBarHorizontalPadding)
-                    .padding(.bottom, geometry.safeAreaInsets.bottom + tabBarBottomPadding)
                 }
                 .edgesIgnoringSafeArea(.bottom)
                 .visibility(visibility)
