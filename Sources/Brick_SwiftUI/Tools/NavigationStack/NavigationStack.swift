@@ -41,7 +41,7 @@ extension Brick where Wrapped == Any {
                 SwiftUI.NavigationStack(path: $path.path) {
                     content
                         .navigationDestination(for: AnyHashable.self, destination: { destinationBuilder.build($0) })
-                        .navigationDestination(for: LocalDestinationID.self, destination: { destinationBuilder.build($0) }) as! Content
+                        .navigationDestination(for: LocalDestinationID.self, destination: { destinationBuilder.build($0) })
                 }
                 .environment(\.isWithinNavigationStack, true)
               )
