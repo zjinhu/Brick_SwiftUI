@@ -8,10 +8,10 @@
 import SwiftUI
 
 extension ProgressViewStyle where Self == BarProgressViewStyle {
-    static func bar(barHeight: CGFloat = 6,
-                        foregroundColor: Color = .accentColor,
-                        backgroundColor: Color = .gray.opacity(0.3)) -> BarProgressViewStyle {
-        BarProgressViewStyle(barHeight: barHeight,
+    public static func heightBar(height: CGFloat = 6,
+                                 foregroundColor: Color = .accentColor,
+                                 backgroundColor: Color = .gray.opacity(0.3)) -> BarProgressViewStyle {
+        BarProgressViewStyle(barHeight: height,
                              foregroundColor: foregroundColor,
                              backgroundColor: backgroundColor)
     }
