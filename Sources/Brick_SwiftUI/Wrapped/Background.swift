@@ -127,4 +127,24 @@ public extension Brick where Wrapped: View {
         wrapped.background(content(), alignment: alignment)
     }
 
+    
+    func hideListBackground() -> some View {
+        if #available(iOS 16, *) {
+            return wrapped
+                .scrollContentBackground(.hidden)
+        } else {
+            UITableView.appearance().backgroundColor = .clear
+            return wrapped
+        }
+    }
+    
+    func hideTextViewBackground() -> some View {
+        if #available(iOS 16, *) {
+            return wrapped
+                .scrollContentBackground(.hidden)
+        } else {
+            UITextView.appearance().backgroundColor = .clear
+            return wrapped
+        }
+    }
 }
