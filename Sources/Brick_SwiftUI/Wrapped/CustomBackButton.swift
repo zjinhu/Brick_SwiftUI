@@ -26,8 +26,9 @@ struct CustomBackButton<Image: View>: ViewModifier {
             }
     }
 }
-extension View {
-    func navigationCustomBackButton<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
-        self.modifier(CustomBackButton(view: content()))
+
+extension Brick where Wrapped: View {
+    public func navigationCustomBackButton<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
+        wrapped.modifier(CustomBackButton(view: content()))
     }
 }
