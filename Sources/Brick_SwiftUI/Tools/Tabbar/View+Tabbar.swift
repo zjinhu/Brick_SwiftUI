@@ -64,7 +64,19 @@ extension View {
     public func tabBarIndicatorHidden(_ hidden: Bool) -> some View {
         environment(\.tabBarIndicatorHidden, hidden)
     }
-    
+
+    @ViewBuilder
+    public func visibility(_ visibility: TabbarVisible) -> some View {
+        switch visibility {
+        case .visible:
+            self.transition(.move(edge: .bottom))
+        case .hidden:
+            hidden().transition(.move(edge: .bottom))
+        }
+    }
+}
+
+extension View {
     func foreground<V: View>(_ content: @escaping () -> V) -> some View {
         return self
             .overlay {
@@ -76,13 +88,4 @@ extension View {
             }
     }
     
-    @ViewBuilder
-    public func visibility(_ visibility: TabbarVisible) -> some View {
-        switch visibility {
-        case .visible:
-            self.transition(.move(edge: .bottom))
-        case .hidden:
-            hidden().transition(.move(edge: .bottom))
-        }
-    }
 }
