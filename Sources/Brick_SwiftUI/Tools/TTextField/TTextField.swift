@@ -164,21 +164,39 @@ public struct TTextField: View {
 }
  
 extension TTextField{
-
-    public func setError(errorText: Binding<String>, error: Binding<Bool>) -> Self {
+    
+    public func tTitleText(_ titleText: String) -> Self{
+        var copy = self
+        copy.titleText = titleText
+        return copy
+    }
+    
+    public func tPlaceHolderText(_ placeHolderText: String) -> Self {
+        var copy = self
+        copy.placeHolderText = placeHolderText
+        return copy
+    }
+    public func tDisable(_ disable: Binding<Bool>) -> Self{
+        var copy = self
+        copy.disable = disable
+        return copy
+    }
+    
+    public func tError(errorText: Binding<String>, error: Binding<Bool>) -> Self {
         var copy = self
         copy.error = error
         copy.errorText = errorText
         return copy
     }
 
-    public func setTrailingImage(_ image: Image, click: @escaping (()->Void)) -> Self{
+    public func tTrailingImage(_ image: Image, click: @escaping (()->Void)) -> Self{
         var copy = self
         copy._trailingImage = State(initialValue: image)
         copy.trailingImageClick = click
         return copy
     }
-    public func setSecureText(_ secure: Bool) -> Self{
+    
+    public func tSecureText(_ secure: Bool) -> Self{
         var copy = self
         copy._secureText = State(initialValue: secure)
         if secure{
@@ -187,19 +205,26 @@ extension TTextField{
         copy.isSecureText = secure
         return copy
     }
-    public func setSecureTextImages(open: Image, close: Image) -> Self{
+    
+    public func tSecureTextImages(open: Image, close: Image) -> Self{
         var copy = self
         copy.secureTextImageOpen = open
         copy.secureTextImageClose = close
         copy._trailingImage = State(initialValue: copy.secureTextImageClose)
         return copy
     }
-    public func setMaxCount(_ count: Int) -> Self{
+    
+    public func tMaxCount(_ count: Int) -> Self{
         var copy = self
         copy.maxCount = count
         return copy
     }
-
+    
+    public func tTruncateMode(_ mode: Text.TruncationMode) -> Self{
+        var copy = self
+        copy.truncationMode = mode
+        return copy
+    }
 }
  
 extension View {
