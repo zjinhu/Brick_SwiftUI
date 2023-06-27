@@ -28,16 +28,11 @@ public struct TTextField: View {
     public init(text: Binding<String>,
                 disable: Binding<Bool> = .constant(false),
                 error: Binding<Bool> = .constant(false),
-                errorText: Binding<String> = .constant(""),
-                isSecure: Bool = false) {
+                errorText: Binding<String> = .constant("")) {
         self.text = text
         self.disable = disable
         self.error = error
         self.errorText = errorText
-        self.isSecure = isSecure
-        if isSecure{
-            trailingImage = secureCloseImage
-        }
     }
     
     public var body: some View{
@@ -180,13 +175,22 @@ public struct TTextField: View {
 
 extension TTextField{
     
-    public func tTrailingImage(_ image: Image, click: @escaping (()->Void)) -> Self{
+    public func tTextFieldTrailingImage(_ image: Image, click: @escaping (()->Void)) -> Self{
         var copy = self
         copy._trailingImage = State(initialValue: image)
         copy.trailingImageClick = click
         return copy
     }
     
+    public func tTextFieldSecure(_ secure: Bool) -> Self{
+        var copy = self
+        copy._secureText = State(initialValue: secure)
+        if secure{
+            copy._trailingImage = State(initialValue: copy.secureCloseImage)
+        }
+        copy.isSecure = secure
+        return copy
+    }
 }
 
 extension View {
