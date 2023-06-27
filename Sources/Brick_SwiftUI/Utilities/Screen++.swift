@@ -30,6 +30,23 @@ extension UIWindowScene {
         return nil
     }
 }
+ 
+
+extension UIScreen {
+    public static var safeArea: UIEdgeInsets {
+        UIApplication.shared
+            .connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap(\.windows)
+            .first(where: \.isKeyWindow)?
+            .safeAreaInsets ?? .zero
+    }
+    
+    /// 当前屏幕状态 宽度
+    public static var realHeight = max(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+    /// 当前屏幕状态 高度
+    public static var realWidth = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+}
 
 private extension UIScene.ActivationState {
     var sortPriority: Int {
