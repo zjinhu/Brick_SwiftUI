@@ -29,19 +29,19 @@ extension ToastManager {
 }
 
 public class ToastManager: ObservableObject {
-    public init() {}
+    
+    public init(position: ToastPosition = .bottom) {
+        self.position = position
+    }
     
     
     ///Toast停留时长
     public var duration: TimeInterval = 3
     ///Toast显示位置
-    public var position: ToastPosition = .bottom
+    public var position: ToastPosition
     ///Toast距离屏幕边缘
     public var padding: CGFloat = 10
-    
-    
-    
-    
+ 
     typealias Action = () -> Void
 
     private var presentationId = UUID()
