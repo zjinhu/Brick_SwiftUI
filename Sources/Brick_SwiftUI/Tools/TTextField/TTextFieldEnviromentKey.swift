@@ -253,25 +253,3 @@ extension EnvironmentValues {
     }
 }
 
-
-struct TTextFieldSecureOpenEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Image = Image(systemName: .eye)
-}
-
-extension EnvironmentValues {
-    var secureOpenImage: Image {
-        get { self[TTextFieldSecureOpenEnvironmentKey.self] }
-        set { self[TTextFieldSecureOpenEnvironmentKey.self] = newValue }
-    }
-}
-
-struct TTextFieldSecureCloseEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Image = Image(systemName: .eyeSlash)
-}
-
-extension EnvironmentValues {
-    var secureCloseImage: Image {
-        get { self[TTextFieldSecureCloseEnvironmentKey.self] }
-        set { self[TTextFieldSecureCloseEnvironmentKey.self] = newValue }
-    }
-}

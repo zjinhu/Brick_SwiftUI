@@ -24,6 +24,8 @@ public struct TTextField: View {
     
     private var trailingImageClick: (() -> Void)?
     @State private var trailingImage : Image?
+    private var secureOpenImage : Image? = Image(systemName: .eye)
+    private var secureCloseImage : Image? = Image(systemName: .eyeSlash)
     
     public init(text: Binding<String>,
                 disable: Binding<Bool> = .constant(false),
@@ -167,9 +169,7 @@ public struct TTextField: View {
 
     @Environment(\.truncationMode) private var truncationMode
     @Environment(\.limitCount) private var limitCount
-    
-    @Environment(\.secureOpenImage) private var secureOpenImage
-    @Environment(\.secureCloseImage) private var secureCloseImage
+
     
 }
 
@@ -191,18 +191,18 @@ extension TTextField{
         copy.isSecure = secure
         return copy
     }
+    
+    public func tTextFieldSecureImage(open: Image, close: Image) -> Self{
+        var copy = self
+        copy.secureOpenImage = open
+        copy.secureCloseImage = close
+        copy._trailingImage = State(initialValue: copy.secureCloseImage)
+        return copy
+    }
 }
 
 extension View {
-    
-    public func tTextFieldSecureOpenImage(_ image: Image) -> some View {
-        environment(\.secureOpenImage, image)
-    }
-    
-    public func tTextFieldSecureCloseImage(_ image: Image) -> some View {
-        environment(\.secureCloseImage, image)
-    }
-    
+
     public func tTextFieldLimitCount(_ count: Int) -> some View {
         environment(\.limitCount, count)
     }
