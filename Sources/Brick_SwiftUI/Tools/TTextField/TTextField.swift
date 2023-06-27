@@ -12,7 +12,7 @@ public struct TTextField: View {
     private var disable: Binding<Bool>
     private var error: Binding<Bool>
     private var errorText: Binding<String>
-    
+    private var isSecure = false
     @State private var secureText = false{
         didSet{
             if secureText{
@@ -28,11 +28,16 @@ public struct TTextField: View {
     public init(text: Binding<String>,
                 disable: Binding<Bool> = .constant(false),
                 error: Binding<Bool> = .constant(false),
-                errorText: Binding<String> = .constant("")) {
+                errorText: Binding<String> = .constant(""),
+                isSecure: Bool = false) {
         self.text = text
         self.disable = disable
         self.error = error
         self.errorText = errorText
+        self.isSecure = isSecure
+        if isSecure{
+            trailingImage = secureCloseImage
+        }
     }
     
     public var body: some View{
@@ -164,7 +169,7 @@ public struct TTextField: View {
     
     @Environment(\.textFieldTitle) private var textFieldTitle
     @Environment(\.placeHolderText) private var placeHolderText
-    @Environment(\.isSecure) private var isSecure
+
     @Environment(\.truncationMode) private var truncationMode
     @Environment(\.limitCount) private var limitCount
     
@@ -201,11 +206,7 @@ extension View {
     public func tTextFieldTruncationMode(_ mode: Text.TruncationMode) -> some View {
         environment(\.truncationMode, mode)
     }
-    
-    public func tTextFieldIsSecure(_ secure: Bool) -> some View {
-        environment(\.isSecure, secure)
-    }
-    
+
     public func tTextFieldTitle(_ title: String) -> some View {
         environment(\.textFieldTitle, title)
     }

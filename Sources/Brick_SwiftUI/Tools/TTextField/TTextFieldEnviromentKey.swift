@@ -231,18 +231,6 @@ extension EnvironmentValues {
     }
 }
 
-struct TTextFieldSecureEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Bool = false
-}
-
-extension EnvironmentValues {
-    var isSecure: Bool {
-        get { self[TTextFieldSecureEnvironmentKey.self] }
-        set { self[TTextFieldSecureEnvironmentKey.self] = newValue }
-    }
-}
-
-
 struct TTextFieldTruncateModeEnvironmentKey: EnvironmentKey {
     static var defaultValue: Text.TruncationMode = .tail
 }
