@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ToastView<Content: View>: View {
+    @StateObject private var keyboardObserver = KeyboardManager()
     
     init(isActive: Binding<Bool>,
                 padding: CGFloat = 10,
@@ -30,6 +31,8 @@ struct ToastView<Content: View>: View {
             .animation(.spring())
             .offset(y: !isActive ? offset : -offset)
             .padding(.horizontal, padding)
+            .padding(.top, UIScreen.safeArea.top)
+            .padding(.bottom, UIScreen.safeArea.bottom + keyboardObserver.keyboardHeight)
     }
 }
 
