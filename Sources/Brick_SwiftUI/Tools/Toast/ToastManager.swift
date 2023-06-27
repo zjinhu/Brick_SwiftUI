@@ -134,14 +134,14 @@ extension View {
                 ToastView(
                     isActive: isActive,
                     padding: padding,
-                    defaultOffset: -200,
+                    defaultOffset: -500,
                     content: { _ in content() }
                 )
             }else{
                 ToastView(
                     isActive: isActive,
                     padding: padding,
-                    defaultOffset: 200, 
+                    defaultOffset: 500, 
                     content: { _ in content() }
                 )
             }
