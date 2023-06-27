@@ -208,3 +208,82 @@ extension EnvironmentValues {
         set { self[TTextFieldHeightEnvironmentKey.self] = newValue }
     }
 }
+
+struct TTextFieldTitleEnvironmentKey: EnvironmentKey {
+    static var defaultValue: String?
+}
+
+extension EnvironmentValues {
+    var textFieldTitle: String? {
+        get { self[TTextFieldTitleEnvironmentKey.self] }
+        set { self[TTextFieldTitleEnvironmentKey.self] = newValue }
+    }
+}
+
+struct TTextFieldPlaceHolderTextEnvironmentKey: EnvironmentKey {
+    static var defaultValue: String = ""
+}
+
+extension EnvironmentValues {
+    var placeHolderText: String {
+        get { self[TTextFieldPlaceHolderTextEnvironmentKey.self] }
+        set { self[TTextFieldPlaceHolderTextEnvironmentKey.self] = newValue }
+    }
+}
+
+struct TTextFieldSecureEnvironmentKey: EnvironmentKey {
+    static var defaultValue: Bool = false
+}
+
+extension EnvironmentValues {
+    var isSecure: Bool {
+        get { self[TTextFieldSecureEnvironmentKey.self] }
+        set { self[TTextFieldSecureEnvironmentKey.self] = newValue }
+    }
+}
+
+
+struct TTextFieldTruncateModeEnvironmentKey: EnvironmentKey {
+    static var defaultValue: Text.TruncationMode = .tail
+}
+
+extension EnvironmentValues {
+    var truncationMode: Text.TruncationMode {
+        get { self[TTextFieldTruncateModeEnvironmentKey.self] }
+        set { self[TTextFieldTruncateModeEnvironmentKey.self] = newValue }
+    }
+}
+
+struct TTextFieldLimitEnvironmentKey: EnvironmentKey {
+    static var defaultValue: Int?
+}
+
+extension EnvironmentValues {
+    var limitCount: Int? {
+        get { self[TTextFieldLimitEnvironmentKey.self] }
+        set { self[TTextFieldLimitEnvironmentKey.self] = newValue }
+    }
+}
+
+
+struct TTextFieldSecureOpenEnvironmentKey: EnvironmentKey {
+    static var defaultValue: Image = Image(systemName: .eye)
+}
+
+extension EnvironmentValues {
+    var secureOpenImage: Image {
+        get { self[TTextFieldSecureOpenEnvironmentKey.self] }
+        set { self[TTextFieldSecureOpenEnvironmentKey.self] = newValue }
+    }
+}
+
+struct TTextFieldSecureCloseEnvironmentKey: EnvironmentKey {
+    static var defaultValue: Image = Image(systemName: .eyeSlash)
+}
+
+extension EnvironmentValues {
+    var secureCloseImage: Image {
+        get { self[TTextFieldSecureCloseEnvironmentKey.self] }
+        set { self[TTextFieldSecureCloseEnvironmentKey.self] = newValue }
+    }
+}
