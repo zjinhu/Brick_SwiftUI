@@ -18,7 +18,9 @@ package.products = [
 
 package.targets = [
     .target(
-        name: "Brick_SwiftUI"),
+        name: "Brick_SwiftUI",
+        path: "Sources"
+    ),
 ]
 
 package.swiftLanguageVersions = [.v5]
