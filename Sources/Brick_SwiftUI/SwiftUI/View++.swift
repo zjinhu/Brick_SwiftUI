@@ -3,18 +3,6 @@
 //
 
 import SwiftUI
-// MARK: - View.background
-extension View {
-    @_disfavoredOverload
-    @inlinable
-    public func background<Background: View>(
-        alignment: Alignment = .center,
-        @ViewBuilder _ background: () -> Background
-    ) -> some View {
-        self.background(background(), alignment: alignment)
-    }
-
-}
 
 // MARK: - View.overlay
 extension View {
@@ -25,6 +13,22 @@ extension View {
         @ViewBuilder _ overlay: () -> Overlay
     ) -> some View {
         self.overlay(overlay(), alignment: alignment)
+    }
+}
+
+extension View {
+    /// Hides this view conditionally.
+    @_disfavoredOverload
+    @inlinable
+    public func hidden(_ isHidden: Bool) -> some View {
+        PassthroughView {
+            if isHidden {
+                hidden()
+            } else {
+                self
+            }
+        }
+        .eraseToAnyView()
     }
 }
 
@@ -51,6 +55,41 @@ extension View {
     }
 }
 
+// MARK: - View.transition
+extension View {
+    /// Associates a transition with the view.
+    public func transition(_ makeTransition: () -> AnyTransition) -> some View {
+        self.transition(makeTransition())
+    }
+    
+    /// Associates an insertion transition and a removal transition with the view.
+    public func asymmetricTransition(
+        insertion: AnyTransition = .identity,
+        removal: AnyTransition = .identity
+    ) -> some View {
+        transition(.asymmetric(insertion: insertion, removal: removal))
+    }
+}
+
+extension View {
+    /// Returns a type-erased version of `self`.
+    @inlinable
+    public func eraseToAnyView() -> AnyView {
+        return .init(self)
+    }
+}
+
+extension View {
+    public func shadow(
+        color: Color = .black,
+        x: CGFloat,
+        y: CGFloat,
+        blur: CGFloat
+    ) -> some View {
+        shadow(color: color, radius: blur / 2, x: x, y: y)
+    }
+}
+
 // MARK: - View.padding
 extension View {
     /// A view that pads this view inside the specified edge insets with a system-calculated amount of padding and a color.
@@ -72,7 +111,7 @@ extension View {
             including: disabled ? .subviews : .all
         )
     }
-
+    
     public func onTapGestureOnBackground(
         count: Int = 1,
         perform action: @escaping () -> Void
@@ -86,50 +125,7 @@ extension View {
 }
 
 extension View {
-    @inlinable
-    public func relativeHeight(
-        _ ratio: CGFloat,
-        alignment: Alignment = .center
-    ) -> some View {
-        GeometryReader { geometry in
-            self.frame(
-                height: geometry.size.height * ratio,
-                alignment: alignment
-            )
-        }
-    }
     
-    @inlinable
-    public func relativeWidth(
-        _ ratio: CGFloat,
-        alignment: Alignment = .center
-    ) -> some View {
-        GeometryReader { geometry in
-            self.frame(
-                width: geometry.size.width * ratio,
-                alignment: alignment
-            )
-        }
-    }
-    
-    @inlinable
-    public func relativeSize(
-        width widthRatio: CGFloat?,
-        height heightRatio: CGFloat?,
-        alignment: Alignment = .center
-    ) -> some View {
-        GeometryReader { geometry in
-            self.frame(
-                width: widthRatio.map({ $0 * geometry.size.width }),
-                height: heightRatio.map({ $0 * geometry.size.height }),
-                alignment: alignment
-            )
-        }
-    }
-}
-
-extension View {
-
     @inlinable
     public func fill(alignment: Alignment = .center) -> some View {
         relativeSize(width: 1.0, height: 1.0, alignment: alignment)
@@ -137,7 +133,7 @@ extension View {
 }
 
 extension View {
-
+    
     @inlinable
     public func fit() -> some View {
         GeometryReader { geometry in
@@ -149,155 +145,14 @@ extension View {
     }
 }
 
-extension View {
-    @inlinable
-    public func width(_ width: CGFloat?) -> some View {
-        frame(width: width)
-    }
-    
-    @inlinable
-    public func height(_ height: CGFloat?) -> some View {
-        frame(height: height)
-    }
-
-    @inlinable
-    public func frame(_ size: CGSize?, alignment: Alignment = .center) -> some View {
-        frame(width: size?.width, height: size?.height, alignment: alignment)
-    }
-
-    @inlinable
-    public func frame(min size: CGSize?, alignment: Alignment = .center) -> some View {
-        frame(minWidth: size?.width, minHeight: size?.height, alignment: alignment)
-    }
-
-    @inlinable
-    public func frame(max size: CGSize?, alignment: Alignment = .center) -> some View {
-        frame(maxWidth: size?.width, maxHeight: size?.height, alignment: alignment)
-    }
-
-    @inlinable
-    public func frame(
-        min minSize: CGSize?,
-        max maxSize: CGSize?,
-        alignment: Alignment = .center
-    ) -> some View {
-        frame(
-            minWidth: minSize?.width,
-            maxWidth: maxSize?.width,
-            minHeight: minSize?.height,
-            maxHeight: maxSize?.height,
-            alignment: alignment
-        )
-    }
-    
-    @_disfavoredOverload
-    public func frame(
-        width: ClosedRange<CGFloat>? = nil,
-        idealWidth: CGFloat? = nil,
-        height: ClosedRange<CGFloat>? = nil,
-        idealHeight: CGFloat? = nil
-    ) -> some View {
-        frame(
-            minWidth: width?.lowerBound,
-            idealWidth: idealWidth,
-            maxWidth: width?.upperBound,
-            minHeight: height?.lowerBound,
-            idealHeight: idealHeight,
-            maxHeight: height?.upperBound
-        )
-    }
-}
-
-extension View {
-    @inlinable
-    public func minWidth(_ width: CGFloat?) -> some View {
-        frame(minWidth: width)
-    }
-    
-    @inlinable
-    public func maxWidth(_ width: CGFloat?) -> some View {
-        frame(maxWidth: width)
-    }
-    
-    @inlinable
-    public func minHeight(_ height: CGFloat?) -> some View {
-        frame(minHeight: height)
-    }
-    
-    @inlinable
-    public func maxHeight(_ height: CGFloat?) -> some View {
-        frame(maxHeight: height)
-    }
-    
-    @inlinable
-    public func frame(min dimensionLength: CGFloat, axis: Axis) -> some View {
-        switch axis {
-            case .horizontal:
-                return frame(minWidth: dimensionLength)
-            case .vertical:
-                return frame(minWidth: dimensionLength)
-        }
-    }
-}
-
-extension View {
-
-    @inlinable
-    public func idealFrame(width: CGFloat?, height: CGFloat?) -> some View {
-        frame(idealWidth: width, idealHeight: height)
-    }
-
-    @inlinable
-    public func idealMinFrame(
-        width: CGFloat?,
-        maxWidth: CGFloat? = nil,
-        height: CGFloat?,
-        maxHeight: CGFloat? = nil
-    ) -> some View {
-        frame(
-            minWidth: width,
-            idealWidth: width,
-            maxWidth: maxWidth,
-            minHeight: height,
-            idealHeight: height,
-            maxHeight: maxHeight
-        )
-    }
-}
-
-extension View {
-    @inlinable
-    public func squareFrame(sideLength: CGFloat?, alignment: Alignment = .center) -> some View {
-        frame(width: sideLength, height: sideLength, alignment: alignment)
-    }
-    
-    @inlinable
-    public func squareFrame() -> some View {
-        GeometryReader { geometry in
-            self.frame(width: geometry.size.minimumDimensionLength, height: geometry.size.minimumDimensionLength)
-        }
-    }
-}
-
-extension View {
-    @inlinable
-    public func frameZeroClipped(_ clipped: Bool = true) -> some View {
-        frame(clipped ? .zero : nil)
-            .clipped()
-    }
-}
-
 extension EnvironmentValues {
     private struct TintColor: EnvironmentKey {
         static let defaultValue: Color? = nil
     }
     
     public var tintColor: Color? {
-        get {
-            self[TintColor.self]
-        } set {
-            self[TintColor.self] = newValue
-        }
+        get {self[TintColor.self]}
+        set {self[TintColor.self] = newValue}
     }
 }
 
