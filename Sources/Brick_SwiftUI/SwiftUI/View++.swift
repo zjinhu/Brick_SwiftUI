@@ -32,18 +32,6 @@ extension View {
     }
 }
 
-extension View {
-    
-    public func border<Content: ShapeStyle>(
-        _ content: Content,
-        width: CGFloat = 1,
-        cornerRadius: CGFloat = 0
-    ) -> some View {
-        overlay(RoundedRectangle(cornerRadius: cornerRadius)
-            .strokeBorder(content, lineWidth: width)
-        )
-    }
-}
 // MARK: View.offset
 extension View {
     @inlinable
@@ -88,17 +76,6 @@ extension View {
     @inlinable
     public func eraseToAnyView() -> AnyView {
         return .init(self)
-    }
-}
-
-extension View {
-    public func shadow(
-        color: Color = .black,
-        x: CGFloat,
-        y: CGFloat,
-        blur: CGFloat
-    ) -> some View {
-        shadow(color: color, radius: blur / 2, x: x, y: y)
     }
 }
 
