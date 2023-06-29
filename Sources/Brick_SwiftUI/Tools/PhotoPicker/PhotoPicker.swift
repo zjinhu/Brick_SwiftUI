@@ -1,7 +1,7 @@
 #if os(iOS)
 import SwiftUI
 import PhotosUI
-
+import Photos
 public struct PhotoPicker<Label>: View where Label: View {
     @State private var isPresented: Bool = false
     @Binding var selection: [PHPickerResult]

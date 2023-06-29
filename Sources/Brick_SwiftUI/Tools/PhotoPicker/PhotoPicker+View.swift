@@ -1,7 +1,7 @@
 #if os(iOS)
 import SwiftUI
 import PhotosUI
- 
+import Photos
 public extension Brick where Wrapped: View {
 
     /// The user explicitly grants access only to items they choose, so photo library access authorization is not needed.

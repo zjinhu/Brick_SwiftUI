@@ -21,8 +21,7 @@ struct PhotoPickerView: View {
     
     @State private var isPresented: Bool = false
     @State private var showPicker: Bool = false
-    
-//    @State var selected: [PhotosPickerItem] = []
+
     @State var data: Data?
     
     var body: some View {

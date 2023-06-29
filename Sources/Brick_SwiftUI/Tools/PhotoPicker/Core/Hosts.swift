@@ -1,7 +1,7 @@
 #if os(iOS)
 import SwiftUI
 import PhotosUI
-
+import Photos
 internal extension View {
     @ViewBuilder
     func _photoPicker(
