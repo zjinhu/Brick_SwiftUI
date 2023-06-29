@@ -21,13 +21,15 @@ extension Brick where Wrapped: View {
 
 extension Brick where Wrapped: View {
     
-    public func border<Content: ShapeStyle>(
-        _ content: Content,
+    public func border<Content: Shape>(
+        @ViewBuilder _ content: () -> Content,
+        color: Color = .gray,
         width: CGFloat = 1,
         cornerRadius: CGFloat = 0
     ) -> some View {
-        wrapped.overlay(RoundedRectangle(cornerRadius: cornerRadius)
-            .strokeBorder(content, lineWidth: width)
+        wrapped.overlay(
+            content()
+             .stroke(color, lineWidth: width)
         )
     }
 }
