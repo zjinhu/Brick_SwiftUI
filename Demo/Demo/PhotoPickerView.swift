@@ -8,7 +8,6 @@ import UIKit
 import SwiftUI
 import PhotosUI
 import Brick_SwiftUI
-@available(iOS 16.0, *)
 struct PhotoPickerView: View {
     @Environment(\.dismiss) private var dismiss
     
@@ -23,7 +22,7 @@ struct PhotoPickerView: View {
     @State private var isPresented: Bool = false
     @State private var showPicker: Bool = false
     
-    @State var selected: [PhotosPickerItem] = []
+//    @State var selected: [PhotosPickerItem] = []
     @State var data: Data?
     
     var body: some View {
@@ -67,31 +66,31 @@ struct PhotoPickerView: View {
                     })
                 }
             
-            PhotosPicker(selection: $selected, maxSelectionCount: 1, matching: .images) {
-                HStack {
-                    Image(systemName: "photo")
-                        .resizable()
-                        .frame(width: 60, height: 45, alignment: .center)
-                    Text("Select a photo")
-                }
-            }
-            .onChange(of: selected) { newValue in
-                guard let selectedItem = selected.first else {
-                    return
-                }
-                selectedItem.loadTransferable(type: Data.self) { result in
-                    switch result {
-                    case .success(let data):
-                        if let data = data {
-                            self.data = data
-                        } else {
-                            print("Found nil in data")
-                        }
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    }
-                }
-            }
+//            PhotosPicker(selection: $selected, maxSelectionCount: 1, matching: .images) {
+//                HStack {
+//                    Image(systemName: "photo")
+//                        .resizable()
+//                        .frame(width: 60, height: 45, alignment: .center)
+//                    Text("Select a photo")
+//                }
+//            }
+//            .onChange(of: selected) { newValue in
+//                guard let selectedItem = selected.first else {
+//                    return
+//                }
+//                selectedItem.loadTransferable(type: Data.self) { result in
+//                    switch result {
+//                    case .success(let data):
+//                        if let data = data {
+//                            self.data = data
+//                        } else {
+//                            print("Found nil in data")
+//                        }
+//                    case .failure(let error):
+//                        print(error.localizedDescription)
+//                    }
+//                }
+//            }
             
             if let selectedImage {
                 Image(uiImage: selectedImage)
@@ -134,8 +133,7 @@ struct PhotoPickerView: View {
         
     }
 }
-
-@available(iOS 16.0, *)
+ 
 struct PhotoPickerView_Previews: PreviewProvider {
     static var previews: some View {
         PhotoPickerView()

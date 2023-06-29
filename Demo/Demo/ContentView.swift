@@ -11,7 +11,7 @@ struct ContentView: View {
     @Brick.AppStorage("START_TIME_KEY", store:UserDefaults.standard) var startTime: Date = Date()
     @State private var showSheet = false
     @State private var tabSelection: Tab = .home
-
+    
     var body: some View {
         Tabbar(selection: $tabSelection) {
             
@@ -24,9 +24,7 @@ struct ContentView: View {
                         
                         NavigationLink("ShareLink", destination: ShareLinkView())
                         
-                        if #available(iOS 16.0, *) {
-                            NavigationLink("Photo", destination: PhotoPickerView())
-                        }
+                        NavigationLink("Photo", destination: PhotoPickerView())
                         
                         NavigationLink("AsyncImage", destination: AsyncImageView())
                         
@@ -98,7 +96,7 @@ struct ContentView: View {
             .tabBarItem(tab: Tab.home)
             
             Color.white
-            .tabBarItem(tab: Tab.game)
+                .tabBarItem(tab: Tab.game)
             
             Color.green
                 .tabBarItem(tab: Tab.apps)
@@ -116,7 +114,7 @@ struct ContentView: View {
         .tabBarInPadding(5)
         .tabBarHorizontalPadding(20)
         .tabBarBottomPadding(10)
-
+        
     }
     
 }

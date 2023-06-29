@@ -59,15 +59,15 @@ public struct CameraView: View {
     }
     
     private func buttonsView() -> some View {
-        HStack(spacing: 60) {
+        HStack(spacing: 80) {
             
             Spacer()
    
             Button {
                 dismiss()
             } label: {
-                Label("Close Camera", systemImage: "chevron.down.circle")
-                    .font(.system(size: 36, weight: .bold))
+                Label("Close Camera", systemImage: "xmark")
+                    .font(.system(size: 36))
                     .foregroundColor(.white)
             }
             
@@ -92,7 +92,7 @@ public struct CameraView: View {
                 model.camera.switchCaptureDevice()
             } label: {
                 Label("Switch Camera", systemImage: "arrow.triangle.2.circlepath")
-                    .font(.system(size: 36, weight: .bold))
+                    .font(.system(size: 36))
                     .foregroundColor(.white)
             }
             
