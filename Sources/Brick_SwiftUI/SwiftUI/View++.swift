@@ -32,6 +32,18 @@ extension View {
     }
 }
 
+extension View {
+    
+    public func border<Content: ShapeStyle>(
+        _ content: Content,
+        width: CGFloat = 1,
+        cornerRadius: CGFloat = 0
+    ) -> some View {
+        overlay(RoundedRectangle(cornerRadius: cornerRadius)
+            .strokeBorder(content, lineWidth: width)
+        )
+    }
+}
 // MARK: View.offset
 extension View {
     @inlinable
@@ -167,3 +179,16 @@ extension View {
         }
     }
 }
+
+#if os(iOS)
+import UIKit
+import SwiftUI
+
+public extension View {
+    func hideKeyboard() {
+        let app = UIApplication.shared
+        let sel = #selector(UIResponder.resignFirstResponder)
+        app.sendAction(sel, to: nil, from: nil, for: nil)
+    }
+}
+#endif

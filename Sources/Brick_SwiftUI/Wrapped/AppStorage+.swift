@@ -10,16 +10,16 @@ import Foundation
 import SwiftUI
 
 extension Brick where Wrapped == Any {
-
+    
     /// A property wrapper type that reflects a value from `Store` and
     /// invalidates a view on a change in value in that store.
     @propertyWrapper
     public struct AppStorage<Value>: DynamicProperty {
-
+        
         @ObservedObject
         private var _value: RefStorage<Value>
         private let commitHandler: (Value) -> Void
-
+        
         public var wrappedValue: Value {
             get { _value.value }
             nonmutating set {
@@ -27,25 +27,25 @@ extension Brick where Wrapped == Any {
                 _value.value = newValue
             }
         }
-
+        
         public var projectedValue: Binding<Value> {
             Binding(
                 get: { wrappedValue },
                 set: { wrappedValue = $0 }
             )
         }
-
+        
         private init(value: Value, store: UserDefaults, key: String, get: @escaping (Any?) -> Value?, set: @escaping (Value) -> Void) {
             self._value = RefStorage(value: value, store: store, key: key, transform: get)
             self.commitHandler = set
         }
-
+        
     }
-
+    
 }
 
 public extension Brick.AppStorage {
-
+    
     /// Creates a property that can read and write to a boolean user default.
     ///
     /// - Parameters:
@@ -61,7 +61,7 @@ public extension Brick.AppStorage {
                   get: { $0 as? Value },
                   set: { store.set($0, forKey: key) })
     }
-
+    
     /// Creates a property that can read and write to an integer user default.
     ///
     /// - Parameters:
@@ -77,7 +77,7 @@ public extension Brick.AppStorage {
                   get: { $0 as? Value },
                   set: { store.set($0, forKey: key) })
     }
-
+    
     /// Creates a property that can read and write to a double user default.
     ///
     /// - Parameters:
@@ -93,7 +93,7 @@ public extension Brick.AppStorage {
                   get: { $0 as? Value },
                   set: { store.set($0, forKey: key) })
     }
-
+    
     /// Creates a property that can read and write to a string user default.
     ///
     /// - Parameters:
@@ -109,7 +109,7 @@ public extension Brick.AppStorage {
                   get: { $0 as? Value },
                   set: { store.set($0, forKey: key) })
     }
-
+    
     /// Creates a property that can read and write to a url user default.
     ///
     /// - Parameters:
@@ -125,7 +125,7 @@ public extension Brick.AppStorage {
                   get: { ($0 as? String).flatMap(URL.init) },
                   set: { store.set($0.absoluteString, forKey: key) })
     }
-
+    
     /// Creates a property that can read and write to a user default as data.
     ///
     /// Avoid storing large data blobs in store, such as image data,
@@ -144,11 +144,11 @@ public extension Brick.AppStorage {
                   get: { $0 as? Value },
                   set: { store.set($0, forKey: key) })
     }
-
+    
 }
 
 public extension Brick.AppStorage where Wrapped == Any, Value: ExpressibleByNilLiteral {
-
+    
     /// Creates a property that can read and write an Optional boolean user
     /// default.
     ///
@@ -165,7 +165,7 @@ public extension Brick.AppStorage where Wrapped == Any, Value: ExpressibleByNilL
                   get: { $0 as? Value },
                   set: { store.set($0, forKey: key) })
     }
-
+    
     /// Creates a property that can read and write an Optional integer user
     /// default.
     ///
@@ -182,7 +182,7 @@ public extension Brick.AppStorage where Wrapped == Any, Value: ExpressibleByNilL
                   get: { $0 as? Value },
                   set: { store.set($0, forKey: key) })
     }
-
+    
     /// Creates a property that can read and write an Optional double user
     /// default.
     ///
@@ -199,7 +199,7 @@ public extension Brick.AppStorage where Wrapped == Any, Value: ExpressibleByNilL
                   get: { $0 as? Value },
                   set: { store.set($0, forKey: key) })
     }
-
+    
     /// Creates a property that can read and write an Optional string user
     /// default.
     ///
@@ -216,7 +216,7 @@ public extension Brick.AppStorage where Wrapped == Any, Value: ExpressibleByNilL
                   get: { $0 as? Value },
                   set: { store.set($0, forKey: key) })
     }
-
+    
     /// Creates a property that can read and write an Optional URL user
     /// default.
     ///
@@ -233,7 +233,7 @@ public extension Brick.AppStorage where Wrapped == Any, Value: ExpressibleByNilL
                   get: { ($0 as? String).flatMap(URL.init) },
                   set: { store.set($0?.absoluteString, forKey: key) })
     }
-
+    
     /// Creates a property that can read and write an Optional data user
     /// default.
     ///
@@ -250,11 +250,11 @@ public extension Brick.AppStorage where Wrapped == Any, Value: ExpressibleByNilL
                   get: { $0 as? Value },
                   set: { store.set($0, forKey: key) })
     }
-
+    
 }
 
 public extension Brick.AppStorage where Wrapped == Any, Value: RawRepresentable {
-
+    
     /// Creates a property that can read and write to a string user default,
     /// transforming that to `RawRepresentable` data type.
     ///
@@ -282,7 +282,7 @@ public extension Brick.AppStorage where Wrapped == Any, Value: RawRepresentable 
                   get: { $0 as? Value },
                   set: { store.setValue($0.rawValue, forKey: key) })
     }
-
+    
     /// Creates a property that can read and write to an integer user default,
     /// transforming that to `RawRepresentable` data type.
     ///
@@ -310,41 +310,41 @@ public extension Brick.AppStorage where Wrapped == Any, Value: RawRepresentable 
                   get: { $0 as? Value },
                   set: { store.setValue($0.rawValue, forKey: key) })
     }
-
+    
 }
 
 private final class RefStorage<Value>: NSObject, ObservableObject {
-
+    
     @Published
     fileprivate var value: Value
-
+    
     private let defaultValue: Value
     private let store: UserDefaults
     private let key: String
     private let transform: (Any?) -> Value?
-
+    
     deinit {
         store.removeObserver(self, forKeyPath: key)
     }
-
+    
     init(value: Value, store: UserDefaults, key: String, transform: @escaping (Any?) -> Value?) {
         self.value = value
         self.defaultValue = value
         self.store = store
         self.key = key
         self.transform = transform
-
+        
         super.init()
         store.addObserver(self, forKeyPath: key, options: .new, context: nil)
     }
-
+    
     override func observeValue(forKeyPath keyPath: String?,
                                of object: Any?,
                                change: [NSKeyValueChangeKey : Any]?,
                                context: UnsafeMutableRawPointer?) {
         value = change?[.newKey].flatMap(transform) ?? defaultValue
     }
-
+    
 }
 
 ///增加@AppStorage 支持
@@ -357,32 +357,31 @@ extension Date: RawRepresentable{
         }
         self = date
     }
-
+    
     public var rawValue: RawValue{
         guard let data = try? JSONEncoder().encode(self),
               let result = String(data:data, encoding: .utf8) else {
             return ""
         }
-       return result
+        return result
     }
 }
 
-extension Dictionary: RawRepresentable where Key == String, Value == String {
+extension Dictionary: RawRepresentable where Key: Codable, Value: Codable {
+    
     public init?(rawValue: String) {
-        guard let data = rawValue.data(using: .utf8),  // convert from String to Data
-            let result = try? JSONDecoder().decode([String:String].self, from: data)
-        else {
-            return nil
-        }
+        guard
+            let data = rawValue.data(using: .utf8),
+            let result = try? JSONDecoder().decode([Key: Value].self, from: data)
+        else { return nil }
         self = result
     }
-
+    
     public var rawValue: String {
-        guard let data = try? JSONEncoder().encode(self),   // data is  Data type
-              let result = String(data: data, encoding: .utf8) // coerce NSData to String
-        else {
-            return "{}"  // empty Dictionary resprenseted as String
-        }
+        guard
+            let data = try? JSONEncoder().encode(self),
+            let result = String(data: data, encoding: .utf8)
+        else { return "{}" }
         return result
     }
 }
@@ -394,7 +393,7 @@ extension Array: RawRepresentable where Element: Codable {
         else { return nil }
         self = result
     }
-
+    
     public var rawValue: String {
         guard let data = try? JSONEncoder().encode(self),
               let result = String(data: data, encoding: .utf8)
