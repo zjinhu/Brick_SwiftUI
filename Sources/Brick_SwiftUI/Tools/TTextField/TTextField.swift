@@ -175,7 +175,7 @@ public struct TTextField: View {
 
 extension TTextField{
     
-    public func tTextFieldTrailingImage(_ image: Image, click: @escaping (()->Void)) -> Self{
+    public func tTextFieldTrailingImage(_ image: Image, click: (()->Void)? = nil) -> Self{
         var copy = self
         copy._trailingImage = State(initialValue: image)
         copy.trailingImageClick = click

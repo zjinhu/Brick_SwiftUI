@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PageIndicatorView: View {
+public struct PageIndicatorView: View {
     // Constants
     private let spacing: CGFloat
     private let height: CGFloat
@@ -17,12 +17,12 @@ struct PageIndicatorView: View {
     private let numPages: Int
     @Binding private var selectedIndex: Int
     
-    init(numPages: Int,
-         currentPage: Binding<Int>,
-         height: CGFloat = 8,
-         currentWidth: CGFloat = 20,
-         spacing: CGFloat = 15,
-         color: Color = .black
+    public init(numPages: Int,
+                currentPage: Binding<Int>,
+                height: CGFloat = 8,
+                currentWidth: CGFloat = 20,
+                spacing: CGFloat = 15,
+                color: Color = .black
     ) {
         self.numPages = numPages
         self._selectedIndex = currentPage
@@ -33,7 +33,7 @@ struct PageIndicatorView: View {
         self.color = color
     }
     
-    var body: some View {
+    public var body: some View {
         VStack {
             HStack(spacing: spacing) {
                 ForEach(0..<numPages, id: \.self) { index in
@@ -42,10 +42,9 @@ struct PageIndicatorView: View {
                         .animation(.spring(), value: UUID())
                         .foregroundColor(
                             selectedIndex == index
-                            ? Color.black
-                            : Color.black.opacity(0.6)
+                            ? color
+                            : color.opacity(0.6)
                         )
-
                 }
             }
         }

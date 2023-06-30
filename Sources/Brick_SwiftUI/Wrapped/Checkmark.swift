@@ -23,3 +23,32 @@ struct Checkmark: ViewModifier {
         }
     }
 }
+
+#if os(iOS)
+extension ToggleStyle where Self == CheckboxToggleStyle {
+ 
+    public static var checkmark: CheckboxToggleStyle { CheckboxToggleStyle() }
+}
+
+public struct CheckboxToggleStyle: ToggleStyle {
+    public func makeBody(configuration: Configuration) -> some View {
+        HStack {
+
+            RoundedRectangle(cornerRadius: 5.0)
+                .stroke(lineWidth: 2)
+                .frame(width: 25, height: 25)
+                .cornerRadius(5.0)
+                .overlay {
+                    Image(systemName: configuration.isOn ? "checkmark" : "")
+                }
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        configuration.isOn.toggle()
+                    }
+                }
+
+            configuration.label
+        }
+    }
+}
+#endif
