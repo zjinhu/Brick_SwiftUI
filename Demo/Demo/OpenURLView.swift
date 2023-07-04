@@ -13,7 +13,7 @@ struct OpenURLView: View {
  
     var body: some View {
         List{
-            NavigationLink("Webview", destination: WebView(url: "https://www.qq.com"))
+            NavigationLink("Webview", destination: WebView(url: URL(string: "https://www.qq.com")!))
  
             Button {
                 openURL(URL(string: "https://www.baidu.com")!)

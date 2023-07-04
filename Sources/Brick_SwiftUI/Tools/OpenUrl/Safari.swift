@@ -3,6 +3,8 @@ import SwiftUI
 #if canImport(SafariServices)
 import SafariServices
 #endif
+
+
 @MainActor
 public extension Brick<Any>.OpenURLAction.Result {
     static func safari(_ url: URL) -> Self {

@@ -10,9 +10,9 @@ import SwiftUI
 import WebKit
 
 public struct WebView: UIViewControllerRepresentable {
-    public let url: String
+    public let url: URL
     
-    public init(url: String) {
+    public init(url: URL) {
         self.url = url
     }
     
@@ -22,9 +22,7 @@ public struct WebView: UIViewControllerRepresentable {
     }
 
     public func updateUIViewController(_ webviewController: WebViewController, context: Context){
-        guard let url = URL(string: url) else {
-            return
-        }
+
         let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
         DispatchQueue.main.async {
             webviewController.webView.load(request)
