@@ -17,14 +17,14 @@ public struct Tabbar<Selection: Tabable, Content: View>: View {
     @Environment(\.tabBarIndicatorHidden) private var tabBarShapeHidden
     
     @Namespace private var namespace
-    private let selection: TabbarSelection<Selection>
+    @Binding var selection: Selection
     @State private var items: [Selection] = []
     private let content: Content
     @State private var visibility: TabbarVisible = .visible
     
     public init(selection: Binding<Selection>,
                 @ViewBuilder content: () -> Content) {
-        self.selection = .init(selection: selection)
+        self._selection = selection
         self.content = content()
     }
     
@@ -42,7 +42,12 @@ public struct Tabbar<Selection: Tabable, Content: View>: View {
                     case .system:
                         HStack {
                             ForEach(items, id: \.hashValue) { tab in
-                                VerticalTabbarItem(indicatorShape: anyShapeBar, tab: tab, namespace: namespace, titleFont: tabBarFont, hideShape: tabBarShapeHidden)
+                                VerticalTabbarItem(indicatorShape: anyShapeBar,
+                                                   selection: $selection,
+                                                   tab: tab,
+                                                   namespace: namespace,
+                                                   titleFont: tabBarFont,
+                                                   hideShape: tabBarShapeHidden)
                              }
                         }
                         .padding(.horizontal, tabBarHorizontalPadding)
@@ -58,9 +63,19 @@ public struct Tabbar<Selection: Tabable, Content: View>: View {
                             ForEach(items, id: \.hashValue) { tab in
                                 switch tabBarItemStyle{
                                 case .vertical:
-                                    VerticalTabbarItem(indicatorShape: anyShapeBar, tab: tab,  namespace: namespace, titleFont: tabBarFont, hideShape: tabBarShapeHidden)
+                                    VerticalTabbarItem(indicatorShape: anyShapeBar,
+                                                       selection: $selection,
+                                                       tab: tab,
+                                                       namespace: namespace,
+                                                       titleFont: tabBarFont,
+                                                       hideShape: tabBarShapeHidden)
                                 case .horizontal:
-                                    HorizontalTabbarItem(indicatorShape: anyShapeBar, tab: tab, titleFont: tabBarFont, hideShape: tabBarShapeHidden, namespace: namespace)
+                                    HorizontalTabbarItem(indicatorShape: anyShapeBar,
+                                                         selection: $selection,
+                                                         tab: tab,
+                                                         titleFont: tabBarFont,
+                                                         hideShape: tabBarShapeHidden,
+                                                         namespace: namespace)
                                 }
                             }
                         }
@@ -77,7 +92,6 @@ public struct Tabbar<Selection: Tabable, Content: View>: View {
                 .visibility(visibility)
             }
         }
-        .environmentObject(selection)
         .environmentObject(TabbarVisibility(visibility: $visibility))
         .onPreferenceChange(TabBarItemsPreferenceKey.self) { value in
             self.items = value

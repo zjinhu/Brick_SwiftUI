@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-class TabbarSelection<TabItem: Tabable>: ObservableObject {
-    @Binding var selection: TabItem
-    
-    init(selection: Binding<TabItem>) {
-        self._selection = selection
-    }
-}
-
 public typealias TabbarVisibility = TabVisibility<TabbarVisible>
 
 @MainActor

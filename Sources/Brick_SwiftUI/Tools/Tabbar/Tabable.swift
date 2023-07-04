@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-public protocol Tabable: Hashable {
+public protocol Tabable: Hashable, Equatable {
  
     var icon: Image { get }
  

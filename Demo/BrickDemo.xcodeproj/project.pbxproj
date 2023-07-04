@@ -27,7 +27,6 @@
 		813925F62A4BFEEC00E8BDE6 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925E22A4BFEEB00E8BDE6 /* SwiftUIView.swift */; };
 		813925F72A4BFEEC00E8BDE6 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925E32A4BFEEB00E8BDE6 /* PresentationView.swift */; };
 		813925F82A4BFEEC00E8BDE6 /* DarkModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925E42A4BFEEB00E8BDE6 /* DarkModelView.swift */; };
-		813925F92A4BFEEC00E8BDE6 /* QuicklookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925E52A4BFEEB00E8BDE6 /* QuicklookView.swift */; };
 		813925FA2A4BFEEC00E8BDE6 /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925E62A4BFEEB00E8BDE6 /* Refresh.swift */; };
 		813925FB2A4BFEEC00E8BDE6 /* OpenURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925E72A4BFEEB00E8BDE6 /* OpenURLView.swift */; };
 		813925FC2A4BFEEC00E8BDE6 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925E82A4BFEEB00E8BDE6 /* Toast.swift */; };
@@ -35,6 +34,13 @@
 		813925FE2A4BFEEC00E8BDE6 /* AnimationCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925EA2A4BFEEB00E8BDE6 /* AnimationCompleted.swift */; };
 		813925FF2A4BFEEC00E8BDE6 /* ScrollStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925EB2A4BFEEB00E8BDE6 /* ScrollStackView.swift */; };
 		817C5AFD2A4C055F00389E05 /* Brick_SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 817C5AFC2A4C055F00389E05 /* Brick_SwiftUI */; };
+		81F969612A541E2C0052619E /* QuickLookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969602A541E2C0052619E /* QuickLookUI.framework */; platformFilters = (macos, ); settings = {ATTRIBUTES = (Weak, ); }; };
+		81F969632A541E360052619E /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969622A541E350052619E /* QuickLook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		81F969652A541E3E0052619E /* QuickLookThumbnailing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969642A541E3E0052619E /* QuickLookThumbnailing.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969682A54216D0052619E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		81F9696D2A5421BE0052619E /* libswiftQuickLook.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696C2A5421BE0052619E /* libswiftQuickLook.tbd */; platformFilter = ios; settings = {ATTRIBUTES = (Weak, ); }; };
+		81F9696F2A5421CB0052619E /* libswiftQuickLookUI.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696E2A5421CB0052619E /* libswiftQuickLookUI.tbd */; platformFilters = (macos, ); settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,13 +67,20 @@
 		813925E22A4BFEEB00E8BDE6 /* SwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		813925E32A4BFEEB00E8BDE6 /* PresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		813925E42A4BFEEB00E8BDE6 /* DarkModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkModelView.swift; sourceTree = "<group>"; };
-		813925E52A4BFEEB00E8BDE6 /* QuicklookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklookView.swift; sourceTree = "<group>"; };
 		813925E62A4BFEEB00E8BDE6 /* Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refresh.swift; sourceTree = "<group>"; };
 		813925E72A4BFEEB00E8BDE6 /* OpenURLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenURLView.swift; sourceTree = "<group>"; };
 		813925E82A4BFEEB00E8BDE6 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		813925E92A4BFEEB00E8BDE6 /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		813925EA2A4BFEEB00E8BDE6 /* AnimationCompleted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationCompleted.swift; sourceTree = "<group>"; };
 		813925EB2A4BFEEB00E8BDE6 /* ScrollStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollStackView.swift; sourceTree = "<group>"; };
+		81F969602A541E2C0052619E /* QuickLookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLookUI.framework; path = System/Library/Frameworks/QuickLookUI.framework; sourceTree = SDKROOT; };
+		81F969622A541E350052619E /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/QuickLook.framework; sourceTree = DEVELOPER_DIR; };
+		81F969642A541E3E0052619E /* QuickLookThumbnailing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLookThumbnailing.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/QuickLookThumbnailing.framework; sourceTree = DEVELOPER_DIR; };
+		81F969682A54216D0052619E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftAVFoundation.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/swift/libswiftAVFoundation.tbd; sourceTree = DEVELOPER_DIR; };
+		81F9696C2A5421BE0052619E /* libswiftQuickLook.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLook.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/swift/libswiftQuickLook.tbd; sourceTree = DEVELOPER_DIR; };
+		81F9696E2A5421CB0052619E /* libswiftQuickLookUI.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLookUI.tbd; path = usr/lib/swift/libswiftQuickLookUI.tbd; sourceTree = SDKROOT; };
+		81F969702A5423030052619E /* QuicklookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +88,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F9696F2A5421CB0052619E /* libswiftQuickLookUI.tbd in Frameworks */,
+				81F9696D2A5421BE0052619E /* libswiftQuickLook.tbd in Frameworks */,
+				81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */,
+				81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */,
 				817C5AFD2A4C055F00389E05 /* Brick_SwiftUI in Frameworks */,
+				81F969612A541E2C0052619E /* QuickLookUI.framework in Frameworks */,
+				81F969632A541E360052619E /* QuickLook.framework in Frameworks */,
+				81F969652A541E3E0052619E /* QuickLookThumbnailing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +130,7 @@
 				813925DA2A4BFEEA00E8BDE6 /* AsyncImageView.swift */,
 				813925DC2A4BFEEA00E8BDE6 /* BadgeView.swift */,
 				813925E92A4BFEEB00E8BDE6 /* BannerView.swift */,
+				81F969702A5423030052619E /* QuicklookView.swift */,
 				813925E42A4BFEEB00E8BDE6 /* DarkModelView.swift */,
 				813925D92A4BFEEA00E8BDE6 /* FocusStateView.swift */,
 				813925DF2A4BFEEA00E8BDE6 /* Loading.swift */,
@@ -117,7 +138,6 @@
 				813925E72A4BFEEB00E8BDE6 /* OpenURLView.swift */,
 				813925DB2A4BFEEA00E8BDE6 /* PhotoPickerView.swift */,
 				813925E32A4BFEEB00E8BDE6 /* PresentationView.swift */,
-				813925E52A4BFEEB00E8BDE6 /* QuicklookView.swift */,
 				813925E62A4BFEEB00E8BDE6 /* Refresh.swift */,
 				813925DD2A4BFEEA00E8BDE6 /* SafeAreaPaddingView.swift */,
 				813925EB2A4BFEEB00E8BDE6 /* ScrollStackView.swift */,
@@ -162,6 +182,13 @@
 		817C5AFB2A4C055400389E05 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81F9696E2A5421CB0052619E /* libswiftQuickLookUI.tbd */,
+				81F9696C2A5421BE0052619E /* libswiftQuickLook.tbd */,
+				81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */,
+				81F969682A54216D0052619E /* AVFoundation.framework */,
+				81F969642A541E3E0052619E /* QuickLookThumbnailing.framework */,
+				81F969622A541E350052619E /* QuickLook.framework */,
+				81F969602A541E2C0052619E /* QuickLookUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -259,7 +286,6 @@
 				81156A122A4842430089C52D /* DemoApp.swift in Sources */,
 				813925FE2A4BFEEC00E8BDE6 /* AnimationCompleted.swift in Sources */,
 				813925EE2A4BFEEB00E8BDE6 /* AsyncImageView.swift in Sources */,
-				813925F92A4BFEEC00E8BDE6 /* QuicklookView.swift in Sources */,
 				813925F12A4BFEEC00E8BDE6 /* SafeAreaPaddingView.swift in Sources */,
 				813925F22A4BFEEC00E8BDE6 /* NavigationStack.swift in Sources */,
 				813925F52A4BFEEC00E8BDE6 /* ShareLinkView.swift in Sources */,
@@ -406,6 +432,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hu.app.Demo;
@@ -447,6 +477,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hu.app.Demo;

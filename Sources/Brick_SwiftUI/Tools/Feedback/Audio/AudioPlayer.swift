@@ -1,6 +1,7 @@
 import SwiftUI
+#if canImport(AVFoundation)
 import AVFoundation
-
+#endif
 private enum PlayerError: LocalizedError {
     case badUrl(Audio)
     var errorDescription: String? {

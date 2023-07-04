@@ -2,7 +2,9 @@
 See the License.txt file for this sample’s licensing information.
 */
 
+#if canImport(AVFoundation)
 import AVFoundation
+#endif
 import SwiftUI
 import Photos
 final class DataModel: ObservableObject {

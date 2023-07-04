@@ -22,25 +22,7 @@ struct BadgeView: View {
     
     var body: some View {
         VStack(spacing: 44) {
-
-            Button {
-                alert.toggle()
-            } label: {
-                Text("Hide/Show TabBar")
-            }
-            .alert(isPresented: $alert,
-                   title: Text("Delete Account"),
-                   message: Text("Are you sure?"),
-                   primaryButton: {
-                return Alert.Button.default(Text("Yes")) {
-                    print("secondary button pressed")
-                }
-            },secondaryButton: {
-                return Alert.Button.cancel(Text("No")) {
-                    print("secondary button pressed")
-                }
-            })
-            
+ 
             Button {
                 withAnimation(.easeInOut(duration: 0.25)) {
                     tabVisibility.visibility.toggle()

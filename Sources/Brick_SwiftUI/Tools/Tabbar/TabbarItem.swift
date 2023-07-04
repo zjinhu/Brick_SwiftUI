@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct HorizontalTabbarItem<Selection: Tabable>: View {
-    @EnvironmentObject private var selectionObject: TabbarSelection<Selection>
-    
+ 
     let indicatorShape: any Shape
-    let tab: Selection
+    @Binding var selection: Selection
+    var tab: Selection
     let titleFont: Font
     let hideShape: Bool
     var namespace: Namespace.ID
@@ -19,14 +19,17 @@ struct HorizontalTabbarItem<Selection: Tabable>: View {
     var body: some View {
         Button {
             withAnimation(.easeInOut) {
-                selectionObject.selection = tab
+                selection = tab
             }
             
         } label: {
             ZStack {
                 if isSelected && !hideShape{
-                    AnyView(indicatorShape .fill(tab.color.opacity(0.2)))
-                        .matchedGeometryEffect(id: "Selected Tab", in: namespace)
+                    AnyView(
+                        indicatorShape
+                        .fill(tab.color.opacity(0.2))
+                    )
+                    .matchedGeometryEffect(id: "Selected Tab", in: namespace)
                 }
                 
                 HStack(spacing: 6) {
@@ -36,7 +39,7 @@ struct HorizontalTabbarItem<Selection: Tabable>: View {
                         .scaleEffect(isSelected ? 1 : 0.9)
                         .opacity(isSelected ? 1 : 0.7)
                         .padding(.leading, 0)
-                        .padding(.horizontal, selectionObject.selection != tab ? 20 : 10)
+                        .padding(.horizontal, selection != tab ? 20 : 10)
                     
                     if isSelected {
                         Text(tab.title)
@@ -52,15 +55,15 @@ struct HorizontalTabbarItem<Selection: Tabable>: View {
     }
     
     private var isSelected: Bool {
-        selectionObject.selection == tab
+        selection == tab
     }
 }
 
 struct VerticalTabbarItem<Selection: Tabable>: View {
-    @EnvironmentObject private var selectionObject: TabbarSelection<Selection>
-    
+ 
     let indicatorShape: any Shape
-    let tab: Selection
+    @Binding var selection: Selection
+    var tab: Selection
     var namespace: Namespace.ID
     let titleFont: Font
     let hideShape: Bool
@@ -68,14 +71,17 @@ struct VerticalTabbarItem<Selection: Tabable>: View {
     var body: some View {
         Button {
             withAnimation(.easeInOut) {
-                selectionObject.selection = tab
+                selection = tab
             }
             
         } label: {
             ZStack {
                 if isSelected && !hideShape{
-                    AnyView(indicatorShape .fill(tab.color.opacity(0.2)))
-                        .matchedGeometryEffect(id: "Selected Tab", in: namespace)
+                    AnyView(
+                        indicatorShape
+                        .fill(tab.color.opacity(0.2))
+                    )
+                    .matchedGeometryEffect(id: "Selected Tab", in: namespace)
                 }
                 
                 VStack(spacing: 3) {
@@ -93,6 +99,6 @@ struct VerticalTabbarItem<Selection: Tabable>: View {
     }
     
     private var isSelected: Bool {
-        selectionObject.selection == tab
+        selection == tab
     }
 }

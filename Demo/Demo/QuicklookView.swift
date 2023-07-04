@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
+ 
 import QuickLook
-
+ 
 struct QuicklookView: View {
     
     @State private var url: URL?
@@ -33,13 +34,7 @@ struct QuicklookView: View {
         }
     }
 }
-
-struct Quicklook_Previews: PreviewProvider {
-    static var previews: some View {
-        QuicklookView()
-    }
-}
-
+ 
 
 extension Bundle {
     var quicklookUrls: [URL] {

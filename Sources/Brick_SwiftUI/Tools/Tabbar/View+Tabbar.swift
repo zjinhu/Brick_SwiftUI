@@ -8,8 +8,8 @@
 import SwiftUI
 
 extension View {
-    public func tabBarItem<Selection: Tabable>(tab: Selection) -> some View {
-        self.modifier(TabBarItemViewModifier(tab: tab))
+    public func tabBarItem<Selection: Tabable>(tab: Selection, selection: Binding<Selection>) -> some View {
+        self.modifier(TabBarItemViewModifier(tab: tab, selection: selection))
     }
     
     public func tabBarForeground<V: View>(_ content: @escaping () -> V) -> some View {

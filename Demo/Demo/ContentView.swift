@@ -41,7 +41,8 @@ struct ContentView: View {
                     }
                     
                     Section {
-                        NavigationLink("Quicklook", destination: QuicklookView())
+ 
+//                        NavigationLink("Quicklook", destination: QuicklookView())
                         
                         NavigationLink("TTextField", destination: TTextFieldDemoView())
                         
@@ -93,27 +94,27 @@ struct ContentView: View {
                 }
                 
             }
-            .tabBarItem(tab: Tab.home)
+            .tabBarItem(tab: Tab.home, selection: $tabSelection)
             
             Color.white
-                .tabBarItem(tab: Tab.game)
+                .tabBarItem(tab: Tab.game, selection: $tabSelection)
             
             Color.green
-                .tabBarItem(tab: Tab.apps)
+                .tabBarItem(tab: Tab.apps, selection: $tabSelection)
             
             Color.orange
-                .tabBarItem(tab: Tab.movie)
+                .tabBarItem(tab: Tab.movie, selection: $tabSelection)
         }
         .tabBarStyle(.bar)
-        .tabBarItemStyle(.vertical)
+        .tabBarItemStyle(.horizontal)
         .tabBarIndicatorHidden(false)
-        .tabBarShape(RoundedRectangle(cornerRadius: 10))
+        .tabBarShape(Capsule())
         .tabBarColor(.white)
         .tabBarShadow(color: .black, radius: 5, x: 0, y: 5)
         .tabBarHeight(30)
         .tabBarInPadding(5)
         .tabBarHorizontalPadding(20)
-        .tabBarBottomPadding(10)
+        .tabBarBottomPadding(30)
         
     }
     
@@ -129,16 +130,16 @@ enum Tab: Int, Tabable{
     
     case home, game, apps, movie
     
-    var icon: String {
+    var icon: Image {
         switch self {
         case .home:
-            return "house.fill"
+            return Image(symbol: .houseFill)
         case .game:
-            return "gamecontroller.fill"
+            return Image(symbol: .gamecontrollerFill)
         case .apps:
-            return "square.stack.3d.up.fill"
+            return Image(symbol: .squareStack3dUpFill)
         case .movie:
-            return "play.tv.fill"
+            return Image(symbol: ._4kTv)
         }
     }
     
