@@ -32,15 +32,9 @@ extension ToggleStyle where Self == CheckboxToggleStyle {
 
 public struct CheckboxToggleStyle: ToggleStyle {
     public func makeBody(configuration: Configuration) -> some View {
-        HStack {
-
-            RoundedRectangle(cornerRadius: 5.0)
-                .stroke(lineWidth: 2)
-                .frame(width: 25, height: 25)
-                .cornerRadius(5.0)
-                .overlay {
-                    Image(systemName: configuration.isOn ? "checkmark" : "")
-                }
+        HStack(spacing: 10){
+            Image(symbol: configuration.isOn ? .checkmarkSquareFill : .square)
+                .imageScale(.large)
                 .onTapGesture {
                     withAnimation(.spring()) {
                         configuration.isOn.toggle()
