@@ -18,9 +18,4 @@ struct ViewfinderView: View {
         }
     }
 }
-
-struct ViewfinderView_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewfinderView(image: .constant(Image(systemName: "pencil")))
-    }
-}
+ 

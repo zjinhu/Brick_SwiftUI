@@ -14,7 +14,7 @@ struct Checkmark: ViewModifier {
             HStack {
                 content
                 Spacer()
-                Image(systemName: .checkmark)
+                Image(symbol: .checkmark)
                     .foregroundColor(.accentColor)
                     .font(.callout.weight(.semibold))
             }

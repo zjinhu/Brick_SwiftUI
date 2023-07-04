@@ -24,8 +24,8 @@ public struct TTextField: View {
     
     private var trailingImageClick: (() -> Void)?
     @State private var trailingImage : Image?
-    private var secureOpenImage : Image? = Image(systemName: .eye)
-    private var secureCloseImage : Image? = Image(systemName: .eyeSlash)
+    private var secureOpenImage : Image? = Image(symbol: .eye)
+    private var secureCloseImage : Image? = Image(symbol: .eyeSlash)
     
     public init(text: Binding<String>,
                 disable: Binding<Bool> = .constant(false),

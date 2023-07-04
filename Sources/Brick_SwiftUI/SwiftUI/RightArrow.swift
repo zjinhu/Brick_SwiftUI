@@ -22,7 +22,7 @@ struct Chevron: View {
     let color: Color
     let font: Font
     var body: some View {
-        Image(systemName: .chevronRight)
+        Image(symbol: .chevronRight)
             .foregroundColor(color)
             .font(font)
     }

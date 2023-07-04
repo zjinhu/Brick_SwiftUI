@@ -30,7 +30,8 @@ struct HorizontalTabbarItem<Selection: Tabable>: View {
                 }
                 
                 HStack(spacing: 6) {
-                    Image(systemName: tab.icon)
+                    
+                    tab.icon
                         .foregroundColor(isSelected ? tab.color : .black.opacity(0.6))
                         .scaleEffect(isSelected ? 1 : 0.9)
                         .opacity(isSelected ? 1 : 0.7)
@@ -78,7 +79,7 @@ struct VerticalTabbarItem<Selection: Tabable>: View {
                 }
                 
                 VStack(spacing: 3) {
-                    Image(systemName: tab.icon)
+                    tab.icon
                     Text(tab.title)
                         .font(titleFont)
                 }

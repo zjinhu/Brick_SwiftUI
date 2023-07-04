@@ -21,13 +21,13 @@ extension Label where Title == Text {
 extension Label where Title == Text, Icon == Image {
     /// Creates a label with a system icon image and a title generated from a
     /// localized string.
-        public init(_ titleKey: LocalizedStringKey, systemImage name: SFSymbolName) {
-        self.init(titleKey, systemImage: name.rawValue)
+        public init(_ titleKey: LocalizedStringKey, systemImage symbol: SFSymbolName) {
+        self.init(titleKey, systemImage: symbol.symbolName)
     }
     
     /// Creates a label with a system icon image and a title generated from a
     /// string.
-        public init<S: StringProtocol>(_ title: S, systemImage name: SFSymbolName) {
-        self.init(title, systemImage: name.rawValue)
+        public init<S: StringProtocol>(_ title: S, systemImage symbol: SFSymbolName) {
+        self.init(title, systemImage: symbol.symbolName)
     }
 }

@@ -8,9 +8,9 @@
 import SwiftUI
 public protocol Tabable: Hashable {
  
-    var icon: String { get }
+    var icon: Image { get }
  
-    var selectedIcon: String { get }
+    var selectedIcon: Image { get }
  
     var title: String { get }
     
@@ -18,7 +18,7 @@ public protocol Tabable: Hashable {
 }
 
 public extension Tabable {
-    var selectedIcon: String {
+    var selectedIcon: Image {
         return self.icon
     }
 }

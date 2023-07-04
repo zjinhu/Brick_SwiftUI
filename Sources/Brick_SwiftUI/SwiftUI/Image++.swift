@@ -5,15 +5,16 @@
 import SwiftUI
 
 public extension Image {
-    init(systemName: SFSymbolName) {
+
+    init(symbol: SFSymbolName) {
         #if os(macOS)
         if #available(OSX 11.0, *) {
-            self.init(systemName: systemName.rawValue)
+            self.init(systemName: symbol.symbolName)
         } else {
             fatalError()
         }
         #else
-        self.init(systemName: systemName.rawValue)
+        self.init(systemName: symbol.symbolName)
         #endif
     }
 }
