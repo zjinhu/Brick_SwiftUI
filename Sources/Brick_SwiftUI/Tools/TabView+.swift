@@ -44,14 +44,23 @@ struct HiddenTabBar: ViewModifier {
         }
     }
 }
-
-@available(iOS, deprecated: 16)
+ 
 extension View {
+    
     public func showTabBar() -> some View {
-        return self.modifier(ShowTabBar())
+        if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
+            return self.toolbar(.visible, for: .tabBar)
+        }else{
+            return self.modifier(ShowTabBar())
+        }
     }
 
     public func hiddenTabBar() -> some View {
-        return self.modifier(HiddenTabBar())
+        if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
+            return self.toolbar(.hidden, for: .tabBar)
+        }else{
+            return self.modifier(HiddenTabBar())
+        }
     }
+    
 }

@@ -21,7 +21,6 @@ struct HorizontalTabbarItem<Selection: Tabable>: View {
             withAnimation(.easeInOut) {
                 selection = tab
             }
-            
         } label: {
             ZStack {
                 if isSelected && !hideShape{
