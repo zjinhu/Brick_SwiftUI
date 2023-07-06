@@ -23,6 +23,14 @@ extension View {
     public func navigationItem(animated: Bool = true, customize: @escaping (UINavigationItem) -> Void) -> some View {
         modifier(NavigationControllerModifier(animated: animated, customize: customize))
     }
+    
+    public func hiddenBackButtonTitle() -> some View {
+        modifier(
+            NavigationControllerModifier(animated: true){ item in
+                item.backButtonDisplayMode = .minimal
+            }
+        )
+    }
 }
 
 extension NavigationView {
