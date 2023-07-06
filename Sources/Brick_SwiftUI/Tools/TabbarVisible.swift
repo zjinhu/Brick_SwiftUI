@@ -7,6 +7,51 @@
 
 import SwiftUI
 import UIKit
+
+extension View {
+
+    public func showTabBar() -> some View {
+        if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
+            return self.toolbar(.visible, for: .tabBar)
+        }else{
+            return self.modifier(ShowTabBar())
+        }
+    }
+    
+    public func hiddenTabBar() -> some View {
+        if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
+            return self.toolbar(.hidden, for: .tabBar)
+        }else{
+            return self.modifier(HiddenTabBar())
+        }
+    }
+    
+}
+
+struct ShowTabBar: ViewModifier {
+    func body(content: Content) -> some View {
+        return content
+            .padding(.zero)
+            .onAppear {
+                DispatchQueue.main.async {
+                    TabBarModifier.showTabBar()
+                }
+            }
+    }
+}
+
+struct HiddenTabBar: ViewModifier {
+    func body(content: Content) -> some View {
+        return content
+            .padding(.zero)
+            .onAppear {
+                DispatchQueue.main.async {
+                    TabBarModifier.hideTabBar()
+                }
+            }
+    }
+}
+
 struct TabBarModifier {
     static func showTabBar() {
         UIWindow.keyWindow?.allSubviews().forEach({ subView in
@@ -41,53 +86,3 @@ extension UITabBar {
     }
 }
 
-struct ShowTabBar: ViewModifier {
-    func body(content: Content) -> some View {
-        return content
-            .padding(.zero)
-            .onAppear {
-                DispatchQueue.main.async {
-                    TabBarModifier.showTabBar()
-                }
-            }
-        //            .onDisappear{
-        //                withAnimation(.easeInOut) {
-        //                    DispatchQueue.main.async {
-        //                        TabBarModifier.hideTabBar()
-        //                    }
-        //                }
-        //            }
-    }
-}
-
-struct HiddenTabBar: ViewModifier {
-    func body(content: Content) -> some View {
-        return content
-            .padding(.zero)
-            .onAppear {
-                DispatchQueue.main.async {
-                    TabBarModifier.hideTabBar()
-                }
-            }
-    }
-}
-
-extension View {
-
-    public func showTabBar() -> some View {
-        if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
-            return self.toolbar(.visible, for: .tabBar)
-        }else{
-            return self.modifier(ShowTabBar())
-        }
-    }
-    
-    public func hiddenTabBar() -> some View {
-        if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
-            return self.toolbar(.hidden, for: .tabBar)
-        }else{
-            return self.modifier(HiddenTabBar())
-        }
-    }
-    
-}
