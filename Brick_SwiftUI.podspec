@@ -29,9 +29,9 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   
   s.ios.deployment_target = "14.0"
-  #  s.tvos.deployment_target = "14.0"
+   s.tvos.deployment_target = "14.0"
   #  s.watchos.deployment_target = "7.0"
-  #  s.osx.deployment_target = "11.0"
+   s.osx.deployment_target = "11.0"
   
   s.swift_versions     = ['5.8','5.7','5.6','5.5']
   s.requires_arc = true
@@ -40,11 +40,13 @@ Pod::Spec.new do |s|
   s.subspec 'SwiftUI' do |ss|
     ss.dependency 'Brick_SwiftUI/Utilities'
     ss.source_files = 'Sources/Brick_SwiftUI/SwiftUI/**/*'
-    
   end
   
   s.subspec 'Utilities' do |ss|
-    ss.source_files = 'Sources/Brick_SwiftUI/Utilities/**/*'
+    ss.subspec 'SFSymbols' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Utilities/SFSymbols/**/*'
+    end
+    ss.source_files = 'Sources/Brick_SwiftUI/Utilities/*'
   end
   
   s.subspec 'Wrapped' do |ss|
@@ -57,48 +59,58 @@ Pod::Spec.new do |s|
     ss.dependency 'Brick_SwiftUI/SwiftUI'
     ss.dependency 'Brick_SwiftUI/Utilities'
     
-    ss.subspec 'Tabbar' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Tabbar/**/*'
+    ss.source_files = 'Sources/Brick_SwiftUI/Tools/*'
+        
+    ss.subspec 'AsyncImage' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/AsyncImage/**/*'
     end
-    
+      
+    ss.subspec 'Camera' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Camera/**/*'
+    end
+  
     ss.subspec 'CarouselView' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/CarouselView/**/*'
     end
     
+    ss.subspec 'FocusState' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/FocusState/**/*'
+    end
+  
+    ss.subspec 'Feedback' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/**/*'
+    end
+      
     ss.subspec 'Loading' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/Loading/**/*'
     end
     
-    ss.subspec 'Refresh' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Refresh/**/*'
+    ss.subspec 'NavigationStack' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/NavigationStack/**/*'
     end
-    
-    ss.subspec 'Toast' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Toast/**/*'
+  
+    ss.subspec 'NavigationItem' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/NavigationItem/**/*'
     end
-    
-    ss.subspec 'AsyncImage' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/AsyncImage/**/*'
-    end
-    
+      
     ss.subspec 'OpenUrl' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/OpenUrl/**/*'
     end
-    
+  
     ss.subspec 'PhotoPicker' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/PhotoPicker/**/*'
     end
-    
-    ss.subspec 'Camera' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Camera/**/*'
+  
+    ss.subspec 'Presentation' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Presentation/**/*'
     end
     
-    ss.subspec 'UIHosting' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/UIHosting/**/*'
+    ss.subspec 'Progress' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Progress/**/*'
     end
-    
-    ss.subspec 'Toolbar' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Toolbar/**/*'
+      
+    ss.subspec 'Refresh' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Refresh/**/*'
     end
     
     ss.subspec 'ShareLink' do |sss|
@@ -112,17 +124,26 @@ Pod::Spec.new do |s|
     ss.subspec 'ScrollStack' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/ScrollStack/**/*'
     end
-    
-    ss.subspec 'Presentation' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Presentation/**/*'
+  
+    ss.subspec 'Tabbar' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Tabbar/**/*'
     end
     
-    ss.subspec 'NavigationStack' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/NavigationStack/**/*'
+    ss.subspec 'Toast' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Toast/**/*'
     end
     
-    ss.subspec 'Feedback' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Feedback/**/*'
+    ss.subspec 'Toolbar' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Toolbar/**/*'
     end
+    
+    ss.subspec 'TTextField' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/TTextField/**/*'
+    end
+    
+    ss.subspec 'UIHosting' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/UIHosting/**/*'
+    end
+    
   end
 end
