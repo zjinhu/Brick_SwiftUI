@@ -80,14 +80,14 @@ extension View {
 }
 
 // MARK: - View.padding
-extension View {
-    /// A view that pads this view inside the specified edge insets with a system-calculated amount of padding and a color.
-    @_disfavoredOverload
-    @inlinable
-    public func padding(_ color: Color) -> some View {
-        padding().background(color)
-    }
-}
+//extension View {
+//    /// A view that pads this view inside the specified edge insets with a system-calculated amount of padding and a color.
+//    @_disfavoredOverload
+//    @inlinable
+//    public func padding(_ color: Color) -> some View {
+//        padding().background(color)
+//    }
+//}
 
 extension View {
     public func onTapGesture(

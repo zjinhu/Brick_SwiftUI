@@ -1,6 +1,6 @@
 import SwiftUI
-import UIKit
 #if os(iOS) || os(tvOS)
+import UIKit
 @available(iOS, deprecated: 16)
 @available(tvOS, deprecated: 16)
 @available(macOS, unavailable)
@@ -182,9 +182,6 @@ extension Brick.UIHostingConfiguration where Wrapped == Any, Background == Empty
     }
     
 }
-#endif
-
-#if os(iOS) || os(tvOS)
 /*
  Since UICollectionView is not designed to support SwiftUI out of the box,
  we need to use a little trick to get the SwiftUI View's to ignore safeArea

@@ -8,7 +8,8 @@
 
 import SwiftUI
 import WebKit
-
+import UIKit
+import Foundation
 public struct WebView: UIViewControllerRepresentable {
     public let url: URL
     
@@ -17,15 +18,15 @@ public struct WebView: UIViewControllerRepresentable {
     }
     
     public func makeUIViewController(context: Context) -> WebController {
-        let webViewController = WebController()
-        return webViewController
+        let webController = WebController()
+        return webController
     }
 
-    public func updateUIViewController(_ webviewController: WebController, context: Context){
+    public func updateUIViewController(_ webController: WebController, context: Context){
 
         let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
         DispatchQueue.main.async {
-            webviewController.webView.load(request)
+            webController.webView.load(request)
         }
     }
 }
@@ -117,7 +118,7 @@ public class WebController: UIViewController, WKNavigationDelegate, WKUIDelegate
         let websiteDataTypes = WKWebsiteDataStore.allWebsiteDataTypes()
         let modifiedSince = Date(timeIntervalSince1970: 0)
         WKWebsiteDataStore.default().removeData(ofTypes: websiteDataTypes, modifiedSince: modifiedSince) {
-            debugPrint("清理完成")
+            debugPrint("Cleaning completed")
         }
         URLCache.shared.removeAllCachedResponses()
         URLCache.shared.diskCapacity = 0

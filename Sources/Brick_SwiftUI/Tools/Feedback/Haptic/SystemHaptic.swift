@@ -1,7 +1,7 @@
 import SwiftUI
 
 #if os(iOS)
-
+import UIKit
 public extension AnyFeedback {
     /// Specifies haptic feedback provided by the system
     /// - Parameter style: The style of the haptic feedback

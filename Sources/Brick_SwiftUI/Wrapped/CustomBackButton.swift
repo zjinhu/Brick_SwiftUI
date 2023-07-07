@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-
+@available(macOS, unavailable)
+@available(watchOS, unavailable)
 struct CustomBackButton<Image: View>: ViewModifier {
     @Environment(\.dismiss) var dismiss
     let view: Image
@@ -28,6 +29,8 @@ struct CustomBackButton<Image: View>: ViewModifier {
 }
 
 extension Brick where Wrapped: View {
+    @available(macOS, unavailable)
+    @available(watchOS, unavailable)
     public func navigationCustomBackButton<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
         wrapped.modifier(CustomBackButton(view: content()))
     }

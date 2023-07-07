@@ -2,6 +2,9 @@
 import SwiftUI
 import PhotosUI
 import Photos
+import UIKit
+import Foundation
+import UniformTypeIdentifiers
 public struct PhotoPicker<Label>: View where Label: View {
     @State private var isPresented: Bool = false
     @Binding var selection: [PHPickerResult]
@@ -388,8 +391,6 @@ public extension PhotoPicker<Text> {
     }
 }
 
-#endif
-
 extension PHPickerResult{
     
     public func loadTransfer<T>(type: T.Type) async throws -> T? {
@@ -485,3 +486,5 @@ extension NSItemProvider {
         }
     }
 }
+
+#endif

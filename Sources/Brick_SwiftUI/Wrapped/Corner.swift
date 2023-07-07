@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import UIKit
 public extension Brick where Wrapped: View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         wrapped.clipShape( RoundedCorner(radius: radius, corners: corners) )

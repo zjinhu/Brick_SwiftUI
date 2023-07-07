@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import UIKit
 struct BlurView: UIViewRepresentable {
    typealias UIViewType = UIVisualEffectView
    

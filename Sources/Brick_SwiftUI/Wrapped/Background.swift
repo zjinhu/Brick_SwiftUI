@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 public extension Brick where Wrapped: View {
 
     /// Layers the views that you specify behind this view.
@@ -127,9 +128,10 @@ public extension Brick where Wrapped: View {
         wrapped.background(content(), alignment: alignment)
     }
 
-    
+    @available(watchOS, unavailable)
+    @available(macOS, unavailable)
     func hideListBackground() -> some View {
-        if #available(iOS 16, *) {
+        if #available(iOS 16.0, *) {
             return wrapped
                 .scrollContentBackground(.hidden)
         } else {
@@ -137,9 +139,10 @@ public extension Brick where Wrapped: View {
             return wrapped
         }
     }
-    
+    @available(watchOS, unavailable)
+    @available(macOS, unavailable)
     func hideTextViewBackground() -> some View {
-        if #available(iOS 16, *) {
+        if #available(iOS 16.0, *) {
             return wrapped
                 .scrollContentBackground(.hidden)
         } else {
