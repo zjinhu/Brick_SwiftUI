@@ -7,9 +7,6 @@
 
 import UIKit
 import Foundation
-
-
-
 #if os(iOS) || os(tvOS)
 extension UIWindow {
     /// get window
@@ -33,7 +30,7 @@ extension UIWindowScene {
         return nil
     }
 }
- 
+
 private extension UIScene.ActivationState {
     var sortPriority: Int {
         switch self {
@@ -47,11 +44,11 @@ private extension UIScene.ActivationState {
 }
 
 public class Screen {
-    static var safeArea: UIEdgeInsets = UIScreen.safeArea
+    public static var safeArea: UIEdgeInsets = UIScreen.safeArea
     /// 当前屏幕状态 宽度
-    static var realHeight = max(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+    public static var realHeight = max(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
     /// 当前屏幕状态 高度
-    static var realWidth = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+    public static var realWidth = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
 }
 
 fileprivate extension UIScreen {
@@ -64,10 +61,10 @@ fileprivate extension UIScreen {
             .safeAreaInsets ?? .zero
     }
 }
- 
+
 #elseif os(macOS)
 public class Screen {
-    static var safeArea: NSEdgeInsets = NSScreen.safeArea
+    public static var safeArea: NSEdgeInsets = NSScreen.safeArea
 }
 fileprivate extension NSScreen {
     static var safeArea: NSEdgeInsets =
