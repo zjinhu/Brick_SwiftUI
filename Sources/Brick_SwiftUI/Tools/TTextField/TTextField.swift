@@ -101,13 +101,11 @@ public struct TTextField: View {
                 }
             }
             //Bottom text
-            if let error = error.wrappedValue{
-                if error{
+            if error.wrappedValue {
                     Text(errorText.wrappedValue)
                         .font(errorFont)
                         .foregroundColor(errorTextColor)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                }
             }
         }
     }
