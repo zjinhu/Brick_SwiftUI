@@ -16,12 +16,12 @@ public struct WebView: UIViewControllerRepresentable {
         self.url = url
     }
     
-    public func makeUIViewController(context: Context) -> WebViewController {
-        let webViewController = WebViewController()
+    public func makeUIViewController(context: Context) -> WebController {
+        let webViewController = WebController()
         return webViewController
     }
 
-    public func updateUIViewController(_ webviewController: WebViewController, context: Context){
+    public func updateUIViewController(_ webviewController: WebController, context: Context){
 
         let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
         DispatchQueue.main.async {
@@ -30,7 +30,7 @@ public struct WebView: UIViewControllerRepresentable {
     }
 }
 
-public class WebViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
+public class WebController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
     lazy var config: WKWebViewConfiguration = {
         let preferences = WKPreferences()

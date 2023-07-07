@@ -6,7 +6,7 @@ public extension Brick<Any> {
         public var content: Content
         public var label: String?
         public var proposedSize: ProposedViewSize = .unspecified
-        public var scale: CGFloat = PlatformScreen.mainScreen.scale
+        public var scale: CGFloat = Screen.main.scale
         public var isOpaque: Bool = false
         public var colorMode: ColorRenderingMode = .nonLinear
 
