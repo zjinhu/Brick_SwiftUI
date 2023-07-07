@@ -11,7 +11,7 @@ struct TTextFieldColorEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var textColor: Color {
+    var tTextFieldColor: Color {
         get { self[TTextFieldColorEnvironmentKey.self] }
         set { self[TTextFieldColorEnvironmentKey.self] = newValue }
     }
@@ -22,7 +22,7 @@ struct TTextFieldTitleColorEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var titleColor: Color {
+    var tTextFieldTitleColor: Color {
         get { self[TTextFieldTitleColorEnvironmentKey.self] }
         set { self[TTextFieldTitleColorEnvironmentKey.self] = newValue }
     }
@@ -33,7 +33,7 @@ struct TTextFieldPlaceHolderColorEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var placeHolderTextColor: Color {
+    var tTextFieldPlaceHolderColor: Color {
         get { self[TTextFieldPlaceHolderColorEnvironmentKey.self] }
         set { self[TTextFieldPlaceHolderColorEnvironmentKey.self] = newValue }
     }
@@ -44,7 +44,7 @@ struct TTextFieldDisableColorEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var disableColor: Color {
+    var tTextFieldDisableColor: Color {
         get { self[TTextFieldDisableColorEnvironmentKey.self] }
         set { self[TTextFieldDisableColorEnvironmentKey.self] = newValue }
     }
@@ -55,7 +55,7 @@ struct TTextFieldBackgroundColorEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var backgroundColor: Color {
+    var tTextFieldBackgroundColor: Color {
         get { self[TTextFieldBackgroundColorEnvironmentKey.self] }
         set { self[TTextFieldBackgroundColorEnvironmentKey.self] = newValue }
     }
@@ -66,7 +66,7 @@ struct TTextFieldErrorTextColorEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var errorTextColor: Color {
+    var tTextFieldErrorColor: Color {
         get { self[TTextFieldErrorTextColorEnvironmentKey.self] }
         set { self[TTextFieldErrorTextColorEnvironmentKey.self] = newValue }
     }
@@ -77,7 +77,7 @@ struct TTextFieldBorderColorEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var borderColor: Color {
+    var tTextFieldBorderColor: Color {
         get { self[TTextFieldBorderColorEnvironmentKey.self] }
         set { self[TTextFieldBorderColorEnvironmentKey.self] = newValue }
     }
@@ -88,7 +88,7 @@ struct TTextFieldTrailingImageForegroundColorEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var trailingImageForegroundColor: Color {
+    var tTextFieldTrailingImageColor: Color {
         get { self[TTextFieldTrailingImageForegroundColorEnvironmentKey.self] }
         set { self[TTextFieldTrailingImageForegroundColorEnvironmentKey.self] = newValue }
     }
@@ -99,7 +99,7 @@ struct TTextFieldFocusedBorderColorEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var focusedBorderColor: Color {
+    var tTextFieldFocusedBorderColor: Color {
         get { self[TTextFieldFocusedBorderColorEnvironmentKey.self] }
         set { self[TTextFieldFocusedBorderColorEnvironmentKey.self] = newValue }
     }
@@ -110,7 +110,7 @@ struct TTextFieldFocusedBorderEnableEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var focusedBorderColorEnable: Bool {
+    var tTextFieldFocusedBorderColorEnable: Bool {
         get { self[TTextFieldFocusedBorderEnableEnvironmentKey.self] }
         set { self[TTextFieldFocusedBorderEnableEnvironmentKey.self] = newValue }
     }
@@ -126,7 +126,7 @@ struct TTextFieldBorderTypeEnvironmentKey: EnvironmentKey {
 }
  
 extension EnvironmentValues {
-    var borderType: BorderType {
+    var tTextFieldBorderType: BorderType {
         get { self[TTextFieldBorderTypeEnvironmentKey.self] }
         set { self[TTextFieldBorderTypeEnvironmentKey.self] = newValue }
     }
@@ -137,7 +137,7 @@ struct TTextFieldDisableAutoCorrectionEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var disableAutoCorrection: Bool {
+    var tTextFieldDisableAutoCorrection: Bool {
         get { self[TTextFieldDisableAutoCorrectionEnvironmentKey.self] }
         set { self[TTextFieldDisableAutoCorrectionEnvironmentKey.self] = newValue }
     }
@@ -148,7 +148,7 @@ struct TTextFieldTitleFontEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var titleFont: Font {
+    var tTextFieldTitleFont: Font {
         get { self[TTextFieldTitleFontEnvironmentKey.self] }
         set { self[TTextFieldTitleFontEnvironmentKey.self] = newValue }
     }
@@ -159,7 +159,7 @@ struct TTextFieldErrorFontEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var errorFont: Font {
+    var tTextFieldErrorFont: Font {
         get { self[TTextFieldErrorFontEnvironmentKey.self] }
         set { self[TTextFieldErrorFontEnvironmentKey.self] = newValue }
     }
@@ -170,7 +170,7 @@ struct TTextFieldPlaceHolderFontEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var placeHolderFont: Font {
+    var tTextFieldPlaceHolderFont: Font {
         get { self[TTextFieldPlaceHolderFontEnvironmentKey.self] }
         set { self[TTextFieldPlaceHolderFontEnvironmentKey.self] = newValue }
     }
@@ -181,7 +181,7 @@ struct TTextFieldBorderWidthEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var borderWidth: CGFloat {
+    var tTextFieldBorderWidth: CGFloat {
         get { self[TTextFieldBorderWidthEnvironmentKey.self] }
         set { self[TTextFieldBorderWidthEnvironmentKey.self] = newValue }
     }
@@ -192,7 +192,7 @@ struct TTextFieldCornerRadiusEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var cornerRadius: CGFloat {
+    var tTextFieldCornerRadius: CGFloat {
         get { self[TTextFieldCornerRadiusEnvironmentKey.self] }
         set { self[TTextFieldCornerRadiusEnvironmentKey.self] = newValue }
     }
@@ -203,7 +203,7 @@ struct TTextFieldHeightEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var textFieldHeight: CGFloat {
+    var tTextFieldHeight: CGFloat {
         get { self[TTextFieldHeightEnvironmentKey.self] }
         set { self[TTextFieldHeightEnvironmentKey.self] = newValue }
     }
@@ -214,7 +214,7 @@ struct TTextFieldTitleEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var textFieldTitle: String? {
+    var tTextFieldTitle: String? {
         get { self[TTextFieldTitleEnvironmentKey.self] }
         set { self[TTextFieldTitleEnvironmentKey.self] = newValue }
     }
@@ -225,7 +225,7 @@ struct TTextFieldPlaceHolderTextEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var placeHolderText: String {
+    var tTextFieldPlaceHolderText: String {
         get { self[TTextFieldPlaceHolderTextEnvironmentKey.self] }
         set { self[TTextFieldPlaceHolderTextEnvironmentKey.self] = newValue }
     }
@@ -236,7 +236,7 @@ struct TTextFieldTruncateModeEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var truncationMode: Text.TruncationMode {
+    var tTextFieldTruncationMode: Text.TruncationMode {
         get { self[TTextFieldTruncateModeEnvironmentKey.self] }
         set { self[TTextFieldTruncateModeEnvironmentKey.self] = newValue }
     }
@@ -247,7 +247,7 @@ struct TTextFieldLimitEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var limitCount: Int? {
+    var tTextFieldLimitCount: Int? {
         get { self[TTextFieldLimitEnvironmentKey.self] }
         set { self[TTextFieldLimitEnvironmentKey.self] = newValue }
     }

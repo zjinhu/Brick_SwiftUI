@@ -86,7 +86,8 @@ public struct TTextField: View {
                                 trailingImage = secureText ? secureCloseImage : secureOpenImage
                             }
                         }
-                        .disabled(disable.wrappedValue)
+                        .disabled(disable.wrappedValue)//图片点击
+                    
                 }.background(
                     RoundedRectangle(cornerRadius: getCornerRadius())
                         .stroke(borderColor, lineWidth: getBorderWidth(type: .square))
@@ -141,34 +142,34 @@ public struct TTextField: View {
     }
     
     
-    @Environment(\.textColor) private var textColor
-    @Environment(\.titleColor) private var titleColor
-    @Environment(\.placeHolderTextColor) private var placeHolderTextColor
-    @Environment(\.disableColor) private var disableColor
+    @Environment(\.tTextFieldColor) private var textColor
+    @Environment(\.tTextFieldTitleColor) private var titleColor
+    @Environment(\.tTextFieldPlaceHolderColor) private var placeHolderTextColor
+    @Environment(\.tTextFieldDisableColor) private var disableColor
     
-    @Environment(\.backgroundColor) private var backgroundColor
-    @Environment(\.errorTextColor) private var errorTextColor
-    @Environment(\.borderColor) private var borderColor
-    @Environment(\.trailingImageForegroundColor) private var trailingImageForegroundColor
+    @Environment(\.tTextFieldBackgroundColor) private var backgroundColor
+    @Environment(\.tTextFieldErrorColor) private var errorTextColor
+    @Environment(\.tTextFieldBorderColor) private var borderColor
+    @Environment(\.tTextFieldTrailingImageColor) private var trailingImageForegroundColor
     
-    @Environment(\.focusedBorderColor) private var focusedBorderColor
-    @Environment(\.focusedBorderColorEnable) private var focusedBorderColorEnable
-    @Environment(\.borderType) private var borderType
-    @Environment(\.disableAutoCorrection) private var disableAutoCorrection
+    @Environment(\.tTextFieldFocusedBorderColor) private var focusedBorderColor
+    @Environment(\.tTextFieldFocusedBorderColorEnable) private var focusedBorderColorEnable
+    @Environment(\.tTextFieldBorderType) private var borderType
+    @Environment(\.tTextFieldDisableAutoCorrection) private var disableAutoCorrection
     
-    @Environment(\.titleFont) private var titleFont
-    @Environment(\.errorFont) private var errorFont
-    @Environment(\.placeHolderFont) private var placeHolderFont
-    @Environment(\.borderWidth) private var borderWidth
+    @Environment(\.tTextFieldTitleFont) private var titleFont
+    @Environment(\.tTextFieldErrorFont) private var errorFont
+    @Environment(\.tTextFieldPlaceHolderFont) private var placeHolderFont
+    @Environment(\.tTextFieldBorderWidth) private var borderWidth
     
-    @Environment(\.cornerRadius) private var cornerRadius
-    @Environment(\.textFieldHeight) private var textFieldHeight
+    @Environment(\.tTextFieldCornerRadius) private var cornerRadius
+    @Environment(\.tTextFieldHeight) private var textFieldHeight
     
-    @Environment(\.textFieldTitle) private var textFieldTitle
-    @Environment(\.placeHolderText) private var placeHolderText
+    @Environment(\.tTextFieldTitle) private var textFieldTitle
+    @Environment(\.tTextFieldPlaceHolderText) private var placeHolderText
 
-    @Environment(\.truncationMode) private var truncationMode
-    @Environment(\.limitCount) private var limitCount
+    @Environment(\.tTextFieldTruncationMode) private var truncationMode
+    @Environment(\.tTextFieldLimitCount) private var limitCount
 
     
 }
@@ -204,92 +205,92 @@ extension TTextField{
 extension View {
 
     public func tTextFieldLimitCount(_ count: Int) -> some View {
-        environment(\.limitCount, count)
+        environment(\.tTextFieldLimitCount, count)
     }
     
     public func tTextFieldTruncationMode(_ mode: Text.TruncationMode) -> some View {
-        environment(\.truncationMode, mode)
+        environment(\.tTextFieldTruncationMode, mode)
     }
 
     public func tTextFieldTitle(_ title: String) -> some View {
-        environment(\.textFieldTitle, title)
+        environment(\.tTextFieldTitle, title)
     }
     
     public func tTextFieldPlaceHolderText(_ title: String) -> some View {
-        environment(\.placeHolderText, title)
+        environment(\.tTextFieldPlaceHolderText, title)
     }
     
     public func tTextFieldTextColor(_ color: Color) -> some View {
-        environment(\.textColor, color)
+        environment(\.tTextFieldColor, color)
     }
     
     public func tTextFieldTitleColor(_ color: Color) -> some View {
-        environment(\.titleColor, color)
+        environment(\.tTextFieldTitleColor, color)
     }
     
     public func tTextFieldPlaceHolderTextColor(_ color: Color) -> some View {
-        environment(\.placeHolderTextColor, color)
+        environment(\.tTextFieldPlaceHolderColor, color)
     }
     
     public func tTextFieldDisableColor(_ color: Color) -> some View {
-        environment(\.disableColor, color)
+        environment(\.tTextFieldDisableColor, color)
     }
     
     public func tTextFieldBackgroundColor(_ color: Color) -> some View {
-        environment(\.backgroundColor, color)
+        environment(\.tTextFieldBackgroundColor, color)
     }
     
     public func tTextFieldErrorTextColor(_ color: Color) -> some View {
-        environment(\.errorTextColor, color)
+        environment(\.tTextFieldErrorColor, color)
     }
     
     public func tTextFieldBorderColor(_ color: Color) -> some View {
-        environment(\.borderColor, color)
+        environment(\.tTextFieldBorderColor, color)
     }
     
     public func tTextFieldTrailingImageForegroundColor(_ color: Color) -> some View {
-        environment(\.trailingImageForegroundColor, color)
+        environment(\.tTextFieldTrailingImageColor, color)
     }
     
     public func tTextFieldFocusedBorderColor(_ color: Color) -> some View {
-        environment(\.focusedBorderColor, color)
+        environment(\.tTextFieldFocusedBorderColor, color)
     }
     
     
     public func tTextFieldFocusedBorderColorEnable(_ enable: Bool) -> some View {
-        environment(\.focusedBorderColorEnable, enable)
+        environment(\.tTextFieldFocusedBorderColorEnable, enable)
     }
     
     public func tTextFieldBorderType(_ type: BorderType) -> some View {
-        environment(\.borderType, type)
+        environment(\.tTextFieldBorderType, type)
     }
     
     public func tTextFieldDisableAutoCorrection(_ auto: Bool) -> some View {
-        environment(\.disableAutoCorrection, auto)
+        environment(\.tTextFieldDisableAutoCorrection, auto)
     }
     
     public func tTextFieldTitleFont(_ font: Font) -> some View {
-        environment(\.titleFont, font)
+        environment(\.tTextFieldTitleFont, font)
     }
     
     public func tTextFieldErrorFont(_ font: Font) -> some View {
-        environment(\.errorFont, font)
+        environment(\.tTextFieldErrorFont, font)
     }
     
     public func tTextFieldPlaceHolderFont(_ font: Font) -> some View {
-        environment(\.placeHolderFont, font)
+        environment(\.tTextFieldPlaceHolderFont, font)
     }
     
     public func tTextFieldBorderWidth(_ width: CGFloat) -> some View {
-        environment(\.borderWidth, width)
+        environment(\.tTextFieldBorderWidth, width)
     }
     
     public func tTextFieldCornerRadius(_ radius: CGFloat) -> some View {
-        environment(\.cornerRadius, radius)
+        environment(\.tTextFieldCornerRadius, radius)
     }
     
     public func tTextFieldHeight(_ height: CGFloat) -> some View {
-        environment(\.textFieldHeight, height)
+        environment(\.tTextFieldHeight, height)
     }
     
     func placeholder<Content: View>(
