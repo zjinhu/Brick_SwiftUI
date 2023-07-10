@@ -28,7 +28,7 @@ struct UnderLineTextView: View {
     
     var body: some View {
         VStack(spacing: 8){
-            //Title
+            
             if let underLineTitle{
                 Text(underLineTitle)
                     .font(underLineTitleFont)
