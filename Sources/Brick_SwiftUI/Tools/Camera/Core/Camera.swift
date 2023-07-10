@@ -6,8 +6,12 @@ See the License.txt file for this sample’s licensing information.
 import AVFoundation
 #endif
 import CoreImage
+#if os(macOS)
+import AppKit
+#elseif os(iOS)
 import UIKit
- 
+#endif
+
 class Camera: NSObject {
     private let captureSession = AVCaptureSession()
     private var isCaptureSessionConfigured = false

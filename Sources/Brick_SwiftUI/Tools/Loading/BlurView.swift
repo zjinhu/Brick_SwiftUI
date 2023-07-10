@@ -6,6 +6,23 @@
 //
 
 import SwiftUI
+
+#if os(macOS)
+import AppKit
+struct BlurView: NSViewRepresentable {
+    func makeNSView(context: Context) -> some NSVisualEffectView {
+        let view = NSVisualEffectView()
+//        view.material = .sidebar
+//        view.blendingMode = .behindWindow
+        view.state = .active
+        return view
+    }
+    
+    func updateNSView(_ nsView: NSVisualEffectView, context: Context) {
+        
+    }
+}
+#elseif os(iOS)
 import UIKit
 struct BlurView: UIViewRepresentable {
    typealias UIViewType = UIVisualEffectView
@@ -19,3 +36,4 @@ struct BlurView: UIViewRepresentable {
    }
 }
 
+#endif

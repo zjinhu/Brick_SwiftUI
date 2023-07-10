@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+#if os(iOS)
 import UIKit
 public extension Brick where Wrapped: View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
@@ -23,3 +24,4 @@ public struct RoundedCorner: Shape {
         return Path(path.cgPath)
     }
 }
+#endif
