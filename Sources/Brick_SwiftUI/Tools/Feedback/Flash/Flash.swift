@@ -44,8 +44,6 @@ private struct Flash: Feedback {
                 view.removeFromSuperview()
             }
         }
-#else
-#warning("macOS flash not implemented")
 #endif
     }
 

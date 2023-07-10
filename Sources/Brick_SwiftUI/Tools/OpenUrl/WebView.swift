@@ -7,9 +7,10 @@
 //
 
 import SwiftUI
-import WebKit
-import UIKit
 import Foundation
+import WebKit
+#if os(iOS)
+import UIKit
 public struct WebView: UIViewControllerRepresentable {
     public let url: URL
     
@@ -125,3 +126,4 @@ public class WebController: UIViewController, WKNavigationDelegate, WKUIDelegate
         URLCache.shared.memoryCapacity = 0
     }
 }
+#endif

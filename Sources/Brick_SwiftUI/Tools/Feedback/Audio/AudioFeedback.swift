@@ -1,5 +1,4 @@
 import SwiftUI
-
 public extension AnyFeedback {
     /// Specifies feedback that plays an audio file
     /// - Parameter audio: The audio to play when this feedback is triggered

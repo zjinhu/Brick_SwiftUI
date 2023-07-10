@@ -1,5 +1,4 @@
 import SwiftUI
-
 /// Represents an audio URL
 public struct Audio: Identifiable, Hashable {
     public var id: String { url.path }

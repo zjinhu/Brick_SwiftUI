@@ -10,10 +10,8 @@ import SwiftUI
 #if os(macOS)
 import AppKit
 struct BlurView: NSViewRepresentable {
-    func makeNSView(context: Context) -> some NSVisualEffectView {
+    func makeNSView(context: Context) -> NSVisualEffectView {
         let view = NSVisualEffectView()
-//        view.material = .sidebar
-//        view.blendingMode = .behindWindow
         view.state = .active
         return view
     }

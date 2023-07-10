@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+#if os(iOS)
 import UIKit
 
 extension View {
@@ -268,3 +269,4 @@ extension UIViewController {
         return self as? UINavigationController
     }
 }
+#endif

@@ -26,15 +26,15 @@ internal final class AudioPlayer: NSObject, ObservableObject, AVAudioPlayerDeleg
         player = try AVAudioPlayer(contentsOf: audio.url)
         player?.delegate = self
         player?.play()
-#else
-#warning("macOS audio not implemented")
 #endif
     }
     
     @MainActor
     func stop() async {
+#if os(iOS)
         player?.stop()
         player = nil
+#endif
     }
 
 #if os(iOS)

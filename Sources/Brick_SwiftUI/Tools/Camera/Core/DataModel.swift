@@ -7,6 +7,7 @@ import AVFoundation
 #endif
 import SwiftUI
 import Photos
+#if os(iOS)
 final class DataModel: ObservableObject {
     @Published  var photoData: Data?
  
@@ -110,3 +111,4 @@ fileprivate extension Image.Orientation {
         }
     }
 }
+#endif

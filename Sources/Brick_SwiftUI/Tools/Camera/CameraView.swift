@@ -3,6 +3,7 @@
  */
 
 import SwiftUI
+#if os(iOS)
 public struct CameraView: View {
     @Binding var photoData: Data?
     
@@ -105,3 +106,4 @@ public struct CameraView: View {
     }
     
 }
+#endif
