@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UnderLineTextView: View {
+public struct UnderLineTextView: View {
  
     @Environment(\.underLineTitle) private var underLineTitle
     @Environment(\.underLineTitleColor) private var underLineTitleColor
@@ -26,7 +26,9 @@ struct UnderLineTextView: View {
     @Environment(\.underLineTrailingImage) private var underLineTrailingImage
     @Environment(\.underLineTrailingImageClick) private var underLineTrailingImageClick
     
-    var body: some View {
+    public init(){}
+    
+    public var body: some View {
         VStack(spacing: 8){
             
             if let underLineTitle{

@@ -1,5 +1,7 @@
 import SwiftUI
+#if os(iOS)
 import UIKit
+#endif
 public extension Brick where Wrapped: View {
 
     /// Layers the views that you specify behind this view.
@@ -128,8 +130,8 @@ public extension Brick where Wrapped: View {
         wrapped.background(content(), alignment: alignment)
     }
 
-    @available(watchOS, unavailable)
-    @available(macOS, unavailable)
+#if os(iOS)
+ 
     func hideListBackground() -> some View {
         if #available(iOS 16.0, *) {
             return wrapped
@@ -139,8 +141,7 @@ public extension Brick where Wrapped: View {
             return wrapped
         }
     }
-    @available(watchOS, unavailable)
-    @available(macOS, unavailable)
+ 
     func hideTextViewBackground() -> some View {
         if #available(iOS 16.0, *) {
             return wrapped
@@ -150,4 +151,29 @@ public extension Brick where Wrapped: View {
             return wrapped
         }
     }
+ 
+    func tabbarBackground(_ color: Color) -> some View {
+//        if #available(iOS 16.0, *) {
+//            return wrapped
+//                .toolbar(.visible, for: .tabBar)
+//                .toolbarBackground(color, for: .tabBar)
+//        } else {
+//            UITabBar.appearance().isTranslucent = false
+//            UITabBar.appearance().barTintColor = UIColor(color)
+            let standardAppearance = UITabBarAppearance()
+            standardAppearance.configureWithDefaultBackground()
+            standardAppearance.backgroundColor = UIColor(color)
+            UITabBar.appearance().standardAppearance = standardAppearance
+            
+            if #available(iOS 15.0, *) {
+                let scrollEdgeAppearance = UITabBarAppearance()
+                scrollEdgeAppearance.configureWithTransparentBackground()
+                scrollEdgeAppearance.backgroundColor = UIColor(color)
+                UITabBar.appearance().scrollEdgeAppearance = scrollEdgeAppearance
+            }
+            return wrapped
+//        }
+    }
+#endif
+
 }

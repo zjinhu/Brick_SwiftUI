@@ -5,7 +5,7 @@
 //  Created by 狄烨 on 2023/4/20.
 //  Copyright © 2023 狄烨 . All rights reserved.
 //
-
+#if os(iOS)
 import Foundation
 import SwiftUI
 import UIKit
@@ -138,3 +138,4 @@ public extension View {
     }
 }
 
+#endif

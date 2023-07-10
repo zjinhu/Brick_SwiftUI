@@ -10,9 +10,10 @@ import Foundation
 extension Brick{
     public struct Language {
         /// The current language of the system.
+        ///
         public static var currentLanguage: String? {
             
-            if #available(iOS 16, *) {
+            if #available(macOS 13, iOS 16, tvOS 16, watchOS 9, *) {
                 if let languageCode = Foundation.Locale.current.language.languageCode?.identifier {
                     return languageCode
                 }
