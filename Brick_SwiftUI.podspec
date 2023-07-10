@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   
   s.swift_versions     = ['5.8','5.7','5.6','5.5']
   s.requires_arc = true
-  s.frameworks   = "UIKit", "Foundation", "SwiftUI" #支持的框架
+  s.frameworks   = "Foundation", "SwiftUI" #支持的框架
   
   s.subspec 'SwiftUI' do |ss|
     ss.dependency 'Brick_SwiftUI/Utilities'

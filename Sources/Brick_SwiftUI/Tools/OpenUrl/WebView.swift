@@ -8,8 +8,8 @@
 
 import SwiftUI
 import Foundation
-import WebKit
 #if os(iOS)
+import WebKit
 import UIKit
 public struct WebView: UIViewControllerRepresentable {
     public let url: URL
