@@ -26,6 +26,8 @@ public struct UnderLineTextView: View {
     @Environment(\.underLineTrailingImage) private var underLineTrailingImage
     @Environment(\.underLineTrailingImageClick) private var underLineTrailingImageClick
     
+    @Environment(\.underLineTrailingView) private var underLineTrailingView
+    
     public init(){}
     
     public var body: some View {
@@ -59,6 +61,12 @@ public struct UnderLineTextView: View {
                         .onTapGesture {
                             underLineTrailingImageClick?()
                         }
+                    
+                    if let underLineTrailingView {
+                        underLineTrailingView()
+                            .padding(.trailing, 12)
+                    }
+ 
                 }
                 
                 Rectangle()
@@ -73,11 +81,23 @@ public struct UnderLineTextView: View {
 
 struct UnderLineTextView_Previews: PreviewProvider {
     static var previews: some View {
-        UnderLineTextView()
-            .underLineText("123")
-            .underLineTitle("123")
-            .underLineColor(.red)
-            .padding()
+        Preview()
+    }
+    
+    struct Preview: View{
+        @State var birthday: Date = Date()
+        
+        var body: some View {
+            UnderLineTextView()
+                .underLineText("123")
+                .underLineTitle("123")
+                .underLineColor(.red)
+                .underLineTrailingView {
+
+                    DatePicker("", selection: $birthday, displayedComponents: .date)
+                }
+                .padding()
+        }
     }
 }
 
@@ -134,10 +154,10 @@ extension View {
     public func underLineTrailingImageClick(_ click: @escaping () -> Void) -> some View {
         environment(\.underLineTrailingImageClick, click)
     }
-}
-
-struct UnderLineTextTruncateModeEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Text.TruncationMode = .tail
+    
+    public func underLineTrailingView<V: View>(_ content: @escaping () -> V) -> some View {
+        environment(\.underLineTrailingView, { AnyView(content()) })
+    }
 }
 
 extension EnvironmentValues {
@@ -145,138 +165,125 @@ extension EnvironmentValues {
         get { self[UnderLineTextTruncateModeEnvironmentKey.self] }
         set { self[UnderLineTextTruncateModeEnvironmentKey.self] = newValue }
     }
+ 
+    var underLineTitle: String? {
+        get { self[UnderLineTextTitleEnvironmentKey.self] }
+        set { self[UnderLineTextTitleEnvironmentKey.self] = newValue }
+    }
+ 
+    var underLineText: String {
+        get { self[UnderLineTextEnvironmentKey.self] }
+        set { self[UnderLineTextEnvironmentKey.self] = newValue }
+    }
+ 
+    var underLineColor: Color? {
+        get { self[UnderLineTextLineColorEnvironmentKey.self] }
+        set { self[UnderLineTextLineColorEnvironmentKey.self] = newValue }
+    }
+ 
+    var underLineHeight: CGFloat {
+        get { self[UnderLineHeightEnvironmentKey.self] }
+        set { self[UnderLineHeightEnvironmentKey.self] = newValue }
+    }
+ 
+    var underLineTitleFont: Font {
+        get { self[UnderLineTitleFontEnvironmentKey.self] }
+        set { self[UnderLineTitleFontEnvironmentKey.self] = newValue }
+    }
+ 
+    var underLineTextFont: Font {
+        get { self[UnderLineTextFontEnvironmentKey.self] }
+        set { self[UnderLineTextFontEnvironmentKey.self] = newValue }
+    }
+ 
+    var underLineTitleColor: Color? {
+        get { self[UnderLineTitleColorEnvironmentKey.self] }
+        set { self[UnderLineTitleColorEnvironmentKey.self] = newValue }
+    }
+ 
+    var underLineTextHeight: CGFloat {
+        get { self[UnderLineTextHeightEnvironmentKey.self] }
+        set { self[UnderLineTextHeightEnvironmentKey.self] = newValue }
+    }
+ 
+    var underLineTextColor: Color? {
+        get { self[UnderLineTextColorEnvironmentKey.self] }
+        set { self[UnderLineTextColorEnvironmentKey.self] = newValue }
+    }
+ 
+    var underLineTrailingImageColor: Color? {
+        get { self[UnderLineTrailingImageColorEnvironmentKey.self] }
+        set { self[UnderLineTrailingImageColorEnvironmentKey.self] = newValue }
+    }
+ 
+    var underLineTrailingImage: Image? {
+        get { self[UnderLineTrailingImageEnvironmentKey.self] }
+        set { self[UnderLineTrailingImageEnvironmentKey.self] = newValue }
+    }
+ 
+    var underLineTrailingImageClick: (() -> Void)? {
+        get { self[UnderLineTrailingImageClickEnvironmentKey.self] }
+        set { self[UnderLineTrailingImageClickEnvironmentKey.self] = newValue }
+    }
+ 
+    var underLineTrailingView: (() -> AnyView)? {
+        get { self[UnderLineTrailingViewEnvironmentKey.self] }
+        set { self[UnderLineTrailingViewEnvironmentKey.self] = newValue }
+    }
+}
+
+struct UnderLineTextTruncateModeEnvironmentKey: EnvironmentKey {
+    static var defaultValue: Text.TruncationMode = .tail
 }
 
 struct UnderLineTextTitleEnvironmentKey: EnvironmentKey {
     static var defaultValue: String?
 }
 
-extension EnvironmentValues {
-    var underLineTitle: String? {
-        get { self[UnderLineTextTitleEnvironmentKey.self] }
-        set { self[UnderLineTextTitleEnvironmentKey.self] = newValue }
-    }
-}
-
 struct UnderLineTextEnvironmentKey: EnvironmentKey {
     static var defaultValue: String = ""
-}
-
-extension EnvironmentValues {
-    var underLineText: String {
-        get { self[UnderLineTextEnvironmentKey.self] }
-        set { self[UnderLineTextEnvironmentKey.self] = newValue }
-    }
 }
 
 struct UnderLineTextLineColorEnvironmentKey: EnvironmentKey {
     static var defaultValue: Color? = nil
 }
 
-extension EnvironmentValues {
-    var underLineColor: Color? {
-        get { self[UnderLineTextLineColorEnvironmentKey.self] }
-        set { self[UnderLineTextLineColorEnvironmentKey.self] = newValue }
-    }
-}
-
 struct UnderLineHeightEnvironmentKey: EnvironmentKey {
     static var defaultValue: CGFloat = 1
-}
-
-extension EnvironmentValues {
-    var underLineHeight: CGFloat {
-        get { self[UnderLineHeightEnvironmentKey.self] }
-        set { self[UnderLineHeightEnvironmentKey.self] = newValue }
-    }
 }
 
 struct UnderLineTitleFontEnvironmentKey: EnvironmentKey {
     static var defaultValue: Font = .system(size: 15)
 }
 
-extension EnvironmentValues {
-    var underLineTitleFont: Font {
-        get { self[UnderLineTitleFontEnvironmentKey.self] }
-        set { self[UnderLineTitleFontEnvironmentKey.self] = newValue }
-    }
-}
-
 struct UnderLineTextFontEnvironmentKey: EnvironmentKey {
     static var defaultValue: Font = .system(size: 15)
-}
-
-extension EnvironmentValues {
-    var underLineTextFont: Font {
-        get { self[UnderLineTextFontEnvironmentKey.self] }
-        set { self[UnderLineTextFontEnvironmentKey.self] = newValue }
-    }
 }
 
 struct UnderLineTitleColorEnvironmentKey: EnvironmentKey {
     static var defaultValue: Color? = nil
 }
 
-extension EnvironmentValues {
-    var underLineTitleColor: Color? {
-        get { self[UnderLineTitleColorEnvironmentKey.self] }
-        set { self[UnderLineTitleColorEnvironmentKey.self] = newValue }
-    }
+struct UnderLineTrailingViewEnvironmentKey: EnvironmentKey {
+    static var defaultValue: (() -> AnyView)? { nil }
 }
 
 struct UnderLineTextHeightEnvironmentKey: EnvironmentKey {
     static var defaultValue: CGFloat = 50
 }
 
-extension EnvironmentValues {
-    var underLineTextHeight: CGFloat {
-        get { self[UnderLineTextHeightEnvironmentKey.self] }
-        set { self[UnderLineTextHeightEnvironmentKey.self] = newValue }
-    }
-}
-
 struct UnderLineTextColorEnvironmentKey: EnvironmentKey {
     static var defaultValue: Color? = nil
-}
-
-extension EnvironmentValues {
-    var underLineTextColor: Color? {
-        get { self[UnderLineTextColorEnvironmentKey.self] }
-        set { self[UnderLineTextColorEnvironmentKey.self] = newValue }
-    }
 }
 
 struct UnderLineTrailingImageColorEnvironmentKey: EnvironmentKey {
     static var defaultValue: Color? = nil
 }
 
-extension EnvironmentValues {
-    var underLineTrailingImageColor: Color? {
-        get { self[UnderLineTrailingImageColorEnvironmentKey.self] }
-        set { self[UnderLineTrailingImageColorEnvironmentKey.self] = newValue }
-    }
-}
-
-
 struct UnderLineTrailingImageEnvironmentKey: EnvironmentKey {
     static var defaultValue: Image? = nil
 }
 
-extension EnvironmentValues {
-    var underLineTrailingImage: Image? {
-        get { self[UnderLineTrailingImageEnvironmentKey.self] }
-        set { self[UnderLineTrailingImageEnvironmentKey.self] = newValue }
-    }
-}
-
-
 struct UnderLineTrailingImageClickEnvironmentKey: EnvironmentKey {
     static var defaultValue: (() -> Void)? = nil
-}
-
-extension EnvironmentValues {
-    var underLineTrailingImageClick: (() -> Void)? {
-        get { self[UnderLineTrailingImageClickEnvironmentKey.self] }
-        set { self[UnderLineTrailingImageClickEnvironmentKey.self] = newValue }
-    }
 }
