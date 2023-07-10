@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Foundation
-
+#if os(iOS)
 public enum ColorSchemeType: Int {
     // 跟随系统
     case system
@@ -40,6 +40,6 @@ public class AppColorScheme: ObservableObject {
     }
 }
 
-
+#endif
 
 

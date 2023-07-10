@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+#if os(iOS)
 extension View {
     public func rightArrow(color: Color = Color(.systemGray2),
                            font: Font = Font.footnote.weight(.semibold)) -> some View {
@@ -27,3 +27,4 @@ struct Chevron: View {
             .font(font)
     }
 }
+#endif

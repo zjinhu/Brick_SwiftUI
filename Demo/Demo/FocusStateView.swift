@@ -1,6 +1,6 @@
 import SwiftUI
 import Brick_SwiftUI
-
+#if os(iOS)
 struct FocusStateView: View {
 
     enum Field: Hashable {
@@ -48,3 +48,4 @@ struct FocusStateView: View {
         }
     }
 }
+#endif

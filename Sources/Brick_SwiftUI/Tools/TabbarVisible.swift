@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+#if os(iOS)
 import UIKit
 
 extension View {
@@ -86,3 +87,4 @@ extension UITabBar {
     }
 }
 
+#endif

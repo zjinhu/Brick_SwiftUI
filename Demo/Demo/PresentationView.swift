@@ -135,6 +135,7 @@ private struct DemoView: View {
                             .ss.checkmark(isModal ? .visible : .hidden)
                     }
                     
+#if os(iOS)
                     if isModal {
                         Button {
                             enablePrompt.toggle()
@@ -151,9 +152,10 @@ private struct DemoView: View {
                             ])
                         }
                     }
+#endif
                 }
             }
-            .listStyle(.insetGrouped)
+//            .listStyle(.insetGrouped)
             .navigationTitle("Sheet")
             .toolbar {
                 ToolbarItem {

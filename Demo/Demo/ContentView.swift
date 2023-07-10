@@ -23,9 +23,7 @@ struct ContentView: View {
                         NavigationLink("OpenURL", destination: OpenURLView())
                         
                         NavigationLink("ShareLink", destination: ShareLinkView())
-                        
-                        NavigationLink("Photo", destination: PhotoPickerView())
-                        
+
                         NavigationLink("AsyncImage", destination: AsyncImageView())
                         
                         NavigationLink("ScrollView", destination: ScrollsView())
@@ -52,18 +50,23 @@ struct ContentView: View {
                         
                         NavigationLink("Presentation", destination: PresentationView())
                         
-                        NavigationLink("FocusState", destination: FocusStateView())
                         
                         NavigationLink("AnimationCompleted", destination: AnimationCompleted())
                         
                         NavigationLink("ScrollStackView", destination: ScrollStackView())
+#if os(iOS)
                         
+                        NavigationLink("Photo", destination: PhotoPickerView())
+                        
+                        
+                        NavigationLink("FocusState", destination: FocusStateView())
+  
                         NavigationLink("DrrkModelView", destination: DarkModelView())
+#endif
                     }
                     
                 }
-                .navigationTitle("Brick_SwiftUI")
-                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("Brick_SwiftUI") 
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button {

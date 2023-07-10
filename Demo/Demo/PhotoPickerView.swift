@@ -4,10 +4,12 @@
 //
 //  Created by iOS on 2023/6/7.
 //
-import UIKit
 import SwiftUI
 import PhotosUI
 import Brick_SwiftUI
+#if os(iOS)
+import UIKit
+
 struct PhotoPickerView: View {
     @Environment(\.dismiss) private var dismiss
     
@@ -138,3 +140,4 @@ struct PhotoPickerView_Previews: PreviewProvider {
         PhotoPickerView()
     }
 }
+#endif

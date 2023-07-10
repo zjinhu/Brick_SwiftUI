@@ -48,6 +48,7 @@ public class Screen {
     
     public static var main: UIScreen = UIScreen.main
     
+    public static var scale: CGFloat { UIScreen.main.scale}
     /// 当前屏幕状态 宽度
     public static var realHeight = max(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
     /// 当前屏幕状态 高度
@@ -85,6 +86,8 @@ import AppKit
 public class Screen {
     public static var safeArea: NSEdgeInsets = NSScreen.safeArea
     public static var main: NSScreen { NSScreen.main! }
+    
+    public static var scale: CGFloat { NSScreen.main!.backingScaleFactor}
 }
 fileprivate extension NSScreen {
     static var safeArea: NSEdgeInsets =
