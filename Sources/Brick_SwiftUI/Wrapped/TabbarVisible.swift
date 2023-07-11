@@ -9,41 +9,41 @@ import SwiftUI
 #if os(iOS)
 import UIKit
 
-extension View {
-    public func showTabBar(_ show: Bool) -> some View {
+public extension Brick where Wrapped: View {
+    func tabBar(_ visibility: Brick<Any>.Visibility) -> some View {
         if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
-            return self.modifier(VisibleTabBar(showBar: show))
+            return wrapped.modifier(VisibleTabBar(visibility))
         }else{
-            return self.modifier(ShowTabBar(showBar: show))
+            return wrapped.modifier(ShowTabBar(visibility))
         }
     }
 }
 
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
 struct VisibleTabBar: ViewModifier {
-    @State private var showBar: Bool = false
-    private var showBarTemp: Bool
-    init(showBar: Bool) {
-        self.showBarTemp = showBar
+    @State private var show: Brick<Any>.Visibility = .automatic
+    private var showTemp: Brick<Any>.Visibility
+    init(_ show: Brick<Any>.Visibility) {
+        self.showTemp = show
     }
     
     func body(content: Content) -> some View {
         return content
             .padding(.zero)
-            .toolbar(showBar ? .visible : .hidden, for: .tabBar)
+            .toolbar(show == .hidden ? .hidden : .visible, for: .tabBar)
             .onAppear{
                 withAnimation {
-                    showBar = showBarTemp
+                    show = showTemp
                 }
             }
     }
 }
 
 struct ShowTabBar: ViewModifier {
-    @State private var showBar: Bool
+    @State private var show: Brick<Any>.Visibility
     
-    init(showBar: Bool) {
-        self.showBar = showBar
+    init(_ show: Brick<Any>.Visibility) {
+        self.show = show
     }
     
     func body(content: Content) -> some View {
@@ -51,10 +51,10 @@ struct ShowTabBar: ViewModifier {
             .padding(.zero)
             .onAppear {
                 DispatchQueue.main.async {
-                    if showBar{
-                        TabBarModifier.showTabBar()
-                    }else{
+                    if show == .hidden{
                         TabBarModifier.hideTabBar()
+                    }else{
+                        TabBarModifier.showTabBar()
                     }
                 }
             }
