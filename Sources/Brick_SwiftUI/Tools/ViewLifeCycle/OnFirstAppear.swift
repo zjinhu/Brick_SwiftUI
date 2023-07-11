@@ -1,5 +1,12 @@
+//
+//  SwiftUIView.swift
+//  
+//
+//  Created by iOS on 2023/7/11.
+//
+
 import SwiftUI
-private struct OnFirstAppear: ViewModifier {
+struct OnFirstAppear: ViewModifier {
     let action: (() -> Void)?
     
     @State private var hasAppeared = false
@@ -13,7 +20,7 @@ private struct OnFirstAppear: ViewModifier {
         }
     }
 }
-extension View {
+public extension View {
     func onFirstAppear(perform action: (() -> Void)? = nil) -> some View {
         modifier(OnFirstAppear(action: action))
     }

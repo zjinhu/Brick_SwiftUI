@@ -10,44 +10,52 @@ import SwiftUI
 import UIKit
 
 extension View {
-
-    public func showTabBar() -> some View {
+    public func showTabBar(_ show: Bool) -> some View {
         if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
-            return self.toolbar(.visible, for: .tabBar)
+            return self.modifier(VisibleTabBar(showBar: show))
         }else{
-            return self.modifier(ShowTabBar())
+            return self.modifier(ShowTabBar(showBar: show))
         }
     }
-    
-    public func hiddenTabBar() -> some View {
-        if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
-            return self.toolbar(.hidden, for: .tabBar)
-        }else{
-            return self.modifier(HiddenTabBar())
-        }
-    }
-    
 }
 
-struct ShowTabBar: ViewModifier {
+@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
+struct VisibleTabBar: ViewModifier {
+    @State private var showBar: Bool = false
+    private var showBarTemp: Bool
+    init(showBar: Bool) {
+        self.showBarTemp = showBar
+    }
+    
     func body(content: Content) -> some View {
         return content
             .padding(.zero)
-            .onAppear {
-                DispatchQueue.main.async {
-                    TabBarModifier.showTabBar()
+            .toolbar(showBar ? .visible : .hidden, for: .tabBar)
+            .onAppear{
+                withAnimation {
+                    showBar = showBarTemp
                 }
             }
     }
 }
 
-struct HiddenTabBar: ViewModifier {
+struct ShowTabBar: ViewModifier {
+    @State private var showBar: Bool
+    
+    init(showBar: Bool) {
+        self.showBar = showBar
+    }
+    
     func body(content: Content) -> some View {
         return content
             .padding(.zero)
             .onAppear {
                 DispatchQueue.main.async {
-                    TabBarModifier.hideTabBar()
+                    if showBar{
+                        TabBarModifier.showTabBar()
+                    }else{
+                        TabBarModifier.hideTabBar()
+                    }
                 }
             }
     }

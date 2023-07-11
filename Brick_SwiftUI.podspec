@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Brick_SwiftUI'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'A short description of Brick_SwiftUI.'
   
   # This description is used to generate tags and improve search results.
@@ -143,6 +143,10 @@ Pod::Spec.new do |s|
     
     ss.subspec 'UnderLineText' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/UnderLineText/**/*'
+    end
+        
+    ss.subspec 'ViewLifeCycle' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/ViewLifeCycle/**/*'
     end
     
   end
