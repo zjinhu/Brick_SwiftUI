@@ -6,6 +6,22 @@
 //
 
 import SwiftUI
+
+public enum TabbarVisible: CaseIterable {
+ 
+    case visible
+    case hidden
+ 
+    public mutating func toggle() {
+        switch self {
+        case .visible:
+            self = .hidden
+        case .hidden:
+            self = .visible
+        }
+    }
+}
+
 #if os(iOS)
 import UIKit
 
@@ -91,21 +107,6 @@ extension UITabBar {
         
         UIView.animate(withDuration: duration) {
             self.frame.origin.y = tabBarPositionY
-        }
-    }
-}
-
-public enum TabbarVisible: CaseIterable {
- 
-    case visible
-    case hidden
- 
-    public mutating func toggle() {
-        switch self {
-        case .visible:
-            self = .hidden
-        case .hidden:
-            self = .visible
         }
     }
 }
