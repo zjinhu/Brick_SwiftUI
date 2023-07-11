@@ -46,6 +46,11 @@ Pod::Spec.new do |s|
     ss.subspec 'SFSymbols' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Utilities/SFSymbols/**/*'
     end
+            
+    ss.subspec 'ViewLifeCycle' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Utilities/ViewLifeCycle/**/*'
+    end
+    
     ss.source_files = 'Sources/Brick_SwiftUI/Utilities/*'
   end
   
@@ -143,10 +148,6 @@ Pod::Spec.new do |s|
     
     ss.subspec 'UnderLineText' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/UnderLineText/**/*'
-    end
-        
-    ss.subspec 'ViewLifeCycle' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/ViewLifeCycle/**/*'
     end
     
   end
