@@ -8,6 +8,7 @@
 import SwiftUI
 import Brick_SwiftUI
 struct TTextFieldDemoView: View {
+    @State var birthday: Date = Date()
     @State var username = ""
     @State var password = ""
     var body: some View {
@@ -46,10 +47,53 @@ struct TTextFieldDemoView: View {
                 .tTextFieldPlaceHolderTextColor(.gray)
                 .tTextFieldHeight(50)
                 .tTextFieldCornerRadius(25)
-                .tTextFieldTrailingImageForegroundColor(.black.opacity(0.7))
+                .tTextFieldSecureImageForegroundColor(.red)
                 .tTextFieldLimitCount(10)
 
+            TTextField(text: $username)
+                .tTextFieldBorderType(.line)
+                .tTextFieldTitle("Username")
+                .tTextFieldPlaceHolderText("Enter...")
+                .tTextFieldPlaceHolderTextColor(.gray)
+                .tTextFieldHeight(50)
+                .tTextFieldCornerRadius(25)
+                .tTextFieldTruncationMode(.middle)
+                .tTextFieldLimitCount(10)
+                .tTextFieldLeadingView {
+                    Image(symbol: .calendar)
+                        .padding(.leading, 12)
+                }
+            
+            TTextField(text: $username)
+                .tTextFieldBorderType(.line)
+                .tTextFieldTitle("Username")
+                .tTextFieldPlaceHolderText("Enter...")
+                .tTextFieldPlaceHolderTextColor(.gray)
+                .tTextFieldHeight(50)
+                .tTextFieldCornerRadius(25)
+                .tTextFieldTruncationMode(.middle)
+                .tTextFieldLimitCount(10)
+                .tTextFieldLeadingView {
+                    Image(symbol: .calendar)
+                        .padding(.leading, 12)
+                }
+                .tTextFieldTrailingView {
+                    Image(symbol: ._00Circle)
+                }
+            
+            UnderLineText()
+                .underLineText("Text")
+                .underLineTitle("Title")
+                .underLineColor(.red)
+                .underLineLeadingView{
+                    Image(symbol: .calendar)
+                }
+                .underLineTrailingView {
+
+                    DatePicker("", selection: $birthday, displayedComponents: .date)
+                }
         }
+        .padding()
     }
 }
 

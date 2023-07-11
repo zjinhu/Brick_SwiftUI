@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Brick_SwiftUI'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'A short description of Brick_SwiftUI.'
   
   # This description is used to generate tags and improve search results.
@@ -132,17 +132,17 @@ Pod::Spec.new do |s|
     ss.subspec 'Toast' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/Toast/**/*'
     end
-    
-    ss.subspec 'Toolbar' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Toolbar/**/*'
-    end
-    
+
     ss.subspec 'TTextField' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/TTextField/**/*'
     end
     
     ss.subspec 'UIHosting' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/UIHosting/**/*'
+    end
+    
+    ss.subspec 'UnderLineText' do |sss|
+      sss.source_files = 'Sources/Brick_SwiftUI/Tools/UnderLineText/**/*'
     end
     
   end

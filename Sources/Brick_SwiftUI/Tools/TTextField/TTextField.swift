@@ -21,9 +21,8 @@ public struct TTextField: View {
         }
     }
     @State var isFocused = false
-    
-    private var trailingImageClick: (() -> Void)?
-    @State private var trailingImage : Image?
+
+    @State private var secureImage : Image?
     private var secureOpenImage : Image? = Image(symbol: .eye)
     private var secureCloseImage : Image? = Image(symbol: .eyeSlash)
     
@@ -46,9 +45,17 @@ public struct TTextField: View {
                     .foregroundColor(titleColor)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
+            
             VStack(spacing: 0){
                 //TextField
                 HStack(spacing: 0){
+                    
+                    if let tTextFieldLeadingView {
+                        tTextFieldLeadingView()
+                            .padding(.trailing, 10)
+                            .disabled(disable.wrappedValue)//图片点击
+                    }
+                    
                     secureAnyView()
                         .placeholder(when: text.wrappedValue.isEmpty, placeholder: {
                             Text(placeHolderText)
@@ -71,22 +78,24 @@ public struct TTextField: View {
                         }
                         .truncationMode(truncationMode)
                         .background(Color.clear)
-                    trailingImage?
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundColor(trailingImageForegroundColor)
-                        .frame(width: 25, height: 25)
-                        .padding(.trailing, 12)
-                        .onTapGesture {
-                            if !isSecure{
-                                trailingImageClick?()
-                            }
-                            else{
+                    
+                    if let tTextFieldTrailingView {
+                        tTextFieldTrailingView()
+                            .padding(.trailing, 12)
+                            .disabled(disable.wrappedValue)//图片点击
+                    }else{
+                        secureImage?
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(secureImageColor)
+                            .frame(width: 25, height: 25)
+                            .padding(.trailing, 12)
+                            .onTapGesture {
                                 secureText.toggle()
-                                trailingImage = secureText ? secureCloseImage : secureOpenImage
+                                secureImage = secureText ? secureCloseImage : secureOpenImage
                             }
-                        }
-                        .disabled(disable.wrappedValue)//图片点击
+                            .disabled(disable.wrappedValue)//图片点击
+                    }
                     
                 }.background(
                     RoundedRectangle(cornerRadius: getCornerRadius())
@@ -102,10 +111,10 @@ public struct TTextField: View {
             }
             //Bottom text
             if error.wrappedValue {
-                    Text(errorText.wrappedValue)
-                        .font(errorFont)
-                        .foregroundColor(errorTextColor)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                Text(errorText.wrappedValue)
+                    .font(errorFont)
+                    .foregroundColor(errorTextColor)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
     }
@@ -148,7 +157,10 @@ public struct TTextField: View {
     @Environment(\.tTextFieldBackgroundColor) private var backgroundColor
     @Environment(\.tTextFieldErrorColor) private var errorTextColor
     @Environment(\.tTextFieldBorderColor) private var borderColor
-    @Environment(\.tTextFieldTrailingImageColor) private var trailingImageForegroundColor
+    @Environment(\.tTextFieldSecureImageColor) private var secureImageColor
+    
+    @Environment(\.tTextFieldTrailingView) private var tTextFieldTrailingView
+    @Environment(\.tTextFieldLeadingView) private var tTextFieldLeadingView
     
     @Environment(\.tTextFieldFocusedBorderColor) private var focusedBorderColor
     @Environment(\.tTextFieldFocusedBorderColorEnable) private var focusedBorderColorEnable
@@ -165,27 +177,19 @@ public struct TTextField: View {
     
     @Environment(\.tTextFieldTitle) private var textFieldTitle
     @Environment(\.tTextFieldPlaceHolderText) private var placeHolderText
-
+    
     @Environment(\.tTextFieldTruncationMode) private var truncationMode
     @Environment(\.tTextFieldLimitCount) private var limitCount
-
     
 }
 
 extension TTextField{
-    
-    public func tTextFieldTrailingImage(_ image: Image, click: (()->Void)? = nil) -> Self{
-        var copy = self
-        copy._trailingImage = State(initialValue: image)
-        copy.trailingImageClick = click
-        return copy
-    }
-    
+
     public func tTextFieldSecure(_ secure: Bool) -> Self{
         var copy = self
         copy._secureText = State(initialValue: secure)
         if secure{
-            copy._trailingImage = State(initialValue: copy.secureCloseImage)
+            copy._secureImage = State(initialValue: copy.secureCloseImage)
         }
         copy.isSecure = secure
         return copy
@@ -195,13 +199,13 @@ extension TTextField{
         var copy = self
         copy.secureOpenImage = open
         copy.secureCloseImage = close
-        copy._trailingImage = State(initialValue: copy.secureCloseImage)
+        copy._secureImage = State(initialValue: copy.secureCloseImage)
         return copy
     }
 }
 
 extension View {
-
+    
     public func tTextFieldLimitCount(_ count: Int) -> some View {
         environment(\.tTextFieldLimitCount, count)
     }
@@ -209,7 +213,7 @@ extension View {
     public func tTextFieldTruncationMode(_ mode: Text.TruncationMode) -> some View {
         environment(\.tTextFieldTruncationMode, mode)
     }
-
+    
     public func tTextFieldTitle(_ title: String) -> some View {
         environment(\.tTextFieldTitle, title)
     }
@@ -246,8 +250,16 @@ extension View {
         environment(\.tTextFieldBorderColor, color)
     }
     
-    public func tTextFieldTrailingImageForegroundColor(_ color: Color) -> some View {
-        environment(\.tTextFieldTrailingImageColor, color)
+    public func tTextFieldLeadingView<V: View>(_ content: @escaping () -> V) -> some View {
+        environment(\.tTextFieldLeadingView, { AnyView(content()) })
+    }
+    
+    public func tTextFieldTrailingView<V: View>(_ content: @escaping () -> V) -> some View {
+        environment(\.tTextFieldTrailingView, { AnyView(content()) })
+    }
+    
+    public func tTextFieldSecureImageForegroundColor(_ color: Color) -> some View {
+        environment(\.tTextFieldSecureImageColor, color)
     }
     
     public func tTextFieldFocusedBorderColor(_ color: Color) -> some View {
