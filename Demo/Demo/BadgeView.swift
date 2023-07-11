@@ -70,16 +70,17 @@ struct BadgeView: View {
             }
             .padding(.horizontal)
         }
-        .onAppear{
-            withAnimation{
-                tabVisibility.visibility = .hidden
-            }
-        }
-        .onDisappear{
-            withAnimation{
-                tabVisibility.visibility = .visible
-            }
-        }
+//        .onAppear{
+//            withAnimation{
+//                tabVisibility.visibility = .hidden
+//            }
+//        }
+//        .onDisappear{
+//            withAnimation{
+//                tabVisibility.visibility = .visible
+//            }
+//        }
+        .ss.tabBar(.hidden)
     }
 }
 

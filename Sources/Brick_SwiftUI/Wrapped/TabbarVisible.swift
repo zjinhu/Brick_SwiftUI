@@ -10,7 +10,7 @@ import SwiftUI
 import UIKit
 
 public extension Brick where Wrapped: View {
-    func tabBar(_ visibility: Brick<Any>.Visibility) -> some View {
+    func tabBar(_ visibility: TabbarVisible) -> some View {
         if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
             return wrapped.modifier(VisibleTabBar(visibility))
         }else{
@@ -21,9 +21,9 @@ public extension Brick where Wrapped: View {
 
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
 struct VisibleTabBar: ViewModifier {
-    @State private var show: Brick<Any>.Visibility = .automatic
-    private var showTemp: Brick<Any>.Visibility
-    init(_ show: Brick<Any>.Visibility) {
+    @State private var show: TabbarVisible = .hidden
+    private var showTemp: TabbarVisible
+    init(_ show: TabbarVisible) {
         self.showTemp = show
     }
     
@@ -32,7 +32,7 @@ struct VisibleTabBar: ViewModifier {
             .padding(.zero)
             .toolbar(show == .hidden ? .hidden : .visible, for: .tabBar)
             .onAppear{
-                withAnimation {
+                withAnimation(.easeInOut){
                     show = showTemp
                 }
             }
@@ -40,9 +40,9 @@ struct VisibleTabBar: ViewModifier {
 }
 
 struct ShowTabBar: ViewModifier {
-    @State private var show: Brick<Any>.Visibility
+    @State private var show: TabbarVisible
     
-    init(_ show: Brick<Any>.Visibility) {
+    init(_ show: TabbarVisible) {
         self.show = show
     }
     
@@ -91,6 +91,21 @@ extension UITabBar {
         
         UIView.animate(withDuration: duration) {
             self.frame.origin.y = tabBarPositionY
+        }
+    }
+}
+
+public enum TabbarVisible: CaseIterable {
+ 
+    case visible
+    case hidden
+ 
+    public mutating func toggle() {
+        switch self {
+        case .visible:
+            self = .hidden
+        case .hidden:
+            self = .visible
         }
     }
 }

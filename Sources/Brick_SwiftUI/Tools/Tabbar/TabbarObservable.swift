@@ -22,18 +22,3 @@ public class TabVisibility<TabbarVisible>: ObservableObject {
         self.visible = visibility
     }
 }
-
-public enum TabbarVisible: CaseIterable {
- 
-    case visible
-    case hidden
- 
-    public mutating func toggle() {
-        switch self {
-        case .visible:
-            self = .hidden
-        case .hidden:
-            self = .visible
-        }
-    }
-}

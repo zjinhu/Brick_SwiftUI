@@ -24,6 +24,7 @@ struct ShareLinkView: View {
             }
 
         }
+        .ss.tabBar(.hidden)
 
     }
 }

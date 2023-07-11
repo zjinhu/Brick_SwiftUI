@@ -136,6 +136,7 @@ struct Loading: View {
             }
  
         }
+        .ss.tabBar(.hidden)
         .addLoading(loading)
         .onChange(of: timer.progress) { newValue in
             loading.progress = newValue

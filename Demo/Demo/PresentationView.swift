@@ -47,7 +47,7 @@ struct PresentationView: View {
                     }
                 }
                 .sheet(isPresented: $showSheet) {
-                    DemoView(detents: $detents, selection: $selection, customRadius: $customRadius, cornerRadius: $cornerRadius)
+                    SheetView(detents: $detents, selection: $selection, customRadius: $customRadius, cornerRadius: $cornerRadius)
                         .presentationDetentsIfAvailable(
                             detents: detents,
                             selection: $selection,
@@ -60,10 +60,11 @@ struct PresentationView: View {
         } label: {
             Text("Presentation")
         }
+        .ss.tabBar(.hidden)
     }
 }
 
-private struct DemoView: View {
+private struct SheetView: View {
     @Environment(\.dismiss) private var dismiss
     
     @State private var visible: Brick.Visibility = .hidden

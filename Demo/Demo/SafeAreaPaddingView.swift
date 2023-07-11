@@ -21,6 +21,7 @@ struct SafeAreaPaddingView: View {
             Color.yellow
                 .ss.safeAreaPadding(24)
         }
+        .ss.tabBar(.hidden)
     }
 }
 

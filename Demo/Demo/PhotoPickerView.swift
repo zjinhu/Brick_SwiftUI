@@ -122,6 +122,7 @@ struct PhotoPickerView: View {
                 
             }
         }
+        .ss.tabBar(.hidden)
         .toolbar {
             ToolbarItem(placement: .destructiveAction) {
                 Button {

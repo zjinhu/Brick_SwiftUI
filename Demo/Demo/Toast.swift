@@ -73,6 +73,7 @@ struct Toast: View {
             }
         }
         .addToast(toast)
+        .ss.tabBar(.hidden)
     }
 }
 

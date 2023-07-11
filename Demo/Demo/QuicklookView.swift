@@ -32,6 +32,7 @@ struct QuicklookView: View {
             }
             .quickLookPreview($selection, in: urls)
         }
+        .tabBar(.hidden)
     }
 }
  

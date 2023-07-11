@@ -32,6 +32,7 @@ struct ScrollStackView: View {
             .height(30)
             .background(Color.orange)
         }
+        .ss.tabBar(.hidden)
 
     }
 }

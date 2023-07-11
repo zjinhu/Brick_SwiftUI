@@ -11,24 +11,28 @@ struct NavigationStackTView: View {
     @EnvironmentObject var navigator: PathNavigator
     
     var body: some View {
-        List{
-            
-            Brick.NavigationLink(value: NumberList(range: 0 ..< 10), label: { Text("Pick a number") })
-            // Push via navigator
-            Button("99 Red balloons", action: show99RedBalloons)
-            // Push child class via navigator
-            Button("Show Class Destination", action: showClassDestination)
-        }
-        .ss.useNavigationStack()
-        .ss.navigationDestination(for: NumberList.self, destination: { numberList in
-          NumberListView(numberList: numberList)
-        })
-        .ss.navigationDestination(for: Int.self, destination: { number in
-            NumberView(number: number)
-        })
-        .ss.navigationDestination(for: ClassDestination.self, destination: { destination in
-            ClassDestinationView(destination: destination)
-        })
+ 
+            List{
+                
+                Brick.NavigationLink(value: NumberList(range: 0 ..< 10), label: { Text("Pick a number") })
+                // Push via navigator
+                Button("99 Red balloons", action: show99RedBalloons)
+                // Push child class via navigator
+                Button("Show Class Destination", action: showClassDestination)
+            }
+            .ss.tabBar(.hidden)
+            .ss.useNavigationStack()
+            .ss.navigationDestination(for: NumberList.self, destination: { numberList in
+              NumberListView(numberList: numberList)
+            })
+            .ss.navigationDestination(for: Int.self, destination: { number in
+                NumberView(number: number)
+            })
+            .ss.navigationDestination(for: ClassDestination.self, destination: { destination in
+                ClassDestinationView(destination: destination)
+            })
+ 
+
     }
     
     

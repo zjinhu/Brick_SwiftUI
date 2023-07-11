@@ -94,6 +94,7 @@ struct TTextFieldDemoView: View {
                 }
         }
         .padding()
+        .ss.tabBar(.hidden)
     }
 }
 

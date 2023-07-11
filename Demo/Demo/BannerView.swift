@@ -44,6 +44,7 @@ struct BannerView: View {
             .frame(height: 300)
             Spacer()
         }
+        .ss.tabBar(.hidden)
     }
 }
 

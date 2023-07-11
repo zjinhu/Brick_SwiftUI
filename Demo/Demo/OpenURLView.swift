@@ -39,8 +39,8 @@ struct OpenURLView: View {
                     return .systemAction
                 })
 
-
         }
+        .ss.tabBar(.hidden)
     }
 }
 

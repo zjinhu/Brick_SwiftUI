@@ -35,6 +35,7 @@ struct FocusStateView: View {
         .onAppear {
             focusedField = .username
         }
+        .ss.tabBar(.hidden)
     }
 
     private func signIn() {

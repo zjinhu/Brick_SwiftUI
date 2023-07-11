@@ -47,6 +47,7 @@ struct SwiftUIView: View {
             
 
         }
+        .ss.tabBar(.hidden)
  
     }
 }
