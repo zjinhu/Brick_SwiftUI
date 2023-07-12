@@ -37,7 +37,7 @@ public extension Brick where Wrapped: View {
 
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
 struct VisibleTabBar: ViewModifier {
-    @State private var show: TabbarVisible = .hidden
+    @State private var show: TabbarVisible?
     private var showTemp: TabbarVisible
     init(_ show: TabbarVisible) {
         self.showTemp = show

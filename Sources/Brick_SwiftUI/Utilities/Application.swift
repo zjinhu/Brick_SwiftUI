@@ -36,3 +36,42 @@ extension Brick{
         }
     }
 }
+
+extension Brick{
+    public struct AppState {
+
+        public static var isDebug: Bool {
+#if DEBUG
+            return true
+#else
+            return false
+#endif
+        }
+        
+        public static var state: AppStateMode {
+            if isDebug {
+                return .debug
+            } else if isTestFlight {
+                return .testFlight
+            } else {
+                return .appStore
+            }
+        }
+        
+        
+        public enum AppStateMode {
+            case debug
+            case testFlight
+            case appStore
+        }
+        
+        fileprivate static var isTestFlight: Bool {
+            if let receipt = Bundle.main.appStoreReceiptURL?.lastPathComponent, receipt == "sandboxReceipt" {
+                return true
+            }else{
+                return false
+            }
+        }
+        
+    }
+}
