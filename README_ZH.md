@@ -6,11 +6,7 @@
 ![Swift 5.0+](https://img.shields.io/badge/Swift-5.0%2B-orange.svg)
 ![SwiftUI 3.0+](https://img.shields.io/badge/SwiftUI-3.0%2B-orange.svg)
 
-
-
 ### SwiftUI APP加速开发工具包
-
- [Demo](https://github.com/jackiehu/Brick_swiftUI_Demo)
 
 内置了各种辅助开发的工具，以及iOS15以后新添加的API向iOS14进行了兼容,具体功能请运行Demo查看用法
 
