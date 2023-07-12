@@ -114,6 +114,7 @@ public struct Tabbar<Selection: Tabable, Content: View>: View {
         }
     }
  
+    @ViewBuilder
     private func filledShapBar(with geo: GeometryProxy) -> some View {
         AnyView(anyShapeBar.fill(anyColorBar))
     }

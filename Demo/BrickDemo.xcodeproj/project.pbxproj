@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		608162732A5D88590083DE04 /* CustomTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608162722A5D88590083DE04 /* CustomTabbarView.swift */; };
 		608162752A5D8E360083DE04 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608162742A5D8E360083DE04 /* DemoView.swift */; };
 		608162772A5D91660083DE04 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608162762A5D91660083DE04 /* TabbarView.swift */; };
 		81156A122A4842430089C52D /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81156A112A4842430089C52D /* DemoApp.swift */; };
@@ -47,7 +46,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		608162722A5D88590083DE04 /* CustomTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarView.swift; sourceTree = "<group>"; };
 		608162742A5D8E360083DE04 /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 		608162762A5D91660083DE04 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		81156A0E2A4842430089C52D /* BrickBrickDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrickBrickDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,7 +150,6 @@
 				813925E02A4BFEEA00E8BDE6 /* ScrollsView.swift */,
 				813925E12A4BFEEA00E8BDE6 /* ShareLinkView.swift */,
 				813925E22A4BFEEB00E8BDE6 /* SwiftUIView.swift */,
-				608162722A5D88590083DE04 /* CustomTabbarView.swift */,
 				813925E82A4BFEEB00E8BDE6 /* Toast.swift */,
 				813925D82A4BFEEA00E8BDE6 /* TTextFieldDemoView.swift */,
 				81156A152A4842450089C52D /* Assets.xcassets */,
@@ -285,7 +282,6 @@
 				813925FC2A4BFEEC00E8BDE6 /* Toast.swift in Sources */,
 				81156A142A4842430089C52D /* ContentView.swift in Sources */,
 				813925FB2A4BFEEC00E8BDE6 /* OpenURLView.swift in Sources */,
-				608162732A5D88590083DE04 /* CustomTabbarView.swift in Sources */,
 				813925FA2A4BFEEC00E8BDE6 /* Refresh.swift in Sources */,
 				813925F02A4BFEEC00E8BDE6 /* BadgeView.swift in Sources */,
 				813925F72A4BFEEC00E8BDE6 /* PresentationView.swift in Sources */,

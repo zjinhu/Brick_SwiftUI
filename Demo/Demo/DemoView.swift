@@ -65,8 +65,8 @@ struct DemoView: View {
                     FocusStateView()
                 case .darkModelView:
                     DarkModelView()
-                case .customTabbar:
-                    CustomTabbarView()
+//                case .customTabbar:
+//                    CustomTabbarView()
                 }
             }
             .sheet(isPresented: $showSheet) {
@@ -144,7 +144,7 @@ struct DemoStackView: View {
                 
                 Brick.NavigationLink("ScrollStackView", value: DemoStack.scrollStackView)
                 
-                Brick.NavigationLink("CustomTabbar", value: DemoStack.customTabbar)
+//                Brick.NavigationLink("CustomTabbar", value: DemoStack.customTabbar)
 #if os(iOS)
                 
                 Brick.NavigationLink("Photo", value: DemoStack.photoPickerView)
@@ -189,5 +189,5 @@ enum DemoStack: NavigatorScreen, CaseIterable {
     case photoPickerView
     case focusStateView
     case darkModelView
-    case customTabbar
+//    case customTabbar
 }

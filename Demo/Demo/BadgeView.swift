@@ -9,7 +9,7 @@ import SwiftUI
 import Brick_SwiftUI
 struct BadgeView: View {
     @State private var alert = false
-    @EnvironmentObject var tabVisibility: TabbarVisibility
+//    @EnvironmentObject var tabVisibility: TabbarVisibility
        
     struct Badge: View {
         var body: some View {
@@ -23,13 +23,13 @@ struct BadgeView: View {
     var body: some View {
         VStack(spacing: 44) {
  
-            Button {
-                withAnimation(.easeInOut(duration: 0.25)) {
-                    tabVisibility.visibility.toggle()
-                }
-            } label: {
-                Text("Hide/Show TabBar")
-            }
+//            Button {
+//                withAnimation(.easeInOut(duration: 0.25)) {
+//                    tabVisibility.visibility.toggle()
+//                }
+//            } label: {
+//                Text("Hide/Show TabBar")
+//            }
             
             Rectangle()
                 .ss.badge(alignment: .topLeading) {

@@ -130,9 +130,9 @@ Pod::Spec.new do |s|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/ScrollStack/**/*'
     end
   
-    ss.subspec 'Tabbar' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Tabbar/**/*'
-    end
+    #ss.subspec 'Tabbar' do |sss|
+      #sss.source_files = 'Sources/Brick_SwiftUI/Tools/Tabbar/**/*'
+    #end
     
     ss.subspec 'Toast' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/Toast/**/*'
