@@ -1,6 +1,6 @@
 import SwiftUI
 
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
 import UIKit
 public extension AnyFeedback {
     /// Specifies haptic feedback provided by the system

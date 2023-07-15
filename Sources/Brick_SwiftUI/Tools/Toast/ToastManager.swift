@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+#if !os(xrOS)
 public extension View {
     ///添加Toast
     func addToast(_ ob: ToastManager) -> some View {
@@ -150,3 +150,4 @@ extension View {
     }
  
 }
+#endif

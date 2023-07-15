@@ -13,7 +13,7 @@ struct OpenURLView: View {
  
     var body: some View {
         List{
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
             NavigationLink("Webview", destination: WebView(url: URL(string: "https://www.qq.com")!))
             
             
@@ -40,7 +40,9 @@ struct OpenURLView: View {
                 })
 
         }
+#if !os(xrOS)
         .ss.tabBar(.hidden)
+#endif
     }
 }
 

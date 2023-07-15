@@ -15,7 +15,7 @@ extension ForEach {
 }
 
 extension ForEach where Content: View {
-
+ 
     public init<Elements: RandomAccessCollection>(
         enumerating data: Elements,
         id: KeyPath<Elements.Element, ID>,

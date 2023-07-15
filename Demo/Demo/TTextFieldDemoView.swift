@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Brick_SwiftUI
+
 struct TTextFieldDemoView: View {
     @State var birthday: Date = Date()
     @State var username = ""
@@ -94,7 +95,9 @@ struct TTextFieldDemoView: View {
                 }
         }
         .padding()
+#if !os(xrOS)
         .ss.tabBar(.hidden)
+#endif
     }
 }
 

@@ -28,6 +28,7 @@ struct PhotoPickerView: View {
     
     var body: some View {
         List{
+#if !os(xrOS)
             Button {
                 isPresented.toggle()
             } label: {
@@ -36,7 +37,7 @@ struct PhotoPickerView: View {
             .fullScreenCover(isPresented: $isPresented) {
                 CameraView(photoData: $photoData)
             }
-            
+#endif
             Button {
                 showPicker.toggle()
             } label: {
@@ -122,7 +123,9 @@ struct PhotoPickerView: View {
                 
             }
         }
+#if !os(xrOS)
         .ss.tabBar(.hidden)
+#endif
         .toolbar {
             ToolbarItem(placement: .destructiveAction) {
                 Button {

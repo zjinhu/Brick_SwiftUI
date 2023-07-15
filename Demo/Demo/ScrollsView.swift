@@ -47,7 +47,9 @@ struct ScrollsView: View {
         .ss.scrollDismissesKeyboard(dismissMode)
         .ss.scrollIndicators(indicatorVisibility)
         .ss.scrollDisabled(!scrollEnabled)
+#if !os(xrOS)
         .ss.tabBar(.hidden)
+#endif
     }
 }
 

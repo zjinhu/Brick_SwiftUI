@@ -3,7 +3,7 @@
  */
 
 import SwiftUI
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
 public struct CameraView: View {
     @Binding var photoData: Data?
     

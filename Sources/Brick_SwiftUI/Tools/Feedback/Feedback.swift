@@ -10,7 +10,7 @@ public protocol Feedback {
     func perform() async
 }
 
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
 /// Returns the result of recomputing the view's body with the provided animation.
 /// - Parameters:
 ///   - feedback: The feedback to perform when the body is called

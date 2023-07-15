@@ -7,7 +7,7 @@ import AVFoundation
 #endif
 import SwiftUI
 import Photos
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
 final class DataModel: ObservableObject {
     @Published  var photoData: Data?
  

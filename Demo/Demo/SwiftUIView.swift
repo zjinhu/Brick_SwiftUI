@@ -47,7 +47,9 @@ struct SwiftUIView: View {
             
 
         }
+#if !os(xrOS)
         .ss.tabBar(.hidden)
+#endif
  
     }
 }

@@ -1,4 +1,4 @@
-#if os(macOS) || os(iOS)
+#if (os(macOS) || os(iOS)) && !os(xrOS)
 import SwiftUI
 
 public extension Brick<Any> {

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Brick_SwiftUI
+
 struct Loading: View {
     @EnvironmentObject private var loading: LoadingManager
  
@@ -136,7 +137,9 @@ struct Loading: View {
             }
  
         }
+#if !os(xrOS)
         .ss.tabBar(.hidden)
+#endif
         .addLoading(loading)
         .onChange(of: timer.progress) { newValue in
             loading.progress = newValue

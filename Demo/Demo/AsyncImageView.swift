@@ -59,7 +59,9 @@ struct AsyncImageView: View {
             }.frame(width: 250, height: 250, alignment: .center)
             
         }
+#if !os(xrOS)
         .ss.tabBar(.hidden)
+#endif
  
     }
 }

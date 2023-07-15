@@ -22,7 +22,7 @@ public enum TabbarVisible: CaseIterable {
     }
 }
 
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
 import UIKit
 
 public extension Brick where Wrapped: View {

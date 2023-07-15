@@ -13,7 +13,9 @@ struct DemoView: View {
     var body: some View {
         Brick.NavigationStack {
             DemoStackView()
-            .ss.tabBar(.visible)
+#if !os(xrOS)
+        .ss.tabBar(.hidden)
+#endif
             .navigationTitle("Brick_SwiftUI")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -30,8 +32,7 @@ struct DemoView: View {
                     NavigationStackTView()
                 case .openURLView:
                     OpenURLView()
-                case .shareLinkView:
-                    ShareLinkView()
+
                 case .asyncImageView:
                     AsyncImageView()
                 case .scrollsView:
@@ -41,9 +42,7 @@ struct DemoView: View {
                 case .loading:
                     Loading()
                         .environmentObject(LoadingManager())
-                case .toast:
-                    Toast()
-                        .environmentObject(ToastManager())
+
                 case .refresh:
                     Refresh()
                 
@@ -59,14 +58,23 @@ struct DemoView: View {
                     AnimationCompleted()
                 case .scrollStackView:
                     ScrollStackView()
-                case .photoPickerView:
-                    PhotoPickerView()
-                case .focusStateView:
-                    FocusStateView()
                 case .darkModelView:
                     DarkModelView()
+#if !os(xrOS)
+                case .photoPickerView:
+                    PhotoPickerView()
+                case .shareLinkView:
+                    ShareLinkView()
+                case .focusStateView:
+                    FocusStateView()
+
+                case .toast:
+                    Toast()
+                        .environmentObject(ToastManager())
 //                case .customTabbar:
 //                    CustomTabbarView()
+#endif
+ 
                 }
             }
             .sheet(isPresented: $showSheet) {
@@ -109,10 +117,8 @@ struct DemoStackView: View {
                     Text("NavigationStack")
                 }
  
-                
                 Brick.NavigationLink("OpenURL", value:  DemoStack.openURLView)
                 
-                Brick.NavigationLink("ShareLink", value: DemoStack.shareLinkView)
 
                 Brick.NavigationLink("AsyncImage", value: DemoStack.asyncImageView)
                 
@@ -121,8 +127,7 @@ struct DemoStackView: View {
                 Brick.NavigationLink("BannerView", value: DemoStack.bannerView)
                 
                 Brick.NavigationLink("Loading", value: DemoStack.loading)
-                
-                Brick.NavigationLink("Toast", value: DemoStack.toast)
+
                 
                 Brick.NavigationLink("Refresh", value: DemoStack.refresh)
             }
@@ -144,15 +149,16 @@ struct DemoStackView: View {
                 
                 Brick.NavigationLink("ScrollStackView", value: DemoStack.scrollStackView)
                 
+                Brick.NavigationLink("DrrkModelView", value: DemoStack.darkModelView)
 //                Brick.NavigationLink("CustomTabbar", value: DemoStack.customTabbar)
-#if os(iOS)
-                
+#if os(iOS) && !os(xrOS)
+                Brick.NavigationLink("ShareLink", value: DemoStack.shareLinkView)
+
                 Brick.NavigationLink("Photo", value: DemoStack.photoPickerView)
                 
+                Brick.NavigationLink("Toast", value: DemoStack.toast)
                 
                 Brick.NavigationLink("FocusState", value: DemoStack.focusStateView)
-
-                Brick.NavigationLink("DrrkModelView", value: DemoStack.darkModelView)
 #endif
             }
             
@@ -172,12 +178,12 @@ struct DemoStackView_Previews: PreviewProvider {
 enum DemoStack: NavigatorScreen, CaseIterable {
     case navigationStack
     case openURLView
-    case shareLinkView
+
     case asyncImageView
     case scrollsView
     case bannerView
     case loading
-    case toast
+
     case refresh
     
     case tTextFieldDemoView
@@ -186,8 +192,12 @@ enum DemoStack: NavigatorScreen, CaseIterable {
     case presentationView
     case animationCompleted
     case scrollStackView
+    case darkModelView
+#if !os(xrOS)
+    case shareLinkView
     case photoPickerView
     case focusStateView
-    case darkModelView
+    case toast
+#endif
 //    case customTabbar
 }

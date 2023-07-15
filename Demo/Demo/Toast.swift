@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Brick_SwiftUI
+#if !os(xrOS)
 struct Toast: View {
     @EnvironmentObject private var toast: ToastManager
     
@@ -117,3 +118,4 @@ struct CustomView_Previews: PreviewProvider {
         CustomView()
     }
 }
+#endif

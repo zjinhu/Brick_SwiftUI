@@ -28,7 +28,7 @@ public extension Brick where Wrapped: View {
     @ViewBuilder
     @available(iOS, introduced: 15, deprecated: 16, message: "Presentation detents are only supported in iOS 15+")
     func presentationDetents(_ detents: Set<Brick<Any>.PresentationDetent>) -> some View {
-        #if os(iOS)
+        #if os(iOS) && !os(xrOS)
         wrapped.background(Brick<Any>.Representable(detents: detents, selection: nil))
         #else
         wrapped
@@ -69,7 +69,7 @@ public extension Brick where Wrapped: View {
     @ViewBuilder
     @available(iOS, introduced: 15, deprecated: 16, message: "Presentation detents are only supported in iOS 15+")
     func presentationDetents(_ detents: Set<Brick<Any>.PresentationDetent>, selection: Binding<Brick<Any>.PresentationDetent>) -> some View {
-        #if os(iOS)
+        #if os(iOS) && !os(xrOS)
         wrapped.background(Brick<Any>.Representable(detents: detents, selection: selection))
         #else
         wrapped
@@ -129,7 +129,7 @@ public extension Brick<Any> {
     }
 }
 
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
 @available(iOS 15, *)
 private extension Brick<Any> {
     struct Representable: UIViewControllerRepresentable {

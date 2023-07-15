@@ -43,7 +43,7 @@ extension Brick where Wrapped: View {
     public func scrollDismissesKeyboard(_ mode: Brick<Any>.ScrollDismissesKeyboardMode) -> some View {
         wrapped
             .environment(\.scrollDismissesKeyboardMode, mode)
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
             .sibling(forType: UIScrollView.self) { proxy in
                 let scrollView = proxy.instance
                 guard scrollView.keyboardDismissMode != mode.scrollViewDismissMode else { return }

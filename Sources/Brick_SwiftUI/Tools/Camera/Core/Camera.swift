@@ -7,7 +7,7 @@ import AVFoundation
 #endif
 import CoreImage
 
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
 import UIKit
 
 class Camera: NSObject {

@@ -7,10 +7,11 @@
 
 import SwiftUI
 import Brick_SwiftUI
+#if !os(xrOS)
 struct ShareLinkView: View {
     var body: some View {
         List{
- 
+
             Brick.ShareLink(item: "Can I share this?") {
                 Text("ShareLink")
             }
@@ -34,3 +35,4 @@ struct ShareLinkView_Previews: PreviewProvider {
         ShareLinkView()
     }
 }
+#endif

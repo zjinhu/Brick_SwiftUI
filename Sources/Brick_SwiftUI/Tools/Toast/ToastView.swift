@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+#if !os(xrOS)
 struct ToastView<Content: View>: View {
     @StateObject private var keyboardObserver = KeyboardManager()
     
@@ -47,3 +47,4 @@ extension ToastView {
         isActive = false
     }
 }
+#endif

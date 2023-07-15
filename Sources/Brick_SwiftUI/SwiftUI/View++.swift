@@ -4,6 +4,18 @@
 
 import SwiftUI
 
+// MARK: - View.then
+extension View {
+    @inlinable
+    public func then(_ body: (inout Self) -> Void) -> Self {
+        var result = self
+        
+        body(&result)
+        
+        return result
+    }
+}
+
 // MARK: - View.overlay
 extension View {
     @_disfavoredOverload
@@ -62,10 +74,22 @@ extension View {
         self.transition(makeTransition())
     }
     
+    public func asymmetricTransition(
+        insertion: AnyTransition
+    ) -> some View {
+        transition(.asymmetric(insertion: insertion, removal: .identity))
+    }
+
+    public func asymmetricTransition(
+        removal: AnyTransition
+    ) -> some View {
+        transition(.asymmetric(insertion: .identity, removal: removal))
+    }
+    
     /// Associates an insertion transition and a removal transition with the view.
     public func asymmetricTransition(
-        insertion: AnyTransition = .identity,
-        removal: AnyTransition = .identity
+        insertion: AnyTransition,
+        removal: AnyTransition
     ) -> some View {
         transition(.asymmetric(insertion: insertion, removal: removal))
     }

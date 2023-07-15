@@ -1,6 +1,6 @@
 import SwiftUI
  
-#if os(macOS) || os(iOS)
+#if (os(macOS) || os(iOS)) && !os(xrOS)
 
 extension View {
     @ViewBuilder
@@ -87,7 +87,7 @@ private struct ShareSheet<Data>: NSViewRepresentable where Data: RandomAccessCol
     }
 }
 
-#elseif os(iOS)
+#elseif os(iOS) && !os(xrOS)
 
 private struct ShareSheet<Data>: UIViewControllerRepresentable where Data: RandomAccessCollection, Data.Element: Shareable {
     @Binding var item: ActivityItem<Data>?

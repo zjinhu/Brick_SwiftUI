@@ -36,7 +36,9 @@ struct AnimationCompleted: View {
                 introTextOpacity = 1.0
             }
         })
+#if !os(xrOS)
         .ss.tabBar(.hidden)
+#endif
     }
 }
 

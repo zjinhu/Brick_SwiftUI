@@ -3,7 +3,7 @@ import SwiftUI
 import CoreHaptics
 #endif
 
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
 
 /// Returns the result of recomputing the view's body with the provided animation.
 /// - Parameters:
@@ -67,7 +67,7 @@ public func withHaptic<Result>(_ url: URL, _ body: () throws -> Result) rethrows
 
 #endif
 
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
 
 public extension View {
 

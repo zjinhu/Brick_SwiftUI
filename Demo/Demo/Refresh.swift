@@ -78,7 +78,9 @@ struct Refresh: View {
             }
         })
         .onAppear { self.reload() }
+#if !os(xrOS)
         .ss.tabBar(.hidden)
+#endif
     }
     
     func reload() {

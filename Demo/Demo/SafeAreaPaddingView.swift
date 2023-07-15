@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Brick_SwiftUI
+
 struct SafeAreaPaddingView: View {
     var body: some View {
         ZStack {
@@ -21,7 +22,9 @@ struct SafeAreaPaddingView: View {
             Color.yellow
                 .ss.safeAreaPadding(24)
         }
+#if !os(xrOS)
         .ss.tabBar(.hidden)
+#endif
     }
 }
 
@@ -31,3 +34,4 @@ struct SafeAreaPadding_Previews: PreviewProvider {
     }
 }
  
+

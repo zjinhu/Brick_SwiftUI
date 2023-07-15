@@ -79,7 +79,7 @@ public extension Brick where Wrapped: View {
     ///     view behind a presentation.
     @ViewBuilder
     func presentationBackgroundInteraction(_ interaction: Brick<Any>.PresentationBackgroundInteraction) -> some View {
-        #if os(iOS)
+        #if os(iOS) && !os(xrOS)
         if #available(iOS 15, *) {
             wrapped.background(Brick<Any>.Representable(interaction: interaction))
         } else {
@@ -91,7 +91,7 @@ public extension Brick where Wrapped: View {
     }
 }
 
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
 @available(iOS 15, *)
 private extension Brick where Wrapped == Any {
     struct Representable: UIViewControllerRepresentable {

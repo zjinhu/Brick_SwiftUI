@@ -39,7 +39,7 @@ extension Brick where Wrapped: View {
         wrapped
             .environment(\.horizontalScrollIndicatorVisibility, axes.contains(.horizontal) ? visibility : .automatic)
             .environment(\.verticalScrollIndicatorVisibility, axes.contains(.vertical) ? visibility : .automatic)
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
             .sibling(forType: UIScrollView.self) { proxy in
                 let scrollView = proxy.instance
                 if axes.contains(.horizontal) {

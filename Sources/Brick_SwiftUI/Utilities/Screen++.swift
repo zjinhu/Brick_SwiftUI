@@ -6,7 +6,7 @@
 //
 import Foundation
 import SwiftUI
-#if os(iOS) || os(tvOS)
+#if (os(iOS) || os(tvOS)) && !os(xrOS)
 import UIKit
 extension UIWindow {
     /// get window
@@ -16,6 +16,15 @@ extension UIWindow {
             .compactMap { $0 as? UIWindowScene }
             .compactMap { $0.windows.first { $0.isKeyWindow } }
             .first
+    }
+}
+public class Device{
+    public static var isIpad: Bool{
+        return UIDevice.current.userInterfaceIdiom == .pad
+    }
+    
+    public static var idiom: UIUserInterfaceIdiom{
+        return UIDevice.current.userInterfaceIdiom
     }
 }
 
@@ -87,7 +96,7 @@ public class Screen {
     public static var safeArea: NSEdgeInsets = NSScreen.safeArea
     public static var main: NSScreen { NSScreen.main! }
     
-    public static var scale: CGFloat { NSScreen.main!.backingScaleFactor}
+    public static var scale: CGFloat { NSScreen.main?.backingScaleFactor ?? 1.0}
 }
 fileprivate extension NSScreen {
     static var safeArea: NSEdgeInsets =
@@ -117,9 +126,16 @@ extension CGContext {
         NSGraphicsContext.current?.cgContext
     }
 }
+#elseif os(watchOS)
+
+public class Screen {
+    public static var main: WKInterfaceDevice { WKInterfaceDevice.current() }
+    public static var scale: CGFloat { WKInterfaceDevice.current().screenScale }
+}
+
 #endif
 
-#if os(iOS) || os(macOS)
+#if (os(iOS) || os(macOS)) && !os(xrOS)
 internal extension PlatformViewController {
     func ancestor<ControllerType: PlatformViewController>(ofType type: ControllerType.Type) -> ControllerType? {
         var controller = parent
@@ -357,7 +373,7 @@ private class SourceView: PlatformView {
 }
 #endif
 
-#if os(iOS)
+#if os(iOS) && !os(xrOS)
 private extension InspectionView {
     struct Representable: UIViewRepresentable {
         let parent: InspectionView
