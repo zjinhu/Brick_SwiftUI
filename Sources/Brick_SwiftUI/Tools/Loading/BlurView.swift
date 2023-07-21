@@ -6,32 +6,37 @@
 //
 
 import SwiftUI
-
+import Foundation
 #if os(macOS)
 import AppKit
-struct BlurView: NSViewRepresentable {
-    func makeNSView(context: Context) -> NSVisualEffectView {
-        let view = NSVisualEffectView()
-        view.state = .active
-        return view
+public struct BlurView: NSViewRepresentable {
+    public typealias NSViewType = NSVisualEffectView
+    
+    public func makeNSView(context: Context) -> NSVisualEffectView {
+        let effectView = NSVisualEffectView()
+        effectView.material = .hudWindow
+        effectView.blendingMode = .withinWindow
+        effectView.state = NSVisualEffectView.State.active
+        return effectView
     }
     
-    func updateNSView(_ nsView: NSVisualEffectView, context: Context) {
-        
+    public func updateNSView(_ nsView: NSVisualEffectView, context: Context) {
+        nsView.material = .hudWindow
+        nsView.blendingMode = .withinWindow
     }
 }
 #elseif os(iOS)
 import UIKit
-struct BlurView: UIViewRepresentable {
-   typealias UIViewType = UIVisualEffectView
-   
-   func makeUIView(context: Context) -> UIVisualEffectView {
-       return UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
-   }
-   
-   func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
-       uiView.effect = UIBlurEffect(style: .systemMaterial)
-   }
+public struct BlurView: UIViewRepresentable {
+    public typealias UIViewType = UIVisualEffectView
+    
+    public func makeUIView(context: Context) -> UIVisualEffectView {
+        return UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
+    }
+    
+    public func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
+        uiView.effect = UIBlurEffect(style: .systemMaterial)
+    }
 }
 
 #endif
