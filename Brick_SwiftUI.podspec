@@ -65,10 +65,6 @@ Pod::Spec.new do |s|
     ss.dependency 'Brick_SwiftUI/Utilities'
     
     ss.source_files = 'Sources/Brick_SwiftUI/Tools/*'
-        
-    ss.subspec 'AsyncImage' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/AsyncImage/**/*'
-    end
       
     ss.subspec 'Camera' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/Camera/**/*'

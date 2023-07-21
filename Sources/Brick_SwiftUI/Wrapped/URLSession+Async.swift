@@ -1,9 +1,5 @@
 import Foundation
 
-@available(macOS, deprecated: 12.0)
-@available(iOS, introduced: 13, deprecated: 15.0)
-@available(tvOS, introduced: 13, deprecated: 15.0)
-@available(watchOS, introduced: 6, deprecated: 8.0)
 public extension Brick where Wrapped: URLSession {
 
     /// Start a data task with a URL using async/await.
