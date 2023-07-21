@@ -19,10 +19,11 @@ extension View {
 }
 
 struct Chevron: View {
+    @Environment(\.layoutDirection) var direction
     let color: Color
     let font: Font
     var body: some View {
-        Image(symbol: .chevronRight)
+        Image(symbol: direction == .rightToLeft ? .chevronLeft : .chevronRight)
             .foregroundColor(color)
             .font(font)
     }

@@ -20,4 +20,10 @@ extension Text {
         )
         .mask(self)
     }
+    
+    public func autoFontSize(minimumScaleFactor: CGFloat = 0.01) -> some View {
+        lineLimit(1)
+        .minimumScaleFactor(minimumScaleFactor)
+    }
+    
 }
