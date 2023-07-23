@@ -3,7 +3,6 @@
 
 import PackageDescription
 
-
 let package = Package(name: "Brick_SwiftUI")
 
 package.platforms = [
@@ -20,8 +19,8 @@ package.products = [
 ]
 
 package.targets = [
-    .target(name: "Brick_SwiftUI"),
-    .target(name: "Camera", dependencies: ["Brick_SwiftUI"]),
+    .target(name: "Brick_SwiftUI", path: "Sources"),
+    .target(name: "Camera", dependencies: ["Brick_SwiftUI"], path: "Camera"),
 ]
 
 package.swiftLanguageVersions = [.v5]
