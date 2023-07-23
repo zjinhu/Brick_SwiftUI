@@ -18,7 +18,8 @@ package.products = [
 ]
 
 package.targets = [
-    .target(name: "Brick_SwiftUI", path: "Sources"),
+    .target(name: "Brick_SwiftUI"),
+    .target(name: "Camera", dependencies: ["Brick_SwiftUI"]),
 ]
 
 package.swiftLanguageVersions = [.v5]

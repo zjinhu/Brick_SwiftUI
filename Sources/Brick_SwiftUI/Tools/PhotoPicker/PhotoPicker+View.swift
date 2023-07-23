@@ -2,7 +2,7 @@
 import SwiftUI
 import PhotosUI
 import Photos
-public extension Brick where Wrapped: View {
+public extension View {
 
     /// The user explicitly grants access only to items they choose, so photo library access authorization is not needed.
     ///
@@ -57,7 +57,7 @@ public extension Brick where Wrapped: View {
         preferredAssetRepresentationMode: PHPickerConfiguration.AssetRepresentationMode = .automatic,
         photoLibrary: PHPhotoLibrary = .shared()
     ) -> some View {
-        wrapped._photoPicker(
+        _photoPicker(
             isPresented: isPresented,
             selection: selection,
             filter: filter,

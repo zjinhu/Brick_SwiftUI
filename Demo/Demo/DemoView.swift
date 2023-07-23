@@ -14,88 +14,88 @@ struct DemoView: View {
         Brick.NavigationStack {
             DemoStackView()
 #if !os(xrOS)
-        .ss.tabBar(.hidden)
+                .ss.tabBar(.hidden)
 #endif
-            .navigationTitle("Brick_SwiftUI")
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button {
-                        showSheet.toggle()
-                    } label: {
-                        Text("Sheet")
+                .navigationTitle("Brick_SwiftUI")
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button {
+                            showSheet.toggle()
+                        } label: {
+                            Text("Sheet")
+                        }
                     }
                 }
-            }
-            .ss.navigationDestination(for: DemoStack.self) { caseItem in
-                switch caseItem{
-                case .navigationStack:
-                    NavigationStackTView()
-                case .openURLView:
-                    OpenURLView()
-
-                case .asyncImageView:
-                    AsyncImageView()
-                case .scrollsView:
-                    ScrollsView()
-                case .bannerView:
-                    BannerView()
-                case .loading:
-                    Loading()
-                        .environmentObject(LoadingManager())
-
-                case .refresh:
-                    Refresh()
-                
-                case .tTextFieldDemoView:
-                    TTextFieldDemoView()
-                case .badgeView:
-                    BadgeView()
-                case .safeAreaPaddingView:
-                    SafeAreaPaddingView()
-                case .presentationView:
-                    PresentationView()
-                case .animationCompleted:
-                    AnimationCompleted()
-                case .scrollStackView:
-                    ScrollStackView()
-                case .darkModelView:
-                    DarkModelView()
+                .ss.navigationDestination(for: DemoStack.self) { caseItem in
+                    switch caseItem{
+                    case .navigationStack:
+                        NavigationStackTView()
+                    case .openURLView:
+                        OpenURLView()
+                        
+                    case .asyncImageView:
+                        AsyncImageView()
+                    case .scrollsView:
+                        ScrollsView()
+                    case .bannerView:
+                        BannerView()
+                    case .loading:
+                        Loading()
+                            .environmentObject(LoadingManager())
+                        
+                    case .refresh:
+                        Refresh()
+                        
+                    case .tTextFieldDemoView:
+                        TTextFieldDemoView()
+                    case .badgeView:
+                        BadgeView()
+                    case .safeAreaPaddingView:
+                        SafeAreaPaddingView()
+                    case .presentationView:
+                        PresentationView()
+                    case .animationCompleted:
+                        AnimationCompleted()
+                    case .scrollStackView:
+                        ScrollStackView()
+                    case .darkModelView:
+                        DarkModelView()
 #if !os(xrOS)
-                case .photoPickerView:
-                    PhotoPickerView()
-                case .shareLinkView:
-                    ShareLinkView()
-                case .focusStateView:
-                    FocusStateView()
-
-                case .toast:
-                    Toast()
-                        .environmentObject(ToastManager())
-//                case .customTabbar:
-//                    CustomTabbarView()
+                    case .photoPickerView:
+                        PhotoPickerView()
+                    case .shareLinkView:
+                        ShareLinkView()
+                    case .focusStateView:
+                        FocusStateView()
+                        
+                    case .toast:
+                        Toast()
+                            .environmentObject(ToastManager())
+                        //                case .customTabbar:
+                        //                    CustomTabbarView()
 #endif
- 
+                        
+                    }
                 }
-            }
-            .sheet(isPresented: $showSheet) {
-                SwiftUIView()
-            }
-//            .ss.bottomSafeAreaInset {
-//                VStack{
-//                    Button {
-//
-//                    } label: {
-//                        Text("BottomSafeAreaInset")
-//                            .frame(width: 100, height: 50)
-//                            .background {
-//                                Color.orange
-//                            }
-//                    }
-//
-//                    Spacer.height(50)
-//                }
-//            }
-
+                .sheet(isPresented: $showSheet) {
+                    SwiftUIView()
+                }
+            //            .ss.bottomSafeAreaInset {
+            //                VStack{
+            //                    Button {
+            //
+            //                    } label: {
+            //                        Text("BottomSafeAreaInset")
+            //                            .frame(width: 100, height: 50)
+            //                            .background {
+            //                                Color.orange
+            //                            }
+            //                    }
+            //
+            //                    Spacer.height(50)
+            //                }
+            //            }
+            
         }
         
     }
@@ -109,17 +109,17 @@ struct DemoView_Previews: PreviewProvider {
 
 
 struct DemoStackView: View {
- 
+    
     var body: some View {
         List{
             Section {
                 Brick.NavigationLink(value: DemoStack.navigationStack) {
                     Text("NavigationStack")
                 }
- 
+                
                 Brick.NavigationLink("OpenURL", value:  DemoStack.openURLView)
                 
-
+                
                 Brick.NavigationLink("AsyncImage", value: DemoStack.asyncImageView)
                 
                 Brick.NavigationLink("ScrollView", value: DemoStack.scrollsView)
@@ -127,14 +127,14 @@ struct DemoStackView: View {
                 Brick.NavigationLink("BannerView", value: DemoStack.bannerView)
                 
                 Brick.NavigationLink("Loading", value: DemoStack.loading)
-
+                
                 
                 Brick.NavigationLink("Refresh", value: DemoStack.refresh)
             }
             
             Section {
-
-//                        NavigationLink("Quicklook", destination: QuicklookView())
+                
+                //                        NavigationLink("Quicklook", destination: QuicklookView())
                 
                 Brick.NavigationLink("TTextField", value: DemoStack.tTextFieldDemoView)
                 
@@ -150,22 +150,27 @@ struct DemoStackView: View {
                 Brick.NavigationLink("ScrollStackView", value: DemoStack.scrollStackView)
                 
                 Brick.NavigationLink("DrrkModelView", value: DemoStack.darkModelView)
-//                Brick.NavigationLink("CustomTabbar", value: DemoStack.customTabbar)
+                
+            }
+            //                Brick.NavigationLink("CustomTabbar", value: DemoStack.customTabbar)
 #if os(iOS) && !os(xrOS)
+            
+            Section {
                 Brick.NavigationLink("ShareLink", value: DemoStack.shareLinkView)
-
+                
                 Brick.NavigationLink("Photo", value: DemoStack.photoPickerView)
                 
                 Brick.NavigationLink("Toast", value: DemoStack.toast)
                 
                 Brick.NavigationLink("FocusState", value: DemoStack.focusStateView)
-#endif
+                
             }
+#endif
             
         }
     }
     
-
+    
 }
 
 struct DemoStackView_Previews: PreviewProvider {
@@ -178,12 +183,12 @@ struct DemoStackView_Previews: PreviewProvider {
 enum DemoStack: NavigatorScreen, CaseIterable {
     case navigationStack
     case openURLView
-
+    
     case asyncImageView
     case scrollsView
     case bannerView
     case loading
-
+    
     case refresh
     
     case tTextFieldDemoView
@@ -199,5 +204,5 @@ enum DemoStack: NavigatorScreen, CaseIterable {
     case focusStateView
     case toast
 #endif
-//    case customTabbar
+    //    case customTabbar
 }

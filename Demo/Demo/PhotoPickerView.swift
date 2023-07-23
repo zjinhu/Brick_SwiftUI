@@ -43,7 +43,7 @@ struct PhotoPickerView: View {
             } label: {
                 Text("Show Picker 1")
             }
-            .ss.photosPicker(isPresented: $showPicker,
+            .photosPicker(isPresented: $showPicker,
                              selection: $selectedItem,
                              matching: .any(of: [.images]))
             .onChange(of: selectedItem) { newItem in
