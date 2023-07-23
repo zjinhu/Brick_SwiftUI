@@ -66,9 +66,9 @@ Pod::Spec.new do |s|
     
     ss.source_files = 'Sources/Brick_SwiftUI/Tools/*'
       
-    ss.subspec 'Camera' do |sss|
-      sss.source_files = 'Sources/Brick_SwiftUI/Tools/Camera/**/*'
-    end
+       # ss.subspec 'Camera' do |sss|
+         # sss.source_files = 'Sources/Brick_SwiftUI/Tools/Camera/**/*'
+       # end
   
     ss.subspec 'CarouselView' do |sss|
       sss.source_files = 'Sources/Brick_SwiftUI/Tools/CarouselView/**/*'
