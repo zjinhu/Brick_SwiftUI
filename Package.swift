@@ -14,7 +14,8 @@ package.platforms = [
 ]
 
 package.products = [
-    .library(name: "Brick_SwiftUI", targets: ["Brick_SwiftUI", "Camera"]),
+    .library(name: "Brick_SwiftUI", targets: ["Brick_SwiftUI"]),
+    .library(name: "Camera", targets: ["Camera"]),
 ]
 
 package.targets = [
