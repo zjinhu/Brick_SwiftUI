@@ -8,6 +8,8 @@
 
 ### SwiftUI APP Acceleration Development Kit
 
+This Package is related to [Gitee](https://gitee.com/zjinhu/brick). If you feel that the introduction of Github addresses in SPM is slow, you can use Gitee.
+
 Built-in various auxiliary development tools, and the newly added API after iOS15 is compatible with iOS14, please run the demo to view the usage of specific functions
 
 | ![](Image/1.png) | ![](Image/2.png) |
