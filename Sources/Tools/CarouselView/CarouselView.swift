@@ -30,7 +30,9 @@ public struct CarouselView<Data, ID, Content> : View where Data : RandomAccessCo
         }
         .frame(width: proxy.size.width, height: proxy.size.height, alignment: .leading)
         .offset(x: viewModel.offset)
+#if !os(tvOS)
         .gesture(viewModel.dragGesture)
+#endif
         .animation(viewModel.offsetAnimation, value: viewModel.offset)
         .onReceive(timer: viewModel.timer, perform: viewModel.receiveTimer)
         .onReceiveAppLifeCycle(perform: viewModel.setTimerActive)

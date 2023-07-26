@@ -82,6 +82,7 @@ struct TTextFieldDemoView: View {
                     Image(symbol: ._00Circle)
                 }
             
+#if os(iOS)
             UnderLineText()
                 .underLineText("Text")
                 .underLineTitle("Title")
@@ -93,9 +94,10 @@ struct TTextFieldDemoView: View {
 
                     DatePicker("", selection: $birthday, displayedComponents: .date)
                 }
+#endif
         }
         .padding()
-#if !os(xrOS)
+#if !os(xrOS) && os(iOS)
         .ss.tabBar(.hidden)
 #endif
     }

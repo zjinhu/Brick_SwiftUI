@@ -20,7 +20,7 @@ struct NavigationStackTView: View {
                 // Push child class via navigator
                 Button("Show Class Destination", action: showClassDestination)
             }
-#if !os(xrOS)
+#if !os(xrOS) && os(iOS)
         .ss.tabBar(.hidden)
 #endif
             .ss.useNavigationStack()
@@ -77,13 +77,14 @@ private struct NumberView: View {
     var body: some View {
         VStack(spacing: 8) {
             Text("\(number)").font(.title)
-            
+#if !os(tvOS)
             Stepper(
                 label: { Text("\(number)") },
                 onIncrement: { number += 1 },
                 onDecrement: { number -= 1 }
             ).labelsHidden()
-            
+#endif
+ 
             Brick.NavigationLink(
                 value: number + 1,
                 label: { Text("Show next number") }

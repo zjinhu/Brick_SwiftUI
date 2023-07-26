@@ -13,7 +13,7 @@ struct DemoView: View {
     var body: some View {
         Brick.NavigationStack {
             DemoStackView()
-#if !os(xrOS)
+#if !os(xrOS) && os(iOS)
                 .ss.tabBar(.hidden)
 #endif
                 .navigationTitle("Brick_SwiftUI")
@@ -53,14 +53,18 @@ struct DemoView: View {
                     case .safeAreaPaddingView:
                         SafeAreaPaddingView()
                     case .presentationView:
-                        PresentationView()
+                        if #available(iOS 14.0, macOS 11.0, tvOS 17.0, *){
+                            PresentationView()
+                        }
                     case .animationCompleted:
-                        AnimationCompleted()
+                        if #available(iOS 14.0, macOS 11.0, tvOS 16.0, watchOS 7.0, *){
+                            AnimationCompleted()
+                        }
                     case .scrollStackView:
                         ScrollStackView()
+#if !os(xrOS) && os(iOS)
                     case .darkModelView:
                         DarkModelView()
-#if !os(xrOS)
                     case .photoPickerView:
                         PhotoPickerView()
                     case .shareLinkView:
@@ -148,14 +152,16 @@ struct DemoStackView: View {
                 Brick.NavigationLink("AnimationCompleted", value: DemoStack.animationCompleted)
                 
                 Brick.NavigationLink("ScrollStackView", value: DemoStack.scrollStackView)
-                
-                Brick.NavigationLink("DrrkModelView", value: DemoStack.darkModelView)
+
                 
             }
             //                Brick.NavigationLink("CustomTabbar", value: DemoStack.customTabbar)
-#if os(iOS) && !os(xrOS)
+#if os(iOS) && !os(xrOS) && !os(macOS)
             
             Section {
+                
+                Brick.NavigationLink("DrrkModelView", value: DemoStack.darkModelView)
+                
                 Brick.NavigationLink("ShareLink", value: DemoStack.shareLinkView)
                 
                 Brick.NavigationLink("Photo", value: DemoStack.photoPickerView)
@@ -197,8 +203,9 @@ enum DemoStack: NavigatorScreen, CaseIterable {
     case presentationView
     case animationCompleted
     case scrollStackView
+
+#if !os(xrOS) && os(iOS)
     case darkModelView
-#if !os(xrOS)
     case shareLinkView
     case photoPickerView
     case focusStateView

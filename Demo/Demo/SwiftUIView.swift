@@ -11,9 +11,9 @@ import Brick_SwiftUI
 struct SwiftUIView: View {
     
     @Environment(\.dismiss) private var dismiss
-    
+#if os(iOS)
     @Environment(\.requestReview) private var requestReview
-
+#endif
     var body: some View {
         
         VScrollStack(spacing: 20){
@@ -38,16 +38,16 @@ struct SwiftUIView: View {
             .ss.background {
                 Color.orange
             }
-            
+#if os(iOS)
             Button {
                 requestReview()
             } label: {
                 Text("Request Review")
             }
-            
+#endif
 
         }
-#if !os(xrOS)
+#if !os(xrOS) && os(iOS)
         .ss.tabBar(.hidden)
 #endif
  

@@ -30,21 +30,23 @@ struct BannerView: View {
                       isWrap: isWrap,
                       autoScroll: autoScroll ? .active(time) : .inactive) { name in
 
+                Button{
+                    debugPrint("\(name)")
+                } label: {
                     Image(name)
                         .resizable()
                         .scaledToFill()
                         .frame(height: 220)
-                        .onTapGesture {
-                            debugPrint("\(name)")
-                        }
                         .background(.gray)
                         .cornerRadius(30)
+                }
+
             }
             .frame(maxWidth: .infinity)
             .frame(height: 300)
             Spacer()
         }
-#if !os(xrOS)
+#if !os(xrOS) && os(iOS)
         .ss.tabBar(.hidden)
 #endif
     }

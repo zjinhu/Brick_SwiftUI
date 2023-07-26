@@ -4,7 +4,7 @@
 
 import SwiftUI
  
-@available(tvOS, unavailable)
+@available(tvOS 17.0, *)
 @available(watchOS, unavailable)
 extension Menu {
     public init(
@@ -19,7 +19,7 @@ extension Menu {
     }
 }
 
-@available(tvOS, unavailable)
+@available(tvOS 17.0, *)
 @available(watchOS, unavailable)
 extension View {
     /// Presents a `Menu` when this view is pressed.

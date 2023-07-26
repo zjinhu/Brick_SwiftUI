@@ -112,8 +112,10 @@ extension View {
 //        padding().background(color)
 //    }
 //}
-
+ 
 extension View {
+    
+    @available(tvOS 16.0, *)
     public func onTapGesture(
         count: Int = 1,
         disabled: Bool,
@@ -125,6 +127,7 @@ extension View {
         )
     }
     
+    @available(tvOS 16.0, *)
     public func onTapGestureOnBackground(
         count: Int = 1,
         perform action: @escaping () -> Void

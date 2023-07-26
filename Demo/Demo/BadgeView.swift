@@ -80,7 +80,7 @@ struct BadgeView: View {
 //                tabVisibility.visibility = .visible
 //            }
 //        }
-#if !os(xrOS)
+#if !os(xrOS) && os(iOS)
         .ss.tabBar(.hidden)
 #endif
     }

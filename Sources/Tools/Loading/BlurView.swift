@@ -25,17 +25,17 @@ public struct BlurView: NSViewRepresentable {
         nsView.blendingMode = .withinWindow
     }
 }
-#elseif os(iOS)
+#elseif !os(xrOS)
 import UIKit
 public struct BlurView: UIViewRepresentable {
     public typealias UIViewType = UIVisualEffectView
     
     public func makeUIView(context: Context) -> UIVisualEffectView {
-        return UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
+        return UIVisualEffectView(effect: UIBlurEffect(style: .light))
     }
     
     public func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
-        uiView.effect = UIBlurEffect(style: .systemMaterial)
+        uiView.effect = UIBlurEffect(style: .light)
     }
 }
 

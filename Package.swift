@@ -8,19 +8,19 @@ let package = Package(name: "Brick_SwiftUI")
 package.platforms = [
     .iOS(.v14),
     .tvOS(.v14),
-    .watchOS(.v7),
+//    .watchOS(.v7),
     .macOS(.v11),
 //    .xrOS(.v1)
 ]
 
 package.products = [
     .library(name: "Brick_SwiftUI", targets: ["Brick_SwiftUI"]),
-    .library(name: "Camera", targets: ["Camera"]),
+    .library(name: "Brick_Camera", targets: ["Brick_Camera"]),
 ]
 
 package.targets = [
     .target(name: "Brick_SwiftUI", path: "Sources"),
-    .target(name: "Camera", dependencies: ["Brick_SwiftUI"], path: "Camera"),
+    .target(name: "Brick_Camera", dependencies: ["Brick_SwiftUI"], path: "Camera"),
 ]
 
 package.swiftLanguageVersions = [.v5]

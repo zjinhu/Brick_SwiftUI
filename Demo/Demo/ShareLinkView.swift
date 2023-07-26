@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Brick_SwiftUI
-#if !os(xrOS)
+#if !os(xrOS) && os(iOS)
 struct ShareLinkView: View {
     var body: some View {
         List{
@@ -25,7 +25,7 @@ struct ShareLinkView: View {
             }
 
         }
-        .ss.tabBar(.hidden)
+        .ss.tabBar(.hidden) 
 
     }
 }

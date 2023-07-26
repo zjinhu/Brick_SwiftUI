@@ -71,6 +71,7 @@ public struct UnderLineText: View {
     }
 
 }
+#if !os(tvOS)
 
 struct UnderLineTextView_Previews: PreviewProvider {
     static var previews: some View {
@@ -96,3 +97,4 @@ struct UnderLineTextView_Previews: PreviewProvider {
         }
     }
 }
+#endif

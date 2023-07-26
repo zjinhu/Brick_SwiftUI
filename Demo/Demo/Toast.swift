@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Brick_SwiftUI
-#if !os(xrOS)
+#if !os(xrOS) && os(iOS)
 struct Toast: View {
     @EnvironmentObject private var toast: ToastManager
     
@@ -74,7 +74,7 @@ struct Toast: View {
             }
         }
         .addToast(toast)
-        .ss.tabBar(.hidden)
+        .ss.tabBar(.hidden) 
     }
 }
 

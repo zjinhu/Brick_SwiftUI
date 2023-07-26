@@ -7,6 +7,7 @@
 import SwiftUI
 import PhotosUI
 import Brick_SwiftUI
+import Brick_Camera
 #if os(iOS)
 import UIKit
 

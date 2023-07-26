@@ -3,6 +3,7 @@
  */
 
 import SwiftUI
+import Brick_SwiftUI
 #if os(iOS) && !os(xrOS)
 public struct CameraView: View {
     @Binding var photoData: Data?

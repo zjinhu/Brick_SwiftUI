@@ -216,7 +216,7 @@ extension CarouselViewModel {
         }
     }
 }
-
+#if !os(tvOS)
 extension CarouselViewModel {
 
     var dragGesture: some Gesture {
@@ -262,7 +262,7 @@ extension CarouselViewModel {
         self.activeIndex = max(0, min(activeIndex, data.count - 1))
     }
 }
-
+#endif
 extension CarouselViewModel {
 
     func receiveTimer(_ value: Timer.TimerPublisher.Output) {

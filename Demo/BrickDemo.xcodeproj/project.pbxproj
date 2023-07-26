@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		608162752A5D8E360083DE04 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608162742A5D8E360083DE04 /* DemoView.swift */; };
 		608162772A5D91660083DE04 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608162762A5D91660083DE04 /* TabbarView.swift */; };
+		60CCBC9D2A712B3D00865889 /* Brick_Camera in Frameworks */ = {isa = PBXBuildFile; productRef = 60CCBC9C2A712B3D00865889 /* Brick_Camera */; };
 		81156A122A4842430089C52D /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81156A112A4842430089C52D /* DemoApp.swift */; };
 		81156A142A4842430089C52D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81156A132A4842430089C52D /* ContentView.swift */; };
 		81156A162A4842450089C52D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81156A152A4842450089C52D /* Assets.xcassets */; };
@@ -36,13 +37,8 @@
 		813925FE2A4BFEEC00E8BDE6 /* AnimationCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925EA2A4BFEEB00E8BDE6 /* AnimationCompleted.swift */; };
 		813925FF2A4BFEEC00E8BDE6 /* ScrollStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925EB2A4BFEEB00E8BDE6 /* ScrollStackView.swift */; };
 		817C5AFD2A4C055F00389E05 /* Brick_SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 817C5AFC2A4C055F00389E05 /* Brick_SwiftUI */; };
-		81F969612A541E2C0052619E /* QuickLookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969602A541E2C0052619E /* QuickLookUI.framework */; platformFilters = (macos, ); settings = {ATTRIBUTES = (Weak, ); }; };
-		81F969632A541E360052619E /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969622A541E350052619E /* QuickLook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		81F969652A541E3E0052619E /* QuickLookThumbnailing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969642A541E3E0052619E /* QuickLookThumbnailing.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969682A54216D0052619E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
-		81F9696D2A5421BE0052619E /* libswiftQuickLook.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696C2A5421BE0052619E /* libswiftQuickLook.tbd */; platformFilter = ios; settings = {ATTRIBUTES = (Weak, ); }; };
-		81F9696F2A5421CB0052619E /* libswiftQuickLookUI.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696E2A5421CB0052619E /* libswiftQuickLookUI.tbd */; platformFilters = (macos, ); settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,7 +80,6 @@
 		81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftAVFoundation.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/swift/libswiftAVFoundation.tbd; sourceTree = DEVELOPER_DIR; };
 		81F9696C2A5421BE0052619E /* libswiftQuickLook.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLook.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/swift/libswiftQuickLook.tbd; sourceTree = DEVELOPER_DIR; };
 		81F9696E2A5421CB0052619E /* libswiftQuickLookUI.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLookUI.tbd; path = usr/lib/swift/libswiftQuickLookUI.tbd; sourceTree = SDKROOT; };
-		81F969702A5423030052619E /* QuicklookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,14 +87,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81F9696F2A5421CB0052619E /* libswiftQuickLookUI.tbd in Frameworks */,
-				81F9696D2A5421BE0052619E /* libswiftQuickLook.tbd in Frameworks */,
+				60CCBC9D2A712B3D00865889 /* Brick_Camera in Frameworks */,
 				81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */,
 				81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */,
 				817C5AFD2A4C055F00389E05 /* Brick_SwiftUI in Frameworks */,
-				81F969612A541E2C0052619E /* QuickLookUI.framework in Frameworks */,
-				81F969632A541E360052619E /* QuickLook.framework in Frameworks */,
-				81F969652A541E3E0052619E /* QuickLookThumbnailing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +127,6 @@
 				813925DA2A4BFEEA00E8BDE6 /* AsyncImageView.swift */,
 				813925DC2A4BFEEA00E8BDE6 /* BadgeView.swift */,
 				813925E92A4BFEEB00E8BDE6 /* BannerView.swift */,
-				81F969702A5423030052619E /* QuicklookView.swift */,
 				813925E42A4BFEEB00E8BDE6 /* DarkModelView.swift */,
 				813925D92A4BFEEA00E8BDE6 /* FocusStateView.swift */,
 				813925DF2A4BFEEA00E8BDE6 /* Loading.swift */,
@@ -217,6 +207,7 @@
 			name = BrickBrickDemo;
 			packageProductDependencies = (
 				817C5AFC2A4C055F00389E05 /* Brick_SwiftUI */,
+				60CCBC9C2A712B3D00865889 /* Brick_Camera */,
 			);
 			productName = Demo;
 			productReference = 81156A0E2A4842430089C52D /* BrickBrickDemo.app */;
@@ -426,7 +417,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Demo/Preview Content\"";
-				DEVELOPMENT_TEAM = 2H98YDVC78;
+				DEVELOPMENT_TEAM = HH34JHH4ZR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -453,12 +444,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hu.app.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Debug;
 		};
@@ -471,7 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Demo/Preview Content\"";
-				DEVELOPMENT_TEAM = 2H98YDVC78;
+				DEVELOPMENT_TEAM = HH34JHH4ZR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -498,12 +490,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hu.app.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Release;
 		};
@@ -531,6 +524,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		60CCBC9C2A712B3D00865889 /* Brick_Camera */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Brick_Camera;
+		};
 		817C5AFC2A4C055F00389E05 /* Brick_SwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Brick_SwiftUI;

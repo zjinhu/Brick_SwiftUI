@@ -13,7 +13,9 @@ struct LoadingView: View {
     var body: some View {
         VStack{
             ProgressView()
-                .scaleEffect(2.5)
+#if os(iOS)
+                .scaleEffect(2)
+#endif
                 .frame(width: 50, height: 50)
                 .progressViewStyle(CircularProgressViewStyle(tint: manager.accentColor))
             

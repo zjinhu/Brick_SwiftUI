@@ -1,6 +1,7 @@
 import SwiftUI
 import Brick_SwiftUI
 
+@available(tvOS 17.0, *)
 struct PresentationView: View {
     @State private var showSheet: Bool = false
     @State private var backgroundInteraction: Brick.PresentationBackgroundInteraction = .disabled
@@ -60,7 +61,7 @@ struct PresentationView: View {
         } label: {
             Text("Presentation")
         }
-#if !os(xrOS)
+#if !os(xrOS) && os(iOS)
         .ss.tabBar(.hidden)
 #endif
     }
@@ -85,9 +86,12 @@ private struct SheetView: View {
                 Section {
                     Toggle("Custom Radius", isOn: $customRadius.animation())
                     
+#if !os(tvOS)
                     if customRadius {
                         Slider(value: $cornerRadius, in: 0...100)
                     }
+#endif
+
                 }
                 
                 Section {

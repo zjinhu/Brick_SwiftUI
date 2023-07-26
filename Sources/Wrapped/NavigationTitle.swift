@@ -9,6 +9,7 @@ import SwiftUI
 
 public extension Brick where Wrapped: View {
     @available(macOS, unavailable)
+    @available(tvOS, unavailable)
     func navigationTitle(_ title: String,
                          displayMode: NavigationBarItem.TitleDisplayMode = .automatic) -> some View{
         wrapped.modifier(
@@ -19,6 +20,7 @@ public extension Brick where Wrapped: View {
 }
 
 @available(macOS, unavailable)
+@available(tvOS, unavailable)
 struct NaviBarVersionModifier : ViewModifier {
     var title : String
     var displayMode: NavigationBarItem.TitleDisplayMode

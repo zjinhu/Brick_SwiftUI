@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Brick_SwiftUI
+@available(tvOS 16.0, *)
 struct AnimationCompleted: View {
     @State private var introTextOpacity = 0.0
     @State private var value = false
@@ -36,12 +37,12 @@ struct AnimationCompleted: View {
                 introTextOpacity = 1.0
             }
         })
-#if !os(xrOS)
+#if !os(xrOS) && os(iOS)
         .ss.tabBar(.hidden)
 #endif
     }
 }
-
+@available(tvOS 16.0, *)
 struct AnimationCompleted_Previews: PreviewProvider {
     static var previews: some View {
         AnimationCompleted()

@@ -84,17 +84,22 @@ public struct TTextField: View {
                             .padding(.trailing, 12)
                             .disabled(disable.wrappedValue)//图片点击
                     }else{
-                        secureImage?
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(secureImageColor)
-                            .frame(width: 25, height: 25)
-                            .padding(.trailing, 12)
-                            .onTapGesture {
+                        if let image = secureImage{
+                            Button {
                                 secureText.toggle()
                                 secureImage = secureText ? secureCloseImage : secureOpenImage
+                            } label: {
+                                image
+                                    .resizable()
+                                    .scaledToFit()
+                                    .foregroundColor(secureImageColor)
+                                    .frame(width: 25, height: 25)
+                                    .padding(.trailing, 12)
                             }
                             .disabled(disable.wrappedValue)//图片点击
+
+                        }
+ 
                     }
                     
                 }.background(
@@ -182,7 +187,7 @@ public struct TTextField: View {
     @Environment(\.tTextFieldLimitCount) private var limitCount
     
 }
-
+ 
 extension TTextField{
 
     public func tTextFieldSecure(_ secure: Bool) -> Self{
