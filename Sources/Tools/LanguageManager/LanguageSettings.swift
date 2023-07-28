@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-public class LanguageOB: ObservableObject {
+public class LanguageSettings: ObservableObject {
     
     public var local: Locale {
         Locale(identifier: selectedLanguage.rawValue)

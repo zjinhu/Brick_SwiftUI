@@ -76,14 +76,6 @@ Built-in various auxiliary development tools, and the newly added API after iOS1
 
 ## Install
 
-### Cocoapods
-
-1. Add `pod 'Brick_SwiftUI'` in Podfile
-
-2. Execute `pod install or pod update`
-
-3. Import `import Brick_SwiftUI`
-
 ### Swift Package Manager
 
 Starting from Xcode 11, the Swift Package Manager is integrated, which is very convenient to use. Brick_SwiftUI also supports integration via Swift Package Manager.

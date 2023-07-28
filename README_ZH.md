@@ -97,14 +97,6 @@
 
 ## 安装
 
-### cocoapods
-
-1.在 Podfile 中添加 `pod 'Brick_SwiftUI'`
-
-2.执行 `pod install 或 pod update`
-
-3.导入 `import Brick_SwiftUI`
-
 ### Swift Package Manager
 
 从 Xcode 11 开始，集成了 Swift Package Manager，使用起来非常方便。Brick_SwiftUI 也支持通过 Swift Package Manager 集成。

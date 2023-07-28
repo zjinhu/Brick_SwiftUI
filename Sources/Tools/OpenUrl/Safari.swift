@@ -6,6 +6,7 @@ import SafariServices
 
 
 @MainActor
+@available(iOS 15, tvOS 15, macOS 12, watchOS 8, *)
 public extension Brick<Any>.OpenURLAction.Result {
     static func safari(_ url: URL) -> Self {
 #if os(macOS)

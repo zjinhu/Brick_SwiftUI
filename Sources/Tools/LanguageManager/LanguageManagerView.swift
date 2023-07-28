@@ -9,11 +9,11 @@ import SwiftUI
 public struct LanguageManagerView<Content: View>: View {
     
     private let content: Content
-    @ObservedObject private var settings: LanguageOB
+    @ObservedObject private var settings: LanguageSettings
     
     public init(_ defaultLanguage: Languages, content: () -> Content) {
         self.content = content()
-        self.settings = LanguageOB(defaultLanguage: defaultLanguage)
+        self.settings = LanguageSettings(defaultLanguage: defaultLanguage)
     }
     
     public var body: some View {
