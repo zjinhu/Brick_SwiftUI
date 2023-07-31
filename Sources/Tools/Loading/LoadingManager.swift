@@ -19,27 +19,31 @@ extension LoadingManager {
     public func showLoading(){
         show {
             LoadingView()
+                .environmentObject(self)
         }
     }
     //展示自定义Progress//自己可以重写替换
     public func showProgress(){
         show {
             StepView()
+                .environmentObject(self)
         }
     }
     //展示自定义Success//自己可以重写替换
     public func showSuccess(){
         show {
             SuccessView()
+                .environmentObject(self)
         }
-        dismissDelay()
+        hideDelay()
     }
     //展示自定义Failed//自己可以重写替换
     public func showFail(){
         show {
             FailView()
+                .environmentObject(self)
         }
-        dismissDelay()
+        hideDelay()
     }
 }
 
@@ -56,7 +60,6 @@ public class LoadingManager: ObservableObject {
     ///进度条进度 0--1
     @Published public var progress: CGFloat = 0
     
-    
     ///展示的容器
     @Published var content = AnyView(EmptyView())
     ///展示状态
@@ -72,7 +75,7 @@ public class LoadingManager: ObservableObject {
 
 extension LoadingManager {
     ///直接关闭loading
-    public func dismiss() {
+    public func hide() {
         isActive = false
     }
     ///展示loading
@@ -83,7 +86,7 @@ extension LoadingManager {
         }
     }
  
-    private func dismissDelay() {
+    private func hideDelay() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.isActive = false
         }
