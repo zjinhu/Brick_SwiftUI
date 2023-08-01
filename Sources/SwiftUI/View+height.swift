@@ -11,7 +11,12 @@ import SwiftUI
 public extension View {
     func readHeight(onChange action: @escaping (CGFloat) -> ()) -> some View {
         background(heightReader)
-            .onPreferenceChange(HeightPreferenceKey.self, perform: action)
+            .onPreferenceChange(ReadSizePreferenceKey.self, perform: action)
+    }
+    
+    func readWidth(onChange action: @escaping (CGFloat) -> ()) -> some View {
+        background(widthReader)
+            .onPreferenceChange(ReadSizePreferenceKey.self, perform: action)
     }
 }
 
@@ -19,12 +24,19 @@ private extension View {
     var heightReader: some View {
         GeometryReader {
             Color.clear
-                .preference(key: HeightPreferenceKey.self, value: $0.size.height)
+                .preference(key: ReadSizePreferenceKey.self, value: $0.size.height)
+        }
+    }
+    
+    var widthReader: some View {
+        GeometryReader {
+            Color.clear
+                .preference(key: ReadSizePreferenceKey.self, value: $0.size.width)
         }
     }
 }
 
-fileprivate struct HeightPreferenceKey: PreferenceKey {
+fileprivate struct ReadSizePreferenceKey: PreferenceKey {
     static var defaultValue: CGFloat = 0
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {}
 }
