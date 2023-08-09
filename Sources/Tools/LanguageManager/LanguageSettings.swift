@@ -34,6 +34,7 @@ public class LanguageSettings: ObservableObject {
     }
     
     @Published public var selectedLanguage: Languages = .deviceLanguage
+    @Published public var currentDisplayLanguage: String = ""
     
     private var bag = Set<AnyCancellable>()
     
