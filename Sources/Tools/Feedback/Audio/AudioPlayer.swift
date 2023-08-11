@@ -20,7 +20,7 @@ public class AudioPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
 #if os(iOS)
         await stop()
 
-        try AVAudioSession.sharedInstance().setCategory(.ambient)
+        try AVAudioSession.sharedInstance().setCategory(.playback)
         try AVAudioSession.sharedInstance().setActive(true)
         
         player = try AVAudioPlayer(contentsOf: audio.url)
