@@ -18,17 +18,17 @@ private extension EnvironmentValues {
     }
 }
 
-public struct AudioFeedback: Feedback, ViewModifier {
+private struct AudioFeedback: Feedback, ViewModifier {
     @Environment(\.audioPlayer) private var player
-    public typealias Body = Never
+    typealias Body = Never
     
     var audio: Audio
     
-    public init(audio: Audio) {
+    init(audio: Audio) {
         self.audio = audio
     }
     
-    public func perform() async {
+    func perform() async {
         do {
             try await player.play(audio: audio)
         } catch {
