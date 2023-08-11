@@ -12,11 +12,11 @@ private enum PlayerError: LocalizedError {
     }
 }
 
-internal final class AudioPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
+public class AudioPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
     private var player: AVAudioPlayer?
     
     @MainActor
-    func play(audio: Audio) async throws {
+    public func play(audio: Audio) async throws {
 #if os(iOS)
         await stop()
 
@@ -30,7 +30,7 @@ internal final class AudioPlayer: NSObject, ObservableObject, AVAudioPlayerDeleg
     }
     
     @MainActor
-    func stop() async {
+    public func stop() async {
 #if os(iOS)
         player?.stop()
         player = nil
@@ -39,7 +39,7 @@ internal final class AudioPlayer: NSObject, ObservableObject, AVAudioPlayerDeleg
 
 #if os(iOS)
     @MainActor
-    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+    public func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         Task { await stop() }
     }
 #endif
