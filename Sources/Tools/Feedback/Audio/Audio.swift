@@ -4,11 +4,11 @@ public struct Audio: Identifiable, Hashable {
     public var id: String { url.path }
     public let url: URL
 
-    init(url: URL) {
+    public init(url: URL) {
         self.url = url
     }
 
-    init?(name: String, bundle: Bundle) {
+    public init?(name: String, bundle: Bundle) {
         guard let url = bundle.url(forResource: name, withExtension: nil) else { return nil }
         self.url = url
     }
