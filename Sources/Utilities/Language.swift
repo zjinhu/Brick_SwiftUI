@@ -28,3 +28,8 @@ extension Brick{
     }
 }
  
+public extension String {
+    var localized: LocalizedStringKey {
+        return LocalizedStringKey(self)
+    }
+}
