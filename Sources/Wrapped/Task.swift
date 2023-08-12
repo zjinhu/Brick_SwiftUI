@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-
-extension View {
-    @_disfavoredOverload
-    public func task(priority: TaskPriority = .userInitiated, _ action: @escaping @Sendable () async -> Void) -> some View {
-        self.modifier(TaskModifier(id: 0, priority: priority, action: action))
-    }
-}
-
 @available(iOS, deprecated: 15.0)
 @available(macOS, deprecated: 12.0)
 @available(tvOS, deprecated: 15.0)
@@ -177,3 +169,10 @@ private struct TaskModifier<ID: Equatable>: ViewModifier {
     }
 
 }
+
+//extension View {
+//    @_disfavoredOverload
+//    public func task(priority: TaskPriority = .userInitiated, _ action: @escaping @Sendable () async -> Void) -> some View {
+//        self.modifier(TaskModifier(id: 0, priority: priority, action: action))
+//    }
+//}
