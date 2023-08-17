@@ -40,3 +40,40 @@ fileprivate struct ReadSizePreferenceKey: PreferenceKey {
     static var defaultValue: CGFloat = 0
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {}
 }
+
+public struct GetSizeModifier: ViewModifier {
+    
+    @Binding
+    public var currentSize: CGSize
+    
+    public init(currentSize: Binding<CGSize>) {
+        self._currentSize = currentSize
+    }
+    
+    public func body(content: Content) -> some View {
+        content
+            .background(
+                GeometryReader { geometry in
+                    Color.clear
+                        .onAppear {
+                            currentSize = geometry.size
+                        }
+                        .onChange(of: geometry.size) { newSize in
+                            currentSize = newSize
+                        }
+                }
+            )
+    }
+    
+}
+
+//struct MyView: View {
+//    @State
+//    private var contentSize: CGSize = .zero
+//    var body: some View {
+//        VStack {
+//            ...
+//        }
+//        .modifier(GetSizeModifier(currentSize: $contentSize))
+//    }
+//}
