@@ -2,6 +2,12 @@ import Foundation
 
 public extension Brick where Wrapped: URLSession {
 
+    @available(macOS 12.0, iOS 15.0, watchOS 8.0, tvOS 15.0, *)
+    func data(for request: URLRequest) async throws -> (Data, URLResponse, URLSessionTaskMetrics) {
+        let controller = URLSessionTaskController()
+        let (data, response) = try await wrapped.data(for: request, delegate: controller)
+        return (data, response, controller.metrics!)
+    }
     /// Start a data task with a URL using async/await.
     /// - parameter url: The URL to send a request to.
     /// - returns: A tuple containing the binary `Data` that was downloaded,
@@ -150,5 +156,14 @@ private actor URLSessionTaskActor {
 
     func cancel() {
         task?.cancel()
+    }
+}
+
+private class URLSessionTaskController: NSObject, URLSessionTaskDelegate {
+    
+    var metrics: URLSessionTaskMetrics?
+    
+    func urlSession(_ session: URLSession, task: URLSessionTask, didFinishCollecting metrics: URLSessionTaskMetrics) {
+        self.metrics = metrics
     }
 }
