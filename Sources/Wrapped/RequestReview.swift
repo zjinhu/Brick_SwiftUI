@@ -30,23 +30,12 @@ extension Brick where Wrapped == Any {
 #if os(macOS)
             SKStoreReviewController.requestReview()
 #else
-            guard let scene = UIApplication.activeScene else { return }
+            guard let scene = UIWindowScene.currentWindowSence else { return }
             SKStoreReviewController.requestReview(in: scene)
 #endif
         }
     }
 }
-
 #endif
 
-#if os(iOS)
-import UIKit
-
-internal extension UIApplication {
-    static var activeScene: UIWindowScene? {
-        shared.connectedScenes
-            .first { $0.activationState == .foregroundActive }
-        as? UIWindowScene
-    }
-}
-#endif
+ 
