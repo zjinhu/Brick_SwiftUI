@@ -3,8 +3,9 @@
  */
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 #if os(iOS) && !os(xrOS)
+import UIKit
 public struct CameraView: View {
     @Binding var photoData: Data?
     
@@ -12,7 +13,7 @@ public struct CameraView: View {
         _photoData = photoData
     }
     
-    @StateObject private var model = DataModel()
+    @StateObject private var model = CameraModel()
     
     private static let barHeightFactor = 0.15
     
@@ -40,14 +41,14 @@ public struct CameraView: View {
                         .accessibilityElement()
                         .accessibilityLabel("View Finder")
                         .accessibilityAddTraits([.isImage])
+                        .onTouch(perform: updateLocation)
                 }
                 .background{
                     Color.black
                 }
         }
-        .task {
-            await model.camera.start()
- 
+        .ss.task {
+           await model.camera.start()
         }
         .onChange(of: model.photoData) { newValue in
             if let newValue{
@@ -106,5 +107,10 @@ public struct CameraView: View {
         .padding()
     }
     
+    func updateLocation(_ location: CGPoint) {
+        print(location)
+        model.camera.focus(at: location)
+    }
 }
+
 #endif

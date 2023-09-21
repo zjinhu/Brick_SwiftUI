@@ -14,13 +14,13 @@ package.platforms = [
 ]
 
 package.products = [
-    .library(name: "Brick_SwiftUI", targets: ["Brick_SwiftUI"]),
-    .library(name: "Brick_Camera", targets: ["Brick_Camera"]),
+    .library(name: "BrickKit", targets: ["BrickKit"]),
+    .library(name: "CameraKit", targets: ["CameraKit"]),
 ]
 
 package.targets = [
-    .target(name: "Brick_SwiftUI", path: "Sources"),
-    .target(name: "Brick_Camera", dependencies: ["Brick_SwiftUI"], path: "Camera"),
+    .target(name: "BrickKit", path: "Sources/Brick"),
+    .target(name: "CameraKit", dependencies: ["BrickKit"], path: "Sources/Camera"),
 ]
 
 package.swiftLanguageVersions = [.v5]

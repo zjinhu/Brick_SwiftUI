@@ -1,16 +1,17 @@
 /*
-See the License.txt file for this sample’s licensing information.
-*/
+ See the License.txt file for this sample’s licensing information.
+ */
 
 #if canImport(AVFoundation)
 import AVFoundation
 #endif
+import Combine
 import CoreImage
-
+import Photos
 #if os(iOS) && !os(xrOS)
 import UIKit
 
-class Camera: NSObject {
+public class Camera: NSObject {
     private let captureSession = AVCaptureSession()
     private var isCaptureSessionConfigured = false
     private var deviceInput: AVCaptureDeviceInput?
@@ -19,7 +20,15 @@ class Camera: NSObject {
     private var sessionQueue: DispatchQueue!
     
     private var allCaptureDevices: [AVCaptureDevice] {
-        AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInTrueDepthCamera, .builtInDualCamera, .builtInDualWideCamera, .builtInWideAngleCamera, .builtInDualWideCamera], mediaType: .video, position: .unspecified).devices
+        AVCaptureDevice.DiscoverySession(deviceTypes:
+                                            [.builtInTrueDepthCamera,
+                                             .builtInDualCamera,
+                                             .builtInDualWideCamera,
+                                             .builtInWideAngleCamera,
+                                             .builtInDualWideCamera
+                                            ],
+                                         mediaType: .video,
+                                         position: .unspecified).devices
     }
     
     private var frontCaptureDevices: [AVCaptureDevice] {
@@ -34,16 +43,16 @@ class Camera: NSObject {
     
     private var captureDevices: [AVCaptureDevice] {
         var devices = [AVCaptureDevice]()
-        #if os(macOS) || (os(iOS) && targetEnvironment(macCatalyst))
+#if os(macOS) || (os(iOS) && targetEnvironment(macCatalyst))
         devices += allCaptureDevices
-        #else
+#else
         if let backDevice = backCaptureDevices.first {
             devices += [backDevice]
         }
         if let frontDevice = frontCaptureDevices.first {
             devices += [frontDevice]
         }
-        #endif
+#endif
         return devices
     }
     
@@ -63,25 +72,27 @@ class Camera: NSObject {
         }
     }
     
-    var isRunning: Bool {
+    public var isRunning: Bool {
         captureSession.isRunning
     }
     
-    var isUsingFrontCaptureDevice: Bool {
+    public var isUsingFrontCaptureDevice: Bool {
         guard let captureDevice = captureDevice else { return false }
         return frontCaptureDevices.contains(captureDevice)
     }
     
-    var isUsingBackCaptureDevice: Bool {
+    public var isUsingBackCaptureDevice: Bool {
         guard let captureDevice = captureDevice else { return false }
         return backCaptureDevices.contains(captureDevice)
     }
-
+    
     private var addToPhotoStream: ((AVCapturePhoto) -> Void)?
     
     private var addToPreviewStream: ((CIImage) -> Void)?
     
-    var isPreviewPaused = false
+    public var isPreviewPaused = false
+    
+    public var flashMode: AVCaptureDevice.FlashMode = .off
     
     lazy var previewStream: AsyncStream<CIImage> = {
         AsyncStream { continuation in
@@ -100,8 +111,8 @@ class Camera: NSObject {
             }
         }
     }()
-        
-    override init() {
+    
+    override public init() {
         super.init()
         initialize()
     }
@@ -113,6 +124,14 @@ class Camera: NSObject {
         
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         NotificationCenter.default.addObserver(self, selector: #selector(updateForDeviceOrientation), name: UIDevice.orientationDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(subjectAreaDidChange),
+                                               name: .AVCaptureDeviceSubjectAreaDidChange,
+                                               object: deviceInput?.device)
+        NotificationCenter.default.addObserver(self, selector: #selector(uiRequestedNewFocusArea), name: .init(rawValue: "UserDidRequestNewFocusPoint"), object: nil)
+    }
+    
+    private func removeObservers() {
+        NotificationCenter.default.removeObserver(self)
     }
     
     private func configureCaptureSession(completionHandler: (_ success: Bool) -> Void) {
@@ -135,12 +154,12 @@ class Camera: NSObject {
         }
         
         let photoOutput = AVCapturePhotoOutput()
-                        
+        
         captureSession.sessionPreset = AVCaptureSession.Preset.photo
-
+        
         let videoOutput = AVCaptureVideoDataOutput()
         videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "VideoDataOutputQueue"))
-  
+        
         guard captureSession.canAddInput(deviceInput) else {
             debugPrint("Unable to add device input to capture session.")
             return
@@ -209,7 +228,7 @@ class Camera: NSObject {
         
         captureSession.beginConfiguration()
         defer { captureSession.commitConfiguration() }
-
+        
         for input in captureSession.inputs {
             if let deviceInput = input as? AVCaptureDeviceInput {
                 captureSession.removeInput(deviceInput)
@@ -233,7 +252,7 @@ class Camera: NSObject {
         }
     }
     
-    func start() async {
+    public func start() async {
         let authorized = await checkAuthorization()
         guard authorized else {
             debugPrint("Camera access was not authorized.")
@@ -257,17 +276,18 @@ class Camera: NSObject {
         }
     }
     
-    func stop() {
+    public func stop() {
         guard isCaptureSessionConfigured else { return }
         
         if captureSession.isRunning {
             sessionQueue.async {
                 self.captureSession.stopRunning()
+                self.removeObservers()
             }
         }
     }
     
-    func switchCaptureDevice() {
+    public func switchCaptureDevice() {
         if let captureDevice = captureDevice, let index = availableCaptureDevices.firstIndex(of: captureDevice) {
             let nextIndex = (index + 1) % availableCaptureDevices.count
             self.captureDevice = availableCaptureDevices[nextIndex]
@@ -275,7 +295,7 @@ class Camera: NSObject {
             self.captureDevice = AVCaptureDevice.default(for: .video)
         }
     }
-
+    
     private var deviceOrientation: UIDeviceOrientation {
         var orientation = UIDevice.current.orientation
         if orientation == UIDeviceOrientation.unknown {
@@ -299,19 +319,21 @@ class Camera: NSObject {
         }
     }
     
-    func takePhoto() {
+    public func takePhoto() {
         guard let photoOutput = self.photoOutput else { return }
         
         sessionQueue.async {
-        
+            
             var photoSettings = AVCapturePhotoSettings()
-
+            
             if photoOutput.availablePhotoCodecTypes.contains(.hevc) {
                 photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.hevc])
             }
             
-            let isFlashAvailable = self.deviceInput?.device.isFlashAvailable ?? false
-            photoSettings.flashMode = isFlashAvailable ? .auto : .off
+            if self.deviceInput?.device.isFlashAvailable == true{
+                photoSettings.flashMode = self.flashMode
+            }
+            
             photoSettings.isHighResolutionPhotoEnabled = true
             if let previewPhotoPixelFormatType = photoSettings.availablePreviewPhotoPixelFormatTypes.first {
                 photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPhotoPixelFormatType]
@@ -320,7 +342,7 @@ class Camera: NSObject {
             
             if let photoOutputVideoConnection = photoOutput.connection(with: .video) {
                 if photoOutputVideoConnection.isVideoOrientationSupported,
-                    let videoOrientation = self.videoOrientationFor(self.deviceOrientation) {
+                   let videoOrientation = self.videoOrientationFor(self.deviceOrientation) {
                     photoOutputVideoConnection.videoOrientation = videoOrientation
                 }
             }
@@ -328,11 +350,81 @@ class Camera: NSObject {
             photoOutput.capturePhoto(with: photoSettings, delegate: self)
         }
     }
+    
+    @objc private func uiRequestedNewFocusArea(notification: NSNotification) {
+        guard let userInfo = notification.userInfo as? [String: Any], let devicePoint = userInfo["devicePoint"] as? CGPoint else { return }
+        self.focus(at: devicePoint)
+    }
+    
+    @objc
+    private func subjectAreaDidChange(notification: NSNotification) {
+        let devicePoint = CGPoint(x: 0.5, y: 0.5)
+        focus(with: .continuousAutoFocus, exposureMode: .continuousAutoExposure, at: devicePoint, monitorSubjectAreaChange: false)
+    }
+    
+    public func focus(with focusMode: AVCaptureDevice.FocusMode, exposureMode: AVCaptureDevice.ExposureMode, at devicePoint: CGPoint, monitorSubjectAreaChange: Bool) {
+        sessionQueue.async {
+            guard let device = self.deviceInput?.device else { return }
+            do {
+                try device.lockForConfiguration()
+                
+                /*
+                 Setting (focus/exposure)PointOfInterest alone does not initiate a (focus/exposure) operation.
+                 Call set(Focus/Exposure)Mode() to apply the new point of interest.
+                 */
+                if device.isFocusPointOfInterestSupported && device.isFocusModeSupported(focusMode) {
+                    device.focusPointOfInterest = devicePoint
+                    device.focusMode = focusMode
+                }
+                
+                if device.isExposurePointOfInterestSupported && device.isExposureModeSupported(exposureMode) {
+                    device.exposurePointOfInterest = devicePoint
+                    device.exposureMode = exposureMode
+                }
+                
+                device.isSubjectAreaChangeMonitoringEnabled = monitorSubjectAreaChange
+                device.unlockForConfiguration()
+            } catch {
+                print("Could not lock device for configuration: \(error)")
+            }
+        }
+    }
+    
+    public func focus(at focusPoint: CGPoint){
+        let device = self.deviceInput?.device
+        do {
+            try device?.lockForConfiguration()
+            if device?.isFocusPointOfInterestSupported == true {
+                device?.focusPointOfInterest = focusPoint
+                device?.exposurePointOfInterest = focusPoint
+                device?.exposureMode = .continuousAutoExposure
+                device?.focusMode = .continuousAutoFocus
+                device?.unlockForConfiguration()
+            }
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    public func set(zoom: CGFloat){
+        let factor = zoom < 1 ? 1 : zoom
+        let device = self.deviceInput?.device
+        
+        do {
+            try device?.lockForConfiguration()
+            device?.videoZoomFactor = factor
+            device?.unlockForConfiguration()
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 extension Camera: AVCapturePhotoCaptureDelegate {
     
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+    public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         
         if let error = error {
             debugPrint("Error capturing photo: \(error.localizedDescription)")
@@ -345,14 +437,14 @@ extension Camera: AVCapturePhotoCaptureDelegate {
 
 extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate {
     
-    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+    public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let pixelBuffer = sampleBuffer.imageBuffer else { return }
         
         if connection.isVideoOrientationSupported,
            let videoOrientation = videoOrientationFor(deviceOrientation) {
             connection.videoOrientation = videoOrientation
         }
-
+        
         addToPreviewStream?(CIImage(cvPixelBuffer: pixelBuffer))
     }
 }
@@ -374,5 +466,4 @@ fileprivate extension UIScreen {
         }
     }
 }
- 
 #endif

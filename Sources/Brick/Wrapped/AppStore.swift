@@ -8,6 +8,7 @@
 import Foundation
 import StoreKit
 import SwiftUI
+import UIKit
 public extension Brick where Wrapped: View {
     @available(macOS, unavailable)
     @available(tvOS, unavailable)
