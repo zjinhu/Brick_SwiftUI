@@ -1,5 +1,5 @@
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 
 @available(tvOS 17.0, *)
 struct PresentationView: View {

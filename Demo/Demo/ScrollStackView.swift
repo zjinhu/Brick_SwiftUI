@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 struct ScrollStackView: View {
     var body: some View {
         VStack{

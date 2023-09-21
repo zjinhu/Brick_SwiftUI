@@ -1,12 +1,12 @@
 //
 //  ContentView.swift
-//  Brick_SwiftUI
+//  BrickKit
 //
 //  Created by iOS on 2023/5/12.
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 struct ContentView: View {
     @Brick.AppStorage("START_TIME_KEY", store:UserDefaults.standard) var startTime: Date = Date()
  

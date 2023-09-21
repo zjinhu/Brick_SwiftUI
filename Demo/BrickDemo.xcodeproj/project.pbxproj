@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		607989182ABC41AC0029652F /* BrickKit in Frameworks */ = {isa = PBXBuildFile; productRef = 607989172ABC41AC0029652F /* BrickKit */; };
+		6079891A2ABC41AC0029652F /* CameraKit in Frameworks */ = {isa = PBXBuildFile; productRef = 607989192ABC41AC0029652F /* CameraKit */; };
 		608162752A5D8E360083DE04 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608162742A5D8E360083DE04 /* DemoView.swift */; };
 		608162772A5D91660083DE04 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608162762A5D91660083DE04 /* TabbarView.swift */; };
-		60CCBC9D2A712B3D00865889 /* Brick_Camera in Frameworks */ = {isa = PBXBuildFile; productRef = 60CCBC9C2A712B3D00865889 /* Brick_Camera */; };
 		81156A122A4842430089C52D /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81156A112A4842430089C52D /* DemoApp.swift */; };
 		81156A142A4842430089C52D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81156A132A4842430089C52D /* ContentView.swift */; };
 		81156A162A4842450089C52D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81156A152A4842450089C52D /* Assets.xcassets */; };
@@ -36,12 +37,12 @@
 		813925FD2A4BFEEC00E8BDE6 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925E92A4BFEEB00E8BDE6 /* BannerView.swift */; };
 		813925FE2A4BFEEC00E8BDE6 /* AnimationCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925EA2A4BFEEB00E8BDE6 /* AnimationCompleted.swift */; };
 		813925FF2A4BFEEC00E8BDE6 /* ScrollStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925EB2A4BFEEB00E8BDE6 /* ScrollStackView.swift */; };
-		817C5AFD2A4C055F00389E05 /* Brick_SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 817C5AFC2A4C055F00389E05 /* Brick_SwiftUI */; };
 		81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969682A54216D0052619E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6079891B2ABC41B40029652F /* BrickBrickDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BrickBrickDemo-Info.plist"; sourceTree = "<group>"; };
 		608162742A5D8E360083DE04 /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 		608162762A5D91660083DE04 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		81156A0E2A4842430089C52D /* BrickBrickDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrickBrickDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,7 +51,6 @@
 		81156A152A4842450089C52D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81156A172A4842450089C52D /* Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo.entitlements; sourceTree = "<group>"; };
 		81156A192A4842450089C52D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		813925D02A4BFE6A00E8BDE6 /* Brick_SwiftUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Brick_SwiftUI; path = ..; sourceTree = "<group>"; };
 		813925D22A4BFEC500E8BDE6 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		813925D32A4BFEC500E8BDE6 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		813925D42A4BFEC500E8BDE6 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
@@ -87,10 +87,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60CCBC9D2A712B3D00865889 /* Brick_Camera in Frameworks */,
 				81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */,
 				81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */,
-				817C5AFD2A4C055F00389E05 /* Brick_SwiftUI in Frameworks */,
+				6079891A2ABC41AC0029652F /* CameraKit in Frameworks */,
+				607989182ABC41AC0029652F /* BrickKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 		81156A052A4842430089C52D = {
 			isa = PBXGroup;
 			children = (
-				813925CF2A4BFE6A00E8BDE6 /* Packages */,
+				6079891B2ABC41B40029652F /* BrickBrickDemo-Info.plist */,
 				81156A102A4842430089C52D /* Demo */,
 				81156A0F2A4842430089C52D /* Products */,
 				817C5AFB2A4C055400389E05 /* Frameworks */,
@@ -157,14 +157,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		813925CF2A4BFE6A00E8BDE6 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				813925D02A4BFE6A00E8BDE6 /* Brick_SwiftUI */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		813925D12A4BFEC500E8BDE6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,8 +198,8 @@
 			);
 			name = BrickBrickDemo;
 			packageProductDependencies = (
-				817C5AFC2A4C055F00389E05 /* Brick_SwiftUI */,
-				60CCBC9C2A712B3D00865889 /* Brick_Camera */,
+				607989172ABC41AC0029652F /* BrickKit */,
+				607989192ABC41AC0029652F /* CameraKit */,
 			);
 			productName = Demo;
 			productReference = 81156A0E2A4842430089C52D /* BrickBrickDemo.app */;
@@ -237,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 81156A052A4842430089C52D;
+			packageReferences = (
+				607989162ABC26E80029652F /* XCLocalSwiftPackageReference ".." */,
+			);
 			productRefGroup = 81156A0F2A4842430089C52D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -352,6 +347,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Debug;
 		};
@@ -405,6 +401,7 @@
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Release;
 		};
@@ -421,7 +418,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BrickBrickDemo-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Capture requires the access to the photo library to store pictures you took.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -467,7 +466,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BrickBrickDemo-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Capture requires the access to the photo library to store pictures you took.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -523,14 +524,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCSwiftPackageProductDependency section */
-		60CCBC9C2A712B3D00865889 /* Brick_Camera */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Brick_Camera;
+/* Begin XCLocalSwiftPackageReference section */
+		607989162ABC26E80029652F /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
 		};
-		817C5AFC2A4C055F00389E05 /* Brick_SwiftUI */ = {
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		607989172ABC41AC0029652F /* BrickKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Brick_SwiftUI;
+			productName = BrickKit;
+		};
+		607989192ABC41AC0029652F /* CameraKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CameraKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

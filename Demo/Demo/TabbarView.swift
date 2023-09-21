@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 struct TabbarView: View {
     @StateObject private var tabbarIndex = TabBarIndexObserver()
     

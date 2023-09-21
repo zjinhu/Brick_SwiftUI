@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 #if os(iOS)
 struct DarkModelView: View {
     @StateObject var colorScheme = AppColorScheme()

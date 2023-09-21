@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 struct Refresh: View {
     struct Item: Identifiable {
         let id = UUID()

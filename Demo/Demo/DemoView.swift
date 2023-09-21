@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 struct DemoView: View {
     @State private var showSheet = false
     
@@ -16,7 +16,7 @@ struct DemoView: View {
 #if !os(xrOS) && os(iOS)
                 .ss.tabBar(.hidden)
 #endif
-                .navigationTitle("Brick_SwiftUI")
+                .navigationTitle("BrickKit")
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button {

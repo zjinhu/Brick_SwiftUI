@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 
 struct Loading: View {
     @EnvironmentObject private var loading: LoadingManager
@@ -152,7 +152,7 @@ struct Loading: View {
     }
     func dismiss(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            loading.dismiss()
+            loading.hide()
         }
     }
     

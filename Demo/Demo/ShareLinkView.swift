@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 #if !os(xrOS) && os(iOS)
 struct ShareLinkView: View {
     var body: some View {

@@ -1,5 +1,5 @@
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 #if os(iOS) && !os(xrOS)
 struct FocusStateView: View {
 

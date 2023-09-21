@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 let roles = ["Image_Guide_1", "Image_Guide_2", "Image_Guide_3", "Image_Guide_3", "Image_Guide_2", "Image_Guide_1"]
 
 struct BannerView: View {

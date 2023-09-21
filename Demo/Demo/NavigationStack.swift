@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 struct NavigationStackTView: View {
     @EnvironmentObject var navigator: PathNavigator
     

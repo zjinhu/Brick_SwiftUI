@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 struct BadgeView: View {
     @State private var alert = false
 //    @EnvironmentObject var tabVisibility: TabbarVisibility

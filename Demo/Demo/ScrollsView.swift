@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 struct ScrollsView: View {
     @State private var indicatorVisibility: Brick.ScrollIndicatorVisibility = .automatic
     @State private var dismissMode: Brick.ScrollDismissesKeyboardMode = .automatic

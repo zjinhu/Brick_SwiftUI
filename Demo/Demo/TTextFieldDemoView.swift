@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 
 struct TTextFieldDemoView: View {
     @State var birthday: Date = Date()

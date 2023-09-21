@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Brick_SwiftUI
+import BrickKit
 @available(tvOS 16.0, *)
 struct AnimationCompleted: View {
     @State private var introTextOpacity = 0.0

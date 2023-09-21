@@ -20,7 +20,12 @@ package.products = [
 
 package.targets = [
     .target(name: "BrickKit", path: "Sources/Brick"),
-    .target(name: "CameraKit", dependencies: ["BrickKit"], path: "Sources/Camera"),
+    .target(name: "CameraKit",
+            dependencies:
+                [
+                    "BrickKit",
+                ],
+            path: "Sources/Camera"),
 ]
 
 package.swiftLanguageVersions = [.v5]
