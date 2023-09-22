@@ -9,8 +9,8 @@ import Photos
 import SwiftUI
 import Foundation
 import Combine
-class GalleryViewModel: ObservableObject {
-    let photoLibrary: PhotoLibraryService
+public class GalleryViewModel: ObservableObject {
+    private let photoLibrary: PhotoLibraryService
     private var subscribers: [AnyCancellable] = []
     
     public init(photoLibrary: PhotoLibraryService) {
@@ -24,7 +24,7 @@ class GalleryViewModel: ObservableObject {
             .store(in: &subscribers)
     }
     
-    @Published var results = PHFetchResult<PHAsset>()
+    @Published public var results = PHFetchResult<PHAsset>()
 }
 
 extension GalleryViewModel {
@@ -38,11 +38,11 @@ extension GalleryViewModel {
 }
 
 extension GalleryViewModel {
-    func loadImage(for assetId: String, targetSize: CGSize) async -> UIImage? {
+    public func loadImage(for assetId: String, targetSize: CGSize) async -> UIImage? {
         try? await photoLibrary.loadImage(for: assetId, targetSize: targetSize)
     }
     
-    func loadAllPhotos() async {
+    public func loadAllPhotos() async {
         let results = await photoLibrary.fetchAllPhotos()
         await MainActor.run {
             withAnimation {

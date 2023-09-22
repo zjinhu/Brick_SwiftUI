@@ -8,16 +8,16 @@
 import SwiftUI
 import Foundation
 
-class PhotoViewModel: ObservableObject {
-    let photoLibrary: PhotoLibraryService
-    let assetId: String
+public class PhotoViewModel: ObservableObject {
+    private let photoLibrary: PhotoLibraryService
+    private let assetId: String
     
-    @Published var photo: UIImage?
-    @Published var scale: CGFloat = 1.0
-    @Published var lastScale: CGFloat = 1.0
-    @Published var offset: CGSize = .zero
-    @Published var lastOffset: CGSize = .zero
-    @Published var photoLibraryError: PhotoLibraryError?
+    @Published public var photo: UIImage?
+    @Published public var scale: CGFloat = 1.0
+    @Published public var lastScale: CGFloat = 1.0
+    @Published public var offset: CGSize = .zero
+    @Published public var lastOffset: CGSize = .zero
+    @Published public var photoLibraryError: PhotoLibraryError?
     
     public init(assetId: String,
                 photoLibrary: PhotoLibraryService) {
@@ -28,7 +28,7 @@ class PhotoViewModel: ObservableObject {
 
 // MARK: - Fetching
 extension PhotoViewModel {
-    func loadImage(targetSize: CGSize) async {
+    public func loadImage(targetSize: CGSize) async {
         do {
             let size = CGSize(width: targetSize.width * 3, height: targetSize.height * 3)
             let photo = try await photoLibrary.loadImage(for: assetId, targetSize: size)

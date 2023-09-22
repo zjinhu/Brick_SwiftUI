@@ -7,43 +7,53 @@
 
 import SwiftUI
 import BrickKit
-public struct PhotoView: View {
-
+struct PhotoView: View {
+    
     @StateObject var viewModel: PhotoViewModel
-
-    public init(assetId: String,
-                photoLibrary: PhotoLibraryService) {
-        let viewModel = PhotoViewModel(assetId: assetId, photoLibrary: photoLibrary)
+    let cameraModel: CameraModel
+    
+    init(assetId: String, cameraModel: CameraModel) {
+        self.cameraModel = cameraModel
+        let viewModel = PhotoViewModel(assetId: assetId, photoLibrary: cameraModel.photoLibrary)
         self._viewModel = StateObject(wrappedValue: viewModel)
     }
-
-    public var body: some View {
-
-            GeometryReader { proxy in
-                ZStack(alignment: .center){
-                    if let photo = viewModel.photo {
-                        Image(uiImage: photo)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: proxy.size.width, height: proxy.size.height)
-                            .scaleEffect(viewModel.scale)
-                            .offset(viewModel.offset)
-                            .gesture(dragGesture(size: proxy.size))
-                            .gesture(magnificationGesture(size: proxy.size))
-                    } else {
-                        ProgressView()
-                    }
-                }
-                .maxWidth(.infinity)
-                .maxHeight(.infinity)
-                .ss.task {
-                    await viewModel.loadImage(targetSize: proxy.size)
+    
+    var body: some View {
+        GeometryReader { proxy in
+            ZStack(alignment: .center){
+                if let photo = viewModel.photo {
+                    Image(uiImage: photo)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: proxy.size.width, height: proxy.size.height)
+                        .scaleEffect(viewModel.scale)
+                        .offset(viewModel.offset)
+                        .gesture(dragGesture(size: proxy.size))
+                        .gesture(magnificationGesture(size: proxy.size))
+                } else {
+                    ProgressView()
                 }
             }
-            .ignoresSafeArea(.all)
-            .navigationBarTitleDisplayMode(.inline)
+            .maxWidth(.infinity)
+            .maxHeight(.infinity)
+            .ss.task {
+                await viewModel.loadImage(targetSize: proxy.size)
+            }
+        }
+        .ignoresSafeArea(.all)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    cameraModel.photoData = viewModel.photo?.pngData()
+                } label: {
+                    Image(symbol: .checkmark)
+                        .foregroundColor(.white)
+                }
+            }
+        }
     }
-
+    
     private func magnificationGesture(size: CGSize) -> some Gesture {
         MagnificationGesture()
             .onChanged { value in
@@ -62,14 +72,14 @@ public struct PhotoView: View {
                 resetImageFrame(size: size)
             }
     }
-
+    
     private func dragGesture(size: CGSize) -> some Gesture {
         DragGesture()
             .onChanged { value in
                 let deltaX = value.translation.width - viewModel.lastOffset.width
                 let deltaY = value.translation.height - viewModel.lastOffset.height
                 viewModel.lastOffset = value.translation
-
+                
                 let newOffsetWidth = viewModel.offset.width + deltaX
                 let newOffsetHeight = viewModel.offset.height + deltaY
                 viewModel.offset.width = newOffsetWidth
@@ -80,19 +90,19 @@ public struct PhotoView: View {
                 resetImageFrame(size: size)
             }
     }
-
+    
     func widthLimit(size: CGSize) -> CGFloat {
         let halfWidth = size.width / 2
         let scaledHalfWidth = halfWidth * viewModel.scale
         return halfWidth - scaledHalfWidth
     }
-
+    
     func heightLimit(size: CGSize) -> CGFloat {
         let halfHeight = size.height / 2
         let scaledHalfHeight = halfHeight * viewModel.scale
         return halfHeight - scaledHalfHeight
     }
-
+    
     func resetImageFrame(size: CGSize) {
         let widthLimit = widthLimit(size: size)
         if viewModel.offset.width < widthLimit {
@@ -105,7 +115,7 @@ public struct PhotoView: View {
                 viewModel.offset.width = -widthLimit
             }
         }
-
+        
         let heightLimit = heightLimit(size: size)
         if viewModel.offset.height < heightLimit {
             withAnimation {

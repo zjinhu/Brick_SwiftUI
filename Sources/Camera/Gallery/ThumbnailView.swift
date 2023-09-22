@@ -7,13 +7,13 @@
 
 import SwiftUI
 import BrickKit
-struct ThumbnailView: View {
+public struct ThumbnailView: View {
     @State var image: UIImage?
 
     let assetId: String
     let loadImage: (String, CGSize) async -> UIImage?
 
-    init(
+    public init(
         assetId: String,
         loadImage: @escaping (String, CGSize) async -> UIImage?
     ) {
@@ -21,7 +21,7 @@ struct ThumbnailView: View {
         self.loadImage = loadImage
     }
 
-    var body: some View {
+    public var body: some View {
         GeometryReader { proxy in
             ZStack {
                 if let image {

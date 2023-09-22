@@ -78,13 +78,9 @@ public struct CameraView: View {
         .preferredColorScheme(.dark)
         .ignoresSafeArea()
         .statusBar(hidden: true)
-        .fullScreenCover(isPresented: $isPresentedGallery,
-                         onDismiss: {
-            
-        }, 
-                         content: {
-            GalleryView(photoLibrary: cameraModel.photoLibrary)
-        })
+        .fullScreenCover(isPresented: $isPresentedGallery){
+            GalleryView(cameraModel: cameraModel)
+        }
         
     }
     
@@ -113,6 +109,7 @@ public struct CameraView: View {
             Color.black
         }
     }
+    
     @ViewBuilder
     var cameraTopButtons: some View {
         HStack{
