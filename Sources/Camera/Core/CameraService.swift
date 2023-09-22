@@ -106,7 +106,7 @@ public extension CameraService{
                 var cameraMode: CameraMode = .none
                 do {
                     if !backCaptureDevices.isEmpty {
-                        cameraMode = try configureCameraInput(from: backCaptureDevices, for: .rear)
+                        cameraMode = try configureCameraInput(from: backCaptureDevices, for: .back)
                     } else if !frontCaptureDevices.isEmpty {
                         cameraMode = try configureCameraInput(from: frontCaptureDevices, for: .front)
                     }
@@ -222,7 +222,7 @@ public extension CameraService{
                     switch captureMode {
                     case .front:
                         cameraMode = try configureCameraInput(from: frontCaptureDevices, for: captureMode, at: index)
-                    case .rear:
+                    case .back:
                         cameraMode = try configureCameraInput(from: backCaptureDevices, for: captureMode, at: index)
                     case .none:
                         cameraMode = .none
@@ -376,14 +376,14 @@ extension CameraService: AVCapturePhotoCaptureDelegate {
 
 public enum CameraMode {
     case front
-    case rear
+    case back
     case none
 
     public var opposite: CameraMode {
         switch self {
         case .front:
-            return .rear
-        case .rear:
+            return .back
+        case .back:
             return .front
         case .none:
             return .none

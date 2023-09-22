@@ -12,16 +12,16 @@ import Photos
 @MainActor
 public class CameraModel: ObservableObject {
     private var subscribers: [AnyCancellable] = []
-    let camera = CameraService()
-    let photoLibrary = PhotoLibraryService()
+    public let camera = CameraService()
+    public let photoLibrary = PhotoLibraryService()
     
-    var rearDevices: [String] = []
-    var frontDevices: [String] = []
-    var scenePhase: ScenePhase = .inactive
-    var captureCache: [Int64: CaptureData] = [:]
+    private var backDevices: [String] = []
+    private var frontDevices: [String] = []
+    private var scenePhase: ScenePhase = .inactive
+    public var captureCache: [Int64: CaptureData] = [:]
     
-    init() {
-        rearDevices = camera.backCaptureDevices.map(\.deviceType.deviceName)
+    public init() {
+        backDevices = camera.backCaptureDevices.map(\.deviceType.deviceName)
         frontDevices = camera.frontCaptureDevices.map(\.deviceType.deviceName)
         camera.$captureEvent
             .receive(on: DispatchQueue.main)
@@ -31,44 +31,44 @@ public class CameraModel: ObservableObject {
             .store(in: &subscribers)
     }
     
-    @Published var photoData: Data?
-    @Published var rearDeviceIndex: Int = 0
-    @Published var cameraError: CameraError?
-    @Published var frontDeviceIndex: Int = 0
-    @Published var zoomFactor: CGFloat = 1.0
-    @Published var photos: Set<CapturePhoto> = []
-    @Published var lastZoomFactor: CGFloat = 1.0
-    @Published var enablesLivePhoto: Bool = true
-    @Published var cameraMode: CameraMode = .none
-    @Published var hidesCameraPreview: Bool = true
-    @Published var pointOfInterest: CGPoint = .zero
-    @Published var isAvailableLivePhoto: Bool = false
-    @Published var isAvailableFlashLight: Bool = false
-    @Published var photoLibraryError: PhotoLibraryError?
-    @Published var flashMode: AVCaptureDevice.FlashMode = .off
-    @Published var focusMode: AVCaptureDevice.FocusMode? = nil
-    @Published var exposureMode: AVCaptureDevice.ExposureMode? = nil
-    @Published var cameraPermission: AVAuthorizationStatus = .notDetermined
+    @Published public var photoData: Data?
+    @Published public var backDeviceIndex: Int = 0
+    @Published public var cameraError: CameraError?
+    @Published public var frontDeviceIndex: Int = 0
+    @Published public var zoomFactor: CGFloat = 1.0
+    @Published public var photos: Set<CapturePhoto> = []
+    @Published public var lastZoomFactor: CGFloat = 1.0
+    @Published public var enablesLivePhoto: Bool = true
+    @Published public var cameraMode: CameraMode = .none
+    @Published public var hidesCameraPreview: Bool = true
+    @Published public var pointOfInterest: CGPoint = .zero
+    @Published public var isAvailableLivePhoto: Bool = false
+    @Published public var isAvailableFlashLight: Bool = false
+    @Published public var photoLibraryError: PhotoLibraryError?
+    @Published public var flashMode: AVCaptureDevice.FlashMode = .off
+    @Published public var focusMode: AVCaptureDevice.FocusMode? = nil
+    @Published public var exposureMode: AVCaptureDevice.ExposureMode? = nil
+    @Published public var cameraPermission: AVAuthorizationStatus = .notDetermined
 }
 
 extension CameraModel {
-    func switchCameraMode() {
+    public func switchCameraMode() {
         var index: Int
         var cameraMode: CameraMode
         switch self.cameraMode.opposite {
         case .front:
             index = frontDeviceIndex
             cameraMode = .front
-        case .rear:
-            index = rearDeviceIndex
-            cameraMode = .rear
+        case .back:
+            index = backDeviceIndex
+            cameraMode = .back
         case .none:
             return
         }
         switchCameraDevice(to: index, for: cameraMode)
     }
     
-    func switchCameraDevice(to index: Int, for cameraMode: CameraMode) {
+    public func switchCameraDevice(to index: Int, for cameraMode: CameraMode) {
         Task {
             do {
                 let cameraMode = try await camera.switchCameraDevice(to: index, for: cameraMode)
@@ -83,13 +83,13 @@ extension CameraModel {
         }
     }
     
-    func toggleLivePhoto() {
+    public func toggleLivePhoto() {
         if isAvailableLivePhoto {
             enablesLivePhoto.toggle()
         }
     }
     
-    func switchFlashMode() {
+    public func switchFlashMode() {
         if isAvailableFlashLight {
             switch flashMode {
             case .off: flashMode = .auto
@@ -101,7 +101,7 @@ extension CameraModel {
         }
     }
     
-    func switchFocusMode() {
+    public func switchFocusMode() {
         Task {
             let newFocusMode: AVCaptureDevice.FocusMode
             let modes: [AVCaptureDevice.FocusMode] = [.autoFocus, .continuousAutoFocus, .locked].filter {
@@ -139,7 +139,7 @@ extension CameraModel {
         }
     }
     
-    func switchExposureMode() {
+    public func switchExposureMode() {
         Task {
             let newExposureMode: AVCaptureDevice.ExposureMode
             let modes: [AVCaptureDevice.ExposureMode] = [.autoExpose, .continuousAutoExposure, .locked].filter {
@@ -177,7 +177,7 @@ extension CameraModel {
         }
     }
     
-    func changePointOfInterest(to point: CGPoint, in frame: CGRect) {
+    public func changePointOfInterest(to point: CGPoint, in frame: CGRect) {
         Task {
             do {
                 await MainActor.run {
@@ -201,7 +201,7 @@ extension CameraModel {
         }
     }
     
-    func changeZoomFactor() {
+    public func changeZoomFactor() {
         Task {
             do {
                 try await camera.changeZoomFactor(to: zoomFactor)
@@ -213,13 +213,13 @@ extension CameraModel {
         }
     }
     
-    func capturePhoto() {
+    public func capturePhoto() {
         camera.capturePhoto(enablesLivePhoto: enablesLivePhoto, flashMode: flashMode)
     }
 }
 
 extension CameraModel {
-    func hideCameraPreview(_ value: Bool) {
+    public func hideCameraPreview(_ value: Bool) {
         withAnimation {
             hidesCameraPreview = value
         }
@@ -241,7 +241,7 @@ extension CameraModel {
 }
 
 extension CameraModel {
-    func onChangeScenePhase(to scenePhase: ScenePhase) {
+    public func onChangeScenePhase(to scenePhase: ScenePhase) {
         onChangeScenePhaseForCamera(to: scenePhase)
         onChangeScenePhaseForPhotoLibrary(to: scenePhase)
         self.scenePhase = scenePhase
@@ -295,7 +295,7 @@ extension CameraModel {
 }
 
 extension CameraModel {
-    func checkCameraPermission() async {
+    public func checkCameraPermission() async {
         let status = camera.cameraPermissionStatus
         await MainActor.run {
             cameraPermission = status
@@ -326,7 +326,7 @@ extension CameraModel {
         }
     }
     
-    func checkPhotoLibraryPermission() async {
+    public func checkPhotoLibraryPermission() async {
         let status = photoLibrary.photoLibraryPermissionStatus
         switch status {
         case .notDetermined:

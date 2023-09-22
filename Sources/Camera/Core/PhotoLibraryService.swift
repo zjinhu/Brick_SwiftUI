@@ -8,14 +8,18 @@
 import Foundation
 import UIKit
 import Photos
+import Combine
 #if os(iOS) && !os(xrOS)
 public class PhotoLibraryService: NSObject {
     let photoLibrary: PHPhotoLibrary
     let imageCachingManager = PHCachingImageManager()
 
+    @Published var photoLibraryChange : PHChange?
+    
     public override init() {
         self.photoLibrary = .shared()
         super.init()
+        self.photoLibrary.register(self)
     }
 }
 
@@ -89,6 +93,12 @@ public extension PhotoLibraryService {
 
     func requestPhotoLibraryPermission() async {
         await PHPhotoLibrary.requestAuthorization(for: .readWrite)
+    }
+}
+
+extension PhotoLibraryService: PHPhotoLibraryChangeObserver {
+    public func photoLibraryDidChange(_ changeInstance: PHChange) {
+        photoLibraryChange = changeInstance
     }
 }
 

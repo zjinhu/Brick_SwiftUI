@@ -6,10 +6,14 @@ import SwiftUI
 import AVFoundation
 #if os(iOS) && !os(xrOS)
 import UIKit
-struct CameraPreviewLayer: UIViewRepresentable {
+public struct CameraPreviewLayer: UIViewRepresentable {
     let camera: CameraService
 
-    func makeUIView(context: Context) -> LayerView {
+    public init(camera: CameraService) {
+        self.camera = camera
+    }
+    
+    public func makeUIView(context: Context) -> LayerView {
         let view = LayerView()
         camera.cameraPreviewLayer.videoGravity = .resizeAspectFill
         camera.cameraPreviewLayer.frame = view.frame
@@ -17,12 +21,12 @@ struct CameraPreviewLayer: UIViewRepresentable {
         return view
     }
 
-    func updateUIView(_ uiView: LayerView, context: Context) { }
+    public func updateUIView(_ uiView: LayerView, context: Context) { }
 }
 
 extension CameraPreviewLayer {
-    class LayerView: UIView {
-        override func layoutSubviews() {
+    public class LayerView: UIView {
+        public override func layoutSubviews() {
             super.layoutSubviews()
             /// disable default animation of layer.
             CATransaction.begin()
