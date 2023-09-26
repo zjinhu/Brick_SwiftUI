@@ -7,9 +7,9 @@
 
 import SwiftUI
 import Foundation
-
+import Photos
 public class PhotoViewModel: ObservableObject {
-    private let photoLibrary: PhotoLibraryService
+    public let photoLibrary: PhotoLibraryService
     private let assetId: String
     
     @Published public var photo: UIImage?
@@ -28,10 +28,9 @@ public class PhotoViewModel: ObservableObject {
 
 // MARK: - Fetching
 extension PhotoViewModel {
-    public func loadImage(targetSize: CGSize) async {
+    public func loadImage(targetSize: CGSize = PHImageManagerMaximumSize) async {
         do {
-            let size = CGSize(width: targetSize.width * 3, height: targetSize.height * 3)
-            let photo = try await photoLibrary.loadImage(for: assetId, targetSize: size)
+            let photo = try await photoLibrary.loadImage(for: assetId, targetSize: targetSize)
             await MainActor.run {
                 self.photo = photo
             }

@@ -82,9 +82,12 @@ public extension Binding where Value == Brick<Any>.NavigationPath {
       return true
     }
 }
-extension Binding {
+
+extension Binding: @unchecked Sendable{
     @MainActor
-    func withDelaysIfUnsupported<Screen>(from start: [Screen], to end: [Screen], keyPath: WritableKeyPath<Value, [Screen]>) async {
+    func withDelaysIfUnsupported<Screen>(from start: [Screen], 
+                                         to end: [Screen],
+                                         keyPath: WritableKeyPath<Value, [Screen]>) async {
       let steps = NavigationBrick.calculateSteps(from: start, to: end)
 
       wrappedValue[keyPath: keyPath] = steps.first!
@@ -92,7 +95,8 @@ extension Binding {
     }
 
     @MainActor
-    func scheduleRemainingSteps<Screen>(steps: [[Screen]], keyPath: WritableKeyPath<Value, [Screen]>) async {
+    func scheduleRemainingSteps<Screen>(steps: [[Screen]], 
+                                        keyPath: WritableKeyPath<Value, [Screen]>) async {
       guard let firstStep = steps.first else {
         return
       }
