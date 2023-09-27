@@ -25,31 +25,32 @@ public extension BrickLog {
             logger.log(level: level, "\(message, privacy: .public)")
         }
     }
+    
     func log(_ message: String){
-        logger.log("\(message)")
+        logger.log("ℹ️\(message)")
     }
     func trace(_ message: String){
-        logger.trace("\(message)")
+        logger.trace("❔\(message)")
     }
     func debug(_ message: String){
-        logger.debug("\(message)")
+        logger.debug("🛠️\(message)")
     }
     func info(_ message: String){
-        logger.info("\(message)")
+        logger.info("💬\(message)")
     }
     func notice(_ message: String){
-        logger.notice("\(message)")
+        logger.notice("❗️\(message)")
     }
     func warning(_ message: String){
-        logger.warning("\(message)")
+        logger.warning("‼️\(message)")
     }
     func error(_ message: String){
-        logger.error("\(message)")
+        logger.error("⛔️\(message)")
     }
     func critical(_ message: String){
-        logger.critical("\(message)")
+        logger.critical("🖍️\(message)")
     }
     func fault(_ message: String){
-        logger.fault("\(message)")
+        logger.fault("❌\(message)")
     }
 }
