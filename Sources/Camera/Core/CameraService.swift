@@ -25,6 +25,24 @@ public class CameraService: NSObject {
         super.init()
     }
     
+//    private var deviceOrientation: UIDeviceOrientation {
+//        var orientation = UIDevice.current.orientation
+//        if orientation == UIDeviceOrientation.unknown {
+//            orientation = UIScreen.main.orientation
+//        }
+//        return orientation
+//    }
+//    
+//    private func videoOrientationFor(_ deviceOrientation: UIDeviceOrientation) -> AVCaptureVideoOrientation? {
+//        switch deviceOrientation {
+//        case .portrait: return AVCaptureVideoOrientation.portrait
+//        case .portraitUpsideDown: return AVCaptureVideoOrientation.portraitUpsideDown
+//        case .landscapeLeft: return AVCaptureVideoOrientation.landscapeRight
+//        case .landscapeRight: return AVCaptureVideoOrientation.landscapeLeft
+//        default: return nil
+//        }
+//    }
+    
     private var allCaptureDevices: [AVCaptureDevice] {
         AVCaptureDevice.DiscoverySession(deviceTypes:
                                             [
@@ -166,6 +184,8 @@ public extension CameraService{
     private func configureCameraOutput() throws {
         let captureOutput = AVCapturePhotoOutput()
         captureOutput.isLivePhotoAutoTrimmingEnabled = false
+        captureOutput.isHighResolutionCaptureEnabled = true
+        captureOutput.maxPhotoQualityPrioritization = .quality
         let captureSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
         captureOutput.setPreparedPhotoSettingsArray([captureSettings], completionHandler: nil)
         guard captureSession.canAddOutput(captureOutput) else {
@@ -200,18 +220,34 @@ public extension CameraService{
 public extension CameraService{
     func capturePhoto(enablesLivePhoto: Bool = true, flashMode: AVCaptureDevice.FlashMode) {
         guard let captureOutput = captureOutput as? AVCapturePhotoOutput else { return }
-        let captureSettings: AVCapturePhotoSettings
-        captureOutput.isLivePhotoCaptureEnabled = isAvailableLivePhoto && enablesLivePhoto
-        if captureOutput.isLivePhotoCaptureEnabled {
-            captureSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.hevc])
-            if #available(iOS 16.0, *) {
-                captureSettings.livePhotoMovieFileURL = FileManager.default.temporaryDirectory.appending(component: UUID().uuidString).appendingPathExtension("mov")
+        captureQueue.async { [unowned self] in
+            let captureSettings: AVCapturePhotoSettings
+            captureOutput.isLivePhotoCaptureEnabled = isAvailableLivePhoto && enablesLivePhoto
+            if captureOutput.isLivePhotoCaptureEnabled {
+                captureSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.hevc])
+                if #available(iOS 16.0, *) {
+                    captureSettings.livePhotoMovieFileURL = FileManager.default.temporaryDirectory.appending(component: UUID().uuidString).appendingPathExtension("mov")
+                }
+            } else {
+                captureSettings = AVCapturePhotoSettings()
             }
-        } else {
-            captureSettings = AVCapturePhotoSettings()
+            
+            if let previewPhotoPixelFormatType = captureSettings.availablePreviewPhotoPixelFormatTypes.first {
+                captureSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPhotoPixelFormatType]
+            }
+            
+            captureSettings.flashMode = flashMode
+            captureSettings.photoQualityPrioritization = .speed
+            captureSettings.isHighResolutionPhotoEnabled = true
+//            if let photoOutputVideoConnection = captureOutput.connection(with: .video) {
+//                if photoOutputVideoConnection.isVideoOrientationSupported,
+//                   let videoOrientation = videoOrientationFor(deviceOrientation) {
+//                    photoOutputVideoConnection.videoOrientation = videoOrientation
+//                }
+//            }
+            
+            captureOutput.capturePhoto(with: captureSettings, delegate: self)
         }
-        captureSettings.flashMode = flashMode
-        captureOutput.capturePhoto(with: captureSettings, delegate: self)
     }
 
     func switchCameraDevice(to index: Int, for captureMode: CameraMode) async throws -> CameraMode {
@@ -342,7 +378,9 @@ public extension CameraService {
 
 public extension CameraService {
     func triggerCaptureEvent(_ event: CaptureEvent) {
-        captureEvent = event
+        captureQueue.async { [unowned self] in
+            captureEvent = event
+        }
     }
 }
 extension CameraService: AVCapturePhotoCaptureDelegate {
@@ -358,6 +396,10 @@ extension CameraService: AVCapturePhotoCaptureDelegate {
         }
         let photoData = photo.fileDataRepresentation()
         triggerCaptureEvent(.photo(uniqueID, photoData))
+//        if let previewCGImage = photo.previewCGImageRepresentation() {
+//            let image = UIImage(cgImage: previewCGImage, scale: 1, orientation: deviceOrientation.imageOrientation)
+//            triggerCaptureEvent(.photo(uniqueID, image.pngData()))
+//        }
     }
 
     public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingLivePhotoToMovieFileAt outputFileURL: URL, duration: CMTime, photoDisplayTime: CMTime, resolvedSettings: AVCaptureResolvedPhotoSettings, error: Error?) {
@@ -426,4 +468,40 @@ public extension CameraError {
     }
 }
 
+//fileprivate extension UIScreen {
+//
+//    var orientation: UIDeviceOrientation {
+//        let point = coordinateSpace.convert(CGPoint.zero, to: fixedCoordinateSpace)
+//        if point == CGPoint.zero {
+//            return .portrait
+//        } else if point.x != 0 && point.y != 0 {
+//            return .portraitUpsideDown
+//        } else if point.x == 0 && point.y != 0 {
+//            return .landscapeRight //.landscapeLeft
+//        } else if point.x != 0 && point.y == 0 {
+//            return .landscapeLeft //.landscapeRight
+//        } else {
+//            return .unknown
+//        }
+//    }
+//}
+//
+//fileprivate extension UIDeviceOrientation {
+//
+//    var imageOrientation: UIImage.Orientation {
+//        switch UIDevice.current.orientation {
+//        case .landscapeLeft:
+//            return UIImage.Orientation.right
+//        case .landscapeRight:
+//            return UIImage.Orientation.left
+//        case .portrait:
+//            return UIImage.Orientation.up
+//        case .portraitUpsideDown:
+//            return UIImage.Orientation.down
+//        default:
+//            return UIImage.Orientation.up
+//        }
+//    }
+//}
+ 
 #endif

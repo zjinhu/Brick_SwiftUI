@@ -352,7 +352,7 @@ extension CameraModel {
         case let .photo(uniqueId, photo):
             
             captureCache[uniqueId]?.setPhoto(photo)
-            guard let photo, let image = UIImage(data: photo, scale: 1) else { return }
+            guard let photo, let image = UIImage(data: photo) else { return }
             photoData = photo
             withAnimation {
                 _ = photos.insert(CapturePhoto(id: uniqueId, image: image))
@@ -363,17 +363,7 @@ extension CameraModel {
             captureCache[uniqueId]?.setLivePhotoURL(url)
             
         case let .end(uniqueId):
-            
-            Task {
-                guard let photo = photos.first(where: { uniqueId == $0.id }) else { return }
-                try? await Task.sleep(nanoseconds: 2_000_000_000)
-                await MainActor.run {
-                    withAnimation {
-                        _ = photos.remove(photo)
-                    }
-                }
-            }
-            
+
             if let captureData = captureCache[uniqueId], let photo = captureData.photo {
                 Task {
                     do {
@@ -386,6 +376,17 @@ extension CameraModel {
                     }
                 }
             }
+
+            Task {
+                guard let photo = photos.first(where: { uniqueId == $0.id }) else { return }
+                try? await Task.sleep(nanoseconds: 2_000_000_000)
+                await MainActor.run {
+                    withAnimation {
+                        _ = photos.remove(photo)
+                    }
+                }
+            }
+            
             
         case let .error(uniqueId, error):
             

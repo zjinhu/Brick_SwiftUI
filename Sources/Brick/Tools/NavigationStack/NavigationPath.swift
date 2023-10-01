@@ -41,7 +41,7 @@ extension Brick where Wrapped == Any {
 @available(tvOS, deprecated: 16)
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
-extension Brick.NavigationPath {
+public extension Brick.NavigationPath {
     /// Pushes a new screen via a push navigation.
     /// - Parameter screen: The screen to push.
     mutating func push(_ screen: AnyHashable) {
@@ -81,7 +81,7 @@ extension Brick.NavigationPath {
 @available(tvOS, deprecated: 16)
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
-extension Brick.NavigationPath {
+public extension Brick.NavigationPath {
     /// Pops to the topmost (most recently pushed) screen in the stack
     /// equal to the given screen. If no screens are found,
     /// the screens array will be unchanged.
@@ -106,7 +106,7 @@ extension Brick.NavigationPath {
 @available(tvOS, deprecated: 16)
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
-extension Brick.NavigationPath {
+public extension Brick.NavigationPath {
     /// A codable representation of a navigation path.
     struct CodableRepresentation {
         static let encoder = JSONEncoder()
