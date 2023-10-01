@@ -24,25 +24,7 @@ public class CameraService: NSObject {
         self.cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         super.init()
     }
-    
-//    private var deviceOrientation: UIDeviceOrientation {
-//        var orientation = UIDevice.current.orientation
-//        if orientation == UIDeviceOrientation.unknown {
-//            orientation = UIScreen.main.orientation
-//        }
-//        return orientation
-//    }
-//    
-//    private func videoOrientationFor(_ deviceOrientation: UIDeviceOrientation) -> AVCaptureVideoOrientation? {
-//        switch deviceOrientation {
-//        case .portrait: return AVCaptureVideoOrientation.portrait
-//        case .portraitUpsideDown: return AVCaptureVideoOrientation.portraitUpsideDown
-//        case .landscapeLeft: return AVCaptureVideoOrientation.landscapeRight
-//        case .landscapeRight: return AVCaptureVideoOrientation.landscapeLeft
-//        default: return nil
-//        }
-//    }
-    
+
     private var allCaptureDevices: [AVCaptureDevice] {
         AVCaptureDevice.DiscoverySession(deviceTypes:
                                             [
@@ -239,13 +221,7 @@ public extension CameraService{
             captureSettings.flashMode = flashMode
             captureSettings.photoQualityPrioritization = .speed
             captureSettings.isHighResolutionPhotoEnabled = true
-//            if let photoOutputVideoConnection = captureOutput.connection(with: .video) {
-//                if photoOutputVideoConnection.isVideoOrientationSupported,
-//                   let videoOrientation = videoOrientationFor(deviceOrientation) {
-//                    photoOutputVideoConnection.videoOrientation = videoOrientation
-//                }
-//            }
-            
+
             captureOutput.capturePhoto(with: captureSettings, delegate: self)
         }
     }
@@ -396,10 +372,6 @@ extension CameraService: AVCapturePhotoCaptureDelegate {
         }
         let photoData = photo.fileDataRepresentation()
         triggerCaptureEvent(.photo(uniqueID, photoData))
-//        if let previewCGImage = photo.previewCGImageRepresentation() {
-//            let image = UIImage(cgImage: previewCGImage, scale: 1, orientation: deviceOrientation.imageOrientation)
-//            triggerCaptureEvent(.photo(uniqueID, image.pngData()))
-//        }
     }
 
     public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingLivePhotoToMovieFileAt outputFileURL: URL, duration: CMTime, photoDisplayTime: CMTime, resolvedSettings: AVCaptureResolvedPhotoSettings, error: Error?) {
@@ -467,41 +439,4 @@ public extension CameraError {
         }
     }
 }
-
-//fileprivate extension UIScreen {
-//
-//    var orientation: UIDeviceOrientation {
-//        let point = coordinateSpace.convert(CGPoint.zero, to: fixedCoordinateSpace)
-//        if point == CGPoint.zero {
-//            return .portrait
-//        } else if point.x != 0 && point.y != 0 {
-//            return .portraitUpsideDown
-//        } else if point.x == 0 && point.y != 0 {
-//            return .landscapeRight //.landscapeLeft
-//        } else if point.x != 0 && point.y == 0 {
-//            return .landscapeLeft //.landscapeRight
-//        } else {
-//            return .unknown
-//        }
-//    }
-//}
-//
-//fileprivate extension UIDeviceOrientation {
-//
-//    var imageOrientation: UIImage.Orientation {
-//        switch UIDevice.current.orientation {
-//        case .landscapeLeft:
-//            return UIImage.Orientation.right
-//        case .landscapeRight:
-//            return UIImage.Orientation.left
-//        case .portrait:
-//            return UIImage.Orientation.up
-//        case .portraitUpsideDown:
-//            return UIImage.Orientation.down
-//        default:
-//            return UIImage.Orientation.up
-//        }
-//    }
-//}
- 
 #endif
