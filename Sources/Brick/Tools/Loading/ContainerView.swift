@@ -13,24 +13,25 @@ struct ContainerView<Content: View>: View {
     //绑定显示状态
     @Binding private var isActive: Bool
  
-    init( isActive: Binding<Bool>, @ViewBuilder content: @escaping ContentBuilder ) {
+    init(isActive: Binding<Bool>, @ViewBuilder content: @escaping ContentBuilder ) {
         _isActive = isActive
         self.content = content
     }
     
     var body: some View {
         ZStack{
-            Color.black
-                .opacity(0.3)
+            BlurView()
                 .ignoresSafeArea()
             
             content(isActive)
                 .frame(minWidth: 80, minHeight: 80)
-                .background(BlurView())
+                .background(Color.black.opacity(0.7))
                 .cornerRadius(10)
+                .shadow(color: .gray, radius: 5)
                 .animation(.spring())
-                .padding(100)
+                
         }
+        .edgesIgnoringSafeArea(.all)
         .opacity(!isActive ? 0 : 1)
     }
  

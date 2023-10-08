@@ -9,12 +9,12 @@ import SwiftUI
 
 public extension View {
     ///添加loading,也可以WindowGroup里给ContentView添加
-    func addLoading(_ ob: LoadingManager ) -> some View {
+    func addLoading(_ ob: StateManager ) -> some View {
         self.addLoading(isActive: ob.isActiveBinding, content: { ob.content })
     }
 }
 
-extension LoadingManager {
+extension StateManager {
     //展示自定义Loading//自己可以重写替换
     public func showLoading(){
         show {
@@ -47,7 +47,7 @@ extension LoadingManager {
     }
 }
 
-public class LoadingManager: ObservableObject {
+public class StateManager: ObservableObject {
     public init() {}
     //HUD提示
     @Published public var text: String?
@@ -73,7 +73,7 @@ public class LoadingManager: ObservableObject {
 
 }
 
-extension LoadingManager {
+extension StateManager {
     ///直接关闭loading
     public func hide() {
         isActive = false
@@ -97,8 +97,7 @@ extension View {
     
     private func addLoading<Content: View>(isActive: Binding<Bool>,
                                    content: @escaping () -> Content) -> some View {
-        ZStack{
-            self
+        overlay{
             ContainerView(isActive: isActive, content: { _ in content() })
         }
     }

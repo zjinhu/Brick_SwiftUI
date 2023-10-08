@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SuccessView: View {
-    @EnvironmentObject var manager: LoadingManager
+    @EnvironmentObject var manager: StateManager
     var body: some View {
         VStack{
             SuccessShape()
@@ -31,7 +31,7 @@ struct SuccessView: View {
 struct SuccessView_Previews: PreviewProvider {
     static var previews: some View {
         SuccessView()
-            .environmentObject(LoadingManager())
+            .environmentObject(StateManager())
     }
 }
 
