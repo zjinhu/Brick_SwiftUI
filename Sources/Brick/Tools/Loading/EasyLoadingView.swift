@@ -20,8 +20,7 @@ public struct EasyLoadingView<Content>: View where Content: View {
     public var body: some View {
         ZStack(alignment: .center) {
             
-            self.content()
-                .disabled(isShowing)
+            self.content() 
 
             BlurView()
                 .opacity(isShowing ? 1 : 0)
