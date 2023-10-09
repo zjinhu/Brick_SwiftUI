@@ -25,7 +25,7 @@ public struct CarouselView<Data, ID, Content> : View where Data : RandomAccessCo
             ForEach(viewModel.data, id: viewModel.dataId) {
                 content($0)
                     .frame(width: viewModel.itemWidth)
-                    .scaleEffect(x: 1, y: viewModel.itemScaling($0), anchor: .center)
+                    .scaleEffect(x: viewModel.itemScaling($0), y: viewModel.itemScaling($0), anchor: .center)
             }
         }
         .frame(width: proxy.size.width, height: proxy.size.height, alignment: .leading)
@@ -101,4 +101,31 @@ extension CarouselView where ID == Data.Element.ID, Data.Element : Identifiable 
         self.content = content
     }
     
+}
+
+public enum CarouselAutoScroll {
+    case inactive
+    case active(TimeInterval)
+}
+
+
+public extension CarouselAutoScroll {
+
+    static var defaultActive: Self {
+        return .active(5)
+    }
+
+    var isActive: Bool {
+        switch self {
+        case .active(let t): return t > 0
+        case .inactive : return false
+        }
+    }
+
+    var interval: TimeInterval {
+        switch self {
+        case .active(let t): return t
+        case .inactive : return 0
+        }
+    }
 }
