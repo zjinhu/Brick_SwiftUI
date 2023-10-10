@@ -18,8 +18,7 @@ public class CameraModel: ObservableObject {
     private var backDevices: [String] = []
     private var frontDevices: [String] = []
     private var scenePhase: ScenePhase = .inactive
-    public var captureCache: [Int64: CaptureData] = [:]
-    
+
     public init() {
         backDevices = camera.backCaptureDevices.map(\.deviceType.deviceName)
         frontDevices = camera.frontCaptureDevices.map(\.deviceType.deviceName)
@@ -36,7 +35,6 @@ public class CameraModel: ObservableObject {
     @Published public var cameraError: CameraError?
     @Published public var frontDeviceIndex: Int = 0
     @Published public var zoomFactor: CGFloat = 1.0
-    @Published public var photos: Set<CapturePhoto> = []
     @Published public var lastZoomFactor: CGFloat = 1.0
     @Published public var enablesLivePhoto: Bool = true
     @Published public var cameraMode: CameraMode = .none
@@ -231,7 +229,6 @@ extension CameraModel {
             self.pointOfInterest = .zero
         }
         self.cameraMode = cameraMode
-        self.isAvailableLivePhoto = camera.isAvailableLivePhoto
         self.isAvailableFlashLight = camera.isAvailableFlashLight
         self.focusMode = camera.captureDevice?.focusMode
         self.exposureMode = camera.captureDevice?.exposureMode
@@ -345,30 +342,17 @@ extension CameraModel {
     private func handleCaptureEvent(_ event: CaptureEvent?) {
         guard let event = event else { return }
         switch event {
-        case let .initial(uniqueId):
-            
-            captureCache[uniqueId] = CaptureData(uniqueId: uniqueId)
-            
-        case let .photo(uniqueId, photo):
-            
-            captureCache[uniqueId]?.setPhoto(photo)
-            guard let photo, let image = UIImage(data: photo) else { return }
-            photoData = photo
-            withAnimation {
-                _ = photos.insert(CapturePhoto(id: uniqueId, image: image))
-            }
-            
-        case let .livePhoto(uniqueId, url):
-            
-            captureCache[uniqueId]?.setLivePhotoURL(url)
-            
-        case let .end(uniqueId):
 
-            if let captureData = captureCache[uniqueId], let photo = captureData.photo {
+        case let .photo(photo):
+             
+            photoData = photo
+
+        case .end:
+
+            if let photo = photoData {
                 Task {
                     do {
-                        try await photoLibrary.savePhoto(for: photo, withLivePhotoURL: captureData.livePhotoURL)
-                        captureCache[uniqueId] = nil
+                        try await photoLibrary.savePhoto(for: photo)
                     } catch {
                         await MainActor.run {
                             photoLibraryError = error as? PhotoLibraryError ?? .unknownError
@@ -377,69 +361,16 @@ extension CameraModel {
                 }
             }
 
-            Task {
-                guard let photo = photos.first(where: { uniqueId == $0.id }) else { return }
-                try? await Task.sleep(nanoseconds: 2_000_000_000)
-                await MainActor.run {
-                    withAnimation {
-                        _ = photos.remove(photo)
-                    }
-                }
-            }
-            
-            
-        case let .error(uniqueId, error):
-            
-            captureCache[uniqueId] = nil
-            guard let photo = photos.first(where: { uniqueId == $0.id }) else { return }
-            
-            withAnimation {
-                _ = photos.remove(photo)
-            }
+        case let .error(error):
             cameraError = error as? CameraError ?? .unknownError
-
         }
     }
 }
 
 public enum CaptureEvent {
-    case initial(Int64)
-    case photo(Int64, Data?)
-    case livePhoto(Int64, URL)
-    case end(Int64)
-    case error(Int64, Error)
-}
-
-public struct CapturePhoto: Identifiable, Hashable, Comparable {
-    public static func < (lhs: CapturePhoto, rhs: CapturePhoto) -> Bool {
-        lhs.id < rhs.id
-    }
-    
-    public var id: Int64
-    public var image: UIImage
-    
-    public init(id: Int64, image: UIImage) {
-        self.id = id
-        self.image = image
-    }
-}
-
-public struct CaptureData {
-    public var uniqueId: Int64
-    public var photo: Data?
-    public var livePhotoURL: URL?
-    
-    public init(uniqueId: Int64) {
-        self.uniqueId = uniqueId
-    }
-    
-    mutating public func setPhoto(_ photo: Data?) {
-        self.photo = photo
-    }
-    
-    mutating public func setLivePhotoURL(_ url: URL) {
-        self.livePhotoURL = url
-    }
+    case photo(Data?)
+    case end
+    case error(Error)
 }
 
 public extension AVCaptureDevice.DeviceType {

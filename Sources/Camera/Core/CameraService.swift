@@ -58,13 +58,6 @@ public class CameraService: NSObject {
     var captureInput: AVCaptureInput?
     // MARK: - Output
     var captureOutput: AVCaptureOutput?
-    
-    public var isAvailableLivePhoto: Bool {
-        guard let captureOutput = captureOutput as? AVCapturePhotoOutput, captureOutput.availablePhotoCodecTypes.contains(.hevc) else {
-            return false
-        }
-        return captureOutput.isLivePhotoCaptureSupported
-    }
 
     public var isUsingFrontCaptureDevice: Bool {
         guard let captureDevice = captureDevice else { return false }
@@ -203,16 +196,16 @@ public extension CameraService{
     func capturePhoto(enablesLivePhoto: Bool = true, flashMode: AVCaptureDevice.FlashMode) {
         guard let captureOutput = captureOutput as? AVCapturePhotoOutput else { return }
         captureQueue.async { [unowned self] in
-            let captureSettings: AVCapturePhotoSettings
-            captureOutput.isLivePhotoCaptureEnabled = isAvailableLivePhoto && enablesLivePhoto
-            if captureOutput.isLivePhotoCaptureEnabled {
-                captureSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.hevc])
-                if #available(iOS 16.0, *) {
-                    captureSettings.livePhotoMovieFileURL = FileManager.default.temporaryDirectory.appending(component: UUID().uuidString).appendingPathExtension("mov")
-                }
-            } else {
-                captureSettings = AVCapturePhotoSettings()
-            }
+//            let captureSettings: AVCapturePhotoSettings
+//            captureOutput.isLivePhotoCaptureEnabled = isAvailableLivePhoto && enablesLivePhoto
+//            if captureOutput.isLivePhotoCaptureEnabled {
+//                captureSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.hevc])
+//                if #available(iOS 16.0, *) {
+//                    captureSettings.livePhotoMovieFileURL = FileManager.default.temporaryDirectory.appending(component: UUID().uuidString).appendingPathExtension("mov")
+//                }
+//            } else {
+            let captureSettings = AVCapturePhotoSettings()
+//            }
             
             if let previewPhotoPixelFormatType = captureSettings.availablePreviewPhotoPixelFormatTypes.first {
                 captureSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPhotoPixelFormatType]
@@ -360,31 +353,19 @@ public extension CameraService {
     }
 }
 extension CameraService: AVCapturePhotoCaptureDelegate {
-    public func photoOutput(_ output: AVCapturePhotoOutput, willBeginCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
-        triggerCaptureEvent(.initial(resolvedSettings.uniqueID))
-    }
 
     public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         let uniqueID = photo.resolvedSettings.uniqueID
         if let error {
-            triggerCaptureEvent(.error(uniqueID, error))
+            triggerCaptureEvent(.error(error))
             return
         }
         let photoData = photo.fileDataRepresentation()
-        triggerCaptureEvent(.photo(uniqueID, photoData))
-    }
-
-    public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingLivePhotoToMovieFileAt outputFileURL: URL, duration: CMTime, photoDisplayTime: CMTime, resolvedSettings: AVCaptureResolvedPhotoSettings, error: Error?) {
-        let uniqueID = resolvedSettings.uniqueID
-        if let error {
-            triggerCaptureEvent(.error(uniqueID, error))
-            return
-        }
-        triggerCaptureEvent(.livePhoto(uniqueID, outputFileURL))
+        triggerCaptureEvent(.photo(photoData))
     }
 
     public func photoOutput(_ output: AVCapturePhotoOutput, didFinishCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings, error: Error?) {
-        triggerCaptureEvent(.end(resolvedSettings.uniqueID))
+        triggerCaptureEvent(.end)
     }
 }
 

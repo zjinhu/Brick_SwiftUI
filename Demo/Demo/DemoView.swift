@@ -41,7 +41,7 @@ struct DemoView: View {
                         BannerView()
                     case .loading:
                         Loading()
-                            .environmentObject(LoadingManager())
+                            .environmentObject(StateManager())
                         
                     case .refresh:
                         Refresh()
