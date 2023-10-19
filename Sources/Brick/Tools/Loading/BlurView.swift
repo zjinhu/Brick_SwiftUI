@@ -11,6 +11,7 @@ import Foundation
 import AppKit
 public struct BlurView: NSViewRepresentable {
     public typealias NSViewType = NSVisualEffectView
+    public init() { }
     
     public func makeNSView(context: Context) -> NSVisualEffectView {
         let effectView = NSVisualEffectView()
@@ -29,6 +30,8 @@ public struct BlurView: NSViewRepresentable {
 import UIKit
 public struct BlurView: UIViewRepresentable {
     public typealias UIViewType = GlassmorphismView
+    
+    public init() { }
     
     public func makeUIView(context: Context) -> GlassmorphismView {
         let glassmorphismView = GlassmorphismView()
