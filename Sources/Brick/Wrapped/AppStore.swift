@@ -8,7 +8,9 @@
 import Foundation
 import StoreKit
 import SwiftUI
+#if os(iOS)
 import UIKit
+
 public extension Brick where Wrapped: View {
     @available(macOS, unavailable)
     @available(tvOS, unavailable)
@@ -52,3 +54,4 @@ struct StoreProductModifier: ViewModifier {
         }
     }
 }
+#endif

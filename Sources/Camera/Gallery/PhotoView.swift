@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BrickKit
+#if os(iOS) && !os(xrOS)
 struct PhotoView: View {
     
     @StateObject var viewModel: PhotoViewModel
@@ -129,3 +130,4 @@ struct PhotoView: View {
         }
     }
 }
+#endif

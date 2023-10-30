@@ -53,7 +53,7 @@ public struct EasyLoadingView<Content>: View where Content: View {
         NavigationView {
             List(["1", "2", "3", "4", "5"], id: \.self) { row in
                 Text(row)
-            }.navigationBarTitle(Text("Loader Test"), displayMode: .large)
+            }
         }
     }
 }

@@ -143,7 +143,7 @@ private struct TaskModifier<ID: Equatable>: ViewModifier {
     var id: ID
     var priority: TaskPriority
     var action: @Sendable () async -> Void
-    @State private var oldID: ID
+
     @State private var task: Task<Void, Never>?
     @State private var publisher = PassthroughSubject<(), Never>()
     
@@ -151,16 +151,16 @@ private struct TaskModifier<ID: Equatable>: ViewModifier {
         self.id = id
         self.priority = priority
         self.action = action
-        _oldID = .init(initialValue: id)
     }
 
     func body(content: Content) -> some View {
         content
-            .onReceive(Just(id)) { newID in
-                guard newID != oldID else { return }
+            .onChange(of: id) { _ in
+                publisher.send()
+            }
+            .onReceive(publisher) { _ in
                 task?.cancel()
                 task = Task(priority: priority, operation: action)
-                oldID = newID
             }
             .onAppear {
                 task?.cancel()

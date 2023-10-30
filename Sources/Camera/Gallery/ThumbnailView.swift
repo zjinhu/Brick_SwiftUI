@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BrickKit
+#if os(iOS) && !os(xrOS)
 public struct ThumbnailView: View {
     @State var image: UIImage?
 
@@ -47,4 +48,4 @@ public struct ThumbnailView: View {
         }
     }
 }
-
+#endif

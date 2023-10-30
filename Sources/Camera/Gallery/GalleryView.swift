@@ -8,6 +8,7 @@
 import Photos
 import SwiftUI
 import BrickKit
+#if os(iOS) && !os(xrOS)
 struct GalleryView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject var viewModel: GalleryViewModel
@@ -60,3 +61,4 @@ struct GalleryView: View {
         .preferredColorScheme(.dark)
     }
 }
+#endif

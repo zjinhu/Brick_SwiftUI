@@ -9,6 +9,7 @@ import Photos
 import SwiftUI
 import Foundation
 import Combine
+#if os(iOS) && !os(xrOS)
 public class GalleryViewModel: ObservableObject {
     private let photoLibrary: PhotoLibraryService
     private var subscribers: [AnyCancellable] = []
@@ -51,3 +52,4 @@ extension GalleryViewModel {
         }
     }
 }
+#endif

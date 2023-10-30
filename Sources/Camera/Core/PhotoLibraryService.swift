@@ -6,10 +6,10 @@
 //
 
 import Foundation
-import UIKit
 import Photos
 import Combine
 #if os(iOS) && !os(xrOS)
+import UIKit
 public class PhotoLibraryService: NSObject {
     let photoLibrary: PHPhotoLibrary
     let imageCachingManager = PHCachingImageManager()

@@ -8,6 +8,7 @@
 import SwiftUI
 import Foundation
 import Photos
+#if os(iOS) && !os(xrOS)
 public class PhotoViewModel: ObservableObject {
     public let photoLibrary: PhotoLibraryService
     private let assetId: String
@@ -41,3 +42,4 @@ extension PhotoViewModel {
         }
     }
 }
+#endif

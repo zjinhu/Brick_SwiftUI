@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+#if os(iOS)
 struct OnTap: ViewModifier {
     let response: (CGPoint) -> Void
     
@@ -28,7 +28,7 @@ public extension Brick where Wrapped: View {
         wrapped.modifier(OnTap(response: handler))
     }
 }
-
+#endif
 //struct ClickGesture: Gesture {
 //    let count: Int
 //    let coordinateSpace: CoordinateSpace
