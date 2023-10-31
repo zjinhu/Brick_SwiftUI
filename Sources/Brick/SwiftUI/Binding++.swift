@@ -7,7 +7,8 @@ import SwiftUI
 extension Binding {
     @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
     public init(_from binding: FocusState<Value>.Binding) where Value: Hashable {
-        self.init(get: { binding.wrappedValue }, set: { binding.wrappedValue = $0 })
+        self.init(get: { binding.wrappedValue },
+                  set: { binding.wrappedValue = $0 })
     }
 }
 
@@ -82,9 +83,33 @@ extension Binding {
             set: { wrappedValue[keyPath: keyPath] = $0 }
         )
     }
+    
+    public func _map<T>(_ transform: @escaping (Value) -> T,
+                        _ reverse : @escaping (T) -> Value) -> Binding<T> {
+        Binding<T>(
+            get: { transform(self.wrappedValue) },
+            set: { wrappedValue = reverse($0) }
+        )
+    }
+    
+    public func _map<T, U>(_ transform: @escaping (T) -> U,
+                           _ reverse : @escaping (U) -> T) -> Binding<U?> where Value == Optional<T> {
+        Binding<U?>(
+            get: { self.wrappedValue.map(transform) },
+            set: { wrappedValue = $0.map(reverse) }
+        )
+    }
 }
 
 extension Binding {
+    
+    public func onSet(perform body: @escaping (Value) -> ()) -> Self {
+        return .init(
+            get: { self.wrappedValue },
+            set: { self.wrappedValue = $0; body($0) }
+        )
+    }
+    
     public func onChange(perform action: @escaping (Value) -> ()) -> Self where Value: Equatable {
         return .init(
             get: { self.wrappedValue },
@@ -104,15 +129,6 @@ extension Binding {
         onChange { _ in
             value.wrappedValue.toggle()
         }
-    }
-    
-    public func onSet(
-        perform body: @escaping (Value) -> ()
-    ) -> Self {
-        return .init(
-            get: { self.wrappedValue },
-            set: { self.wrappedValue = $0; body($0) }
-        )
     }
 
     public func mirror(
@@ -182,6 +198,17 @@ extension Binding {
             }
         )
     }
+    
+    public static func unwrapping(_ other: Binding<Value?>) -> Self? {
+          guard let wrappedValue = other.wrappedValue else {
+              return nil
+          }
+          
+          return Binding(
+              get: { other.wrappedValue ?? wrappedValue },
+              set: { other.wrappedValue = $0 }
+          )
+      }
 }
 
 extension Binding {
@@ -200,97 +227,156 @@ extension Binding {
     }
     
     /// Creates a `Binding<Bool>` that reports whether `binding.wrappedValue` equals a given value.
-    ///
-    /// `binding.wrappedValue` will be set to `nil` only if `binding.wrappedValue` is equal to the given value and the `Boolean` value being set is `false.`
-    public static func boolean<T: Equatable>(
-        _ binding: Binding<T?>,
-        equals value: T
-    ) -> Binding<Bool> where Value == Bool {
-        .init(
-            get: {
-                binding.wrappedValue == value
-            },
-            set: { newValue in
-                if newValue {
-                    binding.wrappedValue = value
-                } else {
-                    if binding.wrappedValue == value {
-                        binding.wrappedValue = nil
-                    }
-                }
-            }
-        )
-    }
-    
-    /// Creates a `Binding<Bool>` that reports whether `binding.wrappedValue` equals a given value.
-    ///
-    /// `binding.wrappedValue` will be set to `nil` only if `binding.wrappedValue` is equal to the given value and the `Boolean` value being set is `false.`
-    public static func boolean<T: AnyObject>(
-        _ binding: Binding<T?>,
-        equals value: T
-    ) -> Binding<Bool> where Value == Bool {
-        .init(
-            get: {
-                binding.wrappedValue === value
-            },
-            set: { newValue in
-                if newValue {
-                    binding.wrappedValue = value
-                } else {
-                    if binding.wrappedValue === value {
-                        binding.wrappedValue = nil
-                    }
-                }
-            }
-        )
-    }
-    
-    /// Creates a `Binding<Bool>` that reports whether `binding.wrappedValue` equals a given value.
-    ///
-    /// `binding.wrappedValue` will be set to `nil` only if `binding.wrappedValue` is equal to the given value and the `Boolean` value being set is `false.`
-    public static func boolean<T: AnyObject & Equatable>(
-        _ binding: Binding<T?>,
-        equals value: T
-    ) -> Binding<Bool> where Value == Bool {
-        .init(
-            get: {
-                binding.wrappedValue == value
-            },
-            set: { newValue in
-                if newValue {
-                    binding.wrappedValue = value
-                } else {
-                    if binding.wrappedValue == value {
-                        binding.wrappedValue = nil
-                    }
-                }
-            }
-        )
-    }
+       ///
+       /// `binding.wrappedValue` will be set to `nil` only if `binding.wrappedValue` is equal to the given value and the `Boolean` value being set is `false.`
+       public static func boolean<T: Equatable>(
+           _ binding: Binding<T?>,
+           equals value: T?
+       ) -> Binding<Bool> where Value == Bool {
+           .init(
+               get: {
+                   binding.wrappedValue == value
+               },
+               set: { newValue in
+                   if newValue {
+                       binding.wrappedValue = value
+                   } else {
+                       if binding.wrappedValue == value {
+                           binding.wrappedValue = nil
+                       }
+                   }
+               }
+           )
+       }
+       
+       /// Creates a `Binding<Bool>` that reports whether `binding.wrappedValue` equals a given value.
+       ///
+       /// `binding.wrappedValue` will be set to `nil` only if `binding.wrappedValue` is equal to the given value and the `Boolean` value being set is `false.`
+       public static func boolean<T: Equatable>(
+           _ binding: Binding<T?>,
+           equals value: T
+       ) -> Binding<Bool> where Value == Bool {
+           .init(
+               get: {
+                   binding.wrappedValue == value
+               },
+               set: { newValue in
+                   if newValue {
+                       binding.wrappedValue = value
+                   } else {
+                       if binding.wrappedValue == value {
+                           binding.wrappedValue = nil
+                       }
+                   }
+               }
+           )
+       }
+       
+       /// Creates a `Binding<Bool>` that reports whether `binding.wrappedValue` equals a given value.
+       ///
+       /// `binding.wrappedValue` will be set to `nil` only if `binding.wrappedValue` is equal to the given value and the `Boolean` value being set is `false.`
+       public static func boolean<T: AnyObject>(
+           _ binding: Binding<T?>,
+           equals value: T
+       ) -> Binding<Bool> where Value == Bool {
+           .init(
+               get: {
+                   binding.wrappedValue === value
+               },
+               set: { newValue in
+                   if newValue {
+                       binding.wrappedValue = value
+                   } else {
+                       if binding.wrappedValue === value {
+                           binding.wrappedValue = nil
+                       }
+                   }
+               }
+           )
+       }
+       
+       /// Creates a `Binding<Bool>` that reports whether `binding.wrappedValue` equals a given value.
+       ///
+       /// `binding.wrappedValue` will be set to `nil` only if `binding.wrappedValue` is equal to the given value and the `Boolean` value being set is `false.`
+       public static func boolean<T: AnyObject & Equatable>(
+           _ binding: Binding<T?>,
+           equals value: T
+       ) -> Binding<Bool> where Value == Bool {
+           .init(
+               get: {
+                   binding.wrappedValue == value
+               },
+               set: { newValue in
+                   if newValue {
+                       binding.wrappedValue = value
+                   } else {
+                       if binding.wrappedValue == value {
+                           binding.wrappedValue = nil
+                       }
+                   }
+               }
+           )
+       }
 
-    /// Creates a `Binding<Bool>` that reports whether `binding.wrappedValue` equals a given value.
-    ///
-    /// `binding.wrappedValue` will be set to `nil` only if `binding.wrappedValue` is equal to the given value and the `Boolean` value being set is `false.`
-    public static func boolean<T: Equatable>(
-        _ binding: Binding<T>,
-        equals value: T,
-        default defaultValue: T
-    ) -> Binding<Bool> where Value == Bool {
-        .init(
-            get: {
-                binding.wrappedValue == value
-            },
-            set: { newValue in
-                if newValue {
-                    binding.wrappedValue = value
-                } else {
-                    if binding.wrappedValue == value {
-                        binding.wrappedValue = defaultValue
-                    }
-                }
-            }
-        )
-    }
+       /// Creates a `Binding<Bool>` that reports whether `binding.wrappedValue` equals a given value.
+       ///
+       /// `binding.wrappedValue` will be set to `nil` only if `binding.wrappedValue` is equal to the given value and the `Boolean` value being set is `false.`
+       public static func boolean<T: Equatable>(
+           _ binding: Binding<T>,
+           equals value: T,
+           default defaultValue: T
+       ) -> Binding<Bool> where Value == Bool {
+           .init(
+               get: {
+                   binding.wrappedValue == value
+               },
+               set: { newValue in
+                   if newValue {
+                       binding.wrappedValue = value
+                   } else {
+                       if binding.wrappedValue == value {
+                           binding.wrappedValue = defaultValue
+                       }
+                   }
+               }
+           )
+       }
+       
+       public static func boolean<T: Hashable>(
+           _ binding: Binding<Set<T>>,
+           contains value: T
+       ) -> Binding<Bool> {
+           Binding<Bool>(
+               get: {
+                   binding.wrappedValue.contains(value)
+               },
+               set: { newValue in
+                   if newValue {
+                       binding.wrappedValue.insert(value)
+                   } else {
+                       binding.wrappedValue.remove(value)
+                   }
+               }
+           )
+       }
+       
+       public static func boolean<T: Hashable>(
+           _ binding: Binding<Set<T>>,
+           equals value: T
+       ) -> Binding<Bool> {
+           Binding<Bool>(
+               get: {
+                   binding.wrappedValue == [value]
+               },
+               set: { newValue in
+                   if newValue {
+                       binding.wrappedValue = [value]
+                   } else {
+                       binding.wrappedValue.remove(value)
+                   }
+               }
+           )
+       }
 }
 
 extension Binding {
