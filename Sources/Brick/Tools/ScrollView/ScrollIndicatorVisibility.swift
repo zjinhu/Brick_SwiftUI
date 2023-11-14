@@ -17,7 +17,7 @@ extension Brick where Wrapped == Any {
             case hidden
         }
 
-        let visibility: Brick.Visibility
+        let visibility: Visibility
 
         var scrollViewVisible: Bool {
             visibility != .hidden

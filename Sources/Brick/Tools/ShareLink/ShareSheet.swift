@@ -15,7 +15,6 @@ extension View {
 #endif
 
 #if os(macOS)
-@available(macOS 11, *)
 private struct ShareSheet<Data>: NSViewRepresentable where Data: RandomAccessCollection, Data.Element: Shareable {
     @Binding var item: ActivityItem<Data>?
 

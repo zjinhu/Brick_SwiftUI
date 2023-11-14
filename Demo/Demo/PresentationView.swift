@@ -70,7 +70,7 @@ struct PresentationView: View {
 private struct SheetView: View {
     @Environment(\.dismiss) private var dismiss
     
-    @State private var visible: Brick.Visibility = .hidden
+    @State private var visible: Visibility = .hidden
     @State private var isModal: Bool = false
     @State private var enablePrompt: Bool = true
     @State private var showPrompt: Bool = false
@@ -91,7 +91,7 @@ private struct SheetView: View {
                         Slider(value: $cornerRadius, in: 0...100)
                     }
 #endif
-
+                    
                 }
                 
                 Section {
@@ -162,7 +162,7 @@ private struct SheetView: View {
 #endif
                 }
             }
-//            .listStyle(.insetGrouped)
+            //            .listStyle(.insetGrouped)
             .navigationTitle("Sheet")
             .toolbar {
                 ToolbarItem {
@@ -191,13 +191,11 @@ extension View {
         contentInteraction: Brick<Any>.PresentationContentInteraction,
         cornerRadius: CGFloat?
     ) -> some View {
-        if #available(iOS 15, *) {
-            ss.presentationDetents(detents, selection: selection)
-                .ss.presentationBackgroundInteraction(backgroundInteraction)
-                .ss.presentationContentInteraction(contentInteraction)
-                .ss.presentationCornerRadius(cornerRadius)
-        } else {
-            self
-        }
+        
+        ss.presentationDetents(detents, selection: selection)
+            .ss.presentationBackgroundInteraction(backgroundInteraction)
+            .ss.presentationContentInteraction(contentInteraction)
+            .ss.presentationCornerRadius(cornerRadius)
+        
     }
-} 
+}

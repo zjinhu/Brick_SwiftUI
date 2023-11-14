@@ -176,11 +176,8 @@ extension View {
     /// Sets the tint color of the elements displayed by this view.
     @ViewBuilder
     public func tintColor(_ color: Color?) -> some View {
-        if #available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *) {
-            self.tint(color).environment(\.tintColor, color)
-        } else {
-            self.environment(\.tintColor, color)
-        }
+        tint(color)
+            .environment(\.tintColor, color)
     }
 }
 

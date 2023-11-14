@@ -36,7 +36,7 @@ public struct ThumbnailView: View {
                         .opacity(0.3)
                 }
             }
-            .ss.task {
+            .task {
                 let image = await loadImage(assetId, proxy.size)
                 await MainActor.run {
                     self.image = image

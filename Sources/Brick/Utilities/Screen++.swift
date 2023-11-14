@@ -398,7 +398,6 @@ private extension InspectionView {
     }
 }
 #elseif os(macOS)
-@available(macOS 11, *)
 private extension InspectionView {
     struct Representable: NSViewRepresentable {
         let parent: InspectionView

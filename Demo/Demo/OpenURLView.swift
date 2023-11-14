@@ -16,8 +16,8 @@ struct OpenURLView: View {
 #if os(iOS) && !os(xrOS)
             NavigationLink("Webview", destination: WebView(url: URL(string: "https://www.qq.com")!))
             
-            if #available(iOS 15.0, *) {
-                Brick.Link("In-app Safari", destination: URL(string: "https://github.com/jackiehu1122/SwiftBrick")!)
+            
+            Brick.Link("In-app Safari", destination: URL(string: "https://github.com/jackiehu1122/SwiftBrick")!)
                     .environment(\.openURL, .init { url in
                             .safari(url) { config in
                                 config.tintColor = .red
@@ -26,7 +26,7 @@ struct OpenURLView: View {
                                 config.barCollapsingEnabled = false
                             }
                     })
-            }
+            
 #endif
             Button {
                 openURL(URL(string: "https://www.baidu.com")!)

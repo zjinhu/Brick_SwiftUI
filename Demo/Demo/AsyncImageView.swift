@@ -13,7 +13,7 @@ struct AsyncImageView: View {
     var body: some View {
         VScrollStack{
    
-            Brick.AsyncImage(url: URL(string:"https://t7.baidu.com/it/u=2531125946,3055766435&fm=193&f=GIF")!) { image in
+            AsyncImage(url: URL(string:"https://t7.baidu.com/it/u=2531125946,3055766435&fm=193&f=GIF")!) { image in
                 image
                     .resizable()
             } placeholder: {
@@ -22,7 +22,7 @@ struct AsyncImageView: View {
             .frame(width: 250, height: 250)
             
             
-            Brick.AsyncImage(url: URL(string:"https://t7.baidu.com/it/u=2531125946,3055766435&fm=193&f=GIF")!, scale: 2) { phase in // 1
+            AsyncImage(url: URL(string:"https://t7.baidu.com/it/u=2531125946,3055766435&fm=193&f=GIF")!, scale: 2) { phase in // 1
                 if let image = phase.image { // 2
                     // if the image is valid
                     image
@@ -41,7 +41,7 @@ struct AsyncImageView: View {
                 }
             }.padding()
             
-            Brick.AsyncImage(url: URL(string: "AWrongURL")!) { phase in // 1
+            AsyncImage(url: URL(string: "AWrongURL")!) { phase in // 1
                 if let image = phase.image { // 2
                     // if the image is valid
                     image

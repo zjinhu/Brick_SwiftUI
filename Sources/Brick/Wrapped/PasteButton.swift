@@ -138,31 +138,12 @@ public extension Brick where Wrapped == Any {
 
 struct PasteButtonStyle: PrimitiveButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
-        if #available(iOS 15, *) {
-            Button {
-                configuration.trigger()
-            } label: {
-                configuration.label
-            }
-            .buttonStyle(.borderedProminent)
-        } else {
-            Button {
-                configuration.trigger()
-            } label: {
-                configuration.label
-                    .padding(.horizontal)
-                    .padding(.vertical, 8)
-                    .ss.background {
-                        if #available(iOS 15, *) {
-                            RoundedRectangle(cornerRadius: 8)
-                                .foregroundStyle(.tint)
-                        } else {
-                            RoundedRectangle(cornerRadius: 8)
-                                .foregroundColor(.accentColor)
-                        }
-                    }
-            }
+        Button {
+            configuration.trigger()
+        } label: {
+            configuration.label
         }
+        .buttonStyle(.borderedProminent)
     }
 }
 #endif

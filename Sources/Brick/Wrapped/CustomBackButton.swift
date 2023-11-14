@@ -7,7 +7,7 @@
 
 import SwiftUI
 #if os(iOS)
-@available(iOS 14.0, watchOS 8.0, *)
+
 @available(macOS, unavailable)
 @available(tvOS, unavailable)
 struct CustomBackButton<Image: View>: ViewModifier {
@@ -30,7 +30,6 @@ struct CustomBackButton<Image: View>: ViewModifier {
     }
 }
 
-@available(iOS 14.0, watchOS 8.0, *)
 @available(macOS, unavailable)
 @available(tvOS, unavailable)
 extension Brick where Wrapped: View {

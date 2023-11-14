@@ -130,7 +130,6 @@ public extension Brick<Any> {
 }
 
 #if os(iOS) && !os(xrOS)
-@available(iOS 15, *)
 private extension Brick<Any> {
     struct Representable: UIViewControllerRepresentable {
         let detents: Set<Brick<Any>.PresentationDetent>
@@ -146,7 +145,6 @@ private extension Brick<Any> {
     }
 }
 
-@available(iOS 15, *)
 private extension Brick.Representable {
     final class Controller: UIViewController, UISheetPresentationControllerDelegate {
 

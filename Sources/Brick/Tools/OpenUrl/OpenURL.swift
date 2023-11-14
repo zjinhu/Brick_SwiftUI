@@ -70,10 +70,6 @@ extension Brick where Wrapped == Any {
     /// handler always returns ``Brick.OpenURLAction.Result.handled``.
     public struct OpenURLAction {
 
-        @available(iOS, deprecated: 15)
-        @available(tvOS, deprecated: 15)
-        @available(macOS, deprecated: 12)
-        @available(watchOS, deprecated: 8)
         public struct Result {
             enum Value {
                 case handled

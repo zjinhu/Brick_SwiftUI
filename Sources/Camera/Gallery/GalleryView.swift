@@ -55,7 +55,7 @@ struct GalleryView: View {
             }
             .navigationViewStyle(.stack)
         }
-        .ss.task {
+        .task {
             await viewModel.loadAllPhotos()
         }
         .preferredColorScheme(.dark)

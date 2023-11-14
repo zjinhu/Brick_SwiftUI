@@ -2,7 +2,6 @@ import Foundation
 
 public extension Brick where Wrapped: URLSession {
 
-    @available(macOS 12.0, iOS 15.0, watchOS 8.0, tvOS 15.0, *)
     func data(for request: URLRequest) async throws -> (Data, URLResponse, URLSessionTaskMetrics) {
         let controller = URLSessionTaskController()
         let (data, response) = try await wrapped.data(for: request, delegate: controller)

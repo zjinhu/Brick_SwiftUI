@@ -72,7 +72,6 @@ extension ColorRenderingMode {
 #endif
 
 #if os(macOS)
-@available(macOS 11, *)
 private extension NSView {
     var snapshot: NSImage? {
         return NSImage(data: dataWithPDF(inside: bounds))

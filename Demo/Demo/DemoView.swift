@@ -14,7 +14,7 @@ struct DemoView: View {
         Brick.NavigationStack {
             DemoStackView()
 #if !os(xrOS) && os(iOS)
-                .ss.tabBar(.hidden)
+                .ss.tabBar(.visible)
 #endif
                 .navigationTitle("BrickKit")
                 .toolbar {
@@ -53,13 +53,9 @@ struct DemoView: View {
                     case .safeAreaPaddingView:
                         SafeAreaPaddingView()
                     case .presentationView:
-                        if #available(iOS 14.0, macOS 11.0, tvOS 17.0, *){
-                            PresentationView()
-                        }
+                        PresentationView()
                     case .animationCompleted:
-                        if #available(iOS 14.0, macOS 11.0, tvOS 16.0, watchOS 7.0, *){
-                            AnimationCompleted()
-                        }
+                        AnimationCompleted()
                     case .scrollStackView:
                         ScrollStackView()
 #if !os(xrOS) && os(iOS)

@@ -10,21 +10,21 @@ struct FocusStateView: View {
 
     @State private var username = ""
     @State private var password = ""
-    @Brick.FocusState private var focusedField: Field?
+    @FocusState private var focusedField: Field?
 
     var body: some View {
-        Form {
+        Form{
             TextField("Username", text: $username)
-                .ss.focused($focusedField, equals: .username)
-                .ss.submitLabel(.next)
-                .ss.onSubmit {
+                .focused($focusedField, equals: .username)
+                .submitLabel(.next)
+                .onSubmit {
                     focusedField = .password
                 }
 
             SecureField("Password", text: $password)
-                .ss.focused($focusedField, equals: .password)
-                .ss.submitLabel(.done)
-                .ss.onSubmit {
+                .focused($focusedField, equals: .password)
+                .submitLabel(.done)
+                .onSubmit {
                     signIn()
                 }
 
