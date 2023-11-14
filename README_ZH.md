@@ -2,7 +2,7 @@
 
 [![SPM](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager/)
 ![Xcode 14.0+](https://img.shields.io/badge/Xcode-14.0%2B-blue.svg)
-![iOS 14.0+](https://img.shields.io/badge/iOS-14.0%2B-blue.svg)
+![iOS 15.0+](https://img.shields.io/badge/iOS-15.0%2B-blue.svg)
 ![Swift 5.0+](https://img.shields.io/badge/Swift-5.0%2B-orange.svg)
 ![SwiftUI 3.0+](https://img.shields.io/badge/SwiftUI-3.0%2B-orange.svg)
 
@@ -10,13 +10,13 @@
 
 此Package与[Gitee](https://gitee.com/zjinhu/brick)同步，如果觉得SPM引入github地址偏慢可以使用Gitee。
 
-内置了各种辅助开发的工具，以及iOS15以后新添加的API向iOS14进行了兼容,具体功能请运行Demo查看用法
+内置了各种辅助开发的工具，以及iOS16以后新添加的API向iOS15进行了兼容,具体功能请运行Demo查看用法
 
 | ![](Image/1.png) | ![](Image/2.png) |
 | ---------------- | ---------------- |
 |                  |                  |
 
-支持iOS14
+支持iOS15
 
 - [x] AsyncImage
 
