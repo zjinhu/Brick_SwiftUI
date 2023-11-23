@@ -9,7 +9,7 @@ import Photos
 import SwiftUI
 import Foundation
 import Combine
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 public class GalleryViewModel: ObservableObject {
     private let photoLibrary: PhotoLibraryService
     private var subscribers: [AnyCancellable] = []

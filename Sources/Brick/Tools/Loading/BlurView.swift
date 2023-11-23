@@ -26,7 +26,7 @@ public struct BlurView: NSViewRepresentable {
         nsView.blendingMode = .withinWindow
     }
 }
-#elseif !os(xrOS)
+#elseif os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)
 import UIKit
 public struct BlurView: UIViewRepresentable {
     public typealias UIViewType = GlassmorphismView

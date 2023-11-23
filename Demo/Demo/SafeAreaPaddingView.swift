@@ -22,7 +22,7 @@ struct SafeAreaPaddingView: View {
             Color.yellow
                 .ss.safeAreaPadding(24)
         }
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
         .ss.tabBar(.hidden)
 #endif
     }

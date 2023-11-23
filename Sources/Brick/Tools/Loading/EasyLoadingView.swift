@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 public struct EasyLoadingView<Content>: View where Content: View {
 
     @Binding var isShowing: Bool
@@ -21,10 +20,16 @@ public struct EasyLoadingView<Content>: View where Content: View {
         ZStack(alignment: .center) {
             
             self.content() 
-
+            
+#if os(iOS) || os(macOS) || os(tvOS) || targetEnvironment(macCatalyst)
             BlurView()
                 .opacity(isShowing ? 1 : 0)
                 .ignoresSafeArea()
+#else
+            Color.black.opacity(0.5)
+                .opacity(isShowing ? 1 : 0)
+                .ignoresSafeArea()
+#endif
             
             ZStack{
                 Color.black

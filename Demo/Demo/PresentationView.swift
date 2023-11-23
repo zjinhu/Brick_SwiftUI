@@ -61,7 +61,7 @@ struct PresentationView: View {
         } label: {
             Text("Presentation")
         }
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
         .ss.tabBar(.hidden)
 #endif
     }

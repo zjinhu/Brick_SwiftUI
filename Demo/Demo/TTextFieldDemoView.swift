@@ -97,7 +97,7 @@ struct TTextFieldDemoView: View {
 #endif
         }
         .padding()
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
         .ss.tabBar(.hidden)
 #endif
     }

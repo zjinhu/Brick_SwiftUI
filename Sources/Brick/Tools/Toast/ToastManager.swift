@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-#if !os(xrOS)
+#if !os(visionOS)
 public extension View {
     ///添加Toast
     func addToast(_ ob: ToastManager) -> some View {

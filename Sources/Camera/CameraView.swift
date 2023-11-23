@@ -4,7 +4,8 @@
 
 import SwiftUI
 import BrickKit
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
+
 import UIKit
 public struct CameraView: View {
     @Binding var photoData: Data?

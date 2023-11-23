@@ -1,4 +1,4 @@
-#if (os(macOS) || os(iOS)) && !os(xrOS)
+#if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
 import SwiftUI
 
 @available(iOS, deprecated: 16)

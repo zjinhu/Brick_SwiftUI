@@ -20,7 +20,7 @@ extension Brick where Wrapped == Any {
 
         let dismissMode: DismissMode
 
-        #if os(iOS) && !os(xrOS)
+        #if os(iOS) || targetEnvironment(macCatalyst)
         var scrollViewDismissMode: UIScrollView.KeyboardDismissMode {
             switch dismissMode {
             case .automatic: return .none

@@ -9,7 +9,7 @@ import Combine
 import CoreImage
 import Photos
  
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 import UIKit
 
 public class CameraService: NSObject {

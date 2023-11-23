@@ -46,7 +46,7 @@ struct BannerView: View {
             .frame(height: 300)
             Spacer()
         }
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
         .ss.tabBar(.hidden)
 #endif
     }

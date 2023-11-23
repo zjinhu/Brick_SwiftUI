@@ -33,7 +33,7 @@ struct DarkModelView: View {
             }
             .rightArrow()
         }
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
         .ss.tabBar(.hidden)
 #endif
     }

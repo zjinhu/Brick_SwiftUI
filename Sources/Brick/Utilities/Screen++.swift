@@ -6,7 +6,7 @@
 //
 import Foundation
 import SwiftUI
-#if (os(iOS) || os(tvOS)) && !os(xrOS)
+#if os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)
 import UIKit
 extension UIWindow {
     /// get window
@@ -135,7 +135,7 @@ public class Screen {
 
 #endif
 
-#if (os(iOS) || os(macOS)) && !os(xrOS)
+#if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
 internal extension PlatformViewController {
     func ancestor<ControllerType: PlatformViewController>(ofType type: ControllerType.Type) -> ControllerType? {
         var controller = parent
@@ -373,7 +373,7 @@ private class SourceView: PlatformView {
 }
 #endif
 
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 private extension InspectionView {
     struct Representable: UIViewRepresentable {
         let parent: InspectionView

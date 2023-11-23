@@ -7,7 +7,8 @@
 
 import SwiftUI
 import BrickKit
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
+
 public struct ThumbnailView: View {
     @State var image: UIImage?
 

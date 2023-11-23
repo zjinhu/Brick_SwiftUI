@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 import Photos
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 public class PhotoViewModel: ObservableObject {
     public let photoLibrary: PhotoLibraryService
     private let assetId: String

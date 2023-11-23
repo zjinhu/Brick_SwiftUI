@@ -20,8 +20,12 @@ struct ContainerView<Content: View>: View {
     
     var body: some View {
         ZStack{
+#if os(iOS) || os(macOS) || os(tvOS) || targetEnvironment(macCatalyst)
             BlurView()
                 .ignoresSafeArea()
+#else
+            Color.black.opacity(0.5)
+#endif
             
             content(isActive)
                 .frame(minWidth: 80, minHeight: 80)

@@ -8,7 +8,7 @@
 import Photos
 import SwiftUI
 import BrickKit
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 struct GalleryView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject var viewModel: GalleryViewModel

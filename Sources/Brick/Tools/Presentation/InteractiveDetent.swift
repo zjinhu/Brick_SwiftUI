@@ -1,6 +1,6 @@
 import SwiftUI
 
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 private extension Brick where Wrapped == Any {
     struct Representable: UIViewControllerRepresentable {
         let identifier: Brick<Any>.PresentationDetent.Identifier?

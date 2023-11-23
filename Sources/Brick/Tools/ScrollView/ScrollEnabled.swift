@@ -44,7 +44,7 @@ extension Brick where Wrapped: View {
     public func scrollDisabled(_ disabled: Bool) -> some View {
         wrapped
             .environment(\.isScrollEnabled, !disabled)
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
             .any(forType: UIScrollView.self) { proxy in
                 let scrollView = proxy.instance
                 scrollView.isScrollEnabled = !disabled

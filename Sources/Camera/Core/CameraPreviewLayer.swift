@@ -4,7 +4,7 @@ See the License.txt file for this sample’s licensing information.
 
 import SwiftUI
 import AVFoundation
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 import UIKit
 public struct CameraPreviewLayer: UIViewRepresentable {
     let camera: CameraService

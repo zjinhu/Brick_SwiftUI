@@ -1,4 +1,4 @@
-#if (os(macOS) || os(iOS)) && !os(xrOS)
+#if os(iOS) || os(macOS) || os(tvOS) || targetEnvironment(macCatalyst)
 import SwiftUI
 
 public extension Brick<Any> {

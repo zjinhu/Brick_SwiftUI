@@ -7,7 +7,7 @@
 
 import SwiftUI
 import BrickKit
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
 struct ShareLinkView: View {
     var body: some View {
         List{

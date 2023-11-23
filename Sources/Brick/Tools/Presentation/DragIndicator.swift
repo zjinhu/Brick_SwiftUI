@@ -29,7 +29,7 @@ public extension Brick where Wrapped: View {
     /// - Parameter visibility: The preferred visibility of the drag indicator.
     @ViewBuilder
     func presentationDragIndicator(_ visibility: Visibility) -> some View {
-        #if os(iOS) && !os(xrOS)
+        #if os(iOS) || targetEnvironment(macCatalyst)
         wrapped.background(Brick<Any>.Representable(visibility: visibility))
         #else
         wrapped
@@ -38,7 +38,7 @@ public extension Brick where Wrapped: View {
 
 }
 
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 private extension Brick where Wrapped == Any {
     struct Representable: UIViewControllerRepresentable {
         let visibility: Visibility

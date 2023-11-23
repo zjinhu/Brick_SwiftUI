@@ -26,13 +26,13 @@ public extension Brick<Any>.OpenURLAction.Result {
         root.present(controller, animated: true)
 #elseif os(tvOS)
         UIApplication.shared.open(url)
-#else
+#elseif os(watchOS)
         WKExtension.shared().openSystemURL(url)
 #endif
         return .handled
     }
 
-#if os(iOS) && canImport(SafariServices) && !os(xrOS)
+#if os(iOS) && canImport(SafariServices)
     static func safari(_ url: URL, configure: (inout SafariConfiguration) -> Void) -> Self {
         let scene = UIApplication.shared.connectedScenes.first { $0.activationState == .foregroundActive } as? UIWindowScene
         let window = scene?.windows.first { $0.isKeyWindow }

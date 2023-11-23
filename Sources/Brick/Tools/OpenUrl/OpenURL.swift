@@ -122,7 +122,7 @@ extension Brick where Wrapped == Any {
                 NSWorkspace.shared.open(resolved)
                 #elseif os(iOS) || os(tvOS)
                 UIApplication.shared.open(resolved)
-                #else
+                #elseif os(watchOS)
                 WKExtension.shared().openSystemURL(resolved)
                 #endif
             }

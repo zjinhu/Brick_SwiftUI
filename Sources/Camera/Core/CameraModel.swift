@@ -8,7 +8,7 @@ import AVFoundation
 import SwiftUI
 import Combine
 import Photos
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 @MainActor
 public class CameraModel: ObservableObject {
     private var subscribers: [AnyCancellable] = []

@@ -7,7 +7,7 @@
 
 import SwiftUI
 import BrickKit
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 struct PhotoView: View {
     
     @StateObject var viewModel: PhotoViewModel

@@ -20,7 +20,7 @@ struct NavigationStackTView: View {
                 // Push child class via navigator
                 Button("Show Class Destination", action: showClassDestination)
             }
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
         .ss.tabBar(.hidden)
 #endif
             .ss.useNavigationStack()

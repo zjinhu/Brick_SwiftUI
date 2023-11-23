@@ -7,7 +7,7 @@
 //
 
 //#if os(iOS) || os(macOS) || os(tvOS) || targetEnvironment(macCatalyst)
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 import Foundation
 import SwiftUI
 import UIKit

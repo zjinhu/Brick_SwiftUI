@@ -8,7 +8,7 @@
 import Foundation
 import Photos
 import Combine
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 import UIKit
 public class PhotoLibraryService: NSObject {
     let photoLibrary: PHPhotoLibrary

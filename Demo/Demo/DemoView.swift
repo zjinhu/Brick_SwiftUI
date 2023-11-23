@@ -13,7 +13,7 @@ struct DemoView: View {
     var body: some View {
         Brick.NavigationStack {
             DemoStackView()
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
                 .ss.tabBar(.visible)
 #endif
                 .navigationTitle("BrickKit")
@@ -58,7 +58,7 @@ struct DemoView: View {
                         AnimationCompleted()
                     case .scrollStackView:
                         ScrollStackView()
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
                     case .darkModelView:
                         DarkModelView()
                     case .photoPickerView:
@@ -152,7 +152,7 @@ struct DemoStackView: View {
                 
             }
             //                Brick.NavigationLink("CustomTabbar", value: DemoStack.customTabbar)
-#if os(iOS) && !os(xrOS) && !os(macOS)
+#if os(iOS) && !os(macOS)
             
             Section {
                 
@@ -200,7 +200,7 @@ enum DemoStack: NavigatorScreen, CaseIterable {
     case animationCompleted
     case scrollStackView
 
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
     case darkModelView
     case shareLinkView
     case photoPickerView

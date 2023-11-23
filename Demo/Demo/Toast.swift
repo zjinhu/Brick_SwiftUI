@@ -7,7 +7,7 @@
 
 import SwiftUI
 import BrickKit
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
 struct Toast: View {
     @EnvironmentObject private var toast: ToastManager
     

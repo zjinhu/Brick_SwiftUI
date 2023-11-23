@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-#if !os(xrOS)
+#if !os(visionOS)
 struct ToastView<Content: View>: View {
     @StateObject private var keyboardObserver = KeyboardManager()
     

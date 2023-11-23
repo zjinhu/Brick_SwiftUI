@@ -1,6 +1,6 @@
 import SwiftUI
 
-#if os(iOS) && !os(xrOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 import UIKit
 public extension AnyFeedback {
     /// Specifies haptic feedback provided by the system
@@ -57,7 +57,6 @@ public enum NotificationStyle: String {
     /// A notification feedback type that indicates a task has failed.
     case error
 
-    #if os(iOS)
     var type: UINotificationFeedbackGenerator.FeedbackType {
         switch self {
         case .success: return .success
@@ -65,7 +64,7 @@ public enum NotificationStyle: String {
         case .error: return .error
         }
     }
-    #endif
+
 }
 
 public enum ImpactStyle: String {
@@ -80,7 +79,6 @@ public enum ImpactStyle: String {
     /// A collision between user interface elements that are rigid, exhibiting a small amount of compression or elasticity.
     case rigid
 
-    #if os(iOS)
     var style: UIImpactFeedbackGenerator.FeedbackStyle {
         switch self {
         case .light: return .light
@@ -90,7 +88,6 @@ public enum ImpactStyle: String {
         case .rigid: return .rigid
         }
     }
-    #endif
 }
 
 /// The style of the system haptic

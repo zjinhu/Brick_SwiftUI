@@ -37,7 +37,7 @@ struct AnimationCompleted: View {
                 introTextOpacity = 1.0
             }
         })
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
         .ss.tabBar(.hidden)
 #endif
     }

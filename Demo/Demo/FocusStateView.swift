@@ -1,6 +1,6 @@
 import SwiftUI
 import BrickKit
-#if os(iOS) && !os(xrOS)
+#if os(iOS)
 struct FocusStateView: View {
 
     enum Field: Hashable {

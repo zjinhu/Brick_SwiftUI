@@ -137,7 +137,7 @@ struct Loading: View {
             }
  
         }
-#if !os(xrOS) && os(iOS)
+#if os(iOS)
         .ss.tabBar(.hidden)
 #endif
         .addLoading(loading)
