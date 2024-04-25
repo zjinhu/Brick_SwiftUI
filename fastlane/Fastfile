@@ -40,8 +40,6 @@ lane :release_pod do |options|
   # pod_lib_lint(verbose: true, allow_warnings: true, sources: 'https://github.com/CocoaPods/Specs.git,https://codeup.aliyun.com/6279dbf7487c500c27f5744e/group1/ModuleSpace.git')
   end
   
-  UI.message("发现tag:#{tagName} 已经存在, 即将执行, 删除动作 🚀")
-  
   # 推送master分支的代码到名称为origin的远程仓库
   push_to_git_remote
   
