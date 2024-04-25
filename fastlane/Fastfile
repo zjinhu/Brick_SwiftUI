@@ -13,8 +13,8 @@ lane :release_pod do |options|
   spec_path = "#{target_project}.podspec"
   
   # git pull
-  git_pull 
-  
+  git_pull(only_tags: true)
+
   # 确认是 master 分支
   # ensure_git_branch
   # 确认是 main 分支
@@ -22,10 +22,10 @@ lane :release_pod do |options|
     branch: 'main'
   )
   
-if  if_pod
+  if  if_pod == 'true'
   # 修改 spec 为即将发布的版本
   version_bump_podspec(path: spec_path, version_number: target_version)
-end
+  end
   
   # 将本地代码加入本地仓库里
   git_add(path: '.')
@@ -33,12 +33,14 @@ end
   # 提交修改到本地仓库
   git_commit(path: '.', message: update_message)
   
-  if  if_pod
+  if  if_pod == 'true'
   # 在push之前, 查看spec是否配置有问题，验证 spec 文件
   pod_lib_lint(verbose: true, allow_warnings: true)
   # 私有仓需要添加验证仓Sources
   # pod_lib_lint(verbose: true, allow_warnings: true, sources: 'https://github.com/CocoaPods/Specs.git,https://codeup.aliyun.com/6279dbf7487c500c27f5744e/group1/ModuleSpace.git')
   end
+  
+  UI.message("发现tag:#{tagName} 已经存在, 即将执行, 删除动作 🚀")
   
   # 推送master分支的代码到名称为origin的远程仓库
   push_to_git_remote
@@ -55,20 +57,20 @@ end
   # 提交 tag
   push_git_tags
   
- if  if_pod
+  if  if_pod == 'true'
   # # pod trunk push 'spec_path'
   # pod_push(path: spec_path, allow_warnings: true,verbose: true)
     # 检查是否传了 repo 参数
-  if target_repo
+    if target_repo
     # pod repo push 'target_repo' 'spec_path'
 
-    pod_push(path: spec_path, repo: target_repo, allow_warnings: true, verbose: true)
+      pod_push(path: spec_path, repo: target_repo, allow_warnings: true, verbose: true)
 
-  else
+    else
     # pod trunk push 'spec_path'
 
-    pod_push(path: spec_path, allow_warnings: true, verbose: true)
+      pod_push(path: spec_path, allow_warnings: true, verbose: true)
 
-  end
+    end
   end
 end
