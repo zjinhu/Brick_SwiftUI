@@ -17,7 +17,7 @@ struct OpenURLView: View {
             NavigationLink("Webview", destination: WebView(url: URL(string: "https://www.qq.com")!))
             
             
-            Brick.Link("In-app Safari", destination: URL(string: "https://github.com/jackiehu1122/SwiftBrick")!)
+            Brick.Link("In-app Safari", destination: URL(string: "https://github.com/zjinhu/SwiftBrick")!)
                     .environment(\.openURL, .init { url in
                             .safari(url) { config in
                                 config.tintColor = .red

@@ -10,13 +10,13 @@
 
 此Package与[Gitee](https://gitee.com/zjinhu/brick)同步，如果觉得SPM引入github地址偏慢可以使用Gitee。
 
-内置了各种辅助开发的工具，以及iOS16以后新添加的API向iOS15进行了兼容,具体功能请运行Demo查看用法
+内置了各种辅助开发的工具，以及iOS15以后新添加的API向iOS4进行了兼容,具体功能请运行Demo查看用法
 
 | ![](Image/1.png) | ![](Image/2.png) |
 | ---------------- | ---------------- |
 |                  |                  |
 
-支持iOS15
+支持iOS14
 
 - [x] AsyncImage
 

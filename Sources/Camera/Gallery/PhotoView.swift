@@ -37,7 +37,7 @@ struct PhotoView: View {
             }
             .maxWidth(.infinity)
             .maxHeight(.infinity)
-            .task {
+            .ss.task {
                 await viewModel.loadImage(targetSize: proxy.size)
             }
         }

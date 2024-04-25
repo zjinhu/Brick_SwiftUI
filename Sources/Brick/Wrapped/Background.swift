@@ -158,11 +158,13 @@ public extension Brick where Wrapped: View {
         standardAppearance.backgroundColor = UIColor(color)
         UITabBar.appearance().standardAppearance = standardAppearance
         
-        let scrollEdgeAppearance = UITabBarAppearance()
-        scrollEdgeAppearance.configureWithTransparentBackground()
-        scrollEdgeAppearance.backgroundColor = UIColor(color)
-        UITabBar.appearance().scrollEdgeAppearance = scrollEdgeAppearance
-        
+        if #available(iOS 15.0, *) {
+            let scrollEdgeAppearance = UITabBarAppearance()
+            scrollEdgeAppearance.configureWithTransparentBackground()
+            scrollEdgeAppearance.backgroundColor = UIColor(color)
+            UITabBar.appearance().scrollEdgeAppearance = scrollEdgeAppearance
+        }
+
         return wrapped
     }
     

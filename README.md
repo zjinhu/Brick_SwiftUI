@@ -2,7 +2,7 @@
 
 [![SPM](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager/)
 ![Xcode 14.0+](https://img.shields.io/badge/Xcode-14.0%2B-blue.svg)
-![iOS 15.0+](https://img.shields.io/badge/iOS-15.0%2B-blue.svg)
+![iOS 14.0+](https://img.shields.io/badge/iOS-14.0%2B-blue.svg)
 ![Swift 5.0+](https://img.shields.io/badge/Swift-5.0%2B-orange.svg)
 ![SwiftUI 3.0+](https://img.shields.io/badge/SwiftUI-3.0%2B-orange.svg)
 
@@ -10,13 +10,13 @@
 
 This Package is related to [Gitee](https://gitee.com/zjinhu/brick). If you feel that the introduction of Github addresses in SPM is slow, you can use Gitee.
 
-Built-in various auxiliary development tools, and the newly added API after iOS16 is compatible with iOS15, please run the demo to view the usage of specific functions
+Built-in various auxiliary development tools, and the newly added API after iOS15 is compatible with iOS14, please run the demo to view the usage of specific functions
 
 | ![](Image/1.png) | ![](Image/2.png) |
 | ---------------- | ---------------- |
 |                  |                  |
 
-支持iOS15
+支持iOS14
 
 - [x] AsyncImage
 

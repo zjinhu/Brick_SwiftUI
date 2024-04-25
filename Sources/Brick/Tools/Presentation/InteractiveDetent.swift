@@ -1,6 +1,7 @@
 import SwiftUI
 
 #if os(iOS) || targetEnvironment(macCatalyst)
+@available(iOS 15, *)
 private extension Brick where Wrapped == Any {
     struct Representable: UIViewControllerRepresentable {
         let identifier: Brick<Any>.PresentationDetent.Identifier?
@@ -14,7 +15,7 @@ private extension Brick where Wrapped == Any {
         }
     }
 }
-
+@available(iOS 15, *)
 private extension Brick.Representable {
     final class Controller: UIViewController {
 

@@ -70,7 +70,7 @@ struct PresentationView: View {
 private struct SheetView: View {
     @Environment(\.dismiss) private var dismiss
     
-    @State private var visible: Visibility = .hidden
+    @State private var visible: Brick.Visibility = .hidden
     @State private var isModal: Bool = false
     @State private var enablePrompt: Bool = true
     @State private var showPrompt: Bool = false
@@ -192,10 +192,15 @@ extension View {
         cornerRadius: CGFloat?
     ) -> some View {
         
-        ss.presentationDetents(detents, selection: selection)
-            .ss.presentationBackgroundInteraction(backgroundInteraction)
-            .ss.presentationContentInteraction(contentInteraction)
-            .ss.presentationCornerRadius(cornerRadius)
+        if #available(iOS 15, *) {
+            ss.presentationDetents(detents, selection: selection)
+                .ss.presentationBackgroundInteraction(backgroundInteraction)
+                .ss.presentationContentInteraction(contentInteraction)
+                .ss.presentationCornerRadius(cornerRadius)
+        } else {
+            self
+        }
+
         
     }
 }

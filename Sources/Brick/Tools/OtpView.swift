@@ -7,6 +7,7 @@
 
 import SwiftUI
 #if os(iOS)
+@available(iOS 15.0, *)
 public struct OtpView: View {
     private var activeColor: Color
     private var inActiveColor: Color

@@ -40,7 +40,11 @@ public extension Brick where Wrapped: View {
     @ViewBuilder
     func presentationContentInteraction(_ interaction: Brick<Any>.PresentationContentInteraction) -> some View {
         #if os(iOS) || targetEnvironment(macCatalyst)
-        wrapped.background(Brick<Any>.Representable(interaction: interaction))
+        if #available(iOS 15, *) {
+            wrapped.background(Brick<Any>.Representable(interaction: interaction))
+        } else {
+            wrapped
+        }
         #else
         wrapped
         #endif
@@ -48,6 +52,7 @@ public extension Brick where Wrapped: View {
 }
 
 #if os(iOS) || targetEnvironment(macCatalyst)
+@available(iOS 15, *)
 private extension Brick where Wrapped == Any {
     struct Representable: UIViewControllerRepresentable {
         let interaction: Brick<Any>.PresentationContentInteraction
@@ -61,7 +66,7 @@ private extension Brick where Wrapped == Any {
         }
     }
 }
-
+@available(iOS 15, *)
 private extension Brick.Representable {
     final class Controller: UIViewController, UISheetPresentationControllerDelegate {
         var interaction: Brick<Any>.PresentationContentInteraction

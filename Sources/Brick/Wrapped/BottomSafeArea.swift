@@ -16,14 +16,24 @@ extension Brick where Wrapped: View {
     @ViewBuilder
     public func bottomSafeAreaInset<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
         
-        wrapped.safeAreaInset(edge: .bottom, spacing: 0, content: { content() })
+        if #available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *) {
+            wrapped.safeAreaInset(edge: .bottom, spacing: 0, content: { content() })
+        } else {
+            wrapped.modifier(BottomInsetViewModifier(overlayContent: content()))
+        }
+
 
     }
     
     @ViewBuilder
     public func bottomSafeAreaInset<OverlayContent: View>(_ overlayContent: OverlayContent) -> some View {
                     
-        wrapped.safeAreaInset(edge: .bottom, spacing: 0, content: { overlayContent })
+        if #available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *) {
+            wrapped.safeAreaInset(edge: .bottom, spacing: 0, content: { overlayContent })
+        } else {
+            wrapped.modifier(BottomInsetViewModifier(overlayContent: overlayContent))
+        }
+
 
     }
 }

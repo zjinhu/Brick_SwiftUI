@@ -65,7 +65,7 @@ public struct CameraView: View {
                     cameraTopButtons
                 }
         }
-        .task {
+        .ss.task {
             await cameraModel.checkPhotoLibraryPermission()
             await cameraModel.checkCameraPermission()
         }

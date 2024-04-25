@@ -65,6 +65,7 @@ import SwiftUI
 ///         }
 ///     }
 ///
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 public struct CachedAsyncImage<Content>: View where Content: View {
     
     @State private var phase: AsyncImagePhase
@@ -341,7 +342,7 @@ public struct CachedAsyncImage<Content>: View where Content: View {
 }
 
 // MARK: - LoadingError
-
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 private extension AsyncImage {
     
     struct LoadingError: Error {
@@ -349,7 +350,7 @@ private extension AsyncImage {
 }
 
 // MARK: - Helpers
-
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 private extension CachedAsyncImage {
     private func remoteImage(from request: URLRequest, session: URLSession) async throws -> (Image, URLSessionTaskMetrics) {
         let (data, _, metrics) = try await session.ss.data(for: request)
