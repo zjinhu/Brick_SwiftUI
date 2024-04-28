@@ -16,9 +16,9 @@ lane :release_pod do |options|
   git_pull(only_tags: true)
 
   # 确认是 master 分支
-   ensure_git_branch
+  # ensure_git_branch
   # 确认是 main 分支
-  # ensure_git_branch( branch: 'main' )
+  ensure_git_branch( branch: 'main' )
   
   if  if_pod
   # 修改 spec 为即将发布的版本
