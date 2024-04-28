@@ -20,7 +20,7 @@ Built-in various auxiliary development tools, and the newly added API after iOS1
 
 - [x] AsyncImage
 
-- [x] Camera (take a photo to get a photo)
+- [x] Camera (take a photo to get a photo)[Camera_SwiftUI](https://github.com/zjinhu/Camera_SwiftUI).
 
 - [x] CarouselView (infinite scrolling banner )
 

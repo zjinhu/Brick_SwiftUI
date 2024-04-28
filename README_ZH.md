@@ -20,7 +20,7 @@
 
 - [x] AsyncImage
 
-- [x] Camera拍照获取照片
+- [x] Camera拍照获取照片[Camera_SwiftUI](https://github.com/zjinhu/Camera_SwiftUI).
 
 - [x] CarouselView无限滚动banner
 

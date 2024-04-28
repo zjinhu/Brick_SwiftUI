@@ -7,7 +7,6 @@
 import SwiftUI
 import PhotosUI
 import BrickKit
-import CameraKit
 #if os(iOS)
 import UIKit
 
@@ -19,10 +18,7 @@ struct PhotoPickerView: View {
     
     @State private var selectedItem2: PHPickerResult?
     @State private var selectedImage2: UIImage?
-    
-    @State private var photoData: Data?
-    
-    @State private var isPresented: Bool = false
+ 
     @State private var showPicker: Bool = false
 
     @State var data: Data?
@@ -30,15 +26,7 @@ struct PhotoPickerView: View {
     var body: some View {
         List{
 
-            Button {
-                isPresented.toggle()
-            } label: {
-                Text("Camera")
-            }
-            .fullScreenCover(isPresented: $isPresented) {
-                CameraView(photoData: $photoData)
-            }
-            
+ 
             Button {
                 showPicker.toggle()
             } label: {
@@ -108,15 +96,7 @@ struct PhotoPickerView: View {
                     .scaledToFit()
                     .frame(width: 250, height: 250)
             }
-            
-            if let photoData,
-               let uiImage = UIImage(data: photoData) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 250, height: 250)
-            }
-            
+ 
             if let data = data, let uiImage = UIImage(data: data) {
                 Image(uiImage: uiImage)
                     .resizable()

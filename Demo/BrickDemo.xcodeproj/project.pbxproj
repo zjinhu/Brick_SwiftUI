@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607989182ABC41AC0029652F /* BrickKit in Frameworks */ = {isa = PBXBuildFile; productRef = 607989172ABC41AC0029652F /* BrickKit */; };
-		6079891A2ABC41AC0029652F /* CameraKit in Frameworks */ = {isa = PBXBuildFile; productRef = 607989192ABC41AC0029652F /* CameraKit */; };
 		608162752A5D8E360083DE04 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608162742A5D8E360083DE04 /* DemoView.swift */; };
 		608162772A5D91660083DE04 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608162762A5D91660083DE04 /* TabbarView.swift */; };
 		81156A122A4842430089C52D /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81156A112A4842430089C52D /* DemoApp.swift */; };
@@ -39,6 +37,7 @@
 		813925FF2A4BFEEC00E8BDE6 /* ScrollStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925EB2A4BFEEB00E8BDE6 /* ScrollStackView.swift */; };
 		81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969682A54216D0052619E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8C7513F12BDDE96100A3CA8D /* BrickKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C7513F02BDDE96100A3CA8D /* BrickKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +79,7 @@
 		81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftAVFoundation.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/swift/libswiftAVFoundation.tbd; sourceTree = DEVELOPER_DIR; };
 		81F9696C2A5421BE0052619E /* libswiftQuickLook.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLook.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/swift/libswiftQuickLook.tbd; sourceTree = DEVELOPER_DIR; };
 		81F9696E2A5421CB0052619E /* libswiftQuickLookUI.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLookUI.tbd; path = usr/lib/swift/libswiftQuickLookUI.tbd; sourceTree = SDKROOT; };
+		8C7513EF2BDDE95200A3CA8D /* Brick_SwiftUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Brick_SwiftUI; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,7 @@
 			files = (
 				81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */,
 				81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */,
-				6079891A2ABC41AC0029652F /* CameraKit in Frameworks */,
-				607989182ABC41AC0029652F /* BrickKit in Frameworks */,
+				8C7513F12BDDE96100A3CA8D /* BrickKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +99,7 @@
 		81156A052A4842430089C52D = {
 			isa = PBXGroup;
 			children = (
+				8C7513EF2BDDE95200A3CA8D /* Brick_SwiftUI */,
 				6079891B2ABC41B40029652F /* BrickBrickDemo-Info.plist */,
 				81156A102A4842430089C52D /* Demo */,
 				81156A0F2A4842430089C52D /* Products */,
@@ -198,8 +198,7 @@
 			);
 			name = BrickBrickDemo;
 			packageProductDependencies = (
-				607989172ABC41AC0029652F /* BrickKit */,
-				607989192ABC41AC0029652F /* CameraKit */,
+				8C7513F02BDDE96100A3CA8D /* BrickKit */,
 			);
 			productName = Demo;
 			productReference = 81156A0E2A4842430089C52D /* BrickBrickDemo.app */;
@@ -230,7 +229,6 @@
 			);
 			mainGroup = 81156A052A4842430089C52D;
 			packageReferences = (
-				607989162ABC26E80029652F /* XCLocalSwiftPackageReference ".." */,
 			);
 			productRefGroup = 81156A0F2A4842430089C52D /* Products */;
 			projectDirPath = "";
@@ -524,21 +522,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		607989162ABC26E80029652F /* XCLocalSwiftPackageReference ".." */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ..;
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		607989172ABC41AC0029652F /* BrickKit */ = {
+		8C7513F02BDDE96100A3CA8D /* BrickKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BrickKit;
-		};
-		607989192ABC41AC0029652F /* CameraKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CameraKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
