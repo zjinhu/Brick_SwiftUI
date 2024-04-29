@@ -32,7 +32,7 @@
 
 - [x] OpenUrl
 
-- [x] PhotoPicker
+- [x] PhotoPicker[PhotoPicker_SwiftUI](https://github.com/zjinhu/PhotoPicker_SwiftUI).提供自定义相册以及系统相册
 
 - [x] Presentation
 
