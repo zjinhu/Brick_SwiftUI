@@ -61,8 +61,8 @@ struct DemoView: View {
 #if os(iOS)
                     case .darkModelView:
                         DarkModelView()
-                    case .photoPickerView:
-                        PhotoPickerView()
+//                    case .photoPickerView:
+//                        PhotoPickerView()
                     case .shareLinkView:
                         ShareLinkView()
                     case .focusStateView:
@@ -160,7 +160,7 @@ struct DemoStackView: View {
                 
                 Brick.NavigationLink("ShareLink", value: DemoStack.shareLinkView)
                 
-                Brick.NavigationLink("Photo", value: DemoStack.photoPickerView)
+//                Brick.NavigationLink("Photo", value: DemoStack.photoPickerView)
                 
                 Brick.NavigationLink("Toast", value: DemoStack.toast)
                 
@@ -203,7 +203,7 @@ enum DemoStack: NavigatorScreen, CaseIterable {
 #if os(iOS)
     case darkModelView
     case shareLinkView
-    case photoPickerView
+//    case photoPickerView
     case focusStateView
     case toast
 #endif

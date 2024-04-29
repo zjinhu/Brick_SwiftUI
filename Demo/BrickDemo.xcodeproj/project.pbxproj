@@ -19,7 +19,6 @@
 		813925EC2A4BFEEB00E8BDE6 /* TTextFieldDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925D82A4BFEEA00E8BDE6 /* TTextFieldDemoView.swift */; };
 		813925ED2A4BFEEB00E8BDE6 /* FocusStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925D92A4BFEEA00E8BDE6 /* FocusStateView.swift */; };
 		813925EE2A4BFEEB00E8BDE6 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925DA2A4BFEEA00E8BDE6 /* AsyncImageView.swift */; };
-		813925EF2A4BFEEB00E8BDE6 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925DB2A4BFEEA00E8BDE6 /* PhotoPickerView.swift */; };
 		813925F02A4BFEEC00E8BDE6 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925DC2A4BFEEA00E8BDE6 /* BadgeView.swift */; };
 		813925F12A4BFEEC00E8BDE6 /* SafeAreaPaddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925DD2A4BFEEA00E8BDE6 /* SafeAreaPaddingView.swift */; };
 		813925F22A4BFEEC00E8BDE6 /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925DE2A4BFEEA00E8BDE6 /* NavigationStack.swift */; };
@@ -56,7 +55,6 @@
 		813925D82A4BFEEA00E8BDE6 /* TTextFieldDemoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTextFieldDemoView.swift; sourceTree = "<group>"; };
 		813925D92A4BFEEA00E8BDE6 /* FocusStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusStateView.swift; sourceTree = "<group>"; };
 		813925DA2A4BFEEA00E8BDE6 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
-		813925DB2A4BFEEA00E8BDE6 /* PhotoPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		813925DC2A4BFEEA00E8BDE6 /* BadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		813925DD2A4BFEEA00E8BDE6 /* SafeAreaPaddingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeAreaPaddingView.swift; sourceTree = "<group>"; };
 		813925DE2A4BFEEA00E8BDE6 /* NavigationStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				813925DF2A4BFEEA00E8BDE6 /* Loading.swift */,
 				813925DE2A4BFEEA00E8BDE6 /* NavigationStack.swift */,
 				813925E72A4BFEEB00E8BDE6 /* OpenURLView.swift */,
-				813925DB2A4BFEEA00E8BDE6 /* PhotoPickerView.swift */,
 				813925E32A4BFEEB00E8BDE6 /* PresentationView.swift */,
 				813925E62A4BFEEB00E8BDE6 /* Refresh.swift */,
 				813925DD2A4BFEEA00E8BDE6 /* SafeAreaPaddingView.swift */,
@@ -271,7 +268,6 @@
 				813925F72A4BFEEC00E8BDE6 /* PresentationView.swift in Sources */,
 				813925FF2A4BFEEC00E8BDE6 /* ScrollStackView.swift in Sources */,
 				813925F32A4BFEEC00E8BDE6 /* Loading.swift in Sources */,
-				813925EF2A4BFEEB00E8BDE6 /* PhotoPickerView.swift in Sources */,
 				813925EC2A4BFEEB00E8BDE6 /* TTextFieldDemoView.swift in Sources */,
 				81156A122A4842430089C52D /* DemoApp.swift in Sources */,
 				813925FE2A4BFEEC00E8BDE6 /* AnimationCompleted.swift in Sources */,
