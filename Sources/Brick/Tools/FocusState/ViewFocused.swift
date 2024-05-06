@@ -1,6 +1,6 @@
 import SwiftUI
  
-#if os(iOS) && !os(xrOS)
+#if os(iOS) && !os(visionOS)
 
 public extension Brick where Wrapped: View {
     func focused<Value>(_ binding: Binding<Value?>, equals value: Value) -> some View where Value: Hashable {

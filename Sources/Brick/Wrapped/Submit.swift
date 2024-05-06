@@ -1,6 +1,6 @@
 import SwiftUI
 
-#if os(iOS) && !os(xrOS)
+#if os(iOS) && !os(visionOS)
 @available(iOS, deprecated: 15)
 public extension Brick where Wrapped: View {
     /// Adds an action to perform when the user submits a value to this view.

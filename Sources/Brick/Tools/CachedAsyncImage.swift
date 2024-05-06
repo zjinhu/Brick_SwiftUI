@@ -346,6 +346,7 @@ public struct CachedAsyncImage<Content>: View where Content: View {
 private extension AsyncImage {
     
     struct LoadingError: Error {
+        
     }
 }
 

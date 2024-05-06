@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.10
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -10,15 +10,18 @@ package.platforms = [
     .tvOS(.v14),
 //    .watchOS(.v8),
     .macOS(.v11),
-//    .xrOS(.v1)
+//    .visionOS(.v1)
 ]
 
 package.products = [
-    .library(name: "BrickKit", targets: ["BrickKit"]),
+    .library(name: "BrickKit", 
+             targets: ["BrickKit"]),
 ]
 
 package.targets = [
-    .target(name: "BrickKit", path: "Sources/Brick"), 
+    .target(name: "BrickKit", 
+            path: "Sources/Brick",
+            resources: [.process("Resources/PrivacyInfo.xcprivacy")]),
 ]
 
 package.swiftLanguageVersions = [.v5]
