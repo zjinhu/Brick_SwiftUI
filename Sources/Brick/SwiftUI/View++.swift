@@ -103,6 +103,17 @@ extension View {
     }
 }
 
+public extension View {
+    
+    /// Wrap the view in an `AnyView`.
+    ///
+    /// > Important: Do not misuse AnyView. It esmess up the
+    /// view identity, which messes up animations, state etc.
+    func any() -> AnyView {
+        AnyView(self)
+    }
+}
+
 // MARK: - View.padding
 //extension View {
 //    /// A view that pads this view inside the specified edge insets with a system-calculated amount of padding and a color.

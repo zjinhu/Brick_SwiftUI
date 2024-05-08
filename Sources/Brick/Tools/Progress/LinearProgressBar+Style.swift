@@ -8,7 +8,7 @@
 
 #if os(iOS) || os(macOS) || os(tvOS) || os(visionOS)
 import SwiftUI
-
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 public extension LinearProgressBar {
 
     /// This type can style a ``LinearProgressBar``.
@@ -46,7 +46,7 @@ public extension LinearProgressBar {
         public var barShadow: ViewShadowStyle
     }
 }
-
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 public extension LinearProgressBar.Style {
 
     /// The standard liear progress bar style.
@@ -70,7 +70,7 @@ public extension ViewShadowStyle {
         x: 1
     )
 }
-
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 public extension View {
 
     /// Apply a ``LinearProgressBar/Style`` to the view.
@@ -80,7 +80,7 @@ public extension View {
         self.environment(\.linearProgressBarStyle, style)
     }
 }
-
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 private extension LinearProgressBar.Style {
 
     struct Key: EnvironmentKey {
@@ -88,7 +88,7 @@ private extension LinearProgressBar.Style {
         public static var defaultValue: LinearProgressBar.Style = .standard
     }
 }
-
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 public extension EnvironmentValues {
 
     var linearProgressBarStyle: LinearProgressBar.Style {
