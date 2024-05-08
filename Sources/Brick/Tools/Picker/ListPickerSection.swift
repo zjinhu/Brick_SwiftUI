@@ -1,9 +1,8 @@
 //
 //  ListPickerSection.swift
-//  SwiftUIKit
 //
-//  Created by Daniel Saidi on 2021-08-23.
-//  Copyright © 2021-2024 Daniel Saidi. All rights reserved.
+//  Created by iOS on 2023/6/28.
+//
 //
 
 import SwiftUI

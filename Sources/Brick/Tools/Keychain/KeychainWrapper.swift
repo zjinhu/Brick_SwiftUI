@@ -1,13 +1,8 @@
 //
 //  KeychainWrapper.swift
-//  SwiftUIKit
-
-//  Created by Daniel Saidi on 2016-11-24.
-//  Copyright © 2016-2024 Daniel Saidi. All rights reserved.
 //
-//  Based on https://github.com/jrendel/SwiftKeychainWrapper
-//  Created by Jason Rendel on 9/23/14.
-//  Copyright © 2014 Jason Rendel. All rights reserved.
+//  Created by iOS on 2023/6/28.
+//
 
 import Foundation
 

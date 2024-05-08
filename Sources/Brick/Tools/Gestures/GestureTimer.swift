@@ -1,9 +1,9 @@
 //
 //  GestureTimer.swift
-//  SwiftUIKit
+//  
 //
-//  Created by Daniel Saidi on 2021-02-17.
-//  Copyright © 2021-2024 Daniel Saidi. All rights reserved.
+//  Created by iOS on 2023/6/28.
+//
 //
 
 import Foundation

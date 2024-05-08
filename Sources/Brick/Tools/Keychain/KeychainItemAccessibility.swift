@@ -1,13 +1,8 @@
 //
 //  KeychainItemAccessibility.swift
-//  SwiftUIKit
 //
-//  Created by Daniel Saidi on 2016-11-24.
-//  Copyright © 2016-2024 Daniel Saidi. All rights reserved.
+//  Created by iOS on 2023/6/28.
 //
-//  Based on https://github.com/jrendel/SwiftKeychainWrapper
-//  Created by James Blair on 4/24/16.
-//  Copyright © 2016 Jason Rendel. All rights reserved.
 
 import Foundation
 

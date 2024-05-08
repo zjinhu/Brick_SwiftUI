@@ -1,9 +1,8 @@
 //
 //  SwipeGestureViewModifier.swift
-//  SwiftUIKit
 //
-//  Created by Daniel Saidi on 2020-01-03.
-//  Copyright © 2020-2024 Daniel Saidi. All rights reserved.
+//  Created by iOS on 2023/6/28.
+//
 //
 
 #if os(iOS) || os(macOS) || os(watchOS) || os(visionOS)

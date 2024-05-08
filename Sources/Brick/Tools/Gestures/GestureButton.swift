@@ -1,9 +1,8 @@
 //
-//  GestureButton.swift
-//  SwiftUIKit
+//  SwiftUIView.swift
+//  
 //
-//  Created by Daniel Saidi on 2022-11-24.
-//  Copyright © 2022-2024 Daniel Saidi. All rights reserved.
+//  Created by iOS on 2023/6/28.
 //
 
 #if os(iOS) || os(macOS) || os(watchOS)
