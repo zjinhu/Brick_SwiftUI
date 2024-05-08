@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-@available(iOS, deprecated: 16)
+@available(iOS, deprecated: 16, message: "Use SwiftUI's Navigation API iOS 16")
 @available(tvOS, deprecated: 16)
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
@@ -16,7 +16,6 @@ extension Brick where Wrapped == Any {
         @Binding var externalTypedPath: [Data]
         @State var internalTypedPath: [Data] = []
         @StateObject var path : NavigationPathHolder
-        @StateObject var pathAppender = PathAppender()
         @StateObject var destinationBuilder = DestinationBuilderHolder()
         @Environment(\.useNavigationStack) var useNavigationStack
         var content: Content
@@ -30,36 +29,31 @@ extension Brick where Wrapped == Any {
           }
         }
         
+        @ViewBuilder
         var navigation: some View {
-            pathAppender.append = { [weak path] newElement in
-                path?.path.append(newElement)
-            }
-            
+
             if #available(iOS 16.0, *, macOS 13.0, *, watchOS 9.0, *, tvOS 16.0, *),
-                useNavigationStack == .whenAvailable {
-              return AnyView(
+               useNavigationStack == .whenAvailable {
                 SwiftUI.NavigationStack(path: $path.path) {
                     content
                         .navigationDestination(for: AnyHashable.self, destination: { destinationBuilder.build($0) })
                         .navigationDestination(for: LocalDestinationID.self, destination: { destinationBuilder.build($0) })
                 }
                 .environment(\.isWithinNavigationStack, true)
-              )
+                
+            }else{
+                NavigationView {
+                    Router(rootView: content, screens: $path.path)
+                }
+                .navigationViewStyle(supportedNavigationViewStyle)
+                .environment(\.isWithinNavigationStack, false)
             }
-            return AnyView(
-              NavigationView {
-                Router(rootView: content, screens: $path.path)
-              }
-              .navigationViewStyle(supportedNavigationViewStyle)
-              .environment(\.isWithinNavigationStack, false)
-            )
-
         }
         
         public var body: some View {
             navigation
                 .environmentObject(path)
-                .environmentObject(pathAppender)
+                .environmentObject(Unobserved(object: path))
                 .environmentObject(destinationBuilder)
                 .environmentObject(Navigator(useInternalTypedPath ? $internalTypedPath : $externalTypedPath))
                 .onFirstAppear {
@@ -122,6 +116,10 @@ extension Brick where Wrapped == Any {
             self.content = content()
             _path = StateObject(wrappedValue: NavigationPathHolder(path: path?.wrappedValue ?? []))
             useInternalTypedPath = path == nil
+            
+//            _pathAppender.append = { [weak path] newElement in
+//                path?.path.append(newElement)
+//            }
         }
     }
 

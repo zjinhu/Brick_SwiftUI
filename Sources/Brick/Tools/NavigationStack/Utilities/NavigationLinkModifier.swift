@@ -14,7 +14,9 @@ struct NavigationLinkModifier<Destination: View>: ViewModifier {
             AnyView(
                 content
                     .background(
-                        NavigationLink(destination: destination, isActive: $isActiveBinding, label: EmptyView.init)
+                        NavigationLink(destination: destination, 
+                                       isActive: $isActiveBinding,
+                                       label: EmptyView.init)
                             .hidden()
                     )
             )

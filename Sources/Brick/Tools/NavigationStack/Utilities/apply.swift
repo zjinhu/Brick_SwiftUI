@@ -11,12 +11,27 @@ func apply<T>(_ transform: (inout T) -> Void, to input: T) -> T {
     return transformed
 }
 
-class PathAppender: ObservableObject {
-    var append: ((AnyHashable) -> Void)?
-}
-
-
 public protocol NavigatorScreen: Hashable {}
 
 extension AnyHashable: NavigatorScreen {}
 
+
+class Unobserved<Object: ObservableObject>: ObservableObject {
+    let object: Object
+    
+    init(object: Object) {
+        self.object = object
+    }
+}
+
+/// Builds a view given optional data and a function for transforming the data into a view.
+struct ConditionalViewBuilder<Data, DestinationView: View>: View {
+    @Binding var data: Data?
+    var buildView: (Data) -> DestinationView
+    
+    var body: some View {
+        if let data {
+            buildView(data)
+        }
+    }
+}

@@ -56,6 +56,7 @@ public extension Navigator where Screen: NavigatorScreen {
         path.popTo(where: condition)
     }
 }
+
 public extension Navigator where Screen: NavigatorScreen & Equatable {
     /// Pops to the topmost (most recently pushed) screen in the stack
     /// equal to the given screen. If no screens are found,
@@ -67,6 +68,7 @@ public extension Navigator where Screen: NavigatorScreen & Equatable {
         return path.popTo(screen)
     }
 }
+
 public extension Navigator where Screen: NavigatorScreen & Identifiable {
     /// Pops to the topmost (most recently pushed) identifiable screen in the stack
     /// with the given ID. If no screens are found, the screens array will be unchanged.
@@ -77,6 +79,7 @@ public extension Navigator where Screen: NavigatorScreen & Identifiable {
         path.popTo(id: id)
     }
 }
+
 public extension Navigator where Screen == AnyHashable {
     /// Pops to the topmost (most recently pushed) identifiable screen in the stack
     /// with the given ID. If no screens are found, the screens array will be unchanged.

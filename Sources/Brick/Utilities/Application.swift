@@ -23,16 +23,16 @@ extension Brick{
             return Bundle.main.bundleIdentifier!
         }
         
-        public static var version: String {
-            return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+        public static var versionNumber: String {
+            return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0.0"
         }
         
-        public static var build: String {
+        public static var buildNumber: String {
             return Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
         }
         
         public static var completeAppVersion: String {
-            return "\(Application.version) (\(Application.build))"
+            return "\(Application.versionNumber) (\(Application.buildNumber))"
         }
     }
 }

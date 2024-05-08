@@ -5,7 +5,7 @@
 //  Created by 狄烨 on 2023/6/6.
 //
 import SwiftUI
-@available(iOS, deprecated: 16)
+@available(iOS, deprecated: 16, message: "Use SwiftUI's Navigation API iOS 16")
 @available(tvOS, deprecated: 16)
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
@@ -14,7 +14,7 @@ extension Brick where Wrapped == Any {
         var value: P?
         var label: Label
         
-        @EnvironmentObject var pathAppender: PathAppender
+        @EnvironmentObject var pathHolder: Unobserved<NavigationPathHolder>
         
         public init(value: P?, @ViewBuilder label: () -> Label) {
             self.value = value
@@ -27,7 +27,7 @@ extension Brick where Wrapped == Any {
             Button(
                 action: {
                     guard let value = value else { return }
-                    pathAppender.append?(value)
+                    pathHolder.object.path.append(value)
                 },
                 label: { label }
             )

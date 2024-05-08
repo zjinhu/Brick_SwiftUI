@@ -17,4 +17,14 @@ public extension Brick where Wrapped: View {
                 .stroke(borderColor, lineWidth: lineWidth)
         }
     }
+    
+    @inlinable
+    func border<Content: ShapeStyle>(_ content: Content,
+        width: CGFloat = 1,
+        cornerRadius: CGFloat = 0) -> some View {
+        wrapped.overlay(
+            RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+            .strokeBorder(content, lineWidth: width)
+        )
+    }
 }

@@ -8,6 +8,13 @@
 import Foundation
 import StoreKit
 import SwiftUI
+public extension URL {
+
+    static func appStoreUrl(forAppId appId: Int) -> URL? {
+        URL(string: "https://itunes.apple.com/app/id\(appId)")
+    }
+}
+
 #if os(iOS)
 import UIKit
 

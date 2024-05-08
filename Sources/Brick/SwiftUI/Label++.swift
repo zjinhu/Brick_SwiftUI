@@ -31,3 +31,21 @@ extension Label where Title == Text, Icon == Image {
         self.init(title, systemImage: symbol.symbolName)
     }
 }
+
+public extension View {
+    
+    /// Convert the view to a label.
+    ///
+    /// - Parameters:
+    ///   - text: The label text.
+    func label(
+        _ text: LocalizedStringKey,
+        bundle: Bundle? = nil
+    ) -> some View {
+        Label {
+            Text(text, bundle: bundle)
+        } icon: {
+            self
+        }
+    }
+}

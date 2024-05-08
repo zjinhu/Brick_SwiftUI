@@ -5,11 +5,25 @@
 import SwiftUI
 
 public extension Image {
-
+    
+    static func symbol(_ name: String) -> Image {
+        .init(systemName: name)
+    }
+    
     init(symbol: SFSymbolName) {
         self.init(systemName: symbol.symbolName)
     }
 }
+
+public extension Image {
+
+    /// Resize the image with a certain content mode.
+    func resized(to mode: ContentMode) -> some View {
+        self.resizable()
+            .aspectRatio(contentMode: mode)
+    }
+}
+
 
 extension Image {
 
