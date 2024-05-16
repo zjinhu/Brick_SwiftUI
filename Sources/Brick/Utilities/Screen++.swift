@@ -62,6 +62,9 @@ public class Screen {
     public static var realHeight = max(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
     /// 当前屏幕状态 高度
     public static var realWidth = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+    
+    public static var width = UIScreen.main.bounds.width
+    public static var height = UIScreen.main.bounds.height
 }
 
 fileprivate extension UIScreen {
