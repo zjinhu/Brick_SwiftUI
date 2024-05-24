@@ -36,6 +36,7 @@
 		813925FF2A4BFEEC00E8BDE6 /* ScrollStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925EB2A4BFEEB00E8BDE6 /* ScrollStackView.swift */; };
 		81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969682A54216D0052619E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8C7411DA2C009F12009F7127 /* QuicklookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7411D92C009F12009F7127 /* QuicklookView.swift */; };
 		8C7513F12BDDE96100A3CA8D /* BrickKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C7513F02BDDE96100A3CA8D /* BrickKit */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftAVFoundation.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/swift/libswiftAVFoundation.tbd; sourceTree = DEVELOPER_DIR; };
 		81F9696C2A5421BE0052619E /* libswiftQuickLook.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLook.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/swift/libswiftQuickLook.tbd; sourceTree = DEVELOPER_DIR; };
 		81F9696E2A5421CB0052619E /* libswiftQuickLookUI.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLookUI.tbd; path = usr/lib/swift/libswiftQuickLookUI.tbd; sourceTree = SDKROOT; };
+		8C7411D92C009F12009F7127 /* QuicklookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklookView.swift; sourceTree = "<group>"; };
 		8C7513EF2BDDE95200A3CA8D /* Brick_SwiftUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Brick_SwiftUI; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 				813925E62A4BFEEB00E8BDE6 /* Refresh.swift */,
 				813925DD2A4BFEEA00E8BDE6 /* SafeAreaPaddingView.swift */,
 				813925EB2A4BFEEB00E8BDE6 /* ScrollStackView.swift */,
+				8C7411D92C009F12009F7127 /* QuicklookView.swift */,
 				813925E02A4BFEEA00E8BDE6 /* ScrollsView.swift */,
 				813925E12A4BFEEA00E8BDE6 /* ShareLinkView.swift */,
 				813925E22A4BFEEB00E8BDE6 /* SwiftUIView.swift */,
@@ -258,6 +261,7 @@
 			files = (
 				813925FD2A4BFEEC00E8BDE6 /* BannerView.swift in Sources */,
 				813925F62A4BFEEC00E8BDE6 /* SwiftUIView.swift in Sources */,
+				8C7411DA2C009F12009F7127 /* QuicklookView.swift in Sources */,
 				813925F82A4BFEEC00E8BDE6 /* DarkModelView.swift in Sources */,
 				813925F42A4BFEEC00E8BDE6 /* ScrollsView.swift in Sources */,
 				813925FC2A4BFEEC00E8BDE6 /* Toast.swift in Sources */,
