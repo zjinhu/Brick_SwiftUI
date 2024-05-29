@@ -134,7 +134,7 @@ struct DemoStackView: View {
             
             Section {
                 
-                //                        NavigationLink("Quicklook", destination: QuicklookView())
+                NavigationLink("Quicklook", destination: QuicklookView())
                 
                 Brick.NavigationLink("TTextField", value: DemoStack.tTextFieldDemoView)
                 
@@ -151,7 +151,6 @@ struct DemoStackView: View {
 
                 
             }
-            //                Brick.NavigationLink("CustomTabbar", value: DemoStack.customTabbar)
 #if os(iOS) && !os(macOS)
             
             Section {
@@ -159,9 +158,7 @@ struct DemoStackView: View {
                 Brick.NavigationLink("DrrkModelView", value: DemoStack.darkModelView)
                 
                 Brick.NavigationLink("ShareLink", value: DemoStack.shareLinkView)
-                
-//                Brick.NavigationLink("Photo", value: DemoStack.photoPickerView)
-                
+
                 Brick.NavigationLink("Toast", value: DemoStack.toast)
                 
                 Brick.NavigationLink("FocusState", value: DemoStack.focusStateView)
@@ -203,9 +200,7 @@ enum DemoStack: NavigatorScreen, CaseIterable {
 #if os(iOS)
     case darkModelView
     case shareLinkView
-//    case photoPickerView
     case focusStateView
     case toast
 #endif
-    //    case customTabbar
 }

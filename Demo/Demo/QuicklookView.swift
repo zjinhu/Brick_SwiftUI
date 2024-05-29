@@ -19,6 +19,7 @@ struct QuicklookView: View {
         List{
             
             Button {
+                print("\(urls)")
                 url = urls.randomElement()
             } label: {
                 Text("Quicklook URL")

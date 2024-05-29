@@ -12,6 +12,14 @@ struct AsyncImageView: View {
     
     var body: some View {
         VScrollStack{
+            
+            if let url = Bundle.main.url(forResource: "giphy", withExtension: "gif"),
+               let imgData = try? Data(contentsOf: url){
+                GIFImage(source: .static(data: imgData))
+            }
+
+            GIFImage(url: "https://raw.githubusercontent.com/igorcferreira/GIFImage/main/Tests/test.gif")
+                
             BR.AsyncImage(url: URL(string:"https://t7.baidu.com/it/u=2531125946,3055766435&fm=193&f=GIF")!) { image in
                 image
                     .resizable()
@@ -56,7 +64,7 @@ struct AsyncImageView: View {
                         .aspectRatio(contentMode: .fill)
                 }
             }.frame(width: 250, height: 250, alignment: .center)
-            
+
         }
 #if os(iOS)
         .ss.tabBar(.hidden)

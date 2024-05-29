@@ -7,13 +7,21 @@
 
 import SwiftUI
 
-struct RadioButton: View {
+public struct RadioButton: View {
     @State var isSelected: Bool = true
     let label: String
     let action: (Bool) -> Void
-
-    var body: some View {
-        Button{ 
+    
+    public init(isSelected: Bool = true,
+                label: String,
+                action: @escaping (Bool) -> Void) {
+        self.isSelected = isSelected
+        self.label = label
+        self.action = action
+    }
+    
+    public var body: some View {
+        Button{
             self.isSelected.toggle()
             self.action(self.isSelected)
         }label: {
@@ -22,15 +30,15 @@ struct RadioButton: View {
                     .resizable()
                     .frame(width: 14, height: 14)
                 Text(label)
-                    .font(.f15)
+                    .font(.system(size: 15))
             }
         }
-        .foregroundColor(self.isSelected ? .textColor : .buttonunSelectedColor)
     }
 }
 
 #Preview {
-    RadioButton(label: "123") { bool in
+    RadioButton(isSelected: false, label: "123") { bool in
         
     }
+    .foregroundColor(.orange)
 }
