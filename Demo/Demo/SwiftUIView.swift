@@ -8,16 +8,70 @@
 import SwiftUI
 import BrickKit
 
+enum Segment: Identifiable, CaseIterable {
+    case morning, noon, evening
+    
+    var id: String {
+        title
+    }
+    
+    var title: String {
+        switch self {
+        case .morning:
+            return "Morning"
+        case .noon:
+            return "Noon"
+        case .evening:
+            return "Evening"
+        }
+    }
+}
+
 struct SwiftUIView: View {
     
     @Environment(\.dismiss) private var dismiss
 #if os(iOS)
     @Environment(\.requestReview) private var requestReview
 #endif
+    
+    @State private var selected = Segment.noon
+    @State private var selection = Segment.noon
+    
     var body: some View {
         
         VScrollStack(spacing: 20){
  
+            SegmentView(segments: Segment.allCases,
+                        selected: $selected,
+                        normalColor: .primary,
+                        selectedColor: .primary,
+                        selectedBackColor: .white,
+                        bgColor: .gray.opacity(0.2)) { seg in
+                
+                Text(seg.title)
+
+            } background: {
+                Capsule()
+            }
+            .height(40)
+            .padding()
+
+            
+            Picker(selection: $selection) {
+                ForEach(Segment.allCases) { segment in
+                    Text(segment.title)
+                        .tag(segment)
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            .onChange(of: selection) { new in
+                withAnimation(.default) {
+                    selected = selection
+                }
+            }
+            
+            
             Button {
                 dismiss()
             } label: {
