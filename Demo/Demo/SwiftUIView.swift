@@ -51,6 +51,7 @@ struct SwiftUIView: View {
                 Text(seg.title)
 
             } background: {
+//                RoundedRectangle(cornerRadius: 10)
                 Capsule()
             }
             .height(40)
