@@ -10,7 +10,7 @@ import BrickKit
 #if os(iOS)
 struct Toast: View {
     @EnvironmentObject private var toast: ToastManager
-    
+    @State var showToast: Bool = false
     var body: some View {
         List {
  
@@ -72,9 +72,31 @@ struct Toast: View {
             } header: {
                 Text("Toast bottom")
             }
+            
+            Section {
+ 
+                Button {
+                    showToast.toggle()
+                } label: {
+                    Text("Toast")
+                }
+
+            } header: {
+                Text("AlertToast")
+            }
         }
         .addToast(toast)
         .ss.tabBar(.hidden) 
+        .toast(isPresenting: $showToast){
+//            AlertToast(displayMode: .hud,
+//                       type: .systemImage("exclamationmark.circle.fill", .orange),
+//                       title: "xxxxxxxxxxxx",
+//                       style: .style(backgroundColor: .gray, titleColor: .primary, titleFont: .system(size: 14)))
+            AlertToast(displayMode: .alert,
+                       type: .loading,
+                       title: "xxxxxxxxxxxx",
+                       style: .style(backgroundColor: .gray, titleColor: .primary, titleFont: .system(size: 14)))
+        }
     }
 }
 

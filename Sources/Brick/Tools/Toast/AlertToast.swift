@@ -38,6 +38,8 @@ public struct AlertToast: View{
 
         ///Only text alert
         case regular
+        
+        case loading
     }
     
     /// Customize Alert Appearance
@@ -151,6 +153,9 @@ public struct AlertToast: View{
                             .foregroundColor(color)
                     case .regular:
                         EmptyView()
+                        
+                    case .loading:
+                        ProgressView()
                     }
                     
                     Text(LocalizedStringKey(title ?? ""))
@@ -187,6 +192,9 @@ public struct AlertToast: View{
                         .foregroundColor(color)
                 case .regular:
                     EmptyView()
+                    
+                case .loading:
+                    ProgressView()
                 }
                 
                 if title != nil || subTitle != nil{
@@ -243,6 +251,9 @@ public struct AlertToast: View{
                 Spacer()
             case .regular:
                 EmptyView()
+                
+            case .loading:
+                ProgressView()
             }
             
             VStack(spacing: type == .regular ? 8 : 2){
@@ -262,7 +273,7 @@ public struct AlertToast: View{
             }
         }
         .padding()
-        .withFrame(type != .regular)
+        .withFrame(type != .regular && type != .loading)
         .alertBackground(style?.backgroundColor ?? nil)
         .cornerRadius(10)
     }
@@ -451,6 +462,11 @@ public struct AlertToastModifier: ViewModifier{
             return
         }
 
+        if alert().type == .loading{
+            duration = 0
+            tapToDismiss = false
+        }
+        
         if duration > 0{
             workItem?.cancel()
             
