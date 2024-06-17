@@ -48,6 +48,13 @@ extension View {
     ) -> some View {
         backgroundFill(fill())
     }
+    
+    ///当使用fullScreenCover时，清理掉背景色，使背景透明
+    public func fullScreenCoverBackgroundClear() -> some View {
+        background(
+            FullScreenCoverBackgroundClear()
+        )
+    }
 }
 
 public struct PassthroughView<Content: View>: View {
@@ -70,3 +77,16 @@ public struct PassthroughView<Content: View>: View {
     }
 }
 
+
+struct FullScreenCoverBackgroundClear: UIViewRepresentable {
+
+    func makeUIView(context: Context) -> UIView {
+        let view = UIView()
+        DispatchQueue.main.async {
+            view.superview?.superview?.backgroundColor = .clear
+        }
+        return view
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {}
+}
