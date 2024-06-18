@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoadingView: View {
-    @EnvironmentObject var manager: StateManager
+    @EnvironmentObject var manager: LoadingManager
     
     var body: some View {
         VStack{
@@ -32,6 +32,6 @@ struct LoadingView: View {
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
         LoadingView()
-            .environmentObject(StateManager())
+            .environmentObject(LoadingManager())
     }
 }

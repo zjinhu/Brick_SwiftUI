@@ -8,6 +8,29 @@
 import SwiftUI
 import Combine
  
+public extension View{
+
+    func toast(isPresenting: Binding<Bool>, duration: Double = 2, tapToDismiss: Bool = true, offsetY: CGFloat = 0, alert: @escaping () -> AlertToast, onTap: (() -> ())? = nil, completion: (() -> ())? = nil) -> some View{
+        modifier(AlertToastModifier(isPresenting: isPresenting, duration: duration, tapToDismiss: tapToDismiss, offsetY: offsetY, alert: alert, onTap: onTap, completion: completion))
+    }
+    
+    fileprivate func withFrame(_ withFrame: Bool) -> some View{
+        modifier(WithFrameModifier(withFrame: withFrame))
+    }
+
+    fileprivate func alertBackground(_ color: Color? = nil) -> some View{
+        modifier(BackgroundModifier(color: color))
+    }
+
+    fileprivate func textColor(_ color: Color? = nil) -> some View{
+        modifier(TextForegroundModifier(color: color))
+    }
+    
+    @ViewBuilder fileprivate func valueChanged<T: Equatable>(value: T, onChange: @escaping (T) -> Void) -> some View {
+        self.onChange(of: value, perform: onChange)
+    }
+}
+
 public struct AlertToast: View{
     
     public enum BannerAnimation{
@@ -536,28 +559,5 @@ fileprivate extension Image{
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(maxWidth: 20, maxHeight: 20, alignment: .center)
-    }
-}
-
-public extension View{
-
-    fileprivate func withFrame(_ withFrame: Bool) -> some View{
-        modifier(WithFrameModifier(withFrame: withFrame))
-    }
-
-    func toast(isPresenting: Binding<Bool>, duration: Double = 2, tapToDismiss: Bool = true, offsetY: CGFloat = 0, alert: @escaping () -> AlertToast, onTap: (() -> ())? = nil, completion: (() -> ())? = nil) -> some View{
-        modifier(AlertToastModifier(isPresenting: isPresenting, duration: duration, tapToDismiss: tapToDismiss, offsetY: offsetY, alert: alert, onTap: onTap, completion: completion))
-    }
-
-    fileprivate func alertBackground(_ color: Color? = nil) -> some View{
-        modifier(BackgroundModifier(color: color))
-    }
-
-    fileprivate func textColor(_ color: Color? = nil) -> some View{
-        modifier(TextForegroundModifier(color: color))
-    }
-    
-    @ViewBuilder fileprivate func valueChanged<T: Equatable>(value: T, onChange: @escaping (T) -> Void) -> some View {
-        self.onChange(of: value, perform: onChange)
     }
 }

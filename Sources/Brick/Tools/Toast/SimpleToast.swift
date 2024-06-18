@@ -8,6 +8,55 @@
 
 import SwiftUI
 import Combine
+// MARK: - View extensions
+public extension View {
+    /// Present the sheet based on the state of a given binding to a boolean.
+    ///
+    /// - NOTE: The toast will be attached to the view's frame it is attached to and not the general UIScreen.
+    /// - Parameters:
+    ///   - isPresented: Boolean binding as source of truth for presenting the toast
+    ///   - options: Options for the toast
+    ///   - onDismiss: Closure called when the toast is dismissed
+    ///   - content: Inner content for the toast
+    /// - Returns: The toast view
+    func toast<SimpleToastContent: View>(
+        isPresented: Binding<Bool>, options: SimpleToastOptions,
+        onDismiss: (() -> Void)? = nil,
+        @ViewBuilder content: @escaping () -> SimpleToastContent) -> some View {
+        self.modifier(
+            SimpleToast(showToast: isPresented, options: options, onDismiss: onDismiss, content: content)
+        )
+    }
+
+    /// Present the sheet based on the state of a given optional item.
+    /// If the item is non-nil the toast will be shown, otherwise it is dimissed.
+    ///
+    /// - NOTE: The toast will be attached to the view's frame it is attached to and not the general UIScreen.
+    /// - Parameters:
+    ///   - item: Optional item as source of truth for presenting the toast
+    ///   - options: Options for the toast
+    ///   - onDismiss: Closure called when the toast is dismissed
+    ///   - content: Inner content for the toast
+    /// - Returns: The toast view
+    func toast<SimpleToastContent: View, Item: Identifiable>(
+        item: Binding<Item?>?, options: SimpleToastOptions,
+        onDismiss: (() -> Void)? = nil,
+        @ViewBuilder content: @escaping () -> SimpleToastContent
+    ) -> some View {
+        let bindingProxy = Binding<Bool>(
+            get: { item?.wrappedValue != nil },
+            set: {
+                if !$0 {
+                    item?.wrappedValue = nil
+                }
+            }
+        )
+
+        return self.modifier(
+            SimpleToast(showToast: bindingProxy, options: options, onDismiss: onDismiss, content: content)
+        )
+    }
+}
 
 struct SimpleToast<SimpleToastContent: View>: ViewModifier {
     @Binding var showToast: Bool
@@ -198,56 +247,6 @@ struct SimpleToast<SimpleToastContent: View>: ViewModifier {
         if(options.dismissOnTap ?? true){
             self.dismiss()
         }
-    }
-}
-
-// MARK: - View extensions
-public extension View {
-    /// Present the sheet based on the state of a given binding to a boolean.
-    ///
-    /// - NOTE: The toast will be attached to the view's frame it is attached to and not the general UIScreen.
-    /// - Parameters:
-    ///   - isPresented: Boolean binding as source of truth for presenting the toast
-    ///   - options: Options for the toast
-    ///   - onDismiss: Closure called when the toast is dismissed
-    ///   - content: Inner content for the toast
-    /// - Returns: The toast view
-    func simpleToast<SimpleToastContent: View>(
-        isPresented: Binding<Bool>, options: SimpleToastOptions,
-        onDismiss: (() -> Void)? = nil,
-        @ViewBuilder content: @escaping () -> SimpleToastContent) -> some View {
-        self.modifier(
-            SimpleToast(showToast: isPresented, options: options, onDismiss: onDismiss, content: content)
-        )
-    }
-
-    /// Present the sheet based on the state of a given optional item.
-    /// If the item is non-nil the toast will be shown, otherwise it is dimissed.
-    ///
-    /// - NOTE: The toast will be attached to the view's frame it is attached to and not the general UIScreen.
-    /// - Parameters:
-    ///   - item: Optional item as source of truth for presenting the toast
-    ///   - options: Options for the toast
-    ///   - onDismiss: Closure called when the toast is dismissed
-    ///   - content: Inner content for the toast
-    /// - Returns: The toast view
-    func simpleToast<SimpleToastContent: View, Item: Identifiable>(
-        item: Binding<Item?>?, options: SimpleToastOptions,
-        onDismiss: (() -> Void)? = nil,
-        @ViewBuilder content: @escaping () -> SimpleToastContent
-    ) -> some View {
-        let bindingProxy = Binding<Bool>(
-            get: { item?.wrappedValue != nil },
-            set: {
-                if !$0 {
-                    item?.wrappedValue = nil
-                }
-            }
-        )
-
-        return self.modifier(
-            SimpleToast(showToast: bindingProxy, options: options, onDismiss: onDismiss, content: content)
-        )
     }
 }
 

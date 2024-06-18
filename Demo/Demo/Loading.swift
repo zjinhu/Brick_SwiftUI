@@ -9,7 +9,7 @@ import SwiftUI
 import BrickKit
 
 struct Loading: View {
-    @EnvironmentObject private var loading: StateManager
+    @EnvironmentObject private var loading: LoadingManager
  
     @StateObject var timer = TimeHelp()
     var body: some View {
@@ -166,7 +166,7 @@ struct Loading: View {
 struct Loading_Previews: PreviewProvider {
     static var previews: some View {
         Loading()
-            .environmentObject(StateManager())
+            .environmentObject(LoadingManager())
     }
 }
 
