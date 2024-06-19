@@ -5,6 +5,7 @@ extension View {
     public func toast<ToastContent: View>(
         isPresented: Binding<Bool>,
         position: CustomToast<ToastContent>.Position = .top,
+        animation: CustomToast<ToastContent>.AnimationType = .fade,
         duration: Double = 3.0,
         offsetY: CGFloat = 0,
         @ViewBuilder content: @escaping () -> ToastContent) -> some View {
@@ -13,6 +14,7 @@ extension View {
                     isPresented: isPresented,
                     duration: duration,
                     position: position,
+                    animation: animation,
                     offsetY: offsetY,
                     content: content)
             )
@@ -26,10 +28,12 @@ public struct CustomToast<ToastContent: View>: ViewModifier{
     let position: Position
     let toastInnerContent: ToastContent
     let offsetY: CGFloat
+    let animation: AnimationType
     
     init(isPresented: Binding<Bool>,
          duration: Double,
          position: Position,
+         animation: AnimationType,
          offsetY: CGFloat,
          @ViewBuilder content: @escaping () -> ToastContent) {
         self._isPresented = isPresented
@@ -37,11 +41,16 @@ public struct CustomToast<ToastContent: View>: ViewModifier{
         self.position = position
         self.toastInnerContent = content()
         self.offsetY = offsetY
+        self.animation = animation
     }
     
     public enum Position {
         case top
         case bottom
+    }
+    
+    public enum AnimationType {
+        case fade, slide, scale
     }
     
     @State private var workItem: DispatchWorkItem?
@@ -64,15 +73,25 @@ public struct CustomToast<ToastContent: View>: ViewModifier{
         }
     }
     
+    func setAnyTransition() -> AnyTransition{
+        switch animation {
+        case .fade:
+            return AnyTransition.opacity.animation(.linear).combined(with: .opacity)
+        case .slide:
+            return AnyTransition.move(edge: transitionEdge).combined(with: .opacity)
+        case .scale:
+            return AnyTransition.scale.animation(.linear).combined(with: .opacity)
+        }
+    }
+    
     public func body(content: Content) -> some View {
         content
             .overlay(alignment: alignment){
                 ZStack{
                     if isPresented{
                         toastInnerContent
-                            .compositingGroup()
                             .offset(y: offsetY)
-                            .transition(AnyTransition.move(edge: transitionEdge).combined(with: .opacity))
+                            .transition(setAnyTransition())
                     }
                 }
                 .animation(Animation.spring(), value: isPresented)
