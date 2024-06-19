@@ -22,9 +22,7 @@ struct CustomLoading<LoadingContent: View>: ViewModifier {
     let options: LoadingOptions
     let onDismiss: (() -> Void)?
 
-    @State private var timer: Timer?
-    @State private var isInit = false
-    @State private var viewState = false
+    @State private var workItem: DispatchWorkItem?
 
     private let loadingInnerContent: LoadingContent
 
@@ -42,9 +40,6 @@ struct CustomLoading<LoadingContent: View>: ViewModifier {
                 }
             }
             .onTapGesture(perform: dismissOnTap)
-            .onAppear(perform: setup)
-            .onDisappear { isInit = false }
-            .onReceive(Just(showLoading), perform: update)
         }
     }
 
@@ -64,7 +59,6 @@ struct CustomLoading<LoadingContent: View>: ViewModifier {
 
         content
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .ignoresSafeArea()
             .overlay(
                 Group { EmptyView() }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -72,40 +66,32 @@ struct CustomLoading<LoadingContent: View>: ViewModifier {
                     .opacity(options.backdrop != nil && showLoading ? 1 : 0)
                     .onTapGesture(perform: dismissOnTap)
             )
-            .overlay(loadingRenderContent, alignment: .center)
-    }
-
-    private func setup() {
-        dismissAfterTimeout()
-        isInit = true
-    }
-
-    private func update(state: Bool) {
-        if state != viewState {
-            viewState = state
-
-            if isInit, viewState {
-                dismissAfterTimeout()
+            .overlay(alignment: .center){
+                loadingRenderContent
             }
-        }
+            .onChange(of: showLoading) { newValue in
+                if newValue{
+                    dismissAfterTimeout()
+                }
+            }
     }
 
     private func dismissAfterTimeout() {
         if let timeout = options.hideAfter, showLoading, options.hideAfter != nil {
-            DispatchQueue.main.async { [self] in
-                timer?.invalidate()
-                timer = Timer.scheduledTimer(withTimeInterval: timeout, repeats: false, block: { _ in dismiss() })
+            workItem?.cancel()
+            
+            let task = DispatchWorkItem {
+                dismiss()
             }
+            workItem = task
+            DispatchQueue.main.asyncAfter(deadline: .now() + timeout, execute: task)
         }
     }
 
     private func dismiss() {
         withAnimation(options.animation) {
-            timer?.invalidate()
-            timer = nil
             showLoading = false
-            viewState = false
-
+            workItem = nil
             onDismiss?()
         }
     }

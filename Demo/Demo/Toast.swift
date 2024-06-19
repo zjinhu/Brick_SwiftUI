@@ -99,12 +99,8 @@ struct Toast: View {
                        type: .systemImage("exclamationmark.circle.fill", .orange),
                        title: "xxxxxxxxxxxx",
                        style: .style(backgroundColor: .black, titleColor: .white, titleFont: .system(size: 14)))
-//            AlertToast(displayMode: .alert,
-//                       type: .loading,
-//                       title: "xxxxxxxxxxxx",
-//                       style: .style(backgroundColor: .white, titleColor: .primary, titleFont: .system(size: 14)))
         }
-        .toast(isPresented: $showToast, type: .floater(), position: .top, duration: 6.0) {
+        .toast(isPresented: $showToast, position: .top, duration: 5.0) {
             Label(
                 title: {
                     Text("保存成功")
