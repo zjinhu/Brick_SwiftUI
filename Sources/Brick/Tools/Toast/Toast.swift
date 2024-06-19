@@ -17,6 +17,7 @@ extension View {
                     content: content)
             )
         }
+    
 }
 
 public struct CustomToast<ToastContent: View>: ViewModifier{
@@ -65,7 +66,6 @@ public struct CustomToast<ToastContent: View>: ViewModifier{
     
     public func body(content: Content) -> some View {
         content
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .overlay(alignment: alignment){
                 ZStack{
                     if isPresented{
@@ -84,6 +84,9 @@ public struct CustomToast<ToastContent: View>: ViewModifier{
     }
     
     private func onAppearAction(){
+        guard workItem == nil else {
+            return
+        }
         
         if duration > 0{
             workItem?.cancel()

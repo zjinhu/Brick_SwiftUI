@@ -1,6 +1,5 @@
 //This file is part of the AlertToast Swift library: https://github.com/elai950/AlertToast
 import SwiftUI
-import Combine
 
 public struct AlertToast: View{
     

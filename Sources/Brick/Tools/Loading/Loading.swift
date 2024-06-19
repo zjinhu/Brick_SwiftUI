@@ -77,6 +77,9 @@ struct CustomLoading<LoadingContent: View>: ViewModifier {
     }
 
     private func dismissAfterTimeout() {
+        guard workItem == nil else {
+            return
+        }
         if let timeout = options.hideAfter, showLoading, options.hideAfter != nil {
             workItem?.cancel()
             

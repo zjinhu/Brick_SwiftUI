@@ -117,7 +117,7 @@ struct Toast: View {
             .padding(.horizontal, 20)
             .background(Color.white)
             .clipShape(Capsule())
-            .shadow(radius: 10)
+            .shadow(radius: 10) 
         }
     }
     
