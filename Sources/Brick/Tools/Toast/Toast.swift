@@ -70,6 +70,7 @@ public struct CustomToast<ToastContent: View>: ViewModifier{
                 ZStack{
                     if isPresented{
                         toastInnerContent
+                            .compositingGroup()
                             .offset(y: offsetY)
                             .transition(AnyTransition.move(edge: transitionEdge).combined(with: .opacity))
                     }
@@ -87,7 +88,6 @@ public struct CustomToast<ToastContent: View>: ViewModifier{
         guard workItem == nil else {
             return
         }
-        
         if duration > 0{
             workItem?.cancel()
             

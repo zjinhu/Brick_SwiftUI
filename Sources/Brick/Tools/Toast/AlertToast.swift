@@ -283,7 +283,11 @@ public struct AlertToastModifier: ViewModifier{
     @State private var alertRect: CGRect = .zero
     
     private var screen: CGRect {
+#if os(iOS)
         return UIScreen.main.bounds
+#else
+        return NSScreen.main?.frame ?? .zero
+#endif
     }
     
     private var offset: CGFloat{
@@ -514,8 +518,22 @@ public extension View{
         modifier(WithFrameModifier(withFrame: withFrame))
     }
     
-    func toast(isPresenting: Binding<Bool>, duration: Double = 2, tapToDismiss: Bool = true, offsetY: CGFloat = 0, alert: @escaping () -> AlertToast, onTap: (() -> ())? = nil, completion: (() -> ())? = nil) -> some View{
-        modifier(AlertToastModifier(isPresenting: isPresenting, duration: duration, tapToDismiss: tapToDismiss, offsetY: offsetY, alert: alert, onTap: onTap, completion: completion))
+    func toast(isPresenting: Binding<Bool>, 
+               duration: Double = 2,
+               tapToDismiss: Bool = true,
+               offsetY: CGFloat = 0,
+               alert: @escaping () -> AlertToast,
+               onTap: (() -> ())? = nil,
+               completion: (() -> ())? = nil) -> some View{
+        modifier(
+            AlertToastModifier(isPresenting: isPresenting,
+                               duration: duration,
+                               tapToDismiss: tapToDismiss,
+                               offsetY: offsetY,
+                               alert: alert,
+                               onTap: onTap,
+                               completion: completion)
+        )
     }
     
     fileprivate func alertBackground(_ color: Color? = nil) -> some View{
