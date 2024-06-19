@@ -1,4 +1,4 @@
-//This file is part of the SimpleToast Swift library: https://github.com/SimformSolutionsPvtLtd/SSToastMessage
+//This file is part of the SSToastMessage Swift library: https://github.com/SimformSolutionsPvtLtd/SSToastMessage
 import SwiftUI
 
 extension View {
@@ -320,6 +320,7 @@ public struct CustomToast<ToastContent>: ViewModifier where ToastContent: View {
                     commonVStack
                         .frame(width: viewWidth)
                         .animation(animation, value: isPresented)
+                        .opacity(isPresented ? 1 : 0)
                 } else {
                     commonVStack
                 }

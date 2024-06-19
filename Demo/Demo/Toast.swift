@@ -11,16 +11,16 @@ import BrickKit
 struct Toast: View {
     @EnvironmentObject private var toast: ToastManager
     @State var showToast: Bool = false
-
+    @State var showToast1: Bool = false
     var body: some View {
         List {
- 
+            
             Section {
-
+                
                 Button {
                     toast.position = .top
                     toast.showText("Toast at top")
-  
+                    
                 } label: {
                     Text("Toast at top")
                 }
@@ -28,7 +28,7 @@ struct Toast: View {
                 Button {
                     toast.position = .top
                     toast.showText("Compares less than or equal to all positive numbers, but greater than zero. If the target supports subnormal values, this is smaller than leastNormalMagnitude; otherwise they are equal.")
-  
+                    
                 } label: {
                     Text("Toast Long Text")
                 }
@@ -36,28 +36,28 @@ struct Toast: View {
                 Button {
                     toast.position = .top
                     toast.showCustom()
-  
+                    
                 } label: {
                     Text("Toast CustomView")
                 }
-
+                
             } header: {
                 Text("Toast top")
             }
- 
+            
             Section {
                 Button {
                     toast.position = .bottom
                     toast.showText("Toast at bottom")
-  
+                    
                 } label: {
                     Text("Toast at bottom")
                 }
- 
+                
                 Button {
                     toast.position = .bottom
                     toast.showText("Compares less than or equal to all positive numbers, but greater than zero. If the target supports subnormal values, this is smaller than leastNormalMagnitude; otherwise they are equal.")
-  
+                    
                 } label: {
                     Text("Toast Long Text")
                 }
@@ -65,21 +65,27 @@ struct Toast: View {
                 Button {
                     toast.position = .bottom
                     toast.showCustom()
-  
+                    
                 } label: {
                     Text("Toast CustomView")
                 }
-
+                
             } header: {
                 Text("Toast bottom")
             }
             
             Section {
- 
+                
                 Button {
                     showToast.toggle()
                 } label: {
                     Text("CustomToast")
+                }
+                
+                Button {
+                    showToast1.toggle()
+                } label: {
+                    Text("AlertToast")
                 }
                 
             } header: {
@@ -88,6 +94,16 @@ struct Toast: View {
         }
         .addToast(toast)
         .ss.tabBar(.hidden)
+        .toast(isPresenting: $showToast1){
+            AlertToast(displayMode: .hud,
+                       type: .systemImage("exclamationmark.circle.fill", .orange),
+                       title: "xxxxxxxxxxxx",
+                       style: .style(backgroundColor: .black, titleColor: .white, titleFont: .system(size: 14)))
+//            AlertToast(displayMode: .alert,
+//                       type: .loading,
+//                       title: "xxxxxxxxxxxx",
+//                       style: .style(backgroundColor: .white, titleColor: .primary, titleFont: .system(size: 14)))
+        }
         .toast(isPresented: $showToast, type: .floater(), position: .top, duration: 6.0) {
             Label(
                 title: {
@@ -108,7 +124,7 @@ struct Toast: View {
             .shadow(radius: 10)
         }
     }
- 
+    
 }
 
 struct Toast_Previews: PreviewProvider {
@@ -134,7 +150,7 @@ struct CustomView: View {
             Image(systemName: "square.and.arrow.up.on.square")
             
             Text("texttexttexttexttext")
-
+            
         }
         .padding(10)
         .foregroundColor(.white)

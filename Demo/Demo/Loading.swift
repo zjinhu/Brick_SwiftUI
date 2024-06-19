@@ -11,6 +11,7 @@ import BrickKit
 struct Loading: View {
     @EnvironmentObject private var loading: LoadingManager
     @State var showloading = false
+    @State var showToast1: Bool = false
     @StateObject var timer = TimeHelp()
     var body: some View {
         List {
@@ -144,6 +145,12 @@ struct Loading: View {
                     Text("loading")
                 }
                 
+                Button {
+                    showToast1.toggle()
+                } label: {
+                    Text("AlertToast loading")
+                }
+                
             } header: {
                 Text("CustomLoading")
             }
@@ -159,6 +166,12 @@ struct Loading: View {
                 timer.stop()
                 loading.showSuccess()
             }
+        }
+        .toast(isPresenting: $showToast1){
+            AlertToast(displayMode: .alert,
+                       type: .loading,
+                       title: "Loading...",
+                       style: .style(backgroundColor: .black.opacity(0.9), titleColor: .white, titleFont: .system(size: 14)))
         }
         .loading(isPresented: $showloading, options: loadingOptions) {
             Label(
