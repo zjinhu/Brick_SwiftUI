@@ -10,7 +10,7 @@ import BrickKit
 
 struct Loading: View {
     @EnvironmentObject private var loading: LoadingManager
- 
+    @State var showloading = false
     @StateObject var timer = TimeHelp()
     var body: some View {
         List {
@@ -136,6 +136,17 @@ struct Loading: View {
                 Text("Failed")
             }
  
+            Section {
+ 
+                Button {
+                    showloading.toggle()
+                } label: {
+                    Text("loading")
+                }
+                
+            } header: {
+                Text("CustomLoading")
+            }
         }
 #if os(iOS)
         .ss.tabBar(.hidden)
@@ -149,7 +160,30 @@ struct Loading: View {
                 loading.showSuccess()
             }
         }
+        .loading(isPresented: $showloading, options: loadingOptions) {
+            Label(
+                title: {
+                    Text("保存成功")
+                        .foregroundColor(.black)
+                },
+                icon: {
+                    Image(systemName: "checkmark.circle.fill")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.green)
+                }
+            )
+            .padding(.vertical, 10)
+            .padding(.horizontal, 20)
+            .background(Color.white)
+            .clipShape(Capsule())
+            .shadow(radius: 10)
+        }
     }
+    private let loadingOptions = LoadingOptions(
+        hideAfter: 5
+    )
+    
     func dismiss(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             loading.hide()

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FailView: View {
-    @EnvironmentObject var manager: StateManager
+    @EnvironmentObject var manager: LoadingManager
     @State private var isDrawn = false
     var body: some View {
         VStack{
@@ -32,7 +32,7 @@ struct FailView: View {
 struct FailedView_Previews: PreviewProvider {
     static var previews: some View {
         FailView()
-            .environmentObject(StateManager())
+            .environmentObject(LoadingManager())
     }
 }
 

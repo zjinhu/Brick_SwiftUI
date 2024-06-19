@@ -11,6 +11,7 @@ import BrickKit
 struct Toast: View {
     @EnvironmentObject private var toast: ToastManager
     @State var showToast: Bool = false
+
     var body: some View {
         List {
  
@@ -78,26 +79,36 @@ struct Toast: View {
                 Button {
                     showToast.toggle()
                 } label: {
-                    Text("Toast")
+                    Text("CustomToast")
                 }
-
+                
             } header: {
-                Text("AlertToast")
+                Text("CustomToast")
             }
         }
         .addToast(toast)
-        .ss.tabBar(.hidden) 
-        .toast(isPresenting: $showToast){
-//            AlertToast(displayMode: .hud,
-//                       type: .systemImage("exclamationmark.circle.fill", .orange),
-//                       title: "xxxxxxxxxxxx",
-//                       style: .style(backgroundColor: .gray, titleColor: .primary, titleFont: .system(size: 14)))
-            AlertToast(displayMode: .alert,
-                       type: .loading,
-                       title: "xxxxxxxxxxxx",
-                       style: .style(backgroundColor: .gray, titleColor: .primary, titleFont: .system(size: 14)))
+        .ss.tabBar(.hidden)
+        .toast(isPresented: $showToast, type: .floater(), position: .top, duration: 6.0) {
+            Label(
+                title: {
+                    Text("保存成功")
+                        .foregroundColor(.black)
+                },
+                icon: {
+                    Image(systemName: "checkmark.circle.fill")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.green)
+                }
+            )
+            .padding(.vertical, 10)
+            .padding(.horizontal, 20)
+            .background(Color.white)
+            .clipShape(Capsule())
+            .shadow(radius: 10)
         }
     }
+ 
 }
 
 struct Toast_Previews: PreviewProvider {
