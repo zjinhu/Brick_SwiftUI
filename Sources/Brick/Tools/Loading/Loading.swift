@@ -1,6 +1,5 @@
 //  This file is part of the SimpleToast Swift library: https://github.com/sanzaru/SimpleToast
 import SwiftUI
-import Combine
 
 public extension View {
 
