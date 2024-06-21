@@ -342,6 +342,7 @@ public struct CachedAsyncImage<Content>: View where Content: View {
 }
 
 // MARK: - LoadingError
+
 @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 private extension AsyncImage {
     
@@ -351,6 +352,7 @@ private extension AsyncImage {
 }
 
 // MARK: - Helpers
+
 @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 private extension CachedAsyncImage {
     private func remoteImage(from request: URLRequest, session: URLSession) async throws -> (Image, URLSessionTaskMetrics) {
@@ -377,7 +379,7 @@ private extension CachedAsyncImage {
             throw AsyncImage<Content>.LoadingError()
         }
 #else
-        if let uiImage = UIImage(data: data) {
+        if let uiImage = UIImage(data: data, scale: scale) {
             return Image(uiImage: uiImage)
         } else {
             throw AsyncImage<Content>.LoadingError()

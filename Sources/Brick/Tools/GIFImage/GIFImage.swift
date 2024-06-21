@@ -105,7 +105,8 @@ public struct GIFImage: View {
         if loop { load() }
     }
     
-    @Sendable private func load() {
+    @Sendable 
+    private func load() {
         presentationTask?.cancel()
         presentationTask = Task { await presentationController.start(
             imageLoader: imageLoader,
