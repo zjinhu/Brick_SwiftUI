@@ -37,6 +37,9 @@ struct SwiftUIView: View {
     @State private var selected = Segment.noon
     @State private var selection = Segment.noon
     
+    let titles: [String] = ["1", "2", "3", "4"]
+    @State var selectedIndex: Int?
+    
     var body: some View {
         
         VScrollStack(spacing: 20){
@@ -72,6 +75,28 @@ struct SwiftUIView: View {
                 }
             }
             
+            SegmentedPicker(
+                 titles,
+                 selectedIndex: Binding(
+                     get: { selectedIndex },
+                     set: { selectedIndex = $0 }),
+                 selectionAlignment: .bottom,
+                 content: { item, isSelected in
+                     Text(item)
+                         .foregroundColor(isSelected ? Color.black : Color.gray )
+                         .padding(.horizontal, 16)
+                         .padding(.vertical, 8)
+                 },
+                 selection: {
+                     VStack(spacing: 0) {
+                         Spacer()
+                         Color.black.frame(height: 1)
+                     }
+                 })
+                 .onAppear {
+                     selectedIndex = 0
+                 }
+                 .animation(.easeInOut(duration: 0.3))
             
             Button {
                 dismiss()
