@@ -73,7 +73,7 @@ public class UIGifImage: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(name: String,
+    public convenience init(name: String,
                      repetitions: Int? = nil,
                      onComplete: (() -> Void)? = nil) {
         self.init()
@@ -81,7 +81,7 @@ public class UIGifImage: UIView {
         initView()
     }
     
-    convenience init(data: Data,
+    public convenience init(data: Data,
                      repetitions: Int? = nil,
                      onComplete: (() -> Void)? = nil) {
         self.init()
@@ -95,7 +95,7 @@ public class UIGifImage: UIView {
         self.addSubview(imageView)
     }
     
-    func updateGIF(data: Data,
+    public func updateGIF(data: Data,
                    repetitions: Int? = nil,
                    onComplete: (() -> Void)? = nil) {
         self.repetitions = repetitions
@@ -105,7 +105,7 @@ public class UIGifImage: UIView {
         }
     }
     
-    func updateGIF(name: String,
+    public func updateGIF(name: String,
                    repetitions: Int? = nil,
                    onComplete: (() -> Void)? = nil) {
         self.repetitions = repetitions
