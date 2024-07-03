@@ -1,10 +1,3 @@
-//
-//  GeometryDemo.swift
-//  BrickBrickDemo
-//
-//  Created by FunWidget on 2024/6/25.
-//
-
 import SwiftUI
 
 struct GeometryDemo: View {

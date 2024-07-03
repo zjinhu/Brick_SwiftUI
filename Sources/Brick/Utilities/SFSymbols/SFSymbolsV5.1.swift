@@ -1,9 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by FunWidget on 2024/6/17.
-//
 @available(iOS 17.1, macOS 14.1, tvOS 17.1, watchOS 10.1, visionOS 1.0, *)
 extension SFSymbolName {
     /// 􂉏

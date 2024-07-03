@@ -1,10 +1,3 @@
-//
-//  SwiftUIView.swift
-//  
-//
-//  Created by FunWidget on 2024/6/25.
-//
-
 import SwiftUI
 
 public extension Brick where Wrapped: View {
