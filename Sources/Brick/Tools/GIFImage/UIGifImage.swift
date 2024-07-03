@@ -9,22 +9,18 @@ public struct GifImage: UIViewRepresentable {
     private let repetitions: Int?
     private let onComplete: (() -> Void)?
     var contentMode: UIView.ContentMode = .scaleAspectFill
-    public init(
-        data: Data,
-        repetitions: Int? = nil,
-        onComplete: (() -> Void)? = nil
-    ) {
+    public init(data: Data,
+                repetitions: Int? = nil,
+                onComplete: (() -> Void)? = nil) {
         self.data = data
         self.name = nil
         self.repetitions = repetitions
         self.onComplete = onComplete
     }
     
-    public init(
-        name: String,
-        repetitions: Int? = nil,
-        onComplete: (() -> Void)? = nil
-    ) {
+    public init(name: String,
+                repetitions: Int? = nil,
+                onComplete: (() -> Void)? = nil) {
         self.data = nil
         self.name = name
         self.repetitions = repetitions
@@ -62,14 +58,12 @@ extension GifImage {
     }
 }
 
-
 public class UIGifImage: UIView {
     let imageView = UIImageView()
     private var repetitions: Int? = nil
     private var onComplete: (() -> Void)? = nil
     private var data: Data?
     private var name: String?
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -79,21 +73,17 @@ public class UIGifImage: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(
-        name: String,
-        repetitions: Int? = nil,
-        onComplete: (() -> Void)? = nil
-    ) {
+    convenience init(name: String,
+                     repetitions: Int? = nil,
+                     onComplete: (() -> Void)? = nil) {
         self.init()
         self.name = name
         initView()
     }
     
-    convenience init(
-        data: Data,
-        repetitions: Int? = nil,
-        onComplete: (() -> Void)? = nil
-    ) {
+    convenience init(data: Data,
+                     repetitions: Int? = nil,
+                     onComplete: (() -> Void)? = nil) {
         self.init()
         self.data = data
         initView()
@@ -105,11 +95,9 @@ public class UIGifImage: UIView {
         self.addSubview(imageView)
     }
     
-    func updateGIF(
-        data: Data,
-        repetitions: Int? = nil,
-        onComplete: (() -> Void)? = nil
-    ) {
+    func updateGIF(data: Data,
+                   repetitions: Int? = nil,
+                   onComplete: (() -> Void)? = nil) {
         self.repetitions = repetitions
         self.onComplete = onComplete
         updateWithImage {
@@ -117,11 +105,9 @@ public class UIGifImage: UIView {
         }
     }
     
-    func updateGIF(
-        name: String,
-        repetitions: Int? = nil,
-        onComplete: (() -> Void)? = nil
-    ) {
+    func updateGIF(name: String,
+                   repetitions: Int? = nil,
+                   onComplete: (() -> Void)? = nil) {
         self.repetitions = repetitions
         self.onComplete = onComplete
         updateWithImage {
@@ -149,10 +135,8 @@ public class UIGifImage: UIView {
         }
     }
     
-    private func initView(
-        repetitions: Int? = nil,
-        onComplete: (() -> Void)? = nil
-    ) {
+    private func initView(repetitions: Int? = nil,
+                          onComplete: (() -> Void)? = nil) {
         self.repetitions = repetitions
         self.onComplete = onComplete
     }
@@ -164,7 +148,7 @@ public struct AnimationImages {
 }
 
 public class GifTool{
-    static func gifImage(data: Data) async -> AnimationImages? {
+    public static func gifImage(data: Data) async -> AnimationImages? {
         await withCheckedContinuation { continuation in
             DispatchQueue.global().async {
                 let animationImages = gifImage(data: data)
@@ -173,7 +157,7 @@ public class GifTool{
         }
     }
     
-    static func gifImage(data: Data) -> AnimationImages? {
+    public static func gifImage(data: Data) -> AnimationImages? {
         guard let source = CGImageSourceCreateWithData(data as CFData, nil)
         else {
             return nil
@@ -203,7 +187,7 @@ public class GifTool{
         return AnimationImages(frames: frames, duration: Double(duration) / 1000.0)
     }
     
-    static func gifImage(name: String) -> AnimationImages? {
+    public static func gifImage(name: String) -> AnimationImages? {
         guard let url = Bundle.main.url(forResource: name, withExtension: "gif"),
               let data = try? Data(contentsOf: url)
         else {
@@ -212,7 +196,7 @@ public class GifTool{
         return gifImage(data: data)
     }
     
-    static func gifData(name: String) -> Data? {
+    public static func gifData(name: String) -> Data? {
         guard let url = Bundle.main.url(forResource: name, withExtension: "gif"),
               let data = try? Data(contentsOf: url)
         else {
@@ -221,9 +205,9 @@ public class GifTool{
         return data
     }
     
-    static func createGIF(with images: [UIImage],
-                          frameDelay: TimeInterval = 0.1,
-                          loopCount: Int = 0) -> Data? {
+    public static func createGIF(with images: [UIImage],
+                                 frameDelay: TimeInterval = 0.1,
+                                 loopCount: Int = 0) -> Data? {
         guard !images.isEmpty else { return nil }
         
         let fileProperties: [String: Any] = [
