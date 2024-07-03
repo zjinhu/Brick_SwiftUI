@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Igor Ferreira on 06/04/2022.
-//
-
 import SwiftUI
 
 public extension GIFImage {
