@@ -143,8 +143,8 @@ public class UIGifImage: UIView {
 }
 
 public struct AnimationImages {
-    let frames: [UIImage]
-    let duration: Double
+    public let frames: [UIImage]
+    public let duration: Double
 }
 
 public class GifTool{
