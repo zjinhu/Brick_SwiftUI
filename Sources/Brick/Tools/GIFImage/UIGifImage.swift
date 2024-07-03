@@ -205,7 +205,7 @@ public class GifTool{
         return data
     }
     
-    public static func createGIF(with images: [UIImage],
+    public static func createGIF(with images: [UIImage?],
                                  frameDelay: TimeInterval = 0.1,
                                  loopCount: Int = 0) -> Data? {
         guard !images.isEmpty else { return nil }
@@ -228,7 +228,7 @@ public class GifTool{
         CGImageDestinationSetProperties(destination, fileProperties as CFDictionary)
         
         for image in images {
-            if let cgImage = image.cgImage {
+            if let cgImage = image?.cgImage {
                 CGImageDestinationAddImage(destination, cgImage, frameProperties as CFDictionary)
             }
         }
