@@ -1,39 +1,29 @@
 import SwiftUI
 
-public struct PageScrollView: View {
+public struct PageScrollView<Data: RandomAccessCollection, ID: Hashable, Content: View>: View {
     
-    private let items: [AnyView]
+    private let content: () -> ForEach<Data, ID, Content>
     private let pageOutWidth : CGFloat
     private let pagePadding : CGFloat
-    private let itemCount : Int
     
-    public init<Data, id,  Content: View>(pageOutWidth: CGFloat,
-                                          pagePadding: CGFloat,
-                                          @ViewBuilder content: () -> ForEach<Data, id, Content>) {
-        let views = content()
-        self.items = views.data.map({ AnyView(views.content($0)) })
-        let itemCount = views.data.count
+    
+    public init(pageOutWidth: CGFloat,
+                pagePadding: CGFloat,
+                @ViewBuilder content: @escaping () -> ForEach<Data, ID, Content>) {
+        self.content = content
         self.pageOutWidth = pageOutWidth
         self.pagePadding = pagePadding
-        self.itemCount = itemCount
     }
-    
     
     public var body: some View {
         if #available(iOS 17.0, *) {
             Paging17ScrollView(pageOutWidth: pageOutWidth,
-                               pagePadding: pagePadding){
-                ForEach(0..<itemCount, id:\.self) { index in
-                    items[index]
-                }
-            }
+                               pagePadding: pagePadding,
+                               content: content)
         } else {
             PagingScrollView(pageOutWidth: pageOutWidth,
-                             pagePadding: pagePadding){
-                ForEach(0..<itemCount, id:\.self) { index in
-                    items[index]
-                }
-            }
+                             pagePadding: pagePadding,
+                             content: content)
         }
         
     }
@@ -43,7 +33,7 @@ public struct PageScrollView: View {
     PageScrollView( pageOutWidth: 50,
                     pagePadding: 10){
         ForEach(0 ..< 10, id: \.self) { index in
-   
+            
             RoundedRectangle(cornerRadius: 20)
                 .fill(.orange)
                 .overlay {
@@ -55,10 +45,10 @@ public struct PageScrollView: View {
             
         }
     }
-    .frame(height: 228)
+                    .frame(height: 228)
 }
 
-struct PagingScrollView: View {
+struct PagingScrollView<Data: RandomAccessCollection, ID: Hashable, Content: View>: View {
     private let items: [AnyView]
     @State var pageFrameWidth: CGFloat = 0
     private let pageWidth : CGFloat
@@ -68,9 +58,9 @@ struct PagingScrollView: View {
     @State private var dragOffset : CGFloat = 0
     @State private var activePageIndex : Int = 0
     
-    public init<Data, id,  Content: View>(pageOutWidth: CGFloat,
-                                          pagePadding: CGFloat,
-                                          @ViewBuilder content: () -> ForEach<Data, id, Content>) {
+    public init(pageOutWidth: CGFloat,
+                pagePadding: CGFloat,
+                @ViewBuilder content: () -> ForEach<Data, ID, Content>) {
         let views = content()
         self.items = views.data.map({ AnyView(views.content($0)) })
         let itemCount = views.data.count
@@ -135,7 +125,7 @@ struct PagingScrollView: View {
                 .onEnded { value in
                     let velocityDiff = (value.predictedEndTranslation.width - self.dragOffset)*scrollDampingFactor
                     let targetOffset = currentScrollOffset(activePageIndex: activePageIndex, dragoffset: dragOffset)
-       
+                    
                     withAnimation(animation){
                         dragOffset = 0
                         activePageIndex = indexPageForOffset(targetOffset+velocityDiff)
@@ -170,15 +160,15 @@ struct MeasureGeometry: View {
 }
 
 @available(iOS 17.0, *)
-struct Paging17ScrollView: View {
+struct Paging17ScrollView<Data: RandomAccessCollection, ID: Hashable, Content: View>: View {
     private let items: [AnyView]
     private let pageOutWidth : CGFloat
     private let pagePadding : CGFloat
     private let itemCount : Int
     
-    public init<Data, id,  Content: View>(pageOutWidth: CGFloat,
-                                          pagePadding: CGFloat,
-                                          @ViewBuilder content: () -> ForEach<Data, id, Content>) {
+    public init(pageOutWidth: CGFloat,
+                pagePadding: CGFloat,
+                @ViewBuilder content: () -> ForEach<Data, ID, Content>) {
         let views = content()
         self.items = views.data.map({ AnyView(views.content($0)) })
         let itemCount = views.data.count
