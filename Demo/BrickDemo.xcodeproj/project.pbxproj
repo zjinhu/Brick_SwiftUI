@@ -41,6 +41,7 @@
 		8C91274D2C2A6B180010A7FD /* GeometryDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91274C2C2A6B180010A7FD /* GeometryDemo.swift */; };
 		8CB0E6612C0714810017A1EB /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8CB0E6602C0714810017A1EB /* giphy.gif */; };
 		8CB0E6632C071BC70017A1EB /* 512.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8CB0E6622C071BC70017A1EB /* 512.gif */; };
+		8CE88EF62C3651B200765FC3 /* PageingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE88EF52C3651B200765FC3 /* PageingScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		8C91274C2C2A6B180010A7FD /* GeometryDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryDemo.swift; sourceTree = "<group>"; };
 		8CB0E6602C0714810017A1EB /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		8CB0E6622C071BC70017A1EB /* 512.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 512.gif; sourceTree = "<group>"; };
+		8CE88EF52C3651B200765FC3 /* PageingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageingScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				813925E12A4BFEEA00E8BDE6 /* ShareLinkView.swift */,
 				813925E22A4BFEEB00E8BDE6 /* SwiftUIView.swift */,
 				8C91274C2C2A6B180010A7FD /* GeometryDemo.swift */,
+				8CE88EF52C3651B200765FC3 /* PageingScrollView.swift */,
 				813925E82A4BFEEB00E8BDE6 /* Toast.swift */,
 				813925D82A4BFEEA00E8BDE6 /* TTextFieldDemoView.swift */,
 				81156A152A4842450089C52D /* Assets.xcassets */,
@@ -293,6 +296,7 @@
 				813925F22A4BFEEC00E8BDE6 /* NavigationStack.swift in Sources */,
 				813925F52A4BFEEC00E8BDE6 /* ShareLinkView.swift in Sources */,
 				8C91274D2C2A6B180010A7FD /* GeometryDemo.swift in Sources */,
+				8CE88EF62C3651B200765FC3 /* PageingScrollView.swift in Sources */,
 				813925ED2A4BFEEB00E8BDE6 /* FocusStateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

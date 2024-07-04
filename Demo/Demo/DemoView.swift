@@ -74,6 +74,10 @@ struct DemoView: View {
                             .environmentObject(ToastManager())
                         //                case .customTabbar:
                         //                    CustomTabbarView()
+                    case .geometry:
+                        GeometryDemo()
+                    case .pagingScrollView:
+                        PageingScrollView()
 #endif
                         
                     }
@@ -164,6 +168,8 @@ struct DemoStackView: View {
                 
                 Brick.NavigationLink("FocusState", value: DemoStack.focusStateView)
                 
+                Brick.NavigationLink("GeometryDemo", value: DemoStack.geometry)
+                Brick.NavigationLink("PagingScrollView", value: DemoStack.pagingScrollView)
             }
 #endif
             
@@ -203,5 +209,7 @@ enum DemoStack: NavigatorScreen, CaseIterable {
     case shareLinkView
     case focusStateView
     case toast
+    case geometry
+    case pagingScrollView
 #endif
 }
