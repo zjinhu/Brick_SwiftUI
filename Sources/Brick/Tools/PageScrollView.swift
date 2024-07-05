@@ -1,3 +1,4 @@
+#if os(iOS)
 import SwiftUI
 
 public struct PageScrollView<Data: RandomAccessCollection, ID: Hashable, Content: View>: View {
@@ -191,4 +192,4 @@ struct Paging17ScrollView<Data: RandomAccessCollection, ID: Hashable, Content: V
         .safeAreaPadding(.horizontal, pageOutWidth)
     }
 }
-
+#endif

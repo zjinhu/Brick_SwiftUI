@@ -1,3 +1,4 @@
+#if os(iOS)
 import SwiftUI
 import UIKit
 import ImageIO
@@ -278,3 +279,4 @@ public class GifTool{
         }
     }
 }
+#endif

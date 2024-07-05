@@ -5,7 +5,6 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
 #if canImport(AppKit)
 import class AppKit.NSImage
@@ -18,6 +17,7 @@ public typealias ImageRepresentable = NSImage
 #endif
 
 #if canImport(UIKit)
+import UIKit
 import class UIKit.UIImage
 
 /**
