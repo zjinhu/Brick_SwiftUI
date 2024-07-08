@@ -98,7 +98,8 @@ import AppKit
 public class Screen {
     public static var safeArea: NSEdgeInsets = NSScreen.safeArea
     public static var main: NSScreen { NSScreen.main! }
-    
+    public static var width = Screen.main.frame.size.width
+    public static var height = Screen.main.frame.size.height
     public static var scale: CGFloat { NSScreen.main?.backingScaleFactor ?? 1.0}
 }
 fileprivate extension NSScreen {
