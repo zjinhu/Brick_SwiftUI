@@ -40,10 +40,13 @@ struct SegmentControl<Indicator: View>: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .contentShape(.rect)
                     .onTapGesture {
-                        if let index = tabs.firstIndex(of: tab), let activeIndex = tabs.firstIndex(of: activeTab) {
+                        if let index = tabs.firstIndex(of: tab), 
+                            let activeIndex = tabs.firstIndex(of: activeTab) {
+                            
                             activeTab = tab
                             
-                            withAnimation(.snappy(duration: 0.25)) {
+                            withAnimation(.snappy(duration: 0.25),
+                                          after: 0.25) {
                                 excessTabWidth = containerWidthForEachTab * CGFloat(index - activeIndex)
                             } completion: {
                                 withAnimation(.snappy(duration: 0.25)) {
@@ -51,7 +54,17 @@ struct SegmentControl<Indicator: View>: View {
                                     excessTabWidth = 0
                                 }
                             }
-                            
+/// 如果不想引入太多可以用下边的方式
+//                            Task {
+//                                let animationTime = 0.25
+//                                await animate(duration: animationTime) {
+//                                    excessTabWidth = containerWidthForEachTab * CGFloat(index - activeIndex)
+//                                }
+//                                await animate(duration: animationTime) {
+//                                    minX = containerWidthForEachTab * CGFloat(index)
+//                                    excessTabWidth = 0
+//                                }
+//                            }
                         }
                     }
                     .background(alignment: .leading) {
@@ -86,38 +99,16 @@ fileprivate struct SizeKey: PreferenceKey {
     }
 }
 
-#Preview {
-    @State var activeTab: SegmentedTab = .home
-    @State var type2: Bool = true
-    
-    return SegmentControl(
-        tabs: SegmentedTab.allCases,
-        activeTab: $activeTab,
-        height: 35,
-        displayAsText: false,
-        font: .body,
-        activeTint: type2 ? .white : .primary,
-        inActiveTint: .gray.opacity(0.5)
-    ) { size in
-        RoundedRectangle(cornerRadius: type2 ? 30 : 0)
-            .fill(.blue)
-            .frame(height: type2 ? size.height : 4)
-            .padding(.horizontal, type2 ? 0 : 10)
-            .frame(maxHeight: .infinity, alignment: .bottom)
-    }
-    .padding(.top, type2 ? 0 : 10)
-    .background() {
-        RoundedRectangle(cornerRadius: type2 ? 30 : 0)
-            .fill(.orange)
-            .ignoresSafeArea()
-    }
-    .padding(.horizontal, type2 ? 15 : 0)
-}
+extension View {
+    func animate(duration: CGFloat, _ execute: @escaping () -> Void) async {
+        await withCheckedContinuation { continuation in
+            withAnimation(.snappy(duration: duration)) {
+                execute()
+            }
 
-
-enum SegmentedTab: String, CaseIterable {
-    case home = "house.fill"
-    case favorites = "suit.heart.fill"
-    case notifications = "bell.fill"
-    case profile = "person.fill"
+            DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                continuation.resume()
+            }
+        }
+    }
 }

@@ -27,7 +27,14 @@ enum Segment: Identifiable, CaseIterable {
     }
 }
 
-struct SwiftUIView: View {
+enum SegmentedTab: String, CaseIterable {
+    case home = "house.fill"
+    case favorites = "suit.heart.fill"
+    case notifications = "bell.fill"
+    case profile = "person.fill"
+}
+
+struct SegmentStylesView: View {
     
     @Environment(\.dismiss) private var dismiss
 #if os(iOS)
@@ -39,6 +46,9 @@ struct SwiftUIView: View {
     
     let titles: [String] = ["1", "2", "3", "4"]
     @State var selectedIndex: Int?
+    
+    @State var activeTab: SegmentedTab = .home
+    @State var activeTab2: SegmentedTab = .home
     
     var body: some View {
         
@@ -98,6 +108,52 @@ struct SwiftUIView: View {
                  }
                  .animation(.easeInOut(duration: 0.3))
             
+            SegmentControl(
+                tabs: SegmentedTab.allCases,
+                activeTab: $activeTab,
+                height: 30,
+                displayAsText: false,
+                font: .body,
+                activeTint: .primary,
+                inActiveTint: .gray.opacity(0.5)
+            ) { size in
+                RoundedRectangle(cornerRadius: 2)
+                    .fill(.blue)
+                    .frame(height: 4)
+                    .padding(.horizontal, 10)
+                    .frame(maxHeight: .infinity, alignment: .bottom)
+            }
+            .padding(.top, 10)
+            .background() {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(.orange)
+                    .ignoresSafeArea()
+            }
+            .padding(.horizontal, 15)
+            
+            SegmentControl(
+                tabs: SegmentedTab.allCases,
+                activeTab: $activeTab2,
+                height: 30,
+                displayAsText: false,
+                font: .body,
+                activeTint: .primary,
+                inActiveTint: .gray.opacity(0.5)
+            ) { size in
+                RoundedRectangle(cornerRadius: 30)
+                    .fill(.blue)
+                    .frame(height: size.height-4)
+                    .padding(.horizontal, 2)
+                    .frame(maxHeight: .infinity, alignment: .center)
+            }
+            .padding(.top, 0)
+            .background() {
+                RoundedRectangle(cornerRadius: 30)
+                    .fill(.orange)
+                    .ignoresSafeArea()
+            }
+            .padding(.horizontal, 15)
+            
             Button {
                 dismiss()
             } label: {
@@ -136,7 +192,7 @@ struct SwiftUIView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView()
+        SegmentStylesView()
     }
 }
 

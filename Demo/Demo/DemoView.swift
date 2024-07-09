@@ -23,7 +23,7 @@ struct DemoView: View {
                         Button {
                             showSheet.toggle()
                         } label: {
-                            Text("Sheet")
+                            Text("Sheet SegmentView")
                         }
                     }
                 }
@@ -83,7 +83,7 @@ struct DemoView: View {
                     }
                 }
                 .sheet(isPresented: $showSheet) {
-                    SwiftUIView()
+                    SegmentStylesView()
                 }
             //            .ss.bottomSafeAreaInset {
             //                VStack{
