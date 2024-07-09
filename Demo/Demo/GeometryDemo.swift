@@ -25,7 +25,7 @@ struct GeometryDemo: View {
                     .font(.title)
                     .border(.gray)
                 
-                if #available(iOS 17.0, *) {
+                if #available(iOS 17.0, macOS 14.0, *) {
                     Text("Hello")
                         .font(.title)
                         .visualEffect { content, proxy in

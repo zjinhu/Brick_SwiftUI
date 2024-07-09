@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BrickKit
+#if os(iOS)
 struct PageingScrollView: View {
     var body: some View {
         PageScrollView(pageOutWidth: 50,
@@ -32,3 +33,4 @@ struct PageingScrollView: View {
 #Preview {
     PageingScrollView()
 }
+#endif

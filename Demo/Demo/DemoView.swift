@@ -15,9 +15,9 @@ struct DemoView: View {
             DemoStackView()
 #if os(iOS)
                 .ss.tabBar(.visible)
-#endif
                 .navigationTitle("BrickKit")
                 .navigationBarTitleDisplayMode(.inline)
+#endif
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button {
