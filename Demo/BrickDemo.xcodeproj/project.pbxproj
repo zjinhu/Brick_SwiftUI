@@ -36,6 +36,7 @@
 		813925FF2A4BFEEC00E8BDE6 /* ScrollStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925EB2A4BFEEB00E8BDE6 /* ScrollStackView.swift */; };
 		81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969682A54216D0052619E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8C0E3D342C3E23500090D8BF /* SecondDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E3D332C3E23500090D8BF /* SecondDemoView.swift */; };
 		8C54D8B52C3BA1B400078F41 /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54D8B42C3BA1B400078F41 /* SegmentControl.swift */; };
 		8C7411DA2C009F12009F7127 /* QuicklookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7411D92C009F12009F7127 /* QuicklookView.swift */; };
 		8C7513F12BDDE96100A3CA8D /* BrickKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C7513F02BDDE96100A3CA8D /* BrickKit */; };
@@ -83,6 +84,7 @@
 		81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftAVFoundation.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/swift/libswiftAVFoundation.tbd; sourceTree = DEVELOPER_DIR; };
 		81F9696C2A5421BE0052619E /* libswiftQuickLook.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLook.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/swift/libswiftQuickLook.tbd; sourceTree = DEVELOPER_DIR; };
 		81F9696E2A5421CB0052619E /* libswiftQuickLookUI.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLookUI.tbd; path = usr/lib/swift/libswiftQuickLookUI.tbd; sourceTree = SDKROOT; };
+		8C0E3D332C3E23500090D8BF /* SecondDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDemoView.swift; sourceTree = "<group>"; };
 		8C54D8B42C3BA1B400078F41 /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
 		8C7411D92C009F12009F7127 /* QuicklookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklookView.swift; sourceTree = "<group>"; };
 		8C7513EF2BDDE95200A3CA8D /* Brick_SwiftUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Brick_SwiftUI; path = ..; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				81156A132A4842430089C52D /* ContentView.swift */,
 				608162762A5D91660083DE04 /* TabbarView.swift */,
 				608162742A5D8E360083DE04 /* DemoView.swift */,
+				8C0E3D332C3E23500090D8BF /* SecondDemoView.swift */,
 				813925EA2A4BFEEB00E8BDE6 /* AnimationCompleted.swift */,
 				813925DA2A4BFEEA00E8BDE6 /* AsyncImageView.swift */,
 				813925DC2A4BFEEA00E8BDE6 /* BadgeView.swift */,
@@ -284,6 +287,7 @@
 				813925FC2A4BFEEC00E8BDE6 /* Toast.swift in Sources */,
 				81156A142A4842430089C52D /* ContentView.swift in Sources */,
 				813925FB2A4BFEEC00E8BDE6 /* OpenURLView.swift in Sources */,
+				8C0E3D342C3E23500090D8BF /* SecondDemoView.swift in Sources */,
 				813925FA2A4BFEEC00E8BDE6 /* Refresh.swift in Sources */,
 				813925F02A4BFEEC00E8BDE6 /* BadgeView.swift in Sources */,
 				813925F72A4BFEEC00E8BDE6 /* PresentationView.swift in Sources */,

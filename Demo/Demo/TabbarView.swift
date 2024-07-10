@@ -18,7 +18,7 @@ struct TabbarView: View {
             }
             .tag(TabBarItem.chat)
             
-            Color.white
+            SecondDemoView()
                 .tabItem {
                     tabItem(for: .role)
                 }
