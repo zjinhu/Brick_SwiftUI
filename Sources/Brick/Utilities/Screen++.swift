@@ -135,6 +135,8 @@ extension CGContext {
 public class Screen {
     public static var main: WKInterfaceDevice { WKInterfaceDevice.current() }
     public static var scale: CGFloat { WKInterfaceDevice.current().screenScale }
+    public static var width = main.screenBounds.size.width
+    public static var height = main.screenBounds.size.height
 }
 
 #endif
