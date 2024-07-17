@@ -11,7 +11,9 @@ import SwiftUI
 struct DemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchAppView(title: "BrickKit", backgroundImage: "Image_Launch_2", headImage: "Image_Launch_1"){
+                ContentView()
+            }
         }
     }
 }

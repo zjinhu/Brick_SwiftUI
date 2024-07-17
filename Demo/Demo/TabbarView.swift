@@ -24,7 +24,7 @@ struct TabbarView: View {
                 }
                 .tag(TabBarItem.role)
             
-            Color.green
+            ThirdDemoView()
                 .tabItem {
                     tabItem(for: .history)
                 }

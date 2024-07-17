@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import BrickKit
 struct SecondDemoView: View {
     var floatingButtons: [FloatingButtonItem] = [
         .init(iconSystemName: "sparkles", action: {}),
@@ -22,6 +22,7 @@ struct SecondDemoView: View {
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             ).ignoresSafeArea()
+            
             
             FloatingButton(items: floatingButtons)
         }
@@ -72,8 +73,7 @@ struct FloatingButton: View {
                     }
                     .ignoresSafeArea()
             }
-            
-                
+
             GeometryReader{ geometry in
                 buttonView
                     .position(x: geometry.frame(in: .local).maxX - 45,
@@ -111,3 +111,4 @@ struct FloatingButton: View {
         return -CGFloat(index) * (buttonGap + buttonSize)
     }
 }
+

@@ -40,7 +40,6 @@ struct SegmentStylesView: View {
 #if os(iOS)
     @Environment(\.requestReview) private var requestReview
 #endif
-    @State var rotation:CGFloat = 0.0
     
     @State private var selected = Segment.noon
     @State private var selection = Segment.noon
@@ -154,26 +153,6 @@ struct SegmentStylesView: View {
                     .ignoresSafeArea()
             }
             .padding(.horizontal, 15)
-            
-            ZStack{
-                RoundedRectangle(cornerRadius: 20)
-                    .foregroundColor(Color.black)
-                    .frame(width: 200, height: 240)
-                
-                RoundedRectangle(cornerRadius: 20)
-                    .frame(width: 130, height: 300)
-                    .foregroundColor(Color.blue)
-                    .rotationEffect(.degrees(rotation))
-                    .mask{
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(lineWidth: 7)
-                            .frame(width: 193, height: 235)
-                    }
-            }
-            .onAppear{
-                withAnimation(.linear(duration: 4).repeatForever(autoreverses: false)){ rotation = 360
-                }
-            }
             
             Button {
                 dismiss()
