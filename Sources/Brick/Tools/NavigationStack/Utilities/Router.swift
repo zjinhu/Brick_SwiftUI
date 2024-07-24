@@ -1,6 +1,6 @@
 import Foundation
 import SwiftUI
-struct Router<Screen, RootView: View>: View {
+struct Router<Screen: Hashable, RootView: View>: View {
     let rootView: RootView
     
     @Binding var screens: [Screen]

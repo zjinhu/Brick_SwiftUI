@@ -36,8 +36,8 @@ extension Brick where Wrapped == Any {
                useNavigationStack == .whenAvailable {
                 SwiftUI.NavigationStack(path: $path.path) {
                     content
-                        .navigationDestination(for: AnyHashable.self, destination: { destinationBuilder.build($0) })
-                        .navigationDestination(for: LocalDestinationID.self, destination: { destinationBuilder.build($0) })
+                        .navigationDestination(for: AnyHashable.self, destination: { DestinationBuilderView(data: $0) })
+                        .navigationDestination(for: LocalDestinationID.self, destination: { DestinationBuilderView(data: $0) })
                 }
                 .environment(\.isWithinNavigationStack, true)
                 
