@@ -7,7 +7,6 @@
 
 import SwiftUI
  
-
 @available(iOS, deprecated: 17.0)
 @available(macOS, deprecated: 14.0)
 @available(tvOS, deprecated: 17.0)
