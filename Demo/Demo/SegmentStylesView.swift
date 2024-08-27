@@ -8,7 +8,7 @@
 import SwiftUI
 import BrickKit
 
-enum Segment: Identifiable, CaseIterable {
+enum Segment: Identifiable, CaseIterable, Equatable {
     case morning, noon, evening
     
     var id: String {
@@ -27,13 +27,6 @@ enum Segment: Identifiable, CaseIterable {
     }
 }
 
-enum SegmentedTab: String, CaseIterable {
-    case home = "house.fill"
-    case favorites = "suit.heart.fill"
-    case notifications = "bell.fill"
-    case profile = "person.fill"
-}
-
 struct SegmentStylesView: View {
     
     @Environment(\.dismiss) private var dismiss
@@ -43,18 +36,12 @@ struct SegmentStylesView: View {
     
     @State private var selected = Segment.noon
     @State private var selection = Segment.noon
-    
-    let titles: [String] = ["1", "2", "3", "4"]
-    @State var selectedIndex: Int?
-    
-    @State var activeTab: SegmentedTab = .home
-    @State var activeTab2: SegmentedTab = .home
-    
+
     var body: some View {
         
         VScrollStack(spacing: 20){
  
-            SegmentView(segments: Segment.allCases,
+            CustomSegmentPicker(segments: Segment.allCases,
                         selected: $selected,
                         normalColor: .primary,
                         selectedColor: .primary,
@@ -70,7 +57,6 @@ struct SegmentStylesView: View {
             .height(40)
             .padding()
 
-            
             Picker(selection: $selection) {
                 ForEach(Segment.allCases) { segment in
                     Text(segment.title)
@@ -84,74 +70,45 @@ struct SegmentStylesView: View {
                     selected = selection
                 }
             }
-            
-            SegmentedPicker(
-                 titles,
-                 selectedIndex: Binding(
-                     get: { selectedIndex },
-                     set: { selectedIndex = $0 }),
-                 selectionAlignment: .bottom,
-                 content: { item, isSelected in
-                     Text(item)
-                         .foregroundColor(isSelected ? Color.black : Color.gray )
-                         .padding(.horizontal, 16)
-                         .padding(.vertical, 8)
-                 },
-                 selection: {
-                     VStack(spacing: 0) {
-                         Spacer()
-                         Color.black.frame(height: 1)
-                     }
-                 })
-                 .onAppear {
-                     selectedIndex = 0
-                 }
-                 .animation(.easeInOut(duration: 0.3))
-            
-            SegmentControl(
-                tabs: SegmentedTab.allCases,
-                activeTab: $activeTab,
-                height: 30,
-                displayAsText: false,
-                font: .body,
-                activeTint: .primary,
-                inActiveTint: .gray.opacity(0.5)
-            ) { size in
-                RoundedRectangle(cornerRadius: 2)
-                    .fill(.blue)
-                    .frame(height: 4)
-                    .padding(.horizontal, 10)
-                    .frame(maxHeight: .infinity, alignment: .bottom)
-            }
-            .padding(.top, 10)
+
+            SegmentView(
+                segments: Segment.allCases,
+                selected: $selected,
+                content:{ seg in
+                    
+                    Text(seg.title)
+                },
+                indicator:{ size in 
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(.orange)
+                        .ignoresSafeArea()
+                }
+                
+            )
+            .padding(2)
             .background() {
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(.orange)
+                    .fill(.blue)
                     .ignoresSafeArea()
             }
             .padding(.horizontal, 15)
             
-            SegmentControl(
-                tabs: SegmentedTab.allCases,
-                activeTab: $activeTab2,
-                height: 30,
-                displayAsText: false,
-                font: .body,
-                activeTint: .primary,
-                inActiveTint: .gray.opacity(0.5)
-            ) { size in
-                RoundedRectangle(cornerRadius: 30)
-                    .fill(.blue)
-                    .frame(height: size.height-4)
-                    .padding(.horizontal, 2)
-                    .frame(maxHeight: .infinity, alignment: .center)
-            }
-            .padding(.top, 0)
-            .background() {
-                RoundedRectangle(cornerRadius: 30)
-                    .fill(.orange)
-                    .ignoresSafeArea()
-            }
+            SegmentView(
+                segments: Segment.allCases,
+                selected: $selected,
+                content:{ seg in
+                    Text(seg.title)
+                },
+                indicator:{ size in
+                    RoundedRectangle(cornerRadius: 2)
+                        .fill(.orange)
+                        .frame(height: 4)
+                        .padding(.horizontal, 40)
+                        .frame(maxHeight: .infinity, alignment: .bottom)
+                }
+                
+            )
+            .padding(.top, 10)
             .padding(.horizontal, 15)
             
             Button {

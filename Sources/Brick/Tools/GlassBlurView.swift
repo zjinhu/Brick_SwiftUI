@@ -14,11 +14,11 @@ public struct GlassBlurView: UIViewRepresentable {
         self.removeAllFilters = removeAllFilters
     }
     
-    func makeUIView(context: Context) -> UIVisualEffectView {
+    public func makeUIView(context: Context) -> UIVisualEffectView {
         GlassBlur(removeAllFilters: removeAllFilters)
     }
     
-    func updateUIView(_ uiView: UIVisualEffectView, context: Context) { }
+    public func updateUIView(_ uiView: UIVisualEffectView, context: Context) { }
 }
  
 class GlassBlur: UIVisualEffectView {
