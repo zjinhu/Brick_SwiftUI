@@ -64,6 +64,7 @@ struct SegmentStylesView: View {
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
+            .colorMultiply(.red)
             .padding()
             .onChange(of: selection) { new in
                 withAnimation(.default) {

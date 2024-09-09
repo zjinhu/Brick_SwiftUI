@@ -151,31 +151,7 @@ public extension Brick where Wrapped: View {
             return wrapped
         }
     }
-    
-    func tabbarBackground(_ color: Color) -> some View {
-        let standardAppearance = UITabBarAppearance()
-        standardAppearance.configureWithDefaultBackground()
-        standardAppearance.backgroundColor = UIColor(color)
-        UITabBar.appearance().standardAppearance = standardAppearance
-        
-        if #available(iOS 15.0, *) {
-            let scrollEdgeAppearance = UITabBarAppearance()
-            scrollEdgeAppearance.configureWithTransparentBackground()
-            scrollEdgeAppearance.backgroundColor = UIColor(color)
-            UITabBar.appearance().scrollEdgeAppearance = scrollEdgeAppearance
-        }
-
-        return wrapped
-    }
-    
-    //    func tabbarBackground(_ color: Color) -> some View {
-    //        if #available(iOS 16.0, *) {
-    //            return wrapped
-    //                .toolbarBackground(color, for: .tabBar)
-    //        } else {
-    //            UITabBar.appearance().barTintColor = UIColor(color)
-    //        }
-    //    }
+ 
 #endif
-    
 }
+ 

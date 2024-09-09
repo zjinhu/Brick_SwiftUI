@@ -19,12 +19,21 @@ public extension Brick where Wrapped: View {
     }
     
     @inlinable
+    func borderCapsule(_ borderColor: Color,
+                       lineWidth: CGFloat) -> some View {
+        wrapped.overlay {
+            Capsule()
+                .stroke(borderColor, lineWidth: lineWidth)
+        }
+    }
+    
+    @inlinable
     func border<Content: ShapeStyle>(_ content: Content,
-        width: CGFloat = 1,
-        cornerRadius: CGFloat = 0) -> some View {
+                                     width: CGFloat = 1,
+                                     cornerRadius: CGFloat = 0) -> some View {
         wrapped.overlay(
             RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-            .strokeBorder(content, lineWidth: width)
+                .strokeBorder(content, lineWidth: width)
         )
     }
 }
