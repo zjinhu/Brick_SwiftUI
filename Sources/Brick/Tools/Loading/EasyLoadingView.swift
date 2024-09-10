@@ -8,6 +8,10 @@
 import SwiftUI
 public struct EasyLoadingView<Content>: View where Content: View {
 
+    @Environment(\.easyLoadingForegroundColor) private var easyLoadingForegroundColor
+    @Environment(\.easyLoadingBackgroundColor) private var easyLoadingBackgroundColor
+    @Environment(\.easyLoadingShadowColor) private var easyLoadingShadowColor
+    
     @Binding var isShowing: Bool
     private var content: () -> Content
     
@@ -32,13 +36,12 @@ public struct EasyLoadingView<Content>: View where Content: View {
 #endif
             
             ZStack{
-                Color.black
-                    .opacity(0.7)
+                easyLoadingBackgroundColor
                     .ignoresSafeArea()
                 
                 ProgressView()
                     .frame(width: 50, height: 50)
-                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    .progressViewStyle(CircularProgressViewStyle(tint: easyLoadingForegroundColor))
 #if os(iOS)
                     .scaleEffect(2)
 #endif
@@ -46,10 +49,46 @@ public struct EasyLoadingView<Content>: View where Content: View {
             .frame(width: 80, height: 80)
             .cornerRadius(10)
             .opacity(isShowing ? 1 : 0)
-            .shadow(color: .gray, radius: 5)
+            .shadow(color: easyLoadingShadowColor, radius: 5)
 
         }
         .edgesIgnoringSafeArea(.all)
+    }
+}
+
+struct EasyLoadingForegroundColorEnvironmentKey: EnvironmentKey {
+    static var defaultValue: Color = .white
+}
+struct EasyLoadingBackgroundColorEnvironmentKey: EnvironmentKey {
+    static var defaultValue: Color = .black
+}
+struct EasyLoadingShadowColorEnvironmentKey: EnvironmentKey {
+    static var defaultValue: Color = .gray
+}
+extension EnvironmentValues {
+    var easyLoadingForegroundColor: Color {
+        get { self[EasyLoadingForegroundColorEnvironmentKey.self] }
+        set { self[EasyLoadingForegroundColorEnvironmentKey.self] = newValue }
+    }
+    var easyLoadingBackgroundColor: Color {
+        get { self[EasyLoadingBackgroundColorEnvironmentKey.self] }
+        set { self[EasyLoadingBackgroundColorEnvironmentKey.self] = newValue }
+    }
+    var easyLoadingShadowColor: Color {
+        get { self[EasyLoadingShadowColorEnvironmentKey.self] }
+        set { self[EasyLoadingShadowColorEnvironmentKey.self] = newValue }
+    }
+}
+
+extension View {
+    public func easyLoadingForegroundColor(_ color: Color) -> some View {
+        environment(\.easyLoadingForegroundColor, color)
+    }
+    public func easyLoadingBackgroundColor(_ color: Color) -> some View {
+        environment(\.easyLoadingBackgroundColor, color)
+    }
+    public func easyLoadingShadowColor(_ color: Color) -> some View {
+        environment(\.easyLoadingShadowColor, color)
     }
 }
 
