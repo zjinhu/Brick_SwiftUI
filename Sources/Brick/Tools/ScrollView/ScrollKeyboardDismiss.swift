@@ -53,3 +53,14 @@ extension Brick where Wrapped: View {
     }
 
 }
+
+extension View {
+    @available(visionOS, unavailable)
+    public func scrollDismissesKeyboard() -> some View {
+        if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
+            return AnyView(self.scrollDismissesKeyboard(.immediately))
+        } else {
+            return self.ss.scrollDismissesKeyboard(.immediately)
+        }
+    }
+}
