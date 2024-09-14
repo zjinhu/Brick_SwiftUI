@@ -28,7 +28,6 @@ public typealias ImageRepresentable = UIImage
 #endif
 
 public extension Image {
-    
     /// Create an image from a certain ``ImageRepresentable``.
     init(image: ImageRepresentable) {
         #if canImport(UIKit)
