@@ -55,6 +55,23 @@ private extension UIScene.ActivationState {
 public class Screen {
     public static var safeArea: UIEdgeInsets = UIScreen.safeArea
     
+    public static var navBarHeight: CGFloat {
+        return UINavigationController().navigationBar.frame.size.height
+    }
+     
+    public static var tabbarHeight: CGFloat {
+        return UITabBarController().tabBar.frame.size.height
+    }
+    
+    public static var statusBarHeight: CGFloat{
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            return windowScene.statusBarManager?.statusBarFrame.height ?? 0
+        }
+        return 0
+    }
+    
+    public static let lineHeight = CGFloat(scale >= 1 ? 1/scale: 1)
+    
     public static var main: UIScreen = UIScreen.main
     
     public static var scale: CGFloat { UIScreen.main.scale}
