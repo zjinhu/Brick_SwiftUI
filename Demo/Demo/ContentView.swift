@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BrickKit
+@available(tvOS 16.0, *)
 struct ContentView: View {
     @Brick.AppStorage("START_TIME_KEY", store:UserDefaults.standard) var startTime: Date = Date()
  
@@ -17,6 +18,7 @@ struct ContentView: View {
 
 }
 
+@available(tvOS 16.0, *)
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
- 
+#if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
+
 import QuickLook
  
 struct QuicklookView: View {
@@ -48,3 +49,4 @@ extension Bundle {
         ?? []
     }
 }
+#endif 

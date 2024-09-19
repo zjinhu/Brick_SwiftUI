@@ -34,6 +34,9 @@
 		813925FD2A4BFEEC00E8BDE6 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925E92A4BFEEB00E8BDE6 /* BannerView.swift */; };
 		813925FE2A4BFEEC00E8BDE6 /* AnimationCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925EA2A4BFEEB00E8BDE6 /* AnimationCompleted.swift */; };
 		813925FF2A4BFEEC00E8BDE6 /* ScrollStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813925EB2A4BFEEB00E8BDE6 /* ScrollStackView.swift */; };
+		8190720F2C9BC77B00510E3A /* TestWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190720E2C9BC77B00510E3A /* TestWebView.swift */; };
+		81DC0A022C9BC2D600BDDF3F /* Test.html in Resources */ = {isa = PBXBuildFile; fileRef = 81DC0A012C9BC2D600BDDF3F /* Test.html */; };
+		81DC0A032C9BC4B900BDDF3F /* Test.html in Sources */ = {isa = PBXBuildFile; fileRef = 81DC0A012C9BC2D600BDDF3F /* Test.html */; };
 		81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969682A54216D0052619E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8C0E3D342C3E23500090D8BF /* SecondDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E3D332C3E23500090D8BF /* SecondDemoView.swift */; };
@@ -80,6 +83,8 @@
 		813925E92A4BFEEB00E8BDE6 /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		813925EA2A4BFEEB00E8BDE6 /* AnimationCompleted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationCompleted.swift; sourceTree = "<group>"; };
 		813925EB2A4BFEEB00E8BDE6 /* ScrollStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollStackView.swift; sourceTree = "<group>"; };
+		8190720E2C9BC77B00510E3A /* TestWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebView.swift; sourceTree = "<group>"; };
+		81DC0A012C9BC2D600BDDF3F /* Test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Test.html; sourceTree = "<group>"; };
 		81F969602A541E2C0052619E /* QuickLookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLookUI.framework; path = System/Library/Frameworks/QuickLookUI.framework; sourceTree = SDKROOT; };
 		81F969622A541E350052619E /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/QuickLook.framework; sourceTree = DEVELOPER_DIR; };
 		81F969642A541E3E0052619E /* QuickLookThumbnailing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLookThumbnailing.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/QuickLookThumbnailing.framework; sourceTree = DEVELOPER_DIR; };
@@ -161,10 +166,12 @@
 				813925E02A4BFEEA00E8BDE6 /* ScrollsView.swift */,
 				813925E12A4BFEEA00E8BDE6 /* ShareLinkView.swift */,
 				813925E22A4BFEEB00E8BDE6 /* SegmentStylesView.swift */,
+				81DC0A012C9BC2D600BDDF3F /* Test.html */,
 				8C91274C2C2A6B180010A7FD /* GeometryDemo.swift */,
 				8CE88EF52C3651B200765FC3 /* PageingScrollView.swift */,
 				813925E82A4BFEEB00E8BDE6 /* Toast.swift */,
 				813925D82A4BFEEA00E8BDE6 /* TTextFieldDemoView.swift */,
+				8190720E2C9BC77B00510E3A /* TestWebView.swift */,
 				8CDBFA032C466A3200FC1110 /* LEDView.swift */,
 				8CDBFA012C462CE300FC1110 /* LaunchAppView.swift */,
 				81156A152A4842450089C52D /* Assets.xcassets */,
@@ -275,6 +282,7 @@
 				8CB0E6632C071BC70017A1EB /* 512.gif in Resources */,
 				81156A1A2A4842450089C52D /* Preview Assets.xcassets in Resources */,
 				81156A162A4842450089C52D /* Assets.xcassets in Resources */,
+				81DC0A022C9BC2D600BDDF3F /* Test.html in Resources */,
 				813925D62A4BFEC500E8BDE6 /* 3.jpg in Resources */,
 				8CB0E6612C0714810017A1EB /* giphy.gif in Resources */,
 				813925D72A4BFEC500E8BDE6 /* 1.jpg in Resources */,
@@ -288,10 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DC0A032C9BC4B900BDDF3F /* Test.html in Sources */,
 				813925FD2A4BFEEC00E8BDE6 /* BannerView.swift in Sources */,
 				813925F62A4BFEEC00E8BDE6 /* SegmentStylesView.swift in Sources */,
 				8C7411DA2C009F12009F7127 /* QuicklookView.swift in Sources */,
 				813925F82A4BFEEC00E8BDE6 /* DarkModelView.swift in Sources */,
+				8190720F2C9BC77B00510E3A /* TestWebView.swift in Sources */,
 				813925F42A4BFEEC00E8BDE6 /* ScrollsView.swift in Sources */,
 				813925FC2A4BFEEC00E8BDE6 /* Toast.swift in Sources */,
 				81156A142A4842430089C52D /* ContentView.swift in Sources */,
@@ -450,7 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Demo/Preview Content\"";
-				DEVELOPMENT_TEAM = 6WP8T4EX9F;
+				DEVELOPMENT_TEAM = V969594VAF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -499,7 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Demo/Preview Content\"";
-				DEVELOPMENT_TEAM = 6WP8T4EX9F;
+				DEVELOPMENT_TEAM = V969594VAF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -167,6 +167,7 @@ struct Loading: View {
                 loading.showSuccess()
             }
         }
+#if os(iOS)
         .toast(isPresenting: $showToast1){
             AlertToast(displayMode: .alert,
                        type: .loading,
@@ -192,11 +193,13 @@ struct Loading: View {
             .clipShape(Capsule())
             .shadow(radius: 10)
         }
+#endif
     }
+#if os(iOS)
     private let loadingOptions = LoadingOptions(
         hideAfter: 5
     )
-    
+#endif
     func dismiss(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             loading.hide()

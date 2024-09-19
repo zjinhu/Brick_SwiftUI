@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BrickKit
+@available(tvOS 16.0, *)
 struct TabbarView: View {
     @StateObject private var tabbarIndex = TabBarIndexObserver()
     
@@ -49,6 +50,7 @@ struct TabbarView: View {
     }
 }
 
+@available(tvOS 16.0, *)
 struct TabbarView_Previews: PreviewProvider {
     static var previews: some View {
         TabbarView()

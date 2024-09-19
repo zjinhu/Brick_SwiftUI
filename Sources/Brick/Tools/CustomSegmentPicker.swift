@@ -1,5 +1,5 @@
 import SwiftUI
-
+#if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
 public struct CustomSegmentPicker<ID: Identifiable, Content: View, Background: Shape>: View {
     let segments: [ID]
     @Binding var selected: ID
@@ -101,3 +101,4 @@ fileprivate struct SegmentButtonView<ID: Identifiable, Content: View, Background
         }
     }
 }
+#endif 

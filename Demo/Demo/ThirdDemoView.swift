@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(tvOS 16.0, *)
 struct ThirdDemoView: View {
     @State var selectedSubscription: SubscriptionType?
     var body: some View {
@@ -29,7 +30,11 @@ struct ThirdDemoView: View {
 }
 
 #Preview {
-    ThirdDemoView()
+    if #available(tvOS 16.0, *) {
+        ThirdDemoView()
+    } else {
+        // Fallback on earlier versions
+    }
 }
 
 enum SubscriptionType{
@@ -37,6 +42,7 @@ enum SubscriptionType{
     case yearly
 }
 
+@available(tvOS 16.0, *)
 struct SubView: View{
     var type: SubscriptionType
     @Binding var selectedSubscription: SubscriptionType?
@@ -78,6 +84,7 @@ struct CircleView: View{
 
 
 
+@available(tvOS 16.0, *)
 struct Rectline: View {
     @State var Progress: CGFloat = 0
     var body: some View {

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SwiftUI WebView</title>
+    <script type="text/javascript">
+
+        function receiveMessageFromiOS(message) {
+            console.log("Received message from iOS: " + message);
+            alert("Message from Swift: " + message);
+        }
+
+        function sendMessageToiOS() {
+            window.webkit.messageHandlers.iosBridge.postMessage("Hello from JavaScript!");
+        }
+    </script>
+</head>
+<body>
+    <h1>WebView with JavaScript Bridge</h1>
+    <button id="button", onclick="sendMessageToiOS()">Send Message to iOS</button>
+</body>
+</html>

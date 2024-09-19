@@ -54,9 +54,17 @@ struct DemoView: View {
                     case .safeAreaPaddingView:
                         SafeAreaPaddingView()
                     case .presentationView:
-                        PresentationView()
+                        if #available(tvOS 17.0, *) {
+                            PresentationView()
+                        } else {
+                            // Fallback on earlier versions
+                        }
                     case .animationCompleted:
-                        AnimationCompleted()
+                        if #available(tvOS 16.0, *) {
+                            AnimationCompleted()
+                        } else {
+                            // Fallback on earlier versions
+                        }
                     case .scrollStackView:
                         ScrollStackView()
 #if os(iOS)
@@ -83,7 +91,10 @@ struct DemoView: View {
                     }
                 }
                 .sheet(isPresented: $showSheet) {
+#if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
+
                     SegmentStylesView()
+#endif
                 }
             //            .ss.bottomSafeAreaInset {
             //                VStack{
@@ -138,9 +149,7 @@ struct DemoStackView: View {
             }
             
             Section {
-                
-                NavigationLink("Quicklook", destination: QuicklookView())
-                
+
                 Brick.NavigationLink("TTextField", value: DemoStack.tTextFieldDemoView)
                 
                 Brick.NavigationLink("BadgeView + Tarbar", value: DemoStack.badgeView)
@@ -159,6 +168,8 @@ struct DemoStackView: View {
 #if os(iOS) && !os(macOS)
             
             Section {
+                
+                NavigationLink("Quicklook", destination: QuicklookView())
                 
                 Brick.NavigationLink("DrrkModelView", value: DemoStack.darkModelView)
                 

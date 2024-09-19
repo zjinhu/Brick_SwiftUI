@@ -4,7 +4,7 @@
 //
 //  Created by iOS on 9/11/24.
 //
-
+#if os(iOS)
 import SwiftUI
 import PhotosUI
 import Photos
@@ -55,3 +55,4 @@ public extension View {
         )
     }
 }
+#endif

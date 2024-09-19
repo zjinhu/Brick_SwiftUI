@@ -4,6 +4,7 @@
 //
 //  Created by HU on 2024/4/23.
 //
+#if os(iOS)
 import PhotosUI
 import Photos
 import UIKit
@@ -123,3 +124,4 @@ extension NSItemProvider {
         }
     }
 }
+#endif

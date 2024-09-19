@@ -1,6 +1,6 @@
 //This file is part of the AlertToast Swift library: https://github.com/elai950/AlertToast
 import SwiftUI
-
+#if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
 public struct AlertToast: View{
     
     public enum BannerAnimation{
@@ -281,15 +281,7 @@ public struct AlertToastModifier: ViewModifier{
     
     @State private var hostRect: CGRect = .zero
     @State private var alertRect: CGRect = .zero
-    
-    private var screen: CGRect {
-#if os(iOS)
-        return UIScreen.main.bounds
-#else
-        return NSScreen.main?.frame ?? .zero
-#endif
-    }
-    
+ 
     private var offset: CGFloat{
         return -hostRect.midY + alertRect.height
     }
@@ -402,7 +394,7 @@ public struct AlertToastModifier: ViewModifier{
                                 main()
                                     .offset(y: offsetY)
                             }
-                                .frame(maxWidth: screen.width, maxHeight: screen.height)
+                                .frame(maxWidth: Screen.width, maxHeight: Screen.height)
                                 .offset(y: offset)
                                 .animation(Animation.spring(), value: isPresenting))
                 )
@@ -418,7 +410,7 @@ public struct AlertToastModifier: ViewModifier{
                         main()
                             .offset(y: offsetY)
                     }
-                        .frame(maxWidth: screen.width, maxHeight: screen.height, alignment: .center)
+                        .frame(maxWidth: Screen.width, maxHeight: Screen.height, alignment: .center)
                         .edgesIgnoringSafeArea(.all)
                         .animation(Animation.spring(), value: isPresenting))
                 .valueChanged(value: isPresenting, onChange: { (presented) in
@@ -548,3 +540,5 @@ public extension View{
         self.onChange(of: value, perform: onChange)
     }
 }
+
+#endif

@@ -14,8 +14,10 @@ struct OpenURLView: View {
     var body: some View {
         List{
 #if os(iOS)
-            NavigationLink("Webview", destination: WebView(url: URL(string: "https://www.qq.com")!))
-            
+            NavigationLink("Webview", destination:
+                            WebView(url: URL(string: "https://www.qq.com")!)
+                .showLoader(true)
+            )
             
             Brick.Link("In-app Safari", destination: URL(string: "https://github.com/zjinhu/SwiftBrick")!)
                     .environment(\.openURL, .init { url in

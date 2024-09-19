@@ -1,5 +1,6 @@
 
 import SwiftUI
+#if os(iOS)
 import PhotosUI
 import Photos
 
@@ -271,3 +272,4 @@ public extension PhotoPicker<Text> {
     }
 }
 
+#endif

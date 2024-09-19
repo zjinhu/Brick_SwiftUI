@@ -1,4 +1,5 @@
 import SwiftUI
+#if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
 
 struct GeometryDemo: View {
     @State var height: CGFloat?
@@ -53,3 +54,4 @@ struct GeometryDemo: View {
 #Preview {
     GeometryDemo()
 }
+#endif

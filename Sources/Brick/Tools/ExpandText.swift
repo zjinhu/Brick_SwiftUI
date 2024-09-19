@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+#if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
 
 public struct ExpandText<Content: View, ExpandButton: View>: View {
     @State private var isCropped = true
@@ -110,3 +111,4 @@ struct ExpandTextView: View {
     ExpandTextView()
         .background(.orange)
 }
+#endif

@@ -1,5 +1,6 @@
 
 import SwiftUI
+#if os(iOS)
 import PhotosUI
 import Photos
 import UIKit
@@ -110,3 +111,4 @@ private extension PhotosViewController {
         }
     }
 }
+#endif

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+#if os(iOS)
 @available(iOS 15.0, *)
 public struct AutoHeightTextEditor: View {
 
@@ -80,3 +80,4 @@ struct ViewHeightKey: PreferenceKey {
 #Preview {
     AutoHeightTextEditor(inputText: .constant(""), placeholder: .constant("11111"))
 }
+#endif

@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
- 
+#if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
+
 public struct SegmentView<ID: Identifiable & Equatable, Content: View, Indicator: View>: View {
     let segments: [ID]
     @Binding var selected: ID
@@ -122,3 +123,4 @@ extension View {
 //                                    excessTabWidth = 0
 //                                }
 //                            }
+#endif 

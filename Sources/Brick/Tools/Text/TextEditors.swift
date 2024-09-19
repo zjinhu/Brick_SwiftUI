@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+#if os(iOS)
 @available(iOS 15.0, *)
 public struct TextEditors: View {
     
@@ -40,3 +40,4 @@ public struct TextEditors: View {
             }
     }
 }
+#endif

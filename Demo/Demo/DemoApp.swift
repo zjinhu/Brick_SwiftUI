@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(tvOS 16.0, *)
 @main
 struct DemoApp: App {
     var body: some Scene {

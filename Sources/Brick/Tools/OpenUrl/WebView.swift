@@ -1,129 +1,256 @@
 //
 //  WebView.swift
-//  SwiftBrick
+//  MetagAI
 //
-//  Created by iOS on 2023/4/20.
-//  Copyright © 2023 狄烨 . All rights reserved.
+//  Created by iOS on 9/18/24.
 //
 
 import SwiftUI
-import Foundation
+//https://github.com/zmian/xcore/blob/main/Sources/Xcore/SwiftUI/Components/WebView/WebView.swift
 #if os(iOS)
-import WebKit
-import UIKit
-public struct WebView: UIViewControllerRepresentable {
-    public let url: URL
+@preconcurrency import WebKit
+public struct WebView: View {
+    public typealias MessageHandler = @MainActor (_ body: Any) async throws -> (any Sendable)?
+    
+    private let urlRequest: URLRequest
+    private var messageHandlers: [String: MessageHandler] = [:]
+    private var localStorageItems: [String: String] = [:]
+    private var cookies: [HTTPCookie] = []
+    private var showLoader = false
+    private var additionalConfiguration: (WKWebView) -> Void = { _ in }
     
     public init(url: URL) {
-        self.url = url
+        self.init(urlRequest: .init(url: url))
     }
     
-    public func makeUIViewController(context: Context) -> WebController {
-        let webController = WebController()
-        return webController
+    public init(urlRequest: URLRequest) {
+        self.urlRequest = urlRequest
     }
+    
+    public var body: some View {
+        Representable(
+            urlRequest: urlRequest,
+            messageHandlers: messageHandlers,
+            localStorageItems: localStorageItems,
+            cookies: cookies,
+            showLoader: showLoader,
+            additionalConfiguration: additionalConfiguration
+        )
+    }
+}
 
-    public func updateUIViewController(_ webController: WebController, context: Context){
+extension WebView {
+    public func onMessageHandler(name: String, handler: MessageHandler?) -> Self {
+        apply {
+            $0.messageHandlers[name] = handler
+        }
+    }
+    
+    public func cookies(_ cookies: [HTTPCookie]) -> Self {
+        apply {
+            $0.cookies = cookies
+        }
+    }
+    
+    public func localStorageItem(_ item: String, forKey key: String) -> Self {
+        apply {
+            $0.localStorageItems[key] = item
+        }
+    }
+    
+    public func showLoader(_ value: Bool) -> Self {
+        apply {
+            $0.showLoader = value
+        }
+    }
+    
+    public func additionalConfiguration(_ configuration: @escaping (WKWebView) -> Void) -> Self {
+        apply {
+            $0.additionalConfiguration = configuration
+        }
+    }
+    
+    private func apply(_ configure: (inout Self) throws -> Void) rethrows -> Self {
+        var object = self
+        try configure(&object)
+        return object
+    }
+}
 
-        let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
-        DispatchQueue.main.async {
-            webController.webView.load(request)
+extension WebView {
+    private struct Representable: UIViewRepresentable {
+        fileprivate let urlRequest: URLRequest
+        fileprivate var messageHandlers: [String: MessageHandler]
+        fileprivate var localStorageItems: [String: String]
+        fileprivate var cookies: [HTTPCookie]
+        fileprivate var showLoader: Bool
+        fileprivate let additionalConfiguration: (WKWebView) -> Void
+        
+        func makeCoordinator() -> Coordinator {
+            Coordinator(parent: self)
+        }
+        
+        func makeUIView(context: Context) -> WKWebView {
+            let preferences = WKPreferences()
+            preferences.javaScriptCanOpenWindowsAutomatically = true
+            let processPool = WKProcessPool()
+            let config = WKWebViewConfiguration()
+            config.defaultWebpagePreferences.preferredContentMode = .mobile
+            config.defaultWebpagePreferences.allowsContentJavaScript = true
+            config.userContentController = WKUserContentController()
+            config.preferences = preferences
+            config.processPool = processPool
+            config.allowsInlineMediaPlayback = true
+            config.allowsAirPlayForMediaPlayback = true
+            updateConfiguration(config, context: context)
+            
+            let webView = WKWebView(frame: .zero, configuration: config)
+            webView.navigationDelegate = context.coordinator
+            webView.uiDelegate = context.coordinator
+            webView.allowsBackForwardNavigationGestures = true
+            webView.allowsLinkPreview = false
+            webView.scrollView.automaticallyAdjustsScrollIndicatorInsets = false
+            webView.translatesAutoresizingMaskIntoConstraints = false
+            if #available(iOS 16.4, *) {
+                webView.isInspectable = true
+            }
+            additionalConfiguration(webView)
+            return webView
+        }
+        
+        func updateUIView(_ webView: WKWebView, context: Context) {
+            updateConfiguration(webView.configuration, context: context)
+            webView.load(urlRequest)
+        }
+        
+        private func updateConfiguration(_ wkConfig: WKWebViewConfiguration, context: Context) {
+            // Before re-injecting any script message handler, we need to ensure to remove
+            // any existing ones to prevent crashes.
+            wkConfig.userContentController.removeAllScriptMessageHandlers()
+            
+            // 1. Set up message handlers
+            messageHandlers.forEach { name, _ in
+                wkConfig.userContentController.addScriptMessageHandler(
+                    context.coordinator,
+                    contentWorld: .page,
+                    name: name
+                )
+            }
+            
+            // 2. Set up cookies
+            cookies.forEach {
+                wkConfig.websiteDataStore.httpCookieStore.setCookie($0)
+            }
+            
+            // 3. Set up user scripts
+            localStorageItems.forEach { key, value in
+                let script = WKUserScript(
+                    source: "window.localStorage.setItem(\"\(key)\", \"\(value)\");",
+                    injectionTime: .atDocumentStart,
+                    forMainFrameOnly: true
+                )
+                wkConfig.userContentController.addUserScript(script)
+            }
         }
     }
 }
 
-public class WebController: UIViewController, WKNavigationDelegate, WKUIDelegate {
-    
-    lazy var config: WKWebViewConfiguration = {
-        let preferences = WKPreferences()
-        preferences.javaScriptCanOpenWindowsAutomatically = true
-        let processPool = WKProcessPool()
-        let config = WKWebViewConfiguration()
-        config.defaultWebpagePreferences.preferredContentMode = .mobile
-        config.defaultWebpagePreferences.allowsContentJavaScript = true
-        config.userContentController = WKUserContentController()
-        config.preferences = preferences
-        config.processPool = processPool
-        config.allowsInlineMediaPlayback = true
-        config.allowsAirPlayForMediaPlayback = true
+extension WebView {
+    private final class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandlerWithReply {
+        private var didAddLoader = false
+        private let loader = UIActivityIndicatorView(style: .large)
+        private let parent: Representable
         
-        return config
-    }()
-    
-    public dynamic lazy var webView: WKWebView = {
-        let webView = WKWebView(frame: .zero, configuration: config)
-        webView.navigationDelegate = self
-        webView.uiDelegate = self
-        webView.scrollView.contentInsetAdjustmentBehavior = .never
-        webView.scrollView.automaticallyAdjustsScrollIndicatorInsets = false
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.addObserver(self, forKeyPath: "estimatedProgress", options: [.old, .new], context: nil)
-        return webView
-    }()
-    
-    lazy var progressBar: UIProgressView = {
-        let progressView = UIProgressView()
-        progressView.trackTintColor = .clear
-        progressView.tintColor = .red
-        progressView.translatesAutoresizingMaskIntoConstraints = false
-        return progressView
-    }()
-
-    deinit {
-        webView.removeObserver(self, forKeyPath: "estimatedProgress")
-        cleanAllWebsiteDataStore()
-    }
-
-    public override func viewDidLoad() {
-        super.viewDidLoad()
- 
-        view.addSubview(webView)
-        view.addSubview(progressBar)
+        init(parent: Representable) {
+            self.parent = parent
+        }
         
-        NSLayoutConstraint.activate([
-            webView.topAnchor.constraint(equalTo: view.topAnchor),
-            webView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+            showLoader(true, webView)
+        }
         
-            progressBar.topAnchor.constraint(equalTo: webView.topAnchor),
-            progressBar.leadingAnchor.constraint(equalTo: webView.leadingAnchor),
-            progressBar.trailingAnchor.constraint(equalTo: webView.trailingAnchor),
-            progressBar.heightAnchor.constraint(equalToConstant: 4)
-        ])
- 
-    }
- 
-    public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
-        switch keyPath {
-            case "estimatedProgress":
-                if webView.estimatedProgress >= 1.0 {
-
-                    UIView.animate(withDuration: 0.3, animations: { [weak self] () in
-                        self?.progressBar.alpha = 0.0
-                    }, completion: { _ in
-                        self.progressBar.setProgress(0.0, animated: false)
-                    })
-                } else {
-                    progressBar.isHidden = false
-                    progressBar.alpha = 1.0
-                    progressBar.setProgress(Float(webView.estimatedProgress), animated: true)
+        func webView(_ webView: WKWebView, didFail navigation: WKNavigation, withError error: Error) {
+            showLoader(false, webView)
+        }
+        
+        //当 web 视图的内容进程终止时
+        func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+            webView.reload()
+            showLoader(false, webView)
+        }
+        
+        func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+            showLoader(true, webView)
+        }
+        
+        // 页面加载完成之后调用
+        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation) {
+#if DEBUG
+            // Dump local storage keys and values when the current value is different than
+            // the expected value.
+            parent.localStorageItems.forEach { key, expectedValue in
+                webView.evaluateJavaScript("localStorage.getItem(\"\(key)\")") { (value, error) in
+                    if let value = value as? String {
+                        if expectedValue != value {
+                            print("value in local storage: \(value)")
+                        }
+                    }
+                    
+                    if let error {
+                        print("Failed to get the value for the \"\(key)\": \(error)")
+                    }
                 }
- 
-            default:
-                super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+            }
+#endif
+            showLoader(false, webView)
         }
-    }
-
-    func cleanAllWebsiteDataStore() {
-        let websiteDataTypes = WKWebsiteDataStore.allWebsiteDataTypes()
-        let modifiedSince = Date(timeIntervalSince1970: 0)
-        WKWebsiteDataStore.default().removeData(ofTypes: websiteDataTypes, modifiedSince: modifiedSince) {
-            debugPrint("Cleaning completed")
+        
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            if let _ = navigationAction.request.url {
+                // 处理重定向或其他 URL 逻辑
+                decisionHandler(.allow)
+            } else {
+                decisionHandler(.cancel)
+            }
         }
-        URLCache.shared.removeAllCachedResponses()
-        URLCache.shared.diskCapacity = 0
-        URLCache.shared.memoryCapacity = 0
+        
+        @MainActor
+        func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) async -> (Any?, String?) {
+            guard let messageHandler = parent.messageHandlers[message.name] else {
+                return (nil, nil)
+            }
+            
+            return (try? await messageHandler(message.body), nil)
+        }
+        
+        private func showLoader(_ show: Bool, _ view: WKWebView) {
+            guard parent.showLoader else {
+                return
+            }
+            if !didAddLoader {
+                loader.color = .white
+                loader.backgroundColor = .black.withAlphaComponent(0.6)
+                loader.layer.cornerRadius = 10
+                view.addSubview(loader)
+                loader.translatesAutoresizingMaskIntoConstraints = false
+                NSLayoutConstraint.activate([
+                    loader.leftAnchor.constraint(equalTo: view.leftAnchor, constant: (view.frame.width-60)/2),
+                    loader.topAnchor.constraint(equalTo: view.topAnchor, constant: (view.frame.height-60)/2),
+                    loader.widthAnchor.constraint(equalToConstant: 60),
+                    loader.heightAnchor.constraint(equalToConstant: 60)
+                ])
+                didAddLoader = true
+            }
+            show ? loader.startAnimating() : loader.stopAnimating()
+        }
     }
 }
+
+//#Preview {
+//    WebView(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Test", ofType: "html")!))
+//        .showLoader(true)
+//        .onMessageHandler(name: "iosBridge"){ message in
+//            print("xxxxxx-----\(message)")
+//        }
+//}
 #endif

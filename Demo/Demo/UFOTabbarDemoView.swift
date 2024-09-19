@@ -7,7 +7,7 @@
 
 import SwiftUI
 import BrickKit
-
+#if os(iOS)
 struct UFOTabView: View {
     let title: String
     var body: some View {
@@ -257,3 +257,4 @@ struct ScrollTransition {
         }
     }
 }
+#endif

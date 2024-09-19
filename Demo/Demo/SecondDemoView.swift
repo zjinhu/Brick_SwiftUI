@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BrickKit
+@available(tvOS 16.0, *)
 struct SecondDemoView: View {
     var floatingButtons: [FloatingButtonItem] = [
         .init(iconSystemName: "sparkles", action: {}),
@@ -28,7 +29,7 @@ struct SecondDemoView: View {
         }
     }
 }
-
+@available(tvOS 16.0, *)
 #Preview {
     SecondDemoView()
 }
@@ -57,6 +58,7 @@ struct FloatingButtonItem: Identifiable {
     var action: () -> Void
 }
 
+@available(tvOS 16.0, *)
 struct FloatingButton: View {
     let items: [FloatingButtonItem]
     let buttonGap: CGFloat = 30

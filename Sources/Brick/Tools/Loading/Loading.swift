@@ -1,6 +1,6 @@
 //  This file is part of the SimpleToast Swift library: https://github.com/sanzaru/SimpleToast
 import SwiftUI
-
+#if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
 public extension View {
 
     func loading<LoadingContent: View>(
@@ -164,3 +164,4 @@ struct LoadingScale: CustomLoadingModifier {
             .zIndex(1)
     }
 }
+#endif 

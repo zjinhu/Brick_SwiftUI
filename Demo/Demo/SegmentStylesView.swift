@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BrickKit
+#if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
 
 enum Segment: Identifiable, CaseIterable, Equatable {
     case morning, noon, evening
@@ -154,3 +155,4 @@ struct SwiftUIView_Previews: PreviewProvider {
     }
 }
 
+#endif

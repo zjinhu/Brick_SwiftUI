@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+#if os(iOS)
 import UIKit
 
 public struct Adapter {
@@ -105,3 +106,4 @@ extension UIFont: Adapterable {
         return UIFont(descriptor: fontDescriptor, size: pointSzie)
     }
 }
+#endif
