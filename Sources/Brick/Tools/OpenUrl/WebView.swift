@@ -17,7 +17,7 @@ public struct WebView: View {
     private var localStorageItems: [String: String] = [:]
     private var cookies: [HTTPCookie] = []
     private var showLoader = false
-    private var clearBackgroundColor = false
+    private var clearBackground = false
     private var additionalConfiguration: (WKWebView) -> Void = { _ in }
     
     public init(url: URL) {
@@ -35,7 +35,7 @@ public struct WebView: View {
             localStorageItems: localStorageItems,
             cookies: cookies,
             showLoader: showLoader,
-            clearBackgroundColor: clearBackgroundColor,
+            clearBackground: clearBackground,
             additionalConfiguration: additionalConfiguration
         )
     }
@@ -66,9 +66,9 @@ extension WebView {
         }
     }
     
-    public func clearBackgroundColor(_ value: Bool) -> Self {
+    public func clearBackgroundColor() -> Self {
         apply {
-            $0.clearBackgroundColor = value
+            $0.clearBackground = true
         }
     }
     
@@ -92,7 +92,7 @@ extension WebView {
         fileprivate var localStorageItems: [String: String]
         fileprivate var cookies: [HTTPCookie]
         fileprivate var showLoader: Bool
-        fileprivate var clearBackgroundColor: Bool
+        fileprivate var clearBackground: Bool
         fileprivate let additionalConfiguration: (WKWebView) -> Void
         
         func makeCoordinator() -> Coordinator {
@@ -121,7 +121,7 @@ extension WebView {
             webView.scrollView.automaticallyAdjustsScrollIndicatorInsets = false
             webView.translatesAutoresizingMaskIntoConstraints = false
             
-            if clearBackgroundColor{
+            if clearBackground{
                 webView.isOpaque = false
                 webView.backgroundColor = .clear
                 webView.scrollView.backgroundColor = .clear

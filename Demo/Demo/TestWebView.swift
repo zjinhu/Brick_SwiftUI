@@ -16,6 +16,7 @@ struct TestWebView: View {
             
             WebView(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Test", ofType: "html")!))
                 .showLoader(true)
+                .clearBackgroundColor()
                 .onMessageHandler(name: "iosBridge"){ message in
                     print("xxxxxx-----\(message)")
                 }
