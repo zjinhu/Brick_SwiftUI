@@ -10,11 +10,16 @@ import SwiftUI
 import BrickKit
 struct TestWebView: View {
     var body: some View {
-        WebView(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Test", ofType: "html")!))
-            .showLoader(true)
-            .onMessageHandler(name: "iosBridge"){ message in
-                print("xxxxxx-----\(message)")
-            }
+        ZStack{
+            Color.red
+                .edgesIgnoringSafeArea(.all)
+            
+            WebView(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Test", ofType: "html")!))
+                .showLoader(true)
+                .onMessageHandler(name: "iosBridge"){ message in
+                    print("xxxxxx-----\(message)")
+                }
+        }
     }
 }
 
