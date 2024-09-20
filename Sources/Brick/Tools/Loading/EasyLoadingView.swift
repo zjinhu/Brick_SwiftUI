@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-public struct EasyLoadingView<Content>: View where Content: View {
+public struct EasyLoadingView<Content: View, LoadingView: View>: View{
 
     @Environment(\.easyLoadingForegroundColor) private var easyLoadingForegroundColor
     @Environment(\.easyLoadingBackgroundColor) private var easyLoadingBackgroundColor
@@ -14,10 +14,14 @@ public struct EasyLoadingView<Content>: View where Content: View {
     
     @Binding var isShowing: Bool
     private var content: () -> Content
+    private var loadingView: () -> LoadingView
     
-    public init(isShowing: Binding<Bool>, @ViewBuilder _ content: @escaping () -> Content) {
+    public init(isShowing: Binding<Bool>,
+                @ViewBuilder loading: @escaping () -> LoadingView,
+                @ViewBuilder content: @escaping () -> Content) {
         self._isShowing = isShowing
         self.content = content
+        self.loadingView = loading
     }
     
     public var body: some View {
@@ -37,16 +41,11 @@ public struct EasyLoadingView<Content>: View where Content: View {
             
             ZStack{
                 easyLoadingBackgroundColor
-                    .ignoresSafeArea()
-                
-                ProgressView()
-                    .frame(width: 50, height: 50)
-                    .progressViewStyle(CircularProgressViewStyle(tint: easyLoadingForegroundColor))
-#if os(iOS)
-                    .scaleEffect(2)
-#endif
+ 
+                loadingView()
+                    .padding(20)
             }
-            .frame(width: 80, height: 80)
+            .fixedSize()
             .cornerRadius(10)
             .opacity(isShowing ? 1 : 0)
             .shadow(color: easyLoadingShadowColor, radius: 5)
@@ -94,10 +93,13 @@ extension View {
 
 #Preview {
     EasyLoadingView(isShowing: .constant(true)) {
+        ProgressView()
+    } content: {
         NavigationView {
             List(["1", "2", "3", "4", "5"], id: \.self) { row in
                 Text(row)
             }
         }
     }
+    .easyLoadingBackgroundColor(.red)
 }
