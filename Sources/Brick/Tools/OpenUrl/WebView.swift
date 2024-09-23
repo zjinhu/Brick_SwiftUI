@@ -10,7 +10,7 @@ import SwiftUI
 #if os(iOS)
 @preconcurrency import WebKit
 public struct WebView: UIViewRepresentable {
-    public typealias MessageHandler = @MainActor (_ body: Any) async throws -> Void
+    public typealias MessageHandler = @MainActor (_ body: String?) async throws -> Void
     
     private let urlRequest: URLRequest
     private var messageHandlers: [String: MessageHandler] = [:]
@@ -214,7 +214,7 @@ extension WebView {
                 return (nil, nil)
             }
             
-            return (try? await messageHandler(message.body), nil)
+            return (try? await messageHandler(message.body as? String), nil)
         }
         
         private func showLoader(_ show: Bool, _ view: WKWebView) {

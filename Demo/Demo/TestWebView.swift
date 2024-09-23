@@ -18,7 +18,7 @@ struct TestWebView: View {
                 .showLoader(true)
                 .clearBackgroundColor()
                 .onMessageHandler(name: "iosBridge"){ message in
-                    print("xxxxxx-----\(message)")
+                    print("xxxxxx-----\(String(describing: message))")
                 }
         }
     }
