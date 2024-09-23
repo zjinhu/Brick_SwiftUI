@@ -9,8 +9,8 @@ import SwiftUI
 //https://github.com/zmian/xcore/blob/main/Sources/Xcore/SwiftUI/Components/WebView/WebView.swift
 #if os(iOS)
 @preconcurrency import WebKit
-public struct WebView: View {
-    public typealias MessageHandler = @MainActor (_ body: Any) async throws -> (any Sendable)?
+public struct WebView: UIViewRepresentable {
+    public typealias MessageHandler = @MainActor (_ body: Any) async throws -> Void
     
     private let urlRequest: URLRequest
     private var messageHandlers: [String: MessageHandler] = [:]
@@ -28,17 +28,81 @@ public struct WebView: View {
         self.urlRequest = urlRequest
     }
     
-    public var body: some View {
-        Representable(
-            urlRequest: urlRequest,
-            messageHandlers: messageHandlers,
-            localStorageItems: localStorageItems,
-            cookies: cookies,
-            showLoader: showLoader,
-            clearBackground: clearBackground,
-            additionalConfiguration: additionalConfiguration
-        )
+    
+    public func makeCoordinator() -> Coordinator {
+        Coordinator(parent: self)
     }
+    
+    public func makeUIView(context: Context) -> WKWebView {
+        let preferences = WKPreferences()
+        preferences.javaScriptCanOpenWindowsAutomatically = true
+        let processPool = WKProcessPool()
+        let config = WKWebViewConfiguration()
+        config.defaultWebpagePreferences.preferredContentMode = .mobile
+        config.defaultWebpagePreferences.allowsContentJavaScript = true
+        config.userContentController = WKUserContentController()
+        config.preferences = preferences
+        config.processPool = processPool
+        config.allowsInlineMediaPlayback = true
+        config.allowsAirPlayForMediaPlayback = true
+        updateConfiguration(config, context: context)
+        
+        let webView = WKWebView(frame: .zero, configuration: config)
+        webView.navigationDelegate = context.coordinator
+        webView.uiDelegate = context.coordinator
+        webView.allowsBackForwardNavigationGestures = true
+        webView.allowsLinkPreview = false
+        webView.scrollView.automaticallyAdjustsScrollIndicatorInsets = false
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        
+        if clearBackground{
+            webView.isOpaque = false
+            webView.backgroundColor = .clear
+            webView.scrollView.backgroundColor = .clear
+        }
+
+        if #available(iOS 16.4, *) {
+            webView.isInspectable = true
+        }
+        additionalConfiguration(webView)
+        return webView
+    }
+    
+    public func updateUIView(_ webView: WKWebView, context: Context) {
+        updateConfiguration(webView.configuration, context: context)
+        webView.load(urlRequest)
+    }
+    
+    private func updateConfiguration(_ wkConfig: WKWebViewConfiguration, context: Context) {
+        // Before re-injecting any script message handler, we need to ensure to remove
+        // any existing ones to prevent crashes.
+        wkConfig.userContentController.removeAllScriptMessageHandlers()
+        
+        // 1. Set up message handlers
+        messageHandlers.forEach { name, _ in
+            wkConfig.userContentController.addScriptMessageHandler(
+                context.coordinator,
+                contentWorld: .page,
+                name: name
+            )
+        }
+        
+        // 2. Set up cookies
+        cookies.forEach {
+            wkConfig.websiteDataStore.httpCookieStore.setCookie($0)
+        }
+        
+        // 3. Set up user scripts
+        localStorageItems.forEach { key, value in
+            let script = WKUserScript(
+                source: "window.localStorage.setItem(\"\(key)\", \"\(value)\");",
+                injectionTime: .atDocumentStart,
+                forMainFrameOnly: true
+            )
+            wkConfig.userContentController.addUserScript(script)
+        }
+    }
+ 
 }
 
 extension WebView {
@@ -86,121 +150,35 @@ extension WebView {
 }
 
 extension WebView {
-    private struct Representable: UIViewRepresentable {
-        fileprivate let urlRequest: URLRequest
-        fileprivate var messageHandlers: [String: MessageHandler]
-        fileprivate var localStorageItems: [String: String]
-        fileprivate var cookies: [HTTPCookie]
-        fileprivate var showLoader: Bool
-        fileprivate var clearBackground: Bool
-        fileprivate let additionalConfiguration: (WKWebView) -> Void
-        
-        func makeCoordinator() -> Coordinator {
-            Coordinator(parent: self)
-        }
-        
-        func makeUIView(context: Context) -> WKWebView {
-            let preferences = WKPreferences()
-            preferences.javaScriptCanOpenWindowsAutomatically = true
-            let processPool = WKProcessPool()
-            let config = WKWebViewConfiguration()
-            config.defaultWebpagePreferences.preferredContentMode = .mobile
-            config.defaultWebpagePreferences.allowsContentJavaScript = true
-            config.userContentController = WKUserContentController()
-            config.preferences = preferences
-            config.processPool = processPool
-            config.allowsInlineMediaPlayback = true
-            config.allowsAirPlayForMediaPlayback = true
-            updateConfiguration(config, context: context)
-            
-            let webView = WKWebView(frame: .zero, configuration: config)
-            webView.navigationDelegate = context.coordinator
-            webView.uiDelegate = context.coordinator
-            webView.allowsBackForwardNavigationGestures = true
-            webView.allowsLinkPreview = false
-            webView.scrollView.automaticallyAdjustsScrollIndicatorInsets = false
-            webView.translatesAutoresizingMaskIntoConstraints = false
-            
-            if clearBackground{
-                webView.isOpaque = false
-                webView.backgroundColor = .clear
-                webView.scrollView.backgroundColor = .clear
-            }
-
-            if #available(iOS 16.4, *) {
-                webView.isInspectable = true
-            }
-            additionalConfiguration(webView)
-            return webView
-        }
-        
-        func updateUIView(_ webView: WKWebView, context: Context) {
-            updateConfiguration(webView.configuration, context: context)
-            webView.load(urlRequest)
-        }
-        
-        private func updateConfiguration(_ wkConfig: WKWebViewConfiguration, context: Context) {
-            // Before re-injecting any script message handler, we need to ensure to remove
-            // any existing ones to prevent crashes.
-            wkConfig.userContentController.removeAllScriptMessageHandlers()
-            
-            // 1. Set up message handlers
-            messageHandlers.forEach { name, _ in
-                wkConfig.userContentController.addScriptMessageHandler(
-                    context.coordinator,
-                    contentWorld: .page,
-                    name: name
-                )
-            }
-            
-            // 2. Set up cookies
-            cookies.forEach {
-                wkConfig.websiteDataStore.httpCookieStore.setCookie($0)
-            }
-            
-            // 3. Set up user scripts
-            localStorageItems.forEach { key, value in
-                let script = WKUserScript(
-                    source: "window.localStorage.setItem(\"\(key)\", \"\(value)\");",
-                    injectionTime: .atDocumentStart,
-                    forMainFrameOnly: true
-                )
-                wkConfig.userContentController.addUserScript(script)
-            }
-        }
-    }
-}
-
-extension WebView {
-    private final class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandlerWithReply {
+    public final class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandlerWithReply {
         private var didAddLoader = false
         private let loader = UIActivityIndicatorView(style: .large)
-        private let parent: Representable
+        private let parent: WebView
         
-        init(parent: Representable) {
+        init(parent: WebView) {
             self.parent = parent
         }
         
-        func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
             showLoader(true, webView)
         }
         
-        func webView(_ webView: WKWebView, didFail navigation: WKNavigation, withError error: Error) {
+        public func webView(_ webView: WKWebView, didFail navigation: WKNavigation, withError error: Error) {
             showLoader(false, webView)
         }
         
         //当 web 视图的内容进程终止时
-        func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+        public func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
             webView.reload()
             showLoader(false, webView)
         }
         
-        func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        public func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
             showLoader(true, webView)
         }
         
         // 页面加载完成之后调用
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation) {
+        public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation) {
 #if DEBUG
             // Dump local storage keys and values when the current value is different than
             // the expected value.
@@ -221,7 +199,7 @@ extension WebView {
             showLoader(false, webView)
         }
         
-        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
             if let _ = navigationAction.request.url {
                 // 处理重定向或其他 URL 逻辑
                 decisionHandler(.allow)
@@ -231,7 +209,7 @@ extension WebView {
         }
         
         @MainActor
-        func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) async -> (Any?, String?) {
+        public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) async -> (Any?, String?) {
             guard let messageHandler = parent.messageHandlers[message.name] else {
                 return (nil, nil)
             }

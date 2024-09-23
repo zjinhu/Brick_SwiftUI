@@ -52,7 +52,7 @@ public struct ExpandText<Content: View, ExpandButton: View>: View {
                                                 .onAppear {
                                                     if fullSize > geo.size.height {
                                                         self.isShowMore = true
-                                                        logger.debug("\(geo.size.height)")
+//                                                        logger.debug("\(geo.size.height)")
                                                     }
                                                 }
                                         }
