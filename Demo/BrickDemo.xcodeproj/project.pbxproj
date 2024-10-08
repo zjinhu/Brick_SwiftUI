@@ -37,6 +37,7 @@
 		8190720F2C9BC77B00510E3A /* TestWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190720E2C9BC77B00510E3A /* TestWebView.swift */; };
 		81DC0A022C9BC2D600BDDF3F /* Test.html in Resources */ = {isa = PBXBuildFile; fileRef = 81DC0A012C9BC2D600BDDF3F /* Test.html */; };
 		81DC0A032C9BC4B900BDDF3F /* Test.html in Sources */ = {isa = PBXBuildFile; fileRef = 81DC0A012C9BC2D600BDDF3F /* Test.html */; };
+		81F75BA52CA550AC006B17FB /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F75BA42CA550AC006B17FB /* TestView.swift */; };
 		81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969682A54216D0052619E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8C0E3D342C3E23500090D8BF /* SecondDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E3D332C3E23500090D8BF /* SecondDemoView.swift */; };
@@ -85,6 +86,7 @@
 		813925EB2A4BFEEB00E8BDE6 /* ScrollStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollStackView.swift; sourceTree = "<group>"; };
 		8190720E2C9BC77B00510E3A /* TestWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebView.swift; sourceTree = "<group>"; };
 		81DC0A012C9BC2D600BDDF3F /* Test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Test.html; sourceTree = "<group>"; };
+		81F75BA42CA550AC006B17FB /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		81F969602A541E2C0052619E /* QuickLookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLookUI.framework; path = System/Library/Frameworks/QuickLookUI.framework; sourceTree = SDKROOT; };
 		81F969622A541E350052619E /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/QuickLook.framework; sourceTree = DEVELOPER_DIR; };
 		81F969642A541E3E0052619E /* QuickLookThumbnailing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLookThumbnailing.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/QuickLookThumbnailing.framework; sourceTree = DEVELOPER_DIR; };
@@ -174,6 +176,7 @@
 				8190720E2C9BC77B00510E3A /* TestWebView.swift */,
 				8CDBFA032C466A3200FC1110 /* LEDView.swift */,
 				8CDBFA012C462CE300FC1110 /* LaunchAppView.swift */,
+				81F75BA42CA550AC006B17FB /* TestView.swift */,
 				81156A152A4842450089C52D /* Assets.xcassets */,
 				81156A172A4842450089C52D /* Demo.entitlements */,
 				81156A182A4842450089C52D /* Preview Content */,
@@ -320,6 +323,7 @@
 				8CDBFA022C462CE300FC1110 /* LaunchAppView.swift in Sources */,
 				8CDBFA002C46292A00FC1110 /* UFOTabbarDemoView.swift in Sources */,
 				608162772A5D91660083DE04 /* TabbarView.swift in Sources */,
+				81F75BA52CA550AC006B17FB /* TestView.swift in Sources */,
 				8CDBFA042C466A3200FC1110 /* LEDView.swift in Sources */,
 				813925F12A4BFEEC00E8BDE6 /* SafeAreaPaddingView.swift in Sources */,
 				608162752A5D8E360083DE04 /* DemoView.swift in Sources */,

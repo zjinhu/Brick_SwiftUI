@@ -9,7 +9,7 @@ import SwiftUI
 import BrickKit
 struct DemoView: View {
     @State private var showSheet = false
-    
+    @State private var showFull = false
     var body: some View {
         Brick.NavigationStack {
             DemoStackView()
@@ -19,11 +19,19 @@ struct DemoView: View {
                 .navigationBarTitleDisplayMode(.inline)
 #endif
                 .toolbar {
-                    ToolbarItem(placement: .cancellationAction) {
+                    ToolbarItem(placement: .navigationBarLeading) {
                         Button {
                             showSheet.toggle()
                         } label: {
                             Text("Sheet SegmentView")
+                        }
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            showFull.toggle()
+                        } label: {
+                            Text("FullCoverView")
                         }
                     }
                 }
@@ -89,6 +97,10 @@ struct DemoView: View {
 #endif
                         
                     }
+                }
+                .fullScreenCover(isPresented: $showFull){
+                    TestView()
+                        .fullScreenCoverBackgroundClear()
                 }
                 .sheet(isPresented: $showSheet) {
 #if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
