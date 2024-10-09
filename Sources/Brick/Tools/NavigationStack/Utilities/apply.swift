@@ -35,3 +35,11 @@ struct ConditionalViewBuilder<Data, DestinationView: View>: View {
         }
     }
 }
+
+class NonReactiveState<T> {
+  var value: T
+
+  init(value: T) {
+    self.value = value
+  }
+}

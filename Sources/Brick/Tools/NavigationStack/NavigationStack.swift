@@ -18,20 +18,23 @@ extension Brick where Wrapped == Any {
         @StateObject var path : NavigationPathHolder
         @StateObject var destinationBuilder = DestinationBuilderHolder()
         @Environment(\.useNavigationStack) var useNavigationStack
+        
+        @State var appIsActive = NonReactiveState(value: true)
+        
         var content: Content
         var useInternalTypedPath: Bool
         
         var isUsingNavigationView: Bool {
-          if #available(iOS 16.0, *, macOS 13.0, *, watchOS 9.0, *, tvOS 16.0, *), useNavigationStack == .whenAvailable {
-            return false
-          } else {
-            return true
-          }
+            if #available(iOS 16.0, *, macOS 13.0, *, watchOS 9.0, *, tvOS 16.0, *), useNavigationStack == .whenAvailable {
+                return false
+            } else {
+                return true
+            }
         }
         
         @ViewBuilder
         var navigation: some View {
-
+            
             if #available(iOS 16.0, *, macOS 13.0, *, watchOS 9.0, *, tvOS 16.0, *),
                useNavigationStack == .whenAvailable {
                 SwiftUI.NavigationStack(path: $path.path) {
@@ -58,57 +61,82 @@ extension Brick where Wrapped == Any {
                 .environmentObject(Navigator(useInternalTypedPath ? $internalTypedPath : $externalTypedPath))
                 .onFirstAppear {
                     guard isUsingNavigationView else {
-                      // Path should already be correct thanks to initialiser.
-                      return
+                        // Path should already be correct thanks to initialiser.
+                        return
                     }
                     // For NavigationView, only initialising with one pushed screen is supported.
                     // Any others will be pushed one after another with delays.
                     path.path = Array(path.path.prefix(1))
                     path.withDelaysIfUnsupported(\.path) {
-                      $0 = externalTypedPath
+                        $0 = externalTypedPath
                     }
                 }
                 .onChange(of: externalTypedPath) { externalTypedPath in
                     guard isUsingNavigationView else {
-                      path.path = externalTypedPath
-                      return
+                        path.path = externalTypedPath
+                        return
                     }
+                    guard appIsActive.value else { return }
                     path.withDelaysIfUnsupported(\.path) {
-                      $0 = externalTypedPath
+                        $0 = externalTypedPath
                     }
                 }
                 .onChange(of: internalTypedPath) { internalTypedPath in
                     guard isUsingNavigationView else {
-                      path.path = internalTypedPath
-                      return
+                        path.path = internalTypedPath
+                        return
                     }
+                    guard appIsActive.value else { return }
                     path.withDelaysIfUnsupported(\.path) {
-                      $0 = internalTypedPath
+                        $0 = internalTypedPath
                     }
                 }
                 .onChange(of: path.path) { path in
                     if useInternalTypedPath {
-                      guard path != internalTypedPath.map({ $0 }) else { return }
-                      internalTypedPath = path.compactMap { anyHashable in
-                        if let data = anyHashable.base as? Data {
-                          return data
-                        } else if anyHashable.base is LocalDestinationID {
-                          return nil
+                        guard path != internalTypedPath.map({ $0 }) else { return }
+                        internalTypedPath = path.compactMap { anyHashable in
+                            if let data = anyHashable.base as? Data {
+                                return data
+                            } else if anyHashable.base is LocalDestinationID {
+                                return nil
+                            }
+                            fatalError("Cannot add \(type(of: anyHashable.base)) to stack of \(Data.self)")
                         }
-                        fatalError("Cannot add \(type(of: anyHashable.base)) to stack of \(Data.self)")
-                      }
                     } else {
-                      guard path != externalTypedPath.map({ $0 }) else { return }
-                      externalTypedPath = path.compactMap { anyHashable in
-                        if let data = anyHashable.base as? Data {
-                          return data
-                        } else if anyHashable.base is LocalDestinationID {
-                          return nil
+                        guard path != externalTypedPath.map({ $0 }) else { return }
+                        externalTypedPath = path.compactMap { anyHashable in
+                            if let data = anyHashable.base as? Data {
+                                return data
+                            } else if anyHashable.base is LocalDestinationID {
+                                return nil
+                            }
+                            fatalError("Cannot add \(type(of: anyHashable.base)) to stack of \(Data.self)")
                         }
-                        fatalError("Cannot add \(type(of: anyHashable.base)) to stack of \(Data.self)")
-                      }
                     }
                 }
+#if os(iOS)
+                .onReceive(NotificationCenter.default.publisher(for: didBecomeActive)) { _ in
+                    appIsActive.value = true
+                    guard isUsingNavigationView else { return }
+                    path.withDelaysIfUnsupported(\.path) {
+                        $0 = useInternalTypedPath ? internalTypedPath : externalTypedPath
+                    }
+                }
+                .onReceive(NotificationCenter.default.publisher(for: willResignActive)) { _ in
+                    appIsActive.value = false
+                }
+#elseif os(tvOS)
+                .onReceive(NotificationCenter.default.publisher(for: didBecomeActive)) { _ in
+                    appIsActive.value = true
+                    guard isUsingNavigationView else { return }
+                    path.withDelaysIfUnsupported(\.path) {
+                        $0 = useInternalTypedPath ? internalTypedPath : externalTypedPath
+                    }
+                }
+                .onReceive(NotificationCenter.default.publisher(for: willResignActive)) { _ in
+                    appIsActive.value = false
+                }
+#endif
         }
         
         public init(path: Binding<[Data]>?, @ViewBuilder content: () -> Content) {
@@ -116,13 +144,9 @@ extension Brick where Wrapped == Any {
             self.content = content()
             _path = StateObject(wrappedValue: NavigationPathHolder(path: path?.wrappedValue ?? []))
             useInternalTypedPath = path == nil
-            
-//            _pathAppender.append = { [weak path] newElement in
-//                path?.path.append(newElement)
-//            }
         }
     }
-
+    
 }
 
 @available(iOS, deprecated: 16)
@@ -150,14 +174,22 @@ extension Brick.NavigationStack where Wrapped == Any, Data == AnyHashable {
 }
 
 public enum UseNavigationStackPolicy {
-  case whenAvailable
-  case never
+    case whenAvailable
+    case never
 }
 
 var supportedNavigationViewStyle: some NavigationViewStyle {
-  #if os(macOS)
+#if os(macOS)
     .automatic
-  #else
+#else
     .stack
-  #endif
+#endif
 }
+
+#if os(iOS)
+private let didBecomeActive = UIApplication.didBecomeActiveNotification
+private let willResignActive = UIApplication.willResignActiveNotification
+#elseif os(tvOS)
+private let didBecomeActive = UIApplication.didBecomeActiveNotification
+private let willResignActive = UIApplication.willResignActiveNotification
+#endif
