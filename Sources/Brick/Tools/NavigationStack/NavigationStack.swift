@@ -71,7 +71,7 @@ extension Brick where Wrapped == Any {
                         $0 = externalTypedPath
                     }
                 }
-                .onChange(of: externalTypedPath) { externalTypedPath in
+                .ss.onChange(of: externalTypedPath) { externalTypedPath in
                     guard isUsingNavigationView else {
                         path.path = externalTypedPath
                         return
@@ -81,7 +81,7 @@ extension Brick where Wrapped == Any {
                         $0 = externalTypedPath
                     }
                 }
-                .onChange(of: internalTypedPath) { internalTypedPath in
+                .ss.onChange(of: internalTypedPath) { internalTypedPath in
                     guard isUsingNavigationView else {
                         path.path = internalTypedPath
                         return
@@ -91,7 +91,7 @@ extension Brick where Wrapped == Any {
                         $0 = internalTypedPath
                     }
                 }
-                .onChange(of: path.path) { path in
+                .ss.onChange(of: path.path) { path in
                     if useInternalTypedPath {
                         guard path != internalTypedPath.map({ $0 }) else { return }
                         internalTypedPath = path.compactMap { anyHashable in

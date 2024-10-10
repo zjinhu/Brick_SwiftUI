@@ -112,10 +112,10 @@ public struct ScrollViewGestureButton<Label: View>: View {
                 isPressedByGesture: $isPressedByGesture,
                 config: config)
         )
-        .onChange(of: isPressed) { newValue in
+        .ss.onChange(of: isPressed) { newValue in
             isPressedBinding.wrappedValue = newValue
         }
-        .onChange(of: isPressedByGesture) { newValue in
+        .ss.onChange(of: isPressedByGesture) { newValue in
             isPressed = newValue
         }
     }
@@ -176,7 +176,7 @@ extension ScrollViewGestureButton {
 
         public func makeBody(configuration: Configuration) -> some View {
             configuration.label
-                .onChange(of: configuration.isPressed) { isPressed in
+                .ss.onChange(of: configuration.isPressed) { isPressed in
                     longPressDate = Date()
                     if isPressed {
                         handleIsPressed()

@@ -159,7 +159,7 @@ struct Loading: View {
         .ss.tabBar(.hidden)
 #endif
         .addLoading(loading)
-        .onChange(of: timer.progress) { newValue in
+        .ss.onChange(of: timer.progress) { newValue in
             loading.progress = newValue
             debugPrint("\(loading.progress)")
             if newValue >= 1{

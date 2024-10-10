@@ -537,7 +537,7 @@ public extension View{
     }
     
     @ViewBuilder fileprivate func valueChanged<T: Equatable>(value: T, onChange: @escaping (T) -> Void) -> some View {
-        self.onChange(of: value, perform: onChange)
+        self.ss.onChange(of: value, onChange)
     }
 }
 

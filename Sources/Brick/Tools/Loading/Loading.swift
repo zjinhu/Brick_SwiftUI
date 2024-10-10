@@ -68,7 +68,7 @@ struct CustomLoading<LoadingContent: View>: ViewModifier {
             .overlay(alignment: .center){
                 loadingRenderContent
             }
-            .onChange(of: showLoading) { newValue in
+            .ss.onChange(of: showLoading) { newValue in
                 if newValue{
                     dismissAfterTimeout()
                 }

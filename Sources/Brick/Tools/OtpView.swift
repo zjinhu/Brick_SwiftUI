@@ -41,7 +41,7 @@ public struct OtpView: View {
                 .opacity(0.001)
                 .blendMode(.screen)
                 .focused($isKeyboardShowing)
-                .onChange(of: otpText) { newValue in
+                .ss.onChange(of: otpText) { newValue in
                     if newValue.count == length {
                         callback(newValue)
                     }

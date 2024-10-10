@@ -155,7 +155,7 @@ private struct TaskModifier<ID: Equatable>: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .onChange(of: id) { _ in
+            .ss.onChange(of: id) {
                 publisher.send()
             }
             .onReceive(publisher) { _ in

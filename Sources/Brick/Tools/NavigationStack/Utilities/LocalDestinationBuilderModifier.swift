@@ -35,14 +35,14 @@ struct LocalDestinationBuilderModifier: ViewModifier {
         
         return content
             .environmentObject(destinationBuilder)
-            .onChange(of: pathHolder.path) { _ in
+            .ss.onChange(of: pathHolder.path) { _ in
                 if isPresented.wrappedValue {
                     if !pathHolder.path.contains(where: { ($0 as? LocalDestinationID) == destinationID.id }) {
                         isPresented.wrappedValue = false
                     }
                 }
             }
-            .onChange(of: isPresented.wrappedValue) { isPresented in
+            .ss.onChange(of: isPresented.wrappedValue) { isPresented in
                 if isPresented {
                     pathHolder.path.append(destinationID.id)
                 } else {

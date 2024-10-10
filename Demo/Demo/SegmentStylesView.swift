@@ -67,12 +67,12 @@ struct SegmentStylesView: View {
             .pickerStyle(SegmentedPickerStyle())
             .colorMultiply(.red)
             .padding()
-            .onChange(of: selection) { new in
+            .ss.onChange(of: selection) { new in
                 withAnimation(.default) {
                     selected = selection
                 }
             }
-
+            
             SegmentView(
                 segments: Segment.allCases,
                 selected: $selected,

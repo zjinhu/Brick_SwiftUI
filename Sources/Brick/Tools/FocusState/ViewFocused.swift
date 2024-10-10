@@ -40,7 +40,7 @@ private struct FocusModifier<Value: Hashable>: ViewModifier {
                     view.becomeFirstResponder()
                 }
             }
-            .onChange(of: focused) { newValue in
+            .ss.onChange(of: focused) { newValue in
                 if newValue == nil {
                     coordinator.field?.resignFirstResponder()
                 }

@@ -110,7 +110,7 @@ public struct GestureButton<Label: View>: View {
     public var body: some View {
         label(isPressed)
             .overlay(gestureView)
-            .onChange(of: isPressed) { isPressedBinding.wrappedValue = $0 }
+            .ss.onChange(of: isPressed) { isPressedBinding.wrappedValue = $0 }
             .accessibilityAddTraits(.isButton)
     }
 }

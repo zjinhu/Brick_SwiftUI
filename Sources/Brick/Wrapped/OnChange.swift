@@ -17,6 +17,32 @@ public extension Brick where Wrapped: View {
     ///   - newValue: The new value that changed
     ///
     /// - Returns: A view that fires an action when the specified value changes.
+
+    @ViewBuilder
+    func onChange<Value: Equatable>(of value: Value, initial: Bool = false, _ action: @escaping (Value) -> Void) -> some View {
+        if #available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *) {
+            wrapped.onChange(of: value, initial: initial) { oldValue, newValue in
+                action(newValue)
+            }
+        } else {
+            wrapped.onChange(of: value, perform: action)
+        }
+    }
+    
+    @ViewBuilder
+    func onChange<Value: Equatable>(of value: Value, initial: Bool = false, _ action: @escaping () -> Void) -> some View {
+        if #available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *) {
+            wrapped.onChange(of: value, initial: initial) {
+                action()
+            }
+        } else {
+            wrapped.onChange(of: value){ _ in
+                action()
+            }
+        }
+    }
+  
+    //兼容ios13
     @ViewBuilder
     func onChange<Value: Equatable>(of value: Value, perform action: @escaping (Value) -> Void) -> some View {
         if #available(iOS 14, tvOS 14, macOS 11, watchOS 7, *) {
@@ -27,7 +53,7 @@ public extension Brick where Wrapped: View {
     }
 
 }
-
+///ios13
 private struct ChangeModifier<Value: Equatable>: ViewModifier {
     let value: Value
     let action: (Value) -> Void

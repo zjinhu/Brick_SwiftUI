@@ -96,7 +96,7 @@ public struct CustomToast<ToastContent: View>: ViewModifier{
                 }
                 .animation(Animation.spring(), value: isPresented)
             }
-            .onChange(of: isPresented) { newValue in
+            .ss.onChange(of: isPresented) { newValue in
                 if newValue{
                     onAppearAction()
                 }

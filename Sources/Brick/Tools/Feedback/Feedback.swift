@@ -67,7 +67,7 @@ internal struct FeedbackModifier<V: Equatable>: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .onChange(of: value) { value in
+            .ss.onChange(of: value) { value in
                 Task { await feedback.perform() }
             }
     }

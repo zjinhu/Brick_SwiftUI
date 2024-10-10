@@ -182,7 +182,7 @@ public struct GetSizeModifier: ViewModifier {
                         .onAppear {
                             currentSize = geometry.size
                         }
-                        .onChange(of: geometry.size) { newSize in
+                        .ss.onChange(of: geometry.size) { newSize in
                             currentSize = newSize
                         }
                 }
