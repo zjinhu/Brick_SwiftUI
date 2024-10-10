@@ -42,7 +42,7 @@ public extension Brick where Wrapped: View {
         }
     }
   
-    //兼容ios13
+//兼容ios13
 //    @ViewBuilder
 //    func onChange<Value: Equatable>(of value: Value, perform action: @escaping (Value) -> Void) -> some View {
 //        if #available(iOS 14, tvOS 14, macOS 11, watchOS 7, *) {
