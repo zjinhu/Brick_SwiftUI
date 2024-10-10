@@ -15,13 +15,13 @@ struct BadgeView: View {
         var body: some View {
             Circle()
                 .fill(Color.blue)
-                .frame(width: 40, height: 40)
+                .frame(width: 40.zoom(), height: 40.zoom())
         }
     }
     
     
     var body: some View {
-        VStack(spacing: 44) {
+        VStack(spacing: 44.screen.inch(._4_7, is: 30).inch(._6_1, is: 60).value) {
             
             //            Button {
             //                withAnimation(.easeInOut(duration: 0.25)) {
