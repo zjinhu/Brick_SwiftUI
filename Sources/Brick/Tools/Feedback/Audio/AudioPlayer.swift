@@ -12,7 +12,7 @@ private enum PlayerError: LocalizedError {
     }
 }
 
-public class AudioPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
+public class AudioPlayer: NSObject, ObservableObject, @preconcurrency AVAudioPlayerDelegate {
     private var player: AVAudioPlayer?
     
     @MainActor

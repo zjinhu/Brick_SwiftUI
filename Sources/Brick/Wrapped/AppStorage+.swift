@@ -348,7 +348,7 @@ private final class RefStorage<Value>: NSObject, ObservableObject {
 }
 
 ///增加@AppStorage 支持
-extension Date: RawRepresentable{
+extension Date: @retroactive RawRepresentable{
     public typealias RawValue = String
     public init?(rawValue: RawValue) {
         guard let data = rawValue.data(using: .utf8),
@@ -367,7 +367,7 @@ extension Date: RawRepresentable{
     }
 }
 
-extension Dictionary: RawRepresentable where Key: Codable, Value: Codable {
+extension Dictionary: @retroactive RawRepresentable where Key: Codable, Value: Codable {
     
     public init?(rawValue: String) {
         guard
@@ -386,7 +386,7 @@ extension Dictionary: RawRepresentable where Key: Codable, Value: Codable {
     }
 }
 
-extension Array: RawRepresentable where Element: Codable {
+extension Array: @retroactive RawRepresentable where Element: Codable {
     public init?(rawValue: String) {
         guard let data = rawValue.data(using: .utf8),
               let result = try? JSONDecoder().decode([Element].self, from: data)

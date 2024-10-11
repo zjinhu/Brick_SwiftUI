@@ -254,7 +254,7 @@ public enum ImageFormat: String {
 }
 
 public extension ImageFormat {
-    public static func get(from data: Data) -> ImageFormat {
+    static func get(from data: Data) -> ImageFormat {
        switch data[0] {
        case 0x89:
            return .png
