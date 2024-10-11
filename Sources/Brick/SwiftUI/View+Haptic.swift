@@ -11,6 +11,9 @@
 import Foundation
 import SwiftUI
 import UIKit
+#if canImport(CoreHaptics)
+import CoreHaptics
+#endif
 
 public struct HapticButton<Content: View> : View{
     
@@ -21,8 +24,8 @@ public struct HapticButton<Content: View> : View{
     var action: () -> () = {}
     
     public init(action: @escaping () -> Void, @ViewBuilder label: @escaping () -> Content) {
-            self.content = label()
-            self.action = action
+        self.content = label()
+        self.action = action
     }
     
     public init(action: @escaping () -> Void,
@@ -42,13 +45,12 @@ public struct HapticButton<Content: View> : View{
         } label: {
             content
         }
- 
+        
     }
 }
- 
 
 public extension View {
- 
+    
     func haptics<V: Equatable>(onChangeOf value: V,
                                type: UINotificationFeedbackGenerator.FeedbackType,
                                isOpen: Bool = true) -> some View {
@@ -60,7 +62,7 @@ public extension View {
             }
         }
     }
- 
+    
     func haptics<V: Equatable>(when property: V,
                                equalsTo value: V,
                                type: UINotificationFeedbackGenerator.FeedbackType,
@@ -73,7 +75,7 @@ public extension View {
             }
         }
     }
- 
+    
     func haptics<V: Equatable>(onChangeOf value: V,
                                type: UIImpactFeedbackGenerator.FeedbackStyle,
                                isOpen: Bool = true) -> some View {
@@ -85,7 +87,7 @@ public extension View {
             }
         }
     }
- 
+    
     func haptics<V: Equatable>(when property: V,
                                equalsTo value: V,
                                type: UIImpactFeedbackGenerator.FeedbackStyle,
@@ -98,7 +100,7 @@ public extension View {
             }
         }
     }
- 
+    
     func haptics<V: Equatable>(onChangeOf value: V,
                                isOpen: Bool = true) -> some View {
         onChange(of: value) { _ in
@@ -109,7 +111,7 @@ public extension View {
             }
         }
     }
- 
+    
     func triggersHapticFeedbackWhenAppear() -> some View {
         onAppear {
             let generator = UISelectionFeedbackGenerator()
@@ -117,27 +119,27 @@ public extension View {
             generator.selectionChanged()
         }
     }
- 
-    /// You can also use ``.haptics(onChangeOf:)`` on your `View`.
-    func hapticFeedback() {
-        let generator = UISelectionFeedbackGenerator()
-        generator.prepare()
-        generator.selectionChanged()
-    }
- 
-    /// You can also use ``.haptics(onChangeOf:type:)`` on your `View`.
-    func hapticFeedback(type: UINotificationFeedbackGenerator.FeedbackType) {
-        let generator = UINotificationFeedbackGenerator()
-        generator.prepare()
-        generator.notificationOccurred(type)
-    }
- 
-    /// You can also use ``.haptics(onChangeOf:type:)`` on your `View`.
-    func hapticFeedback(type: UIImpactFeedbackGenerator.FeedbackStyle) {
-        let generator = UIImpactFeedbackGenerator(style: type)
-        generator.prepare()
-        generator.impactOccurred()
-    }
+    
 }
 
+/// You can also use ``.haptics(onChangeOf:)`` on your `View`.
+public func hapticFeedback() {
+    let generator = UISelectionFeedbackGenerator()
+    generator.prepare()
+    generator.selectionChanged()
+}
+
+/// You can also use ``.haptics(onChangeOf:type:)`` on your `View`.
+public  func hapticFeedback(type: UINotificationFeedbackGenerator.FeedbackType) {
+    let generator = UINotificationFeedbackGenerator()
+    generator.prepare()
+    generator.notificationOccurred(type)
+}
+
+/// You can also use ``.haptics(onChangeOf:type:)`` on your `View`.
+public func hapticFeedback(type: UIImpactFeedbackGenerator.FeedbackStyle) {
+    let generator = UIImpactFeedbackGenerator(style: type)
+    generator.prepare()
+    generator.impactOccurred()
+}
 #endif

@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+extension Binding where Value == String {
+    ///TextField TextEditor 限制输入字符
+    public func textLimit(_ limit: Int) -> Self {
+        if self.wrappedValue.count > limit {
+            DispatchQueue.main.async {
+                self.wrappedValue = String(self.wrappedValue.prefix(limit))
+            }
+        }
+        return self
+    }
+}
+
 extension Binding {
     @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
     public init(_from binding: FocusState<Value>.Binding) where Value: Hashable {
