@@ -17,6 +17,8 @@ extension Brick where Wrapped == Any {
         @State var internalTypedPath: [Data] = []
         @StateObject var path : NavigationPathHolder
         @StateObject var destinationBuilder = DestinationBuilderHolder()
+        @StateObject var navigator: Navigator<Data> = .init(.constant([]))
+
         @Environment(\.useNavigationStack) var useNavigationStack
         
         @State var appIsActive = NonReactiveState(value: true)
@@ -37,10 +39,12 @@ extension Brick where Wrapped == Any {
             
             if #available(iOS 16.0, *, macOS 13.0, *, watchOS 9.0, *, tvOS 16.0, *),
                useNavigationStack == .whenAvailable {
-                SwiftUI.NavigationStack(path: $path.path) {
+                SwiftUI.NavigationStack(path: useInternalTypedPath ? $internalTypedPath : $externalTypedPath) {
                     content
                         .navigationDestination(for: AnyHashable.self, destination: { DestinationBuilderView(data: $0) })
                         .navigationDestination(for: LocalDestinationID.self, destination: { DestinationBuilderView(data: $0) })
+                        .navigationDestination(for: Data.self, destination: { DestinationBuilderView(data: $0) })
+
                 }
                 .environment(\.isWithinNavigationStack, true)
                 
@@ -58,7 +62,13 @@ extension Brick where Wrapped == Any {
                 .environmentObject(path)
                 .environmentObject(Unobserved(object: path))
                 .environmentObject(destinationBuilder)
-                .environmentObject(Navigator(useInternalTypedPath ? $internalTypedPath : $externalTypedPath))
+                .environmentObject(navigator)
+                .onFirstAppear {
+                  if useInternalTypedPath {
+                    // We can only access the StateObject once the view has been added to the view tree.
+                    navigator.pathBinding = $internalTypedPath
+                  }
+                }
                 .onFirstAppear {
                     guard isUsingNavigationView else {
                         // Path should already be correct thanks to initialiser.
@@ -73,9 +83,10 @@ extension Brick where Wrapped == Any {
                 }
                 .ss.onChange(of: externalTypedPath) { externalTypedPath in
                     guard isUsingNavigationView else {
-                        path.path = externalTypedPath
                         return
                     }
+                    guard path.path != externalTypedPath.map({ $0 }) else { return }
+
                     guard appIsActive.value else { return }
                     path.withDelaysIfUnsupported(\.path) {
                         $0 = externalTypedPath
@@ -83,9 +94,10 @@ extension Brick where Wrapped == Any {
                 }
                 .ss.onChange(of: internalTypedPath) { internalTypedPath in
                     guard isUsingNavigationView else {
-                        path.path = internalTypedPath
                         return
                     }
+                    guard path.path != internalTypedPath.map({ $0 }) else { return }
+
                     guard appIsActive.value else { return }
                     path.withDelaysIfUnsupported(\.path) {
                         $0 = internalTypedPath
@@ -144,6 +156,9 @@ extension Brick where Wrapped == Any {
             self.content = content()
             _path = StateObject(wrappedValue: NavigationPathHolder(path: path?.wrappedValue ?? []))
             useInternalTypedPath = path == nil
+            
+            let navigator = useInternalTypedPath ? Navigator(.constant([])) : Navigator($externalTypedPath)
+            _navigator = StateObject(wrappedValue: navigator)
         }
     }
     
