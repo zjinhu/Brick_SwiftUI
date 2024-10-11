@@ -94,6 +94,7 @@ public struct CustomToast<ToastContent: View>: ViewModifier{
                             .transition(setAnyTransition())
                     }
                 }
+                .edgesIgnoringSafeArea(.all)
                 .animation(Animation.spring(), value: isPresented)
             }
             .ss.onChange(of: isPresented) { newValue in
