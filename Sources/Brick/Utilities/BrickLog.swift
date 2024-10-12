@@ -20,14 +20,14 @@ public struct BrickLog {
 public extension BrickLog {
     func log(_ message: String, level: OSLogType = .default,  isPrivate: Bool = false) {
         if isPrivate {
-            logger.log(level: level, "\(message, privacy: .private)")
+            logger.log(level: level, "🎾\(message, privacy: .private)")
         } else {
-            logger.log(level: level, "\(message, privacy: .public)")
+            logger.log(level: level, "🎾\(message, privacy: .public)")
         }
     }
     //默认的日志级别
     func log(_ message: String){
-        logger.log("⚪️\(message)")
+        logger.log("🎾\(message)")
     }
     //调用此函数来捕获可能对故障排除有用但不是必需的信息
     func info(_ message: String){
