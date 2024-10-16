@@ -12,8 +12,8 @@ public struct ScrollTrackingView<Content: View>: View {
  
     let contentViews: () -> Content
     
-    init(currentScroll: Binding<CGFloat>,
-         contentViews: @escaping () -> Content) {
+    public init(currentScroll: Binding<CGFloat>,
+         _ contentViews: @escaping () -> Content) {
         self._currentScroll = currentScroll
         self.contentViews = contentViews
     }
@@ -32,19 +32,19 @@ public struct ScrollTrackingView<Content: View>: View {
     }
     
     private func updateCurrentScroll(_ offset: CGFloat) {
-        currentScroll += offset
+        currentScroll = offset
     }
 }
 
-struct ScrollPreferenceKey: PreferenceKey {
-    static let defaultValue = CGFloat.zero
+public struct ScrollPreferenceKey: PreferenceKey {
+    public static let defaultValue = CGFloat.zero
 
-    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+    public static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
         value += nextValue()
     }
 }
 
-extension View {
+public extension View {
     func onScroll(offset: @escaping (CGFloat) -> Void) -> some View {
         onPreferenceChange(ScrollPreferenceKey.self) { offsetValue in
             offset(offsetValue)
