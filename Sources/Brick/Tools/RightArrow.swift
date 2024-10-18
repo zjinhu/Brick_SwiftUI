@@ -8,7 +8,7 @@
 import SwiftUI
 #if os(iOS)
 extension View {
-    public func rightArrow(color: Color = Color(.systemGray2),
+    public func addRightArrow(color: Color = Color(.systemGray2),
                            font: Font = Font.footnote.weight(.semibold)) -> some View {
         HStack {
             self
