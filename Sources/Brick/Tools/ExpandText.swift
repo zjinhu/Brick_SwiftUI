@@ -52,7 +52,8 @@ public struct ExpandText<Content: View, ExpandButton: View>: View {
                                                 .onAppear {
                                                     if fullSize > geo.size.height {
                                                         self.isShowMore = true
-//                                                        logger.debug("\(geo.size.height)")
+                                                    }else{
+                                                        self.isShowMore = false
                                                     }
                                                 }
                                         }
@@ -64,7 +65,6 @@ public struct ExpandText<Content: View, ExpandButton: View>: View {
                                 .background(GeometryReader { geo in
                                     Color.clear
                                         .onAppear() {
-                                            self.isShowMore = false
                                             self.fullSize = geo.size.height
                                         }
                                 })
@@ -77,7 +77,6 @@ public struct ExpandText<Content: View, ExpandButton: View>: View {
                         isCropped.toggle()
                     }
                 }
-            
             
             if  isCropped, isShowMore{
                 moreView() {
