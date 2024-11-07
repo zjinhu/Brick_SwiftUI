@@ -17,21 +17,21 @@ struct DarkModelView: View {
             } label: {
                 Text("dark")
             }
-            .rightArrow()
+            .addRightArrow()
 
             Button {
                 colorScheme.darkModeSetting = .light
             } label: {
                 Text("light")
             }
-            .rightArrow()
+            .addRightArrow()
             
             Button {
                 colorScheme.darkModeSetting = .system
             } label: {
                 Text("system")
             }
-            .rightArrow()
+            .addRightArrow()
         }
 #if os(iOS)
         .ss.tabBar(.hidden)
