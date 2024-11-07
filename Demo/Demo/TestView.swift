@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BrickKit
+#if os(iOS)
 struct TestView: View {
     @Environment(\.dismiss) private var dismis
     @State private var inputText: String = ""
@@ -53,3 +54,4 @@ struct TestView: View {
 #Preview {
     TestView()
 }
+#endif

@@ -17,7 +17,6 @@ struct DemoView: View {
                 .ss.tabBar(.visible)
                 .navigationTitle("BrickKit")
                 .navigationBarTitleDisplayMode(.inline)
-#endif
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button {
@@ -35,6 +34,7 @@ struct DemoView: View {
                         }
                     }
                 }
+#endif
                 .ss.navigationDestination(for: DemoStack.self) { caseItem in
                     switch caseItem{
                     case .navigationStack:
@@ -98,10 +98,12 @@ struct DemoView: View {
                         
                     }
                 }
+#if os(iOS)
                 .fullScreenCover(isPresented: $showFull){
                     TestView()
                         .fullScreenCoverBackgroundClear()
                 }
+#endif
                 .sheet(isPresented: $showSheet) {
 #if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
 

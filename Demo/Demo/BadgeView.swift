@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BrickKit
+
 struct BadgeView: View {
     @State private var alert = false
     //    @EnvironmentObject var tabVisibility: TabbarVisibility
@@ -15,13 +16,15 @@ struct BadgeView: View {
         var body: some View {
             Circle()
                 .fill(Color.blue)
+#if os(iOS)
                 .frame(width: 40.zoom(), height: 40.zoom())
+#endif
         }
     }
     
     
     var body: some View {
-        VStack(spacing: 44.screen.inch(._4_7, is: 30).inch(._6_1, is: 60).value) {
+        VStack{
             
             //            Button {
             //                withAnimation(.easeInOut(duration: 0.25)) {

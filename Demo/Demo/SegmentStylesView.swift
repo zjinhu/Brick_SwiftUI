@@ -114,7 +114,6 @@ struct SegmentStylesView: View {
             .padding(.horizontal, 15)
             
             Button {
-                print("statusBarHeight:\(Screen.statusBarHeight)")
                 dismiss()
             } label: {
                 Text("Environment Dismiss")

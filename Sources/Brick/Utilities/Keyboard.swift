@@ -48,6 +48,7 @@ private extension KeyboardManager {
 #elseif os(macOS)
 public class KeyboardManager: ObservableObject {
     public var keyboardHeight: CGFloat = 0
+    public init() {}
 }
 extension KeyboardManager {
     public static func hideKeyboard() {
