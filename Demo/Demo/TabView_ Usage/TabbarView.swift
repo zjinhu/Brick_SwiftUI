@@ -31,7 +31,7 @@ struct TabbarView: View {
                 }
                 .tag(TabBarItem.history)
             
-            Color.orange
+            FourthView()
                 .tabItem {
                     tabItem(for: .account)
                 }
