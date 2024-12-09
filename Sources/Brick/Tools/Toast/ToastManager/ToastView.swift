@@ -11,13 +11,13 @@ struct ToastView<Content: View>: View {
     @StateObject private var keyboardObserver = KeyboardManager()
     
     init(isActive: Binding<Bool>,
-                padding: CGFloat = 10,
-                defaultOffset: CGFloat = 0,
-                @ViewBuilder content: @escaping ContentBuilder) {
+         padding: CGFloat = 10,
+         defaultOffset: CGFloat = 0,
+         @ViewBuilder content: @escaping ContentBuilder) {
         _isActive = isActive
         self.padding = padding
         self.defaultOffset = defaultOffset
-        self.content = content 
+        self.content = content
     }
     
     typealias ContentBuilder = (_ isActive: Bool) -> Content
