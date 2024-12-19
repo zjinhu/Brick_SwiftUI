@@ -14,8 +14,8 @@ extension View {
     }
     
     @inlinable
-    public func maxWidth(_ width: CGFloat?) -> some View {
-        frame(maxWidth: width)
+    public func maxWidth(_ width: CGFloat?, alignment: Alignment = .center) -> some View {
+        frame(maxWidth: width, alignment: alignment)
     }
     
     @inlinable
