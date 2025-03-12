@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-let package = Package(name: "BrickKit")
+let package = Package(name: "Brick_SwiftUI")
 
 package.platforms = [
     .iOS(.v14),
