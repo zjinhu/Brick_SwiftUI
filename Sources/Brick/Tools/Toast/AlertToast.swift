@@ -472,8 +472,13 @@ fileprivate struct BackgroundModifier: ViewModifier{
     @ViewBuilder
     func body(content: Content) -> some View {
         
-        content
-            .background(color)
+        if let color = color {
+            content
+                .background(color)
+        }else{
+            content
+                .background(BlurView())
+        }
         
     }
 }

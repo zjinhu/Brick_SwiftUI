@@ -15,6 +15,8 @@ struct StepView: View {
             ProgressView(value: manager.progress)
                 .frame(width: 60, height: 60)
                 .progressViewStyle(GaugeProgressStyle(strokeColor: manager.accentColor))
+                .environment(\.sizeCategory, .small)
+
             
             if let status = manager.text{
                 Text("\(status)")

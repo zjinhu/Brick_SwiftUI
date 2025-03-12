@@ -98,7 +98,7 @@ struct Toast: View {
             AlertToast(displayMode: .hud,
                        type: .systemImage("exclamationmark.circle.fill", .orange),
                        title: "xxxxxxxxxxxx",
-                       style: .style(backgroundColor: .black, titleColor: .white, titleFont: .system(size: 14)))
+                       style: .style(titleColor: .primary, titleFont: .system(size: 14)))
         }
         .toast(isPresented: $showToast, position: .top, duration: 5.0) {
             Label(

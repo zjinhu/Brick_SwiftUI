@@ -18,6 +18,8 @@ struct LoadingView: View {
 #endif
                 .frame(width: 50, height: 50)
                 .progressViewStyle(CircularProgressViewStyle(tint: manager.accentColor))
+                .environment(\.sizeCategory, .small)
+
             
             if let status = manager.text{
                 Text("\(status)")

@@ -17,6 +17,8 @@ struct FailView: View {
                 .stroke(manager.accentColor, style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .round))
                 .animation(.easeInOut(duration: 0.5), value: UUID())
                 .frame(width: 50, height: 50)
+                .environment(\.sizeCategory, .small)
+
 
             
             if let status = manager.text{

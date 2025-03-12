@@ -17,6 +17,8 @@ struct SuccessView: View {
                 .animation(.easeInOut(duration: 0.5), value: UUID())
                 .frame(width: 50, height: 50)
                 .offset(x: -3)
+                .environment(\.sizeCategory, .small)
+
             
             if let status = manager.text{
                 Text("\(status)")

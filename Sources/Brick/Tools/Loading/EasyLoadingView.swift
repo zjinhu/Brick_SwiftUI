@@ -30,7 +30,7 @@ public struct EasyLoadingView<Content: View, LoadingView: View>: View{
             self.content() 
             
 #if os(iOS) || os(macOS) || os(tvOS) || targetEnvironment(macCatalyst)
-            BlurView()
+            GlassmorphismBlurView()
                 .opacity(isShowing ? 1 : 0)
                 .ignoresSafeArea()
 #else

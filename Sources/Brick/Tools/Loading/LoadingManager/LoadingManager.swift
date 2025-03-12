@@ -52,11 +52,11 @@ public class LoadingManager: ObservableObject {
     //HUD提示
     @Published public var text: String?
     //HUD提示字体颜色
-    @Published public var textColor = Color.black
+    @Published public var textColor = Color.primary
     //HUD提示字体颜色
     @Published public var textFont: Font = .system(size: 15, weight: .medium)
     //HUD Loading颜色
-    @Published public var accentColor = Color.blue
+    @Published public var accentColor = Color.primary
     ///进度条进度 0--1
     @Published public var progress: CGFloat = 0
     

@@ -172,7 +172,7 @@ struct Loading: View {
             AlertToast(displayMode: .alert,
                        type: .loading,
                        title: "Loading...",
-                       style: .style(backgroundColor: .black.opacity(0.9), titleColor: .white, titleFont: .system(size: 14)))
+                       style: .style(titleColor: .primary, titleFont: .system(size: 14)))
         }
         .loading(isPresented: $showloading, options: loadingOptions) {
             Label(

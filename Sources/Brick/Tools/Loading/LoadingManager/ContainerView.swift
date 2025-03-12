@@ -21,7 +21,7 @@ struct ContainerView<Content: View>: View {
     var body: some View {
         ZStack{
 #if os(iOS) || os(macOS) || os(tvOS) || targetEnvironment(macCatalyst)
-            BlurView()
+            GlassmorphismBlurView()
                 .ignoresSafeArea()
 #else
             Color.black.opacity(0.5)
@@ -29,7 +29,7 @@ struct ContainerView<Content: View>: View {
             
             content(isActive)
                 .frame(minWidth: 80, minHeight: 80)
-                .background(Color.black.opacity(0.7))
+                .background(Color.defaultBackground.opacity(0.7))
                 .cornerRadius(10)
                 .shadow(color: .gray, radius: 5)
                 .animation(.spring())
