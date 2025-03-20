@@ -12,19 +12,33 @@ struct ContainerView<Content: View>: View {
     private let content: ContentBuilder
     //绑定显示状态
     @Binding private var isActive: Bool
- 
-    init(isActive: Binding<Bool>, @ViewBuilder content: @escaping ContentBuilder ) {
+    let manager: LoadingManager
+    init(isActive: Binding<Bool>,
+         manager: LoadingManager,
+         @ViewBuilder content: @escaping ContentBuilder ) {
         _isActive = isActive
         self.content = content
+        self.manager = manager
     }
     
     var body: some View {
         ZStack{
 #if os(iOS) || os(macOS) || os(tvOS) || targetEnvironment(macCatalyst)
-            GlassmorphismBlurView()
-                .ignoresSafeArea()
+            if let maskColor = manager.maskColor{
+                maskColor
+                    .ignoresSafeArea()
+            }else{
+                GlassmorphismBlurView()
+                    .ignoresSafeArea()
+            }
 #else
-            Color.black.opacity(0.5)
+            if let maskColor = manager.maskColor{
+                maskColor
+                    .ignoresSafeArea()
+            }else{
+                Color.black.opacity(0.5)
+                    .ignoresSafeArea()
+            }
 #endif
             
             content(isActive)

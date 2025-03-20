@@ -128,7 +128,7 @@ public struct LoadingOptions {
 
     public init(
         hideAfter: TimeInterval? = nil,
-        backdrop: Color? = .black.opacity(0.4),
+        backdrop: Color? = nil,
         animation: Animation = .linear,
         modifierType: ModifierType = .fade,
         dismissOnTap: Bool? = false

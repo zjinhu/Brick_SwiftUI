@@ -9,8 +9,8 @@ import SwiftUI
 
 public extension View {
     ///添加loading,也可以WindowGroup里给ContentView添加
-    func addLoading(_ ob: LoadingManager ) -> some View {
-        self.addLoading(isActive: ob.isActiveBinding, content: { ob.content })
+    func addLoading(_ manager: LoadingManager ) -> some View {
+        self.addLoading(isActive: manager.isActiveBinding, manager: manager, content: { manager.content })
     }
 }
 
@@ -59,7 +59,8 @@ public class LoadingManager: ObservableObject {
     @Published public var accentColor = Color.primary
     ///进度条进度 0--1
     @Published public var progress: CGFloat = 0
-    
+    //HUD遮罩颜色
+    @Published public var maskColor: Color? = .clear
     ///展示的容器
     @Published var content = AnyView(EmptyView())
     ///展示状态
@@ -96,9 +97,10 @@ extension LoadingManager {
 extension View {
     
     private func addLoading<Content: View>(isActive: Binding<Bool>,
+                                           manager: LoadingManager,
                                    content: @escaping () -> Content) -> some View {
         overlay{
-            ContainerView(isActive: isActive, content: { _ in content() })
+            ContainerView(isActive: isActive, manager: manager, content: { _ in content() })
         }
     }
 
