@@ -10,22 +10,93 @@ import Photos
 import UIKit
 import Foundation
 import UniformTypeIdentifiers
+extension PHPickerResult{
+    public func loadImage() async throws -> UIImage? {
+        // 调试信息
+        itemProvider.debugItemProvider()
+        
+        let status = await PHPhotoLibrary.requestAuthorization(for: .readWrite)
+        
+        // 1. 尝试直接加载 UIImage
+        if itemProvider.canLoadObject(ofClass: UIImage.self) {
+            return try await withCheckedThrowingContinuation { continuation in
+                itemProvider.loadObject(ofClass: UIImage.self) { object, error in
+                    if let error = error {
+                        continuation.resume(throwing: error)
+                        return
+                    }
+                    
+                    if let image = object as? UIImage {
+                        continuation.resume(returning: image)
+                    } else {
+                        continuation.resume(returning: nil)
+                    }
+                }
+            }
+        }
+        
+        // 2. 尝试通过数据表示加载
+        if let data = try await itemProvider.loadData(),
+           let image = UIImage(data: data){
+            return image
+        }
+ 
+        // 3. 如果有 assetIdentifier，尝试通过 PHAsset 加载
+        if let assetIdentifier = assetIdentifier {
+            
+            let fetchResult = PHAsset.fetchAssets(withLocalIdentifiers: [assetIdentifier], options: nil)
+            if let asset = fetchResult.firstObject {
+                return await loadImageFromPHAsset(asset)
+            }
+        }
+
+        return nil
+    }
+
+    func loadImageFromPHAsset(_ asset: PHAsset) async -> UIImage? {
+        await withCheckedContinuation { continuation in
+            let options = PHImageRequestOptions()
+            options.deliveryMode = .highQualityFormat
+            options.isNetworkAccessAllowed = true
+            
+            PHImageManager.default().requestImage(
+                for: asset,
+                targetSize: PHImageManagerMaximumSize,
+                contentMode: .aspectFit,
+                options: options
+            ) { image, info in
+                continuation.resume(returning: image)
+            }
+        }
+    }
+ 
+}
 
 extension PHPickerResult{
-    
+ 
     public func loadTransferable<T>(type: T.Type) async throws -> T? where T: NSItemProviderReading {
-        try await itemProvider.loadObject(type)
+        itemProvider.debugItemProvider()
+        return try await itemProvider.loadObject(type)
     }
     
     public func loadTransfer<T>(type: T.Type) async throws -> T? {
+        itemProvider.debugItemProvider()
         do {
-            let data = try await itemProvider.loadData()
-            
             switch type {
             case is UIImage.Type:
-                guard let image = UIImage(data: data) else { return nil }
-                return image as? T
+                if itemProvider.canLoadObject(ofClass: UIImage.self) {
+                    let image = try await itemProvider.loadObject(UIImage.self)
+                    return image as? T
+                } else {
+                    // 尝试通过数据加载
+                    guard let data = try await itemProvider.loadData(),
+                          let image = UIImage(data: data) else {
+                        throw PhotoError<T>()
+                    }
+                    return image as? T
+                }
             case is Data.Type:
+                let data = try await itemProvider.loadData()
                 return data as? T
             default:
                 throw PhotoError<T>()
@@ -37,16 +108,24 @@ extension PHPickerResult{
     
     public func loadTransfer<T>(type: T.Type, completion: @escaping (Result<T?, Error>) -> Void){
         Task {
-            let data = try? await itemProvider.loadData()
+            
             switch type {
             case is UIImage.Type:
-                if let data = data,
-                   let image = UIImage(data: data) {
+                if itemProvider.canLoadObject(ofClass: UIImage.self) {
+                    let image = try await itemProvider.loadObject(UIImage.self)
                     completion(.success(image as? T))
-                }else{
-                    completion(.failure(PhotoError<T>()))
+                } else {
+                    // 尝试通过数据加载
+                    if let data = try await itemProvider.loadData(),
+                       let image = UIImage(data: data) {
+                        completion(.success(image as? T))
+                    }else{
+                        completion(.failure(PhotoError<T>()))
+                    }
                 }
+
             case is Data.Type:
+                let data = try? await itemProvider.loadData()
                 completion(.success( data as? T))
             default:
                 completion(.failure(PhotoError<T>()))
@@ -63,7 +142,7 @@ extension PHPickerResult{
 
 extension NSItemProvider {
     
-    func loadData() async throws -> Data {
+    func loadData() async throws -> Data? {
         let supportedRepresentations = [UTType.rawImage.identifier,
                                         UTType.webP.identifier,
                                         UTType.gif.identifier,
@@ -83,15 +162,16 @@ extension NSItemProvider {
                                         UTType.mpeg2Video.identifier,
                                         UTType.mpeg4Movie.identifier,
                                         UTType.appleProtectedMPEG4Video.identifier,
-                                        UTType.avi.identifier  ]
+                                        UTType.avi.identifier,
+                                        UTType.url.identifier]
         
         for representation in supportedRepresentations {
             if self.hasItemConformingToTypeIdentifier(representation) {
                 return try await self.loadDataRepresentation(forTypeIdentifier: representation)
             }
         }
-        
-        return try await self.loadDataRepresentation(forTypeIdentifier: UTType.image.identifier)
+        print("没有找到支持的图片类型")
+        return nil
     }
     
     func loadDataRepresentation(forTypeIdentifier typeIdentifier: String) async throws -> Data {
@@ -101,18 +181,30 @@ extension NSItemProvider {
                     return continuation.resume(throwing: error)
                 }
                 
-                guard let data = data else {
-                    return continuation.resume(throwing: NSError())
+                if let data = data{
+                    return continuation.resume(returning: data)
                 }
                 
-                continuation.resume(returning: data)
-            }.resume()
+                if let url = data as? URL, let data = try? Data(contentsOf: url){
+                    return continuation.resume(returning: data)
+                }
+
+                return continuation.resume(throwing: NSError(domain: "com.app.error", code: -1, userInfo: [NSLocalizedDescriptionKey: "无法加载图片数据"]))
+            }
         }
     }
 }
 
 extension NSItemProvider {
  
+    func debugItemProvider() {
+        print("支持的类型标识符: \(registeredTypeIdentifiers)")
+        
+        for type in registeredTypeIdentifiers {
+            print("类型: \(type), 是否可加载: \(hasItemConformingToTypeIdentifier(type))")
+        }
+    }
+    
     func loadObject<T: NSItemProviderReading>(_ type: T.Type = T.self) async throws -> T?{
         try await withCheckedThrowingContinuation { continuation in
             _ = self.loadObject(ofClass: T.self) { object, error in

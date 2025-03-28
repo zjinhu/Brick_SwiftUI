@@ -3,7 +3,8 @@ import SwiftUI
 #if os(iOS)
 import PhotosUI
 import Photos
-
+///You need to obtain permissions for albums before opening them
+///打开相册之前需要获取相全部册权限
 public struct PhotoPicker<Label>: View where Label: View {
     @State private var isPresented: Bool = false
     @Binding var selected: [PHPickerResult]
@@ -171,7 +172,8 @@ public extension PhotoPicker<Text> {
 }
 
 public extension PhotoPicker {
-    
+    ///You need to obtain permissions for albums before opening them
+    ///打开相册之前需要获取相册权限
     init(
         selected: Binding<[PHPickerResult]>,
         maxSelectionCount: Int? = nil,
@@ -186,7 +188,8 @@ public extension PhotoPicker {
         self.library = .shared()
         self.label = label()
     }
-    
+    ///You need to obtain permissions for albums before opening them
+    ///打开相册之前需要获取相册权限
     init(
         selected: Binding<[PHPickerResult]>,
         maxSelectionCount: Int? = nil,
@@ -205,7 +208,8 @@ public extension PhotoPicker {
 }
 
 public extension PhotoPicker<Text> {
-    
+    ///You need to obtain permissions for albums before opening them
+    ///打开相册之前需要获取相册权限
     init(
         _ titleKey: LocalizedStringKey,
         selected: Binding<[PHPickerResult]>,
@@ -220,7 +224,8 @@ public extension PhotoPicker<Text> {
         self.library = .shared()
         self.label = Text(titleKey)
     }
-    
+    ///You need to obtain permissions for albums before opening them
+    ///打开相册之前需要获取相册权限
     init<S>(
         _ title: S,
         selected: Binding<[PHPickerResult]>,
@@ -236,7 +241,8 @@ public extension PhotoPicker<Text> {
         self.library = .shared()
         self.label = Text(title)
     }
-    
+    ///You need to obtain permissions for albums before opening them
+    ///打开相册之前需要获取相册权限
     init(
         _ titleKey: LocalizedStringKey,
         selected: Binding<[PHPickerResult]>,
@@ -253,7 +259,8 @@ public extension PhotoPicker<Text> {
         self.library = photoLibrary
         self.label = Text(titleKey)
     }
-    
+    ///You need to obtain permissions for albums before opening them
+    ///打开相册之前需要获取相册权限
     init<S>(
         _ title: S,
         selected: Binding<[PHPickerResult]>,

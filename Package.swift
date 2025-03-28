@@ -8,7 +8,7 @@ let package = Package(name: "Brick_SwiftUI")
 package.platforms = [
     .iOS(.v14),
     .tvOS(.v14),
-//    .watchOS(.v8),
+//    .watchOS(.v9),
     .macOS(.v11),
 //    .visionOS(.v1)
 ]

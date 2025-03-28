@@ -10,7 +10,7 @@ import PhotosUI
 import Photos
 
 public extension View {
-    //System album selection of a single photo
+
     func photoPicker(
         isPresented: Binding<Bool>,
         selected: Binding<PHPickerResult?>,
@@ -36,7 +36,8 @@ public extension View {
         )
     }
     
-    //System Album to select multiple photos
+    ///You need to obtain permissions for albums before opening them
+    ///打开相册之前需要获取相册权限
     func photoPicker(
         isPresented: Binding<Bool>,
         selected: Binding<[PHPickerResult]>,

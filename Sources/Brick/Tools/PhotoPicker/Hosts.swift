@@ -44,9 +44,7 @@ private struct PhotosViewController: UIViewControllerRepresentable {
          library: PHPhotoLibrary) {
         _isPresented = isPresented
         _selected = selected
-
         selectedAssetIdentifiers = selected.wrappedValue.map(\.assetIdentifier!)
-
         var configuration = PHPickerConfiguration(photoLibrary: library)
         configuration.preferredAssetRepresentationMode = preferredAssetRepresentationMode
         configuration.selectionLimit = maxSelectionCount ?? 1
@@ -55,7 +53,7 @@ private struct PhotosViewController: UIViewControllerRepresentable {
             configuration.selection = .ordered
             configuration.preselectedAssetIdentifiers = selectedAssetIdentifiers
         } else {
-
+            
         }
         self.configuration = configuration
     }
@@ -84,7 +82,6 @@ private extension PhotosViewController {
         var isPresented: Binding<Bool>
         var selected: Binding<[PHPickerResult]>
         var configuration: PHPickerConfiguration
-
         lazy var controller: PHPickerViewController = {
             let controller = PHPickerViewController(configuration: configuration)
             controller.presentationController?.delegate = self

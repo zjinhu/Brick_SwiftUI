@@ -31,7 +31,7 @@ import UIKit
 
 public struct BlurView: UIViewRepresentable {
     public typealias UIViewType = UIVisualEffectView
-    
+    public init() { }
     public func makeUIView(context: Context) -> UIVisualEffectView {
         return UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
     }
