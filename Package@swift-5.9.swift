@@ -11,6 +11,7 @@ package.platforms = [
 //    .watchOS(.v9),
     .macOS(.v11),
 //    .visionOS(.v1)
+]
 
 package.products = [
     .library(name: "BrickKit", 
