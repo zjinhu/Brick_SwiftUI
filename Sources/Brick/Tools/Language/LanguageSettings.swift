@@ -65,6 +65,7 @@ public class LanguageSettings: ObservableObject {
 }
 
 public extension String {
+    
     var localizedString: LocalizedStringKey {
         return LocalizedStringKey(self)
     }
