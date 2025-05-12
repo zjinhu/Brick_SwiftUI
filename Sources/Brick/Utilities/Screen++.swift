@@ -135,6 +135,8 @@ public class Screen {
         return 0
     }
     
+    public static var navAndStatusHeight = navBarHeight + statusBarHeight
+    
     public static let lineHeight = CGFloat(scale >= 1 ? 1/scale: 1)
     
     public static var main: UIScreen = UIScreen.main
