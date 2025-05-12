@@ -78,5 +78,9 @@ public extension String {
             return Bundle.main.localizedString(forKey: self, value: nil, table: nil)
         }
     }
+ 
+    func localized(with arguments: CVarArg...) -> String {
+        return String(format: self.localized, arguments: arguments)
+    }
 }
 
