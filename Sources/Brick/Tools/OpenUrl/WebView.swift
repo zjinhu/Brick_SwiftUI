@@ -28,7 +28,6 @@ public struct WebView: UIViewRepresentable {
         self.urlRequest = urlRequest
     }
     
-    
     public func makeCoordinator() -> Coordinator {
         Coordinator(parent: self)
     }
@@ -243,6 +242,13 @@ extension WebView {
 //#Preview {
 //    WebView(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Test", ofType: "html")!))
 //        .showLoader(true)
+//        .additionalConfiguration { webView in
+//            webView.evaluateJavaScript("navigator.userAgent") { result, error in
+//                if let ua = result as? String {
+//                    webView.customUserAgent = ua + " xxxxxx"
+//                }
+//            }
+//        }
 //        .onMessageHandler(name: "iosBridge"){ message in
 //            print("xxxxxx-----\(message)")
 //        }
