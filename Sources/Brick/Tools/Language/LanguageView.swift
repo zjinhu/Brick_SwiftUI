@@ -9,11 +9,10 @@ import SwiftUI
 
 public struct LanguageView<Content: View>: View {
     private let content: Content
-    @ObservedObject private var settings: LanguageSettings
+    @ObservedObject private var settings: LanguageSettings = .shared
 
-    public init(_ defaultLanguage: Languages, content: () -> Content) {
+    public init(_ content: () -> Content) {
         self.content = content()
-        self.settings = LanguageSettings(defaultLanguage: defaultLanguage)
     }
     
     public var body: some View {
@@ -26,7 +25,7 @@ public struct LanguageView<Content: View>: View {
 }
 
 #Preview {
-    LanguageView(.deviceLanguage) {
+    LanguageView {
         Text("Hi")
     }
 }

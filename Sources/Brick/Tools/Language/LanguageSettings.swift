@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 public class LanguageSettings: ObservableObject {
+    public static let shared = LanguageSettings(defaultLanguage: .deviceLanguage)
     
     public var local: Locale {
         Locale(identifier: selectedLanguage.rawValue)
