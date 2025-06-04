@@ -11,7 +11,7 @@ import SwiftUI
 @preconcurrency import WebKit
 public struct WebView: UIViewRepresentable {
     public typealias MessageHandler = @MainActor (_ body: String?) async throws -> Void
-    
+    private var webViewRef: Binding<WKWebView?> = .constant(nil)
     private let urlRequest: URLRequest
     private var messageHandlers: [String: MessageHandler] = [:]
     private var localStorageItems: [String: String] = [:]
@@ -64,6 +64,10 @@ public struct WebView: UIViewRepresentable {
             webView.isInspectable = true
         }
         additionalConfiguration(webView)
+        // Ensure the assignment occurs asynchronously after the view hierarchy is initialized.
+        DispatchQueue.main.async {
+            self.webViewRef.wrappedValue = webView
+        }
         return webView
     }
     
@@ -108,6 +112,12 @@ extension WebView {
     public func onMessageHandler(name: String, handler: MessageHandler?) -> Self {
         apply {
             $0.messageHandlers[name] = handler
+        }
+    }
+    
+    public func webViewRef(_ ref: Binding<WKWebView?>) -> Self {
+        apply {
+            $0.webViewRef = ref
         }
     }
     
@@ -253,4 +263,27 @@ extension WebView {
 //            print("xxxxxx-----\(message)")
 //        }
 //}
+
+#Preview {
+  WebViewPreviewWrapper()
+}
+
+struct WebViewPreviewWrapper: View {
+    @State var webView: WKWebView? = nil
+
+    var body: some View {
+        WebView(url: URL(string: "https://www.qq.com")!)
+            .showLoader(true)
+            .webViewRef($webView)
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    Button("back") {
+                        if let webView = webView, webView.canGoBack {
+                            webView.goBack()
+                        }
+                    }
+                }
+            }
+    }
+}
 #endif
