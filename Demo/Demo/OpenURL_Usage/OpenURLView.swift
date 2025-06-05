@@ -15,8 +15,20 @@ struct OpenURLView: View {
         List{
 #if os(iOS)
             NavigationLink("Webview", destination:
-                            WebView(url: URL(string: "https://www.qq.com")!)
-                .showLoader(true)
+                            WebView(url: URL(string: "https://www.baidu.com")!)
+                .showProgress(true)
+                .showRefreshControl(false)
+                .policyDecision{ webView, action in
+                    guard let scheme = action.request.url?.schemeType else {
+                        return .allow
+                    }
+                    switch scheme {
+                    case .email, .sms, .tel:
+                        return .cancel
+                    default:
+                        return .allow
+                    }
+                }
             )
             
             Brick.Link("In-app Safari", destination: URL(string: "https://github.com/zjinhu/SwiftBrick")!)
