@@ -20,7 +20,7 @@ public enum WebViewState: Error {
 }
 
 public struct WebView: UIViewRepresentable {
-    public typealias MessageHandler = @MainActor (_ body: String?) async throws -> (any Sendable)?
+    public typealias MessageHandler = @MainActor (_ body: String?) async throws -> Void
     public typealias PolicyDecision = @MainActor (_ webView: WKWebView,
                                                   _ action: WKNavigationAction) async -> WKNavigationActionPolicy
     
