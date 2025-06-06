@@ -23,6 +23,7 @@ struct TestWebView: View {
                             webView.customUserAgent = ua + " xxxxxxxx"
                         }
                     }
+                    
                     webView.evaluateJavaScript("document.title") { (result, error) in
                         print("xxxxxx-----\(String(describing: result))")
                     }
