@@ -15,7 +15,7 @@ public class Navigator<Screen>: ObservableObject {
         set { pathBinding.wrappedValue = newValue }
     }
     
-    init(_ pathBinding: Binding<[Screen]>) {
+    public init(_ pathBinding: Binding<[Screen]>) {
         self.pathBinding = pathBinding
     }
 }
