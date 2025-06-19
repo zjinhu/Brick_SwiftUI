@@ -9,7 +9,7 @@ import SwiftUI
 @available(iOS 16.0, *, macOS 13.0, *, watchOS 9.0, *, tvOS 16.0, *)
 public class NavigatorPath: ObservableObject {
     
-    @Published var path = NavigationPath()
+    @Published public var path = NavigationPath()
     
     public init() { }
 }
