@@ -36,10 +36,28 @@ struct ConditionalViewBuilder<Data, DestinationView: View>: View {
     }
 }
 
-//class NonReactiveState<T> {
-//  var value: T
-//
-//  init(value: T) {
-//    self.value = value
-//  }
-//}
+class NonReactiveState<T> {
+  var value: T
+
+  init(value: T) {
+    self.value = value
+  }
+}
+
+@available(iOS 16.0, macOS 13.0, watchOS 9.0, *, tvOS 16.0, *)
+extension View {
+  @ViewBuilder
+  func anyHashableNavigationDestination<D, C>(
+    for data: D.Type,
+    @ViewBuilder destination: @escaping (D) -> C
+  ) -> some View where D: Hashable, C: View {
+    if ObjectIdentifier(D.self) == ObjectIdentifier(AnyHashable.self) {
+      // No need to add AnyHashable navigation destination as it's already been added as the Data
+      // navigation destination.
+      self
+    } else {
+      // Including this ensures that `PathNavigator` can always be used.
+      navigationDestination(for: AnyHashable.self, destination: { DestinationBuilderView(data: $0) })
+    }
+  }
+}
