@@ -28,7 +28,7 @@ public extension Brick where Wrapped: View {
     ///
     /// - Parameter visibility: The preferred visibility of the drag indicator.
     @ViewBuilder @MainActor
-    func presentationDragIndicator(_ visibility: Brick<Any>.Visibility) -> some View {
+    func presentationDragIndicator(_ visibility: SwiftUI.Visibility) -> some View {
         #if os(iOS) || targetEnvironment(macCatalyst)
         if #available(iOS 15, *) {
             wrapped.background(Brick<Any>.Representable(visibility: visibility))
@@ -46,7 +46,7 @@ public extension Brick where Wrapped: View {
 @available(iOS 15, *)
 private extension Brick where Wrapped == Any {
     struct Representable: UIViewControllerRepresentable {
-        let visibility: Brick<Any>.Visibility
+        let visibility: SwiftUI.Visibility
 
         func makeUIViewController(context: Context) -> Brick.Representable.Controller {
             Controller(visibility: visibility)
@@ -61,9 +61,9 @@ private extension Brick where Wrapped == Any {
 private extension Brick.Representable {
     final class Controller: UIViewController {
 
-        var visibility: Brick<Any>.Visibility
+        var visibility: Visibility
 
-        init(visibility: Brick<Any>.Visibility) {
+        init(visibility: Visibility) {
             self.visibility = visibility
             super.init(nibName: nil, bundle: nil)
         }
@@ -82,7 +82,7 @@ private extension Brick.Representable {
             update(visibility: visibility)
         }
 
-        func update(visibility: Brick<Any>.Visibility) {
+        func update(visibility: Visibility) {
             self.visibility = visibility
 
             if let controller = parent?.sheetPresentationController {
