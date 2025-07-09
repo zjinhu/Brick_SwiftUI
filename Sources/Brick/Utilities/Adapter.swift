@@ -9,6 +9,7 @@ import SwiftUI
 #if os(iOS)
 import UIKit
 //https://github.com/lixiang1994/UIAdapter
+@MainActor
 public class UIAdapterScreenWrapper<Base> {
     
     let base: Screen
@@ -32,7 +33,7 @@ public protocol UIAdapterScreenCompatible {
     
     func screen(_: UIScreen) -> ScreenCompatibleType
 }
-
+@MainActor
 extension UIAdapterScreenCompatible {
     
     public var screen: UIAdapterScreenWrapper<Self> {
@@ -43,7 +44,7 @@ extension UIAdapterScreenCompatible {
         return UIAdapterScreenWrapper(self, screen)
     }
 }
-
+@MainActor
 extension UIAdapterScreenWrapper {
     
     public typealias Screen = UIAdapter.Screen
@@ -154,7 +155,7 @@ extension UIAdapterScreenWrapper {
         return self
     }
 }
-
+@MainActor
 extension UIAdapter {
     
     public class Screen {
@@ -164,21 +165,25 @@ extension UIAdapter {
         init(_ base: UIScreen) {
             self.base = base
         }
-        
+        @MainActor
         public var size: CGSize {
             base.bounds.size
         }
+        @MainActor
         public var nativeSize: CGSize {
             base.nativeBounds.size
         }
+        @MainActor
         public var scale: CGFloat {
             base.scale
         }
+        @MainActor
         public var nativeScale: CGFloat {
             base.nativeScale
         }
         
         /// 是否为显示缩放模式
+        @MainActor
         public var isZoomedMode: Bool {
             guard !UIDevice.iPhonePlus else { return size.width == 375 }
             guard !UIDevice.iPhoneMini else { return size.width == 320 }
@@ -186,6 +191,7 @@ extension UIAdapter {
         }
         
         /// 真实宽高比 例如: iPhone 16 Pro (201:437)
+        @MainActor
         public var aspectRatio: String {
             if
                 let cache = _aspectRatio,
@@ -201,6 +207,7 @@ extension UIAdapter {
         private var _aspectRatio: (CGSize, String)?
         
         /// 标准宽高比 例如: iPhone 16 Pro (9:19.5)
+        @MainActor
         public var standardAspectRatio: String {
             if
                 let cache = _standardAspectRatio,
@@ -216,13 +223,13 @@ extension UIAdapter {
         private var _standardAspectRatio: (CGSize, String)?
     }
 }
-
+@MainActor
 extension UIAdapter.Screen {
     
     /// 当前主屏幕
     public static let main = UIAdapter.Screen(.main)
 }
-
+@MainActor
 extension UIAdapter.Screen {
     
     public enum Inch: Double {
@@ -239,7 +246,7 @@ extension UIAdapter.Screen {
         case _6_7 = 6.7
         case _6_9 = 6.9
     }
-    
+
     public var inch: Inch {
         switch (nativeSize.width / scale, nativeSize.height / scale, scale) {
         case (320, 480, 2):
@@ -319,16 +326,16 @@ extension UIAdapter.Screen {
     }
 }
 
-extension Int: UIAdapterScreenCompatible {}
-extension Bool: UIAdapterScreenCompatible {}
-extension Float: UIAdapterScreenCompatible {}
-extension Double: UIAdapterScreenCompatible {}
-extension String: UIAdapterScreenCompatible {}
-extension CGRect: UIAdapterScreenCompatible {}
-extension CGSize: UIAdapterScreenCompatible {}
-extension CGFloat: UIAdapterScreenCompatible {}
-extension CGPoint: UIAdapterScreenCompatible {}
-extension UIEdgeInsets: UIAdapterScreenCompatible {}
+extension Int: @preconcurrency UIAdapterScreenCompatible {}
+extension Bool: @preconcurrency UIAdapterScreenCompatible {}
+extension Float: @preconcurrency UIAdapterScreenCompatible {}
+extension Double: @preconcurrency UIAdapterScreenCompatible {}
+extension String: @preconcurrency UIAdapterScreenCompatible {}
+extension CGRect: @preconcurrency UIAdapterScreenCompatible {}
+extension CGSize: @preconcurrency UIAdapterScreenCompatible {}
+extension CGFloat: @preconcurrency UIAdapterScreenCompatible {}
+extension CGPoint: @preconcurrency UIAdapterScreenCompatible {}
+extension UIEdgeInsets: @preconcurrency UIAdapterScreenCompatible {}
 
 
 fileprivate extension UIDevice {
@@ -478,12 +485,16 @@ public enum UIAdapter {
         /// 设置转换闭包
         ///
         /// - Parameter conversion: 转换闭包
-        public static func set(conversion: @escaping ((Double) -> Double)) {
+        @MainActor public static func set(
+            conversion: @escaping ((Double) -> Double)
+        ) {
             conversionClosure = conversion
         }
         
         /// 转换 用于数值的等比例计算 如需自定义可重新设置
-        static var conversionClosure: ((Double) -> Double) = { (origin) in
+        @MainActor static var conversionClosure: ((Double) -> Double) = { (
+            origin
+        ) in
             guard UIDevice.current.userInterfaceIdiom == .phone else {
                 return origin
             }
@@ -500,7 +511,7 @@ public enum UIAdapter {
 }
 
 extension UIAdapter.Zoom {
-    
+    @MainActor
     static func conversion(_ value: Double) -> Double {
         return conversionClosure(value)
     }
@@ -514,13 +525,13 @@ public protocol UIAdapterZoomCalculationable {
     func zoom() -> Self
 }
 
-extension Double: UIAdapterZoomCalculationable {
-    
+extension Double: @preconcurrency UIAdapterZoomCalculationable {
+    @MainActor
     public func zoom() -> Double {
         return UIAdapter.Zoom.conversion(self)
     }
 }
-
+@MainActor
 extension BinaryInteger {
     
     public func zoom() -> Double {
@@ -537,6 +548,7 @@ extension BinaryInteger {
     }
 }
 
+@MainActor
 extension BinaryFloatingPoint {
     
     public func zoom() -> Double {
@@ -552,43 +564,43 @@ extension BinaryFloatingPoint {
         return T(temp.zoom())
     }
 }
-
-extension CGPoint: UIAdapterZoomCalculationable {
+@MainActor
+extension CGPoint: @preconcurrency UIAdapterZoomCalculationable {
     
     public func zoom() -> CGPoint {
         return CGPoint(x: x.zoom(), y: y.zoom())
     }
 }
-
-extension CGSize: UIAdapterZoomCalculationable {
+@MainActor
+extension CGSize: @preconcurrency UIAdapterZoomCalculationable {
     
     public func zoom() -> CGSize {
         return CGSize(width: width.zoom(), height: height.zoom())
     }
 }
-
-extension CGRect: UIAdapterZoomCalculationable {
+@MainActor
+extension CGRect: @preconcurrency UIAdapterZoomCalculationable {
     
     public func zoom() -> CGRect {
         return CGRect(origin: origin.zoom(), size: size.zoom())
     }
 }
-
-extension CGVector: UIAdapterZoomCalculationable {
+@MainActor
+extension CGVector: @preconcurrency UIAdapterZoomCalculationable {
     
     public func zoom() -> CGVector {
         return CGVector(dx: dx.zoom(), dy: dy.zoom())
     }
 }
-
-extension UIOffset: UIAdapterZoomCalculationable {
+@MainActor
+extension UIOffset: @preconcurrency UIAdapterZoomCalculationable {
     
     public func zoom() -> UIOffset {
         return UIOffset(horizontal: horizontal.zoom(), vertical: vertical.zoom())
     }
 }
-
-extension UIEdgeInsets: UIAdapterZoomCalculationable {
+@MainActor
+extension UIEdgeInsets: @preconcurrency UIAdapterZoomCalculationable {
     
     public func zoom() -> UIEdgeInsets {
         return UIEdgeInsets(

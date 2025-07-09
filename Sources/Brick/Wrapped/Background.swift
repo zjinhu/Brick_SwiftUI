@@ -2,6 +2,7 @@ import SwiftUI
 #if os(iOS)
 import UIKit
 #endif
+@MainActor 
 public extension Brick where Wrapped: View {
     
     /// Layers the views that you specify behind this view.

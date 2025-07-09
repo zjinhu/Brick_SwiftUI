@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Combine
-
+@MainActor
 class CarouselViewModel<Data, ID>: ObservableObject where Data : RandomAccessCollection, ID : Hashable {
 
     @Binding
@@ -186,7 +186,7 @@ extension CarouselViewModel {
         set { UserDefaults.isAnimatedOffset = newValue }
     }
 }
-
+@MainActor
 extension CarouselViewModel {
 
     var offset: CGFloat {
@@ -217,6 +217,7 @@ extension CarouselViewModel {
     }
 }
 #if !os(tvOS)
+@MainActor
 extension CarouselViewModel {
 
     var dragGesture: some Gesture {

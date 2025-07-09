@@ -16,7 +16,7 @@ struct DestinationBuilderView<Data: Hashable>: View {
     }
 }
 
-struct DataDependentView<Content: View>: View, Equatable {
+struct DataDependentView<Content: View>: View, @preconcurrency Equatable {
     static func ==(lhs: DataDependentView, rhs: DataDependentView) -> Bool {
         return lhs.data == rhs.data
     }

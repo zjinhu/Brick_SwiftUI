@@ -1,7 +1,9 @@
 import SwiftUI
 
 public extension Brick where Wrapped: View {
-    func checkmark(_ visibility: Brick<Any>.Visibility) -> some View {        wrapped.modifier(Checkmark(visibility: visibility))
+    @MainActor func checkmark(_ visibility: Brick<Any>.Visibility) -> some View {        wrapped.modifier(
+        Checkmark(visibility: visibility)
+    )
     }
 }
 

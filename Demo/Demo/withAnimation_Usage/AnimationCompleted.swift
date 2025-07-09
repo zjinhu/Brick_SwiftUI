@@ -30,7 +30,7 @@ struct AnimationCompleted: View {
             Text("onAnimationCompleted")
                 .opacity(introTextOpacity)
                 .onAnimationCompleted(for: introTextOpacity) {
-                    logger.log("Animation have finished")
+                    print("onAnimationCompleted")
                 }
         }.onAppear(perform: {
             withAnimation(.easeIn(duration: 3.0)) {

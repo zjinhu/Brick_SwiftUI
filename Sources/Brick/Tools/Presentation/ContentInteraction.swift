@@ -36,8 +36,9 @@ public extension Brick<Any> {
 @available(tvOS, deprecated: 16.4)
 @available(macOS, deprecated: 13.3)
 @available(watchOS, deprecated: 9.4)
+
 public extension Brick where Wrapped: View {
-    @ViewBuilder
+    @ViewBuilder @MainActor
     func presentationContentInteraction(_ interaction: Brick<Any>.PresentationContentInteraction) -> some View {
         #if os(iOS) || targetEnvironment(macCatalyst)
         if #available(iOS 15, *) {

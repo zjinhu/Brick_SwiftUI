@@ -46,7 +46,7 @@ extension LoadingManager {
         hideDelay()
     }
 }
-
+@MainActor
 public class LoadingManager: ObservableObject {
     public init() {}
     //HUD提示

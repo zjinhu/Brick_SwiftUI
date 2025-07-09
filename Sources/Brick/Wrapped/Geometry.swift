@@ -25,7 +25,7 @@ struct OnGeometryChange<T: Equatable>: ViewModifier {
             .background(
                 GeometryReader { proxy in
                     Color.clear
-                        .ss.task(id: EquatableProxy(size: proxy.size, safeAreaInsets: proxy.safeAreaInsets)) {
+                        .task(id: EquatableProxy(size: proxy.size, safeAreaInsets: proxy.safeAreaInsets)) {
                             storage.setValue(proxy: proxy)
                         }
                 }
@@ -72,7 +72,7 @@ struct OnGeometryChange<T: Equatable>: ViewModifier {
 
 public extension Brick where Wrapped: View {
 
-    func visualEffect(@ViewBuilder _ effect: @escaping @Sendable (AnyView, GeometryProxy) -> some View) -> some View {
+    @MainActor func visualEffect(@ViewBuilder _ effect: @escaping @Sendable (AnyView, GeometryProxy) -> some View) -> some View {
         wrapped.modifier(VisualEffect(effect: effect))
     }
 }
@@ -107,8 +107,8 @@ struct GeometryProxyWrapper: ViewModifier {
     }
 }
 
-struct ProxyKey: PreferenceKey {
-    static var defaultValue: GeometryProxy?
+struct ProxyKey: @preconcurrency PreferenceKey {
+    @MainActor static var defaultValue: GeometryProxy?
     static func reduce(value: inout GeometryProxy?, nextValue: () -> GeometryProxy?) {
         value = nextValue()
     }

@@ -13,7 +13,7 @@ public extension Brick where Wrapped: View {
     ///             viewModel.login()
     ///         }
     ///
-    @ViewBuilder
+    @MainActor @ViewBuilder
     func onSubmit(_ action: @escaping () -> Void) -> some View {
         Group {
             if #available(iOS 15, *) {
@@ -31,7 +31,7 @@ public extension Brick where Wrapped: View {
     ///
     /// A submit label is a description of a submission action provided to a
     /// view hierarchy using the ``View/ss.onSubmit(of:_:)`` modifier.
-    @ViewBuilder
+    @MainActor @ViewBuilder
     func submitLabel(_ label: Brick<Any>.SubmitLabel) -> some View {
         Group {
             if #available(iOS 15, *) {
@@ -103,8 +103,8 @@ internal struct SubmitAction {
     func callAsFunction() { submit() }
 }
 
-private struct SubmitEnvironmentKey: EnvironmentKey {
-    static var defaultValue: SubmitAction = .init(submit: { })
+private struct SubmitEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: SubmitAction = .init(submit: { })
 }
 
 internal extension EnvironmentValues {
@@ -114,8 +114,8 @@ internal extension EnvironmentValues {
     }
 }
 
-private struct SubmitLabelEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Brick.SubmitLabel = .return
+private struct SubmitLabelEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Brick.SubmitLabel = .return
 }
 
 internal extension EnvironmentValues {
@@ -152,7 +152,7 @@ private struct SubmitModifier: ViewModifier {
 
         override init() { }
 
-        func observe(view: UITextField) {
+        @MainActor func observe(view: UITextField) {
             view.addTarget(self, action: #selector(didReturn), for: .editingDidEndOnExit)
         }
     }

@@ -6,40 +6,41 @@
 //
 
 import SwiftUI
-struct TTextFieldColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color = .black
+
+struct TTextFieldColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color = .black
 }
 
-struct TTextFieldTitleColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color = .black
+struct TTextFieldTitleColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color = .black
 }
 
-struct TTextFieldPlaceHolderColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color = .gray.opacity(0.8)
+struct TTextFieldPlaceHolderColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color = .gray.opacity(0.8)
 }
 
-struct TTextFieldDisableColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color = .gray.opacity(0.5)
+struct TTextFieldDisableColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color = .gray.opacity(0.5)
 }
 
-struct TTextFieldBackgroundColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color = .white
+struct TTextFieldBackgroundColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color = .white
 }
 
-struct TTextFieldErrorTextColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color = .red
+struct TTextFieldErrorTextColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color = .red
 }
 
-struct TTextFieldBorderColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color = .gray
+struct TTextFieldBorderColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color = .gray
 }
 
-struct TTextFieldFocusedBorderColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color = .gray
+struct TTextFieldFocusedBorderColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color = .gray
 }
 
-struct TTextFieldFocusedBorderEnableEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Bool = false
+struct TTextFieldFocusedBorderEnableEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Bool = false
 }
 
 public enum BorderType {
@@ -47,64 +48,64 @@ public enum BorderType {
     case line
 }
 
-struct TTextFieldBorderTypeEnvironmentKey: EnvironmentKey {
-    static var defaultValue: BorderType = .square
+struct TTextFieldBorderTypeEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: BorderType = .square
 }
  
-struct TTextFieldDisableAutoCorrectionEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Bool = false
+struct TTextFieldDisableAutoCorrectionEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Bool = false
 }
 
-struct TTextFieldTitleFontEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Font = .system(size: 15, weight: .bold)
+struct TTextFieldTitleFontEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Font = .system(size: 15, weight: .bold)
 }
 
-struct TTextFieldErrorFontEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Font = .system(size: 15)
+struct TTextFieldErrorFontEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Font = .system(size: 15)
 }
 
-struct TTextFieldPlaceHolderFontEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Font = .system(size: 15)
+struct TTextFieldPlaceHolderFontEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Font = .system(size: 15)
 }
 
-struct TTextFieldBorderWidthEnvironmentKey: EnvironmentKey {
-    static var defaultValue: CGFloat = 1
+struct TTextFieldBorderWidthEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: CGFloat = 1
 }
 
-struct TTextFieldCornerRadiusEnvironmentKey: EnvironmentKey {
-    static var defaultValue: CGFloat = 5
+struct TTextFieldCornerRadiusEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: CGFloat = 5
 }
 
-struct TTextFieldHeightEnvironmentKey: EnvironmentKey {
-    static var defaultValue: CGFloat = 45
+struct TTextFieldHeightEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: CGFloat = 45
 }
 
-struct TTextFieldTitleEnvironmentKey: EnvironmentKey {
-    static var defaultValue: String?
+struct TTextFieldTitleEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: String?
 }
 
-struct TTextFieldPlaceHolderTextEnvironmentKey: EnvironmentKey {
-    static var defaultValue: String = ""
+struct TTextFieldPlaceHolderTextEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: String = ""
 }
 
-struct TTextFieldTruncateModeEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Text.TruncationMode = .tail
+struct TTextFieldTruncateModeEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Text.TruncationMode = .tail
 }
 
-struct TTextFieldLimitEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Int?
+struct TTextFieldLimitEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Int?
 }
 
-struct TTextFieldLeadingViewEnvironmentKey: EnvironmentKey {
-    static var defaultValue: (() -> AnyView)? { nil }
+struct TTextFieldLeadingViewEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: (() -> AnyView)? { nil }
 }
 
-struct TTextFieldTrailingViewEnvironmentKey: EnvironmentKey {
-    static var defaultValue: (() -> AnyView)? { nil }
+struct TTextFieldTrailingViewEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: (() -> AnyView)? { nil }
 }
 
-struct TTextFieldSecureImageForegroundColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color = .black
+struct TTextFieldSecureImageForegroundColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color = .black
 }
 
 extension EnvironmentValues {

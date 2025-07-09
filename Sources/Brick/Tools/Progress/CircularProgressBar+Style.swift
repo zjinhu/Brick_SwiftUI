@@ -59,7 +59,7 @@ public extension CircularProgressBar {
         public var titleModifier: ViewModifier
     }
 }
-
+@MainActor
 public extension CircularProgressBar.Style {
 
     /// The standard circular progress bar style.
@@ -77,12 +77,12 @@ public extension View {
         self.environment(\.circularProgressBarStyle, style)
     }
 }
-
+@MainActor
 private extension CircularProgressBar.Style {
 
-    struct Key: EnvironmentKey {
+    struct Key: @preconcurrency EnvironmentKey {
 
-        public static var defaultValue: CircularProgressBar.Style = .standard
+        @MainActor public static var defaultValue: CircularProgressBar.Style = .standard
     }
 }
 

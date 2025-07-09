@@ -41,7 +41,7 @@ extension NavigationView {
     /// - Parameter customize: Callback with the found `UINavigationItem`
     ///
     /// This is needed on the `NavigationView` in order to be able to expose the `UINavigationController` to all subviews
-    public func navigationItem(animated: Bool = true, customize: @escaping ((UINavigationItem) -> Void)) -> some View {
+    @MainActor public func navigationItem(animated: Bool = true, customize: @escaping ((UINavigationItem) -> Void)) -> some View {
         modifier(NavigationControllerModifier(animated: animated, customize: customize, forceEnvironment: true))
     }
     
@@ -52,7 +52,7 @@ extension NavigationView {
     /// delayed and may cause glitches.
     ///
     /// This is needed on the `NavigationView` in order to be able to expose the `UINavigationController` to all subviews
-    public func navigationItem() -> some View {
+    @MainActor public func navigationItem() -> some View {
         modifier(NavigationControllerModifier(animated: false, customize: nil, forceEnvironment: true))
     }
 }
@@ -90,7 +90,7 @@ extension NavigationSplitView {
     /// - Parameter customize: Callback with the found `UINavigationItem`
     ///
     /// This is needed on the `NavigationView` in order to be able to expose the `UINavigationController` to all subviews
-    public func navigationItem(animated: Bool = true, customize: @escaping ((UINavigationItem) -> Void)) -> some View {
+    @MainActor public func navigationItem(animated: Bool = true, customize: @escaping ((UINavigationItem) -> Void)) -> some View {
         modifier(NavigationControllerModifier(animated: animated, customize: customize, forceEnvironment: true))
     }
     
@@ -101,7 +101,7 @@ extension NavigationSplitView {
     /// delayed and may cause glitches.
     ///
     /// This is needed on the `NavigationSplitView` in order to be able to expose the `UINavigationController` to all subviews
-    public func navigationItem() -> some View {
+    @MainActor public func navigationItem() -> some View {
         modifier(NavigationControllerModifier(animated: false, customize: nil, forceEnvironment: true))
     }
 }

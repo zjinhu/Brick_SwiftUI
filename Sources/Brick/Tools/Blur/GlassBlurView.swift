@@ -1,6 +1,6 @@
 //
 //  SwiftUIView.swift
-//  
+//
 //
 //  Created by iOS on 2024/8/23.
 //
@@ -94,8 +94,10 @@ public class GlassmorphismView: UIView {
     }
     
     deinit {
-        animator.pauseAnimation()
-        animator.stopAnimation(true)
+        Task { @MainActor [weak self] in
+            self?.animator.pauseAnimation()
+            self?.animator.stopAnimation(true)
+        }
     }
     
     public override func awakeFromNib() {

@@ -29,7 +29,7 @@ public class RepeatGestureTimer {
 
     
     /// A shared singleton instance.
-    public static let shared = RepeatGestureTimer()
+    @MainActor public static let shared = RepeatGestureTimer()
 
     /// The repeat time interval.
     public var repeatInterval: TimeInterval

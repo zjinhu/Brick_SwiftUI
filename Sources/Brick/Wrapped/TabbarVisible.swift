@@ -26,7 +26,7 @@ public enum TabbarVisible: CaseIterable {
 import UIKit
 
 public extension Brick where Wrapped: View {
-    func tabBar(_ visibility: TabbarVisible) -> some View {
+    @MainActor func tabBar(_ visibility: TabbarVisible) -> some View {
         if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
             return wrapped.modifier(VisibleTabBar(visibility))
         }else{
@@ -78,7 +78,7 @@ struct ShowTabBar: ViewModifier {
 }
 
 struct TabBarModifier {
-    static func showTabBar() {
+    @MainActor static func showTabBar() {
         UIWindow.keyWindow?.allSubviews().forEach({ subView in
             if let view = subView as? UITabBar {
                 view.setHidden(false)
@@ -86,7 +86,7 @@ struct TabBarModifier {
         })
     }
     
-    static func hideTabBar() {
+    @MainActor static func hideTabBar() {
         UIWindow.keyWindow?.allSubviews().forEach({ subView in
             if let view = subView as? UITabBar {
                 view.setHidden(true)

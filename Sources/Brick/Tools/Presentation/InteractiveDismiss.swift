@@ -66,7 +66,7 @@ public extension Brick where Wrapped: View {
     /// - Parameter isDisabled: A Boolean value that indicates whether to
     ///   prevent nonprogrammatic dismissal of the containing view hierarchy
     ///   when presented in a sheet or popover.
-    @ViewBuilder
+    @ViewBuilder @MainActor
     @available(iOS, deprecated: 16)
     @available(tvOS, deprecated: 16)
     @available(macOS, deprecated: 13)
@@ -146,7 +146,7 @@ public extension Brick where Wrapped: View {
     ///   when presented in a sheet or popover.
     /// - Parameter onAttempt: A closure that will be called when an interactive dismiss attempt occurs.
     ///   You can use this as an opportunity to present an confirmation or prompt to the user.
-    @ViewBuilder
+    @ViewBuilder @MainActor
     func interactiveDismissDisabled(_ isDisabled: Bool = true, onAttempt: @escaping () -> Void) -> some View {
         #if os(iOS)
         wrapped.background(Brick<Any>.Representable(isModal: isDisabled, onAttempt: onAttempt))
@@ -175,6 +175,7 @@ private extension Brick where Wrapped == Any {
 }
 
 private extension Brick.Representable {
+  
     final class Controller: UIViewController, UIAdaptivePresentationControllerDelegate {
         var isModal: Bool
         var onAttempt: (() -> Void)?
@@ -218,13 +219,16 @@ private extension Brick.Representable {
 
         override func responds(to aSelector: Selector!) -> Bool {
             if super.responds(to: aSelector) { return true }
-            if _delegate?.responds(to: aSelector) ?? false { return true }
+//            if _delegate?.responds(to: aSelector) ?? false { return true }
+            if let shouldRespond = MainActor.assumeIsolated({ _delegate?.responds(to: aSelector) }), shouldRespond {
+                return true
+            }
             return false
         }
 
         override func forwardingTarget(for aSelector: Selector!) -> Any? {
             if super.responds(to: aSelector) { return self }
-            return _delegate
+            return  MainActor.assumeIsolated{ _delegate }
         }
     }
 }

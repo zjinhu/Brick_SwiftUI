@@ -25,7 +25,7 @@ public extension Brick where Wrapped: View {
     /// - Parameter detents: A set of supported detents for the sheet.
     ///   If you provide more than one detent, people can drag the sheet
     ///   to resize it.
-    @ViewBuilder
+    @ViewBuilder @MainActor
     @available(iOS, introduced: 15, deprecated: 16, message: "Presentation detents are only supported in iOS 15+")
     func presentationDetents(_ detents: Set<Brick<Any>.PresentationDetent>) -> some View {
         #if os(iOS) || targetEnvironment(macCatalyst)
@@ -66,7 +66,7 @@ public extension Brick where Wrapped: View {
     ///   - selection: A ``Binding`` to the currently selected detent.
     ///     Ensure that the value matches one of the detents that you
     ///     provide for the `detents` parameter.
-    @ViewBuilder
+    @ViewBuilder @MainActor
     @available(iOS, introduced: 15, deprecated: 16, message: "Presentation detents are only supported in iOS 15+")
     func presentationDetents(_ detents: Set<Brick<Any>.PresentationDetent>, selection: Binding<Brick<Any>.PresentationDetent>) -> some View {
         #if os(iOS) || targetEnvironment(macCatalyst)
@@ -146,6 +146,7 @@ private extension Brick<Any> {
     }
 }
 @available(iOS 15, *)
+@MainActor
 private extension Brick.Representable {
     final class Controller: UIViewController, UISheetPresentationControllerDelegate {
 
@@ -224,13 +225,15 @@ private extension Brick.Representable {
 
         override func responds(to aSelector: Selector!) -> Bool {
             if super.responds(to: aSelector) { return true }
-            if _delegate?.responds(to: aSelector) ?? false { return true }
+            if let shouldRespond = MainActor.assumeIsolated({ _delegate?.responds(to: aSelector) }), shouldRespond {
+                return true
+            }
             return false
         }
 
         override func forwardingTarget(for aSelector: Selector!) -> Any? {
             if super.responds(to: aSelector) { return self }
-            return _delegate
+            return MainActor.assumeIsolated{ _delegate }
         }
     }
 }

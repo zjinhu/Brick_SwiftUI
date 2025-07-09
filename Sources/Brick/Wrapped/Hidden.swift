@@ -9,7 +9,7 @@ import SwiftUI
 
 public extension Brick where Wrapped: View {
 
-    @inlinable
+    @MainActor @inlinable
     func hidden(_ isHidden: Bool,
                 transition: AnyTransition = .identity) -> some View {
         wrapped.modifier(HiddenModifier(isHidden: isHidden,

@@ -12,6 +12,7 @@ import SwiftUI
  }
  .ss.bottomSafeAreaInset(overlayContent)
  */
+@MainActor
 extension Brick where Wrapped: View {
     @ViewBuilder
     public func bottomSafeAreaInset<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
@@ -58,7 +59,8 @@ struct BottomInsetViewModifier<OverlayContent: View>: ViewModifier {
     }
 }
 
-struct BottomSafeAreaInsetKey: EnvironmentKey {
+@MainActor
+struct BottomSafeAreaInsetKey: @preconcurrency EnvironmentKey {
     static var defaultValue: CGFloat = 0
 }
 

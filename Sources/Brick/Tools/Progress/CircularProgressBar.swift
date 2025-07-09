@@ -113,7 +113,7 @@ private extension CircularProgressBar {
     
     return Preview()
 }
-
+@MainActor
 fileprivate extension CircularProgressBar.Style {
 
     static var swedish: CircularProgressBar.Style = {

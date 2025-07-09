@@ -135,8 +135,8 @@ struct PagingScrollView<Data: RandomAccessCollection, ID: Hashable, Content: Vie
         )
     }
 }
-
-struct FrameMeasurePreferenceKey: PreferenceKey {
+@MainActor
+struct FrameMeasurePreferenceKey: @preconcurrency PreferenceKey {
     typealias Value = [String: CGRect]
     
     static var defaultValue: Value = Value()

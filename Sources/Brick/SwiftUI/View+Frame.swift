@@ -160,8 +160,8 @@ private extension View {
     }
 }
 
-fileprivate struct ReadSizePreferenceKey: PreferenceKey {
-    static var defaultValue: CGFloat = 0
+fileprivate struct ReadSizePreferenceKey: @preconcurrency PreferenceKey {
+    @MainActor static var defaultValue: CGFloat = 0
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {}
 }
 

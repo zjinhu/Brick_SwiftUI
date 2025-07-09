@@ -17,7 +17,7 @@ public extension URL {
 
 #if os(iOS)
 import UIKit
-
+@MainActor
 public extension Brick where Wrapped: View {
     @available(macOS, unavailable)
     @available(tvOS, unavailable)

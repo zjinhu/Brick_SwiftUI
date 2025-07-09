@@ -1,10 +1,12 @@
 import Foundation
 import SwiftUI
+@MainActor
 public extension Brick where Wrapped: View {
     func navigationDestination<D: Hashable, C: View>(for pathElementType: D.Type, @ViewBuilder destination builder: @escaping (D) -> C) -> some View {
         return wrapped.modifier(DestinationBuilderModifier(typedDestinationBuilder: { AnyView(builder($0)) }))
     }
 }
+@MainActor
 public extension Brick where Wrapped: View {
     /// Associates a destination view with a binding that can be used to push
     /// the view onto a ``Brick.NavigationStack``.
@@ -106,7 +108,7 @@ public extension Brick where Wrapped: View {
         
     }
 }
-
+@MainActor 
 public extension Brick where Wrapped: View {
     func navigationDestination<Destination: View>(isActive: Binding<Bool>, destination: Destination) -> some View {
         return wrapped.modifier(NavigationLinkModifier(isActiveBinding: isActive, destination: destination))

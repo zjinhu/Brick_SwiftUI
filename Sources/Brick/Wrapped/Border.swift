@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+@MainActor 
 public extension Brick where Wrapped: View {
     @inlinable
     func border(_ borderColor: Color,

@@ -8,39 +8,42 @@
 import SwiftUI
 
 extension View {
- 
-    public func onAnimationCompleted<Value: VectorArithmetic>(for value: Value, completion: @escaping () -> Void) -> ModifiedContent<Self, AnimationCompletionObserverModifier<Value>> {
-        return modifier(AnimationCompletionObserverModifier(observedValue: value, completion: completion))
+    public func onAnimationCompleted(
+        for animatedValue: some Sendable & VectorArithmetic,
+        completion: @escaping @Sendable () -> Void
+    ) -> some View {
+        modifier(
+            OnAnimationCompletedViewModifier(
+                animatedValue: animatedValue,
+                completion: completion
+            )
+        )
     }
 }
 
-public struct AnimationCompletionObserverModifier<Value>: AnimatableModifier where Value: VectorArithmetic {
-    
-    public var animatableData: Value {
+private struct OnAnimationCompletedViewModifier<Value: Sendable & VectorArithmetic>: Animatable, ViewModifier {
+    typealias Completion = @MainActor @Sendable () -> Void
+    var animatableData: Value {
         didSet {
-            notifyCompletionIfFinished()
+            guard animatableData == animatedValue else { return }
+            Task { [completion] in
+                await MainActor.run {
+                    completion()
+                }
+            }
         }
     }
 
-    private var targetValue: Value
+    private let animatedValue: Value
+    private let completion: Completion
 
-    private var completion: () -> Void
-    
-    public init(observedValue: Value, completion: @escaping () -> Void) {
+    init(animatedValue: Value, completion: @escaping Completion) {
+        self.animatedValue = animatedValue
+        self.animatableData = animatedValue
         self.completion = completion
-        self.animatableData = observedValue
-        targetValue = observedValue
     }
 
-    private func notifyCompletionIfFinished() {
-        guard animatableData == targetValue else { return }
-
-        DispatchQueue.main.async {
-            self.completion()
-        }
-    }
-    
-    public func body(content: Content) -> some View {
-        return content
+    func body(content: Content) -> some View {
+        content
     }
 }

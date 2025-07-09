@@ -68,17 +68,17 @@ public struct EasyLoadingView<Content: View, LoadingView: View>: View{
     }
 }
 
-struct EasyLoadingForegroundColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color = .white
+struct EasyLoadingForegroundColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color = .white
 }
-struct EasyLoadingBackgroundColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color = .black
+struct EasyLoadingBackgroundColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color = .black
 }
-struct EasyLoadingShadowColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color = .gray
+struct EasyLoadingShadowColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color = .gray
 }
-struct EasyLoadingMaskColorEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Color?
+struct EasyLoadingMaskColorEnvironmentKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Color?
 }
 extension EnvironmentValues {
     var easyLoadingForegroundColor: Color {

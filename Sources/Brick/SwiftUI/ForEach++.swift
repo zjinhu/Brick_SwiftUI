@@ -130,6 +130,7 @@ extension ForEach where Data.Element: Identifiable, Content: View, ID == Data.El
     }
 }
 
+@MainActor
 extension ForEach where Data.Element: Identifiable, Content: View, ID == Data.Element.ID {
     public func interspaced() -> some View {
         let data = self.data.enumerated().map({ _IdentifiableElementOffsetPair(element: $0.element, offset: $0.offset) })

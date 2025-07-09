@@ -33,7 +33,7 @@ struct CustomBackButton<Image: View>: ViewModifier {
 @available(macOS, unavailable)
 @available(tvOS, unavailable)
 extension Brick where Wrapped: View {
-    public func navigationCustomBackButton<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
+    @MainActor public func navigationCustomBackButton<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
         wrapped.modifier(CustomBackButton(view: content()))
     }
 }

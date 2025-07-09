@@ -17,7 +17,7 @@ public enum ColorSchemeType: Int {
     case dark
 }
 
-
+@MainActor
 public class AppColorScheme: ObservableObject {
 
     public init() { }

@@ -27,8 +27,8 @@ public extension Brick where Wrapped: View {
     ///     }
     ///
     /// - Parameter visibility: The preferred visibility of the drag indicator.
-    @ViewBuilder
-    func presentationDragIndicator(_ visibility: Brick<Any>.Visibility) -> some View {       
+    @ViewBuilder @MainActor
+    func presentationDragIndicator(_ visibility: Brick<Any>.Visibility) -> some View {
         #if os(iOS) || targetEnvironment(macCatalyst)
         if #available(iOS 15, *) {
             wrapped.background(Brick<Any>.Representable(visibility: visibility))

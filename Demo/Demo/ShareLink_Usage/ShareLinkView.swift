@@ -8,19 +8,21 @@
 import SwiftUI
 import BrickKit
 #if os(iOS)
+@available(iOS 16.0, *)
 struct ShareLinkView: View {
+    
     var body: some View {
         List{
 
-            Brick.ShareLink(item: "Can I share this?") {
+            ShareLink(item: "Can I share this?") {
                 Text("ShareLink")
             }
             .buttonStyle(.plain)
 
-            Brick.ShareLink(item: "Some text to share")
-            Brick.ShareLink("ShareLink", item: URL(string: "https://bing.com")!)
+            ShareLink(item: "Some text to share")
+            ShareLink("ShareLink", item: URL(string: "https://bing.com")!)
  
-            Brick.ShareLink(item: URL(string: "https://apps.apple.com/us/app/id1631264265")!) {
+            ShareLink(item: URL(string: "https://apps.apple.com/us/app/id1631264265")!) {
                 Text("share")
             }
 
@@ -29,7 +31,7 @@ struct ShareLinkView: View {
 
     }
 }
-
+@available(iOS 16.0, *)
 struct ShareLinkView_Previews: PreviewProvider {
     static var previews: some View {
         ShareLinkView()

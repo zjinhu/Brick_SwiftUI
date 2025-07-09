@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct UseNavigationStackPolicyKey: EnvironmentKey {
-    static let defaultValue = UseNavigationStackPolicy.whenAvailable
+struct UseNavigationStackPolicyKey: @preconcurrency EnvironmentKey {
+    @MainActor static let defaultValue = UseNavigationStackPolicy.whenAvailable
 }
 
 struct IsWithinNavigationStackKey: EnvironmentKey {

@@ -39,7 +39,8 @@ protocol KeychainAttrRepresentable {
  are thus not available after restoring apps from backups on
  a different device.
  */
-public enum KeychainItemAccessibility {
+@MainActor
+public enum KeychainItemAccessibility : Sendable{
     
     case afterFirstUnlock
     case afterFirstUnlockThisDeviceOnly
@@ -52,7 +53,7 @@ public enum KeychainItemAccessibility {
     }
 }
 
-
+@MainActor
 private let keychainItemAccessibilityLookup: [KeychainItemAccessibility: CFString] = [
     .afterFirstUnlock: kSecAttrAccessibleAfterFirstUnlock,
     .afterFirstUnlockThisDeviceOnly: kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly,
@@ -61,7 +62,8 @@ private let keychainItemAccessibilityLookup: [KeychainItemAccessibility: CFStrin
     .whenUnlockedThisDeviceOnly: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
 ]
 
-extension KeychainItemAccessibility: KeychainAttrRepresentable {
+@MainActor
+extension KeychainItemAccessibility: @preconcurrency KeychainAttrRepresentable {
     
     public var keychainAttrValue: CFString {
         keychainItemAccessibilityLookup[self]!

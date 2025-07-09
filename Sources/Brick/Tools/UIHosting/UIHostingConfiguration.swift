@@ -73,7 +73,7 @@ extension Brick where Wrapped == Any {
         }
         
         /// Initializes and returns a new instance of the content view using this configuration.
-        public func makeContentView() -> UIView {
+        @MainActor public func makeContentView() -> UIView {
             let view = UIHostingController(
                 rootView: ZStack {
                     background

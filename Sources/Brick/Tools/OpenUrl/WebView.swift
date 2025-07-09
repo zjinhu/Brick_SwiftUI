@@ -229,8 +229,9 @@ extension WebView {
         return object
     }
 }
-
+ 
 extension WebView {
+
     public final class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandlerWithReply {
         
         private lazy var progressBar: UIProgressView = {
@@ -254,42 +255,42 @@ extension WebView {
         }
         
         deinit {
-            cleanAllWebsiteDataStore()
+//            cleanAllWebsiteDataStore()
         }
         
         public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-            
+            // Ensure any main actor work is dispatched to main actor context
             guard let webView = object as? WKWebView else { return }
-            self.webView = webView
             
-            if parent.showRefreshControl {
-                refreshControl.addTarget(self, action: #selector(refreshWebView(_:)), for: .valueChanged)
-                webView.scrollView.refreshControl = refreshControl
-            }
-            
-            if keyPath == "estimatedProgress", parent.showProgress {
-                let progress = webView.estimatedProgress
-                
-                if !didAddLoader {
-                    webView.addSubview(progressBar)
-                    NSLayoutConstraint.activate([
-                        progressBar.topAnchor.constraint(equalTo: webView.topAnchor),
-                        progressBar.leadingAnchor.constraint(equalTo: webView.leadingAnchor),
-                        progressBar.widthAnchor.constraint(equalToConstant: Screen.realWidth),
-                        progressBar.heightAnchor.constraint(equalToConstant: 4)
-                    ])
-                    didAddLoader = true
+            // If any UI updates, ensure on main actor
+            Task { @MainActor in
+                self.webView = webView
+                if parent.showRefreshControl {
+                    refreshControl.addTarget(self, action: #selector(refreshWebView(_:)), for: .valueChanged)
+                    webView.scrollView.refreshControl = refreshControl
                 }
-                if progress >= 1.0 {
-                    progressBar.setProgress(Float(progress), animated: true)
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){ [weak self] in
-                        self?.progressBar.alpha = 0.0
-                        self?.progressBar.setProgress(0.0, animated: false)
+                if keyPath == "estimatedProgress", parent.showProgress {
+                    let progress = webView.estimatedProgress
+                    if !didAddLoader {
+                        webView.addSubview(progressBar)
+                        NSLayoutConstraint.activate([
+                            progressBar.topAnchor.constraint(equalTo: webView.topAnchor),
+                            progressBar.leadingAnchor.constraint(equalTo: webView.leadingAnchor),
+                            progressBar.widthAnchor.constraint(equalToConstant: Screen.realWidth),
+                            progressBar.heightAnchor.constraint(equalToConstant: 4)
+                        ])
+                        didAddLoader = true
                     }
-                } else {
-                    
-                    progressBar.alpha = 1.0
-                    progressBar.setProgress(Float(progress), animated: true)
+                    if progress >= 1.0 {
+                        progressBar.setProgress(Float(progress), animated: true)
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){ [weak self] in
+                            self?.progressBar.alpha = 0.0
+                            self?.progressBar.setProgress(0.0, animated: false)
+                        }
+                    } else {
+                        progressBar.alpha = 1.0
+                        progressBar.setProgress(Float(progress), animated: true)
+                    }
                 }
             }
         }

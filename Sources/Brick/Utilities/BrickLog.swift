@@ -7,7 +7,7 @@
  
 import os
 
-public let logger = BrickLog()
+@MainActor public let logger = BrickLog()
 
 public struct BrickLog {
     private let logger: Logger

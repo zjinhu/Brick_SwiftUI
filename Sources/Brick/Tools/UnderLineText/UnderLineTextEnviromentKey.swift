@@ -58,6 +58,7 @@ extension View {
     }
 }
 
+@MainActor
 extension EnvironmentValues {
     var underLineTextTruncationMode: Text.TruncationMode {
         get { self[UnderLineTextTruncateModeEnvironmentKey.self] }
@@ -119,48 +120,48 @@ extension EnvironmentValues {
         set { self[UnderLineLeadingViewEnvironmentKey.self] = newValue }
     }
 }
-
-struct UnderLineTextTruncateModeEnvironmentKey: EnvironmentKey {
+@MainActor
+struct UnderLineTextTruncateModeEnvironmentKey: @preconcurrency EnvironmentKey {
     static var defaultValue: Text.TruncationMode = .tail
 }
-
-struct UnderLineTextTitleEnvironmentKey: EnvironmentKey {
+@MainActor
+struct UnderLineTextTitleEnvironmentKey: @preconcurrency EnvironmentKey {
     static var defaultValue: String?
 }
-
-struct UnderLineTextEnvironmentKey: EnvironmentKey {
+@MainActor
+struct UnderLineTextEnvironmentKey: @preconcurrency EnvironmentKey {
     static var defaultValue: String = ""
 }
-
-struct UnderLineTextLineColorEnvironmentKey: EnvironmentKey {
+@MainActor
+struct UnderLineTextLineColorEnvironmentKey: @preconcurrency EnvironmentKey {
     static var defaultValue: Color? = nil
 }
-
-struct UnderLineHeightEnvironmentKey: EnvironmentKey {
+@MainActor
+struct UnderLineHeightEnvironmentKey: @preconcurrency EnvironmentKey {
     static var defaultValue: CGFloat = 1
 }
-
-struct UnderLineTitleFontEnvironmentKey: EnvironmentKey {
+@MainActor
+struct UnderLineTitleFontEnvironmentKey: @preconcurrency EnvironmentKey {
     static var defaultValue: Font = .system(size: 15, weight: .bold)
 }
-
-struct UnderLineTextFontEnvironmentKey: EnvironmentKey {
+@MainActor
+struct UnderLineTextFontEnvironmentKey: @preconcurrency EnvironmentKey {
     static var defaultValue: Font = .system(size: 15)
 }
-
-struct UnderLineTitleColorEnvironmentKey: EnvironmentKey {
+@MainActor
+struct UnderLineTitleColorEnvironmentKey: @preconcurrency EnvironmentKey {
     static var defaultValue: Color? = nil
 }
-
-struct UnderLineTrailingViewEnvironmentKey: EnvironmentKey {
+@MainActor
+struct UnderLineTrailingViewEnvironmentKey: @preconcurrency EnvironmentKey {
     static var defaultValue: (() -> AnyView)? { nil }
 }
-
-struct UnderLineTextHeightEnvironmentKey: EnvironmentKey {
+@MainActor
+struct UnderLineTextHeightEnvironmentKey: @preconcurrency EnvironmentKey {
     static var defaultValue: CGFloat = 45
 }
-
-struct UnderLineTextColorEnvironmentKey: EnvironmentKey {
+@MainActor
+struct UnderLineTextColorEnvironmentKey: @preconcurrency EnvironmentKey {
     static var defaultValue: Color? = nil
 }
 

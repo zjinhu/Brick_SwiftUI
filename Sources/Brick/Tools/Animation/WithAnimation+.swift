@@ -19,6 +19,7 @@ import SwiftUI
 ///   - delay: 延迟回调时间,应与动画执行时长一致即可
 ///   - body:
 ///   - completion: 结束回调
+@MainActor
 public func withAnimation<Result>(_ animation: Animation = .default,
                                   after delay: TimeInterval = 0,
                                   body: () throws -> Result,
@@ -35,6 +36,7 @@ public func withAnimation<Result>(_ animation: Animation = .default,
 @available(watchOS, deprecated: 10.0)
 @inline(__always)
 @_disfavoredOverload
+@MainActor
 public func withTransaction<Result>(_ transaction: Transaction,
                                     after delay: TimeInterval = 0,
                                     body: () throws -> Result,
@@ -81,6 +83,7 @@ extension Optional where Wrapped == Transaction {
 ///   - animation: 动画
 ///   - delay: 延迟
 ///   - body:
+@MainActor
 public func withAnimation( _ animation: Animation? = .default,
                            after delay: TimeInterval?,
                            body: @escaping () -> Void) {
@@ -96,7 +99,7 @@ public func withAnimation( _ animation: Animation? = .default,
         }
     }
 }
-var _areAnimationsDisabledGlobally: Bool = false
+@MainActor var _areAnimationsDisabledGlobally: Bool = false
 
 func _withoutAnimation<T>(_ flag: Bool = true, _ body: () -> T) -> T {
     guard flag else {
@@ -111,7 +114,7 @@ func _withoutAnimation<T>(_ flag: Bool = true, _ body: () -> T) -> T {
         body()
     }
 }
-
+@MainActor
 func _withoutAppKitOrUIKitAnimation(_ flag: Bool = true, _ body: () -> ()) {
     guard flag else {
         return body()
@@ -126,6 +129,7 @@ func _withoutAppKitOrUIKitAnimation(_ flag: Bool = true, _ body: () -> ()) {
     #endif
 }
 /// Returns the result of recomputing the view’s body with animations disabled.
+@MainActor
 func withoutAnimation(_ flag: Bool = true, _ body: () -> ()) {
     guard flag else {
         return body()

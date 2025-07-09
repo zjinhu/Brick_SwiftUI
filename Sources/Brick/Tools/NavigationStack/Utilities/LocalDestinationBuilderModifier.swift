@@ -14,9 +14,9 @@ class LocalDestinationIDHolder: ObservableObject {
     deinit {
         // On iOS 15, there are some extraneous re-renders after LocalDestinationBuilderModifier is removed from
         // the view tree. Dispatching async allows those re-renders to succeed before removing the local builder.
-        DispatchQueue.main.async { [destinationBuilder, id] in
-            destinationBuilder?.removeLocalBuilder(identifier: id)
-        }
+//        DispatchQueue.main.async { [destinationBuilder, id] in
+//            destinationBuilder?.removeLocalBuilder(identifier: id)
+//        }
     }
 }
 

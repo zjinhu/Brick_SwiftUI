@@ -12,15 +12,8 @@ struct AsyncImageView: View {
     
     var body: some View {
         VScrollStack{
-            
-            if let url = Bundle.main.url(forResource: "giphy", withExtension: "gif"),
-               let imgData = try? Data(contentsOf: url){
-                GIFImage(source: .static(data: imgData))
-            }
 
-            GIFImage(url: "https://raw.githubusercontent.com/igorcferreira/GIFImage/main/Tests/test.gif")
-                
-            BR.AsyncImage(url: URL(string:"https://t7.baidu.com/it/u=2531125946,3055766435&fm=193&f=GIF")!) { image in
+           AsyncImage(url: URL(string:"https://t7.baidu.com/it/u=2531125946,3055766435&fm=193&f=GIF")!) { image in
                 image
                     .resizable()
             } placeholder: {
@@ -29,7 +22,7 @@ struct AsyncImageView: View {
             .frame(width: 250, height: 250)
             
             
-            BR.AsyncImage(url: URL(string:"https://t7.baidu.com/it/u=2531125946,3055766435&fm=193&f=GIF")!, scale: 2) { phase in // 1
+           AsyncImage(url: URL(string:"https://t7.baidu.com/it/u=2531125946,3055766435&fm=193&f=GIF")!, scale: 2) { phase in // 1
                 if let image = phase.image { // 2
                     // if the image is valid
                     image
@@ -48,7 +41,7 @@ struct AsyncImageView: View {
                 }
             }.padding()
             
-            BR.AsyncImage(url: URL(string: "AWrongURL")!) { phase in // 1
+            AsyncImage(url: URL(string: "AWrongURL")!) { phase in // 1
                 if let image = phase.image { // 2
                     // if the image is valid
                     image

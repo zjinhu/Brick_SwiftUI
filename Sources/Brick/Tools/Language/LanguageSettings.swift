@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+@MainActor
 public class LanguageSettings: ObservableObject {
     public static let shared = LanguageSettings(defaultLanguage: .deviceLanguage)
     

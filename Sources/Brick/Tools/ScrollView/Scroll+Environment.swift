@@ -42,18 +42,18 @@ extension EnvironmentValues {
     
 }
 
-private struct VerticalIndicatorKey: EnvironmentKey {
-    static var defaultValue: Brick<Any>.ScrollIndicatorVisibility = .automatic
+private struct VerticalIndicatorKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Brick<Any>.ScrollIndicatorVisibility = .automatic
 }
 
-private struct HorizontalIndicatorKey: EnvironmentKey {
-    static var defaultValue: Brick<Any>.ScrollIndicatorVisibility = .automatic
+private struct HorizontalIndicatorKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Brick<Any>.ScrollIndicatorVisibility = .automatic
 }
 
-private struct KeyboardDismissKey: EnvironmentKey {
-    static var defaultValue: Brick<Any>.ScrollDismissesKeyboardMode = .automatic
+private struct KeyboardDismissKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Brick<Any>.ScrollDismissesKeyboardMode = .automatic
 }
 
-private struct ScrollEnabledKey: EnvironmentKey {
-    static var defaultValue: Bool = true
+private struct ScrollEnabledKey: @preconcurrency EnvironmentKey {
+    @MainActor static var defaultValue: Bool = true
 }

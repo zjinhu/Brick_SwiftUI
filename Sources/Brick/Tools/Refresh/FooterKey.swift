@@ -18,15 +18,15 @@ extension EnvironmentValues {
 extension Refresh {
     
     struct FooterAnchorKey {
-        static var defaultValue: Value = []
+        @MainActor static var defaultValue: Value = []
     }
     
     struct FooterUpdateKey {
-        static var defaultValue: Value = .init(enable: false)
+        @MainActor static let defaultValue: Value = .init(enable: false)
     }
 }
 
-extension Refresh.FooterAnchorKey: PreferenceKey {
+extension Refresh.FooterAnchorKey: @preconcurrency PreferenceKey {
     
     typealias Value = [Item]
     
@@ -41,7 +41,7 @@ extension Refresh.FooterAnchorKey: PreferenceKey {
     }
 }
 
-extension Refresh.FooterUpdateKey: EnvironmentKey {
+extension Refresh.FooterUpdateKey: @preconcurrency EnvironmentKey {
     
     struct Value: Equatable {
         let enable: Bool

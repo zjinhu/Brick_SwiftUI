@@ -55,7 +55,7 @@ public extension Brick where Wrapped: View {
     ///
     /// - Returns: A view that runs the specified action asynchronously when
     ///   the view appears.
-    @ViewBuilder
+    @MainActor @ViewBuilder
     func task(priority: TaskPriority = .userInitiated, @_inheritActorContext _ action: @escaping @Sendable () async -> Void) -> some View {
         wrapped.modifier(
             TaskModifier(
@@ -125,7 +125,7 @@ public extension Brick where Wrapped: View {
     ///
     /// - Returns: A view that runs the specified action asynchronously when
     ///   the view appears, or restarts the task with the `id` value changes.
-    @ViewBuilder
+    @MainActor @ViewBuilder
     func task<T: Equatable>(id: T, priority: TaskPriority = .userInitiated, @_inheritActorContext _ action: @escaping @Sendable () async -> Void) -> some View {
         wrapped.modifier(
             TaskModifier(

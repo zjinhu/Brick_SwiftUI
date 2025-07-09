@@ -17,15 +17,15 @@ extension EnvironmentValues {
 extension Refresh {
     
     struct HeaderAnchorKey {
-        static var defaultValue: Value = []
+        @MainActor static var defaultValue: Value = []
     }
     
     struct HeaderUpdateKey {
-        static var defaultValue: Value = .init(enable: false)
+        @MainActor static var defaultValue: Value = .init(enable: false)
     }
 }
 
-extension Refresh.HeaderAnchorKey: PreferenceKey {
+extension Refresh.HeaderAnchorKey: @preconcurrency PreferenceKey {
     
     typealias Value = [Item]
     
@@ -39,7 +39,7 @@ extension Refresh.HeaderAnchorKey: PreferenceKey {
     }
 }
 
-extension Refresh.HeaderUpdateKey: EnvironmentKey {
+extension Refresh.HeaderUpdateKey: @preconcurrency EnvironmentKey {
     
     struct Value {
         let enable: Bool

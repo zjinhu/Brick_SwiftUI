@@ -46,6 +46,7 @@ public extension LinearProgressBar {
     }
 }
 @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+@MainActor
 public extension LinearProgressBar.Style {
 
     /// The standard liear progress bar style.
@@ -82,9 +83,9 @@ public extension View {
 @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 private extension LinearProgressBar.Style {
 
-    struct Key: EnvironmentKey {
+    struct Key: @preconcurrency EnvironmentKey {
 
-        public static var defaultValue: LinearProgressBar.Style = .standard
+        @MainActor public static var defaultValue: LinearProgressBar.Style = .standard
     }
 }
 @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BrickKit
+
 struct DemoView: View {
     @State private var showSheet = false
     @State private var showFull = false
@@ -81,7 +82,12 @@ struct DemoView: View {
 //                    case .photoPickerView:
 //                        PhotoPickerView()
                     case .shareLinkView:
-                        ShareLinkView()
+                        if #available(iOS 16.0, *) {
+                            ShareLinkView()
+                        } else {
+                            // Fallback on earlier versions
+                        }
+                        
                     case .focusStateView:
                         FocusStateView()
                         

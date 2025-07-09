@@ -77,7 +77,7 @@ public extension Brick where Wrapped: View {
     /// - Parameters:
     ///   - interaction: A specification of how people can interact with the
     ///     view behind a presentation.
-    @ViewBuilder
+    @ViewBuilder @MainActor
     func presentationBackgroundInteraction(_ interaction: Brick<Any>.PresentationBackgroundInteraction) -> some View {
         #if os(iOS) || targetEnvironment(macCatalyst)
         if #available(iOS 15, *) {

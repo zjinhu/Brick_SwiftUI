@@ -58,61 +58,6 @@ struct SegmentStylesView: View {
             .height(40)
             .padding()
 
-            Picker(selection: $selection) {
-                ForEach(Segment.allCases) { segment in
-                    Text(segment.title)
-                        .tag(segment)
-                }
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            .colorMultiply(.red)
-            .padding()
-            .ss.onChange(of: selection) { new in
-                withAnimation(.default) {
-                    selected = selection
-                }
-            }
-            
-            SegmentView(
-                segments: Segment.allCases,
-                selected: $selected,
-                content:{ seg in
-                    
-                    Text(seg.title)
-                },
-                indicator:{ size in 
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(.orange)
-                        .ignoresSafeArea()
-                }
-                
-            )
-            .padding(2)
-            .background() {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(.blue)
-                    .ignoresSafeArea()
-            }
-            .padding(.horizontal, 15)
-            
-            SegmentView(
-                segments: Segment.allCases,
-                selected: $selected,
-                content:{ seg in
-                    Text(seg.title)
-                },
-                indicator:{ size in
-                    RoundedRectangle(cornerRadius: 2)
-                        .fill(.orange)
-                        .frame(height: 4)
-                        .padding(.horizontal, 40)
-                        .frame(maxHeight: .infinity, alignment: .bottom)
-                }
-                
-            )
-            .padding(.top, 10)
-            .padding(.horizontal, 15)
-            
             Button {
                 dismiss()
             } label: {

@@ -23,7 +23,7 @@ import SwiftUI
  doSomething(with: $myValue ?? 0)
  ```
  */
-public func OptionalBinding<T>(_ binding: Binding<T?>, _ defaultValue: T) -> Binding<T> {
+public func OptionalBinding<T: Sendable>(_ binding: Binding<T?>, _ defaultValue: T) -> Binding<T> {
     Binding<T>(get: {
         binding.wrappedValue ?? defaultValue
     }, set: {
@@ -31,6 +31,6 @@ public func OptionalBinding<T>(_ binding: Binding<T?>, _ defaultValue: T) -> Bin
     })
 }
 
-public func ??<T> (left: Binding<T?>, right: T) -> Binding<T> {
+public func ??<T: Sendable> (left: Binding<T?>, right: T) -> Binding<T> {
     OptionalBinding(left, right)
 }

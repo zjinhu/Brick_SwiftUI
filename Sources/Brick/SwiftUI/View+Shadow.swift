@@ -29,7 +29,7 @@ import SwiftUI
  You can apply the style with the `.font(_ style:)` modifier.
  ```
  */
-public struct ViewShadowStyle {
+public struct ViewShadowStyle : Sendable{
     
     public init(
         color: Color? = nil,
@@ -49,6 +49,7 @@ public struct ViewShadowStyle {
     public let y: CGFloat
 }
 
+@MainActor
 public extension ViewShadowStyle {
     
     /// This style applies no shadow.

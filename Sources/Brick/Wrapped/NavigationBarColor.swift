@@ -42,7 +42,7 @@ struct NavigationBarModifier: ViewModifier {
 public extension Brick where Wrapped: View {
     @available(macOS, unavailable)
     @available(tvOS, unavailable)
-    func navigationBarColor(backgroundColor: Color) -> some View {
+    @MainActor func navigationBarColor(backgroundColor: Color) -> some View {
         if #available(iOS 16.0, *) {
             return wrapped.toolbarBackground(backgroundColor, for: .navigationBar)
         } else {

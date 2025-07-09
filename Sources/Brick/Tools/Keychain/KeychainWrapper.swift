@@ -37,6 +37,7 @@ private let paramSecReturnAttributes = kSecReturnAttributes as String
  `NOTE` In SwiftKit, you can use a `StandardKeychainService`
  to isolate keychain access from contract design.
  */
+@MainActor 
 open class KeychainWrapper {
     
     

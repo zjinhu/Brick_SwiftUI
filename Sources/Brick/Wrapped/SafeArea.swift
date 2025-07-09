@@ -9,17 +9,17 @@ import SwiftUI
 
 public extension Brick where Wrapped: View {
 
-    @inlinable
+    @MainActor @inlinable
     func safeAreaPadding(_ edgeInsets: EdgeInsets) -> some View {
         wrapped.modifier(SafeAreaPaddingModifier(edgeInsets))
     }
 
-    @inlinable
+    @MainActor @inlinable
     func safeAreaPadding(_ length: CGFloat = 16) -> some View {
         wrapped.modifier(SafeAreaPaddingModifier(length))
     }
 
-    @inlinable
+    @MainActor @inlinable
     func safeAreaPadding(_ edges: Edge.Set, _ length: CGFloat = 16) -> some View {
         wrapped.modifier(SafeAreaPaddingModifier(edges, length))
     }

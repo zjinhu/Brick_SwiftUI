@@ -41,7 +41,7 @@ extension Brick where Wrapped: View {
     ///
     /// - Parameter disabled: A Boolean that indicates whether scrolling is
     ///   disabled.
-    public func scrollDisabled(_ disabled: Bool) -> some View {
+    @MainActor public func scrollDisabled(_ disabled: Bool) -> some View {
         wrapped
             .environment(\.isScrollEnabled, !disabled)
 #if os(iOS) || targetEnvironment(macCatalyst)

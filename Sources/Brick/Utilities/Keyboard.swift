@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 #if os(iOS)
+@MainActor
 public class KeyboardManager: ObservableObject {
     @Published public var keyboardHeight: CGFloat = 0
     private var subscription: [AnyCancellable] = []

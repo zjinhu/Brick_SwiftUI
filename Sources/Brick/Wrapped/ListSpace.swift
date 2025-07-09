@@ -10,7 +10,7 @@ import SwiftUI
 import UIKit
 public extension Brick where Wrapped: View {
     
-    func listSectionSpace(_ space: CGFloat) -> some View {
+    @MainActor func listSectionSpace(_ space: CGFloat) -> some View {
         if #available(iOS 17, *) {
             return wrapped
                 .listSectionSpacing(space)

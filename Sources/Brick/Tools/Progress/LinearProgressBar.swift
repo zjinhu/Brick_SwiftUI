@@ -39,6 +39,7 @@ import SwiftUI
  standard configuration and how this view looks by default.
  */
 @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+@MainActor
 public struct LinearProgressBar: View {
 
     /// Create a linear progress bar.
@@ -137,6 +138,7 @@ private extension LinearProgressBar {
     }
 }
 @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+@MainActor
 private extension LinearProgressBar.Style {
 
     static var swedish: LinearProgressBar.Style = {

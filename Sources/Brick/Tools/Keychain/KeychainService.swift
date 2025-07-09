@@ -11,6 +11,7 @@ import Foundation
  This class can be used to read from and write to the device
  keychain, using a ``KeychainWrapper``.
  */
+@MainActor
 open class KeychainService {
     
     public init(

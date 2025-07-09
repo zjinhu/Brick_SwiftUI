@@ -24,7 +24,7 @@ struct OnTap: ViewModifier {
 }
 
 public extension Brick where Wrapped: View {
-    func onTapGesture(_ handler: @escaping (CGPoint) -> Void) -> some View {
+    @MainActor func onTapGesture(_ handler: @escaping (CGPoint) -> Void) -> some View {
         wrapped.modifier(OnTap(response: handler))
     }
 }

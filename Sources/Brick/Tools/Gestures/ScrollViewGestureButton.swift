@@ -128,7 +128,7 @@ extension ScrollViewGestureButton {
         @Published
         var doubleTapDate = Date()
     }
-
+    @MainActor
     struct GestureConfiguration {
         let state: GestureState
         let pressAction: Action

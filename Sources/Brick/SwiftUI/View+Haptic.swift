@@ -123,21 +123,21 @@ public extension View {
 }
 
 /// You can also use ``.haptics(onChangeOf:)`` on your `View`.
-public func hapticFeedback() {
+@MainActor public func hapticFeedback() {
     let generator = UISelectionFeedbackGenerator()
     generator.prepare()
     generator.selectionChanged()
 }
 
 /// You can also use ``.haptics(onChangeOf:type:)`` on your `View`.
-public  func hapticFeedback(type: UINotificationFeedbackGenerator.FeedbackType) {
+@MainActor public func hapticFeedback(type: UINotificationFeedbackGenerator.FeedbackType) {
     let generator = UINotificationFeedbackGenerator()
     generator.prepare()
     generator.notificationOccurred(type)
 }
 
 /// You can also use ``.haptics(onChangeOf:type:)`` on your `View`.
-public func hapticFeedback(type: UIImpactFeedbackGenerator.FeedbackStyle) {
+@MainActor public func hapticFeedback(type: UIImpactFeedbackGenerator.FeedbackStyle) {
     let generator = UIImpactFeedbackGenerator(style: type)
     generator.prepare()
     generator.impactOccurred()

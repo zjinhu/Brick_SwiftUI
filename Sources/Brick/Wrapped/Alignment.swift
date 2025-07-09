@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+@MainActor
 public extension Brick where Wrapped: View {
  
     func alignmentGuideAdjustment(anchor: UnitPoint) -> some View {

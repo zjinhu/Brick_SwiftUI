@@ -82,7 +82,7 @@ extension UIViewController {
         }
     }
 }
-
+@MainActor
 public class Device{
     public static var isIpad: Bool{
         return UIDevice.current.userInterfaceIdiom == .pad
@@ -117,6 +117,7 @@ private extension UIScene.ActivationState {
     }
 }
 
+@MainActor
 public class Screen {
     public static var safeArea: UIEdgeInsets = UIScreen.safeArea
     
@@ -320,7 +321,7 @@ internal extension PlatformView {
         return nil
     }
 }
-
+@MainActor 
 internal struct Inspector {
     var hostView: PlatformView
     var sourceView: PlatformView

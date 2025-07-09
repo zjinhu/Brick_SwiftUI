@@ -32,7 +32,7 @@ public extension View {
 
 private extension View {
     
-    func changeStateAsync(_ action: @escaping () -> Void) {
+    func changeStateAsync(_ action: @Sendable @escaping () -> Void) {
         DispatchQueue.main.async(execute: action)
     }
     
@@ -43,9 +43,10 @@ private extension View {
     }
     
     func safeAreaBindingView(for binding: Binding<EdgeInsets>, geo: GeometryProxy) -> some View {
+        let safeAreaInsets = geo.safeAreaInsets
         changeStateAsync {
-            if binding.wrappedValue == geo.safeAreaInsets { return }
-            binding.wrappedValue = geo.safeAreaInsets
+            if binding.wrappedValue == safeAreaInsets { return }
+            binding.wrappedValue = safeAreaInsets
         }
         return Color.clear
     }
@@ -57,9 +58,10 @@ private extension View {
     }
     
     func sizeBindingView(for binding: Binding<CGSize>, geo: GeometryProxy) -> some View {
+        let size = geo.size
         changeStateAsync {
-            if binding.wrappedValue == geo.size { return }
-            binding.wrappedValue = geo.size
+            if binding.wrappedValue == size { return }
+            binding.wrappedValue = size
         }
         return Color.clear
     }

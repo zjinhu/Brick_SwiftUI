@@ -8,6 +8,7 @@
 import Foundation
 
 /// This struct is used to configure gesture button defaults.
+@MainActor
 public struct GestureButtonDefaults {
 
     /// The max time between two taps to count as a double tap, by default `0.2`.

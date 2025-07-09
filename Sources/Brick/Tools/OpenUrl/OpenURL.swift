@@ -7,7 +7,7 @@ import SafariServices
 #if canImport(WatchKit)
 import WatchKit
 #endif
-
+@MainActor
 extension Brick where Wrapped == Any {
     /// An action that opens a URL.
     ///
@@ -99,18 +99,18 @@ extension Brick where Wrapped == Any {
             self.handler = handler
         }
 
-        @available(watchOS, unavailable)
+        @MainActor @available(watchOS, unavailable)
         public func callAsFunction(_ url: URL) {
             handleUrl(url)
         }
 
-        @available(watchOS, unavailable)
+        @MainActor @available(watchOS, unavailable)
         public func callAsFunction(_ url: URL, completion: @escaping (_ accepted: Bool) -> Void) {
             let result = handleUrl(url)
             completion(result.accepted)
         }
 
-        @discardableResult
+        @MainActor @discardableResult
         private func handleUrl(_ url: URL) -> Result.Value {
             let result = handler(url).value
 
@@ -131,7 +131,8 @@ extension Brick where Wrapped == Any {
         }
     }
 }
-private struct OpenURLKey: EnvironmentKey {
+@MainActor
+private struct OpenURLKey: @preconcurrency EnvironmentKey {
     static var defaultValue: Brick<Any>.OpenURLAction {
         .init { url in
             #if os(macOS)
