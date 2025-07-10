@@ -46,7 +46,7 @@ struct ContainerView<Content: View>: View {
                 .background(Color.defaultBackground.opacity(0.7))
                 .cornerRadius(10)
                 .shadow(color: .gray, radius: 5)
-                .animation(.spring())
+                .animation(.spring(), value: isActive)
                 
         }
         .edgesIgnoringSafeArea(.all)

@@ -28,6 +28,7 @@ extension ToastManager {
     }
 }
 
+@MainActor
 public class ToastManager: ObservableObject {
     
     public init(position: ToastPosition = .bottom) {
@@ -57,6 +58,7 @@ public class ToastManager: ObservableObject {
     }
 
 }
+
 extension ToastManager {
     ///隐藏Toast
     func dismiss() {

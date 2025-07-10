@@ -23,5 +23,3 @@ package.targets = [
             path: "Sources/Brick",
             resources: [.process("Resources/PrivacyInfo.xcprivacy")]),
 ]
-
-package.swiftLanguageVersions = [.v5]

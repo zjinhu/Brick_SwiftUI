@@ -98,20 +98,20 @@ extension Brick where Wrapped == Any {
         public init(handler: @escaping (URL) -> Result) {
             self.handler = handler
         }
-
-        @MainActor @available(watchOS, unavailable)
-        public func callAsFunction(_ url: URL) {
+        
+        @available(watchOS, unavailable)
+        @MainActor public func callAsFunction(_ url: URL) {
             handleUrl(url)
         }
 
-        @MainActor @available(watchOS, unavailable)
-        public func callAsFunction(_ url: URL, completion: @escaping (_ accepted: Bool) -> Void) {
+        @available(watchOS, unavailable)
+        @MainActor public func callAsFunction(_ url: URL, completion: @escaping (_ accepted: Bool) -> Void) {
             let result = handleUrl(url)
             completion(result.accepted)
         }
 
-        @MainActor @discardableResult
-        private func handleUrl(_ url: URL) -> Result.Value {
+        @discardableResult
+        @MainActor private func handleUrl(_ url: URL) -> Result.Value {
             let result = handler(url).value
 
             switch result {

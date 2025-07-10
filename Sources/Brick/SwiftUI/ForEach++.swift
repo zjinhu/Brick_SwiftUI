@@ -157,41 +157,6 @@ extension ForEach where ID: CaseIterable & Hashable, ID.AllCases: RandomAccessCo
     }
 }
 
-extension ForEach where Content: View {
-    @_disfavoredOverload
-    public init<_Data: MutableCollection>(
-        _ data: Binding<_Data>,
-        id: KeyPath<_Data.Element, ID>,
-        @ViewBuilder content: @escaping (Binding<_Data.Element>) -> Content,
-        _: () = ()
-    ) where Data == LazyMapSequence<LazySequence<_Data.Indices>.Elements, Binding<_Data.Element>> {
-        let collection = data.wrappedValue.indices.lazy.map { index -> Binding<_Data.Element> in
-            let element = data.wrappedValue[index]
-            
-            return Binding(
-                get: { () -> _Data.Element in
-                    if index < data.wrappedValue.endIndex {
-                        return data.wrappedValue[index]
-                    } else {
-                        return element
-                    }
-                },
-                set: {
-                    if index < data.wrappedValue.endIndex {
-                        data.wrappedValue[index] = $0
-                    }
-                }
-            )
-        }
-        
-        self.init(collection, id: \._bindingIdentifiableKeyPathAdaptor[keyPath: id]) {
-            content($0)
-        }
-    }
-}
-
-// MARK: - Auxiliary
-
 extension Binding {
     fileprivate struct _BindingIdentifiableKeyPathAdaptor {
         let base: Binding<Value>

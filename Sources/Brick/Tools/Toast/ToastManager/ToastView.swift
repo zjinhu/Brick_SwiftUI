@@ -28,7 +28,7 @@ struct ToastView<Content: View>: View {
     
     var body: some View {
         content(isActive)
-            .animation(.spring())
+            .animation(.spring(), value: isActive)
             .offset(y: !isActive ? offset : -offset)
             .padding(.horizontal, padding)
             .padding(.top, Screen.safeArea.top + padding)

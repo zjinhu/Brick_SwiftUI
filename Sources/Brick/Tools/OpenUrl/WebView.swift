@@ -229,9 +229,9 @@ extension WebView {
         return object
     }
 }
- 
-extension WebView {
 
+extension WebView {
+    
     public final class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandlerWithReply {
         
         private lazy var progressBar: UIProgressView = {
@@ -252,10 +252,6 @@ extension WebView {
         
         init(parent: WebView) {
             self.parent = parent
-        }
-        
-        deinit {
-//            cleanAllWebsiteDataStore()
         }
         
         public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -350,17 +346,19 @@ extension WebView {
             sender.endRefreshing()
             webView?.reload()
         }
-        
-        private func cleanAllWebsiteDataStore() {
-            let websiteDataTypes = WKWebsiteDataStore.allWebsiteDataTypes()
-            let modifiedSince = Date(timeIntervalSince1970: 0)
-            WKWebsiteDataStore.default().removeData(ofTypes: websiteDataTypes, modifiedSince: modifiedSince) {
-                debugPrint("Cleaning completed")
-            }
-            URLCache.shared.removeAllCachedResponses()
-            URLCache.shared.diskCapacity = 0
-            URLCache.shared.memoryCapacity = 0
+    }
+}
+
+extension WebView.Coordinator {
+    public static func cleanAllWebsiteDataStoreIfNeeded() {
+        let websiteDataTypes = WKWebsiteDataStore.allWebsiteDataTypes()
+        let modifiedSince = Date(timeIntervalSince1970: 0)
+        WKWebsiteDataStore.default().removeData(ofTypes: websiteDataTypes, modifiedSince: modifiedSince) {
+            debugPrint("Cleaning completed")
         }
+        URLCache.shared.removeAllCachedResponses()
+        URLCache.shared.diskCapacity = 0
+        URLCache.shared.memoryCapacity = 0
     }
 }
 
@@ -389,6 +387,9 @@ struct WebViewPreviewWrapper: View {
             }
             .onChange(of: webViewState) { newValue in
                 print(newValue)
+            }
+            .onDisappear {
+                WebView.Coordinator.cleanAllWebsiteDataStoreIfNeeded()
             }
     }
 }
