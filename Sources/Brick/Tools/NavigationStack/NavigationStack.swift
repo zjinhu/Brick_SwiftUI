@@ -21,7 +21,7 @@ extension Brick where Wrapped == Any {
 
         @Environment(\.useNavigationStack) var useNavigationStack
         
-//        @State var appIsActive = NonReactiveState(value: true)
+        @State var appIsActive = NonReactiveState(value: true)
         
         var content: Content
         var useInternalTypedPath: Bool
@@ -85,6 +85,7 @@ extension Brick where Wrapped == Any {
                       path.path = externalTypedPath
                       return
                     }
+                    guard appIsActive.value else { return }
                     path.withDelaysIfUnsupported(\.path) {
                         $0 = externalTypedPath
                     }
@@ -94,7 +95,7 @@ extension Brick where Wrapped == Any {
                       path.path = internalTypedPath
                       return
                     }
-
+                    guard appIsActive.value else { return }
                     path.withDelaysIfUnsupported(\.path) {
                         $0 = internalTypedPath
                     }
@@ -122,29 +123,29 @@ extension Brick where Wrapped == Any {
                         }
                     }
                 }
-//#if os(iOS)
-//                .onReceive(NotificationCenter.default.publisher(for: didBecomeActive)) { _ in
-//                    appIsActive.value = true
-//                    guard isUsingNavigationView else { return }
-//                    path.withDelaysIfUnsupported(\.path) {
-//                        $0 = useInternalTypedPath ? internalTypedPath : externalTypedPath
-//                    }
-//                }
-//                .onReceive(NotificationCenter.default.publisher(for: willResignActive)) { _ in
-//                    appIsActive.value = false
-//                }
-//#elseif os(tvOS)
-//                .onReceive(NotificationCenter.default.publisher(for: didBecomeActive)) { _ in
-//                    appIsActive.value = true
-//                    guard isUsingNavigationView else { return }
-//                    path.withDelaysIfUnsupported(\.path) {
-//                        $0 = useInternalTypedPath ? internalTypedPath : externalTypedPath
-//                    }
-//                }
-//                .onReceive(NotificationCenter.default.publisher(for: willResignActive)) { _ in
-//                    appIsActive.value = false
-//                }
-//#endif
+#if os(iOS)
+                .onReceive(NotificationCenter.default.publisher(for: didBecomeActive)) { _ in
+                    appIsActive.value = true
+                    guard isUsingNavigationView else { return }
+                    path.withDelaysIfUnsupported(\.path) {
+                        $0 = useInternalTypedPath ? internalTypedPath : externalTypedPath
+                    }
+                }
+                .onReceive(NotificationCenter.default.publisher(for: willResignActive)) { _ in
+                    appIsActive.value = false
+                }
+#elseif os(tvOS)
+                .onReceive(NotificationCenter.default.publisher(for: didBecomeActive)) { _ in
+                    appIsActive.value = true
+                    guard isUsingNavigationView else { return }
+                    path.withDelaysIfUnsupported(\.path) {
+                        $0 = useInternalTypedPath ? internalTypedPath : externalTypedPath
+                    }
+                }
+                .onReceive(NotificationCenter.default.publisher(for: willResignActive)) { _ in
+                    appIsActive.value = false
+                }
+#endif
         }
         
         public init(path: Binding<[Data]>?, @ViewBuilder content: () -> Content) {
@@ -197,10 +198,10 @@ var supportedNavigationViewStyle: some NavigationViewStyle {
 #endif
 }
 
-//#if os(iOS)
-//private let didBecomeActive = UIApplication.didBecomeActiveNotification
-//private let willResignActive = UIApplication.willResignActiveNotification
-//#elseif os(tvOS)
-//private let didBecomeActive = UIApplication.didBecomeActiveNotification
-//private let willResignActive = UIApplication.willResignActiveNotification
-//#endif
+#if os(iOS)
+private let didBecomeActive = UIApplication.didBecomeActiveNotification
+private let willResignActive = UIApplication.willResignActiveNotification
+#elseif os(tvOS)
+private let didBecomeActive = UIApplication.didBecomeActiveNotification
+private let willResignActive = UIApplication.willResignActiveNotification
+#endif
