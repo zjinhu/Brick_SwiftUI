@@ -5,7 +5,7 @@
 //  Created by iOS on 2023/7/4.
 //
 
-@available(iOS 13.0, macOS 10.15, tvOS 6.0, watchOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, tvOS 6.0, watchOS 6.0, *)
 extension SFSymbolName {
     public static var _0Circle: Self{
         Self(symbolName: "0.circle")

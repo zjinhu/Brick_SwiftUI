@@ -4,7 +4,7 @@
 //
 //  Created by iOS on 2023/7/4.
 //
-@available(iOS 14.5, macOS 11.3, tvOS 7.4, watchOS 14.5, *)
+@available(iOS 14.5, macOS 11.3, tvOS 7.4, watchOS 7.4, *)
 extension SFSymbolName {
     public static var airpodsmax: Self{
         Self(symbolName: "airpodsmax")

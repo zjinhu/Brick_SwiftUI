@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@available(iOS 17.0, macOS 14.0, tvOS 10.0, watchOS 17.0, *)
+@available(iOS 17.0, macOS 14.0, tvOS 10.0, watchOS 10.0, *)
 extension SFSymbolName {
     public static var _2h: Self{
         Self(symbolName: "2h")

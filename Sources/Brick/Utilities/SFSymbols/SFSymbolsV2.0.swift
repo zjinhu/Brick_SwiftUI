@@ -4,7 +4,7 @@
 //
 //  Created by iOS on 2023/7/4.
 //
-@available(iOS 14.0, macOS 11.0, tvOS 7.0, watchOS 14.0, *)
+@available(iOS 14.0, macOS 11.0, tvOS 7.0, watchOS 7.0, *)
 extension SFSymbolName {
     public static var _1MagnifyingglassAr: Self{
         Self(symbolName: "1.magnifyingglass.ar")

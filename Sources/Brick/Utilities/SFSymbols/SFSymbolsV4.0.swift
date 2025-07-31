@@ -4,7 +4,7 @@
 //
 //  Created by iOS on 2023/7/4.
 //
-@available(iOS 16.0, macOS 13.0, tvOS 9.0, watchOS 16.0, *)
+@available(iOS 16.0, macOS 13.0, tvOS 9.0, watchOS 9.0, *)
 extension SFSymbolName {
     public static var absBrakesignal: Self{
         Self(symbolName: "abs.brakesignal")

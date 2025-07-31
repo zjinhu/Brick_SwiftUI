@@ -4,7 +4,7 @@
 //
 //  Created by iOS on 2023/7/4.
 //
-@available(iOS 15.1, macOS 12.0, tvOS 8.1, watchOS 15.1, *)
+@available(iOS 15.1, macOS 12.0, tvOS 8.1, watchOS 8.1, *)
 extension SFSymbolName {
     public static var boltRingClosed: Self{
         Self(symbolName: "bolt.ring.closed")

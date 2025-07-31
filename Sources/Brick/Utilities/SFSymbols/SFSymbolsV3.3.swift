@@ -4,7 +4,7 @@
 //
 //  Created by iOS on 2023/7/4.
 //
-@available(iOS 15.4, macOS 12.3, tvOS 8.5, watchOS 15.4, *)
+@available(iOS 15.4, macOS 12.3, tvOS 8.5, watchOS 8.5, *)
 extension SFSymbolName {
     public static var cameraMacro: Self{
         Self(symbolName: "camera.macro")

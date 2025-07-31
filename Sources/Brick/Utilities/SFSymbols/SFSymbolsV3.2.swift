@@ -4,7 +4,7 @@
 //
 //  Created by iOS on 2023/7/4.
 //
-@available(iOS 15.2, macOS 12.1, tvOS 8.3, watchOS 15.2, *)
+@available(iOS 15.2, macOS 12.1, tvOS 8.3, watchOS 8.3, *)
 extension SFSymbolName {
     public static var airpodGen3Left: Self{
         Self(symbolName: "airpod.gen3.left")

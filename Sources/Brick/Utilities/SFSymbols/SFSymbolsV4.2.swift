@@ -4,7 +4,7 @@
 //
 //  Created by iOS on 2023/7/4.
 //
-@available(iOS 16.4, macOS 13.3, tvOS 9.4, watchOS 16.4, *)
+@available(iOS 16.4, macOS 13.3, tvOS 9.4, watchOS 9.4, *)
 extension SFSymbolName {
     public static var _1LaneAr: Self{
         Self(symbolName: "1.lane.ar")

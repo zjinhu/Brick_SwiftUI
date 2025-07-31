@@ -50,14 +50,20 @@ struct StoreProductModifier: ViewModifier {
         let storeProductViewController = SKStoreProductViewController()
         storeProductViewController.loadProduct(withParameters: parameters) { status, error in
             if status {
-                let viewController = UIWindow.keyWindow?.rootViewController
-                viewController?.present(storeProductViewController, animated: true, completion: {
-                    action(false)
-                })
-            } else {
-                guard let error = error else { return }
-                logger.log(error.localizedDescription)
-            }
+                 Task { @MainActor in
+                     if let viewController = UIWindow.keyWindow?.rootViewController {
+                         viewController.present(storeProductViewController, animated: true) {
+                             action(false)
+                         }
+                     }
+                 }
+             } else {
+                 if let error = error {
+                     Task { @MainActor in
+                         logger.log(error.localizedDescription)
+                     }
+                 }
+             }
         }
     }
 }

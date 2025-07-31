@@ -4,7 +4,7 @@
 //
 //  Created by iOS on 2023/7/4.
 //
-@available(iOS 14.2, macOS 11.0, tvOS 7.1, watchOS 14.2, *)
+@available(iOS 14.2, macOS 11.0, tvOS 7.1, watchOS 7.1, *)
 extension SFSymbolName {
     public static var aqiHigh: Self{
         Self(symbolName: "aqi.high")

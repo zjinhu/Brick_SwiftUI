@@ -5,7 +5,7 @@
 //  Created by iOS on 2023/7/4.
 //
 
-@available(iOS 13.1, macOS 10.15, tvOS 6.1, watchOS 13.0, *)
+@available(iOS 13.1, macOS 10.15, tvOS 6.1, watchOS 6.1, *)
 extension SFSymbolName {
     public static var arrowUturnLeftCircleBadgeEllipsis: Self{
         Self(symbolName: "arrow.uturn.left.circle.badge.ellipsis")
