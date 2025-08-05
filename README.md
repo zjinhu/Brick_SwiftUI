@@ -16,7 +16,7 @@ Built-in various auxiliary development tools, and the newly added API after iOS1
 | ---------------- | ---------------- |
 |                  |                  |
 
-支持iOS14
+Versions before 1.0.0 support iOS14, while versions after 1.0.0 use iOS16+Swift6.0
 
 - [x] AsyncImage
 
