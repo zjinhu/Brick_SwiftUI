@@ -42,6 +42,15 @@ public extension Brick where Wrapped: View {
         }
     }
   
+    @MainActor @ViewBuilder
+    func onChange<Value: Equatable>(of value: Value, initial: Bool = false, _ action: @escaping (Value, Value) -> Void) -> some View {
+        if #available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *) {
+            wrapped.onChange(of: value, initial: initial, action)
+        } else {
+            wrapped.modifier(BackportOnChangeModifier(value: value, initial: initial, action: action))
+        }
+    }
+    
 //兼容ios13
 //    @ViewBuilder
 //    func onChange<Value: Equatable>(of value: Value, perform action: @escaping (Value) -> Void) -> some View {
@@ -75,3 +84,31 @@ public extension Brick where Wrapped: View {
 //            }
 //    }
 //}
+ 
+struct BackportOnChangeModifier<Value: Equatable>: ViewModifier {
+    let value: Value
+    let initial: Bool
+    let action: (Value, Value) -> Void
+    
+    @State private var previousValue: Value?
+    @State private var hasAppeared = false
+    
+    func body(content: Content) -> some View {
+        content
+            .onAppear {
+                if !hasAppeared {
+                    hasAppeared = true
+                    if initial {
+                        // 对于 initial 情况，我们使用相同的值作为 oldValue
+                        action(value, value)
+                    }
+                }
+                previousValue = value
+            }
+            .onChange(of: value) { newValue in
+                let oldValue = previousValue ?? newValue
+                previousValue = newValue
+                action(oldValue, newValue)
+            }
+    }
+}
