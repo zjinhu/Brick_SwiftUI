@@ -29,6 +29,7 @@ extension View {
         modifier(
             NavigationControllerModifier(animated: true){ item in
                 item.backButtonDisplayMode = .minimal
+                item.backButtonTitle = ""   // 强制去掉标题
             }
         )
     }
