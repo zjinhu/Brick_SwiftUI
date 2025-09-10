@@ -126,7 +126,7 @@ public class Screen {
     }
      
     public static var tabbarHeight: CGFloat {
-        return UITabBarController().tabBar.frame.size.height
+        return UITabBarController().tabBar.frame.size.height + safeArea.bottom
     }
     
     public static var statusBarHeight: CGFloat{
