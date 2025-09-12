@@ -19,14 +19,12 @@ struct DemoApp: App {
         }
     }
 }
-
-let logger = BrickLog()
-
+ 
 class AppDelegate: NSObject, UIApplicationDelegate{
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        logger.debug("AppDelegate")
+        Log.debug("AppDelegate")
         return true
     }
 }
