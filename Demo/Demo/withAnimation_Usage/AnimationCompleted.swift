@@ -22,7 +22,7 @@ struct AnimationCompleted: View {
                     withAnimation(.easeOut(duration: 3), after: 3) {
                         value.toggle()
                     } completion: {
-                        Log.log("Animation have finished")
+                        Log.info("Animation have finished")
                     }
                 }
             

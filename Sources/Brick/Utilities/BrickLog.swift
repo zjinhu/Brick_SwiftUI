@@ -22,31 +22,18 @@ public struct BrickLog: @unchecked Sendable {
         let subsystem = Bundle.main.bundleIdentifier ?? "BrickLog"
         return BrickLog(subsystem: subsystem, category: category)
     }
+    
 }
  
 public extension BrickLog {
     /// 全局静态Logger管理器
     static let shared = LoggerManager()
     
-    class LoggerManager : @unchecked Sendable{
-        private let subsystem: String
-        private var loggers: [String: Logger] = [:]
-        private let queue = DispatchQueue(label: "com.brick.logger.queue")
+    struct LoggerManager : @unchecked Sendable{
+        let logger: BrickLog
         
         init() {
-            // 获取正确的subsystem
-            self.subsystem = Bundle.main.bundleIdentifier ?? "BrickLog"
-        }
-        
-        func logger(for category: String) -> Logger {
-            queue.sync {
-                if let existing = loggers[category] {
-                    return existing
-                }
-                let new = Logger(subsystem: subsystem, category: category)
-                loggers[category] = new
-                return new
-            }
+            self.logger = BrickLog.create()
         }
     }
 }
@@ -97,37 +84,24 @@ public extension BrickLog {
 }
 
 public extension BrickLog {
-    /// 静态日志方法，自动管理Logger实例
-    static func log(_ message: String,
-                   category: String = "BrickLog",
-                   level: OSLogType = .default,
-                   isPrivate: Bool = false) {
-        let logger = shared.logger(for: category)
-        logger.log(level: level, "🎾 \(message, privacy: .public)")
+ 
+    static func info(_ message: String) {
+        shared.logger.info(message)
     }
     
-    static func info(_ message: String, category: String = "BrickLog") {
-        let logger = shared.logger(for: category)
-        logger.info("🔵 \(message, privacy: .public)")
+    static func debug(_ message: String) {
+        shared.logger.debug(message)
     }
     
-    static func debug(_ message: String, category: String = "BrickLog") {
-        let logger = shared.logger(for: category)
-        logger.debug("🟢 \(message, privacy: .public)")
-    }
-    
-    static func warning(_ message: String, category: String = "BrickLog") {
-        let logger = shared.logger(for: category)
-        logger.warning("🟡 \(message, privacy: .public)")
+    static func warning(_ message: String) {
+        shared.logger.warning(message)
      }
     
-    static func error(_ message: String, category: String = "BrickLog") {
-        let logger = shared.logger(for: category)
-        logger.error("🔴 \(message, privacy: .public)")
+    static func error(_ message: String) {
+        shared.logger.error(message)
     }
     
-    static func fault(_ message: String, category: String = "BrickLog") {
-        let logger = shared.logger(for: category)
-        logger.fault("❌ \(message, privacy: .public)")
+    static func fault(_ message: String) {
+        shared.logger.fault(message)
     }
 }
