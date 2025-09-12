@@ -60,7 +60,7 @@ struct StoreProductModifier: ViewModifier {
              } else {
                  if let error = error {
                      Task { @MainActor in
-                         logger.log(error.localizedDescription)
+                         print(error.localizedDescription)
                      }
                  }
              }

@@ -7,9 +7,7 @@
  
 import os
 
-@MainActor public let logger = BrickLog()
-
-public struct BrickLog {
+public struct BrickLog: @unchecked Sendable {
     private let logger: Logger
  
     public init(subsystem: String = "Brick", category: String = "Brick") {
