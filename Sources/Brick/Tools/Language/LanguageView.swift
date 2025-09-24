@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct LanguageView<Content: View>: View {
     private let content: Content
-    @ObservedObject private var settings: LanguageSettings = .shared
+    @StateObject private var settings: LanguageSettings = .shared
 
     public init(_ content: () -> Content) {
         self.content = content()
