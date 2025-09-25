@@ -67,13 +67,11 @@ public struct WebView: UIViewRepresentable {
     public func makeUIView(context: Context) -> WKWebView {
         let preferences = WKPreferences()
         preferences.javaScriptCanOpenWindowsAutomatically = true
-        let processPool = WKProcessPool()
         let config = WKWebViewConfiguration()
         config.defaultWebpagePreferences.preferredContentMode = .mobile
         config.defaultWebpagePreferences.allowsContentJavaScript = true
         config.userContentController = WKUserContentController()
         config.preferences = preferences
-        config.processPool = processPool
         config.allowsInlineMediaPlayback = true
         config.allowsAirPlayForMediaPlayback = true
         updateConfiguration(config, context: context)

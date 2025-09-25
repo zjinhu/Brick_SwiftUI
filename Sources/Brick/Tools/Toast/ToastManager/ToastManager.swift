@@ -43,7 +43,7 @@ public class ToastManager: ObservableObject {
     ///Toast距离屏幕边缘
     public var padding: CGFloat = 10
  
-    typealias Action = () -> Void
+    typealias Action = @MainActor @Sendable () -> Void
 
     private var presentationId = UUID()
     
@@ -62,17 +62,20 @@ public class ToastManager: ObservableObject {
 extension ToastManager {
     ///隐藏Toast
     func dismiss() {
-        dismiss {}
+        dismiss { @MainActor in }
     }
     ///隐藏Toast,有回调
-    func dismiss(completion: @escaping Action) {
-        guard isActive else { return completion() }
+    func dismiss(completion: @escaping @MainActor @Sendable () -> Void) {
+        guard isActive else { 
+            Task { @MainActor in completion() }
+            return
+        }
         isActive = false
         perform(after: 0.3, action: completion)
     }
     ///展示toa,自动隐藏
     public func show<Content: View>(_ content: Content) {
-        dismiss {
+        dismiss { @MainActor in
             self.showAfterDismiss(content: content)
         }
     }
@@ -96,13 +99,20 @@ public enum ToastPosition {
 
 private extension ToastManager {
 
-    func perform(_ action: @escaping Action,
+    func perform(_ action: @escaping @MainActor @Sendable () -> Void,
                  after seconds: TimeInterval) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: action)
+        Task { @MainActor in
+            if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
+                try? await Task.sleep(for: .seconds(seconds))
+            } else {
+                try? await Task.sleep(nanoseconds: UInt64(seconds * 1_000_000_000))
+            }
+            action()
+        }
     }
     
     func perform(after seconds: TimeInterval,
-                 action: @escaping Action) {
+                 action: @escaping @MainActor @Sendable () -> Void) {
         perform(action, after: seconds)
     }
     
@@ -112,7 +122,7 @@ private extension ToastManager {
 
         self.content = AnyView(content)
         perform(setActive, after: 0.1)
-        perform(after: self.duration) {
+        perform(after: self.duration) { @MainActor in
             guard id == self.presentationId else { return }
             self.dismiss()
         }

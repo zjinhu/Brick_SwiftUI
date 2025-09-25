@@ -87,7 +87,7 @@ public extension Binding where Value == Brick<Any>.NavigationPath {
     }
 }
 
-extension Binding: @unchecked Sendable{
+extension Binding {
     @MainActor
     func withDelaysIfUnsupported<Screen>(from start: [Screen], 
                                          to end: [Screen],

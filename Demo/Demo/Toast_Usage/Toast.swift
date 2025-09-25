@@ -100,7 +100,7 @@ struct Toast: View {
                        title: "xxxxxxxxxxxx",
                        style: .style(titleColor: .primary, titleFont: .system(size: 14)))
         }
-        .toast(isPresented: $showToast, position: .top, duration: 5.0) {
+        .toast(isPresented: $showToast, position: .top, duration: 5.0, offsetY: 100) {
             Label(
                 title: {
                     Text("保存成功")

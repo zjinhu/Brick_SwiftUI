@@ -31,8 +31,8 @@ struct ToastView<Content: View>: View {
             .animation(.spring(), value: isActive)
             .offset(y: !isActive ? offset : -offset)
             .padding(.horizontal, padding)
-            .padding(.top, Screen.safeArea.top + padding)
-            .padding(.bottom, Screen.safeArea.bottom + keyboardObserver.keyboardHeight + padding)
+            .padding(.top, padding)
+            .padding(.bottom, padding)
     }
 }
 
