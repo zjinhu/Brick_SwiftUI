@@ -24,7 +24,7 @@ public extension NavigatorPath {
         guard path.count >= count else { return }
         path.removeLast(count)
     }
-
+    ///返回到栈数组的第几项上,根目录表示清空了数组,数组中没有值了,第一页为0
     func popTo(index: Int) {
         let countToRemove = path.count - (index + 1)
         guard countToRemove > 0 else { return }
