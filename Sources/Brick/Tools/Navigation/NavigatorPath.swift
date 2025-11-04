@@ -7,7 +7,9 @@
 import SwiftUI
 
 @available(iOS 16.0, *, macOS 13.0, *, watchOS 9.0, *, tvOS 16.0, *)
+@MainActor
 public class NavigatorPath: ObservableObject {
+    private var isNavigating = false
     
     @Published public var path = NavigationPath()
     
@@ -17,7 +19,22 @@ public class NavigatorPath: ObservableObject {
 @available(iOS 16.0, *, macOS 13.0, *, watchOS 9.0, *, tvOS 16.0, *)
 public extension NavigatorPath {
     func push<T: Hashable>(_ screen: T) {
-        path.append(screen)
+//        path.append(screen)
+        // 防止快速点击
+         guard !isNavigating else { return }
+         isNavigating = true
+        // iOS 16/17 需要延迟
+         if #available(iOS 18.0, *) {
+             path.append(screen)
+             isNavigating = false
+         } else {
+             Task { @MainActor in
+                 try? await Task.sleep(nanoseconds: 100_000_000) // 0.1秒
+                 self.path.append(screen)
+                 try? await Task.sleep(nanoseconds: 300_000_000) // 0.3秒
+                 self.isNavigating = false
+             }
+         }
     }
 
     func pop(_ count: Int = 1) {
