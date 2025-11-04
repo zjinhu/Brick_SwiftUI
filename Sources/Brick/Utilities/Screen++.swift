@@ -119,7 +119,24 @@ private extension UIScene.ActivationState {
 
 @MainActor
 public class Screen {
-    public static var safeArea: UIEdgeInsets = UIScreen.safeArea
+    /// 获取安全区域，动态计算以避免在 keyWindow 为 nil 时闪退
+    public static var safeArea: UIEdgeInsets {
+        // 优先从当前活跃的 window scene 获取
+        if let windowScene = UIApplication.shared.connectedScenes
+            .compactMap({ $0 as? UIWindowScene })
+            .first(where: { $0.activationState == .foregroundActive }),
+           let window = windowScene.windows.first(where: { $0.isKeyWindow }) ?? windowScene.windows.first {
+            return window.safeAreaInsets
+        }
+        
+        // 降级方案：尝试从 keyWindow 获取
+        if let keyWindow = UIWindow.keyWindow {
+            return keyWindow.safeAreaInsets
+        }
+        
+        // 最终降级：返回零值
+        return .zero
+    }
     
     public static var navBarHeight: CGFloat {
         return UINavigationController().navigationBar.frame.size.height
@@ -136,7 +153,9 @@ public class Screen {
         return 0
     }
     
-    public static var navAndStatusHeight = navBarHeight + statusBarHeight
+    public static var navAndStatusHeight: CGFloat {
+        navBarHeight + statusBarHeight
+    }
     
     public static let lineHeight = CGFloat(scale >= 1 ? 1/scale: 1)
     
@@ -150,17 +169,6 @@ public class Screen {
     
     public static var width = UIScreen.main.bounds.width
     public static var height = UIScreen.main.bounds.height
-}
-
-fileprivate extension UIScreen {
-    static var safeArea: UIEdgeInsets {
-        UIApplication.shared
-            .connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .flatMap(\.windows)
-            .first(where: \.isKeyWindow)?
-            .safeAreaInsets ?? .zero
-    }
 }
 
 public typealias PlatformImage = UIImage
