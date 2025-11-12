@@ -1,0 +1,17 @@
+#!/bin/bash
+fadir()  
+{  
+    local this_dir=`pwd`  
+    local child_dir="$1" 
+    dirname "$child_dir" 
+    cd $this_dir  
+} 
+CUR_DIR=$(cd `dirname $0` && pwd -P ) 
+echo "当前文件路径 $CUR_DIR"
+cd $CUR_DIR
+cd ../
+
+# 退出时遇到错误即停止执行
+set -e
+xcodebuild -resolvePackageDependencies -scmProvider system
+echo "✅ SPM开启系统代理完成。"
