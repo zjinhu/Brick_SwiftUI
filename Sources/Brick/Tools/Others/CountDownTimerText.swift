@@ -22,7 +22,7 @@ public struct CountDownTimerText: View {
     let titleWhenFinished: String
     let titleWhenIdle: String
     let mode: Mode
-    public typealias ResumeAction = () -> Void
+    public typealias ResumeAction = () -> Bool
     let resumeAction: ResumeAction
     
     public init(timeCount: Int = 59,
@@ -51,10 +51,12 @@ public struct CountDownTimerText: View {
                 .underline()
                 .onTapGesture {
                     if mode == .manual {
-                        timeRemaining = timeCount
-                        timeCounting = true
-                        timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-                        resumeAction()
+                        let shouldStart = resumeAction()
+                        if shouldStart {
+                            timeRemaining = timeCount
+                            timeCounting = true
+                            timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+                        }
                     }
                 }
         } else {
@@ -76,10 +78,11 @@ public struct CountDownTimerText: View {
 #Preview {
     VStack(spacing: 20) {
         CountDownTimerText(timeCount: 10, timeUnit: "s", titleWhenIdle: "Get Code", titleWhenFinished: "Send Again", mode: .manual) {
-            
+            // 返回 true 表示允许开始倒计时
+            return true
         }
         CountDownTimerText(timeCount: 10, timeUnit: "s", titleWhenIdle: "Get Code", titleWhenFinished: "Send Again", mode: .auto) {
-            
+            return true
         }
     }
 }
