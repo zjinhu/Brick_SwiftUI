@@ -9,11 +9,14 @@ import SwiftUI
 #if os(iOS)
 extension View {
     public func addRightArrow(color: Color = Color(.systemGray2),
-                           font: Font = Font.footnote.weight(.semibold)) -> some View {
+                              font: Font = Font.footnote.weight(.semibold),
+                              showArrow: Bool = true) -> some View {
         HStack {
             self
-            Spacer()
-            Chevron(color: color, font: font)
+            if showArrow{
+                Spacer()
+                Chevron(color: color, font: font)
+            }
         }
     }
 }
