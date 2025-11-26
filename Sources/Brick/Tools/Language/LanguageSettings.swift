@@ -71,17 +71,23 @@ public extension String {
     var localizedString: LocalizedStringKey {
         return LocalizedStringKey(self)
     }
-    
+
     var localized: String {
-        if let res = UserDefaults.standard.string(forKey: "LanguageManagerSelectedLanguage"),
-           let path = Bundle.main.path(forResource: res, ofType: "lproj"),
-           let bundle = Bundle(path: path){
-            return NSLocalizedString(self, bundle: bundle, value: "", comment: "")
-        }else{
-            return Bundle.main.localizedString(forKey: self, value: nil, table: nil)
+        guard let selectedLanguage = UserDefaults.standard.string(forKey: "LanguageManagerSelectedLanguage") else {
+            return NSLocalizedString(self, comment: "")
+                .replacingOccurrences(of: "\\n", with: "\n")
         }
+
+        if let path = Bundle.main.path(forResource: selectedLanguage, ofType: "lproj"),
+           let bundle = Bundle(path: path) {
+            return NSLocalizedString(self, bundle: bundle, value: "", comment: "")
+                .replacingOccurrences(of: "\\n", with: "\n")
+        }
+
+        return Bundle.main.localizedString(forKey: self, value: nil, table: nil)
+            .replacingOccurrences(of: "\\n", with: "\n")
     }
- 
+    
     func localized(with arguments: CVarArg...) -> String {
         return String(format: self.localized, arguments: arguments)
     }
