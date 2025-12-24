@@ -9,23 +9,25 @@ import SwiftUI
 #if os(iOS)
 @available(iOS 15.0, *)
 public struct AutoHeightTextEditor: View {
-
+    
     @State private var textEditorHeight : CGFloat = 20
     @Binding var inputText: String
     @Binding var placeholder: String
     @FocusState private var isTextEditorFocused: Bool
-
-    var sendAction: SendCommentAction?
-    public typealias SendCommentAction = () -> Void
+    
+    let backgroundColor: Color
+    let textColor: Color
     
     public init(inputText: Binding<String>,
-         placeholder: Binding<String>,
-         sendAction: SendCommentAction? = nil) {
+                placeholder: Binding<String>,
+                textColor: Color = .primary,
+                backgroundColor: Color = Color.gray.opacity(0.1)) {
         self._inputText = inputText
         self._placeholder = placeholder
-        self.sendAction = sendAction
+        self.backgroundColor = backgroundColor
+        self.textColor = textColor
     }
-
+    
     public var body: some View {
         HStack(alignment: .bottom, spacing: 0){
             ZStack(alignment: .leading) {
@@ -42,13 +44,14 @@ public struct AutoHeightTextEditor: View {
                                                    value: $0.frame(in: .local).size.height)
                         }
                     )
+                
                 TextEditor(text: $inputText)
                     .focused($isTextEditorFocused)
                     .padding(6)
                     .font(.system(size: 14))
                     .frame(height: max(40, textEditorHeight))
                     .ss.hideTextViewBackground()
-                    .foregroundStyle(.white)
+                    .foregroundStyle(textColor)
                 
                 
                 if inputText.isEmpty {
@@ -61,7 +64,7 @@ public struct AutoHeightTextEditor: View {
         }
         .background(
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color(hex: "3c3c45"))
+                .fill(backgroundColor)
         )
         .onPreferenceChange(ViewHeightKey.self) {
             textEditorHeight = $0
