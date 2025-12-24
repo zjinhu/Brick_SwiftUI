@@ -13,17 +13,19 @@ public struct AutoHeightTextEditor: View {
     @State private var textEditorHeight : CGFloat = 20
     @Binding var inputText: String
     @Binding var placeholder: String
-    @FocusState private var isTextEditorFocused: Bool
+    @FocusState.Binding var isTextEditorFocused: Bool
     
     let backgroundColor: Color
     let textColor: Color
     
     public init(inputText: Binding<String>,
                 placeholder: Binding<String>,
+                textFocused: FocusState<Bool>.Binding,
                 textColor: Color = .primary,
                 backgroundColor: Color = Color.gray.opacity(0.1)) {
         self._inputText = inputText
         self._placeholder = placeholder
+        self._isTextEditorFocused = textFocused
         self.backgroundColor = backgroundColor
         self.textColor = textColor
     }
@@ -81,6 +83,27 @@ struct ViewHeightKey: PreferenceKey {
 
 @available(iOS 15.0, *)
 #Preview {
-    AutoHeightTextEditor(inputText: .constant(""), placeholder: .constant("11111"))
+    struct PreviewWrapper: View {
+        @State private var text = ""
+        @State private var placeholderText = "11111"
+        @FocusState private var isFocused: Bool
+        
+        var body: some View {
+            VStack {
+                AutoHeightTextEditor(
+                    inputText: $text,
+                    placeholder: $placeholderText,
+                    textFocused: $isFocused
+                )
+                .padding()
+                
+                Button("关闭键盘") {
+                    isFocused = false
+                }
+            }
+        }
+    }
+    
+    return PreviewWrapper()
 }
 #endif

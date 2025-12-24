@@ -46,13 +46,24 @@ struct VisibleTabBar: ViewModifier {
     func body(content: Content) -> some View {
         return content
             .padding(.zero)
-            .toolbar(show == .hidden ? .hidden : .visible, for: .tabBar)
+            .tabBarHidden(show == .hidden ? .hidden : .visible)
             .onAppear{
-                withAnimation(.easeInOut){
-                    show = showTemp
-                }
+                show = showTemp
             }
     }
+}
+
+@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
+extension View {
+    @ViewBuilder
+    public func tabBarHidden(_ visibility: Visibility) -> some View {
+        if #available(iOS 18.0, *) {
+            self.toolbarVisibility(visibility, for: .tabBar)
+        }else{
+            self.toolbar(visibility, for: .tabBar)
+        }
+    }
+
 }
 
 struct ShowTabBar: ViewModifier {
