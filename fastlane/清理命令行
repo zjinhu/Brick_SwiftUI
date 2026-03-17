@@ -1,0 +1,64 @@
+#!/bin/bash
+set -e
+
+echo "⚠️  此操作将清理 Mac 上的所有命令行工具和用户安装的运行环境，还原为 macOS 出厂状态。"
+read -p "是否继续？(y/N): " confirm
+if [[ ! "$confirm" =~ ^[Yy]$ ]]; then
+    echo "已取消操作。"
+    exit 0
+fi
+
+echo "🔹 卸载 Homebrew..."
+if command -v brew &>/dev/null; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+else
+    echo "Homebrew 未安装，跳过..."
+fi
+
+echo "🔹 卸载 Ruby gem..."
+sudo gem uninstall -aIx || true
+rm -rf ~/.gem ~/.rbenv ~/.rvm
+
+echo "🔹 卸载 Python / pip / pyenv..."
+pip freeze 2>/dev/null | xargs pip uninstall -y || true
+rm -rf ~/Library/Python ~/.pyenv
+
+echo "🔹 卸载 Node / npm / nvm / yarn..."
+if command -v npm &>/dev/null; then
+    npm uninstall -g $(npm ls -g --depth=0 --parseable | awk -F/ '{print $NF}' | tail -n +2) || true
+fi
+rm -rf ~/.npm ~/.nvm ~/.yarn
+
+echo "🔹 卸载 Go..."
+rm -rf ~/.go ~/go
+
+echo "🔹 卸载 Rust..."
+if command -v rustup &>/dev/null; then
+    rustup self uninstall -y
+fi
+rm -rf ~/.cargo
+
+echo "🔹 卸载 Java / jenv..."
+rm -rf ~/.jenv
+sudo rm -rf /Library/Java/JavaVirtualMachines/*
+
+echo "🔹 删除 Shell 配置文件..."
+rm -f ~/.zshrc ~/.bash_profile ~/.bashrc ~/.profile
+
+echo "🔹 清理缓存..."
+rm -rf ~/Library/Caches ~/.cache ~/.config
+
+echo "🔹 重置 PATH..."
+sudo tee /etc/paths <<EOF >/dev/null
+/usr/local/bin
+/usr/bin
+/bin
+/usr/sbin
+/sbin
+EOF
+
+echo "🔹 重置 Xcode Command Line Tools..."
+sudo rm -rf /Library/Developer/CommandLineTools
+xcode-select --install || true
+
+echo "✅ 清理完成，请关闭终端并重新打开。"
