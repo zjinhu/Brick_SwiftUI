@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by iOS on 2023/7/4.
 //
@@ -2381,4 +2381,94 @@ extension SFSymbolName {
     public static var zrButtonRoundedtopHorizontalFill: Self{
         Self(symbolName: "zr.button.roundedtop.horizontal.fill")
     }
+}
+
+@available(iOS 17.1, macOS 14.1, tvOS 17.1, watchOS 10.1, visionOS 1.0, *)
+public extension SFSymbolName {
+    static var chevronCompactBackward: Self { .init(symbolName: "chevron.compact.backward") }
+    
+    static var chevronCompactForward: Self { .init(symbolName: "chevron.compact.forward") }
+    
+    static var personCropSquareBadgeCamera: Self { .init(symbolName: "person.crop.square.badge.camera") }
+    
+    static var personCropSquareBadgeCameraFill: Self { .init(symbolName: "person.crop.square.badge.camera.fill") }
+    
+    static var personCropSquareBadgeVideo: Self { .init(symbolName: "person.crop.square.badge.video") }
+    
+    static var personCropSquareBadgeVideoFill: Self { .init(symbolName: "person.crop.square.badge.video.fill") }
+}
+
+@available(iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2, visionOS 1.1, *)
+public extension SFSymbolName {
+    static var squareAndArrowUpBadgeClock: Self { .init(symbolName: "square.and.arrow.up.badge.clock") }
+    
+    static var squareAndArrowUpBadgeClockFill: Self { .init(symbolName: "square.and.arrow.up.badge.clock.fill") }
+}
+
+@available(iOS 17.4, macOS 14.4, tvOS 17.4, watchOS 10.4, visionOS 1.1, *)
+public extension SFSymbolName {
+    static var appleMeditate: Self { .init(symbolName: "apple.meditate") }
+    
+    static var appleMeditateSquareStack: Self { .init(symbolName: "apple.meditate.square.stack") }
+    
+    static var appleMeditateSquareStackFill: Self { .init(symbolName: "apple.meditate.square.stack.fill") }
+    
+    static var appleTerminalCircle: Self { .init(symbolName: "apple.terminal.circle") }
+    
+    static var appleTerminalCircleFill: Self { .init(symbolName: "apple.terminal.circle.fill") }
+    
+    static var arrowDownAppDashed: Self { .init(symbolName: "arrow.down.app.dashed") }
+    
+    static var arrowDownAppDashedTrianglebadgeExclamationmark: Self { .init(symbolName: "arrow.down.app.dashed.trianglebadge.exclamationmark") }
+    
+    static var audioJackMono: Self { .init(symbolName: "audio.jack.mono") }
+    
+    static var audioJackStereo: Self { .init(symbolName: "audio.jack.stereo") }
+    
+    static var ipadBadgeExclamationmark: Self { .init(symbolName: "ipad.badge.exclamationmark") }
+    
+    static var ipadGen1BadgeExclamationmark: Self { .init(symbolName: "ipad.gen1.badge.exclamationmark") }
+    
+    static var ipadGen1LandscapeBadgeExclamationmark: Self { .init(symbolName: "ipad.gen1.landscape.badge.exclamationmark") }
+    
+    static var ipadGen2BadgeExclamationmark: Self { .init(symbolName: "ipad.gen2.badge.exclamationmark") }
+    
+    static var ipadGen2LandscapeBadgeExclamationmark: Self { .init(symbolName: "ipad.gen2.landscape.badge.exclamationmark") }
+    
+    static var ipadLandscapeBadgeExclamationmark: Self { .init(symbolName: "ipad.landscape.badge.exclamationmark") }
+    
+    static var iphoneBadgeExclamationmark: Self { .init(symbolName: "iphone.badge.exclamationmark") }
+    
+    static var iphoneGen1BadgeExclamationmark: Self { .init(symbolName: "iphone.gen1.badge.exclamationmark") }
+    
+    static var iphoneGen2BadgeExclamationmark: Self { .init(symbolName: "iphone.gen2.badge.exclamationmark") }
+    
+    static var iphoneGen3BadgeExclamationmark: Self { .init(symbolName: "iphone.gen3.badge.exclamationmark") }
+    
+    static var medalStar: Self { .init(symbolName: "medal.star") }
+    
+    static var medalStarFill: Self { .init(symbolName: "medal.star.fill") }
+    
+    static var plusCircleDashed: Self { .init(symbolName: "plus.circle.dashed") }
+    
+    static var translate: Self { .init(symbolName: "translate") }
+}
+
+// 5.4 Symbols
+@available(iOS 17.6, macOS 14.6, tvOS 17.6, watchOS 10.6, visionOS 1.3, *)
+public extension SFSymbolName {
+    
+    static var beatsPill: Self { .init(symbolName: "beats.pill") }
+    
+    static var beatsPillFill: Self { .init(symbolName: "beats.pill.fill") }
+    
+    static var beatsSolobuds: Self { .init(symbolName: "beats.solobuds") }
+    
+    static var beatsSolobudsChargingcase: Self { .init(symbolName: "beats.solobuds.chargingcase") }
+    
+    static var beatsSolobudsChargingcaseFill: Self { .init(symbolName: "beats.solobuds.chargingcase.fill") }
+    
+    static var beatsSolobudsLeft: Self { .init(symbolName: "beats.solobuds.left") }
+    
+    static var beatsSolobudsRight: Self { .init(symbolName: "beats.solobuds.right") }
 }

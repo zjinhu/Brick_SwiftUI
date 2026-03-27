@@ -11,6 +11,7 @@ import BrickKit
 struct TestView: View {
     @Environment(\.dismiss) private var dismis
     @State private var inputText: String = ""
+    @FocusState private var isFocused: Bool
     
     @StateObject var ketboard: KeyboardManager = .init()
     
@@ -28,7 +29,7 @@ struct TestView: View {
                 Color.gray
                     .frame(maxHeight: .infinity)
                 
-                AutoHeightTextEditor(inputText: $inputText, placeholder: .constant("11111"))
+            AutoHeightTextEditor(inputText: $inputText, placeholder: .constant("11111"), textFocused: $isFocused)
                     .padding(.bottom, 20)
                 
                 Text("Hello, World!")

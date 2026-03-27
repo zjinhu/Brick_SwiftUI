@@ -2527,3 +2527,120 @@ extension SFSymbolName {
         Self(symbolName: "xmark.app.fill")
     }
 }
+
+@available(iOS 15.1, macOS 12.0, tvOS 8.1, watchOS 8.1, *)
+extension SFSymbolName {
+    public static var boltRingClosed: Self{
+        Self(symbolName: "bolt.ring.closed")
+    }
+    public static var platterFilledBottomAndArrowDownIphone: Self{
+        Self(symbolName: "platter.filled.bottom.and.arrow.down.iphone")
+    }
+    public static var platterFilledBottomIphone: Self{
+        Self(symbolName: "platter.filled.bottom.iphone")
+    }
+    public static var platterFilledTopAndArrowUpIphone: Self{
+        Self(symbolName: "platter.filled.top.and.arrow.up.iphone")
+    }
+    public static var platterFilledTopIphone: Self{
+        Self(symbolName: "platter.filled.top.iphone")
+    }
+    public static var square3Layers3dDownBackward: Self{
+        Self(symbolName: "square.3.layers.3d.down.backward")
+    }
+    public static var square3Layers3dDownForward: Self{
+        Self(symbolName: "square.3.layers.3d.down.forward")
+    }
+    public static var square3Layers3dDownLeft: Self{
+        Self(symbolName: "square.3.layers.3d.down.left")
+    }
+    public static var square3Layers3dDownRight: Self{
+        Self(symbolName: "square.3.layers.3d.down.right")
+    }
+    public static var textJustifyLeading: Self{
+        Self(symbolName: "text.justify.leading")
+    }
+    public static var textJustifyLeft: Self{
+        Self(symbolName: "text.justify.left")
+    }
+    public static var textJustifyRight: Self{
+        Self(symbolName: "text.justify.right")
+    }
+    public static var textJustifyTrailing: Self{
+        Self(symbolName: "text.justify.trailing")
+    }
+}
+
+@available(iOS 15.2, macOS 12.1, tvOS 8.3, watchOS 8.3, *)
+extension SFSymbolName {
+    public static var airpodGen3Left: Self{
+        Self(symbolName: "airpod.gen3.left")
+    }
+    public static var airpodGen3Right: Self{
+        Self(symbolName: "airpod.gen3.right")
+    }
+    public static var airpodsGen3: Self{
+        Self(symbolName: "airpods.gen3")
+    }
+    public static var airpodsGen3ChargingcaseWireless: Self{
+        Self(symbolName: "airpods.gen3.chargingcase.wireless")
+    }
+    public static var airpodsGen3ChargingcaseWirelessFill: Self{
+        Self(symbolName: "airpods.gen3.chargingcase.wireless.fill")
+    }
+    public static var beatsFitPro: Self{
+        Self(symbolName: "beats.fit.pro")
+    }
+    public static var beatsFitProChargingcase: Self{
+        Self(symbolName: "beats.fit.pro.chargingcase")
+    }
+    public static var beatsFitProChargingcaseFill: Self{
+        Self(symbolName: "beats.fit.pro.chargingcase.fill")
+    }
+    public static var beatsFitProLeft: Self{
+        Self(symbolName: "beats.fit.pro.left")
+    }
+    public static var beatsFitProRight: Self{
+        Self(symbolName: "beats.fit.pro.right")
+    }
+    public static var rectangleLeadinghalfFilled: Self{
+        Self(symbolName: "rectangle.leadinghalf.filled")
+    }
+    public static var rectangleTrailinghalfFilled: Self{
+        Self(symbolName: "rectangle.trailinghalf.filled")
+    }
+    public static var square3Layers3dDownLeftSlash: Self{
+        Self(symbolName: "square.3.layers.3d.down.left.slash")
+    }
+    public static var square3Layers3dDownRightSlash: Self{
+        Self(symbolName: "square.3.layers.3d.down.right.slash")
+    }
+    public static var square3Stack3dSlash: Self{
+        Self(symbolName: "square.3.stack.3d.slash")
+    }
+}
+
+@available(iOS 15.4, macOS 12.3, tvOS 8.5, watchOS 8.5, *)
+extension SFSymbolName {
+    public static var cameraMacro: Self{
+        Self(symbolName: "camera.macro")
+    }
+    public static var cameraMacroCircle: Self{
+        Self(symbolName: "camera.macro.circle")
+    }
+    public static var cameraMacroCircleFill: Self{
+        Self(symbolName: "camera.macro.circle.fill")
+    }
+    public static var dotsAndLineVerticalAndCursorarrowRectangle: Self{
+        Self(symbolName: "dots.and.line.vertical.and.cursorarrow.rectangle")
+    }
+    public static var keyViewfinder: Self{
+        Self(symbolName: "key.viewfinder")
+    }
+    public static var personBadgeKey: Self{
+        Self(symbolName: "person.badge.key")
+    }
+    public static var personBadgeKeyFill: Self{
+        Self(symbolName: "person.badge.key.fill")
+    }
+}
