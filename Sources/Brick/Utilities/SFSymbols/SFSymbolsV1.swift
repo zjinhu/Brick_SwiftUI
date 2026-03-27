@@ -5,5047 +5,15999 @@
 //  Created by iOS on 2023/7/4.
 //
 
-@available(iOS 13.0, macOS 10.15, tvOS 6.0, watchOS 6.0, *)
-extension SFSymbolName {
-    public static var _0Circle: Self{
-        Self(symbolName: "0.circle")
-    }
-    public static var _0CircleFill: Self{
-        Self(symbolName: "0.circle.fill")
-    }
-    public static var _0Square: Self{
-        Self(symbolName: "0.square")
-    }
-    public static var _0SquareFill: Self{
-        Self(symbolName: "0.square.fill")
-    }
-    public static var _00Circle: Self{
-        Self(symbolName: "00.circle")
-    }
-    public static var _00CircleFill: Self{
-        Self(symbolName: "00.circle.fill")
-    }
-    public static var _00Square: Self{
-        Self(symbolName: "00.square")
-    }
-    public static var _00SquareFill: Self{
-        Self(symbolName: "00.square.fill")
-    }
-    public static var _01Circle: Self{
-        Self(symbolName: "01.circle")
-    }
-    public static var _01CircleFill: Self{
-        Self(symbolName: "01.circle.fill")
-    }
-    public static var _01Square: Self{
-        Self(symbolName: "01.square")
-    }
-    public static var _01SquareFill: Self{
-        Self(symbolName: "01.square.fill")
-    }
-    public static var _02Circle: Self{
-        Self(symbolName: "02.circle")
-    }
-    public static var _02CircleFill: Self{
-        Self(symbolName: "02.circle.fill")
-    }
-    public static var _02Square: Self{
-        Self(symbolName: "02.square")
-    }
-    public static var _02SquareFill: Self{
-        Self(symbolName: "02.square.fill")
-    }
-    public static var _03Circle: Self{
-        Self(symbolName: "03.circle")
-    }
-    public static var _03CircleFill: Self{
-        Self(symbolName: "03.circle.fill")
-    }
-    public static var _03Square: Self{
-        Self(symbolName: "03.square")
-    }
-    public static var _03SquareFill: Self{
-        Self(symbolName: "03.square.fill")
-    }
-    public static var _04Circle: Self{
-        Self(symbolName: "04.circle")
-    }
-    public static var _04CircleFill: Self{
-        Self(symbolName: "04.circle.fill")
-    }
-    public static var _04Square: Self{
-        Self(symbolName: "04.square")
-    }
-    public static var _04SquareFill: Self{
-        Self(symbolName: "04.square.fill")
-    }
-    public static var _05Circle: Self{
-        Self(symbolName: "05.circle")
-    }
-    public static var _05CircleFill: Self{
-        Self(symbolName: "05.circle.fill")
-    }
-    public static var _05Square: Self{
-        Self(symbolName: "05.square")
-    }
-    public static var _05SquareFill: Self{
-        Self(symbolName: "05.square.fill")
-    }
-    public static var _06Circle: Self{
-        Self(symbolName: "06.circle")
-    }
-    public static var _06CircleFill: Self{
-        Self(symbolName: "06.circle.fill")
-    }
-    public static var _06Square: Self{
-        Self(symbolName: "06.square")
-    }
-    public static var _06SquareFill: Self{
-        Self(symbolName: "06.square.fill")
-    }
-    public static var _07Circle: Self{
-        Self(symbolName: "07.circle")
-    }
-    public static var _07CircleFill: Self{
-        Self(symbolName: "07.circle.fill")
-    }
-    public static var _07Square: Self{
-        Self(symbolName: "07.square")
-    }
-    public static var _07SquareFill: Self{
-        Self(symbolName: "07.square.fill")
-    }
-    public static var _08Circle: Self{
-        Self(symbolName: "08.circle")
-    }
-    public static var _08CircleFill: Self{
-        Self(symbolName: "08.circle.fill")
-    }
-    public static var _08Square: Self{
-        Self(symbolName: "08.square")
-    }
-    public static var _08SquareFill: Self{
-        Self(symbolName: "08.square.fill")
-    }
-    public static var _09Circle: Self{
-        Self(symbolName: "09.circle")
-    }
-    public static var _09CircleFill: Self{
-        Self(symbolName: "09.circle.fill")
-    }
-    public static var _09Square: Self{
-        Self(symbolName: "09.square")
-    }
-    public static var _09SquareFill: Self{
-        Self(symbolName: "09.square.fill")
-    }
-    public static var _1Circle: Self{
-        Self(symbolName: "1.circle")
-    }
-    public static var _1CircleFill: Self{
-        Self(symbolName: "1.circle.fill")
-    }
-    public static var _1Magnifyingglass: Self{
-        Self(symbolName: "1.magnifyingglass")
-    }
-    public static var _1Square: Self{
-        Self(symbolName: "1.square")
-    }
-    public static var _1SquareFill: Self{
-        Self(symbolName: "1.square.fill")
-    }
-    public static var _10Circle: Self{
-        Self(symbolName: "10.circle")
-    }
-    public static var _10CircleFill: Self{
-        Self(symbolName: "10.circle.fill")
-    }
-    public static var _10Square: Self{
-        Self(symbolName: "10.square")
-    }
-    public static var _10SquareFill: Self{
-        Self(symbolName: "10.square.fill")
-    }
-    public static var _11Circle: Self{
-        Self(symbolName: "11.circle")
-    }
-    public static var _11CircleFill: Self{
-        Self(symbolName: "11.circle.fill")
-    }
-    public static var _11Square: Self{
-        Self(symbolName: "11.square")
-    }
-    public static var _11SquareFill: Self{
-        Self(symbolName: "11.square.fill")
-    }
-    public static var _12Circle: Self{
-        Self(symbolName: "12.circle")
-    }
-    public static var _12CircleFill: Self{
-        Self(symbolName: "12.circle.fill")
-    }
-    public static var _12Square: Self{
-        Self(symbolName: "12.square")
-    }
-    public static var _12SquareFill: Self{
-        Self(symbolName: "12.square.fill")
-    }
-    public static var _13Circle: Self{
-        Self(symbolName: "13.circle")
-    }
-    public static var _13CircleFill: Self{
-        Self(symbolName: "13.circle.fill")
-    }
-    public static var _13Square: Self{
-        Self(symbolName: "13.square")
-    }
-    public static var _13SquareFill: Self{
-        Self(symbolName: "13.square.fill")
-    }
-    public static var _14Circle: Self{
-        Self(symbolName: "14.circle")
-    }
-    public static var _14CircleFill: Self{
-        Self(symbolName: "14.circle.fill")
-    }
-    public static var _14Square: Self{
-        Self(symbolName: "14.square")
-    }
-    public static var _14SquareFill: Self{
-        Self(symbolName: "14.square.fill")
-    }
-    public static var _15Circle: Self{
-        Self(symbolName: "15.circle")
-    }
-    public static var _15CircleFill: Self{
-        Self(symbolName: "15.circle.fill")
-    }
-    public static var _15Square: Self{
-        Self(symbolName: "15.square")
-    }
-    public static var _15SquareFill: Self{
-        Self(symbolName: "15.square.fill")
-    }
-    public static var _16Circle: Self{
-        Self(symbolName: "16.circle")
-    }
-    public static var _16CircleFill: Self{
-        Self(symbolName: "16.circle.fill")
-    }
-    public static var _16Square: Self{
-        Self(symbolName: "16.square")
-    }
-    public static var _16SquareFill: Self{
-        Self(symbolName: "16.square.fill")
-    }
-    public static var _17Circle: Self{
-        Self(symbolName: "17.circle")
-    }
-    public static var _17CircleFill: Self{
-        Self(symbolName: "17.circle.fill")
-    }
-    public static var _17Square: Self{
-        Self(symbolName: "17.square")
-    }
-    public static var _17SquareFill: Self{
-        Self(symbolName: "17.square.fill")
-    }
-    public static var _18Circle: Self{
-        Self(symbolName: "18.circle")
-    }
-    public static var _18CircleFill: Self{
-        Self(symbolName: "18.circle.fill")
-    }
-    public static var _18Square: Self{
-        Self(symbolName: "18.square")
-    }
-    public static var _18SquareFill: Self{
-        Self(symbolName: "18.square.fill")
-    }
-    public static var _19Circle: Self{
-        Self(symbolName: "19.circle")
-    }
-    public static var _19CircleFill: Self{
-        Self(symbolName: "19.circle.fill")
-    }
-    public static var _19Square: Self{
-        Self(symbolName: "19.square")
-    }
-    public static var _19SquareFill: Self{
-        Self(symbolName: "19.square.fill")
-    }
-    public static var _2Circle: Self{
-        Self(symbolName: "2.circle")
-    }
-    public static var _2CircleFill: Self{
-        Self(symbolName: "2.circle.fill")
-    }
-    public static var _2Square: Self{
-        Self(symbolName: "2.square")
-    }
-    public static var _2SquareFill: Self{
-        Self(symbolName: "2.square.fill")
-    }
-    public static var _20Circle: Self{
-        Self(symbolName: "20.circle")
-    }
-    public static var _20CircleFill: Self{
-        Self(symbolName: "20.circle.fill")
-    }
-    public static var _20Square: Self{
-        Self(symbolName: "20.square")
-    }
-    public static var _20SquareFill: Self{
-        Self(symbolName: "20.square.fill")
-    }
-    public static var _21Circle: Self{
-        Self(symbolName: "21.circle")
-    }
-    public static var _21CircleFill: Self{
-        Self(symbolName: "21.circle.fill")
-    }
-    public static var _21Square: Self{
-        Self(symbolName: "21.square")
-    }
-    public static var _21SquareFill: Self{
-        Self(symbolName: "21.square.fill")
-    }
-    public static var _22Circle: Self{
-        Self(symbolName: "22.circle")
-    }
-    public static var _22CircleFill: Self{
-        Self(symbolName: "22.circle.fill")
-    }
-    public static var _22Square: Self{
-        Self(symbolName: "22.square")
-    }
-    public static var _22SquareFill: Self{
-        Self(symbolName: "22.square.fill")
-    }
-    public static var _23Circle: Self{
-        Self(symbolName: "23.circle")
-    }
-    public static var _23CircleFill: Self{
-        Self(symbolName: "23.circle.fill")
-    }
-    public static var _23Square: Self{
-        Self(symbolName: "23.square")
-    }
-    public static var _23SquareFill: Self{
-        Self(symbolName: "23.square.fill")
-    }
-    public static var _24Circle: Self{
-        Self(symbolName: "24.circle")
-    }
-    public static var _24CircleFill: Self{
-        Self(symbolName: "24.circle.fill")
-    }
-    public static var _24Square: Self{
-        Self(symbolName: "24.square")
-    }
-    public static var _24SquareFill: Self{
-        Self(symbolName: "24.square.fill")
-    }
-    public static var _25Circle: Self{
-        Self(symbolName: "25.circle")
-    }
-    public static var _25CircleFill: Self{
-        Self(symbolName: "25.circle.fill")
-    }
-    public static var _25Square: Self{
-        Self(symbolName: "25.square")
-    }
-    public static var _25SquareFill: Self{
-        Self(symbolName: "25.square.fill")
-    }
-    public static var _26Circle: Self{
-        Self(symbolName: "26.circle")
-    }
-    public static var _26CircleFill: Self{
-        Self(symbolName: "26.circle.fill")
-    }
-    public static var _26Square: Self{
-        Self(symbolName: "26.square")
-    }
-    public static var _26SquareFill: Self{
-        Self(symbolName: "26.square.fill")
-    }
-    public static var _27Circle: Self{
-        Self(symbolName: "27.circle")
-    }
-    public static var _27CircleFill: Self{
-        Self(symbolName: "27.circle.fill")
-    }
-    public static var _27Square: Self{
-        Self(symbolName: "27.square")
-    }
-    public static var _27SquareFill: Self{
-        Self(symbolName: "27.square.fill")
-    }
-    public static var _28Circle: Self{
-        Self(symbolName: "28.circle")
-    }
-    public static var _28CircleFill: Self{
-        Self(symbolName: "28.circle.fill")
-    }
-    public static var _28Square: Self{
-        Self(symbolName: "28.square")
-    }
-    public static var _28SquareFill: Self{
-        Self(symbolName: "28.square.fill")
-    }
-    public static var _29Circle: Self{
-        Self(symbolName: "29.circle")
-    }
-    public static var _29CircleFill: Self{
-        Self(symbolName: "29.circle.fill")
-    }
-    public static var _29Square: Self{
-        Self(symbolName: "29.square")
-    }
-    public static var _29SquareFill: Self{
-        Self(symbolName: "29.square.fill")
-    }
-    public static var _3Circle: Self{
-        Self(symbolName: "3.circle")
-    }
-    public static var _3CircleFill: Self{
-        Self(symbolName: "3.circle.fill")
-    }
-    public static var _3Square: Self{
-        Self(symbolName: "3.square")
-    }
-    public static var _3SquareFill: Self{
-        Self(symbolName: "3.square.fill")
-    }
-    public static var _30Circle: Self{
-        Self(symbolName: "30.circle")
-    }
-    public static var _30CircleFill: Self{
-        Self(symbolName: "30.circle.fill")
-    }
-    public static var _30Square: Self{
-        Self(symbolName: "30.square")
-    }
-    public static var _30SquareFill: Self{
-        Self(symbolName: "30.square.fill")
-    }
-    public static var _31Circle: Self{
-        Self(symbolName: "31.circle")
-    }
-    public static var _31CircleFill: Self{
-        Self(symbolName: "31.circle.fill")
-    }
-    public static var _31Square: Self{
-        Self(symbolName: "31.square")
-    }
-    public static var _31SquareFill: Self{
-        Self(symbolName: "31.square.fill")
-    }
-    public static var _32Circle: Self{
-        Self(symbolName: "32.circle")
-    }
-    public static var _32CircleFill: Self{
-        Self(symbolName: "32.circle.fill")
-    }
-    public static var _32Square: Self{
-        Self(symbolName: "32.square")
-    }
-    public static var _32SquareFill: Self{
-        Self(symbolName: "32.square.fill")
-    }
-    public static var _33Circle: Self{
-        Self(symbolName: "33.circle")
-    }
-    public static var _33CircleFill: Self{
-        Self(symbolName: "33.circle.fill")
-    }
-    public static var _33Square: Self{
-        Self(symbolName: "33.square")
-    }
-    public static var _33SquareFill: Self{
-        Self(symbolName: "33.square.fill")
-    }
-    public static var _34Circle: Self{
-        Self(symbolName: "34.circle")
-    }
-    public static var _34CircleFill: Self{
-        Self(symbolName: "34.circle.fill")
-    }
-    public static var _34Square: Self{
-        Self(symbolName: "34.square")
-    }
-    public static var _34SquareFill: Self{
-        Self(symbolName: "34.square.fill")
-    }
-    public static var _35Circle: Self{
-        Self(symbolName: "35.circle")
-    }
-    public static var _35CircleFill: Self{
-        Self(symbolName: "35.circle.fill")
-    }
-    public static var _35Square: Self{
-        Self(symbolName: "35.square")
-    }
-    public static var _35SquareFill: Self{
-        Self(symbolName: "35.square.fill")
-    }
-    public static var _36Circle: Self{
-        Self(symbolName: "36.circle")
-    }
-    public static var _36CircleFill: Self{
-        Self(symbolName: "36.circle.fill")
-    }
-    public static var _36Square: Self{
-        Self(symbolName: "36.square")
-    }
-    public static var _36SquareFill: Self{
-        Self(symbolName: "36.square.fill")
-    }
-    public static var _37Circle: Self{
-        Self(symbolName: "37.circle")
-    }
-    public static var _37CircleFill: Self{
-        Self(symbolName: "37.circle.fill")
-    }
-    public static var _37Square: Self{
-        Self(symbolName: "37.square")
-    }
-    public static var _37SquareFill: Self{
-        Self(symbolName: "37.square.fill")
-    }
-    public static var _38Circle: Self{
-        Self(symbolName: "38.circle")
-    }
-    public static var _38CircleFill: Self{
-        Self(symbolName: "38.circle.fill")
-    }
-    public static var _38Square: Self{
-        Self(symbolName: "38.square")
-    }
-    public static var _38SquareFill: Self{
-        Self(symbolName: "38.square.fill")
-    }
-    public static var _39Circle: Self{
-        Self(symbolName: "39.circle")
-    }
-    public static var _39CircleFill: Self{
-        Self(symbolName: "39.circle.fill")
-    }
-    public static var _39Square: Self{
-        Self(symbolName: "39.square")
-    }
-    public static var _39SquareFill: Self{
-        Self(symbolName: "39.square.fill")
-    }
-    public static var _4AltCircle: Self{
-        Self(symbolName: "4.alt.circle")
-    }
-    public static var _4AltCircleFill: Self{
-        Self(symbolName: "4.alt.circle.fill")
-    }
-    public static var _4AltSquare: Self{
-        Self(symbolName: "4.alt.square")
-    }
-    public static var _4AltSquareFill: Self{
-        Self(symbolName: "4.alt.square.fill")
-    }
-    public static var _4Circle: Self{
-        Self(symbolName: "4.circle")
-    }
-    public static var _4CircleFill: Self{
-        Self(symbolName: "4.circle.fill")
-    }
-    public static var _4Square: Self{
-        Self(symbolName: "4.square")
-    }
-    public static var _4SquareFill: Self{
-        Self(symbolName: "4.square.fill")
-    }
-    public static var _40Circle: Self{
-        Self(symbolName: "40.circle")
-    }
-    public static var _40CircleFill: Self{
-        Self(symbolName: "40.circle.fill")
-    }
-    public static var _40Square: Self{
-        Self(symbolName: "40.square")
-    }
-    public static var _40SquareFill: Self{
-        Self(symbolName: "40.square.fill")
-    }
-    public static var _41Circle: Self{
-        Self(symbolName: "41.circle")
-    }
-    public static var _41CircleFill: Self{
-        Self(symbolName: "41.circle.fill")
-    }
-    public static var _41Square: Self{
-        Self(symbolName: "41.square")
-    }
-    public static var _41SquareFill: Self{
-        Self(symbolName: "41.square.fill")
-    }
-    public static var _42Circle: Self{
-        Self(symbolName: "42.circle")
-    }
-    public static var _42CircleFill: Self{
-        Self(symbolName: "42.circle.fill")
-    }
-    public static var _42Square: Self{
-        Self(symbolName: "42.square")
-    }
-    public static var _42SquareFill: Self{
-        Self(symbolName: "42.square.fill")
-    }
-    public static var _43Circle: Self{
-        Self(symbolName: "43.circle")
-    }
-    public static var _43CircleFill: Self{
-        Self(symbolName: "43.circle.fill")
-    }
-    public static var _43Square: Self{
-        Self(symbolName: "43.square")
-    }
-    public static var _43SquareFill: Self{
-        Self(symbolName: "43.square.fill")
-    }
-    public static var _44Circle: Self{
-        Self(symbolName: "44.circle")
-    }
-    public static var _44CircleFill: Self{
-        Self(symbolName: "44.circle.fill")
-    }
-    public static var _44Square: Self{
-        Self(symbolName: "44.square")
-    }
-    public static var _44SquareFill: Self{
-        Self(symbolName: "44.square.fill")
-    }
-    public static var _45Circle: Self{
-        Self(symbolName: "45.circle")
-    }
-    public static var _45CircleFill: Self{
-        Self(symbolName: "45.circle.fill")
-    }
-    public static var _45Square: Self{
-        Self(symbolName: "45.square")
-    }
-    public static var _45SquareFill: Self{
-        Self(symbolName: "45.square.fill")
-    }
-    public static var _46Circle: Self{
-        Self(symbolName: "46.circle")
-    }
-    public static var _46CircleFill: Self{
-        Self(symbolName: "46.circle.fill")
-    }
-    public static var _46Square: Self{
-        Self(symbolName: "46.square")
-    }
-    public static var _46SquareFill: Self{
-        Self(symbolName: "46.square.fill")
-    }
-    public static var _47Circle: Self{
-        Self(symbolName: "47.circle")
-    }
-    public static var _47CircleFill: Self{
-        Self(symbolName: "47.circle.fill")
-    }
-    public static var _47Square: Self{
-        Self(symbolName: "47.square")
-    }
-    public static var _47SquareFill: Self{
-        Self(symbolName: "47.square.fill")
-    }
-    public static var _48Circle: Self{
-        Self(symbolName: "48.circle")
-    }
-    public static var _48CircleFill: Self{
-        Self(symbolName: "48.circle.fill")
-    }
-    public static var _48Square: Self{
-        Self(symbolName: "48.square")
-    }
-    public static var _48SquareFill: Self{
-        Self(symbolName: "48.square.fill")
-    }
-    public static var _49Circle: Self{
-        Self(symbolName: "49.circle")
-    }
-    public static var _49CircleFill: Self{
-        Self(symbolName: "49.circle.fill")
-    }
-    public static var _49Square: Self{
-        Self(symbolName: "49.square")
-    }
-    public static var _49SquareFill: Self{
-        Self(symbolName: "49.square.fill")
-    }
-    public static var _5Circle: Self{
-        Self(symbolName: "5.circle")
-    }
-    public static var _5CircleFill: Self{
-        Self(symbolName: "5.circle.fill")
-    }
-    public static var _5Square: Self{
-        Self(symbolName: "5.square")
-    }
-    public static var _5SquareFill: Self{
-        Self(symbolName: "5.square.fill")
-    }
-    public static var _50Circle: Self{
-        Self(symbolName: "50.circle")
-    }
-    public static var _50CircleFill: Self{
-        Self(symbolName: "50.circle.fill")
-    }
-    public static var _50Square: Self{
-        Self(symbolName: "50.square")
-    }
-    public static var _50SquareFill: Self{
-        Self(symbolName: "50.square.fill")
-    }
-    public static var _6AltCircle: Self{
-        Self(symbolName: "6.alt.circle")
-    }
-    public static var _6AltCircleFill: Self{
-        Self(symbolName: "6.alt.circle.fill")
-    }
-    public static var _6AltSquare: Self{
-        Self(symbolName: "6.alt.square")
-    }
-    public static var _6AltSquareFill: Self{
-        Self(symbolName: "6.alt.square.fill")
-    }
-    public static var _6Circle: Self{
-        Self(symbolName: "6.circle")
-    }
-    public static var _6CircleFill: Self{
-        Self(symbolName: "6.circle.fill")
-    }
-    public static var _6Square: Self{
-        Self(symbolName: "6.square")
-    }
-    public static var _6SquareFill: Self{
-        Self(symbolName: "6.square.fill")
-    }
-    public static var _7Circle: Self{
-        Self(symbolName: "7.circle")
-    }
-    public static var _7CircleFill: Self{
-        Self(symbolName: "7.circle.fill")
-    }
-    public static var _7Square: Self{
-        Self(symbolName: "7.square")
-    }
-    public static var _7SquareFill: Self{
-        Self(symbolName: "7.square.fill")
-    }
-    public static var _8Circle: Self{
-        Self(symbolName: "8.circle")
-    }
-    public static var _8CircleFill: Self{
-        Self(symbolName: "8.circle.fill")
-    }
-    public static var _8Square: Self{
-        Self(symbolName: "8.square")
-    }
-    public static var _8SquareFill: Self{
-        Self(symbolName: "8.square.fill")
-    }
-    public static var _9AltCircle: Self{
-        Self(symbolName: "9.alt.circle")
-    }
-    public static var _9AltCircleFill: Self{
-        Self(symbolName: "9.alt.circle.fill")
-    }
-    public static var _9AltSquare: Self{
-        Self(symbolName: "9.alt.square")
-    }
-    public static var _9AltSquareFill: Self{
-        Self(symbolName: "9.alt.square.fill")
-    }
-    public static var _9Circle: Self{
-        Self(symbolName: "9.circle")
-    }
-    public static var _9CircleFill: Self{
-        Self(symbolName: "9.circle.fill")
-    }
-    public static var _9Square: Self{
-        Self(symbolName: "9.square")
-    }
-    public static var _9SquareFill: Self{
-        Self(symbolName: "9.square.fill")
-    }
-    public static var a: Self{
-        Self(symbolName: "a")
-    }
-    public static var aCircle: Self{
-        Self(symbolName: "a.circle")
-    }
-    public static var aCircleFill: Self{
-        Self(symbolName: "a.circle.fill")
-    }
-    public static var aSquare: Self{
-        Self(symbolName: "a.square")
-    }
-    public static var aSquareFill: Self{
-        Self(symbolName: "a.square.fill")
-    }
-    public static var airplane: Self{
-        Self(symbolName: "airplane")
-    }
-    public static var airplayaudio: Self{
-        Self(symbolName: "airplayaudio")
-    }
-    public static var airplayvideo: Self{
-        Self(symbolName: "airplayvideo")
-    }
-    public static var alarm: Self{
-        Self(symbolName: "alarm")
-    }
-    public static var alarmFill: Self{
-        Self(symbolName: "alarm.fill")
-    }
-    public static var alt: Self{
-        Self(symbolName: "alt")
-    }
-    public static var ant: Self{
-        Self(symbolName: "ant")
-    }
-    public static var antCircle: Self{
-        Self(symbolName: "ant.circle")
-    }
-    public static var antCircleFill: Self{
-        Self(symbolName: "ant.circle.fill")
-    }
-    public static var antFill: Self{
-        Self(symbolName: "ant.fill")
-    }
-    public static var antennaRadiowavesLeftAndRight: Self{
-        Self(symbolName: "antenna.radiowaves.left.and.right")
-    }
-    public static var app: Self{
-        Self(symbolName: "app")
-    }
-    public static var appBadge: Self{
-        Self(symbolName: "app.badge")
-    }
-    public static var appBadgeFill: Self{
-        Self(symbolName: "app.badge.fill")
-    }
-    public static var appFill: Self{
-        Self(symbolName: "app.fill")
-    }
-    public static var appGift: Self{
-        Self(symbolName: "app.gift")
-    }
-    public static var appGiftFill: Self{
-        Self(symbolName: "app.gift.fill")
-    }
-    public static var archivebox: Self{
-        Self(symbolName: "archivebox")
-    }
-    public static var archiveboxFill: Self{
-        Self(symbolName: "archivebox.fill")
-    }
-    public static var arkit: Self{
-        Self(symbolName: "arkit")
-    }
-    public static var arrow2Circlepath: Self{
-        Self(symbolName: "arrow.2.circlepath")
-    }
-    public static var arrow2CirclepathCircle: Self{
-        Self(symbolName: "arrow.2.circlepath.circle")
-    }
-    public static var arrow2CirclepathCircleFill: Self{
-        Self(symbolName: "arrow.2.circlepath.circle.fill")
-    }
-    public static var arrow2Squarepath: Self{
-        Self(symbolName: "arrow.2.squarepath")
-    }
-    public static var arrow3Trianglepath: Self{
-        Self(symbolName: "arrow.3.trianglepath")
-    }
-    public static var arrowBranch: Self{
-        Self(symbolName: "arrow.branch")
-    }
-    public static var arrowClockwise: Self{
-        Self(symbolName: "arrow.clockwise")
-    }
-    public static var arrowClockwiseCircle: Self{
-        Self(symbolName: "arrow.clockwise.circle")
-    }
-    public static var arrowClockwiseCircleFill: Self{
-        Self(symbolName: "arrow.clockwise.circle.fill")
-    }
-    public static var arrowClockwiseIcloud: Self{
-        Self(symbolName: "arrow.clockwise.icloud")
-    }
-    public static var arrowClockwiseIcloudFill: Self{
-        Self(symbolName: "arrow.clockwise.icloud.fill")
-    }
-    public static var arrowCounterclockwise: Self{
-        Self(symbolName: "arrow.counterclockwise")
-    }
-    public static var arrowCounterclockwiseCircle: Self{
-        Self(symbolName: "arrow.counterclockwise.circle")
-    }
-    public static var arrowCounterclockwiseCircleFill: Self{
-        Self(symbolName: "arrow.counterclockwise.circle.fill")
-    }
-    public static var arrowCounterclockwiseIcloud: Self{
-        Self(symbolName: "arrow.counterclockwise.icloud")
-    }
-    public static var arrowCounterclockwiseIcloudFill: Self{
-        Self(symbolName: "arrow.counterclockwise.icloud.fill")
-    }
-    public static var arrowDown: Self{
-        Self(symbolName: "arrow.down")
-    }
-    public static var arrowDownCircle: Self{
-        Self(symbolName: "arrow.down.circle")
-    }
-    public static var arrowDownCircleFill: Self{
-        Self(symbolName: "arrow.down.circle.fill")
-    }
-    public static var arrowDownDoc: Self{
-        Self(symbolName: "arrow.down.doc")
-    }
-    public static var arrowDownDocFill: Self{
-        Self(symbolName: "arrow.down.doc.fill")
-    }
-    public static var arrowDownLeft: Self{
-        Self(symbolName: "arrow.down.left")
-    }
-    public static var arrowDownLeftCircle: Self{
-        Self(symbolName: "arrow.down.left.circle")
-    }
-    public static var arrowDownLeftCircleFill: Self{
-        Self(symbolName: "arrow.down.left.circle.fill")
-    }
-    public static var arrowDownLeftSquare: Self{
-        Self(symbolName: "arrow.down.left.square")
-    }
-    public static var arrowDownLeftSquareFill: Self{
-        Self(symbolName: "arrow.down.left.square.fill")
-    }
-    public static var arrowDownLeftVideo: Self{
-        Self(symbolName: "arrow.down.left.video")
-    }
-    public static var arrowDownLeftVideoFill: Self{
-        Self(symbolName: "arrow.down.left.video.fill")
-    }
-    public static var arrowDownRight: Self{
-        Self(symbolName: "arrow.down.right")
-    }
-    public static var arrowDownRightAndArrowUpLeft: Self{
-        Self(symbolName: "arrow.down.right.and.arrow.up.left")
-    }
-    public static var arrowDownRightCircle: Self{
-        Self(symbolName: "arrow.down.right.circle")
-    }
-    public static var arrowDownRightCircleFill: Self{
-        Self(symbolName: "arrow.down.right.circle.fill")
-    }
-    public static var arrowDownRightSquare: Self{
-        Self(symbolName: "arrow.down.right.square")
-    }
-    public static var arrowDownRightSquareFill: Self{
-        Self(symbolName: "arrow.down.right.square.fill")
-    }
-    public static var arrowDownSquare: Self{
-        Self(symbolName: "arrow.down.square")
-    }
-    public static var arrowDownSquareFill: Self{
-        Self(symbolName: "arrow.down.square.fill")
-    }
-    public static var arrowDownToLine: Self{
-        Self(symbolName: "arrow.down.to.line")
-    }
-    public static var arrowDownToLineAlt: Self{
-        Self(symbolName: "arrow.down.to.line.alt")
-    }
-    public static var arrowLeft: Self{
-        Self(symbolName: "arrow.left")
-    }
-    public static var arrowLeftAndRight: Self{
-        Self(symbolName: "arrow.left.and.right")
-    }
-    public static var arrowLeftAndRightCircle: Self{
-        Self(symbolName: "arrow.left.and.right.circle")
-    }
-    public static var arrowLeftAndRightCircleFill: Self{
-        Self(symbolName: "arrow.left.and.right.circle.fill")
-    }
-    public static var arrowLeftAndRightSquare: Self{
-        Self(symbolName: "arrow.left.and.right.square")
-    }
-    public static var arrowLeftAndRightSquareFill: Self{
-        Self(symbolName: "arrow.left.and.right.square.fill")
-    }
-    public static var arrowLeftCircle: Self{
-        Self(symbolName: "arrow.left.circle")
-    }
-    public static var arrowLeftCircleFill: Self{
-        Self(symbolName: "arrow.left.circle.fill")
-    }
-    public static var arrowLeftSquare: Self{
-        Self(symbolName: "arrow.left.square")
-    }
-    public static var arrowLeftSquareFill: Self{
-        Self(symbolName: "arrow.left.square.fill")
-    }
-    public static var arrowLeftToLine: Self{
-        Self(symbolName: "arrow.left.to.line")
-    }
-    public static var arrowLeftToLineAlt: Self{
-        Self(symbolName: "arrow.left.to.line.alt")
-    }
-    public static var arrowMerge: Self{
-        Self(symbolName: "arrow.merge")
-    }
-    public static var arrowRight: Self{
-        Self(symbolName: "arrow.right")
-    }
-    public static var arrowRightArrowLeft: Self{
-        Self(symbolName: "arrow.right.arrow.left")
-    }
-    public static var arrowRightArrowLeftCircle: Self{
-        Self(symbolName: "arrow.right.arrow.left.circle")
-    }
-    public static var arrowRightArrowLeftCircleFill: Self{
-        Self(symbolName: "arrow.right.arrow.left.circle.fill")
-    }
-    public static var arrowRightArrowLeftSquare: Self{
-        Self(symbolName: "arrow.right.arrow.left.square")
-    }
-    public static var arrowRightArrowLeftSquareFill: Self{
-        Self(symbolName: "arrow.right.arrow.left.square.fill")
-    }
-    public static var arrowRightCircle: Self{
-        Self(symbolName: "arrow.right.circle")
-    }
-    public static var arrowRightCircleFill: Self{
-        Self(symbolName: "arrow.right.circle.fill")
-    }
-    public static var arrowRightSquare: Self{
-        Self(symbolName: "arrow.right.square")
-    }
-    public static var arrowRightSquareFill: Self{
-        Self(symbolName: "arrow.right.square.fill")
-    }
-    public static var arrowRightToLine: Self{
-        Self(symbolName: "arrow.right.to.line")
-    }
-    public static var arrowRightToLineAlt: Self{
-        Self(symbolName: "arrow.right.to.line.alt")
-    }
-    public static var arrowSwap: Self{
-        Self(symbolName: "arrow.swap")
-    }
-    public static var arrowTurnDownLeft: Self{
-        Self(symbolName: "arrow.turn.down.left")
-    }
-    public static var arrowTurnDownRight: Self{
-        Self(symbolName: "arrow.turn.down.right")
-    }
-    public static var arrowTurnLeftDown: Self{
-        Self(symbolName: "arrow.turn.left.down")
-    }
-    public static var arrowTurnLeftUp: Self{
-        Self(symbolName: "arrow.turn.left.up")
-    }
-    public static var arrowTurnRightDown: Self{
-        Self(symbolName: "arrow.turn.right.down")
-    }
-    public static var arrowTurnRightUp: Self{
-        Self(symbolName: "arrow.turn.right.up")
-    }
-    public static var arrowTurnUpLeft: Self{
-        Self(symbolName: "arrow.turn.up.left")
-    }
-    public static var arrowTurnUpRight: Self{
-        Self(symbolName: "arrow.turn.up.right")
-    }
-    public static var arrowUp: Self{
-        Self(symbolName: "arrow.up")
-    }
-    public static var arrowUpAndDown: Self{
-        Self(symbolName: "arrow.up.and.down")
-    }
-    public static var arrowUpAndDownCircle: Self{
-        Self(symbolName: "arrow.up.and.down.circle")
-    }
-    public static var arrowUpAndDownCircleFill: Self{
-        Self(symbolName: "arrow.up.and.down.circle.fill")
-    }
-    public static var arrowUpAndDownSquare: Self{
-        Self(symbolName: "arrow.up.and.down.square")
-    }
-    public static var arrowUpAndDownSquareFill: Self{
-        Self(symbolName: "arrow.up.and.down.square.fill")
-    }
-    public static var arrowUpArrowDown: Self{
-        Self(symbolName: "arrow.up.arrow.down")
-    }
-    public static var arrowUpArrowDownCircle: Self{
-        Self(symbolName: "arrow.up.arrow.down.circle")
-    }
-    public static var arrowUpArrowDownCircleFill: Self{
-        Self(symbolName: "arrow.up.arrow.down.circle.fill")
-    }
-    public static var arrowUpArrowDownSquare: Self{
-        Self(symbolName: "arrow.up.arrow.down.square")
-    }
-    public static var arrowUpArrowDownSquareFill: Self{
-        Self(symbolName: "arrow.up.arrow.down.square.fill")
-    }
-    public static var arrowUpBin: Self{
-        Self(symbolName: "arrow.up.bin")
-    }
-    public static var arrowUpBinFill: Self{
-        Self(symbolName: "arrow.up.bin.fill")
-    }
-    public static var arrowUpCircle: Self{
-        Self(symbolName: "arrow.up.circle")
-    }
-    public static var arrowUpCircleFill: Self{
-        Self(symbolName: "arrow.up.circle.fill")
-    }
-    public static var arrowUpDoc: Self{
-        Self(symbolName: "arrow.up.doc")
-    }
-    public static var arrowUpDocFill: Self{
-        Self(symbolName: "arrow.up.doc.fill")
-    }
-    public static var arrowUpLeft: Self{
-        Self(symbolName: "arrow.up.left")
-    }
-    public static var arrowUpLeftAndArrowDownRight: Self{
-        Self(symbolName: "arrow.up.left.and.arrow.down.right")
-    }
-    public static var arrowUpLeftCircle: Self{
-        Self(symbolName: "arrow.up.left.circle")
-    }
-    public static var arrowUpLeftCircleFill: Self{
-        Self(symbolName: "arrow.up.left.circle.fill")
-    }
-    public static var arrowUpLeftSquare: Self{
-        Self(symbolName: "arrow.up.left.square")
-    }
-    public static var arrowUpLeftSquareFill: Self{
-        Self(symbolName: "arrow.up.left.square.fill")
-    }
-    public static var arrowUpRight: Self{
-        Self(symbolName: "arrow.up.right")
-    }
-    public static var arrowUpRightCircle: Self{
-        Self(symbolName: "arrow.up.right.circle")
-    }
-    public static var arrowUpRightCircleFill: Self{
-        Self(symbolName: "arrow.up.right.circle.fill")
-    }
-    public static var arrowUpRightDiamond: Self{
-        Self(symbolName: "arrow.up.right.diamond")
-    }
-    public static var arrowUpRightDiamondFill: Self{
-        Self(symbolName: "arrow.up.right.diamond.fill")
-    }
-    public static var arrowUpRightSquare: Self{
-        Self(symbolName: "arrow.up.right.square")
-    }
-    public static var arrowUpRightSquareFill: Self{
-        Self(symbolName: "arrow.up.right.square.fill")
-    }
-    public static var arrowUpRightVideo: Self{
-        Self(symbolName: "arrow.up.right.video")
-    }
-    public static var arrowUpRightVideoFill: Self{
-        Self(symbolName: "arrow.up.right.video.fill")
-    }
-    public static var arrowUpSquare: Self{
-        Self(symbolName: "arrow.up.square")
-    }
-    public static var arrowUpSquareFill: Self{
-        Self(symbolName: "arrow.up.square.fill")
-    }
-    public static var arrowUpToLine: Self{
-        Self(symbolName: "arrow.up.to.line")
-    }
-    public static var arrowUpToLineAlt: Self{
-        Self(symbolName: "arrow.up.to.line.alt")
-    }
-    public static var arrowUturnDown: Self{
-        Self(symbolName: "arrow.uturn.down")
-    }
-    public static var arrowUturnDownCircle: Self{
-        Self(symbolName: "arrow.uturn.down.circle")
-    }
-    public static var arrowUturnDownCircleFill: Self{
-        Self(symbolName: "arrow.uturn.down.circle.fill")
-    }
-    public static var arrowUturnDownSquare: Self{
-        Self(symbolName: "arrow.uturn.down.square")
-    }
-    public static var arrowUturnDownSquareFill: Self{
-        Self(symbolName: "arrow.uturn.down.square.fill")
-    }
-    public static var arrowUturnLeft: Self{
-        Self(symbolName: "arrow.uturn.left")
-    }
-    public static var arrowUturnLeftCircle: Self{
-        Self(symbolName: "arrow.uturn.left.circle")
-    }
-    public static var arrowUturnLeftCircleFill: Self{
-        Self(symbolName: "arrow.uturn.left.circle.fill")
-    }
-    public static var arrowUturnLeftSquare: Self{
-        Self(symbolName: "arrow.uturn.left.square")
-    }
-    public static var arrowUturnLeftSquareFill: Self{
-        Self(symbolName: "arrow.uturn.left.square.fill")
-    }
-    public static var arrowUturnRight: Self{
-        Self(symbolName: "arrow.uturn.right")
-    }
-    public static var arrowUturnRightCircle: Self{
-        Self(symbolName: "arrow.uturn.right.circle")
-    }
-    public static var arrowUturnRightCircleFill: Self{
-        Self(symbolName: "arrow.uturn.right.circle.fill")
-    }
-    public static var arrowUturnRightSquare: Self{
-        Self(symbolName: "arrow.uturn.right.square")
-    }
-    public static var arrowUturnRightSquareFill: Self{
-        Self(symbolName: "arrow.uturn.right.square.fill")
-    }
-    public static var arrowUturnUp: Self{
-        Self(symbolName: "arrow.uturn.up")
-    }
-    public static var arrowUturnUpCircle: Self{
-        Self(symbolName: "arrow.uturn.up.circle")
-    }
-    public static var arrowUturnUpCircleFill: Self{
-        Self(symbolName: "arrow.uturn.up.circle.fill")
-    }
-    public static var arrowUturnUpSquare: Self{
-        Self(symbolName: "arrow.uturn.up.square")
-    }
-    public static var arrowUturnUpSquareFill: Self{
-        Self(symbolName: "arrow.uturn.up.square.fill")
-    }
-    public static var arrowshapeTurnUpLeft: Self{
-        Self(symbolName: "arrowshape.turn.up.left")
-    }
-    public static var arrowshapeTurnUpLeft2: Self{
-        Self(symbolName: "arrowshape.turn.up.left.2")
-    }
-    public static var arrowshapeTurnUpLeft2Fill: Self{
-        Self(symbolName: "arrowshape.turn.up.left.2.fill")
-    }
-    public static var arrowshapeTurnUpLeftCircle: Self{
-        Self(symbolName: "arrowshape.turn.up.left.circle")
-    }
-    public static var arrowshapeTurnUpLeftCircleFill: Self{
-        Self(symbolName: "arrowshape.turn.up.left.circle.fill")
-    }
-    public static var arrowshapeTurnUpLeftFill: Self{
-        Self(symbolName: "arrowshape.turn.up.left.fill")
-    }
-    public static var arrowshapeTurnUpRight: Self{
-        Self(symbolName: "arrowshape.turn.up.right")
-    }
-    public static var arrowshapeTurnUpRightCircle: Self{
-        Self(symbolName: "arrowshape.turn.up.right.circle")
-    }
-    public static var arrowshapeTurnUpRightCircleFill: Self{
-        Self(symbolName: "arrowshape.turn.up.right.circle.fill")
-    }
-    public static var arrowshapeTurnUpRightFill: Self{
-        Self(symbolName: "arrowshape.turn.up.right.fill")
-    }
-    public static var arrowtriangleDown: Self{
-        Self(symbolName: "arrowtriangle.down")
-    }
-    public static var arrowtriangleDownCircle: Self{
-        Self(symbolName: "arrowtriangle.down.circle")
-    }
-    public static var arrowtriangleDownCircleFill: Self{
-        Self(symbolName: "arrowtriangle.down.circle.fill")
-    }
-    public static var arrowtriangleDownFill: Self{
-        Self(symbolName: "arrowtriangle.down.fill")
-    }
-    public static var arrowtriangleDownSquare: Self{
-        Self(symbolName: "arrowtriangle.down.square")
-    }
-    public static var arrowtriangleDownSquareFill: Self{
-        Self(symbolName: "arrowtriangle.down.square.fill")
-    }
-    public static var arrowtriangleLeft: Self{
-        Self(symbolName: "arrowtriangle.left")
-    }
-    public static var arrowtriangleLeftCircle: Self{
-        Self(symbolName: "arrowtriangle.left.circle")
-    }
-    public static var arrowtriangleLeftCircleFill: Self{
-        Self(symbolName: "arrowtriangle.left.circle.fill")
-    }
-    public static var arrowtriangleLeftFill: Self{
-        Self(symbolName: "arrowtriangle.left.fill")
-    }
-    public static var arrowtriangleLeftSquare: Self{
-        Self(symbolName: "arrowtriangle.left.square")
-    }
-    public static var arrowtriangleLeftSquareFill: Self{
-        Self(symbolName: "arrowtriangle.left.square.fill")
-    }
-    public static var arrowtriangleRight: Self{
-        Self(symbolName: "arrowtriangle.right")
-    }
-    public static var arrowtriangleRightCircle: Self{
-        Self(symbolName: "arrowtriangle.right.circle")
-    }
-    public static var arrowtriangleRightCircleFill: Self{
-        Self(symbolName: "arrowtriangle.right.circle.fill")
-    }
-    public static var arrowtriangleRightFill: Self{
-        Self(symbolName: "arrowtriangle.right.fill")
-    }
-    public static var arrowtriangleRightSquare: Self{
-        Self(symbolName: "arrowtriangle.right.square")
-    }
-    public static var arrowtriangleRightSquareFill: Self{
-        Self(symbolName: "arrowtriangle.right.square.fill")
-    }
-    public static var arrowtriangleUp: Self{
-        Self(symbolName: "arrowtriangle.up")
-    }
-    public static var arrowtriangleUpCircle: Self{
-        Self(symbolName: "arrowtriangle.up.circle")
-    }
-    public static var arrowtriangleUpCircleFill: Self{
-        Self(symbolName: "arrowtriangle.up.circle.fill")
-    }
-    public static var arrowtriangleUpFill: Self{
-        Self(symbolName: "arrowtriangle.up.fill")
-    }
-    public static var arrowtriangleUpSquare: Self{
-        Self(symbolName: "arrowtriangle.up.square")
-    }
-    public static var arrowtriangleUpSquareFill: Self{
-        Self(symbolName: "arrowtriangle.up.square.fill")
-    }
-    public static var asteriskCircle: Self{
-        Self(symbolName: "asterisk.circle")
-    }
-    public static var asteriskCircleFill: Self{
-        Self(symbolName: "asterisk.circle.fill")
-    }
-    public static var at: Self{
-        Self(symbolName: "at")
-    }
-    public static var atBadgeMinus: Self{
-        Self(symbolName: "at.badge.minus")
-    }
-    public static var atBadgePlus: Self{
-        Self(symbolName: "at.badge.plus")
-    }
-    public static var australsignCircle: Self{
-        Self(symbolName: "australsign.circle")
-    }
-    public static var australsignCircleFill: Self{
-        Self(symbolName: "australsign.circle.fill")
-    }
-    public static var australsignSquare: Self{
-        Self(symbolName: "australsign.square")
-    }
-    public static var australsignSquareFill: Self{
-        Self(symbolName: "australsign.square.fill")
-    }
-    public static var bCircle: Self{
-        Self(symbolName: "b.circle")
-    }
-    public static var bCircleFill: Self{
-        Self(symbolName: "b.circle.fill")
-    }
-    public static var bSquare: Self{
-        Self(symbolName: "b.square")
-    }
-    public static var bSquareFill: Self{
-        Self(symbolName: "b.square.fill")
-    }
-    public static var backward: Self{
-        Self(symbolName: "backward")
-    }
-    public static var backwardEnd: Self{
-        Self(symbolName: "backward.end")
-    }
-    public static var backwardEndAlt: Self{
-        Self(symbolName: "backward.end.alt")
-    }
-    public static var backwardEndAltFill: Self{
-        Self(symbolName: "backward.end.alt.fill")
-    }
-    public static var backwardEndFill: Self{
-        Self(symbolName: "backward.end.fill")
-    }
-    public static var backwardFill: Self{
-        Self(symbolName: "backward.fill")
-    }
-    public static var badgePlusRadiowavesRight: Self{
-        Self(symbolName: "badge.plus.radiowaves.right")
-    }
-    public static var bag: Self{
-        Self(symbolName: "bag")
-    }
-    public static var bagBadgeMinus: Self{
-        Self(symbolName: "bag.badge.minus")
-    }
-    public static var bagBadgePlus: Self{
-        Self(symbolName: "bag.badge.plus")
-    }
-    public static var bagFill: Self{
-        Self(symbolName: "bag.fill")
-    }
-    public static var bagFillBadgeMinus: Self{
-        Self(symbolName: "bag.fill.badge.minus")
-    }
-    public static var bagFillBadgePlus: Self{
-        Self(symbolName: "bag.fill.badge.plus")
-    }
-    public static var bahtsignCircle: Self{
-        Self(symbolName: "bahtsign.circle")
-    }
-    public static var bahtsignCircleFill: Self{
-        Self(symbolName: "bahtsign.circle.fill")
-    }
-    public static var bahtsignSquare: Self{
-        Self(symbolName: "bahtsign.square")
-    }
-    public static var bahtsignSquareFill: Self{
-        Self(symbolName: "bahtsign.square.fill")
-    }
-    public static var bandage: Self{
-        Self(symbolName: "bandage")
-    }
-    public static var bandageFill: Self{
-        Self(symbolName: "bandage.fill")
-    }
-    public static var barcode: Self{
-        Self(symbolName: "barcode")
-    }
-    public static var barcodeViewfinder: Self{
-        Self(symbolName: "barcode.viewfinder")
-    }
-    public static var battery0: Self{
-        Self(symbolName: "battery.0")
-    }
-    public static var battery100: Self{
-        Self(symbolName: "battery.100")
-    }
-    public static var battery25: Self{
-        Self(symbolName: "battery.25")
-    }
-    public static var bedDouble: Self{
-        Self(symbolName: "bed.double")
-    }
-    public static var bedDoubleFill: Self{
-        Self(symbolName: "bed.double.fill")
-    }
-    public static var bell: Self{
-        Self(symbolName: "bell")
-    }
-    public static var bellCircle: Self{
-        Self(symbolName: "bell.circle")
-    }
-    public static var bellCircleFill: Self{
-        Self(symbolName: "bell.circle.fill")
-    }
-    public static var bellFill: Self{
-        Self(symbolName: "bell.fill")
-    }
-    public static var bellSlash: Self{
-        Self(symbolName: "bell.slash")
-    }
-    public static var bellSlashFill: Self{
-        Self(symbolName: "bell.slash.fill")
-    }
-    public static var binXmark: Self{
-        Self(symbolName: "bin.xmark")
-    }
-    public static var binXmarkFill: Self{
-        Self(symbolName: "bin.xmark.fill")
-    }
-    public static var bitcoinsignCircle: Self{
-        Self(symbolName: "bitcoinsign.circle")
-    }
-    public static var bitcoinsignCircleFill: Self{
-        Self(symbolName: "bitcoinsign.circle.fill")
-    }
-    public static var bitcoinsignSquare: Self{
-        Self(symbolName: "bitcoinsign.square")
-    }
-    public static var bitcoinsignSquareFill: Self{
-        Self(symbolName: "bitcoinsign.square.fill")
-    }
-    public static var bold: Self{
-        Self(symbolName: "bold")
-    }
-    public static var boldItalicUnderline: Self{
-        Self(symbolName: "bold.italic.underline")
-    }
-    public static var boldUnderline: Self{
-        Self(symbolName: "bold.underline")
-    }
-    public static var bolt: Self{
-        Self(symbolName: "bolt")
-    }
-    public static var boltBadgeA: Self{
-        Self(symbolName: "bolt.badge.a")
-    }
-    public static var boltBadgeAFill: Self{
-        Self(symbolName: "bolt.badge.a.fill")
-    }
-    public static var boltCircle: Self{
-        Self(symbolName: "bolt.circle")
-    }
-    public static var boltCircleFill: Self{
-        Self(symbolName: "bolt.circle.fill")
-    }
-    public static var boltFill: Self{
-        Self(symbolName: "bolt.fill")
-    }
-    public static var boltHorizontal: Self{
-        Self(symbolName: "bolt.horizontal")
-    }
-    public static var boltHorizontalCircle: Self{
-        Self(symbolName: "bolt.horizontal.circle")
-    }
-    public static var boltHorizontalCircleFill: Self{
-        Self(symbolName: "bolt.horizontal.circle.fill")
-    }
-    public static var boltHorizontalFill: Self{
-        Self(symbolName: "bolt.horizontal.fill")
-    }
-    public static var boltHorizontalIcloud: Self{
-        Self(symbolName: "bolt.horizontal.icloud")
-    }
-    public static var boltHorizontalIcloudFill: Self{
-        Self(symbolName: "bolt.horizontal.icloud.fill")
-    }
-    public static var boltSlash: Self{
-        Self(symbolName: "bolt.slash")
-    }
-    public static var boltSlashFill: Self{
-        Self(symbolName: "bolt.slash.fill")
-    }
-    public static var book: Self{
-        Self(symbolName: "book")
-    }
-    public static var bookCircle: Self{
-        Self(symbolName: "book.circle")
-    }
-    public static var bookCircleFill: Self{
-        Self(symbolName: "book.circle.fill")
-    }
-    public static var bookFill: Self{
-        Self(symbolName: "book.fill")
-    }
-    public static var bookmark: Self{
-        Self(symbolName: "bookmark")
-    }
-    public static var bookmarkFill: Self{
-        Self(symbolName: "bookmark.fill")
-    }
-    public static var briefcase: Self{
-        Self(symbolName: "briefcase")
-    }
-    public static var briefcaseFill: Self{
-        Self(symbolName: "briefcase.fill")
-    }
-    public static var bubbleLeft: Self{
-        Self(symbolName: "bubble.left")
-    }
-    public static var bubbleLeftAndBubbleRight: Self{
-        Self(symbolName: "bubble.left.and.bubble.right")
-    }
-    public static var bubbleLeftAndBubbleRightFill: Self{
-        Self(symbolName: "bubble.left.and.bubble.right.fill")
-    }
-    public static var bubbleLeftFill: Self{
-        Self(symbolName: "bubble.left.fill")
-    }
-    public static var bubbleMiddleBottom: Self{
-        Self(symbolName: "bubble.middle.bottom")
-    }
-    public static var bubbleMiddleBottomFill: Self{
-        Self(symbolName: "bubble.middle.bottom.fill")
-    }
-    public static var bubbleMiddleTop: Self{
-        Self(symbolName: "bubble.middle.top")
-    }
-    public static var bubbleMiddleTopFill: Self{
-        Self(symbolName: "bubble.middle.top.fill")
-    }
-    public static var bubbleRight: Self{
-        Self(symbolName: "bubble.right")
-    }
-    public static var bubbleRightFill: Self{
-        Self(symbolName: "bubble.right.fill")
-    }
-    public static var burn: Self{
-        Self(symbolName: "burn")
-    }
-    public static var burst: Self{
-        Self(symbolName: "burst")
-    }
-    public static var burstFill: Self{
-        Self(symbolName: "burst.fill")
-    }
-    public static var cCircle: Self{
-        Self(symbolName: "c.circle")
-    }
-    public static var cCircleFill: Self{
-        Self(symbolName: "c.circle.fill")
-    }
-    public static var cSquare: Self{
-        Self(symbolName: "c.square")
-    }
-    public static var cSquareFill: Self{
-        Self(symbolName: "c.square.fill")
-    }
-    public static var calendar: Self{
-        Self(symbolName: "calendar")
-    }
-    public static var calendarBadgeMinus: Self{
-        Self(symbolName: "calendar.badge.minus")
-    }
-    public static var calendarBadgePlus: Self{
-        Self(symbolName: "calendar.badge.plus")
-    }
-    public static var calendarCircle: Self{
-        Self(symbolName: "calendar.circle")
-    }
-    public static var calendarCircleFill: Self{
-        Self(symbolName: "calendar.circle.fill")
-    }
-    public static var camera: Self{
-        Self(symbolName: "camera")
-    }
-    public static var cameraCircle: Self{
-        Self(symbolName: "camera.circle")
-    }
-    public static var cameraCircleFill: Self{
-        Self(symbolName: "camera.circle.fill")
-    }
-    public static var cameraFill: Self{
-        Self(symbolName: "camera.fill")
-    }
-    public static var cameraOnRectangle: Self{
-        Self(symbolName: "camera.on.rectangle")
-    }
-    public static var cameraOnRectangleFill: Self{
-        Self(symbolName: "camera.on.rectangle.fill")
-    }
-    public static var cameraRotate: Self{
-        Self(symbolName: "camera.rotate")
-    }
-    public static var cameraRotateFill: Self{
-        Self(symbolName: "camera.rotate.fill")
-    }
-    public static var cameraViewfinder: Self{
-        Self(symbolName: "camera.viewfinder")
-    }
-    public static var capslock: Self{
-        Self(symbolName: "capslock")
-    }
-    public static var capslockFill: Self{
-        Self(symbolName: "capslock.fill")
-    }
-    public static var capsule: Self{
-        Self(symbolName: "capsule")
-    }
-    public static var capsuleFill: Self{
-        Self(symbolName: "capsule.fill")
-    }
-    public static var captionsBubble: Self{
-        Self(symbolName: "captions.bubble")
-    }
-    public static var captionsBubbleFill: Self{
-        Self(symbolName: "captions.bubble.fill")
-    }
-    public static var carFill: Self{
-        Self(symbolName: "car.fill")
-    }
-    public static var cart: Self{
-        Self(symbolName: "cart")
-    }
-    public static var cartBadgeMinus: Self{
-        Self(symbolName: "cart.badge.minus")
-    }
-    public static var cartBadgePlus: Self{
-        Self(symbolName: "cart.badge.plus")
-    }
-    public static var cartFill: Self{
-        Self(symbolName: "cart.fill")
-    }
-    public static var cartFillBadgeMinus: Self{
-        Self(symbolName: "cart.fill.badge.minus")
-    }
-    public static var cartFillBadgePlus: Self{
-        Self(symbolName: "cart.fill.badge.plus")
-    }
-    public static var cedisignCircle: Self{
-        Self(symbolName: "cedisign.circle")
-    }
-    public static var cedisignCircleFill: Self{
-        Self(symbolName: "cedisign.circle.fill")
-    }
-    public static var cedisignSquare: Self{
-        Self(symbolName: "cedisign.square")
-    }
-    public static var cedisignSquareFill: Self{
-        Self(symbolName: "cedisign.square.fill")
-    }
-    public static var centsignCircle: Self{
-        Self(symbolName: "centsign.circle")
-    }
-    public static var centsignCircleFill: Self{
-        Self(symbolName: "centsign.circle.fill")
-    }
-    public static var centsignSquare: Self{
-        Self(symbolName: "centsign.square")
-    }
-    public static var centsignSquareFill: Self{
-        Self(symbolName: "centsign.square.fill")
-    }
-    public static var chartBar: Self{
-        Self(symbolName: "chart.bar")
-    }
-    public static var chartBarFill: Self{
-        Self(symbolName: "chart.bar.fill")
-    }
-    public static var chartPie: Self{
-        Self(symbolName: "chart.pie")
-    }
-    public static var chartPieFill: Self{
-        Self(symbolName: "chart.pie.fill")
-    }
-    public static var checkmark: Self{
-        Self(symbolName: "checkmark")
-    }
-    public static var checkmarkCircle: Self{
-        Self(symbolName: "checkmark.circle")
-    }
-    public static var checkmarkCircleFill: Self{
-        Self(symbolName: "checkmark.circle.fill")
-    }
-    public static var checkmarkRectangle: Self{
-        Self(symbolName: "checkmark.rectangle")
-    }
-    public static var checkmarkRectangleFill: Self{
-        Self(symbolName: "checkmark.rectangle.fill")
-    }
-    public static var checkmarkSeal: Self{
-        Self(symbolName: "checkmark.seal")
-    }
-    public static var checkmarkSealFill: Self{
-        Self(symbolName: "checkmark.seal.fill")
-    }
-    public static var checkmarkShield: Self{
-        Self(symbolName: "checkmark.shield")
-    }
-    public static var checkmarkShieldFill: Self{
-        Self(symbolName: "checkmark.shield.fill")
-    }
-    public static var checkmarkSquare: Self{
-        Self(symbolName: "checkmark.square")
-    }
-    public static var checkmarkSquareFill: Self{
-        Self(symbolName: "checkmark.square.fill")
-    }
-    public static var chevronCompactDown: Self{
-        Self(symbolName: "chevron.compact.down")
-    }
-    public static var chevronCompactLeft: Self{
-        Self(symbolName: "chevron.compact.left")
-    }
-    public static var chevronCompactRight: Self{
-        Self(symbolName: "chevron.compact.right")
-    }
-    public static var chevronCompactUp: Self{
-        Self(symbolName: "chevron.compact.up")
-    }
-    public static var chevronDown: Self{
-        Self(symbolName: "chevron.down")
-    }
-    public static var chevronDownCircle: Self{
-        Self(symbolName: "chevron.down.circle")
-    }
-    public static var chevronDownCircleFill: Self{
-        Self(symbolName: "chevron.down.circle.fill")
-    }
-    public static var chevronDownSquare: Self{
-        Self(symbolName: "chevron.down.square")
-    }
-    public static var chevronDownSquareFill: Self{
-        Self(symbolName: "chevron.down.square.fill")
-    }
-    public static var chevronLeft: Self{
-        Self(symbolName: "chevron.left")
-    }
-    public static var chevronLeft2: Self{
-        Self(symbolName: "chevron.left.2")
-    }
-    public static var chevronLeftCircle: Self{
-        Self(symbolName: "chevron.left.circle")
-    }
-    public static var chevronLeftCircleFill: Self{
-        Self(symbolName: "chevron.left.circle.fill")
-    }
-    public static var chevronLeftSlashChevronRight: Self{
-        Self(symbolName: "chevron.left.slash.chevron.right")
-    }
-    public static var chevronLeftSquare: Self{
-        Self(symbolName: "chevron.left.square")
-    }
-    public static var chevronLeftSquareFill: Self{
-        Self(symbolName: "chevron.left.square.fill")
-    }
-    public static var chevronRight: Self{
-        Self(symbolName: "chevron.right")
-    }
-    public static var chevronRight2: Self{
-        Self(symbolName: "chevron.right.2")
-    }
-    public static var chevronRightCircle: Self{
-        Self(symbolName: "chevron.right.circle")
-    }
-    public static var chevronRightCircleFill: Self{
-        Self(symbolName: "chevron.right.circle.fill")
-    }
-    public static var chevronRightSquare: Self{
-        Self(symbolName: "chevron.right.square")
-    }
-    public static var chevronRightSquareFill: Self{
-        Self(symbolName: "chevron.right.square.fill")
-    }
-    public static var chevronUp: Self{
-        Self(symbolName: "chevron.up")
-    }
-    public static var chevronUpChevronDown: Self{
-        Self(symbolName: "chevron.up.chevron.down")
-    }
-    public static var chevronUpCircle: Self{
-        Self(symbolName: "chevron.up.circle")
-    }
-    public static var chevronUpCircleFill: Self{
-        Self(symbolName: "chevron.up.circle.fill")
-    }
-    public static var chevronUpSquare: Self{
-        Self(symbolName: "chevron.up.square")
-    }
-    public static var chevronUpSquareFill: Self{
-        Self(symbolName: "chevron.up.square.fill")
-    }
-    public static var circle: Self{
-        Self(symbolName: "circle")
-    }
-    public static var circleBottomthirdSplit: Self{
-        Self(symbolName: "circle.bottomthird.split")
-    }
-    public static var circleFill: Self{
-        Self(symbolName: "circle.fill")
-    }
-    public static var circleGrid3x3: Self{
-        Self(symbolName: "circle.grid.3x3")
-    }
-    public static var circleGrid3x3Fill: Self{
-        Self(symbolName: "circle.grid.3x3.fill")
-    }
-    public static var circleGridHex: Self{
-        Self(symbolName: "circle.grid.hex")
-    }
-    public static var circleGridHexFill: Self{
-        Self(symbolName: "circle.grid.hex.fill")
-    }
-    public static var circleLefthalfFill: Self{
-        Self(symbolName: "circle.lefthalf.fill")
-    }
-    public static var circleRighthalfFill: Self{
-        Self(symbolName: "circle.righthalf.fill")
-    }
-    public static var clear: Self{
-        Self(symbolName: "clear")
-    }
-    public static var clearFill: Self{
-        Self(symbolName: "clear.fill")
-    }
-    public static var clock: Self{
-        Self(symbolName: "clock")
-    }
-    public static var clockFill: Self{
-        Self(symbolName: "clock.fill")
-    }
-    public static var cloud: Self{
-        Self(symbolName: "cloud")
-    }
-    public static var cloudBolt: Self{
-        Self(symbolName: "cloud.bolt")
-    }
-    public static var cloudBoltFill: Self{
-        Self(symbolName: "cloud.bolt.fill")
-    }
-    public static var cloudBoltRain: Self{
-        Self(symbolName: "cloud.bolt.rain")
-    }
-    public static var cloudBoltRainFill: Self{
-        Self(symbolName: "cloud.bolt.rain.fill")
-    }
-    public static var cloudDrizzle: Self{
-        Self(symbolName: "cloud.drizzle")
-    }
-    public static var cloudDrizzleFill: Self{
-        Self(symbolName: "cloud.drizzle.fill")
-    }
-    public static var cloudFill: Self{
-        Self(symbolName: "cloud.fill")
-    }
-    public static var cloudFog: Self{
-        Self(symbolName: "cloud.fog")
-    }
-    public static var cloudFogFill: Self{
-        Self(symbolName: "cloud.fog.fill")
-    }
-    public static var cloudHail: Self{
-        Self(symbolName: "cloud.hail")
-    }
-    public static var cloudHailFill: Self{
-        Self(symbolName: "cloud.hail.fill")
-    }
-    public static var cloudHeavyrain: Self{
-        Self(symbolName: "cloud.heavyrain")
-    }
-    public static var cloudHeavyrainFill: Self{
-        Self(symbolName: "cloud.heavyrain.fill")
-    }
-    public static var cloudMoon: Self{
-        Self(symbolName: "cloud.moon")
-    }
-    public static var cloudMoonBolt: Self{
-        Self(symbolName: "cloud.moon.bolt")
-    }
-    public static var cloudMoonBoltFill: Self{
-        Self(symbolName: "cloud.moon.bolt.fill")
-    }
-    public static var cloudMoonFill: Self{
-        Self(symbolName: "cloud.moon.fill")
-    }
-    public static var cloudMoonRain: Self{
-        Self(symbolName: "cloud.moon.rain")
-    }
-    public static var cloudMoonRainFill: Self{
-        Self(symbolName: "cloud.moon.rain.fill")
-    }
-    public static var cloudRain: Self{
-        Self(symbolName: "cloud.rain")
-    }
-    public static var cloudRainFill: Self{
-        Self(symbolName: "cloud.rain.fill")
-    }
-    public static var cloudSleet: Self{
-        Self(symbolName: "cloud.sleet")
-    }
-    public static var cloudSleetFill: Self{
-        Self(symbolName: "cloud.sleet.fill")
-    }
-    public static var cloudSnow: Self{
-        Self(symbolName: "cloud.snow")
-    }
-    public static var cloudSnowFill: Self{
-        Self(symbolName: "cloud.snow.fill")
-    }
-    public static var cloudSun: Self{
-        Self(symbolName: "cloud.sun")
-    }
-    public static var cloudSunBolt: Self{
-        Self(symbolName: "cloud.sun.bolt")
-    }
-    public static var cloudSunBoltFill: Self{
-        Self(symbolName: "cloud.sun.bolt.fill")
-    }
-    public static var cloudSunFill: Self{
-        Self(symbolName: "cloud.sun.fill")
-    }
-    public static var cloudSunRain: Self{
-        Self(symbolName: "cloud.sun.rain")
-    }
-    public static var cloudSunRainFill: Self{
-        Self(symbolName: "cloud.sun.rain.fill")
-    }
-    public static var coloncurrencysignCircle: Self{
-        Self(symbolName: "coloncurrencysign.circle")
-    }
-    public static var coloncurrencysignCircleFill: Self{
-        Self(symbolName: "coloncurrencysign.circle.fill")
-    }
-    public static var coloncurrencysignSquare: Self{
-        Self(symbolName: "coloncurrencysign.square")
-    }
-    public static var coloncurrencysignSquareFill: Self{
-        Self(symbolName: "coloncurrencysign.square.fill")
-    }
-    public static var command: Self{
-        Self(symbolName: "command")
-    }
-    public static var control: Self{
-        Self(symbolName: "control")
-    }
-    public static var creditcard: Self{
-        Self(symbolName: "creditcard")
-    }
-    public static var creditcardFill: Self{
-        Self(symbolName: "creditcard.fill")
-    }
-    public static var crop: Self{
-        Self(symbolName: "crop")
-    }
-    public static var cropRotate: Self{
-        Self(symbolName: "crop.rotate")
-    }
-    public static var cruzeirosignCircle: Self{
-        Self(symbolName: "cruzeirosign.circle")
-    }
-    public static var cruzeirosignCircleFill: Self{
-        Self(symbolName: "cruzeirosign.circle.fill")
-    }
-    public static var cruzeirosignSquare: Self{
-        Self(symbolName: "cruzeirosign.square")
-    }
-    public static var cruzeirosignSquareFill: Self{
-        Self(symbolName: "cruzeirosign.square.fill")
-    }
-    public static var cube: Self{
-        Self(symbolName: "cube")
-    }
-    public static var cubeBox: Self{
-        Self(symbolName: "cube.box")
-    }
-    public static var cubeBoxFill: Self{
-        Self(symbolName: "cube.box.fill")
-    }
-    public static var cubeFill: Self{
-        Self(symbolName: "cube.fill")
-    }
-    public static var cursorRays: Self{
-        Self(symbolName: "cursor.rays")
-    }
-    public static var dCircle: Self{
-        Self(symbolName: "d.circle")
-    }
-    public static var dCircleFill: Self{
-        Self(symbolName: "d.circle.fill")
-    }
-    public static var dSquare: Self{
-        Self(symbolName: "d.square")
-    }
-    public static var dSquareFill: Self{
-        Self(symbolName: "d.square.fill")
-    }
-    public static var decreaseIndent: Self{
-        Self(symbolName: "decrease.indent")
-    }
-    public static var decreaseQuotelevel: Self{
-        Self(symbolName: "decrease.quotelevel")
-    }
-    public static var deleteLeft: Self{
-        Self(symbolName: "delete.left")
-    }
-    public static var deleteLeftFill: Self{
-        Self(symbolName: "delete.left.fill")
-    }
-    public static var deleteRight: Self{
-        Self(symbolName: "delete.right")
-    }
-    public static var deleteRightFill: Self{
-        Self(symbolName: "delete.right.fill")
-    }
-    public static var desktopcomputer: Self{
-        Self(symbolName: "desktopcomputer")
-    }
-    public static var dial: Self{
-        Self(symbolName: "dial")
-    }
-    public static var dialFill: Self{
-        Self(symbolName: "dial.fill")
-    }
-    public static var divide: Self{
-        Self(symbolName: "divide")
-    }
-    public static var divideCircle: Self{
-        Self(symbolName: "divide.circle")
-    }
-    public static var divideCircleFill: Self{
-        Self(symbolName: "divide.circle.fill")
-    }
-    public static var divideSquare: Self{
-        Self(symbolName: "divide.square")
-    }
-    public static var divideSquareFill: Self{
-        Self(symbolName: "divide.square.fill")
-    }
-    public static var doc: Self{
-        Self(symbolName: "doc")
-    }
-    public static var docAppend: Self{
-        Self(symbolName: "doc.append")
-    }
-    public static var docCircle: Self{
-        Self(symbolName: "doc.circle")
-    }
-    public static var docCircleFill: Self{
-        Self(symbolName: "doc.circle.fill")
-    }
-    public static var docFill: Self{
-        Self(symbolName: "doc.fill")
-    }
-    public static var docOnClipboard: Self{
-        Self(symbolName: "doc.on.clipboard")
-    }
-    public static var docOnClipboardFill: Self{
-        Self(symbolName: "doc.on.clipboard.fill")
-    }
-    public static var docOnDoc: Self{
-        Self(symbolName: "doc.on.doc")
-    }
-    public static var docOnDocFill: Self{
-        Self(symbolName: "doc.on.doc.fill")
-    }
-    public static var docPlaintext: Self{
-        Self(symbolName: "doc.plaintext")
-    }
-    public static var docRichtext: Self{
-        Self(symbolName: "doc.richtext")
-    }
-    public static var docText: Self{
-        Self(symbolName: "doc.text")
-    }
-    public static var docTextFill: Self{
-        Self(symbolName: "doc.text.fill")
-    }
-    public static var docTextMagnifyingglass: Self{
-        Self(symbolName: "doc.text.magnifyingglass")
-    }
-    public static var docTextViewfinder: Self{
-        Self(symbolName: "doc.text.viewfinder")
-    }
-    public static var dollarsignCircle: Self{
-        Self(symbolName: "dollarsign.circle")
-    }
-    public static var dollarsignCircleFill: Self{
-        Self(symbolName: "dollarsign.circle.fill")
-    }
-    public static var dollarsignSquare: Self{
-        Self(symbolName: "dollarsign.square")
-    }
-    public static var dollarsignSquareFill: Self{
-        Self(symbolName: "dollarsign.square.fill")
-    }
-    public static var dongsignCircle: Self{
-        Self(symbolName: "dongsign.circle")
-    }
-    public static var dongsignCircleFill: Self{
-        Self(symbolName: "dongsign.circle.fill")
-    }
-    public static var dongsignSquare: Self{
-        Self(symbolName: "dongsign.square")
-    }
-    public static var dongsignSquareFill: Self{
-        Self(symbolName: "dongsign.square.fill")
-    }
-    public static var dotRadiowavesLeftAndRight: Self{
-        Self(symbolName: "dot.radiowaves.left.and.right")
-    }
-    public static var dotRadiowavesRight: Self{
-        Self(symbolName: "dot.radiowaves.right")
-    }
-    public static var dotSquare: Self{
-        Self(symbolName: "dot.square")
-    }
-    public static var dotSquareFill: Self{
-        Self(symbolName: "dot.square.fill")
-    }
-    public static var dropTriangle: Self{
-        Self(symbolName: "drop.triangle")
-    }
-    public static var dropTriangleFill: Self{
-        Self(symbolName: "drop.triangle.fill")
-    }
-    public static var eCircle: Self{
-        Self(symbolName: "e.circle")
-    }
-    public static var eCircleFill: Self{
-        Self(symbolName: "e.circle.fill")
-    }
-    public static var eSquare: Self{
-        Self(symbolName: "e.square")
-    }
-    public static var eSquareFill: Self{
-        Self(symbolName: "e.square.fill")
-    }
-    public static var ear: Self{
-        Self(symbolName: "ear")
-    }
-    public static var eject: Self{
-        Self(symbolName: "eject")
-    }
-    public static var ejectFill: Self{
-        Self(symbolName: "eject.fill")
-    }
-    public static var ellipsesBubble: Self{
-        Self(symbolName: "ellipses.bubble")
-    }
-    public static var ellipsesBubbleFill: Self{
-        Self(symbolName: "ellipses.bubble.fill")
-    }
-    public static var ellipsis: Self{
-        Self(symbolName: "ellipsis")
-    }
-    public static var ellipsisCircle: Self{
-        Self(symbolName: "ellipsis.circle")
-    }
-    public static var ellipsisCircleFill: Self{
-        Self(symbolName: "ellipsis.circle.fill")
-    }
-    public static var envelope: Self{
-        Self(symbolName: "envelope")
-    }
-    public static var envelopeBadge: Self{
-        Self(symbolName: "envelope.badge")
-    }
-    public static var envelopeBadgeFill: Self{
-        Self(symbolName: "envelope.badge.fill")
-    }
-    public static var envelopeCircle: Self{
-        Self(symbolName: "envelope.circle")
-    }
-    public static var envelopeCircleFill: Self{
-        Self(symbolName: "envelope.circle.fill")
-    }
-    public static var envelopeFill: Self{
-        Self(symbolName: "envelope.fill")
-    }
-    public static var envelopeOpen: Self{
-        Self(symbolName: "envelope.open")
-    }
-    public static var envelopeOpenFill: Self{
-        Self(symbolName: "envelope.open.fill")
-    }
-    public static var equal: Self{
-        Self(symbolName: "equal")
-    }
-    public static var equalCircle: Self{
-        Self(symbolName: "equal.circle")
-    }
-    public static var equalCircleFill: Self{
-        Self(symbolName: "equal.circle.fill")
-    }
-    public static var equalSquare: Self{
-        Self(symbolName: "equal.square")
-    }
-    public static var equalSquareFill: Self{
-        Self(symbolName: "equal.square.fill")
-    }
-    public static var escape: Self{
-        Self(symbolName: "escape")
-    }
-    public static var eurosignCircle: Self{
-        Self(symbolName: "eurosign.circle")
-    }
-    public static var eurosignCircleFill: Self{
-        Self(symbolName: "eurosign.circle.fill")
-    }
-    public static var eurosignSquare: Self{
-        Self(symbolName: "eurosign.square")
-    }
-    public static var eurosignSquareFill: Self{
-        Self(symbolName: "eurosign.square.fill")
-    }
-    public static var exclamationmark: Self{
-        Self(symbolName: "exclamationmark")
-    }
-    public static var exclamationmarkBubble: Self{
-        Self(symbolName: "exclamationmark.bubble")
-    }
-    public static var exclamationmarkBubbleFill: Self{
-        Self(symbolName: "exclamationmark.bubble.fill")
-    }
-    public static var exclamationmarkCircle: Self{
-        Self(symbolName: "exclamationmark.circle")
-    }
-    public static var exclamationmarkCircleFill: Self{
-        Self(symbolName: "exclamationmark.circle.fill")
-    }
-    public static var exclamationmarkIcloud: Self{
-        Self(symbolName: "exclamationmark.icloud")
-    }
-    public static var exclamationmarkIcloudFill: Self{
-        Self(symbolName: "exclamationmark.icloud.fill")
-    }
-    public static var exclamationmarkOctagon: Self{
-        Self(symbolName: "exclamationmark.octagon")
-    }
-    public static var exclamationmarkOctagonFill: Self{
-        Self(symbolName: "exclamationmark.octagon.fill")
-    }
-    public static var exclamationmarkShield: Self{
-        Self(symbolName: "exclamationmark.shield")
-    }
-    public static var exclamationmarkShieldFill: Self{
-        Self(symbolName: "exclamationmark.shield.fill")
-    }
-    public static var exclamationmarkSquare: Self{
-        Self(symbolName: "exclamationmark.square")
-    }
-    public static var exclamationmarkSquareFill: Self{
-        Self(symbolName: "exclamationmark.square.fill")
-    }
-    public static var exclamationmarkTriangle: Self{
-        Self(symbolName: "exclamationmark.triangle")
-    }
-    public static var exclamationmarkTriangleFill: Self{
-        Self(symbolName: "exclamationmark.triangle.fill")
-    }
-    public static var eye: Self{
-        Self(symbolName: "eye")
-    }
-    public static var eyeFill: Self{
-        Self(symbolName: "eye.fill")
-    }
-    public static var eyeSlash: Self{
-        Self(symbolName: "eye.slash")
-    }
-    public static var eyeSlashFill: Self{
-        Self(symbolName: "eye.slash.fill")
-    }
-    public static var eyedropper: Self{
-        Self(symbolName: "eyedropper")
-    }
-    public static var eyedropperFull: Self{
-        Self(symbolName: "eyedropper.full")
-    }
-    public static var eyedropperHalffull: Self{
-        Self(symbolName: "eyedropper.halffull")
-    }
-    public static var eyeglasses: Self{
-        Self(symbolName: "eyeglasses")
-    }
-    public static var fCircle: Self{
-        Self(symbolName: "f.circle")
-    }
-    public static var fCircleFill: Self{
-        Self(symbolName: "f.circle.fill")
-    }
-    public static var fCursive: Self{
-        Self(symbolName: "f.cursive")
-    }
-    public static var fCursiveCircle: Self{
-        Self(symbolName: "f.cursive.circle")
-    }
-    public static var fCursiveCircleFill: Self{
-        Self(symbolName: "f.cursive.circle.fill")
-    }
-    public static var fSquare: Self{
-        Self(symbolName: "f.square")
-    }
-    public static var fSquareFill: Self{
-        Self(symbolName: "f.square.fill")
-    }
-    public static var faceid: Self{
-        Self(symbolName: "faceid")
-    }
-    public static var film: Self{
-        Self(symbolName: "film")
-    }
-    public static var filmFill: Self{
-        Self(symbolName: "film.fill")
-    }
-    public static var flag: Self{
-        Self(symbolName: "flag")
-    }
-    public static var flagCircle: Self{
-        Self(symbolName: "flag.circle")
-    }
-    public static var flagCircleFill: Self{
-        Self(symbolName: "flag.circle.fill")
-    }
-    public static var flagFill: Self{
-        Self(symbolName: "flag.fill")
-    }
-    public static var flagSlash: Self{
-        Self(symbolName: "flag.slash")
-    }
-    public static var flagSlashFill: Self{
-        Self(symbolName: "flag.slash.fill")
-    }
-    public static var flame: Self{
-        Self(symbolName: "flame")
-    }
-    public static var flameFill: Self{
-        Self(symbolName: "flame.fill")
-    }
-    public static var florinsignCircle: Self{
-        Self(symbolName: "florinsign.circle")
-    }
-    public static var florinsignCircleFill: Self{
-        Self(symbolName: "florinsign.circle.fill")
-    }
-    public static var florinsignSquare: Self{
-        Self(symbolName: "florinsign.square")
-    }
-    public static var florinsignSquareFill: Self{
-        Self(symbolName: "florinsign.square.fill")
-    }
-    public static var flowchart: Self{
-        Self(symbolName: "flowchart")
-    }
-    public static var flowchartFill: Self{
-        Self(symbolName: "flowchart.fill")
-    }
-    public static var folder: Self{
-        Self(symbolName: "folder")
-    }
-    public static var folderBadgeMinus: Self{
-        Self(symbolName: "folder.badge.minus")
-    }
-    public static var folderBadgePersonCrop: Self{
-        Self(symbolName: "folder.badge.person.crop")
-    }
-    public static var folderBadgePlus: Self{
-        Self(symbolName: "folder.badge.plus")
-    }
-    public static var folderCircle: Self{
-        Self(symbolName: "folder.circle")
-    }
-    public static var folderCircleFill: Self{
-        Self(symbolName: "folder.circle.fill")
-    }
-    public static var folderFill: Self{
-        Self(symbolName: "folder.fill")
-    }
-    public static var folderFillBadgeMinus: Self{
-        Self(symbolName: "folder.fill.badge.minus")
-    }
-    public static var folderFillBadgePersonCrop: Self{
-        Self(symbolName: "folder.fill.badge.person.crop")
-    }
-    public static var folderFillBadgePlus: Self{
-        Self(symbolName: "folder.fill.badge.plus")
-    }
-    public static var forward: Self{
-        Self(symbolName: "forward")
-    }
-    public static var forwardEnd: Self{
-        Self(symbolName: "forward.end")
-    }
-    public static var forwardEndAlt: Self{
-        Self(symbolName: "forward.end.alt")
-    }
-    public static var forwardEndAltFill: Self{
-        Self(symbolName: "forward.end.alt.fill")
-    }
-    public static var forwardEndFill: Self{
-        Self(symbolName: "forward.end.fill")
-    }
-    public static var forwardFill: Self{
-        Self(symbolName: "forward.fill")
-    }
-    public static var francsignCircle: Self{
-        Self(symbolName: "francsign.circle")
-    }
-    public static var francsignCircleFill: Self{
-        Self(symbolName: "francsign.circle.fill")
-    }
-    public static var francsignSquare: Self{
-        Self(symbolName: "francsign.square")
-    }
-    public static var francsignSquareFill: Self{
-        Self(symbolName: "francsign.square.fill")
-    }
-    public static var function: Self{
-        Self(symbolName: "function")
-    }
-    public static var fx: Self{
-        Self(symbolName: "fx")
-    }
-    public static var gCircle: Self{
-        Self(symbolName: "g.circle")
-    }
-    public static var gCircleFill: Self{
-        Self(symbolName: "g.circle.fill")
-    }
-    public static var gSquare: Self{
-        Self(symbolName: "g.square")
-    }
-    public static var gSquareFill: Self{
-        Self(symbolName: "g.square.fill")
-    }
-    public static var gamecontroller: Self{
-        Self(symbolName: "gamecontroller")
-    }
-    public static var gamecontrollerFill: Self{
-        Self(symbolName: "gamecontroller.fill")
-    }
-    public static var gauge: Self{
-        Self(symbolName: "gauge")
-    }
-    public static var gaugeBadgeMinus: Self{
-        Self(symbolName: "gauge.badge.minus")
-    }
-    public static var gaugeBadgePlus: Self{
-        Self(symbolName: "gauge.badge.plus")
-    }
-    public static var gear: Self{
-        Self(symbolName: "gear")
-    }
-    public static var gift: Self{
-        Self(symbolName: "gift")
-    }
-    public static var giftFill: Self{
-        Self(symbolName: "gift.fill")
-    }
-    public static var globe: Self{
-        Self(symbolName: "globe")
-    }
-    public static var gobackward: Self{
-        Self(symbolName: "gobackward")
-    }
-    public static var gobackward10: Self{
-        Self(symbolName: "gobackward.10")
-    }
-    public static var gobackward10Ar: Self{
-        Self(symbolName: "gobackward.10.ar")
-    }
-    public static var gobackward10Hi: Self{
-        Self(symbolName: "gobackward.10.hi")
-    }
-    public static var gobackward15: Self{
-        Self(symbolName: "gobackward.15")
-    }
-    public static var gobackward15Ar: Self{
-        Self(symbolName: "gobackward.15.ar")
-    }
-    public static var gobackward15Hi: Self{
-        Self(symbolName: "gobackward.15.hi")
-    }
-    public static var gobackward30: Self{
-        Self(symbolName: "gobackward.30")
-    }
-    public static var gobackward30Ar: Self{
-        Self(symbolName: "gobackward.30.ar")
-    }
-    public static var gobackward30Hi: Self{
-        Self(symbolName: "gobackward.30.hi")
-    }
-    public static var gobackward45: Self{
-        Self(symbolName: "gobackward.45")
-    }
-    public static var gobackward45Ar: Self{
-        Self(symbolName: "gobackward.45.ar")
-    }
-    public static var gobackward45Hi: Self{
-        Self(symbolName: "gobackward.45.hi")
-    }
-    public static var gobackward60: Self{
-        Self(symbolName: "gobackward.60")
-    }
-    public static var gobackward60Ar: Self{
-        Self(symbolName: "gobackward.60.ar")
-    }
-    public static var gobackward60Hi: Self{
-        Self(symbolName: "gobackward.60.hi")
-    }
-    public static var gobackward75: Self{
-        Self(symbolName: "gobackward.75")
-    }
-    public static var gobackward75Ar: Self{
-        Self(symbolName: "gobackward.75.ar")
-    }
-    public static var gobackward75Hi: Self{
-        Self(symbolName: "gobackward.75.hi")
-    }
-    public static var gobackward90: Self{
-        Self(symbolName: "gobackward.90")
-    }
-    public static var gobackward90Ar: Self{
-        Self(symbolName: "gobackward.90.ar")
-    }
-    public static var gobackward90Hi: Self{
-        Self(symbolName: "gobackward.90.hi")
-    }
-    public static var gobackwardMinus: Self{
-        Self(symbolName: "gobackward.minus")
-    }
-    public static var goforward: Self{
-        Self(symbolName: "goforward")
-    }
-    public static var goforward10: Self{
-        Self(symbolName: "goforward.10")
-    }
-    public static var goforward10Ar: Self{
-        Self(symbolName: "goforward.10.ar")
-    }
-    public static var goforward10Hi: Self{
-        Self(symbolName: "goforward.10.hi")
-    }
-    public static var goforward15: Self{
-        Self(symbolName: "goforward.15")
-    }
-    public static var goforward15Ar: Self{
-        Self(symbolName: "goforward.15.ar")
-    }
-    public static var goforward15Hi: Self{
-        Self(symbolName: "goforward.15.hi")
-    }
-    public static var goforward30: Self{
-        Self(symbolName: "goforward.30")
-    }
-    public static var goforward30Ar: Self{
-        Self(symbolName: "goforward.30.ar")
-    }
-    public static var goforward30Hi: Self{
-        Self(symbolName: "goforward.30.hi")
-    }
-    public static var goforward45: Self{
-        Self(symbolName: "goforward.45")
-    }
-    public static var goforward45Ar: Self{
-        Self(symbolName: "goforward.45.ar")
-    }
-    public static var goforward45Hi: Self{
-        Self(symbolName: "goforward.45.hi")
-    }
-    public static var goforward60: Self{
-        Self(symbolName: "goforward.60")
-    }
-    public static var goforward60Ar: Self{
-        Self(symbolName: "goforward.60.ar")
-    }
-    public static var goforward60Hi: Self{
-        Self(symbolName: "goforward.60.hi")
-    }
-    public static var goforward75: Self{
-        Self(symbolName: "goforward.75")
-    }
-    public static var goforward75Ar: Self{
-        Self(symbolName: "goforward.75.ar")
-    }
-    public static var goforward75Hi: Self{
-        Self(symbolName: "goforward.75.hi")
-    }
-    public static var goforward90: Self{
-        Self(symbolName: "goforward.90")
-    }
-    public static var goforward90Ar: Self{
-        Self(symbolName: "goforward.90.ar")
-    }
-    public static var goforward90Hi: Self{
-        Self(symbolName: "goforward.90.hi")
-    }
-    public static var goforwardPlus: Self{
-        Self(symbolName: "goforward.plus")
-    }
-    public static var greaterthan: Self{
-        Self(symbolName: "greaterthan")
-    }
-    public static var greaterthanCircle: Self{
-        Self(symbolName: "greaterthan.circle")
-    }
-    public static var greaterthanCircleFill: Self{
-        Self(symbolName: "greaterthan.circle.fill")
-    }
-    public static var greaterthanSquare: Self{
-        Self(symbolName: "greaterthan.square")
-    }
-    public static var greaterthanSquareFill: Self{
-        Self(symbolName: "greaterthan.square.fill")
-    }
-    public static var grid: Self{
-        Self(symbolName: "grid")
-    }
-    public static var gridCircle: Self{
-        Self(symbolName: "grid.circle")
-    }
-    public static var gridCircleFill: Self{
-        Self(symbolName: "grid.circle.fill")
-    }
-    public static var guaranisignCircle: Self{
-        Self(symbolName: "guaranisign.circle")
-    }
-    public static var guaranisignCircleFill: Self{
-        Self(symbolName: "guaranisign.circle.fill")
-    }
-    public static var guaranisignSquare: Self{
-        Self(symbolName: "guaranisign.square")
-    }
-    public static var guaranisignSquareFill: Self{
-        Self(symbolName: "guaranisign.square.fill")
-    }
-    public static var guitars: Self{
-        Self(symbolName: "guitars")
-    }
-    public static var hCircle: Self{
-        Self(symbolName: "h.circle")
-    }
-    public static var hCircleFill: Self{
-        Self(symbolName: "h.circle.fill")
-    }
-    public static var hSquare: Self{
-        Self(symbolName: "h.square")
-    }
-    public static var hSquareFill: Self{
-        Self(symbolName: "h.square.fill")
-    }
-    public static var hammer: Self{
-        Self(symbolName: "hammer")
-    }
-    public static var hammerFill: Self{
-        Self(symbolName: "hammer.fill")
-    }
-    public static var handDraw: Self{
-        Self(symbolName: "hand.draw")
-    }
-    public static var handDrawFill: Self{
-        Self(symbolName: "hand.draw.fill")
-    }
-    public static var handPointLeft: Self{
-        Self(symbolName: "hand.point.left")
-    }
-    public static var handPointLeftFill: Self{
-        Self(symbolName: "hand.point.left.fill")
-    }
-    public static var handPointRight: Self{
-        Self(symbolName: "hand.point.right")
-    }
-    public static var handPointRightFill: Self{
-        Self(symbolName: "hand.point.right.fill")
-    }
-    public static var handRaised: Self{
-        Self(symbolName: "hand.raised")
-    }
-    public static var handRaisedFill: Self{
-        Self(symbolName: "hand.raised.fill")
-    }
-    public static var handRaisedSlash: Self{
-        Self(symbolName: "hand.raised.slash")
-    }
-    public static var handRaisedSlashFill: Self{
-        Self(symbolName: "hand.raised.slash.fill")
-    }
-    public static var handThumbsdown: Self{
-        Self(symbolName: "hand.thumbsdown")
-    }
-    public static var handThumbsdownFill: Self{
-        Self(symbolName: "hand.thumbsdown.fill")
-    }
-    public static var handThumbsup: Self{
-        Self(symbolName: "hand.thumbsup")
-    }
-    public static var handThumbsupFill: Self{
-        Self(symbolName: "hand.thumbsup.fill")
-    }
-    public static var hare: Self{
-        Self(symbolName: "hare")
-    }
-    public static var hareFill: Self{
-        Self(symbolName: "hare.fill")
-    }
-    public static var headphones: Self{
-        Self(symbolName: "headphones")
-    }
-    public static var heart: Self{
-        Self(symbolName: "heart")
-    }
-    public static var heartCircle: Self{
-        Self(symbolName: "heart.circle")
-    }
-    public static var heartCircleFill: Self{
-        Self(symbolName: "heart.circle.fill")
-    }
-    public static var heartFill: Self{
-        Self(symbolName: "heart.fill")
-    }
-    public static var heartSlash: Self{
-        Self(symbolName: "heart.slash")
-    }
-    public static var heartSlashCircle: Self{
-        Self(symbolName: "heart.slash.circle")
-    }
-    public static var heartSlashCircleFill: Self{
-        Self(symbolName: "heart.slash.circle.fill")
-    }
-    public static var heartSlashFill: Self{
-        Self(symbolName: "heart.slash.fill")
-    }
-    public static var helm: Self{
-        Self(symbolName: "helm")
-    }
-    public static var hexagon: Self{
-        Self(symbolName: "hexagon")
-    }
-    public static var hexagonFill: Self{
-        Self(symbolName: "hexagon.fill")
-    }
-    public static var hifispeaker: Self{
-        Self(symbolName: "hifispeaker")
-    }
-    public static var hifispeakerFill: Self{
-        Self(symbolName: "hifispeaker.fill")
-    }
-    public static var hourglass: Self{
-        Self(symbolName: "hourglass")
-    }
-    public static var hourglassBottomhalfFill: Self{
-        Self(symbolName: "hourglass.bottomhalf.fill")
-    }
-    public static var hourglassTophalfFill: Self{
-        Self(symbolName: "hourglass.tophalf.fill")
-    }
-    public static var house: Self{
-        Self(symbolName: "house")
-    }
-    public static var houseFill: Self{
-        Self(symbolName: "house.fill")
-    }
-    public static var hryvniasignCircle: Self{
-        Self(symbolName: "hryvniasign.circle")
-    }
-    public static var hryvniasignCircleFill: Self{
-        Self(symbolName: "hryvniasign.circle.fill")
-    }
-    public static var hryvniasignSquare: Self{
-        Self(symbolName: "hryvniasign.square")
-    }
-    public static var hryvniasignSquareFill: Self{
-        Self(symbolName: "hryvniasign.square.fill")
-    }
-    public static var hurricane: Self{
-        Self(symbolName: "hurricane")
-    }
-    public static var iCircle: Self{
-        Self(symbolName: "i.circle")
-    }
-    public static var iCircleFill: Self{
-        Self(symbolName: "i.circle.fill")
-    }
-    public static var iSquare: Self{
-        Self(symbolName: "i.square")
-    }
-    public static var iSquareFill: Self{
-        Self(symbolName: "i.square.fill")
-    }
-    public static var icloud: Self{
-        Self(symbolName: "icloud")
-    }
-    public static var icloudAndArrowDown: Self{
-        Self(symbolName: "icloud.and.arrow.down")
-    }
-    public static var icloudAndArrowDownFill: Self{
-        Self(symbolName: "icloud.and.arrow.down.fill")
-    }
-    public static var icloudAndArrowUp: Self{
-        Self(symbolName: "icloud.and.arrow.up")
-    }
-    public static var icloudAndArrowUpFill: Self{
-        Self(symbolName: "icloud.and.arrow.up.fill")
-    }
-    public static var icloudCircle: Self{
-        Self(symbolName: "icloud.circle")
-    }
-    public static var icloudCircleFill: Self{
-        Self(symbolName: "icloud.circle.fill")
-    }
-    public static var icloudFill: Self{
-        Self(symbolName: "icloud.fill")
-    }
-    public static var icloudSlash: Self{
-        Self(symbolName: "icloud.slash")
-    }
-    public static var icloudSlashFill: Self{
-        Self(symbolName: "icloud.slash.fill")
-    }
-    public static var increaseIndent: Self{
-        Self(symbolName: "increase.indent")
-    }
-    public static var increaseQuotelevel: Self{
-        Self(symbolName: "increase.quotelevel")
-    }
-    public static var indianrupeesignCircle: Self{
-        Self(symbolName: "indianrupeesign.circle")
-    }
-    public static var indianrupeesignCircleFill: Self{
-        Self(symbolName: "indianrupeesign.circle.fill")
-    }
-    public static var indianrupeesignSquare: Self{
-        Self(symbolName: "indianrupeesign.square")
-    }
-    public static var indianrupeesignSquareFill: Self{
-        Self(symbolName: "indianrupeesign.square.fill")
-    }
-    public static var info: Self{
-        Self(symbolName: "info")
-    }
-    public static var infoCircle: Self{
-        Self(symbolName: "info.circle")
-    }
-    public static var infoCircleFill: Self{
-        Self(symbolName: "info.circle.fill")
-    }
-    public static var italic: Self{
-        Self(symbolName: "italic")
-    }
-    public static var jCircle: Self{
-        Self(symbolName: "j.circle")
-    }
-    public static var jCircleFill: Self{
-        Self(symbolName: "j.circle.fill")
-    }
-    public static var jSquare: Self{
-        Self(symbolName: "j.square")
-    }
-    public static var jSquareFill: Self{
-        Self(symbolName: "j.square.fill")
-    }
-    public static var kCircle: Self{
-        Self(symbolName: "k.circle")
-    }
-    public static var kCircleFill: Self{
-        Self(symbolName: "k.circle.fill")
-    }
-    public static var kSquare: Self{
-        Self(symbolName: "k.square")
-    }
-    public static var kSquareFill: Self{
-        Self(symbolName: "k.square.fill")
-    }
-    public static var keyboard: Self{
-        Self(symbolName: "keyboard")
-    }
-    public static var keyboardChevronCompactDown: Self{
-        Self(symbolName: "keyboard.chevron.compact.down")
-    }
-    public static var kipsignCircle: Self{
-        Self(symbolName: "kipsign.circle")
-    }
-    public static var kipsignCircleFill: Self{
-        Self(symbolName: "kipsign.circle.fill")
-    }
-    public static var kipsignSquare: Self{
-        Self(symbolName: "kipsign.square")
-    }
-    public static var kipsignSquareFill: Self{
-        Self(symbolName: "kipsign.square.fill")
-    }
-    public static var lCircle: Self{
-        Self(symbolName: "l.circle")
-    }
-    public static var lCircleFill: Self{
-        Self(symbolName: "l.circle.fill")
-    }
-    public static var lSquare: Self{
-        Self(symbolName: "l.square")
-    }
-    public static var lSquareFill: Self{
-        Self(symbolName: "l.square.fill")
-    }
-    public static var largecircleFillCircle: Self{
-        Self(symbolName: "largecircle.fill.circle")
-    }
-    public static var larisignCircle: Self{
-        Self(symbolName: "larisign.circle")
-    }
-    public static var larisignCircleFill: Self{
-        Self(symbolName: "larisign.circle.fill")
-    }
-    public static var larisignSquare: Self{
-        Self(symbolName: "larisign.square")
-    }
-    public static var larisignSquareFill: Self{
-        Self(symbolName: "larisign.square.fill")
-    }
-    public static var lasso: Self{
-        Self(symbolName: "lasso")
-    }
-    public static var leafArrowCirclepath: Self{
-        Self(symbolName: "leaf.arrow.circlepath")
-    }
-    public static var lessthan: Self{
-        Self(symbolName: "lessthan")
-    }
-    public static var lessthanCircle: Self{
-        Self(symbolName: "lessthan.circle")
-    }
-    public static var lessthanCircleFill: Self{
-        Self(symbolName: "lessthan.circle.fill")
-    }
-    public static var lessthanSquare: Self{
-        Self(symbolName: "lessthan.square")
-    }
-    public static var lessthanSquareFill: Self{
-        Self(symbolName: "lessthan.square.fill")
-    }
-    public static var lightMax: Self{
-        Self(symbolName: "light.max")
-    }
-    public static var lightMin: Self{
-        Self(symbolName: "light.min")
-    }
-    public static var lightbulb: Self{
-        Self(symbolName: "lightbulb")
-    }
-    public static var lightbulbFill: Self{
-        Self(symbolName: "lightbulb.fill")
-    }
-    public static var lightbulbSlash: Self{
-        Self(symbolName: "lightbulb.slash")
-    }
-    public static var lightbulbSlashFill: Self{
-        Self(symbolName: "lightbulb.slash.fill")
-    }
-    public static var lineHorizontal3: Self{
-        Self(symbolName: "line.horizontal.3")
-    }
-    public static var lineHorizontal3Decrease: Self{
-        Self(symbolName: "line.horizontal.3.decrease")
-    }
-    public static var lineHorizontal3DecreaseCircle: Self{
-        Self(symbolName: "line.horizontal.3.decrease.circle")
-    }
-    public static var lineHorizontal3DecreaseCircleFill: Self{
-        Self(symbolName: "line.horizontal.3.decrease.circle.fill")
-    }
-    public static var link: Self{
-        Self(symbolName: "link")
-    }
-    public static var linkCircle: Self{
-        Self(symbolName: "link.circle")
-    }
-    public static var linkCircleFill: Self{
-        Self(symbolName: "link.circle.fill")
-    }
-    public static var linkIcloud: Self{
-        Self(symbolName: "link.icloud")
-    }
-    public static var linkIcloudFill: Self{
-        Self(symbolName: "link.icloud.fill")
-    }
-    public static var lirasignCircle: Self{
-        Self(symbolName: "lirasign.circle")
-    }
-    public static var lirasignCircleFill: Self{
-        Self(symbolName: "lirasign.circle.fill")
-    }
-    public static var lirasignSquare: Self{
-        Self(symbolName: "lirasign.square")
-    }
-    public static var lirasignSquareFill: Self{
-        Self(symbolName: "lirasign.square.fill")
-    }
-    public static var listBullet: Self{
-        Self(symbolName: "list.bullet")
-    }
-    public static var listBulletBelowRectangle: Self{
-        Self(symbolName: "list.bullet.below.rectangle")
-    }
-    public static var listBulletIndent: Self{
-        Self(symbolName: "list.bullet.indent")
-    }
-    public static var listDash: Self{
-        Self(symbolName: "list.dash")
-    }
-    public static var listNumber: Self{
-        Self(symbolName: "list.number")
-    }
-    public static var listNumberRtl: Self{
-        Self(symbolName: "list.number.rtl")
-    }
-    public static var livephoto: Self{
-        Self(symbolName: "livephoto")
-    }
-    public static var livephotoPlay: Self{
-        Self(symbolName: "livephoto.play")
-    }
-    public static var livephotoSlash: Self{
-        Self(symbolName: "livephoto.slash")
-    }
-    public static var location: Self{
-        Self(symbolName: "location")
-    }
-    public static var locationCircle: Self{
-        Self(symbolName: "location.circle")
-    }
-    public static var locationCircleFill: Self{
-        Self(symbolName: "location.circle.fill")
-    }
-    public static var locationFill: Self{
-        Self(symbolName: "location.fill")
-    }
-    public static var locationNorth: Self{
-        Self(symbolName: "location.north")
-    }
-    public static var locationNorthFill: Self{
-        Self(symbolName: "location.north.fill")
-    }
-    public static var locationNorthLine: Self{
-        Self(symbolName: "location.north.line")
-    }
-    public static var locationNorthLineFill: Self{
-        Self(symbolName: "location.north.line.fill")
-    }
-    public static var locationSlash: Self{
-        Self(symbolName: "location.slash")
-    }
-    public static var locationSlashFill: Self{
-        Self(symbolName: "location.slash.fill")
-    }
-    public static var lock: Self{
-        Self(symbolName: "lock")
-    }
-    public static var lockCircle: Self{
-        Self(symbolName: "lock.circle")
-    }
-    public static var lockCircleFill: Self{
-        Self(symbolName: "lock.circle.fill")
-    }
-    public static var lockFill: Self{
-        Self(symbolName: "lock.fill")
-    }
-    public static var lockIcloud: Self{
-        Self(symbolName: "lock.icloud")
-    }
-    public static var lockIcloudFill: Self{
-        Self(symbolName: "lock.icloud.fill")
-    }
-    public static var lockOpen: Self{
-        Self(symbolName: "lock.open")
-    }
-    public static var lockOpenFill: Self{
-        Self(symbolName: "lock.open.fill")
-    }
-    public static var lockRotation: Self{
-        Self(symbolName: "lock.rotation")
-    }
-    public static var lockRotationOpen: Self{
-        Self(symbolName: "lock.rotation.open")
-    }
-    public static var lockShield: Self{
-        Self(symbolName: "lock.shield")
-    }
-    public static var lockShieldFill: Self{
-        Self(symbolName: "lock.shield.fill")
-    }
-    public static var lockSlash: Self{
-        Self(symbolName: "lock.slash")
-    }
-    public static var lockSlashFill: Self{
-        Self(symbolName: "lock.slash.fill")
-    }
-    public static var mCircle: Self{
-        Self(symbolName: "m.circle")
-    }
-    public static var mCircleFill: Self{
-        Self(symbolName: "m.circle.fill")
-    }
-    public static var mSquare: Self{
-        Self(symbolName: "m.square")
-    }
-    public static var mSquareFill: Self{
-        Self(symbolName: "m.square.fill")
-    }
-    public static var macwindow: Self{
-        Self(symbolName: "macwindow")
-    }
-    public static var magnifyingglass: Self{
-        Self(symbolName: "magnifyingglass")
-    }
-    public static var magnifyingglassCircle: Self{
-        Self(symbolName: "magnifyingglass.circle")
-    }
-    public static var magnifyingglassCircleFill: Self{
-        Self(symbolName: "magnifyingglass.circle.fill")
-    }
-    public static var manatsignCircle: Self{
-        Self(symbolName: "manatsign.circle")
-    }
-    public static var manatsignCircleFill: Self{
-        Self(symbolName: "manatsign.circle.fill")
-    }
-    public static var manatsignSquare: Self{
-        Self(symbolName: "manatsign.square")
-    }
-    public static var manatsignSquareFill: Self{
-        Self(symbolName: "manatsign.square.fill")
-    }
-    public static var map: Self{
-        Self(symbolName: "map")
-    }
-    public static var mapFill: Self{
-        Self(symbolName: "map.fill")
-    }
-    public static var mappin: Self{
-        Self(symbolName: "mappin")
-    }
-    public static var mappinAndEllipse: Self{
-        Self(symbolName: "mappin.and.ellipse")
-    }
-    public static var mappinSlash: Self{
-        Self(symbolName: "mappin.slash")
-    }
-    public static var memories: Self{
-        Self(symbolName: "memories")
-    }
-    public static var memoriesBadgeMinus: Self{
-        Self(symbolName: "memories.badge.minus")
-    }
-    public static var memoriesBadgePlus: Self{
-        Self(symbolName: "memories.badge.plus")
-    }
-    public static var message: Self{
-        Self(symbolName: "message")
-    }
-    public static var messageCircle: Self{
-        Self(symbolName: "message.circle")
-    }
-    public static var messageCircleFill: Self{
-        Self(symbolName: "message.circle.fill")
-    }
-    public static var messageFill: Self{
-        Self(symbolName: "message.fill")
-    }
-    public static var metronome: Self{
-        Self(symbolName: "metronome")
-    }
-    public static var mic: Self{
-        Self(symbolName: "mic")
-    }
-    public static var micCircle: Self{
-        Self(symbolName: "mic.circle")
-    }
-    public static var micCircleFill: Self{
-        Self(symbolName: "mic.circle.fill")
-    }
-    public static var micFill: Self{
-        Self(symbolName: "mic.fill")
-    }
-    public static var micSlash: Self{
-        Self(symbolName: "mic.slash")
-    }
-    public static var micSlashFill: Self{
-        Self(symbolName: "mic.slash.fill")
-    }
-    public static var millsignCircle: Self{
-        Self(symbolName: "millsign.circle")
-    }
-    public static var millsignCircleFill: Self{
-        Self(symbolName: "millsign.circle.fill")
-    }
-    public static var millsignSquare: Self{
-        Self(symbolName: "millsign.square")
-    }
-    public static var millsignSquareFill: Self{
-        Self(symbolName: "millsign.square.fill")
-    }
-    public static var minus: Self{
-        Self(symbolName: "minus")
-    }
-    public static var minusCircle: Self{
-        Self(symbolName: "minus.circle")
-    }
-    public static var minusCircleFill: Self{
-        Self(symbolName: "minus.circle.fill")
-    }
-    public static var minusMagnifyingglass: Self{
-        Self(symbolName: "minus.magnifyingglass")
-    }
-    public static var minusRectangle: Self{
-        Self(symbolName: "minus.rectangle")
-    }
-    public static var minusRectangleFill: Self{
-        Self(symbolName: "minus.rectangle.fill")
-    }
-    public static var minusSlashPlus: Self{
-        Self(symbolName: "minus.slash.plus")
-    }
-    public static var minusSquare: Self{
-        Self(symbolName: "minus.square")
-    }
-    public static var minusSquareFill: Self{
-        Self(symbolName: "minus.square.fill")
-    }
-    public static var moon: Self{
-        Self(symbolName: "moon")
-    }
-    public static var moonCircle: Self{
-        Self(symbolName: "moon.circle")
-    }
-    public static var moonCircleFill: Self{
-        Self(symbolName: "moon.circle.fill")
-    }
-    public static var moonFill: Self{
-        Self(symbolName: "moon.fill")
-    }
-    public static var moonStars: Self{
-        Self(symbolName: "moon.stars")
-    }
-    public static var moonStarsFill: Self{
-        Self(symbolName: "moon.stars.fill")
-    }
-    public static var moonZzz: Self{
-        Self(symbolName: "moon.zzz")
-    }
-    public static var moonZzzFill: Self{
-        Self(symbolName: "moon.zzz.fill")
-    }
-    public static var multiply: Self{
-        Self(symbolName: "multiply")
-    }
-    public static var multiplyCircle: Self{
-        Self(symbolName: "multiply.circle")
-    }
-    public static var multiplyCircleFill: Self{
-        Self(symbolName: "multiply.circle.fill")
-    }
-    public static var multiplySquare: Self{
-        Self(symbolName: "multiply.square")
-    }
-    public static var multiplySquareFill: Self{
-        Self(symbolName: "multiply.square.fill")
-    }
-    public static var musicHouse: Self{
-        Self(symbolName: "music.house")
-    }
-    public static var musicHouseFill: Self{
-        Self(symbolName: "music.house.fill")
-    }
-    public static var musicMic: Self{
-        Self(symbolName: "music.mic")
-    }
-    public static var musicNote: Self{
-        Self(symbolName: "music.note")
-    }
-    public static var musicNoteList: Self{
-        Self(symbolName: "music.note.list")
-    }
-    public static var nCircle: Self{
-        Self(symbolName: "n.circle")
-    }
-    public static var nCircleFill: Self{
-        Self(symbolName: "n.circle.fill")
-    }
-    public static var nSquare: Self{
-        Self(symbolName: "n.square")
-    }
-    public static var nSquareFill: Self{
-        Self(symbolName: "n.square.fill")
-    }
-    public static var nairasignCircle: Self{
-        Self(symbolName: "nairasign.circle")
-    }
-    public static var nairasignCircleFill: Self{
-        Self(symbolName: "nairasign.circle.fill")
-    }
-    public static var nairasignSquare: Self{
-        Self(symbolName: "nairasign.square")
-    }
-    public static var nairasignSquareFill: Self{
-        Self(symbolName: "nairasign.square.fill")
-    }
-    public static var nosign: Self{
-        Self(symbolName: "nosign")
-    }
-    public static var number: Self{
-        Self(symbolName: "number")
-    }
-    public static var numberCircle: Self{
-        Self(symbolName: "number.circle")
-    }
-    public static var numberCircleFill: Self{
-        Self(symbolName: "number.circle.fill")
-    }
-    public static var numberSquare: Self{
-        Self(symbolName: "number.square")
-    }
-    public static var numberSquareFill: Self{
-        Self(symbolName: "number.square.fill")
-    }
-    public static var oCircle: Self{
-        Self(symbolName: "o.circle")
-    }
-    public static var oCircleFill: Self{
-        Self(symbolName: "o.circle.fill")
-    }
-    public static var oSquare: Self{
-        Self(symbolName: "o.square")
-    }
-    public static var oSquareFill: Self{
-        Self(symbolName: "o.square.fill")
-    }
-    public static var option: Self{
-        Self(symbolName: "option")
-    }
-    public static var pCircle: Self{
-        Self(symbolName: "p.circle")
-    }
-    public static var pCircleFill: Self{
-        Self(symbolName: "p.circle.fill")
-    }
-    public static var pSquare: Self{
-        Self(symbolName: "p.square")
-    }
-    public static var pSquareFill: Self{
-        Self(symbolName: "p.square.fill")
-    }
-    public static var paintbrush: Self{
-        Self(symbolName: "paintbrush")
-    }
-    public static var paintbrushFill: Self{
-        Self(symbolName: "paintbrush.fill")
-    }
-    public static var pano: Self{
-        Self(symbolName: "pano")
-    }
-    public static var panoFill: Self{
-        Self(symbolName: "pano.fill")
-    }
-    public static var paperclip: Self{
-        Self(symbolName: "paperclip")
-    }
-    public static var paperplane: Self{
-        Self(symbolName: "paperplane")
-    }
-    public static var paperplaneFill: Self{
-        Self(symbolName: "paperplane.fill")
-    }
-    public static var paragraph: Self{
-        Self(symbolName: "paragraph")
-    }
-    public static var pause: Self{
-        Self(symbolName: "pause")
-    }
-    public static var pauseCircle: Self{
-        Self(symbolName: "pause.circle")
-    }
-    public static var pauseCircleFill: Self{
-        Self(symbolName: "pause.circle.fill")
-    }
-    public static var pauseFill: Self{
-        Self(symbolName: "pause.fill")
-    }
-    public static var pauseRectangle: Self{
-        Self(symbolName: "pause.rectangle")
-    }
-    public static var pauseRectangleFill: Self{
-        Self(symbolName: "pause.rectangle.fill")
-    }
-    public static var pencil: Self{
-        Self(symbolName: "pencil")
-    }
-    public static var pencilAndEllipsisRectangle: Self{
-        Self(symbolName: "pencil.and.ellipsis.rectangle")
-    }
-    public static var pencilAndOutline: Self{
-        Self(symbolName: "pencil.and.outline")
-    }
-    public static var pencilCircle: Self{
-        Self(symbolName: "pencil.circle")
-    }
-    public static var pencilCircleFill: Self{
-        Self(symbolName: "pencil.circle.fill")
-    }
-    public static var pencilSlash: Self{
-        Self(symbolName: "pencil.slash")
-    }
-    public static var pencilTip: Self{
-        Self(symbolName: "pencil.tip")
-    }
-    public static var pencilTipCropCircle: Self{
-        Self(symbolName: "pencil.tip.crop.circle")
-    }
-    public static var pencilTipCropCircleBadgeMinus: Self{
-        Self(symbolName: "pencil.tip.crop.circle.badge.minus")
-    }
-    public static var pencilTipCropCircleBadgePlus: Self{
-        Self(symbolName: "pencil.tip.crop.circle.badge.plus")
-    }
-    public static var percent: Self{
-        Self(symbolName: "percent")
-    }
-    public static var person: Self{
-        Self(symbolName: "person")
-    }
-    public static var person2: Self{
-        Self(symbolName: "person.2")
-    }
-    public static var person2Fill: Self{
-        Self(symbolName: "person.2.fill")
-    }
-    public static var person2SquareStack: Self{
-        Self(symbolName: "person.2.square.stack")
-    }
-    public static var person2SquareStackFill: Self{
-        Self(symbolName: "person.2.square.stack.fill")
-    }
-    public static var person3: Self{
-        Self(symbolName: "person.3")
-    }
-    public static var person3Fill: Self{
-        Self(symbolName: "person.3.fill")
-    }
-    public static var personBadgeMinus: Self{
-        Self(symbolName: "person.badge.minus")
-    }
-    public static var personBadgeMinusFill: Self{
-        Self(symbolName: "person.badge.minus.fill")
-    }
-    public static var personBadgePlus: Self{
-        Self(symbolName: "person.badge.plus")
-    }
-    public static var personBadgePlusFill: Self{
-        Self(symbolName: "person.badge.plus.fill")
-    }
-    public static var personCircle: Self{
-        Self(symbolName: "person.circle")
-    }
-    public static var personCircleFill: Self{
-        Self(symbolName: "person.circle.fill")
-    }
-    public static var personCropCircle: Self{
-        Self(symbolName: "person.crop.circle")
-    }
-    public static var personCropCircleBadgeCheckmark: Self{
-        Self(symbolName: "person.crop.circle.badge.checkmark")
-    }
-    public static var personCropCircleBadgeExclam: Self{
-        Self(symbolName: "person.crop.circle.badge.exclam")
-    }
-    public static var personCropCircleBadgeMinus: Self{
-        Self(symbolName: "person.crop.circle.badge.minus")
-    }
-    public static var personCropCircleBadgePlus: Self{
-        Self(symbolName: "person.crop.circle.badge.plus")
-    }
-    public static var personCropCircleBadgeXmark: Self{
-        Self(symbolName: "person.crop.circle.badge.xmark")
-    }
-    public static var personCropCircleFill: Self{
-        Self(symbolName: "person.crop.circle.fill")
-    }
-    public static var personCropCircleFillBadgeCheckmark: Self{
-        Self(symbolName: "person.crop.circle.fill.badge.checkmark")
-    }
-    public static var personCropCircleFillBadgeExclam: Self{
-        Self(symbolName: "person.crop.circle.fill.badge.exclam")
-    }
-    public static var personCropCircleFillBadgeMinus: Self{
-        Self(symbolName: "person.crop.circle.fill.badge.minus")
-    }
-    public static var personCropCircleFillBadgePlus: Self{
-        Self(symbolName: "person.crop.circle.fill.badge.plus")
-    }
-    public static var personCropCircleFillBadgeXmark: Self{
-        Self(symbolName: "person.crop.circle.fill.badge.xmark")
-    }
-    public static var personCropRectangle: Self{
-        Self(symbolName: "person.crop.rectangle")
-    }
-    public static var personCropRectangleFill: Self{
-        Self(symbolName: "person.crop.rectangle.fill")
-    }
-    public static var personCropSquare: Self{
-        Self(symbolName: "person.crop.square")
-    }
-    public static var personCropSquareFill: Self{
-        Self(symbolName: "person.crop.square.fill")
-    }
-    public static var personFill: Self{
-        Self(symbolName: "person.fill")
-    }
-    public static var personIcloud: Self{
-        Self(symbolName: "person.icloud")
-    }
-    public static var personIcloudFill: Self{
-        Self(symbolName: "person.icloud.fill")
-    }
-    public static var personalhotspot: Self{
-        Self(symbolName: "personalhotspot")
-    }
-    public static var perspective: Self{
-        Self(symbolName: "perspective")
-    }
-    public static var pesetasignCircle: Self{
-        Self(symbolName: "pesetasign.circle")
-    }
-    public static var pesetasignCircleFill: Self{
-        Self(symbolName: "pesetasign.circle.fill")
-    }
-    public static var pesetasignSquare: Self{
-        Self(symbolName: "pesetasign.square")
-    }
-    public static var pesetasignSquareFill: Self{
-        Self(symbolName: "pesetasign.square.fill")
-    }
-    public static var pesosignCircle: Self{
-        Self(symbolName: "pesosign.circle")
-    }
-    public static var pesosignCircleFill: Self{
-        Self(symbolName: "pesosign.circle.fill")
-    }
-    public static var pesosignSquare: Self{
-        Self(symbolName: "pesosign.square")
-    }
-    public static var pesosignSquareFill: Self{
-        Self(symbolName: "pesosign.square.fill")
-    }
-    public static var phone: Self{
-        Self(symbolName: "phone")
-    }
-    public static var phoneArrowDownLeft: Self{
-        Self(symbolName: "phone.arrow.down.left")
-    }
-    public static var phoneArrowRight: Self{
-        Self(symbolName: "phone.arrow.right")
-    }
-    public static var phoneArrowUpRight: Self{
-        Self(symbolName: "phone.arrow.up.right")
-    }
-    public static var phoneBadgePlus: Self{
-        Self(symbolName: "phone.badge.plus")
-    }
-    public static var phoneCircle: Self{
-        Self(symbolName: "phone.circle")
-    }
-    public static var phoneCircleFill: Self{
-        Self(symbolName: "phone.circle.fill")
-    }
-    public static var phoneDown: Self{
-        Self(symbolName: "phone.down")
-    }
-    public static var phoneDownCircle: Self{
-        Self(symbolName: "phone.down.circle")
-    }
-    public static var phoneDownCircleFill: Self{
-        Self(symbolName: "phone.down.circle.fill")
-    }
-    public static var phoneDownFill: Self{
-        Self(symbolName: "phone.down.fill")
-    }
-    public static var phoneFill: Self{
-        Self(symbolName: "phone.fill")
-    }
-    public static var phoneFillArrowDownLeft: Self{
-        Self(symbolName: "phone.fill.arrow.down.left")
-    }
-    public static var phoneFillArrowRight: Self{
-        Self(symbolName: "phone.fill.arrow.right")
-    }
-    public static var phoneFillArrowUpRight: Self{
-        Self(symbolName: "phone.fill.arrow.up.right")
-    }
-    public static var phoneFillBadgePlus: Self{
-        Self(symbolName: "phone.fill.badge.plus")
-    }
-    public static var photo: Self{
-        Self(symbolName: "photo")
-    }
-    public static var photoFill: Self{
-        Self(symbolName: "photo.fill")
-    }
-    public static var photoFillOnRectangleFill: Self{
-        Self(symbolName: "photo.fill.on.rectangle.fill")
-    }
-    public static var photoOnRectangle: Self{
-        Self(symbolName: "photo.on.rectangle")
-    }
-    public static var pin: Self{
-        Self(symbolName: "pin")
-    }
-    public static var pinFill: Self{
-        Self(symbolName: "pin.fill")
-    }
-    public static var pinSlash: Self{
-        Self(symbolName: "pin.slash")
-    }
-    public static var pinSlashFill: Self{
-        Self(symbolName: "pin.slash.fill")
-    }
-    public static var play: Self{
-        Self(symbolName: "play")
-    }
-    public static var playCircle: Self{
-        Self(symbolName: "play.circle")
-    }
-    public static var playCircleFill: Self{
-        Self(symbolName: "play.circle.fill")
-    }
-    public static var playFill: Self{
-        Self(symbolName: "play.fill")
-    }
-    public static var playRectangle: Self{
-        Self(symbolName: "play.rectangle")
-    }
-    public static var playRectangleFill: Self{
-        Self(symbolName: "play.rectangle.fill")
-    }
-    public static var playpause: Self{
-        Self(symbolName: "playpause")
-    }
-    public static var playpauseFill: Self{
-        Self(symbolName: "playpause.fill")
-    }
-    public static var plus: Self{
-        Self(symbolName: "plus")
-    }
-    public static var plusApp: Self{
-        Self(symbolName: "plus.app")
-    }
-    public static var plusAppFill: Self{
-        Self(symbolName: "plus.app.fill")
-    }
-    public static var plusBubble: Self{
-        Self(symbolName: "plus.bubble")
-    }
-    public static var plusBubbleFill: Self{
-        Self(symbolName: "plus.bubble.fill")
-    }
-    public static var plusCircle: Self{
-        Self(symbolName: "plus.circle")
-    }
-    public static var plusCircleFill: Self{
-        Self(symbolName: "plus.circle.fill")
-    }
-    public static var plusMagnifyingglass: Self{
-        Self(symbolName: "plus.magnifyingglass")
-    }
-    public static var plusRectangle: Self{
-        Self(symbolName: "plus.rectangle")
-    }
-    public static var plusRectangleFill: Self{
-        Self(symbolName: "plus.rectangle.fill")
-    }
-    public static var plusRectangleFillOnRectangleFill: Self{
-        Self(symbolName: "plus.rectangle.fill.on.rectangle.fill")
-    }
-    public static var plusRectangleOnRectangle: Self{
-        Self(symbolName: "plus.rectangle.on.rectangle")
-    }
-    public static var plusSlashMinus: Self{
-        Self(symbolName: "plus.slash.minus")
-    }
-    public static var plusSquare: Self{
-        Self(symbolName: "plus.square")
-    }
-    public static var plusSquareFill: Self{
-        Self(symbolName: "plus.square.fill")
-    }
-    public static var plusSquareFillOnSquareFill: Self{
-        Self(symbolName: "plus.square.fill.on.square.fill")
-    }
-    public static var plusSquareOnSquare: Self{
-        Self(symbolName: "plus.square.on.square")
-    }
-    public static var plusminus: Self{
-        Self(symbolName: "plusminus")
-    }
-    public static var plusminusCircle: Self{
-        Self(symbolName: "plusminus.circle")
-    }
-    public static var plusminusCircleFill: Self{
-        Self(symbolName: "plusminus.circle.fill")
-    }
-    public static var power: Self{
-        Self(symbolName: "power")
-    }
-    public static var printer: Self{
-        Self(symbolName: "printer")
-    }
-    public static var printerFill: Self{
-        Self(symbolName: "printer.fill")
-    }
-    public static var projective: Self{
-        Self(symbolName: "projective")
-    }
-    public static var purchased: Self{
-        Self(symbolName: "purchased")
-    }
-    public static var purchasedCircle: Self{
-        Self(symbolName: "purchased.circle")
-    }
-    public static var purchasedCircleFill: Self{
-        Self(symbolName: "purchased.circle.fill")
-    }
-    public static var qCircle: Self{
-        Self(symbolName: "q.circle")
-    }
-    public static var qCircleFill: Self{
-        Self(symbolName: "q.circle.fill")
-    }
-    public static var qSquare: Self{
-        Self(symbolName: "q.square")
-    }
-    public static var qSquareFill: Self{
-        Self(symbolName: "q.square.fill")
-    }
-    public static var qrcode: Self{
-        Self(symbolName: "qrcode")
-    }
-    public static var qrcodeViewfinder: Self{
-        Self(symbolName: "qrcode.viewfinder")
-    }
-    public static var questionmark: Self{
-        Self(symbolName: "questionmark")
-    }
-    public static var questionmarkCircle: Self{
-        Self(symbolName: "questionmark.circle")
-    }
-    public static var questionmarkCircleFill: Self{
-        Self(symbolName: "questionmark.circle.fill")
-    }
-    public static var questionmarkDiamond: Self{
-        Self(symbolName: "questionmark.diamond")
-    }
-    public static var questionmarkDiamondFill: Self{
-        Self(symbolName: "questionmark.diamond.fill")
-    }
-    public static var questionmarkSquare: Self{
-        Self(symbolName: "questionmark.square")
-    }
-    public static var questionmarkSquareFill: Self{
-        Self(symbolName: "questionmark.square.fill")
-    }
-    public static var questionmarkVideo: Self{
-        Self(symbolName: "questionmark.video")
-    }
-    public static var questionmarkVideoFill: Self{
-        Self(symbolName: "questionmark.video.fill")
-    }
-    public static var questionmarkVideoFillRtl: Self{
-        Self(symbolName: "questionmark.video.fill.rtl")
-    }
-    public static var questionmarkVideoRtl: Self{
-        Self(symbolName: "questionmark.video.rtl")
-    }
-    public static var quoteBubble: Self{
-        Self(symbolName: "quote.bubble")
-    }
-    public static var quoteBubbleFill: Self{
-        Self(symbolName: "quote.bubble.fill")
-    }
-    public static var rCircle: Self{
-        Self(symbolName: "r.circle")
-    }
-    public static var rCircleFill: Self{
-        Self(symbolName: "r.circle.fill")
-    }
-    public static var rSquare: Self{
-        Self(symbolName: "r.square")
-    }
-    public static var rSquareFill: Self{
-        Self(symbolName: "r.square.fill")
-    }
-    public static var radiowavesLeft: Self{
-        Self(symbolName: "radiowaves.left")
-    }
-    public static var radiowavesRight: Self{
-        Self(symbolName: "radiowaves.right")
-    }
-    public static var rays: Self{
-        Self(symbolName: "rays")
-    }
-    public static var recordingtape: Self{
-        Self(symbolName: "recordingtape")
-    }
-    public static var rectangle: Self{
-        Self(symbolName: "rectangle")
-    }
-    public static var rectangle3Offgrid: Self{
-        Self(symbolName: "rectangle.3.offgrid")
-    }
-    public static var rectangle3OffgridFill: Self{
-        Self(symbolName: "rectangle.3.offgrid.fill")
-    }
-    public static var rectangleAndArrowUpRightAndArrowDownLeft: Self{
-        Self(symbolName: "rectangle.and.arrow.up.right.and.arrow.down.left")
-    }
-    public static var rectangleAndArrowUpRightAndArrowDownLeftSlash: Self{
-        Self(symbolName: "rectangle.and.arrow.up.right.and.arrow.down.left.slash")
-    }
-    public static var rectangleAndPaperclip: Self{
-        Self(symbolName: "rectangle.and.paperclip")
-    }
-    public static var rectangleBadgeCheckmark: Self{
-        Self(symbolName: "rectangle.badge.checkmark")
-    }
-    public static var rectangleBadgeXmark: Self{
-        Self(symbolName: "rectangle.badge.xmark")
-    }
-    public static var rectangleCompressVertical: Self{
-        Self(symbolName: "rectangle.compress.vertical")
-    }
-    public static var rectangleDock: Self{
-        Self(symbolName: "rectangle.dock")
-    }
-    public static var rectangleExpandVertical: Self{
-        Self(symbolName: "rectangle.expand.vertical")
-    }
-    public static var rectangleFill: Self{
-        Self(symbolName: "rectangle.fill")
-    }
-    public static var rectangleFillBadgeCheckmark: Self{
-        Self(symbolName: "rectangle.fill.badge.checkmark")
-    }
-    public static var rectangleFillBadgeXmark: Self{
-        Self(symbolName: "rectangle.fill.badge.xmark")
-    }
-    public static var rectangleFillOnRectangleAngledFill: Self{
-        Self(symbolName: "rectangle.fill.on.rectangle.angled.fill")
-    }
-    public static var rectangleFillOnRectangleFill: Self{
-        Self(symbolName: "rectangle.fill.on.rectangle.fill")
-    }
-    public static var rectangleGrid1x2: Self{
-        Self(symbolName: "rectangle.grid.1x2")
-    }
-    public static var rectangleGrid1x2Fill: Self{
-        Self(symbolName: "rectangle.grid.1x2.fill")
-    }
-    public static var rectangleGrid2x2: Self{
-        Self(symbolName: "rectangle.grid.2x2")
-    }
-    public static var rectangleGrid2x2Fill: Self{
-        Self(symbolName: "rectangle.grid.2x2.fill")
-    }
-    public static var rectangleGrid3x2: Self{
-        Self(symbolName: "rectangle.grid.3x2")
-    }
-    public static var rectangleGrid3x2Fill: Self{
-        Self(symbolName: "rectangle.grid.3x2.fill")
-    }
-    public static var rectangleOnRectangle: Self{
-        Self(symbolName: "rectangle.on.rectangle")
-    }
-    public static var rectangleOnRectangleAngled: Self{
-        Self(symbolName: "rectangle.on.rectangle.angled")
-    }
-    public static var rectangleSplit3x1: Self{
-        Self(symbolName: "rectangle.split.3x1")
-    }
-    public static var rectangleSplit3x1Fill: Self{
-        Self(symbolName: "rectangle.split.3x1.fill")
-    }
-    public static var rectangleSplit3x3: Self{
-        Self(symbolName: "rectangle.split.3x3")
-    }
-    public static var rectangleSplit3x3Fill: Self{
-        Self(symbolName: "rectangle.split.3x3.fill")
-    }
-    public static var rectangleStack: Self{
-        Self(symbolName: "rectangle.stack")
-    }
-    public static var rectangleStackBadgeMinus: Self{
-        Self(symbolName: "rectangle.stack.badge.minus")
-    }
-    public static var rectangleStackBadgePersonCrop: Self{
-        Self(symbolName: "rectangle.stack.badge.person.crop")
-    }
-    public static var rectangleStackBadgePlus: Self{
-        Self(symbolName: "rectangle.stack.badge.plus")
-    }
-    public static var rectangleStackFill: Self{
-        Self(symbolName: "rectangle.stack.fill")
-    }
-    public static var rectangleStackFillBadgeMinus: Self{
-        Self(symbolName: "rectangle.stack.fill.badge.minus")
-    }
-    public static var rectangleStackFillBadgePersonCrop: Self{
-        Self(symbolName: "rectangle.stack.fill.badge.person.crop")
-    }
-    public static var rectangleStackFillBadgePlus: Self{
-        Self(symbolName: "rectangle.stack.fill.badge.plus")
-    }
-    public static var rectangleStackPersonCrop: Self{
-        Self(symbolName: "rectangle.stack.person.crop")
-    }
-    public static var rectangleStackPersonCropFill: Self{
-        Self(symbolName: "rectangle.stack.person.crop.fill")
-    }
-    public static var `repeat`: Self{
-        Self(symbolName: "repeat")
-    }
-    public static var repeat1: Self{
-        Self(symbolName: "repeat.1")
-    }
-    public static var `return`: Self{
-        Self(symbolName: "return")
-    }
-    public static var rhombus: Self{
-        Self(symbolName: "rhombus")
-    }
-    public static var rhombusFill: Self{
-        Self(symbolName: "rhombus.fill")
-    }
-    public static var rosette: Self{
-        Self(symbolName: "rosette")
-    }
-    public static var rotateLeft: Self{
-        Self(symbolName: "rotate.left")
-    }
-    public static var rotateLeftFill: Self{
-        Self(symbolName: "rotate.left.fill")
-    }
-    public static var rotateRight: Self{
-        Self(symbolName: "rotate.right")
-    }
-    public static var rotateRightFill: Self{
-        Self(symbolName: "rotate.right.fill")
-    }
-    public static var rublesignCircle: Self{
-        Self(symbolName: "rublesign.circle")
-    }
-    public static var rublesignCircleFill: Self{
-        Self(symbolName: "rublesign.circle.fill")
-    }
-    public static var rublesignSquare: Self{
-        Self(symbolName: "rublesign.square")
-    }
-    public static var rublesignSquareFill: Self{
-        Self(symbolName: "rublesign.square.fill")
-    }
-    public static var rupeesignCircle: Self{
-        Self(symbolName: "rupeesign.circle")
-    }
-    public static var rupeesignCircleFill: Self{
-        Self(symbolName: "rupeesign.circle.fill")
-    }
-    public static var rupeesignSquare: Self{
-        Self(symbolName: "rupeesign.square")
-    }
-    public static var rupeesignSquareFill: Self{
-        Self(symbolName: "rupeesign.square.fill")
-    }
-    public static var sCircle: Self{
-        Self(symbolName: "s.circle")
-    }
-    public static var sCircleFill: Self{
-        Self(symbolName: "s.circle.fill")
-    }
-    public static var sSquare: Self{
-        Self(symbolName: "s.square")
-    }
-    public static var sSquareFill: Self{
-        Self(symbolName: "s.square.fill")
-    }
-    public static var safari: Self{
-        Self(symbolName: "safari")
-    }
-    public static var safariFill: Self{
-        Self(symbolName: "safari.fill")
-    }
-    public static var scissors: Self{
-        Self(symbolName: "scissors")
-    }
-    public static var scope: Self{
-        Self(symbolName: "scope")
-    }
-    public static var scribble: Self{
-        Self(symbolName: "scribble")
-    }
-    public static var selectionPinInOut: Self{
-        Self(symbolName: "selection.pin.in.out")
-    }
-    public static var sheqelsignCircle: Self{
-        Self(symbolName: "sheqelsign.circle")
-    }
-    public static var sheqelsignCircleFill: Self{
-        Self(symbolName: "sheqelsign.circle.fill")
-    }
-    public static var sheqelsignSquare: Self{
-        Self(symbolName: "sheqelsign.square")
-    }
-    public static var sheqelsignSquareFill: Self{
-        Self(symbolName: "sheqelsign.square.fill")
-    }
-    public static var shield: Self{
-        Self(symbolName: "shield")
-    }
-    public static var shieldFill: Self{
-        Self(symbolName: "shield.fill")
-    }
-    public static var shieldLefthalfFill: Self{
-        Self(symbolName: "shield.lefthalf.fill")
-    }
-    public static var shieldSlash: Self{
-        Self(symbolName: "shield.slash")
-    }
-    public static var shieldSlashFill: Self{
-        Self(symbolName: "shield.slash.fill")
-    }
-    public static var shift: Self{
-        Self(symbolName: "shift")
-    }
-    public static var shiftFill: Self{
-        Self(symbolName: "shift.fill")
-    }
-    public static var shuffle: Self{
-        Self(symbolName: "shuffle")
-    }
-    public static var sidebarLeft: Self{
-        Self(symbolName: "sidebar.left")
-    }
-    public static var sidebarRight: Self{
-        Self(symbolName: "sidebar.right")
-    }
-    public static var signature: Self{
-        Self(symbolName: "signature")
-    }
-    public static var skew: Self{
-        Self(symbolName: "skew")
-    }
-    public static var slashCircle: Self{
-        Self(symbolName: "slash.circle")
-    }
-    public static var slashCircleFill: Self{
-        Self(symbolName: "slash.circle.fill")
-    }
-    public static var sliderHorizontal3: Self{
-        Self(symbolName: "slider.horizontal.3")
-    }
-    public static var sliderHorizontalBelowRectangle: Self{
-        Self(symbolName: "slider.horizontal.below.rectangle")
-    }
-    public static var slowmo: Self{
-        Self(symbolName: "slowmo")
-    }
-    public static var smallcircleCircle: Self{
-        Self(symbolName: "smallcircle.circle")
-    }
-    public static var smallcircleCircleFill: Self{
-        Self(symbolName: "smallcircle.circle.fill")
-    }
-    public static var smallcircleFillCircle: Self{
-        Self(symbolName: "smallcircle.fill.circle")
-    }
-    public static var smallcircleFillCircleFill: Self{
-        Self(symbolName: "smallcircle.fill.circle.fill")
-    }
-    public static var smiley: Self{
-        Self(symbolName: "smiley")
-    }
-    public static var smileyFill: Self{
-        Self(symbolName: "smiley.fill")
-    }
-    public static var smoke: Self{
-        Self(symbolName: "smoke")
-    }
-    public static var smokeFill: Self{
-        Self(symbolName: "smoke.fill")
-    }
-    public static var snow: Self{
-        Self(symbolName: "snow")
-    }
-    public static var sparkles: Self{
-        Self(symbolName: "sparkles")
-    }
-    public static var speaker: Self{
-        Self(symbolName: "speaker")
-    }
-    public static var speaker1: Self{
-        Self(symbolName: "speaker.1")
-    }
-    public static var speaker1Fill: Self{
-        Self(symbolName: "speaker.1.fill")
-    }
-    public static var speaker2: Self{
-        Self(symbolName: "speaker.2")
-    }
-    public static var speaker2Fill: Self{
-        Self(symbolName: "speaker.2.fill")
-    }
-    public static var speaker3: Self{
-        Self(symbolName: "speaker.3")
-    }
-    public static var speaker3Fill: Self{
-        Self(symbolName: "speaker.3.fill")
-    }
-    public static var speakerFill: Self{
-        Self(symbolName: "speaker.fill")
-    }
-    public static var speakerSlash: Self{
-        Self(symbolName: "speaker.slash")
-    }
-    public static var speakerSlashFill: Self{
-        Self(symbolName: "speaker.slash.fill")
-    }
-    public static var speakerSlashFillRtl: Self{
-        Self(symbolName: "speaker.slash.fill.rtl")
-    }
-    public static var speakerSlashRtl: Self{
-        Self(symbolName: "speaker.slash.rtl")
-    }
-    public static var speakerZzz: Self{
-        Self(symbolName: "speaker.zzz")
-    }
-    public static var speakerZzzFill: Self{
-        Self(symbolName: "speaker.zzz.fill")
-    }
-    public static var speakerZzzFillRtl: Self{
-        Self(symbolName: "speaker.zzz.fill.rtl")
-    }
-    public static var speakerZzzRtl: Self{
-        Self(symbolName: "speaker.zzz.rtl")
-    }
-    public static var speedometer: Self{
-        Self(symbolName: "speedometer")
-    }
-    public static var sportscourt: Self{
-        Self(symbolName: "sportscourt")
-    }
-    public static var sportscourtFill: Self{
-        Self(symbolName: "sportscourt.fill")
-    }
-    public static var square: Self{
-        Self(symbolName: "square")
-    }
-    public static var squareAndArrowDown: Self{
-        Self(symbolName: "square.and.arrow.down")
-    }
-    public static var squareAndArrowDownFill: Self{
-        Self(symbolName: "square.and.arrow.down.fill")
-    }
-    public static var squareAndArrowDownOnSquare: Self{
-        Self(symbolName: "square.and.arrow.down.on.square")
-    }
-    public static var squareAndArrowDownOnSquareFill: Self{
-        Self(symbolName: "square.and.arrow.down.on.square.fill")
-    }
-    public static var squareAndArrowUp: Self{
-        Self(symbolName: "square.and.arrow.up")
-    }
-    public static var squareAndArrowUpFill: Self{
-        Self(symbolName: "square.and.arrow.up.fill")
-    }
-    public static var squareAndArrowUpOnSquare: Self{
-        Self(symbolName: "square.and.arrow.up.on.square")
-    }
-    public static var squareAndArrowUpOnSquareFill: Self{
-        Self(symbolName: "square.and.arrow.up.on.square.fill")
-    }
-    public static var squareAndLineVerticalAndSquare: Self{
-        Self(symbolName: "square.and.line.vertical.and.square")
-    }
-    public static var squareAndLineVerticalAndSquareFill: Self{
-        Self(symbolName: "square.and.line.vertical.and.square.fill")
-    }
-    public static var squareAndPencil: Self{
-        Self(symbolName: "square.and.pencil")
-    }
-    public static var squareFill: Self{
-        Self(symbolName: "square.fill")
-    }
-    public static var squareFillAndLineVerticalAndSquare: Self{
-        Self(symbolName: "square.fill.and.line.vertical.and.square")
-    }
-    public static var squareFillAndLineVerticalSquareFill: Self{
-        Self(symbolName: "square.fill.and.line.vertical.square.fill")
-    }
-    public static var squareFillOnCircleFill: Self{
-        Self(symbolName: "square.fill.on.circle.fill")
-    }
-    public static var squareFillOnSquareFill: Self{
-        Self(symbolName: "square.fill.on.square.fill")
-    }
-    public static var squareGrid2x2: Self{
-        Self(symbolName: "square.grid.2x2")
-    }
-    public static var squareGrid2x2Fill: Self{
-        Self(symbolName: "square.grid.2x2.fill")
-    }
-    public static var squareGrid3x2: Self{
-        Self(symbolName: "square.grid.3x2")
-    }
-    public static var squareGrid3x2Fill: Self{
-        Self(symbolName: "square.grid.3x2.fill")
-    }
-    public static var squareGrid4x3Fill: Self{
-        Self(symbolName: "square.grid.4x3.fill")
-    }
-    public static var squareLefthalfFill: Self{
-        Self(symbolName: "square.lefthalf.fill")
-    }
-    public static var squareOnCircle: Self{
-        Self(symbolName: "square.on.circle")
-    }
-    public static var squareOnSquare: Self{
-        Self(symbolName: "square.on.square")
-    }
-    public static var squareRighthalfFill: Self{
-        Self(symbolName: "square.righthalf.fill")
-    }
-    public static var squareSplit1x2: Self{
-        Self(symbolName: "square.split.1x2")
-    }
-    public static var squareSplit1x2Fill: Self{
-        Self(symbolName: "square.split.1x2.fill")
-    }
-    public static var squareSplit2x1: Self{
-        Self(symbolName: "square.split.2x1")
-    }
-    public static var squareSplit2x1Fill: Self{
-        Self(symbolName: "square.split.2x1.fill")
-    }
-    public static var squareSplit2x2: Self{
-        Self(symbolName: "square.split.2x2")
-    }
-    public static var squareSplit2x2Fill: Self{
-        Self(symbolName: "square.split.2x2.fill")
-    }
-    public static var squareStack: Self{
-        Self(symbolName: "square.stack")
-    }
-    public static var squareStack3dDownDottedline: Self{
-        Self(symbolName: "square.stack.3d.down.dottedline")
-    }
-    public static var squareStack3dDownRight: Self{
-        Self(symbolName: "square.stack.3d.down.right")
-    }
-    public static var squareStack3dDownRightFill: Self{
-        Self(symbolName: "square.stack.3d.down.right.fill")
-    }
-    public static var squareStack3dUp: Self{
-        Self(symbolName: "square.stack.3d.up")
-    }
-    public static var squareStack3dUpFill: Self{
-        Self(symbolName: "square.stack.3d.up.fill")
-    }
-    public static var squareStack3dUpSlash: Self{
-        Self(symbolName: "square.stack.3d.up.slash")
-    }
-    public static var squareStack3dUpSlashFill: Self{
-        Self(symbolName: "square.stack.3d.up.slash.fill")
-    }
-    public static var squareStackFill: Self{
-        Self(symbolName: "square.stack.fill")
-    }
-    public static var squaresBelowRectangle: Self{
-        Self(symbolName: "squares.below.rectangle")
-    }
-    public static var star: Self{
-        Self(symbolName: "star")
-    }
-    public static var starCircle: Self{
-        Self(symbolName: "star.circle")
-    }
-    public static var starCircleFill: Self{
-        Self(symbolName: "star.circle.fill")
-    }
-    public static var starFill: Self{
-        Self(symbolName: "star.fill")
-    }
-    public static var starLefthalfFill: Self{
-        Self(symbolName: "star.lefthalf.fill")
-    }
-    public static var starSlash: Self{
-        Self(symbolName: "star.slash")
-    }
-    public static var starSlashFill: Self{
-        Self(symbolName: "star.slash.fill")
-    }
-    public static var staroflife: Self{
-        Self(symbolName: "staroflife")
-    }
-    public static var staroflifeFill: Self{
-        Self(symbolName: "staroflife.fill")
-    }
-    public static var sterlingsignCircle: Self{
-        Self(symbolName: "sterlingsign.circle")
-    }
-    public static var sterlingsignCircleFill: Self{
-        Self(symbolName: "sterlingsign.circle.fill")
-    }
-    public static var sterlingsignSquare: Self{
-        Self(symbolName: "sterlingsign.square")
-    }
-    public static var sterlingsignSquareFill: Self{
-        Self(symbolName: "sterlingsign.square.fill")
-    }
-    public static var stop: Self{
-        Self(symbolName: "stop")
-    }
-    public static var stopCircle: Self{
-        Self(symbolName: "stop.circle")
-    }
-    public static var stopCircleFill: Self{
-        Self(symbolName: "stop.circle.fill")
-    }
-    public static var stopFill: Self{
-        Self(symbolName: "stop.fill")
-    }
-    public static var stopwatch: Self{
-        Self(symbolName: "stopwatch")
-    }
-    public static var stopwatchFill: Self{
-        Self(symbolName: "stopwatch.fill")
-    }
-    public static var strikethrough: Self{
-        Self(symbolName: "strikethrough")
-    }
-    public static var suitClub: Self{
-        Self(symbolName: "suit.club")
-    }
-    public static var suitClubFill: Self{
-        Self(symbolName: "suit.club.fill")
-    }
-    public static var suitDiamond: Self{
-        Self(symbolName: "suit.diamond")
-    }
-    public static var suitDiamondFill: Self{
-        Self(symbolName: "suit.diamond.fill")
-    }
-    public static var suitHeart: Self{
-        Self(symbolName: "suit.heart")
-    }
-    public static var suitHeartFill: Self{
-        Self(symbolName: "suit.heart.fill")
-    }
-    public static var suitSpade: Self{
-        Self(symbolName: "suit.spade")
-    }
-    public static var suitSpadeFill: Self{
-        Self(symbolName: "suit.spade.fill")
-    }
-    public static var sum: Self{
-        Self(symbolName: "sum")
-    }
-    public static var sunDust: Self{
-        Self(symbolName: "sun.dust")
-    }
-    public static var sunDustFill: Self{
-        Self(symbolName: "sun.dust.fill")
-    }
-    public static var sunHaze: Self{
-        Self(symbolName: "sun.haze")
-    }
-    public static var sunHazeFill: Self{
-        Self(symbolName: "sun.haze.fill")
-    }
-    public static var sunMax: Self{
-        Self(symbolName: "sun.max")
-    }
-    public static var sunMaxFill: Self{
-        Self(symbolName: "sun.max.fill")
-    }
-    public static var sunMin: Self{
-        Self(symbolName: "sun.min")
-    }
-    public static var sunMinFill: Self{
-        Self(symbolName: "sun.min.fill")
-    }
-    public static var sunrise: Self{
-        Self(symbolName: "sunrise")
-    }
-    public static var sunriseFill: Self{
-        Self(symbolName: "sunrise.fill")
-    }
-    public static var sunset: Self{
-        Self(symbolName: "sunset")
-    }
-    public static var sunsetFill: Self{
-        Self(symbolName: "sunset.fill")
-    }
-    public static var tBubble: Self{
-        Self(symbolName: "t.bubble")
-    }
-    public static var tBubbleFill: Self{
-        Self(symbolName: "t.bubble.fill")
-    }
-    public static var tCircle: Self{
-        Self(symbolName: "t.circle")
-    }
-    public static var tCircleFill: Self{
-        Self(symbolName: "t.circle.fill")
-    }
-    public static var tSquare: Self{
-        Self(symbolName: "t.square")
-    }
-    public static var tSquareFill: Self{
-        Self(symbolName: "t.square.fill")
-    }
-    public static var table: Self{
-        Self(symbolName: "table")
-    }
-    public static var tableBadgeMore: Self{
-        Self(symbolName: "table.badge.more")
-    }
-    public static var tableBadgeMoreFill: Self{
-        Self(symbolName: "table.badge.more.fill")
-    }
-    public static var tableFill: Self{
-        Self(symbolName: "table.fill")
-    }
-    public static var tag: Self{
-        Self(symbolName: "tag")
-    }
-    public static var tagCircle: Self{
-        Self(symbolName: "tag.circle")
-    }
-    public static var tagCircleFill: Self{
-        Self(symbolName: "tag.circle.fill")
-    }
-    public static var tagFill: Self{
-        Self(symbolName: "tag.fill")
-    }
-    public static var teletype: Self{
-        Self(symbolName: "teletype")
-    }
-    public static var teletypeAnswer: Self{
-        Self(symbolName: "teletype.answer")
-    }
-    public static var tengesignCircle: Self{
-        Self(symbolName: "tengesign.circle")
-    }
-    public static var tengesignCircleFill: Self{
-        Self(symbolName: "tengesign.circle.fill")
-    }
-    public static var tengesignSquare: Self{
-        Self(symbolName: "tengesign.square")
-    }
-    public static var tengesignSquareFill: Self{
-        Self(symbolName: "tengesign.square.fill")
-    }
-    public static var textAligncenter: Self{
-        Self(symbolName: "text.aligncenter")
-    }
-    public static var textAlignleft: Self{
-        Self(symbolName: "text.alignleft")
-    }
-    public static var textAlignright: Self{
-        Self(symbolName: "text.alignright")
-    }
-    public static var textAppend: Self{
-        Self(symbolName: "text.append")
-    }
-    public static var textBadgeCheckmark: Self{
-        Self(symbolName: "text.badge.checkmark")
-    }
-    public static var textBadgeMinus: Self{
-        Self(symbolName: "text.badge.minus")
-    }
-    public static var textBadgePlus: Self{
-        Self(symbolName: "text.badge.plus")
-    }
-    public static var textBadgeStar: Self{
-        Self(symbolName: "text.badge.star")
-    }
-    public static var textBadgeXmark: Self{
-        Self(symbolName: "text.badge.xmark")
-    }
-    public static var textBubble: Self{
-        Self(symbolName: "text.bubble")
-    }
-    public static var textBubbleFill: Self{
-        Self(symbolName: "text.bubble.fill")
-    }
-    public static var textCursor: Self{
-        Self(symbolName: "text.cursor")
-    }
-    public static var textInsert: Self{
-        Self(symbolName: "text.insert")
-    }
-    public static var textJustify: Self{
-        Self(symbolName: "text.justify")
-    }
-    public static var textJustifyleft: Self{
-        Self(symbolName: "text.justifyleft")
-    }
-    public static var textJustifyright: Self{
-        Self(symbolName: "text.justifyright")
-    }
-    public static var textQuote: Self{
-        Self(symbolName: "text.quote")
-    }
-    public static var textbox: Self{
-        Self(symbolName: "textbox")
-    }
-    public static var textformat: Self{
-        Self(symbolName: "textformat")
-    }
-    public static var textformat123: Self{
-        Self(symbolName: "textformat.123")
-    }
-    public static var textformatAbc: Self{
-        Self(symbolName: "textformat.abc")
-    }
-    public static var textformatAbcDottedunderline: Self{
-        Self(symbolName: "textformat.abc.dottedunderline")
-    }
-    public static var textformatAlt: Self{
-        Self(symbolName: "textformat.alt")
-    }
-    public static var textformatSize: Self{
-        Self(symbolName: "textformat.size")
-    }
-    public static var textformatSubscript: Self{
-        Self(symbolName: "textformat.subscript")
-    }
-    public static var textformatSuperscript: Self{
-        Self(symbolName: "textformat.superscript")
-    }
-    public static var thermometer: Self{
-        Self(symbolName: "thermometer")
-    }
-    public static var thermometerSnowflake: Self{
-        Self(symbolName: "thermometer.snowflake")
-    }
-    public static var thermometerSun: Self{
-        Self(symbolName: "thermometer.sun")
-    }
-    public static var timelapse: Self{
-        Self(symbolName: "timelapse")
-    }
-    public static var timer: Self{
-        Self(symbolName: "timer")
-    }
-    public static var tornado: Self{
-        Self(symbolName: "tornado")
-    }
-    public static var tortoise: Self{
-        Self(symbolName: "tortoise")
-    }
-    public static var tortoiseFill: Self{
-        Self(symbolName: "tortoise.fill")
-    }
-    public static var tramFill: Self{
-        Self(symbolName: "tram.fill")
-    }
-    public static var trash: Self{
-        Self(symbolName: "trash")
-    }
-    public static var trashCircle: Self{
-        Self(symbolName: "trash.circle")
-    }
-    public static var trashCircleFill: Self{
-        Self(symbolName: "trash.circle.fill")
-    }
-    public static var trashFill: Self{
-        Self(symbolName: "trash.fill")
-    }
-    public static var trashSlash: Self{
-        Self(symbolName: "trash.slash")
-    }
-    public static var trashSlashFill: Self{
-        Self(symbolName: "trash.slash.fill")
-    }
-    public static var tray: Self{
-        Self(symbolName: "tray")
-    }
-    public static var tray2: Self{
-        Self(symbolName: "tray.2")
-    }
-    public static var tray2Fill: Self{
-        Self(symbolName: "tray.2.fill")
-    }
-    public static var trayAndArrowDown: Self{
-        Self(symbolName: "tray.and.arrow.down")
-    }
-    public static var trayAndArrowDownFill: Self{
-        Self(symbolName: "tray.and.arrow.down.fill")
-    }
-    public static var trayAndArrowUp: Self{
-        Self(symbolName: "tray.and.arrow.up")
-    }
-    public static var trayAndArrowUpFill: Self{
-        Self(symbolName: "tray.and.arrow.up.fill")
-    }
-    public static var trayFill: Self{
-        Self(symbolName: "tray.fill")
-    }
-    public static var trayFull: Self{
-        Self(symbolName: "tray.full")
-    }
-    public static var trayFullFill: Self{
-        Self(symbolName: "tray.full.fill")
-    }
-    public static var triangle: Self{
-        Self(symbolName: "triangle")
-    }
-    public static var triangleFill: Self{
-        Self(symbolName: "triangle.fill")
-    }
-    public static var triangleLefthalfFill: Self{
-        Self(symbolName: "triangle.lefthalf.fill")
-    }
-    public static var triangleRighthalfFill: Self{
-        Self(symbolName: "triangle.righthalf.fill")
-    }
-    public static var tropicalstorm: Self{
-        Self(symbolName: "tropicalstorm")
-    }
-    public static var tugriksignCircle: Self{
-        Self(symbolName: "tugriksign.circle")
-    }
-    public static var tugriksignCircleFill: Self{
-        Self(symbolName: "tugriksign.circle.fill")
-    }
-    public static var tugriksignSquare: Self{
-        Self(symbolName: "tugriksign.square")
-    }
-    public static var tugriksignSquareFill: Self{
-        Self(symbolName: "tugriksign.square.fill")
-    }
-    public static var tuningfork: Self{
-        Self(symbolName: "tuningfork")
-    }
-    public static var turkishlirasignCircle: Self{
-        Self(symbolName: "turkishlirasign.circle")
-    }
-    public static var turkishlirasignCircleFill: Self{
-        Self(symbolName: "turkishlirasign.circle.fill")
-    }
-    public static var turkishlirasignSquare: Self{
-        Self(symbolName: "turkishlirasign.square")
-    }
-    public static var turkishlirasignSquareFill: Self{
-        Self(symbolName: "turkishlirasign.square.fill")
-    }
-    public static var tv: Self{
-        Self(symbolName: "tv")
-    }
-    public static var tvCircle: Self{
-        Self(symbolName: "tv.circle")
-    }
-    public static var tvCircleFill: Self{
-        Self(symbolName: "tv.circle.fill")
-    }
-    public static var tvFill: Self{
-        Self(symbolName: "tv.fill")
-    }
-    public static var tvMusicNote: Self{
-        Self(symbolName: "tv.music.note")
-    }
-    public static var tvMusicNoteFill: Self{
-        Self(symbolName: "tv.music.note.fill")
-    }
-    public static var uCircle: Self{
-        Self(symbolName: "u.circle")
-    }
-    public static var uCircleFill: Self{
-        Self(symbolName: "u.circle.fill")
-    }
-    public static var uSquare: Self{
-        Self(symbolName: "u.square")
-    }
-    public static var uSquareFill: Self{
-        Self(symbolName: "u.square.fill")
-    }
-    public static var uiwindowSplit2x1: Self{
-        Self(symbolName: "uiwindow.split.2x1")
-    }
-    public static var umbrella: Self{
-        Self(symbolName: "umbrella")
-    }
-    public static var umbrellaFill: Self{
-        Self(symbolName: "umbrella.fill")
-    }
-    public static var underline: Self{
-        Self(symbolName: "underline")
-    }
-    public static var vCircle: Self{
-        Self(symbolName: "v.circle")
-    }
-    public static var vCircleFill: Self{
-        Self(symbolName: "v.circle.fill")
-    }
-    public static var vSquare: Self{
-        Self(symbolName: "v.square")
-    }
-    public static var vSquareFill: Self{
-        Self(symbolName: "v.square.fill")
-    }
-    public static var video: Self{
-        Self(symbolName: "video")
-    }
-    public static var videoBadgePlus: Self{
-        Self(symbolName: "video.badge.plus")
-    }
-    public static var videoBadgePlusFill: Self{
-        Self(symbolName: "video.badge.plus.fill")
-    }
-    public static var videoCircle: Self{
-        Self(symbolName: "video.circle")
-    }
-    public static var videoCircleFill: Self{
-        Self(symbolName: "video.circle.fill")
-    }
-    public static var videoFill: Self{
-        Self(symbolName: "video.fill")
-    }
-    public static var videoSlash: Self{
-        Self(symbolName: "video.slash")
-    }
-    public static var videoSlashFill: Self{
-        Self(symbolName: "video.slash.fill")
-    }
-    public static var view2d: Self{
-        Self(symbolName: "view.2d")
-    }
-    public static var view3d: Self{
-        Self(symbolName: "view.3d")
-    }
-    public static var viewfinder: Self{
-        Self(symbolName: "viewfinder")
-    }
-    public static var viewfinderCircle: Self{
-        Self(symbolName: "viewfinder.circle")
-    }
-    public static var viewfinderCircleFill: Self{
-        Self(symbolName: "viewfinder.circle.fill")
-    }
-    public static var wCircle: Self{
-        Self(symbolName: "w.circle")
-    }
-    public static var wCircleFill: Self{
-        Self(symbolName: "w.circle.fill")
-    }
-    public static var wSquare: Self{
-        Self(symbolName: "w.square")
-    }
-    public static var wSquareFill: Self{
-        Self(symbolName: "w.square.fill")
-    }
-    public static var wandAndRays: Self{
-        Self(symbolName: "wand.and.rays")
-    }
-    public static var wandAndRaysInverse: Self{
-        Self(symbolName: "wand.and.rays.inverse")
-    }
-    public static var wandAndStars: Self{
-        Self(symbolName: "wand.and.stars")
-    }
-    public static var wandAndStarsInverse: Self{
-        Self(symbolName: "wand.and.stars.inverse")
-    }
-    public static var waveform: Self{
-        Self(symbolName: "waveform")
-    }
-    public static var waveformCircle: Self{
-        Self(symbolName: "waveform.circle")
-    }
-    public static var waveformCircleFill: Self{
-        Self(symbolName: "waveform.circle.fill")
-    }
-    public static var waveformPath: Self{
-        Self(symbolName: "waveform.path")
-    }
-    public static var waveformPathBadgeMinus: Self{
-        Self(symbolName: "waveform.path.badge.minus")
-    }
-    public static var waveformPathBadgePlus: Self{
-        Self(symbolName: "waveform.path.badge.plus")
-    }
-    public static var waveformPathEcg: Self{
-        Self(symbolName: "waveform.path.ecg")
-    }
-    public static var wifi: Self{
-        Self(symbolName: "wifi")
-    }
-    public static var wifiExclamationmark: Self{
-        Self(symbolName: "wifi.exclamationmark")
-    }
-    public static var wifiSlash: Self{
-        Self(symbolName: "wifi.slash")
-    }
-    public static var wind: Self{
-        Self(symbolName: "wind")
-    }
-    public static var windSnow: Self{
-        Self(symbolName: "wind.snow")
-    }
-    public static var wonsignCircle: Self{
-        Self(symbolName: "wonsign.circle")
-    }
-    public static var wonsignCircleFill: Self{
-        Self(symbolName: "wonsign.circle.fill")
-    }
-    public static var wonsignSquare: Self{
-        Self(symbolName: "wonsign.square")
-    }
-    public static var wonsignSquareFill: Self{
-        Self(symbolName: "wonsign.square.fill")
-    }
-    public static var wrench: Self{
-        Self(symbolName: "wrench")
-    }
-    public static var wrenchFill: Self{
-        Self(symbolName: "wrench.fill")
-    }
-    public static var xCircle: Self{
-        Self(symbolName: "x.circle")
-    }
-    public static var xCircleFill: Self{
-        Self(symbolName: "x.circle.fill")
-    }
-    public static var xSquare: Self{
-        Self(symbolName: "x.square")
-    }
-    public static var xSquareFill: Self{
-        Self(symbolName: "x.square.fill")
-    }
-    public static var xSquareroot: Self{
-        Self(symbolName: "x.squareroot")
-    }
-    public static var xmark: Self{
-        Self(symbolName: "xmark")
-    }
-    public static var xmarkCircle: Self{
-        Self(symbolName: "xmark.circle")
-    }
-    public static var xmarkCircleFill: Self{
-        Self(symbolName: "xmark.circle.fill")
-    }
-    public static var xmarkIcloud: Self{
-        Self(symbolName: "xmark.icloud")
-    }
-    public static var xmarkIcloudFill: Self{
-        Self(symbolName: "xmark.icloud.fill")
-    }
-    public static var xmarkOctagon: Self{
-        Self(symbolName: "xmark.octagon")
-    }
-    public static var xmarkOctagonFill: Self{
-        Self(symbolName: "xmark.octagon.fill")
-    }
-    public static var xmarkRectangle: Self{
-        Self(symbolName: "xmark.rectangle")
-    }
-    public static var xmarkRectangleFill: Self{
-        Self(symbolName: "xmark.rectangle.fill")
-    }
-    public static var xmarkSeal: Self{
-        Self(symbolName: "xmark.seal")
-    }
-    public static var xmarkSealFill: Self{
-        Self(symbolName: "xmark.seal.fill")
-    }
-    public static var xmarkShield: Self{
-        Self(symbolName: "xmark.shield")
-    }
-    public static var xmarkShieldFill: Self{
-        Self(symbolName: "xmark.shield.fill")
-    }
-    public static var xmarkSquare: Self{
-        Self(symbolName: "xmark.square")
-    }
-    public static var xmarkSquareFill: Self{
-        Self(symbolName: "xmark.square.fill")
-    }
-    public static var yCircle: Self{
-        Self(symbolName: "y.circle")
-    }
-    public static var yCircleFill: Self{
-        Self(symbolName: "y.circle.fill")
-    }
-    public static var ySquare: Self{
-        Self(symbolName: "y.square")
-    }
-    public static var ySquareFill: Self{
-        Self(symbolName: "y.square.fill")
-    }
-    public static var yensignCircle: Self{
-        Self(symbolName: "yensign.circle")
-    }
-    public static var yensignCircleFill: Self{
-        Self(symbolName: "yensign.circle.fill")
-    }
-    public static var yensignSquare: Self{
-        Self(symbolName: "yensign.square")
-    }
-    public static var yensignSquareFill: Self{
-        Self(symbolName: "yensign.square.fill")
-    }
-    public static var zCircle: Self{
-        Self(symbolName: "z.circle")
-    }
-    public static var zCircleFill: Self{
-        Self(symbolName: "z.circle.fill")
-    }
-    public static var zSquare: Self{
-        Self(symbolName: "z.square")
-    }
-    public static var zSquareFill: Self{
-        Self(symbolName: "z.square.fill")
-    }
-    public static var zzz: Self{
-        Self(symbolName: "zzz")
-    }
+
+// 1.0 Symbols
+@available(iOS 13.0, macOS 11.0, tvOS 13.0, watchOS 6.0, visionOS 1.0, *)
+public extension SFSymbolName {
+    /// 􀀸
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _0Circle: Self { .init(symbolName: "0.circle") }
+
+    /// 􀓫
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _00Circle: Self { .init(symbolName: "00.circle") }
+
+    /// 􀀹
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _0CircleFill: Self { .init(symbolName: "0.circle.fill") }
+
+    /// 􀔊
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _00CircleFill: Self { .init(symbolName: "00.circle.fill") }
+
+    /// 􀃈
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _0Square: Self { .init(symbolName: "0.square") }
+
+    /// 􀔩
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _00Square: Self { .init(symbolName: "00.square") }
+
+    /// 􀃉
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _0SquareFill: Self { .init(symbolName: "0.square.fill") }
+
+    /// 􀕈
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _00SquareFill: Self { .init(symbolName: "00.square.fill") }
+
+    /// 􀀺
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _1Circle: Self { .init(symbolName: "1.circle") }
+
+    /// 􀓬
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _01Circle: Self { .init(symbolName: "01.circle") }
+
+    /// 􀀻
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _1CircleFill: Self { .init(symbolName: "1.circle.fill") }
+
+    /// 􀔋
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _01CircleFill: Self { .init(symbolName: "01.circle.fill") }
+
+    /// 􀊮
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hindi (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 18.1, macOS 15.1, tvOS 18.1, watchOS 11.1)
+    static var _1Magnifyingglass: Self { .init(symbolName: "1.magnifyingglass") }
+
+    /// 􀃊
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _1Square: Self { .init(symbolName: "1.square") }
+
+    /// 􀔪
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _01Square: Self { .init(symbolName: "01.square") }
+
+    /// 􀃋
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _1SquareFill: Self { .init(symbolName: "1.square.fill") }
+
+    /// 􀕉
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _01SquareFill: Self { .init(symbolName: "01.square.fill") }
+
+    /// 􀀼
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _2Circle: Self { .init(symbolName: "2.circle") }
+
+    /// 􀓭
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _02Circle: Self { .init(symbolName: "02.circle") }
+
+    /// 􀀽
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _2CircleFill: Self { .init(symbolName: "2.circle.fill") }
+
+    /// 􀔌
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _02CircleFill: Self { .init(symbolName: "02.circle.fill") }
+
+    /// 􀃌
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _2Square: Self { .init(symbolName: "2.square") }
+
+    /// 􀔫
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _02Square: Self { .init(symbolName: "02.square") }
+
+    /// 􀃍
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _2SquareFill: Self { .init(symbolName: "2.square.fill") }
+
+    /// 􀕊
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _02SquareFill: Self { .init(symbolName: "02.square.fill") }
+
+    /// 􀀾
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _3Circle: Self { .init(symbolName: "3.circle") }
+
+    /// 􀓮
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _03Circle: Self { .init(symbolName: "03.circle") }
+
+    /// 􀀿
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _3CircleFill: Self { .init(symbolName: "3.circle.fill") }
+
+    /// 􀔍
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _03CircleFill: Self { .init(symbolName: "03.circle.fill") }
+
+    /// 􀃎
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _3Square: Self { .init(symbolName: "3.square") }
+
+    /// 􀔬
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _03Square: Self { .init(symbolName: "03.square") }
+
+    /// 􀃏
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _3SquareFill: Self { .init(symbolName: "3.square.fill") }
+
+    /// 􀕋
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _03SquareFill: Self { .init(symbolName: "03.square.fill") }
+
+    /// 􀘗
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _4AltCircle: Self { .init(symbolName: "4.alt.circle") }
+
+    /// 􀘘
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _4AltCircleFill: Self { .init(symbolName: "4.alt.circle.fill") }
+
+    /// 􀘙
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _4AltSquare: Self { .init(symbolName: "4.alt.square") }
+
+    /// 􀘚
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _4AltSquareFill: Self { .init(symbolName: "4.alt.square.fill") }
+
+    /// 􀁀
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _4Circle: Self { .init(symbolName: "4.circle") }
+
+    /// 􀓯
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _04Circle: Self { .init(symbolName: "04.circle") }
+
+    /// 􀁁
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _4CircleFill: Self { .init(symbolName: "4.circle.fill") }
+
+    /// 􀔎
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _04CircleFill: Self { .init(symbolName: "04.circle.fill") }
+
+    /// 􀃐
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _4Square: Self { .init(symbolName: "4.square") }
+
+    /// 􀔭
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _04Square: Self { .init(symbolName: "04.square") }
+
+    /// 􀃑
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _4SquareFill: Self { .init(symbolName: "4.square.fill") }
+
+    /// 􀕌
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _04SquareFill: Self { .init(symbolName: "04.square.fill") }
+
+    /// 􀁂
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _5Circle: Self { .init(symbolName: "5.circle") }
+
+    /// 􀓰
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _05Circle: Self { .init(symbolName: "05.circle") }
+
+    /// 􀁃
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _5CircleFill: Self { .init(symbolName: "5.circle.fill") }
+
+    /// 􀔏
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _05CircleFill: Self { .init(symbolName: "05.circle.fill") }
+
+    /// 􀃒
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _5Square: Self { .init(symbolName: "5.square") }
+
+    /// 􀔮
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _05Square: Self { .init(symbolName: "05.square") }
+
+    /// 􀃓
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _5SquareFill: Self { .init(symbolName: "5.square.fill") }
+
+    /// 􀕍
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _05SquareFill: Self { .init(symbolName: "05.square.fill") }
+
+    /// 􀑱
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _6AltCircle: Self { .init(symbolName: "6.alt.circle") }
+
+    /// 􀑲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _6AltCircleFill: Self { .init(symbolName: "6.alt.circle.fill") }
+
+    /// 􀑵
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _6AltSquare: Self { .init(symbolName: "6.alt.square") }
+
+    /// 􀑶
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _6AltSquareFill: Self { .init(symbolName: "6.alt.square.fill") }
+
+    /// 􀁄
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _6Circle: Self { .init(symbolName: "6.circle") }
+
+    /// 􀓱
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _06Circle: Self { .init(symbolName: "06.circle") }
+
+    /// 􀁅
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _6CircleFill: Self { .init(symbolName: "6.circle.fill") }
+
+    /// 􀔐
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _06CircleFill: Self { .init(symbolName: "06.circle.fill") }
+
+    /// 􀃔
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _6Square: Self { .init(symbolName: "6.square") }
+
+    /// 􀔯
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _06Square: Self { .init(symbolName: "06.square") }
+
+    /// 􀃕
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _6SquareFill: Self { .init(symbolName: "6.square.fill") }
+
+    /// 􀕎
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _06SquareFill: Self { .init(symbolName: "06.square.fill") }
+
+    /// 􀁆
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _7Circle: Self { .init(symbolName: "7.circle") }
+
+    /// 􀓲
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _07Circle: Self { .init(symbolName: "07.circle") }
+
+    /// 􀁇
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _7CircleFill: Self { .init(symbolName: "7.circle.fill") }
+
+    /// 􀔑
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _07CircleFill: Self { .init(symbolName: "07.circle.fill") }
+
+    /// 􀃖
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _7Square: Self { .init(symbolName: "7.square") }
+
+    /// 􀔰
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _07Square: Self { .init(symbolName: "07.square") }
+
+    /// 􀃗
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _7SquareFill: Self { .init(symbolName: "7.square.fill") }
+
+    /// 􀕏
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _07SquareFill: Self { .init(symbolName: "07.square.fill") }
+
+    /// 􀁈
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _8Circle: Self { .init(symbolName: "8.circle") }
+
+    /// 􀓳
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _08Circle: Self { .init(symbolName: "08.circle") }
+
+    /// 􀁉
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _8CircleFill: Self { .init(symbolName: "8.circle.fill") }
+
+    /// 􀔒
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _08CircleFill: Self { .init(symbolName: "08.circle.fill") }
+
+    /// 􀃘
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _8Square: Self { .init(symbolName: "8.square") }
+
+    /// 􀔱
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _08Square: Self { .init(symbolName: "08.square") }
+
+    /// 􀃙
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _8SquareFill: Self { .init(symbolName: "8.square.fill") }
+
+    /// 􀕐
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _08SquareFill: Self { .init(symbolName: "08.square.fill") }
+
+    /// 􀑳
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _9AltCircle: Self { .init(symbolName: "9.alt.circle") }
+
+    /// 􀑴
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _9AltCircleFill: Self { .init(symbolName: "9.alt.circle.fill") }
+
+    /// 􀑷
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _9AltSquare: Self { .init(symbolName: "9.alt.square") }
+
+    /// 􀑸
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _9AltSquareFill: Self { .init(symbolName: "9.alt.square.fill") }
+
+    /// 􀁊
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _9Circle: Self { .init(symbolName: "9.circle") }
+
+    /// 􀓴
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _09Circle: Self { .init(symbolName: "09.circle") }
+
+    /// 􀁋
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _9CircleFill: Self { .init(symbolName: "9.circle.fill") }
+
+    /// 􀔓
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _09CircleFill: Self { .init(symbolName: "09.circle.fill") }
+
+    /// 􀃚
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _9Square: Self { .init(symbolName: "9.square") }
+
+    /// 􀔲
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _09Square: Self { .init(symbolName: "09.square") }
+
+    /// 􀃛
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _9SquareFill: Self { .init(symbolName: "9.square.fill") }
+
+    /// 􀕑
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _09SquareFill: Self { .init(symbolName: "09.square.fill") }
+
+    /// 􀓵
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _10Circle: Self { .init(symbolName: "10.circle") }
+
+    /// 􀔔
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _10CircleFill: Self { .init(symbolName: "10.circle.fill") }
+
+    /// 􀔳
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _10Square: Self { .init(symbolName: "10.square") }
+
+    /// 􀕒
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _10SquareFill: Self { .init(symbolName: "10.square.fill") }
+
+    /// 􀓶
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _11Circle: Self { .init(symbolName: "11.circle") }
+
+    /// 􀔕
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _11CircleFill: Self { .init(symbolName: "11.circle.fill") }
+
+    /// 􀔴
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _11Square: Self { .init(symbolName: "11.square") }
+
+    /// 􀕓
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _11SquareFill: Self { .init(symbolName: "11.square.fill") }
+
+    /// 􀓷
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _12Circle: Self { .init(symbolName: "12.circle") }
+
+    /// 􀔖
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _12CircleFill: Self { .init(symbolName: "12.circle.fill") }
+
+    /// 􀔵
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _12Square: Self { .init(symbolName: "12.square") }
+
+    /// 􀕔
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _12SquareFill: Self { .init(symbolName: "12.square.fill") }
+
+    /// 􀓸
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _13Circle: Self { .init(symbolName: "13.circle") }
+
+    /// 􀔗
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _13CircleFill: Self { .init(symbolName: "13.circle.fill") }
+
+    /// 􀔶
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _13Square: Self { .init(symbolName: "13.square") }
+
+    /// 􀕕
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _13SquareFill: Self { .init(symbolName: "13.square.fill") }
+
+    /// 􀓹
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _14Circle: Self { .init(symbolName: "14.circle") }
+
+    /// 􀔘
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _14CircleFill: Self { .init(symbolName: "14.circle.fill") }
+
+    /// 􀔷
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _14Square: Self { .init(symbolName: "14.square") }
+
+    /// 􀕖
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _14SquareFill: Self { .init(symbolName: "14.square.fill") }
+
+    /// 􀓺
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _15Circle: Self { .init(symbolName: "15.circle") }
+
+    /// 􀔙
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _15CircleFill: Self { .init(symbolName: "15.circle.fill") }
+
+    /// 􀔸
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _15Square: Self { .init(symbolName: "15.square") }
+
+    /// 􀕗
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _15SquareFill: Self { .init(symbolName: "15.square.fill") }
+
+    /// 􀓻
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _16Circle: Self { .init(symbolName: "16.circle") }
+
+    /// 􀔚
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _16CircleFill: Self { .init(symbolName: "16.circle.fill") }
+
+    /// 􀔹
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _16Square: Self { .init(symbolName: "16.square") }
+
+    /// 􀕘
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _16SquareFill: Self { .init(symbolName: "16.square.fill") }
+
+    /// 􀓼
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _17Circle: Self { .init(symbolName: "17.circle") }
+
+    /// 􀔛
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _17CircleFill: Self { .init(symbolName: "17.circle.fill") }
+
+    /// 􀔺
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _17Square: Self { .init(symbolName: "17.square") }
+
+    /// 􀕙
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _17SquareFill: Self { .init(symbolName: "17.square.fill") }
+
+    /// 􀓽
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _18Circle: Self { .init(symbolName: "18.circle") }
+
+    /// 􀔜
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _18CircleFill: Self { .init(symbolName: "18.circle.fill") }
+
+    /// 􀔻
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _18Square: Self { .init(symbolName: "18.square") }
+
+    /// 􀕚
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _18SquareFill: Self { .init(symbolName: "18.square.fill") }
+
+    /// 􀓾
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _19Circle: Self { .init(symbolName: "19.circle") }
+
+    /// 􀔝
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _19CircleFill: Self { .init(symbolName: "19.circle.fill") }
+
+    /// 􀔼
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _19Square: Self { .init(symbolName: "19.square") }
+
+    /// 􀕛
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _19SquareFill: Self { .init(symbolName: "19.square.fill") }
+
+    /// 􀓿
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _20Circle: Self { .init(symbolName: "20.circle") }
+
+    /// 􀔞
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _20CircleFill: Self { .init(symbolName: "20.circle.fill") }
+
+    /// 􀔽
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _20Square: Self { .init(symbolName: "20.square") }
+
+    /// 􀕜
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _20SquareFill: Self { .init(symbolName: "20.square.fill") }
+
+    /// 􀔀
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _21Circle: Self { .init(symbolName: "21.circle") }
+
+    /// 􀔟
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _21CircleFill: Self { .init(symbolName: "21.circle.fill") }
+
+    /// 􀔾
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _21Square: Self { .init(symbolName: "21.square") }
+
+    /// 􀕝
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _21SquareFill: Self { .init(symbolName: "21.square.fill") }
+
+    /// 􀔁
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _22Circle: Self { .init(symbolName: "22.circle") }
+
+    /// 􀔠
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _22CircleFill: Self { .init(symbolName: "22.circle.fill") }
+
+    /// 􀔿
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _22Square: Self { .init(symbolName: "22.square") }
+
+    /// 􀕞
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _22SquareFill: Self { .init(symbolName: "22.square.fill") }
+
+    /// 􀔂
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _23Circle: Self { .init(symbolName: "23.circle") }
+
+    /// 􀔡
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _23CircleFill: Self { .init(symbolName: "23.circle.fill") }
+
+    /// 􀕀
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _23Square: Self { .init(symbolName: "23.square") }
+
+    /// 􀕟
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _23SquareFill: Self { .init(symbolName: "23.square.fill") }
+
+    /// 􀔃
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _24Circle: Self { .init(symbolName: "24.circle") }
+
+    /// 􀔢
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _24CircleFill: Self { .init(symbolName: "24.circle.fill") }
+
+    /// 􀕁
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _24Square: Self { .init(symbolName: "24.square") }
+
+    /// 􀕠
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _24SquareFill: Self { .init(symbolName: "24.square.fill") }
+
+    /// 􀔄
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _25Circle: Self { .init(symbolName: "25.circle") }
+
+    /// 􀔣
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _25CircleFill: Self { .init(symbolName: "25.circle.fill") }
+
+    /// 􀕂
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _25Square: Self { .init(symbolName: "25.square") }
+
+    /// 􀕡
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _25SquareFill: Self { .init(symbolName: "25.square.fill") }
+
+    /// 􀔅
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _26Circle: Self { .init(symbolName: "26.circle") }
+
+    /// 􀔤
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _26CircleFill: Self { .init(symbolName: "26.circle.fill") }
+
+    /// 􀕃
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _26Square: Self { .init(symbolName: "26.square") }
+
+    /// 􀕢
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _26SquareFill: Self { .init(symbolName: "26.square.fill") }
+
+    /// 􀔆
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _27Circle: Self { .init(symbolName: "27.circle") }
+
+    /// 􀔥
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _27CircleFill: Self { .init(symbolName: "27.circle.fill") }
+
+    /// 􀕄
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _27Square: Self { .init(symbolName: "27.square") }
+
+    /// 􀕣
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _27SquareFill: Self { .init(symbolName: "27.square.fill") }
+
+    /// 􀔇
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _28Circle: Self { .init(symbolName: "28.circle") }
+
+    /// 􀔦
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _28CircleFill: Self { .init(symbolName: "28.circle.fill") }
+
+    /// 􀕅
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _28Square: Self { .init(symbolName: "28.square") }
+
+    /// 􀕤
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _28SquareFill: Self { .init(symbolName: "28.square.fill") }
+
+    /// 􀔈
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _29Circle: Self { .init(symbolName: "29.circle") }
+
+    /// 􀔧
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _29CircleFill: Self { .init(symbolName: "29.circle.fill") }
+
+    /// 􀕆
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _29Square: Self { .init(symbolName: "29.square") }
+
+    /// 􀕥
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _29SquareFill: Self { .init(symbolName: "29.square.fill") }
+
+    /// 􀔉
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _30Circle: Self { .init(symbolName: "30.circle") }
+
+    /// 􀔨
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _30CircleFill: Self { .init(symbolName: "30.circle.fill") }
+
+    /// 􀕇
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _30Square: Self { .init(symbolName: "30.square") }
+
+    /// 􀕦
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _30SquareFill: Self { .init(symbolName: "30.square.fill") }
+
+    /// 􀘠
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _31Circle: Self { .init(symbolName: "31.circle") }
+
+    /// 􀘡
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _31CircleFill: Self { .init(symbolName: "31.circle.fill") }
+
+    /// 􀘢
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _31Square: Self { .init(symbolName: "31.square") }
+
+    /// 􀘣
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _31SquareFill: Self { .init(symbolName: "31.square.fill") }
+
+    /// 􀚗
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _32Circle: Self { .init(symbolName: "32.circle") }
+
+    /// 􀚘
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _32CircleFill: Self { .init(symbolName: "32.circle.fill") }
+
+    /// 􀚽
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _32Square: Self { .init(symbolName: "32.square") }
+
+    /// 􀚾
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _32SquareFill: Self { .init(symbolName: "32.square.fill") }
+
+    /// 􀚙
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _33Circle: Self { .init(symbolName: "33.circle") }
+
+    /// 􀚚
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _33CircleFill: Self { .init(symbolName: "33.circle.fill") }
+
+    /// 􀚿
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _33Square: Self { .init(symbolName: "33.square") }
+
+    /// 􀛀
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _33SquareFill: Self { .init(symbolName: "33.square.fill") }
+
+    /// 􀚛
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _34Circle: Self { .init(symbolName: "34.circle") }
+
+    /// 􀚜
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _34CircleFill: Self { .init(symbolName: "34.circle.fill") }
+
+    /// 􀛁
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _34Square: Self { .init(symbolName: "34.square") }
+
+    /// 􀛂
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _34SquareFill: Self { .init(symbolName: "34.square.fill") }
+
+    /// 􀚝
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _35Circle: Self { .init(symbolName: "35.circle") }
+
+    /// 􀚞
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _35CircleFill: Self { .init(symbolName: "35.circle.fill") }
+
+    /// 􀛃
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _35Square: Self { .init(symbolName: "35.square") }
+
+    /// 􀛄
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _35SquareFill: Self { .init(symbolName: "35.square.fill") }
+
+    /// 􀚟
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _36Circle: Self { .init(symbolName: "36.circle") }
+
+    /// 􀚠
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _36CircleFill: Self { .init(symbolName: "36.circle.fill") }
+
+    /// 􀛅
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _36Square: Self { .init(symbolName: "36.square") }
+
+    /// 􀛆
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _36SquareFill: Self { .init(symbolName: "36.square.fill") }
+
+    /// 􀚡
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _37Circle: Self { .init(symbolName: "37.circle") }
+
+    /// 􀚢
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _37CircleFill: Self { .init(symbolName: "37.circle.fill") }
+
+    /// 􀛇
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _37Square: Self { .init(symbolName: "37.square") }
+
+    /// 􀛈
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _37SquareFill: Self { .init(symbolName: "37.square.fill") }
+
+    /// 􀚣
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _38Circle: Self { .init(symbolName: "38.circle") }
+
+    /// 􀚤
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _38CircleFill: Self { .init(symbolName: "38.circle.fill") }
+
+    /// 􀛉
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _38Square: Self { .init(symbolName: "38.square") }
+
+    /// 􀛊
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _38SquareFill: Self { .init(symbolName: "38.square.fill") }
+
+    /// 􀚥
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _39Circle: Self { .init(symbolName: "39.circle") }
+
+    /// 􀚦
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _39CircleFill: Self { .init(symbolName: "39.circle.fill") }
+
+    /// 􀛋
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _39Square: Self { .init(symbolName: "39.square") }
+
+    /// 􀛌
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _39SquareFill: Self { .init(symbolName: "39.square.fill") }
+
+    /// 􀚧
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _40Circle: Self { .init(symbolName: "40.circle") }
+
+    /// 􀚨
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _40CircleFill: Self { .init(symbolName: "40.circle.fill") }
+
+    /// 􀛍
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _40Square: Self { .init(symbolName: "40.square") }
+
+    /// 􀛎
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _40SquareFill: Self { .init(symbolName: "40.square.fill") }
+
+    /// 􀚩
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _41Circle: Self { .init(symbolName: "41.circle") }
+
+    /// 􀚪
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _41CircleFill: Self { .init(symbolName: "41.circle.fill") }
+
+    /// 􀛏
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _41Square: Self { .init(symbolName: "41.square") }
+
+    /// 􀛐
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _41SquareFill: Self { .init(symbolName: "41.square.fill") }
+
+    /// 􀚫
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _42Circle: Self { .init(symbolName: "42.circle") }
+
+    /// 􀚬
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _42CircleFill: Self { .init(symbolName: "42.circle.fill") }
+
+    /// 􀛑
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _42Square: Self { .init(symbolName: "42.square") }
+
+    /// 􀛒
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _42SquareFill: Self { .init(symbolName: "42.square.fill") }
+
+    /// 􀚭
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _43Circle: Self { .init(symbolName: "43.circle") }
+
+    /// 􀚮
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _43CircleFill: Self { .init(symbolName: "43.circle.fill") }
+
+    /// 􀛓
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _43Square: Self { .init(symbolName: "43.square") }
+
+    /// 􀛔
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _43SquareFill: Self { .init(symbolName: "43.square.fill") }
+
+    /// 􀚯
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _44Circle: Self { .init(symbolName: "44.circle") }
+
+    /// 􀚰
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _44CircleFill: Self { .init(symbolName: "44.circle.fill") }
+
+    /// 􀛕
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _44Square: Self { .init(symbolName: "44.square") }
+
+    /// 􀛖
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _44SquareFill: Self { .init(symbolName: "44.square.fill") }
+
+    /// 􀚱
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _45Circle: Self { .init(symbolName: "45.circle") }
+
+    /// 􀚲
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _45CircleFill: Self { .init(symbolName: "45.circle.fill") }
+
+    /// 􀛗
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _45Square: Self { .init(symbolName: "45.square") }
+
+    /// 􀛘
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _45SquareFill: Self { .init(symbolName: "45.square.fill") }
+
+    /// 􀚳
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _46Circle: Self { .init(symbolName: "46.circle") }
+
+    /// 􀚴
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _46CircleFill: Self { .init(symbolName: "46.circle.fill") }
+
+    /// 􀛙
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _46Square: Self { .init(symbolName: "46.square") }
+
+    /// 􀛚
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _46SquareFill: Self { .init(symbolName: "46.square.fill") }
+
+    /// 􀚵
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _47Circle: Self { .init(symbolName: "47.circle") }
+
+    /// 􀚶
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _47CircleFill: Self { .init(symbolName: "47.circle.fill") }
+
+    /// 􀛛
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _47Square: Self { .init(symbolName: "47.square") }
+
+    /// 􀛜
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _47SquareFill: Self { .init(symbolName: "47.square.fill") }
+
+    /// 􀚷
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _48Circle: Self { .init(symbolName: "48.circle") }
+
+    /// 􀚸
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _48CircleFill: Self { .init(symbolName: "48.circle.fill") }
+
+    /// 􀛝
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _48Square: Self { .init(symbolName: "48.square") }
+
+    /// 􀛞
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _48SquareFill: Self { .init(symbolName: "48.square.fill") }
+
+    /// 􀚹
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _49Circle: Self { .init(symbolName: "49.circle") }
+
+    /// 􀚺
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _49CircleFill: Self { .init(symbolName: "49.circle.fill") }
+
+    /// 􀛟
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _49Square: Self { .init(symbolName: "49.square") }
+
+    /// 􀛠
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _49SquareFill: Self { .init(symbolName: "49.square.fill") }
+
+    /// 􀚻
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _50Circle: Self { .init(symbolName: "50.circle") }
+
+    /// 􀚼
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _50CircleFill: Self { .init(symbolName: "50.circle.fill") }
+
+    /// 􀛡
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _50Square: Self { .init(symbolName: "50.square") }
+
+    /// 􀛢
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    /// - Hindi (iOS 17.2, macOS 14.2, tvOS 17.2, watchOS 10.2)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var _50SquareFill: Self { .init(symbolName: "50.square.fill") }
+
+    /// 􀅏
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.2, renamed: "character")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "character")
+    @available(tvOS, introduced: 13.0, deprecated: 14.2, renamed: "character")
+    @available(watchOS, introduced: 6.0, deprecated: 7.1, renamed: "character")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "character")
+    static var a: Self { .init(symbolName: "a") }
+
+    /// 􀀄
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var aCircle: Self { .init(symbolName: "a.circle") }
+
+    /// 􀀅
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var aCircleFill: Self { .init(symbolName: "a.circle.fill") }
+
+    /// 􀂔
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var aSquare: Self { .init(symbolName: "a.square") }
+
+    /// 􀂕
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var aSquareFill: Self { .init(symbolName: "a.square.fill") }
+
+    /// 􀑓
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var airplane: Self { .init(symbolName: "airplane") }
+
+    /// 􀑢
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s AirPlay.
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "airplayAudio")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "airplayAudio")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "airplayAudio")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "airplayAudio")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "airplayAudio")
+    static var airplayaudio: Self { .init(symbolName: "airplayaudio") }
+
+    /// 􀑡
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s AirPlay.
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "airplayVideo")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "airplayVideo")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "airplayVideo")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "airplayVideo")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "airplayVideo")
+    static var airplayvideo: Self { .init(symbolName: "airplayvideo") }
+
+    /// 􀐭
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var alarm: Self { .init(symbolName: "alarm") }
+
+    /// 􀐮
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var alarmFill: Self { .init(symbolName: "alarm.fill") }
+
+    /// 􀆖
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var alt: Self { .init(symbolName: "alt") }
+
+    /// 􀌚
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var ant: Self { .init(symbolName: "ant") }
+
+    /// 􀌜
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var antCircle: Self { .init(symbolName: "ant.circle") }
+
+    /// 􀌝
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var antCircleFill: Self { .init(symbolName: "ant.circle.fill") }
+
+    /// 􀌛
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var antFill: Self { .init(symbolName: "ant.fill") }
+
+    /// 􀖀
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var antennaRadiowavesLeftAndRight: Self { .init(symbolName: "antenna.radiowaves.left.and.right") }
+
+    /// 􀑋
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var app: Self { .init(symbolName: "app") }
+
+    /// 􀑏
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var appBadge: Self { .init(symbolName: "app.badge") }
+
+    /// 􀑐
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var appBadgeFill: Self { .init(symbolName: "app.badge.fill") }
+
+    /// 􀑌
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var appFill: Self { .init(symbolName: "app.fill") }
+
+    /// 􀑑
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var appGift: Self { .init(symbolName: "app.gift") }
+
+    /// 􀑒
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var appGiftFill: Self { .init(symbolName: "app.gift.fill") }
+
+    /// 􀈭
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var archivebox: Self { .init(symbolName: "archivebox") }
+
+    /// 􀈮
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var archiveboxFill: Self { .init(symbolName: "archivebox.fill") }
+
+    /// 􀘸
+    /// Single Localization, Single Layerset, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s ARKit.
+    static var arkit: Self { .init(symbolName: "arkit") }
+
+    /// 􀊯
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangle2Circlepath")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowTriangle2Circlepath")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangle2Circlepath")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowTriangle2Circlepath")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowTriangle2Circlepath")
+    static var arrow2Circlepath: Self { .init(symbolName: "arrow.2.circlepath") }
+
+    /// 􀖊
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangle2CirclepathCircle")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowTriangle2CirclepathCircle")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangle2CirclepathCircle")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowTriangle2CirclepathCircle")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowTriangle2CirclepathCircle")
+    static var arrow2CirclepathCircle: Self { .init(symbolName: "arrow.2.circlepath.circle") }
+
+    /// 􀖋
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangle2CirclepathCircleFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowTriangle2CirclepathCircleFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangle2CirclepathCircleFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowTriangle2CirclepathCircleFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowTriangle2CirclepathCircleFill")
+    static var arrow2CirclepathCircleFill: Self { .init(symbolName: "arrow.2.circlepath.circle.fill") }
+
+    /// 􀅌
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrow2Squarepath: Self { .init(symbolName: "arrow.2.squarepath") }
+
+    /// 􀙛
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrow3Trianglepath: Self { .init(symbolName: "arrow.3.trianglepath") }
+
+    /// 􀙠
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangleBranch")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowTriangleBranch")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangleBranch")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowTriangleBranch")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowTriangleBranch")
+    static var arrowBranch: Self { .init(symbolName: "arrow.branch") }
+
+    /// 􀅈
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowClockwise: Self { .init(symbolName: "arrow.clockwise") }
+
+    /// 􀚁
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowClockwiseCircle: Self { .init(symbolName: "arrow.clockwise.circle") }
+
+    /// 􀚂
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowClockwiseCircleFill: Self { .init(symbolName: "arrow.clockwise.circle.fill") }
+
+    /// 􀙷
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowTriangleheadClockwiseIcloud")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "arrowTriangleheadClockwiseIcloud")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowTriangleheadClockwiseIcloud")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "arrowTriangleheadClockwiseIcloud")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "arrowTriangleheadClockwiseIcloud")
+    static var arrowClockwiseIcloud: Self { .init(symbolName: "arrow.clockwise.icloud") }
+
+    /// 􀙸
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowTriangleheadClockwiseIcloudFill")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "arrowTriangleheadClockwiseIcloudFill")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowTriangleheadClockwiseIcloudFill")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "arrowTriangleheadClockwiseIcloudFill")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "arrowTriangleheadClockwiseIcloudFill")
+    static var arrowClockwiseIcloudFill: Self { .init(symbolName: "arrow.clockwise.icloud.fill") }
+
+    /// 􀅉
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowCounterclockwise: Self { .init(symbolName: "arrow.counterclockwise") }
+
+    /// 􀚃
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowCounterclockwiseCircle: Self { .init(symbolName: "arrow.counterclockwise.circle") }
+
+    /// 􀚄
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowCounterclockwiseCircleFill: Self { .init(symbolName: "arrow.counterclockwise.circle.fill") }
+
+    /// 􀙹
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowTriangleheadCounterclockwiseIcloud")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "arrowTriangleheadCounterclockwiseIcloud")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowTriangleheadCounterclockwiseIcloud")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "arrowTriangleheadCounterclockwiseIcloud")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "arrowTriangleheadCounterclockwiseIcloud")
+    static var arrowCounterclockwiseIcloud: Self { .init(symbolName: "arrow.counterclockwise.icloud") }
+
+    /// 􀙺
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowTriangleheadCounterclockwiseIcloudFill")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "arrowTriangleheadCounterclockwiseIcloudFill")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowTriangleheadCounterclockwiseIcloudFill")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "arrowTriangleheadCounterclockwiseIcloudFill")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "arrowTriangleheadCounterclockwiseIcloudFill")
+    static var arrowCounterclockwiseIcloudFill: Self { .init(symbolName: "arrow.counterclockwise.icloud.fill") }
+
+    /// 􀄩
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowDown: Self { .init(symbolName: "arrow.down") }
+
+    /// 􀁸
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowDownCircle: Self { .init(symbolName: "arrow.down.circle") }
+
+    /// 􀁹
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowDownCircleFill: Self { .init(symbolName: "arrow.down.circle.fill") }
+
+    /// 􀈽
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowDownDocument")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "arrowDownDocument")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowDownDocument")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "arrowDownDocument")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "arrowDownDocument")
+    static var arrowDownDoc: Self { .init(symbolName: "arrow.down.doc") }
+
+    /// 􀈾
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowDownDocumentFill")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "arrowDownDocumentFill")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowDownDocumentFill")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "arrowDownDocumentFill")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "arrowDownDocumentFill")
+    static var arrowDownDocFill: Self { .init(symbolName: "arrow.down.doc.fill") }
+
+    /// 􀄰
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowDownLeft: Self { .init(symbolName: "arrow.down.left") }
+
+    /// 􀂆
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowDownLeftCircle: Self { .init(symbolName: "arrow.down.left.circle") }
+
+    /// 􀂇
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowDownLeftCircleFill: Self { .init(symbolName: "arrow.down.left.circle.fill") }
+
+    /// 􀄖
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowDownLeftSquare: Self { .init(symbolName: "arrow.down.left.square") }
+
+    /// 􀄗
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowDownLeftSquareFill: Self { .init(symbolName: "arrow.down.left.square.fill") }
+
+    /// 􀍑
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var arrowDownLeftVideo: Self { .init(symbolName: "arrow.down.left.video") }
+
+    /// 􀍒
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var arrowDownLeftVideoFill: Self { .init(symbolName: "arrow.down.left.video.fill") }
+
+    /// 􀄱
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowDownRight: Self { .init(symbolName: "arrow.down.right") }
+
+    /// 􀅋
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowDownRightAndArrowUpLeft: Self { .init(symbolName: "arrow.down.right.and.arrow.up.left") }
+
+    /// 􀂈
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowDownRightCircle: Self { .init(symbolName: "arrow.down.right.circle") }
+
+    /// 􀂉
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowDownRightCircleFill: Self { .init(symbolName: "arrow.down.right.circle.fill") }
+
+    /// 􀄘
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowDownRightSquare: Self { .init(symbolName: "arrow.down.right.square") }
+
+    /// 􀄙
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowDownRightSquareFill: Self { .init(symbolName: "arrow.down.right.square.fill") }
+
+    /// 􀄈
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowDownSquare: Self { .init(symbolName: "arrow.down.square") }
+
+    /// 􀄉
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowDownSquareFill: Self { .init(symbolName: "arrow.down.square.fill") }
+
+    /// 􀅀
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowDownToLine: Self { .init(symbolName: "arrow.down.to.line") }
+
+    /// 􀅄
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "arrowDownToLineCompact")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "arrowDownToLineCompact")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "arrowDownToLineCompact")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "arrowDownToLineCompact")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowDownToLineCompact")
+    static var arrowDownToLineAlt: Self { .init(symbolName: "arrow.down.to.line.alt") }
+
+    /// 􀄪
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowLeft: Self { .init(symbolName: "arrow.left") }
+
+    /// 􀄾
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowLeftAndRight: Self { .init(symbolName: "arrow.left.and.right") }
+
+    /// 􀑾
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowLeftAndRightCircle: Self { .init(symbolName: "arrow.left.and.right.circle") }
+
+    /// 􀑿
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowLeftAndRightCircleFill: Self { .init(symbolName: "arrow.left.and.right.circle.fill") }
+
+    /// 􀒀
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowLeftAndRightSquare: Self { .init(symbolName: "arrow.left.and.right.square") }
+
+    /// 􀒁
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowLeftAndRightSquareFill: Self { .init(symbolName: "arrow.left.and.right.square.fill") }
+
+    /// 􀁺
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowLeftCircle: Self { .init(symbolName: "arrow.left.circle") }
+
+    /// 􀁻
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowLeftCircleFill: Self { .init(symbolName: "arrow.left.circle.fill") }
+
+    /// 􀄊
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowLeftSquare: Self { .init(symbolName: "arrow.left.square") }
+
+    /// 􀄋
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowLeftSquareFill: Self { .init(symbolName: "arrow.left.square.fill") }
+
+    /// 􀅁
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowLeftToLine: Self { .init(symbolName: "arrow.left.to.line") }
+
+    /// 􀅅
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "arrowLeftToLineCompact")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "arrowLeftToLineCompact")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "arrowLeftToLineCompact")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "arrowLeftToLineCompact")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowLeftToLineCompact")
+    static var arrowLeftToLineAlt: Self { .init(symbolName: "arrow.left.to.line.alt") }
+
+    /// 􀖄
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangleMerge")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowTriangleMerge")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangleMerge")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowTriangleMerge")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowTriangleMerge")
+    static var arrowMerge: Self { .init(symbolName: "arrow.merge") }
+
+    /// 􀄫
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowRight: Self { .init(symbolName: "arrow.right") }
+
+    /// 􀄭
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowLeftArrowRight")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowLeftArrowRight")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowLeftArrowRight")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowLeftArrowRight")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowLeftArrowRight")
+    static var arrowRightArrowLeft: Self { .init(symbolName: "arrow.right.arrow.left") }
+
+    /// 􀂀
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowLeftArrowRightCircle")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowLeftArrowRightCircle")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowLeftArrowRightCircle")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowLeftArrowRightCircle")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowLeftArrowRightCircle")
+    static var arrowRightArrowLeftCircle: Self { .init(symbolName: "arrow.right.arrow.left.circle") }
+
+    /// 􀂁
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowLeftArrowRightCircleFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowLeftArrowRightCircleFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowLeftArrowRightCircleFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowLeftArrowRightCircleFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowLeftArrowRightCircleFill")
+    static var arrowRightArrowLeftCircleFill: Self { .init(symbolName: "arrow.right.arrow.left.circle.fill") }
+
+    /// 􀄐
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowLeftArrowRightSquare")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowLeftArrowRightSquare")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowLeftArrowRightSquare")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowLeftArrowRightSquare")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowLeftArrowRightSquare")
+    static var arrowRightArrowLeftSquare: Self { .init(symbolName: "arrow.right.arrow.left.square") }
+
+    /// 􀄑
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowLeftArrowRightSquareFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowLeftArrowRightSquareFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowLeftArrowRightSquareFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowLeftArrowRightSquareFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowLeftArrowRightSquareFill")
+    static var arrowRightArrowLeftSquareFill: Self { .init(symbolName: "arrow.right.arrow.left.square.fill") }
+
+    /// 􀁼
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowRightCircle: Self { .init(symbolName: "arrow.right.circle") }
+
+    /// 􀁽
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowRightCircleFill: Self { .init(symbolName: "arrow.right.circle.fill") }
+
+    /// 􀄌
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowRightSquare: Self { .init(symbolName: "arrow.right.square") }
+
+    /// 􀄍
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowRightSquareFill: Self { .init(symbolName: "arrow.right.square.fill") }
+
+    /// 􀅂
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowRightToLine: Self { .init(symbolName: "arrow.right.to.line") }
+
+    /// 􀅆
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "arrowRightToLineCompact")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "arrowRightToLineCompact")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "arrowRightToLineCompact")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "arrowRightToLineCompact")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowRightToLineCompact")
+    static var arrowRightToLineAlt: Self { .init(symbolName: "arrow.right.to.line.alt") }
+
+    /// 􀖅
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangleSwap")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowTriangleSwap")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangleSwap")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowTriangleSwap")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowTriangleSwap")
+    static var arrowSwap: Self { .init(symbolName: "arrow.swap") }
+
+    /// 􀄴
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowTurnDownLeft: Self { .init(symbolName: "arrow.turn.down.left") }
+
+    /// 􀄵
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowTurnDownRight: Self { .init(symbolName: "arrow.turn.down.right") }
+
+    /// 􀄷
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowTurnLeftDown: Self { .init(symbolName: "arrow.turn.left.down") }
+
+    /// 􀄶
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowTurnLeftUp: Self { .init(symbolName: "arrow.turn.left.up") }
+
+    /// 􀄳
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowTurnRightDown: Self { .init(symbolName: "arrow.turn.right.down") }
+
+    /// 􀄲
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowTurnRightUp: Self { .init(symbolName: "arrow.turn.right.up") }
+
+    /// 􀄸
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowTurnUpLeft: Self { .init(symbolName: "arrow.turn.up.left") }
+
+    /// 􀄹
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowTurnUpRight: Self { .init(symbolName: "arrow.turn.up.right") }
+
+    /// 􀄨
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowUp: Self { .init(symbolName: "arrow.up") }
+
+    /// 􀑹
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowUpAndDown: Self { .init(symbolName: "arrow.up.and.down") }
+
+    /// 􀑺
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpAndDownCircle: Self { .init(symbolName: "arrow.up.and.down.circle") }
+
+    /// 􀑻
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpAndDownCircleFill: Self { .init(symbolName: "arrow.up.and.down.circle.fill") }
+
+    /// 􀑼
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpAndDownSquare: Self { .init(symbolName: "arrow.up.and.down.square") }
+
+    /// 􀑽
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowUpAndDownSquareFill: Self { .init(symbolName: "arrow.up.and.down.square.fill") }
+
+    /// 􀄬
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var arrowUpArrowDown: Self { .init(symbolName: "arrow.up.arrow.down") }
+
+    /// 􀁾
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpArrowDownCircle: Self { .init(symbolName: "arrow.up.arrow.down.circle") }
+
+    /// 􀁿
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpArrowDownCircleFill: Self { .init(symbolName: "arrow.up.arrow.down.circle.fill") }
+
+    /// 􀄎
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpArrowDownSquare: Self { .init(symbolName: "arrow.up.arrow.down.square") }
+
+    /// 􀄏
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowUpArrowDownSquareFill: Self { .init(symbolName: "arrow.up.arrow.down.square.fill") }
+
+    /// 􀈵
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpBin: Self { .init(symbolName: "arrow.up.bin") }
+
+    /// 􀈶
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowUpBinFill: Self { .init(symbolName: "arrow.up.bin.fill") }
+
+    /// 􀁶
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpCircle: Self { .init(symbolName: "arrow.up.circle") }
+
+    /// 􀁷
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpCircleFill: Self { .init(symbolName: "arrow.up.circle.fill") }
+
+    /// 􀈻
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowUpDocument")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "arrowUpDocument")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowUpDocument")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "arrowUpDocument")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "arrowUpDocument")
+    static var arrowUpDoc: Self { .init(symbolName: "arrow.up.doc") }
+
+    /// 􀈼
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowUpDocumentFill")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "arrowUpDocumentFill")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowUpDocumentFill")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "arrowUpDocumentFill")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "arrowUpDocumentFill")
+    static var arrowUpDocFill: Self { .init(symbolName: "arrow.up.doc.fill") }
+
+    /// 􀄮
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowUpLeft: Self { .init(symbolName: "arrow.up.left") }
+
+    /// 􀅊
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowUpLeftAndArrowDownRight: Self { .init(symbolName: "arrow.up.left.and.arrow.down.right") }
+
+    /// 􀂂
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpLeftCircle: Self { .init(symbolName: "arrow.up.left.circle") }
+
+    /// 􀂃
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpLeftCircleFill: Self { .init(symbolName: "arrow.up.left.circle.fill") }
+
+    /// 􀄒
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpLeftSquare: Self { .init(symbolName: "arrow.up.left.square") }
+
+    /// 􀄓
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowUpLeftSquareFill: Self { .init(symbolName: "arrow.up.left.square.fill") }
+
+    /// 􀄯
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowUpRight: Self { .init(symbolName: "arrow.up.right") }
+
+    /// 􀂄
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpRightCircle: Self { .init(symbolName: "arrow.up.right.circle") }
+
+    /// 􀂅
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpRightCircleFill: Self { .init(symbolName: "arrow.up.right.circle.fill") }
+
+    /// 􀙞
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangleTurnUpRightDiamond")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowTriangleTurnUpRightDiamond")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangleTurnUpRightDiamond")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowTriangleTurnUpRightDiamond")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowTriangleTurnUpRightDiamond")
+    static var arrowUpRightDiamond: Self { .init(symbolName: "arrow.up.right.diamond") }
+
+    /// 􀙟
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangleTurnUpRightDiamondFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowTriangleTurnUpRightDiamondFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangleTurnUpRightDiamondFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowTriangleTurnUpRightDiamondFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowTriangleTurnUpRightDiamondFill")
+    static var arrowUpRightDiamondFill: Self { .init(symbolName: "arrow.up.right.diamond.fill") }
+
+    /// 􀄔
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpRightSquare: Self { .init(symbolName: "arrow.up.right.square") }
+
+    /// 􀄕
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowUpRightSquareFill: Self { .init(symbolName: "arrow.up.right.square.fill") }
+
+    /// 􀍏
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var arrowUpRightVideo: Self { .init(symbolName: "arrow.up.right.video") }
+
+    /// 􀍐
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var arrowUpRightVideoFill: Self { .init(symbolName: "arrow.up.right.video.fill") }
+
+    /// 􀄆
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUpSquare: Self { .init(symbolName: "arrow.up.square") }
+
+    /// 􀄇
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowUpSquareFill: Self { .init(symbolName: "arrow.up.square.fill") }
+
+    /// 􀄿
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowUpToLine: Self { .init(symbolName: "arrow.up.to.line") }
+
+    /// 􀅃
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "arrowUpToLineCompact")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "arrowUpToLineCompact")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "arrowUpToLineCompact")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "arrowUpToLineCompact")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowUpToLineCompact")
+    static var arrowUpToLineAlt: Self { .init(symbolName: "arrow.up.to.line.alt") }
+
+    /// 􀄻
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowUturnDown: Self { .init(symbolName: "arrow.uturn.down") }
+
+    /// 􀂌
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUturnDownCircle: Self { .init(symbolName: "arrow.uturn.down.circle") }
+
+    /// 􀂍
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUturnDownCircleFill: Self { .init(symbolName: "arrow.uturn.down.circle.fill") }
+
+    /// 􀄜
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUturnDownSquare: Self { .init(symbolName: "arrow.uturn.down.square") }
+
+    /// 􀄝
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowUturnDownSquareFill: Self { .init(symbolName: "arrow.uturn.down.square.fill") }
+
+    /// 􀄼
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowUturnLeft: Self { .init(symbolName: "arrow.uturn.left") }
+
+    /// 􀂎
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUturnLeftCircle: Self { .init(symbolName: "arrow.uturn.left.circle") }
+
+    /// 􀂏
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUturnLeftCircleFill: Self { .init(symbolName: "arrow.uturn.left.circle.fill") }
+
+    /// 􀄞
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUturnLeftSquare: Self { .init(symbolName: "arrow.uturn.left.square") }
+
+    /// 􀄟
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowUturnLeftSquareFill: Self { .init(symbolName: "arrow.uturn.left.square.fill") }
+
+    /// 􀄽
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowUturnRight: Self { .init(symbolName: "arrow.uturn.right") }
+
+    /// 􀂐
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUturnRightCircle: Self { .init(symbolName: "arrow.uturn.right.circle") }
+
+    /// 􀂑
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUturnRightCircleFill: Self { .init(symbolName: "arrow.uturn.right.circle.fill") }
+
+    /// 􀄠
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUturnRightSquare: Self { .init(symbolName: "arrow.uturn.right.square") }
+
+    /// 􀄡
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowUturnRightSquareFill: Self { .init(symbolName: "arrow.uturn.right.square.fill") }
+
+    /// 􀄺
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowUturnUp: Self { .init(symbolName: "arrow.uturn.up") }
+
+    /// 􀂊
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUturnUpCircle: Self { .init(symbolName: "arrow.uturn.up.circle") }
+
+    /// 􀂋
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUturnUpCircleFill: Self { .init(symbolName: "arrow.uturn.up.circle.fill") }
+
+    /// 􀄚
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowUturnUpSquare: Self { .init(symbolName: "arrow.uturn.up.square") }
+
+    /// 􀄛
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowUturnUpSquareFill: Self { .init(symbolName: "arrow.uturn.up.square.fill") }
+
+    /// 􀉌
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowshapeTurnUpLeft: Self { .init(symbolName: "arrowshape.turn.up.left") }
+
+    /// 􀉔
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowshapeTurnUpLeft2: Self { .init(symbolName: "arrowshape.turn.up.left.2") }
+
+    /// 􀉕
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowshapeTurnUpLeft2Fill: Self { .init(symbolName: "arrowshape.turn.up.left.2.fill") }
+
+    /// 􀉎
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowshapeTurnUpLeftCircle: Self { .init(symbolName: "arrowshape.turn.up.left.circle") }
+
+    /// 􀉏
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowshapeTurnUpLeftCircleFill: Self { .init(symbolName: "arrowshape.turn.up.left.circle.fill") }
+
+    /// 􀉍
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowshapeTurnUpLeftFill: Self { .init(symbolName: "arrowshape.turn.up.left.fill") }
+
+    /// 􀉐
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowshapeTurnUpRight: Self { .init(symbolName: "arrowshape.turn.up.right") }
+
+    /// 􀉒
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowshapeTurnUpRightCircle: Self { .init(symbolName: "arrowshape.turn.up.right.circle") }
+
+    /// 􀉓
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowshapeTurnUpRightCircleFill: Self { .init(symbolName: "arrowshape.turn.up.right.circle.fill") }
+
+    /// 􀉑
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowshapeTurnUpRightFill: Self { .init(symbolName: "arrowshape.turn.up.right.fill") }
+
+    /// 􀓃
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowtriangleDown: Self { .init(symbolName: "arrowtriangle.down") }
+
+    /// 􀁨
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowtriangleDownCircle: Self { .init(symbolName: "arrowtriangle.down.circle") }
+
+    /// 􀁩
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowtriangleDownCircleFill: Self { .init(symbolName: "arrowtriangle.down.circle.fill") }
+
+    /// 􀄥
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowtriangleDownFill: Self { .init(symbolName: "arrowtriangle.down.fill") }
+
+    /// 􀃸
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowtriangleDownSquare: Self { .init(symbolName: "arrowtriangle.down.square") }
+
+    /// 􀃹
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowtriangleDownSquareFill: Self { .init(symbolName: "arrowtriangle.down.square.fill") }
+
+    /// 􀓄
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowtriangleLeft: Self { .init(symbolName: "arrowtriangle.left") }
+
+    /// 􀁪
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowtriangleLeftCircle: Self { .init(symbolName: "arrowtriangle.left.circle") }
+
+    /// 􀁫
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowtriangleLeftCircleFill: Self { .init(symbolName: "arrowtriangle.left.circle.fill") }
+
+    /// 􀄦
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowtriangleLeftFill: Self { .init(symbolName: "arrowtriangle.left.fill") }
+
+    /// 􀃺
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowtriangleLeftSquare: Self { .init(symbolName: "arrowtriangle.left.square") }
+
+    /// 􀃻
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowtriangleLeftSquareFill: Self { .init(symbolName: "arrowtriangle.left.square.fill") }
+
+    /// 􀓅
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowtriangleRight: Self { .init(symbolName: "arrowtriangle.right") }
+
+    /// 􀁬
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowtriangleRightCircle: Self { .init(symbolName: "arrowtriangle.right.circle") }
+
+    /// 􀁭
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowtriangleRightCircleFill: Self { .init(symbolName: "arrowtriangle.right.circle.fill") }
+
+    /// 􀄧
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowtriangleRightFill: Self { .init(symbolName: "arrowtriangle.right.fill") }
+
+    /// 􀃼
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowtriangleRightSquare: Self { .init(symbolName: "arrowtriangle.right.square") }
+
+    /// 􀃽
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowtriangleRightSquareFill: Self { .init(symbolName: "arrowtriangle.right.square.fill") }
+
+    /// 􀓂
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowtriangleUp: Self { .init(symbolName: "arrowtriangle.up") }
+
+    /// 􀁦
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowtriangleUpCircle: Self { .init(symbolName: "arrowtriangle.up.circle") }
+
+    /// 􀁧
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowtriangleUpCircleFill: Self { .init(symbolName: "arrowtriangle.up.circle.fill") }
+
+    /// 􀄤
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var arrowtriangleUpFill: Self { .init(symbolName: "arrowtriangle.up.fill") }
+
+    /// 􀃶
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var arrowtriangleUpSquare: Self { .init(symbolName: "arrowtriangle.up.square") }
+
+    /// 􀃷
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowtriangleUpSquareFill: Self { .init(symbolName: "arrowtriangle.up.square.fill") }
+
+    /// 􀕬
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var asteriskCircle: Self { .init(symbolName: "asterisk.circle") }
+
+    /// 􀕭
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var asteriskCircleFill: Self { .init(symbolName: "asterisk.circle.fill") }
+
+    /// 􀅷
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var at: Self { .init(symbolName: "at") }
+
+    /// 􀅹
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var atBadgeMinus: Self { .init(symbolName: "at.badge.minus") }
+
+    /// 􀅸
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var atBadgePlus: Self { .init(symbolName: "at.badge.plus") }
+
+    /// 􀖹
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var australsignCircle: Self { .init(symbolName: "australsign.circle") }
+
+    /// 􀖺
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var australsignCircleFill: Self { .init(symbolName: "australsign.circle.fill") }
+
+    /// 􀗹
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var australsignSquare: Self { .init(symbolName: "australsign.square") }
+
+    /// 􀗺
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var australsignSquareFill: Self { .init(symbolName: "australsign.square.fill") }
+
+    /// 􀀆
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bCircle: Self { .init(symbolName: "b.circle") }
+
+    /// 􀀇
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bCircleFill: Self { .init(symbolName: "b.circle.fill") }
+
+    /// 􀂖
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bSquare: Self { .init(symbolName: "b.square") }
+
+    /// 􀂗
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bSquareFill: Self { .init(symbolName: "b.square.fill") }
+
+    /// 􀊉
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var backward: Self { .init(symbolName: "backward") }
+
+    /// 􀊍
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var backwardEnd: Self { .init(symbolName: "backward.end") }
+
+    /// 􀊑
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var backwardEndAlt: Self { .init(symbolName: "backward.end.alt") }
+
+    /// 􀊒
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var backwardEndAltFill: Self { .init(symbolName: "backward.end.alt.fill") }
+
+    /// 􀊎
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var backwardEndFill: Self { .init(symbolName: "backward.end.fill") }
+
+    /// 􀊊
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var backwardFill: Self { .init(symbolName: "backward.fill") }
+
+    /// 􀊪
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var badgePlusRadiowavesRight: Self { .init(symbolName: "badge.plus.radiowaves.right") }
+
+    /// 􀍣
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var bag: Self { .init(symbolName: "bag") }
+
+    /// 􀍧
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bagBadgeMinus: Self { .init(symbolName: "bag.badge.minus") }
+
+    /// 􀍥
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bagBadgePlus: Self { .init(symbolName: "bag.badge.plus") }
+
+    /// 􀍤
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var bagFill: Self { .init(symbolName: "bag.fill") }
+
+    /// 􀍨
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bagFillBadgeMinus: Self { .init(symbolName: "bag.fill.badge.minus") }
+
+    /// 􀍦
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bagFillBadgePlus: Self { .init(symbolName: "bag.fill.badge.plus") }
+
+    /// 􀗑
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bahtsignCircle: Self { .init(symbolName: "bahtsign.circle") }
+
+    /// 􀗒
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bahtsignCircleFill: Self { .init(symbolName: "bahtsign.circle.fill") }
+
+    /// 􀘑
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bahtsignSquare: Self { .init(symbolName: "bahtsign.square") }
+
+    /// 􀘒
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bahtsignSquareFill: Self { .init(symbolName: "bahtsign.square.fill") }
+
+    /// 􀎓
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bandage: Self { .init(symbolName: "bandage") }
+
+    /// 􀎔
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var bandageFill: Self { .init(symbolName: "bandage.fill") }
+
+    /// 􀘱
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var barcode: Self { .init(symbolName: "barcode") }
+
+    /// 􀎺
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var barcodeViewfinder: Self { .init(symbolName: "barcode.viewfinder") }
+
+    /// 􀛪
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 17.0, renamed: "battery0percent")
+    @available(macOS, introduced: 11.0, deprecated: 14.0, renamed: "battery0percent")
+    @available(tvOS, introduced: 13.0, deprecated: 17.0, renamed: "battery0percent")
+    @available(watchOS, introduced: 6.0, deprecated: 10.0, renamed: "battery0percent")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "battery0percent")
+    static var battery0: Self { .init(symbolName: "battery.0") }
+
+    /// 􀛩
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 17.0, renamed: "battery25percent")
+    @available(macOS, introduced: 11.0, deprecated: 14.0, renamed: "battery25percent")
+    @available(tvOS, introduced: 13.0, deprecated: 17.0, renamed: "battery25percent")
+    @available(watchOS, introduced: 6.0, deprecated: 10.0, renamed: "battery25percent")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "battery25percent")
+    static var battery25: Self { .init(symbolName: "battery.25") }
+
+    /// 􀛨
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 17.0, renamed: "battery100percent")
+    @available(macOS, introduced: 11.0, deprecated: 14.0, renamed: "battery100percent")
+    @available(tvOS, introduced: 13.0, deprecated: 17.0, renamed: "battery100percent")
+    @available(watchOS, introduced: 6.0, deprecated: 10.0, renamed: "battery100percent")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "battery100percent")
+    static var battery100: Self { .init(symbolName: "battery.100") }
+
+    /// 􀙩
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bedDouble: Self { .init(symbolName: "bed.double") }
+
+    /// 􀙪
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bedDoubleFill: Self { .init(symbolName: "bed.double.fill") }
+
+    /// 􀋙
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bell: Self { .init(symbolName: "bell") }
+
+    /// 􀋛
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bellCircle: Self { .init(symbolName: "bell.circle") }
+
+    /// 􀋜
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bellCircleFill: Self { .init(symbolName: "bell.circle.fill") }
+
+    /// 􀋚
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bellFill: Self { .init(symbolName: "bell.fill") }
+
+    /// 􀋝
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var bellSlash: Self { .init(symbolName: "bell.slash") }
+
+    /// 􀋞
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var bellSlashFill: Self { .init(symbolName: "bell.slash.fill") }
+
+    /// 􀈱
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "xmarkBin")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "xmarkBin")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "xmarkBin")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "xmarkBin")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "xmarkBin")
+    static var binXmark: Self { .init(symbolName: "bin.xmark") }
+
+    /// 􀈲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "xmarkBinFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "xmarkBinFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "xmarkBinFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "xmarkBinFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "xmarkBinFill")
+    static var binXmarkFill: Self { .init(symbolName: "bin.xmark.fill") }
+
+    /// 􀗕
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bitcoinsignCircle: Self { .init(symbolName: "bitcoinsign.circle") }
+
+    /// 􀗖
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bitcoinsignCircleFill: Self { .init(symbolName: "bitcoinsign.circle.fill") }
+
+    /// 􀘕
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bitcoinsignSquare: Self { .init(symbolName: "bitcoinsign.square") }
+
+    /// 􀘖
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bitcoinsignSquareFill: Self { .init(symbolName: "bitcoinsign.square.fill") }
+
+    /// 􀅓
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bold: Self { .init(symbolName: "bold") }
+
+    /// 􀅗
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var boldItalicUnderline: Self { .init(symbolName: "bold.italic.underline") }
+
+    /// 􀅘
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var boldUnderline: Self { .init(symbolName: "bold.underline") }
+
+    /// 􀋥
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var bolt: Self { .init(symbolName: "bolt") }
+
+    /// 􀘳
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 17.0, renamed: "boltBadgeAutomatic")
+    @available(macOS, introduced: 11.0, deprecated: 14.0, renamed: "boltBadgeAutomatic")
+    @available(tvOS, introduced: 13.0, deprecated: 17.0, renamed: "boltBadgeAutomatic")
+    @available(watchOS, introduced: 6.0, deprecated: 10.0, renamed: "boltBadgeAutomatic")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "boltBadgeAutomatic")
+    static var boltBadgeA: Self { .init(symbolName: "bolt.badge.a") }
+
+    /// 􀘴
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 17.0, renamed: "boltBadgeAutomaticFill")
+    @available(macOS, introduced: 11.0, deprecated: 14.0, renamed: "boltBadgeAutomaticFill")
+    @available(tvOS, introduced: 13.0, deprecated: 17.0, renamed: "boltBadgeAutomaticFill")
+    @available(watchOS, introduced: 6.0, deprecated: 10.0, renamed: "boltBadgeAutomaticFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "boltBadgeAutomaticFill")
+    static var boltBadgeAFill: Self { .init(symbolName: "bolt.badge.a.fill") }
+
+    /// 􀋧
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var boltCircle: Self { .init(symbolName: "bolt.circle") }
+
+    /// 􀋨
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var boltCircleFill: Self { .init(symbolName: "bolt.circle.fill") }
+
+    /// 􀋦
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var boltFill: Self { .init(symbolName: "bolt.fill") }
+
+    /// 􀒗
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var boltHorizontal: Self { .init(symbolName: "bolt.horizontal") }
+
+    /// 􀒙
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var boltHorizontalCircle: Self { .init(symbolName: "bolt.horizontal.circle") }
+
+    /// 􀒚
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var boltHorizontalCircleFill: Self { .init(symbolName: "bolt.horizontal.circle.fill") }
+
+    /// 􀒘
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var boltHorizontalFill: Self { .init(symbolName: "bolt.horizontal.fill") }
+
+    /// 􀘿
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var boltHorizontalIcloud: Self { .init(symbolName: "bolt.horizontal.icloud") }
+
+    /// 􀙀
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var boltHorizontalIcloudFill: Self { .init(symbolName: "bolt.horizontal.icloud.fill") }
+
+    /// 􀋩
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var boltSlash: Self { .init(symbolName: "bolt.slash") }
+
+    /// 􀋪
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var boltSlashFill: Self { .init(symbolName: "bolt.slash.fill") }
+
+    /// 􀉚
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var book: Self { .init(symbolName: "book") }
+
+    /// 􀉜
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bookCircle: Self { .init(symbolName: "book.circle") }
+
+    /// 􀉝
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bookCircleFill: Self { .init(symbolName: "book.circle.fill") }
+
+    /// 􀉛
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var bookFill: Self { .init(symbolName: "book.fill") }
+
+    /// 􀉞
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bookmark: Self { .init(symbolName: "bookmark") }
+
+    /// 􀉟
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var bookmarkFill: Self { .init(symbolName: "bookmark.fill") }
+
+    /// 􀎜
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var briefcase: Self { .init(symbolName: "briefcase") }
+
+    /// 􀎝
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var briefcaseFill: Self { .init(symbolName: "briefcase.fill") }
+
+    /// 􀌪
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var bubbleLeft: Self { .init(symbolName: "bubble.left") }
+
+    /// 􀒤
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var bubbleLeftAndBubbleRight: Self { .init(symbolName: "bubble.left.and.bubble.right") }
+
+    /// 􀘲
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var bubbleLeftAndBubbleRightFill: Self { .init(symbolName: "bubble.left.and.bubble.right.fill") }
+
+    /// 􀌫
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var bubbleLeftFill: Self { .init(symbolName: "bubble.left.fill") }
+
+    /// 􀌸
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var bubbleMiddleBottom: Self { .init(symbolName: "bubble.middle.bottom") }
+
+    /// 􀌹
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var bubbleMiddleBottomFill: Self { .init(symbolName: "bubble.middle.bottom.fill") }
+
+    /// 􀌼
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var bubbleMiddleTop: Self { .init(symbolName: "bubble.middle.top") }
+
+    /// 􀌽
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var bubbleMiddleTopFill: Self { .init(symbolName: "bubble.middle.top.fill") }
+
+    /// 􀌨
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var bubbleRight: Self { .init(symbolName: "bubble.right") }
+
+    /// 􀌩
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var bubbleRightFill: Self { .init(symbolName: "bubble.right.fill") }
+
+    /// 􀓜
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var burn: Self { .init(symbolName: "burn") }
+
+    /// 􀑂
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var burst: Self { .init(symbolName: "burst") }
+
+    /// 􀘞
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var burstFill: Self { .init(symbolName: "burst.fill") }
+
+    /// 􀀈
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cCircle: Self { .init(symbolName: "c.circle") }
+
+    /// 􀀉
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cCircleFill: Self { .init(symbolName: "c.circle.fill") }
+
+    /// 􀂘
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cSquare: Self { .init(symbolName: "c.square") }
+
+    /// 􀂙
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cSquareFill: Self { .init(symbolName: "c.square.fill") }
+
+    /// 􀉉
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var calendar: Self { .init(symbolName: "calendar") }
+
+    /// 􀉋
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var calendarBadgeMinus: Self { .init(symbolName: "calendar.badge.minus") }
+
+    /// 􀉊
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var calendarBadgePlus: Self { .init(symbolName: "calendar.badge.plus") }
+
+    /// 􀒎
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var calendarCircle: Self { .init(symbolName: "calendar.circle") }
+
+    /// 􀒏
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var calendarCircleFill: Self { .init(symbolName: "calendar.circle.fill") }
+
+    /// 􀌞
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var camera: Self { .init(symbolName: "camera") }
+
+    /// 􀌠
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cameraCircle: Self { .init(symbolName: "camera.circle") }
+
+    /// 􀌡
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cameraCircleFill: Self { .init(symbolName: "camera.circle.fill") }
+
+    /// 􀌟
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var cameraFill: Self { .init(symbolName: "camera.fill") }
+
+    /// 􀝁
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var cameraOnRectangle: Self { .init(symbolName: "camera.on.rectangle") }
+
+    /// 􀝂
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cameraOnRectangleFill: Self { .init(symbolName: "camera.on.rectangle.fill") }
+
+    /// 􀌢
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangle2CirclepathCamera")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowTriangle2CirclepathCamera")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangle2CirclepathCamera")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowTriangle2CirclepathCamera")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowTriangle2CirclepathCamera")
+    static var cameraRotate: Self { .init(symbolName: "camera.rotate") }
+
+    /// 􀌣
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangle2CirclepathCameraFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowTriangle2CirclepathCameraFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowTriangle2CirclepathCameraFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "arrowTriangle2CirclepathCameraFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowTriangle2CirclepathCameraFill")
+    static var cameraRotateFill: Self { .init(symbolName: "camera.rotate.fill") }
+
+    /// 􀎼
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cameraViewfinder: Self { .init(symbolName: "camera.viewfinder") }
+
+    /// 􀆡
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var capslock: Self { .init(symbolName: "capslock") }
+
+    /// 􀆢
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var capslockFill: Self { .init(symbolName: "capslock.fill") }
+
+    /// 􀝶
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var capsule: Self { .init(symbolName: "capsule") }
+
+    /// 􀝷
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var capsuleFill: Self { .init(symbolName: "capsule.fill") }
+
+    /// 􀌴
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var captionsBubble: Self { .init(symbolName: "captions.bubble") }
+
+    /// 􀌵
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var captionsBubbleFill: Self { .init(symbolName: "captions.bubble.fill") }
+
+    /// 􀙙
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var carFill: Self { .init(symbolName: "car.fill") }
+
+    /// 􀍩
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var cart: Self { .init(symbolName: "cart") }
+
+    /// 􀍭
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cartBadgeMinus: Self { .init(symbolName: "cart.badge.minus") }
+
+    /// 􀍫
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cartBadgePlus: Self { .init(symbolName: "cart.badge.plus") }
+
+    /// 􀍪
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var cartFill: Self { .init(symbolName: "cart.fill") }
+
+    /// 􀍮
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cartFillBadgeMinus: Self { .init(symbolName: "cart.fill.badge.minus") }
+
+    /// 􀍬
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cartFillBadgePlus: Self { .init(symbolName: "cart.fill.badge.plus") }
+
+    /// 􀗃
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cedisignCircle: Self { .init(symbolName: "cedisign.circle") }
+
+    /// 􀗄
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cedisignCircleFill: Self { .init(symbolName: "cedisign.circle.fill") }
+
+    /// 􀘃
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cedisignSquare: Self { .init(symbolName: "cedisign.square") }
+
+    /// 􀘄
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cedisignSquareFill: Self { .init(symbolName: "cedisign.square.fill") }
+
+    /// 􀖙
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var centsignCircle: Self { .init(symbolName: "centsign.circle") }
+
+    /// 􀖚
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var centsignCircleFill: Self { .init(symbolName: "centsign.circle.fill") }
+
+    /// 􀗙
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var centsignSquare: Self { .init(symbolName: "centsign.square") }
+
+    /// 􀗚
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var centsignSquareFill: Self { .init(symbolName: "centsign.square.fill") }
+
+    /// 􀐾
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var chartBar: Self { .init(symbolName: "chart.bar") }
+
+    /// 􀐿
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var chartBarFill: Self { .init(symbolName: "chart.bar.fill") }
+
+    /// 􀑀
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chartPie: Self { .init(symbolName: "chart.pie") }
+
+    /// 􀜋
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chartPieFill: Self { .init(symbolName: "chart.pie.fill") }
+
+    /// 􀆅
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var checkmark: Self { .init(symbolName: "checkmark") }
+
+    /// 􀁢
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var checkmarkCircle: Self { .init(symbolName: "checkmark.circle") }
+
+    /// 􀁣
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var checkmarkCircleFill: Self { .init(symbolName: "checkmark.circle.fill") }
+
+    /// 􀏋
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var checkmarkRectangle: Self { .init(symbolName: "checkmark.rectangle") }
+
+    /// 􀏌
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var checkmarkRectangleFill: Self { .init(symbolName: "checkmark.rectangle.fill") }
+
+    /// 􀇺
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var checkmarkSeal: Self { .init(symbolName: "checkmark.seal") }
+
+    /// 􀇻
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var checkmarkSealFill: Self { .init(symbolName: "checkmark.seal.fill") }
+
+    /// 􀞛
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var checkmarkShield: Self { .init(symbolName: "checkmark.shield") }
+
+    /// 􀞜
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var checkmarkShieldFill: Self { .init(symbolName: "checkmark.shield.fill") }
+
+    /// 􀃲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var checkmarkSquare: Self { .init(symbolName: "checkmark.square") }
+
+    /// 􀃳
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var checkmarkSquareFill: Self { .init(symbolName: "checkmark.square.fill") }
+
+    /// 􀆑
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chevronCompactDown: Self { .init(symbolName: "chevron.compact.down") }
+
+    /// 􀆒
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chevronCompactLeft: Self { .init(symbolName: "chevron.compact.left") }
+
+    /// 􀆓
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chevronCompactRight: Self { .init(symbolName: "chevron.compact.right") }
+
+    /// 􀆐
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chevronCompactUp: Self { .init(symbolName: "chevron.compact.up") }
+
+    /// 􀆈
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chevronDown: Self { .init(symbolName: "chevron.down") }
+
+    /// 􀁰
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var chevronDownCircle: Self { .init(symbolName: "chevron.down.circle") }
+
+    /// 􀁱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var chevronDownCircleFill: Self { .init(symbolName: "chevron.down.circle.fill") }
+
+    /// 􀄀
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var chevronDownSquare: Self { .init(symbolName: "chevron.down.square") }
+
+    /// 􀄁
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var chevronDownSquareFill: Self { .init(symbolName: "chevron.down.square.fill") }
+
+    /// 􀆉
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chevronLeft: Self { .init(symbolName: "chevron.left") }
+
+    /// 􀆋
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chevronLeft2: Self { .init(symbolName: "chevron.left.2") }
+
+    /// 􀁲
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var chevronLeftCircle: Self { .init(symbolName: "chevron.left.circle") }
+
+    /// 􀁳
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var chevronLeftCircleFill: Self { .init(symbolName: "chevron.left.circle.fill") }
+
+    /// 􀙚
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "chevronLeftForwardslashChevronRight")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "chevronLeftForwardslashChevronRight")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "chevronLeftForwardslashChevronRight")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "chevronLeftForwardslashChevronRight")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "chevronLeftForwardslashChevronRight")
+    static var chevronLeftSlashChevronRight: Self { .init(symbolName: "chevron.left.slash.chevron.right") }
+
+    /// 􀄂
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var chevronLeftSquare: Self { .init(symbolName: "chevron.left.square") }
+
+    /// 􀄃
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var chevronLeftSquareFill: Self { .init(symbolName: "chevron.left.square.fill") }
+
+    /// 􀆊
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chevronRight: Self { .init(symbolName: "chevron.right") }
+
+    /// 􀆌
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chevronRight2: Self { .init(symbolName: "chevron.right.2") }
+
+    /// 􀁴
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var chevronRightCircle: Self { .init(symbolName: "chevron.right.circle") }
+
+    /// 􀁵
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var chevronRightCircleFill: Self { .init(symbolName: "chevron.right.circle.fill") }
+
+    /// 􀄄
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var chevronRightSquare: Self { .init(symbolName: "chevron.right.square") }
+
+    /// 􀄅
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var chevronRightSquareFill: Self { .init(symbolName: "chevron.right.square.fill") }
+
+    /// 􀆇
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chevronUp: Self { .init(symbolName: "chevron.up") }
+
+    /// 􀆏
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var chevronUpChevronDown: Self { .init(symbolName: "chevron.up.chevron.down") }
+
+    /// 􀁮
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var chevronUpCircle: Self { .init(symbolName: "chevron.up.circle") }
+
+    /// 􀁯
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var chevronUpCircleFill: Self { .init(symbolName: "chevron.up.circle.fill") }
+
+    /// 􀃾
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var chevronUpSquare: Self { .init(symbolName: "chevron.up.square") }
+
+    /// 􀃿
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var chevronUpSquareFill: Self { .init(symbolName: "chevron.up.square.fill") }
+
+    /// 􀀀
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var circle: Self { .init(symbolName: "circle") }
+
+    /// 􀜚
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "sleep")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "sleep")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "sleep")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "sleep")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "sleep")
+    static var circleBottomthirdSplit: Self { .init(symbolName: "circle.bottomthird.split") }
+
+    /// 􀀁
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var circleFill: Self { .init(symbolName: "circle.fill") }
+
+    /// 􀇸
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var circleGrid3x3: Self { .init(symbolName: "circle.grid.3x3") }
+
+    /// 􀇹
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var circleGrid3x3Fill: Self { .init(symbolName: "circle.grid.3x3.fill") }
+
+    /// 􀙢
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "circlesHexagongrid")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "circlesHexagongrid")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "circlesHexagongrid")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "circlesHexagongrid")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "circlesHexagongrid")
+    static var circleGridHex: Self { .init(symbolName: "circle.grid.hex") }
+
+    /// 􀙣
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "circlesHexagongridFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "circlesHexagongridFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "circlesHexagongridFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "circlesHexagongridFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "circlesHexagongridFill")
+    static var circleGridHexFill: Self { .init(symbolName: "circle.grid.hex.fill") }
+
+    /// 􀀂
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "circleLefthalfFilled")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "circleLefthalfFilled")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "circleLefthalfFilled")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "circleLefthalfFilled")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "circleLefthalfFilled")
+    static var circleLefthalfFill: Self { .init(symbolName: "circle.lefthalf.fill") }
+
+    /// 􀀃
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "circleRighthalfFilled")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "circleRighthalfFilled")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "circleRighthalfFilled")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "circleRighthalfFilled")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "circleRighthalfFilled")
+    static var circleRighthalfFill: Self { .init(symbolName: "circle.righthalf.fill") }
+
+    /// 􀆙
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var clear: Self { .init(symbolName: "clear") }
+
+    /// 􀆚
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var clearFill: Self { .init(symbolName: "clear.fill") }
+
+    /// 􀐫
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var clock: Self { .init(symbolName: "clock") }
+
+    /// 􀐬
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var clockFill: Self { .init(symbolName: "clock.fill") }
+
+    /// 􀇂
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var cloud: Self { .init(symbolName: "cloud") }
+
+    /// 􀇒
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudBolt: Self { .init(symbolName: "cloud.bolt") }
+
+    /// 􀇓
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudBoltFill: Self { .init(symbolName: "cloud.bolt.fill") }
+
+    /// 􀇞
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudBoltRain: Self { .init(symbolName: "cloud.bolt.rain") }
+
+    /// 􀇟
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudBoltRainFill: Self { .init(symbolName: "cloud.bolt.rain.fill") }
+
+    /// 􀇄
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudDrizzle: Self { .init(symbolName: "cloud.drizzle") }
+
+    /// 􀇅
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudDrizzleFill: Self { .init(symbolName: "cloud.drizzle.fill") }
+
+    /// 􀇃
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var cloudFill: Self { .init(symbolName: "cloud.fill") }
+
+    /// 􀇊
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudFog: Self { .init(symbolName: "cloud.fog") }
+
+    /// 􀇋
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudFogFill: Self { .init(symbolName: "cloud.fog.fill") }
+
+    /// 􀇌
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudHail: Self { .init(symbolName: "cloud.hail") }
+
+    /// 􀇍
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudHailFill: Self { .init(symbolName: "cloud.hail.fill") }
+
+    /// 􀇈
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudHeavyrain: Self { .init(symbolName: "cloud.heavyrain") }
+
+    /// 􀇉
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudHeavyrainFill: Self { .init(symbolName: "cloud.heavyrain.fill") }
+
+    /// 􀇚
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var cloudMoon: Self { .init(symbolName: "cloud.moon") }
+
+    /// 􀇠
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var cloudMoonBolt: Self { .init(symbolName: "cloud.moon.bolt") }
+
+    /// 􀇡
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudMoonBoltFill: Self { .init(symbolName: "cloud.moon.bolt.fill") }
+
+    /// 􀇛
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudMoonFill: Self { .init(symbolName: "cloud.moon.fill") }
+
+    /// 􀇜
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var cloudMoonRain: Self { .init(symbolName: "cloud.moon.rain") }
+
+    /// 􀇝
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudMoonRainFill: Self { .init(symbolName: "cloud.moon.rain.fill") }
+
+    /// 􀇆
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudRain: Self { .init(symbolName: "cloud.rain") }
+
+    /// 􀇇
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudRainFill: Self { .init(symbolName: "cloud.rain.fill") }
+
+    /// 􀇐
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudSleet: Self { .init(symbolName: "cloud.sleet") }
+
+    /// 􀇑
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudSleetFill: Self { .init(symbolName: "cloud.sleet.fill") }
+
+    /// 􀇎
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudSnow: Self { .init(symbolName: "cloud.snow") }
+
+    /// 􀇏
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudSnowFill: Self { .init(symbolName: "cloud.snow.fill") }
+
+    /// 􀇔
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var cloudSun: Self { .init(symbolName: "cloud.sun") }
+
+    /// 􀇘
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var cloudSunBolt: Self { .init(symbolName: "cloud.sun.bolt") }
+
+    /// 􀇙
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudSunBoltFill: Self { .init(symbolName: "cloud.sun.bolt.fill") }
+
+    /// 􀇕
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudSunFill: Self { .init(symbolName: "cloud.sun.fill") }
+
+    /// 􀇖
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var cloudSunRain: Self { .init(symbolName: "cloud.sun.rain") }
+
+    /// 􀇗
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cloudSunRainFill: Self { .init(symbolName: "cloud.sun.rain.fill") }
+
+    /// 􀗁
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var coloncurrencysignCircle: Self { .init(symbolName: "coloncurrencysign.circle") }
+
+    /// 􀗂
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var coloncurrencysignCircleFill: Self { .init(symbolName: "coloncurrencysign.circle.fill") }
+
+    /// 􀘁
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var coloncurrencysignSquare: Self { .init(symbolName: "coloncurrencysign.square") }
+
+    /// 􀘂
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var coloncurrencysignSquareFill: Self { .init(symbolName: "coloncurrencysign.square.fill") }
+
+    /// 􀆔
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var command: Self { .init(symbolName: "command") }
+
+    /// 􀆍
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var control: Self { .init(symbolName: "control") }
+
+    /// 􀍯
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var creditcard: Self { .init(symbolName: "creditcard") }
+
+    /// 􀍰
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var creditcardFill: Self { .init(symbolName: "creditcard.fill") }
+
+    /// 􀍳
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var crop: Self { .init(symbolName: "crop") }
+
+    /// 􀍴
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cropRotate: Self { .init(symbolName: "crop.rotate") }
+
+    /// 􀗅
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cruzeirosignCircle: Self { .init(symbolName: "cruzeirosign.circle") }
+
+    /// 􀗆
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cruzeirosignCircleFill: Self { .init(symbolName: "cruzeirosign.circle.fill") }
+
+    /// 􀘅
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cruzeirosignSquare: Self { .init(symbolName: "cruzeirosign.square") }
+
+    /// 􀘆
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var cruzeirosignSquareFill: Self { .init(symbolName: "cruzeirosign.square.fill") }
+
+    /// 􀐘
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var cube: Self { .init(symbolName: "cube") }
+
+    /// 􀐚
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "shippingbox")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "shippingbox")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "shippingbox")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "shippingbox")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "shippingbox")
+    static var cubeBox: Self { .init(symbolName: "cube.box") }
+
+    /// 􀐛
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "shippingboxFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "shippingboxFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "shippingboxFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "shippingboxFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "shippingboxFill")
+    static var cubeBoxFill: Self { .init(symbolName: "cube.box.fill") }
+
+    /// 􀐙
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var cubeFill: Self { .init(symbolName: "cube.fill") }
+
+    /// 􀇰
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "cursorarrowRays")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "cursorarrowRays")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "cursorarrowRays")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "cursorarrowRays")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "cursorarrowRays")
+    static var cursorRays: Self { .init(symbolName: "cursor.rays") }
+
+    /// 􀀊
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dCircle: Self { .init(symbolName: "d.circle") }
+
+    /// 􀀋
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dCircleFill: Self { .init(symbolName: "d.circle.fill") }
+
+    /// 􀂚
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dSquare: Self { .init(symbolName: "d.square") }
+
+    /// 􀂛
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dSquareFill: Self { .init(symbolName: "d.square.fill") }
+
+    /// 􀋶
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var decreaseIndent: Self { .init(symbolName: "decrease.indent") }
+
+    /// 􀝿
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var decreaseQuotelevel: Self { .init(symbolName: "decrease.quotelevel") }
+
+    /// 􀆛
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var deleteLeft: Self { .init(symbolName: "delete.left") }
+
+    /// 􀆜
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var deleteLeftFill: Self { .init(symbolName: "delete.left.fill") }
+
+    /// 􀆗
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var deleteRight: Self { .init(symbolName: "delete.right") }
+
+    /// 􀆘
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var deleteRightFill: Self { .init(symbolName: "delete.right.fill") }
+
+    /// 􀙗
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var desktopcomputer: Self { .init(symbolName: "desktopcomputer") }
+
+    /// 􀍺
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "dialMin")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "dialMin")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "dialMin")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "dialMin")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "dialMin")
+    static var dial: Self { .init(symbolName: "dial") }
+
+    /// 􀍻
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "dialMinFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "dialMinFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "dialMinFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "dialMinFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "dialMinFill")
+    static var dialFill: Self { .init(symbolName: "dial.fill") }
+
+    /// 􀅿
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var divide: Self { .init(symbolName: "divide") }
+
+    /// 􀁒
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var divideCircle: Self { .init(symbolName: "divide.circle") }
+
+    /// 􀁓
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var divideCircleFill: Self { .init(symbolName: "divide.circle.fill") }
+
+    /// 􀃢
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var divideSquare: Self { .init(symbolName: "divide.square") }
+
+    /// 􀃣
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var divideSquareFill: Self { .init(symbolName: "divide.square.fill") }
+
+    /// 􀈷
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "document")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "document")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "document")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "document")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "document")
+    static var doc: Self { .init(symbolName: "doc") }
+
+    /// 􀉇
+    /// 2 Localizations, Single Layerset
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "appendPage")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "appendPage")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "appendPage")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "appendPage")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "appendPage")
+    static var docAppend: Self { .init(symbolName: "doc.append") }
+
+    /// 􀈹
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "documentCircle")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "documentCircle")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "documentCircle")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "documentCircle")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "documentCircle")
+    static var docCircle: Self { .init(symbolName: "doc.circle") }
+
+    /// 􀈺
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "documentCircleFill")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "documentCircleFill")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "documentCircleFill")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "documentCircleFill")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "documentCircleFill")
+    static var docCircleFill: Self { .init(symbolName: "doc.circle.fill") }
+
+    /// 􀈸
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "documentFill")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "documentFill")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "documentFill")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "documentFill")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "documentFill")
+    static var docFill: Self { .init(symbolName: "doc.fill") }
+
+    /// 􀉃
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "documentOnClipboard")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "documentOnClipboard")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "documentOnClipboard")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "documentOnClipboard")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "documentOnClipboard")
+    static var docOnClipboard: Self { .init(symbolName: "doc.on.clipboard") }
+
+    /// 􀉄
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "documentOnClipboardFill")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "documentOnClipboardFill")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "documentOnClipboardFill")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "documentOnClipboardFill")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "documentOnClipboardFill")
+    static var docOnClipboardFill: Self { .init(symbolName: "doc.on.clipboard.fill") }
+
+    /// 􀉁
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "documentOnDocument")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "documentOnDocument")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "documentOnDocument")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "documentOnDocument")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "documentOnDocument")
+    static var docOnDoc: Self { .init(symbolName: "doc.on.doc") }
+
+    /// 􀉂
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "documentOnDocumentFill")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "documentOnDocumentFill")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "documentOnDocumentFill")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "documentOnDocumentFill")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "documentOnDocumentFill")
+    static var docOnDocFill: Self { .init(symbolName: "doc.on.doc.fill") }
+
+    /// 􀉆
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "textPage")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "textPage")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "textPage")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "textPage")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "textPage")
+    static var docPlaintext: Self { .init(symbolName: "doc.plaintext") }
+
+    /// 􀉅
+    /// 8 Localizations, Single Layerset
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hebrew (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Chinese (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Hindi (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Japanese (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Korean (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Thai (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "richtextPage")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "richtextPage")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "richtextPage")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "richtextPage")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "richtextPage")
+    static var docRichtext: Self { .init(symbolName: "doc.richtext") }
+
+    /// 􀈿
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "textDocument")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "textDocument")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "textDocument")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "textDocument")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "textDocument")
+    static var docText: Self { .init(symbolName: "doc.text") }
+
+    /// 􀉀
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 26.0, macOS 26.0, tvOS 26.0, watchOS 26.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "textDocumentFill")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "textDocumentFill")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "textDocumentFill")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "textDocumentFill")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "textDocumentFill")
+    static var docTextFill: Self { .init(symbolName: "doc.text.fill") }
+
+    /// 􀕹
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "textPageBadgeMagnifyingglass")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "textPageBadgeMagnifyingglass")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "textPageBadgeMagnifyingglass")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "textPageBadgeMagnifyingglass")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "textPageBadgeMagnifyingglass")
+    static var docTextMagnifyingglass: Self { .init(symbolName: "doc.text.magnifyingglass") }
+
+    /// 􀎾
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "docViewfinder")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "docViewfinder")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "docViewfinder")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "docViewfinder")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "docViewfinder")
+    static var docTextViewfinder: Self { .init(symbolName: "doc.text.viewfinder") }
+
+    /// 􀖗
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dollarsignCircle: Self { .init(symbolName: "dollarsign.circle") }
+
+    /// 􀖘
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dollarsignCircleFill: Self { .init(symbolName: "dollarsign.circle.fill") }
+
+    /// 􀗗
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dollarsignSquare: Self { .init(symbolName: "dollarsign.square") }
+
+    /// 􀗘
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dollarsignSquareFill: Self { .init(symbolName: "dollarsign.square.fill") }
+
+    /// 􀖩
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dongsignCircle: Self { .init(symbolName: "dongsign.circle") }
+
+    /// 􀖪
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dongsignCircleFill: Self { .init(symbolName: "dongsign.circle.fill") }
+
+    /// 􀗩
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dongsignSquare: Self { .init(symbolName: "dongsign.square") }
+
+    /// 􀗪
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dongsignSquareFill: Self { .init(symbolName: "dongsign.square.fill") }
+
+    /// 􀌙
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var dotRadiowavesLeftAndRight: Self { .init(symbolName: "dot.radiowaves.left.and.right") }
+
+    /// 􀖒
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var dotRadiowavesRight: Self { .init(symbolName: "dot.radiowaves.right") }
+
+    /// 􀕴
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dotSquare: Self { .init(symbolName: "dot.square") }
+
+    /// 􀕵
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var dotSquareFill: Self { .init(symbolName: "dot.square.fill") }
+
+    /// 􀈀
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dropTriangle: Self { .init(symbolName: "drop.triangle") }
+
+    /// 􀈁
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var dropTriangleFill: Self { .init(symbolName: "drop.triangle.fill") }
+
+    /// 􀀌
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var eCircle: Self { .init(symbolName: "e.circle") }
+
+    /// 􀀍
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var eCircleFill: Self { .init(symbolName: "e.circle.fill") }
+
+    /// 􀂜
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var eSquare: Self { .init(symbolName: "e.square") }
+
+    /// 􀂝
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var eSquareFill: Self { .init(symbolName: "e.square.fill") }
+
+    /// 􀜣
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var ear: Self { .init(symbolName: "ear") }
+
+    /// 􀆥
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var eject: Self { .init(symbolName: "eject") }
+
+    /// 􀆦
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var ejectFill: Self { .init(symbolName: "eject.fill") }
+
+    /// 􀕺
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "ellipsisBubble")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "ellipsisBubble")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "ellipsisBubble")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "ellipsisBubble")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "ellipsisBubble")
+    static var ellipsesBubble: Self { .init(symbolName: "ellipses.bubble") }
+
+    /// 􀕻
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "ellipsisBubbleFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "ellipsisBubbleFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "ellipsisBubbleFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "ellipsisBubbleFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "ellipsisBubbleFill")
+    static var ellipsesBubbleFill: Self { .init(symbolName: "ellipses.bubble.fill") }
+
+    /// 􀍠
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var ellipsis: Self { .init(symbolName: "ellipsis") }
+
+    /// 􀍡
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var ellipsisCircle: Self { .init(symbolName: "ellipsis.circle") }
+
+    /// 􀍢
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var ellipsisCircleFill: Self { .init(symbolName: "ellipsis.circle.fill") }
+
+    /// 􀍕
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var envelope: Self { .init(symbolName: "envelope") }
+
+    /// 􀍛
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var envelopeBadge: Self { .init(symbolName: "envelope.badge") }
+
+    /// 􀍜
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var envelopeBadgeFill: Self { .init(symbolName: "envelope.badge.fill") }
+
+    /// 􀍗
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var envelopeCircle: Self { .init(symbolName: "envelope.circle") }
+
+    /// 􀍘
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var envelopeCircleFill: Self { .init(symbolName: "envelope.circle.fill") }
+
+    /// 􀍖
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var envelopeFill: Self { .init(symbolName: "envelope.fill") }
+
+    /// 􀍙
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var envelopeOpen: Self { .init(symbolName: "envelope.open") }
+
+    /// 􀍚
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var envelopeOpenFill: Self { .init(symbolName: "envelope.open.fill") }
+
+    /// 􀆀
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var equal: Self { .init(symbolName: "equal") }
+
+    /// 􀁔
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var equalCircle: Self { .init(symbolName: "equal.circle") }
+
+    /// 􀁕
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var equalCircleFill: Self { .init(symbolName: "equal.circle.fill") }
+
+    /// 􀃤
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var equalSquare: Self { .init(symbolName: "equal.square") }
+
+    /// 􀃥
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var equalSquareFill: Self { .init(symbolName: "equal.square.fill") }
+
+    /// 􀆧
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var escape: Self { .init(symbolName: "escape") }
+
+    /// 􀖧
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var eurosignCircle: Self { .init(symbolName: "eurosign.circle") }
+
+    /// 􀖨
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var eurosignCircleFill: Self { .init(symbolName: "eurosign.circle.fill") }
+
+    /// 􀗧
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var eurosignSquare: Self { .init(symbolName: "eurosign.square") }
+
+    /// 􀗨
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var eurosignSquareFill: Self { .init(symbolName: "eurosign.square.fill") }
+
+    /// 􀅎
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var exclamationmark: Self { .init(symbolName: "exclamationmark") }
+
+    /// 􀌬
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var exclamationmarkBubble: Self { .init(symbolName: "exclamationmark.bubble") }
+
+    /// 􀌭
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var exclamationmarkBubbleFill: Self { .init(symbolName: "exclamationmark.bubble.fill") }
+
+    /// 􀁞
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var exclamationmarkCircle: Self { .init(symbolName: "exclamationmark.circle") }
+
+    /// 􀁟
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var exclamationmarkCircleFill: Self { .init(symbolName: "exclamationmark.circle.fill") }
+
+    /// 􀌑
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var exclamationmarkIcloud: Self { .init(symbolName: "exclamationmark.icloud") }
+
+    /// 􀌒
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var exclamationmarkIcloudFill: Self { .init(symbolName: "exclamationmark.icloud.fill") }
+
+    /// 􀘯
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var exclamationmarkOctagon: Self { .init(symbolName: "exclamationmark.octagon") }
+
+    /// 􀘰
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var exclamationmarkOctagonFill: Self { .init(symbolName: "exclamationmark.octagon.fill") }
+
+    /// 􀞟
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var exclamationmarkShield: Self { .init(symbolName: "exclamationmark.shield") }
+
+    /// 􀞠
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var exclamationmarkShieldFill: Self { .init(symbolName: "exclamationmark.shield.fill") }
+
+    /// 􀃮
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var exclamationmarkSquare: Self { .init(symbolName: "exclamationmark.square") }
+
+    /// 􀃯
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var exclamationmarkSquareFill: Self { .init(symbolName: "exclamationmark.square.fill") }
+
+    /// 􀇾
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var exclamationmarkTriangle: Self { .init(symbolName: "exclamationmark.triangle") }
+
+    /// 􀇿
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var exclamationmarkTriangleFill: Self { .init(symbolName: "exclamationmark.triangle.fill") }
+
+    /// 􀋭
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var eye: Self { .init(symbolName: "eye") }
+
+    /// 􀋮
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var eyeFill: Self { .init(symbolName: "eye.fill") }
+
+    /// 􀋯
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var eyeSlash: Self { .init(symbolName: "eye.slash") }
+
+    /// 􀋰
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var eyeSlashFill: Self { .init(symbolName: "eye.slash.fill") }
+
+    /// 􀎗
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var eyedropper: Self { .init(symbolName: "eyedropper") }
+
+    /// 􀎙
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var eyedropperFull: Self { .init(symbolName: "eyedropper.full") }
+
+    /// 􀎘
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var eyedropperHalffull: Self { .init(symbolName: "eyedropper.halffull") }
+
+    /// 􀖆
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var eyeglasses: Self { .init(symbolName: "eyeglasses") }
+
+    /// 􀀎
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var fCircle: Self { .init(symbolName: "f.circle") }
+
+    /// 􀀏
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var fCircleFill: Self { .init(symbolName: "f.circle.fill") }
+
+    /// 􀅭
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var fCursive: Self { .init(symbolName: "f.cursive") }
+
+    /// 􀝧
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var fCursiveCircle: Self { .init(symbolName: "f.cursive.circle") }
+
+    /// 􀝨
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var fCursiveCircleFill: Self { .init(symbolName: "f.cursive.circle.fill") }
+
+    /// 􀂞
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var fSquare: Self { .init(symbolName: "f.square") }
+
+    /// 􀂟
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var fSquareFill: Self { .init(symbolName: "f.square.fill") }
+
+    /// 􀎽
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Face ID feature.
+    static var faceid: Self { .init(symbolName: "faceid") }
+
+    /// 􀎶
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var film: Self { .init(symbolName: "film") }
+
+    /// 􀎷
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var filmFill: Self { .init(symbolName: "film.fill") }
+
+    /// 􀋉
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var flag: Self { .init(symbolName: "flag") }
+
+    /// 􀋋
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var flagCircle: Self { .init(symbolName: "flag.circle") }
+
+    /// 􀋌
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var flagCircleFill: Self { .init(symbolName: "flag.circle.fill") }
+
+    /// 􀋊
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var flagFill: Self { .init(symbolName: "flag.fill") }
+
+    /// 􀋍
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var flagSlash: Self { .init(symbolName: "flag.slash") }
+
+    /// 􀋎
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var flagSlashFill: Self { .init(symbolName: "flag.slash.fill") }
+
+    /// 􀙬
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var flame: Self { .init(symbolName: "flame") }
+
+    /// 􀙭
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var flameFill: Self { .init(symbolName: "flame.fill") }
+
+    /// 􀖡
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var florinsignCircle: Self { .init(symbolName: "florinsign.circle") }
+
+    /// 􀖢
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var florinsignCircleFill: Self { .init(symbolName: "florinsign.circle.fill") }
+
+    /// 􀗡
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var florinsignSquare: Self { .init(symbolName: "florinsign.square") }
+
+    /// 􀗢
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var florinsignSquareFill: Self { .init(symbolName: "florinsign.square.fill") }
+
+    /// 􀐕
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var flowchart: Self { .init(symbolName: "flowchart") }
+
+    /// 􀐖
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var flowchartFill: Self { .init(symbolName: "flowchart.fill") }
+
+    /// 􀈕
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var folder: Self { .init(symbolName: "folder") }
+
+    /// 􀈛
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var folderBadgeMinus: Self { .init(symbolName: "folder.badge.minus") }
+
+    /// 􀈝
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var folderBadgePersonCrop: Self { .init(symbolName: "folder.badge.person.crop") }
+
+    /// 􀈙
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var folderBadgePlus: Self { .init(symbolName: "folder.badge.plus") }
+
+    /// 􀈗
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var folderCircle: Self { .init(symbolName: "folder.circle") }
+
+    /// 􀈘
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var folderCircleFill: Self { .init(symbolName: "folder.circle.fill") }
+
+    /// 􀈖
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var folderFill: Self { .init(symbolName: "folder.fill") }
+
+    /// 􀈜
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var folderFillBadgeMinus: Self { .init(symbolName: "folder.fill.badge.minus") }
+
+    /// 􀈞
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var folderFillBadgePersonCrop: Self { .init(symbolName: "folder.fill.badge.person.crop") }
+
+    /// 􀈚
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var folderFillBadgePlus: Self { .init(symbolName: "folder.fill.badge.plus") }
+
+    /// 􀊋
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var forward: Self { .init(symbolName: "forward") }
+
+    /// 􀊏
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var forwardEnd: Self { .init(symbolName: "forward.end") }
+
+    /// 􀊓
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var forwardEndAlt: Self { .init(symbolName: "forward.end.alt") }
+
+    /// 􀊔
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var forwardEndAltFill: Self { .init(symbolName: "forward.end.alt.fill") }
+
+    /// 􀊐
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var forwardEndFill: Self { .init(symbolName: "forward.end.fill") }
+
+    /// 􀊌
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var forwardFill: Self { .init(symbolName: "forward.fill") }
+
+    /// 􀖟
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var francsignCircle: Self { .init(symbolName: "francsign.circle") }
+
+    /// 􀖠
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var francsignCircleFill: Self { .init(symbolName: "francsign.circle.fill") }
+
+    /// 􀗟
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var francsignSquare: Self { .init(symbolName: "francsign.square") }
+
+    /// 􀗠
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var francsignSquareFill: Self { .init(symbolName: "francsign.square.fill") }
+
+    /// 􀅮
+    /// 2 Localizations, Single Layerset
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var function: Self { .init(symbolName: "function") }
+
+    /// 􀅬
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var fx: Self { .init(symbolName: "fx") }
+
+    /// 􀀐
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var gCircle: Self { .init(symbolName: "g.circle") }
+
+    /// 􀀑
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var gCircleFill: Self { .init(symbolName: "g.circle.fill") }
+
+    /// 􀂠
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var gSquare: Self { .init(symbolName: "g.square") }
+
+    /// 􀂡
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var gSquareFill: Self { .init(symbolName: "g.square.fill") }
+
+    /// 􀛸
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var gamecontroller: Self { .init(symbolName: "gamecontroller") }
+
+    /// 􀛹
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var gamecontrollerFill: Self { .init(symbolName: "gamecontroller.fill") }
+
+    /// 􀍽
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 16.0, renamed: "gaugeMedium")
+    @available(macOS, introduced: 11.0, deprecated: 13.0, renamed: "gaugeMedium")
+    @available(tvOS, introduced: 13.0, deprecated: 16.0, renamed: "gaugeMedium")
+    @available(watchOS, introduced: 6.0, deprecated: 9.0, renamed: "gaugeMedium")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "gaugeMedium")
+    static var gauge: Self { .init(symbolName: "gauge") }
+
+    /// 􀓧
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 16.0, renamed: "gaugeMediumBadgeMinus")
+    @available(macOS, introduced: 11.0, deprecated: 13.0, renamed: "gaugeMediumBadgeMinus")
+    @available(tvOS, introduced: 13.0, deprecated: 16.0, renamed: "gaugeMediumBadgeMinus")
+    @available(watchOS, introduced: 6.0, deprecated: 9.0, renamed: "gaugeMediumBadgeMinus")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "gaugeMediumBadgeMinus")
+    static var gaugeBadgeMinus: Self { .init(symbolName: "gauge.badge.minus") }
+
+    /// 􀓓
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 16.0, renamed: "gaugeMediumBadgePlus")
+    @available(macOS, introduced: 11.0, deprecated: 13.0, renamed: "gaugeMediumBadgePlus")
+    @available(tvOS, introduced: 13.0, deprecated: 16.0, renamed: "gaugeMediumBadgePlus")
+    @available(watchOS, introduced: 6.0, deprecated: 9.0, renamed: "gaugeMediumBadgePlus")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "gaugeMediumBadgePlus")
+    static var gaugeBadgePlus: Self { .init(symbolName: "gauge.badge.plus") }
+
+    /// 􀍟
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var gear: Self { .init(symbolName: "gear") }
+
+    /// 􀑉
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var gift: Self { .init(symbolName: "gift") }
+
+    /// 􀑊
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var giftFill: Self { .init(symbolName: "gift.fill") }
+
+    /// 􀆪
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var globe: Self { .init(symbolName: "globe") }
+
+    /// 􀎀
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowTriangleheadCounterclockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "arrowTriangleheadCounterclockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowTriangleheadCounterclockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "arrowTriangleheadCounterclockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "arrowTriangleheadCounterclockwise")
+    static var gobackward: Self { .init(symbolName: "gobackward") }
+
+    /// 􀎂
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_10ArrowTriangleheadCounterclockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_10ArrowTriangleheadCounterclockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_10ArrowTriangleheadCounterclockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_10ArrowTriangleheadCounterclockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_10ArrowTriangleheadCounterclockwise")
+    static var gobackward10: Self { .init(symbolName: "gobackward.10") }
+
+    /// 􀎄
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_15ArrowTriangleheadCounterclockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_15ArrowTriangleheadCounterclockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_15ArrowTriangleheadCounterclockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_15ArrowTriangleheadCounterclockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_15ArrowTriangleheadCounterclockwise")
+    static var gobackward15: Self { .init(symbolName: "gobackward.15") }
+
+    /// 􀎆
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_30ArrowTriangleheadCounterclockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_30ArrowTriangleheadCounterclockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_30ArrowTriangleheadCounterclockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_30ArrowTriangleheadCounterclockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_30ArrowTriangleheadCounterclockwise")
+    static var gobackward30: Self { .init(symbolName: "gobackward.30") }
+
+    /// 􀎈
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_45ArrowTriangleheadCounterclockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_45ArrowTriangleheadCounterclockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_45ArrowTriangleheadCounterclockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_45ArrowTriangleheadCounterclockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_45ArrowTriangleheadCounterclockwise")
+    static var gobackward45: Self { .init(symbolName: "gobackward.45") }
+
+    /// 􀎊
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_60ArrowTriangleheadCounterclockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_60ArrowTriangleheadCounterclockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_60ArrowTriangleheadCounterclockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_60ArrowTriangleheadCounterclockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_60ArrowTriangleheadCounterclockwise")
+    static var gobackward60: Self { .init(symbolName: "gobackward.60") }
+
+    /// 􀘥
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_75ArrowTriangleheadCounterclockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_75ArrowTriangleheadCounterclockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_75ArrowTriangleheadCounterclockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_75ArrowTriangleheadCounterclockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_75ArrowTriangleheadCounterclockwise")
+    static var gobackward75: Self { .init(symbolName: "gobackward.75") }
+
+    /// 􀘧
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_90ArrowTriangleheadCounterclockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_90ArrowTriangleheadCounterclockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_90ArrowTriangleheadCounterclockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_90ArrowTriangleheadCounterclockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_90ArrowTriangleheadCounterclockwise")
+    static var gobackward90: Self { .init(symbolName: "gobackward.90") }
+
+    /// 􀘩
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "minusArrowTriangleheadCounterclockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "minusArrowTriangleheadCounterclockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "minusArrowTriangleheadCounterclockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "minusArrowTriangleheadCounterclockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "minusArrowTriangleheadCounterclockwise")
+    static var gobackwardMinus: Self { .init(symbolName: "gobackward.minus") }
+
+    /// 􀍿
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowTriangleheadClockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "arrowTriangleheadClockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "arrowTriangleheadClockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "arrowTriangleheadClockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "arrowTriangleheadClockwise")
+    static var goforward: Self { .init(symbolName: "goforward") }
+
+    /// 􀎁
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_10ArrowTriangleheadClockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_10ArrowTriangleheadClockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_10ArrowTriangleheadClockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_10ArrowTriangleheadClockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_10ArrowTriangleheadClockwise")
+    static var goforward10: Self { .init(symbolName: "goforward.10") }
+
+    /// 􀎃
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_15ArrowTriangleheadClockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_15ArrowTriangleheadClockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_15ArrowTriangleheadClockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_15ArrowTriangleheadClockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_15ArrowTriangleheadClockwise")
+    static var goforward15: Self { .init(symbolName: "goforward.15") }
+
+    /// 􀎅
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_30ArrowTriangleheadClockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_30ArrowTriangleheadClockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_30ArrowTriangleheadClockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_30ArrowTriangleheadClockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_30ArrowTriangleheadClockwise")
+    static var goforward30: Self { .init(symbolName: "goforward.30") }
+
+    /// 􀎇
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_45ArrowTriangleheadClockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_45ArrowTriangleheadClockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_45ArrowTriangleheadClockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_45ArrowTriangleheadClockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_45ArrowTriangleheadClockwise")
+    static var goforward45: Self { .init(symbolName: "goforward.45") }
+
+    /// 􀎉
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_60ArrowTriangleheadClockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_60ArrowTriangleheadClockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_60ArrowTriangleheadClockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_60ArrowTriangleheadClockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_60ArrowTriangleheadClockwise")
+    static var goforward60: Self { .init(symbolName: "goforward.60") }
+
+    /// 􀘤
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_75ArrowTriangleheadClockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_75ArrowTriangleheadClockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_75ArrowTriangleheadClockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_75ArrowTriangleheadClockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_75ArrowTriangleheadClockwise")
+    static var goforward75: Self { .init(symbolName: "goforward.75") }
+
+    /// 􀘦
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic
+    /// - Hindi
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "_90ArrowTriangleheadClockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "_90ArrowTriangleheadClockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "_90ArrowTriangleheadClockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "_90ArrowTriangleheadClockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "_90ArrowTriangleheadClockwise")
+    static var goforward90: Self { .init(symbolName: "goforward.90") }
+
+    /// 􀘨
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "plusArrowTriangleheadClockwise")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "plusArrowTriangleheadClockwise")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "plusArrowTriangleheadClockwise")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "plusArrowTriangleheadClockwise")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "plusArrowTriangleheadClockwise")
+    static var goforwardPlus: Self { .init(symbolName: "goforward.plus") }
+
+    /// 􀆂
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var greaterthan: Self { .init(symbolName: "greaterthan") }
+
+    /// 􀁖
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var greaterthanCircle: Self { .init(symbolName: "greaterthan.circle") }
+
+    /// 􀁗
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var greaterthanCircleFill: Self { .init(symbolName: "greaterthan.circle.fill") }
+
+    /// 􀃨
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var greaterthanSquare: Self { .init(symbolName: "greaterthan.square") }
+
+    /// 􀃩
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var greaterthanSquareFill: Self { .init(symbolName: "greaterthan.square.fill") }
+
+    /// 􀓗
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var grid: Self { .init(symbolName: "grid") }
+
+    /// 􀓘
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var gridCircle: Self { .init(symbolName: "grid.circle") }
+
+    /// 􀘟
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var gridCircleFill: Self { .init(symbolName: "grid.circle.fill") }
+
+    /// 􀖿
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var guaranisignCircle: Self { .init(symbolName: "guaranisign.circle") }
+
+    /// 􀗀
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var guaranisignCircleFill: Self { .init(symbolName: "guaranisign.circle.fill") }
+
+    /// 􀗿
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var guaranisignSquare: Self { .init(symbolName: "guaranisign.square") }
+
+    /// 􀘀
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var guaranisignSquareFill: Self { .init(symbolName: "guaranisign.square.fill") }
+
+    /// 􀑭
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var guitars: Self { .init(symbolName: "guitars") }
+
+    /// 􀀒
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var hCircle: Self { .init(symbolName: "h.circle") }
+
+    /// 􀀓
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var hCircleFill: Self { .init(symbolName: "h.circle.fill") }
+
+    /// 􀂢
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var hSquare: Self { .init(symbolName: "h.square") }
+
+    /// 􀂣
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var hSquareFill: Self { .init(symbolName: "h.square.fill") }
+
+    /// 􀙄
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var hammer: Self { .init(symbolName: "hammer") }
+
+    /// 􀙅
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var hammerFill: Self { .init(symbolName: "hammer.fill") }
+
+    /// 􀖓
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var handDraw: Self { .init(symbolName: "hand.draw") }
+
+    /// 􀖔
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var handDrawFill: Self { .init(symbolName: "hand.draw.fill") }
+
+    /// 􀙽
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var handPointLeft: Self { .init(symbolName: "hand.point.left") }
+
+    /// 􀙾
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var handPointLeftFill: Self { .init(symbolName: "hand.point.left.fill") }
+
+    /// 􀙿
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var handPointRight: Self { .init(symbolName: "hand.point.right") }
+
+    /// 􀚀
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var handPointRightFill: Self { .init(symbolName: "hand.point.right.fill") }
+
+    /// 􀉻
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var handRaised: Self { .init(symbolName: "hand.raised") }
+
+    /// 􀉼
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var handRaisedFill: Self { .init(symbolName: "hand.raised.fill") }
+
+    /// 􀉽
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    static var handRaisedSlash: Self { .init(symbolName: "hand.raised.slash") }
+
+    /// 􀉾
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var handRaisedSlashFill: Self { .init(symbolName: "hand.raised.slash.fill") }
+
+    /// 􀊁
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var handThumbsdown: Self { .init(symbolName: "hand.thumbsdown") }
+
+    /// 􀊂
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var handThumbsdownFill: Self { .init(symbolName: "hand.thumbsdown.fill") }
+
+    /// 􀉿
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var handThumbsup: Self { .init(symbolName: "hand.thumbsup") }
+
+    /// 􀊀
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var handThumbsupFill: Self { .init(symbolName: "hand.thumbsup.fill") }
+
+    /// 􀓎
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var hare: Self { .init(symbolName: "hare") }
+
+    /// 􀓏
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var hareFill: Self { .init(symbolName: "hare.fill") }
+
+    /// 􀑈
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var headphones: Self { .init(symbolName: "headphones") }
+
+    /// 􀊴
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var heart: Self { .init(symbolName: "heart") }
+
+    /// 􀊸
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var heartCircle: Self { .init(symbolName: "heart.circle") }
+
+    /// 􀊹
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var heartCircleFill: Self { .init(symbolName: "heart.circle.fill") }
+
+    /// 􀊵
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var heartFill: Self { .init(symbolName: "heart.fill") }
+
+    /// 􀊶
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var heartSlash: Self { .init(symbolName: "heart.slash") }
+
+    /// 􀊺
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var heartSlashCircle: Self { .init(symbolName: "heart.slash.circle") }
+
+    /// 􀊻
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var heartSlashCircleFill: Self { .init(symbolName: "heart.slash.circle.fill") }
+
+    /// 􀊷
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var heartSlashFill: Self { .init(symbolName: "heart.slash.fill") }
+
+    /// 􀐪
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var helm: Self { .init(symbolName: "helm") }
+
+    /// 􀝝
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var hexagon: Self { .init(symbolName: "hexagon") }
+
+    /// 􀝞
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var hexagonFill: Self { .init(symbolName: "hexagon.fill") }
+
+    /// 􀝎
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var hifispeaker: Self { .init(symbolName: "hifispeaker") }
+
+    /// 􀝏
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var hifispeakerFill: Self { .init(symbolName: "hifispeaker.fill") }
+
+    /// 􀖇
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var hourglass: Self { .init(symbolName: "hourglass") }
+
+    /// 􀖈
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "hourglassBottomhalfFilled")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "hourglassBottomhalfFilled")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "hourglassBottomhalfFilled")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "hourglassBottomhalfFilled")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "hourglassBottomhalfFilled")
+    static var hourglassBottomhalfFill: Self { .init(symbolName: "hourglass.bottomhalf.fill") }
+
+    /// 􀖉
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "hourglassTophalfFilled")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "hourglassTophalfFilled")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "hourglassTophalfFilled")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "hourglassTophalfFilled")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "hourglassTophalfFilled")
+    static var hourglassTophalfFill: Self { .init(symbolName: "hourglass.tophalf.fill") }
+
+    /// 􀎞
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var house: Self { .init(symbolName: "house") }
+
+    /// 􀎟
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var houseFill: Self { .init(symbolName: "house.fill") }
+
+    /// 􀖻
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var hryvniasignCircle: Self { .init(symbolName: "hryvniasign.circle") }
+
+    /// 􀖼
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var hryvniasignCircleFill: Self { .init(symbolName: "hryvniasign.circle.fill") }
+
+    /// 􀗻
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var hryvniasignSquare: Self { .init(symbolName: "hryvniasign.square") }
+
+    /// 􀗼
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var hryvniasignSquareFill: Self { .init(symbolName: "hryvniasign.square.fill") }
+
+    /// 􀇩
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var hurricane: Self { .init(symbolName: "hurricane") }
+
+    /// 􀀔
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var iCircle: Self { .init(symbolName: "i.circle") }
+
+    /// 􀀕
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var iCircleFill: Self { .init(symbolName: "i.circle.fill") }
+
+    /// 􀂤
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var iSquare: Self { .init(symbolName: "i.square") }
+
+    /// 􀂥
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var iSquareFill: Self { .init(symbolName: "i.square.fill") }
+
+    /// 􀌋
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var icloud: Self { .init(symbolName: "icloud") }
+
+    /// 􀌕
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var icloudAndArrowDown: Self { .init(symbolName: "icloud.and.arrow.down") }
+
+    /// 􀌖
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var icloudAndArrowDownFill: Self { .init(symbolName: "icloud.and.arrow.down.fill") }
+
+    /// 􀌗
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var icloudAndArrowUp: Self { .init(symbolName: "icloud.and.arrow.up") }
+
+    /// 􀌘
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var icloudAndArrowUpFill: Self { .init(symbolName: "icloud.and.arrow.up.fill") }
+
+    /// 􀌍
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var icloudCircle: Self { .init(symbolName: "icloud.circle") }
+
+    /// 􀌎
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var icloudCircleFill: Self { .init(symbolName: "icloud.circle.fill") }
+
+    /// 􀌌
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var icloudFill: Self { .init(symbolName: "icloud.fill") }
+
+    /// 􀌏
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var icloudSlash: Self { .init(symbolName: "icloud.slash") }
+
+    /// 􀌐
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var icloudSlashFill: Self { .init(symbolName: "icloud.slash.fill") }
+
+    /// 􀋵
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var increaseIndent: Self { .init(symbolName: "increase.indent") }
+
+    /// 􀞀
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var increaseQuotelevel: Self { .init(symbolName: "increase.quotelevel") }
+
+    /// 􀖫
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var indianrupeesignCircle: Self { .init(symbolName: "indianrupeesign.circle") }
+
+    /// 􀖬
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var indianrupeesignCircleFill: Self { .init(symbolName: "indianrupeesign.circle.fill") }
+
+    /// 􀗫
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var indianrupeesignSquare: Self { .init(symbolName: "indianrupeesign.square") }
+
+    /// 􀗬
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var indianrupeesignSquareFill: Self { .init(symbolName: "indianrupeesign.square.fill") }
+
+    /// 􀅳
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var info: Self { .init(symbolName: "info") }
+
+    /// 􀅴
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var infoCircle: Self { .init(symbolName: "info.circle") }
+
+    /// 􀅵
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var infoCircleFill: Self { .init(symbolName: "info.circle.fill") }
+
+    /// 􀅔
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var italic: Self { .init(symbolName: "italic") }
+
+    /// 􀀖
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var jCircle: Self { .init(symbolName: "j.circle") }
+
+    /// 􀀗
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var jCircleFill: Self { .init(symbolName: "j.circle.fill") }
+
+    /// 􀂦
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var jSquare: Self { .init(symbolName: "j.square") }
+
+    /// 􀂧
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var jSquareFill: Self { .init(symbolName: "j.square.fill") }
+
+    /// 􀀘
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var kCircle: Self { .init(symbolName: "k.circle") }
+
+    /// 􀀙
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var kCircleFill: Self { .init(symbolName: "k.circle.fill") }
+
+    /// 􀂨
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var kSquare: Self { .init(symbolName: "k.square") }
+
+    /// 􀂩
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var kSquareFill: Self { .init(symbolName: "k.square.fill") }
+
+    /// 􀇳
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var keyboard: Self { .init(symbolName: "keyboard") }
+
+    /// 􀓖
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var keyboardChevronCompactDown: Self { .init(symbolName: "keyboard.chevron.compact.down") }
+
+    /// 􀖳
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var kipsignCircle: Self { .init(symbolName: "kipsign.circle") }
+
+    /// 􀖴
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var kipsignCircleFill: Self { .init(symbolName: "kipsign.circle.fill") }
+
+    /// 􀗳
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var kipsignSquare: Self { .init(symbolName: "kipsign.square") }
+
+    /// 􀗴
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var kipsignSquareFill: Self { .init(symbolName: "kipsign.square.fill") }
+
+    /// 􀀚
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lCircle: Self { .init(symbolName: "l.circle") }
+
+    /// 􀀛
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lCircleFill: Self { .init(symbolName: "l.circle.fill") }
+
+    /// 􀂪
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lSquare: Self { .init(symbolName: "l.square") }
+
+    /// 􀂫
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lSquareFill: Self { .init(symbolName: "l.square.fill") }
+
+    /// 􀝜
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "circleInsetFilled")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "circleInsetFilled")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "circleInsetFilled")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "circleInsetFilled")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "circleInsetFilled")
+    static var largecircleFillCircle: Self { .init(symbolName: "largecircle.fill.circle") }
+
+    /// 􀗓
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var larisignCircle: Self { .init(symbolName: "larisign.circle") }
+
+    /// 􀗔
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var larisignCircleFill: Self { .init(symbolName: "larisign.circle.fill") }
+
+    /// 􀘓
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var larisignSquare: Self { .init(symbolName: "larisign.square") }
+
+    /// 􀘔
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var larisignSquareFill: Self { .init(symbolName: "larisign.square.fill") }
+
+    /// 􀓩
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var lasso: Self { .init(symbolName: "lasso") }
+
+    /// 􀙜
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "leafArrowTriangleCirclepath")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "leafArrowTriangleCirclepath")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "leafArrowTriangleCirclepath")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "leafArrowTriangleCirclepath")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "leafArrowTriangleCirclepath")
+    static var leafArrowCirclepath: Self { .init(symbolName: "leaf.arrow.circlepath") }
+
+    /// 􀆁
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var lessthan: Self { .init(symbolName: "lessthan") }
+
+    /// 􀁘
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lessthanCircle: Self { .init(symbolName: "lessthan.circle") }
+
+    /// 􀁙
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lessthanCircleFill: Self { .init(symbolName: "lessthan.circle.fill") }
+
+    /// 􀃦
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lessthanSquare: Self { .init(symbolName: "lessthan.square") }
+
+    /// 􀃧
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var lessthanSquareFill: Self { .init(symbolName: "lessthan.square.fill") }
+
+    /// 􀇮
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lightMax: Self { .init(symbolName: "light.max") }
+
+    /// 􀇭
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lightMin: Self { .init(symbolName: "light.min") }
+
+    /// 􀛭
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var lightbulb: Self { .init(symbolName: "lightbulb") }
+
+    /// 􀛮
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var lightbulbFill: Self { .init(symbolName: "lightbulb.fill") }
+
+    /// 􀞃
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lightbulbSlash: Self { .init(symbolName: "lightbulb.slash") }
+
+    /// 􀞄
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lightbulbSlashFill: Self { .init(symbolName: "lightbulb.slash.fill") }
+
+    /// 􀌇
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "line3Horizontal")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "line3Horizontal")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "line3Horizontal")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "line3Horizontal")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "line3Horizontal")
+    static var lineHorizontal3: Self { .init(symbolName: "line.horizontal.3") }
+
+    /// 􀜓
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "line3HorizontalDecrease")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "line3HorizontalDecrease")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "line3HorizontalDecrease")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "line3HorizontalDecrease")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "line3HorizontalDecrease")
+    static var lineHorizontal3Decrease: Self { .init(symbolName: "line.horizontal.3.decrease") }
+
+    /// 􀌈
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "line3HorizontalDecreaseCircle")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "line3HorizontalDecreaseCircle")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "line3HorizontalDecreaseCircle")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "line3HorizontalDecreaseCircle")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "line3HorizontalDecreaseCircle")
+    static var lineHorizontal3DecreaseCircle: Self { .init(symbolName: "line.horizontal.3.decrease.circle") }
+
+    /// 􀌉
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "line3HorizontalDecreaseCircleFill")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "line3HorizontalDecreaseCircleFill")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "line3HorizontalDecreaseCircleFill")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "line3HorizontalDecreaseCircleFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "line3HorizontalDecreaseCircleFill")
+    static var lineHorizontal3DecreaseCircleFill: Self { .init(symbolName: "line.horizontal.3.decrease.circle.fill") }
+
+    /// 􀉣
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var link: Self { .init(symbolName: "link") }
+
+    /// 􀒠
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var linkCircle: Self { .init(symbolName: "link.circle") }
+
+    /// 􀒡
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var linkCircleFill: Self { .init(symbolName: "link.circle.fill") }
+
+    /// 􀒞
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var linkIcloud: Self { .init(symbolName: "link.icloud") }
+
+    /// 􀒟
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var linkIcloudFill: Self { .init(symbolName: "link.icloud.fill") }
+
+    /// 􀖷
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lirasignCircle: Self { .init(symbolName: "lirasign.circle") }
+
+    /// 􀖸
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lirasignCircleFill: Self { .init(symbolName: "lirasign.circle.fill") }
+
+    /// 􀗷
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lirasignSquare: Self { .init(symbolName: "lirasign.square") }
+
+    /// 􀗸
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lirasignSquareFill: Self { .init(symbolName: "lirasign.square.fill") }
+
+    /// 􀋲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var listBullet: Self { .init(symbolName: "list.bullet") }
+
+    /// 􀋷
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var listBulletBelowRectangle: Self { .init(symbolName: "list.bullet.below.rectangle") }
+
+    /// 􀋳
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var listBulletIndent: Self { .init(symbolName: "list.bullet.indent") }
+
+    /// 􀋱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var listDash: Self { .init(symbolName: "list.dash") }
+
+    /// 􀋴
+    /// 4 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hindi (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var listNumber: Self { .init(symbolName: "list.number") }
+
+    /// 􀐡
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Live Photos feature.
+    static var livephoto: Self { .init(symbolName: "livephoto") }
+
+    /// 􀐣
+    /// Single Localization, Single Layerset, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Live Photos feature.
+    static var livephotoPlay: Self { .init(symbolName: "livephoto.play") }
+
+    /// 􀐢
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Live Photos feature.
+    static var livephotoSlash: Self { .init(symbolName: "livephoto.slash") }
+
+    /// 􀋑
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var location: Self { .init(symbolName: "location") }
+
+    /// 􀋕
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var locationCircle: Self { .init(symbolName: "location.circle") }
+
+    /// 􀋖
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var locationCircleFill: Self { .init(symbolName: "location.circle.fill") }
+
+    /// 􀋒
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var locationFill: Self { .init(symbolName: "location.fill") }
+
+    /// 􀋓
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var locationNorth: Self { .init(symbolName: "location.north") }
+
+    /// 􀋔
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var locationNorthFill: Self { .init(symbolName: "location.north.fill") }
+
+    /// 􀋗
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var locationNorthLine: Self { .init(symbolName: "location.north.line") }
+
+    /// 􀋘
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var locationNorthLineFill: Self { .init(symbolName: "location.north.line.fill") }
+
+    /// 􀘬
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var locationSlash: Self { .init(symbolName: "location.slash") }
+
+    /// 􀘭
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var locationSlashFill: Self { .init(symbolName: "location.slash.fill") }
+
+    /// 􀎠
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lock: Self { .init(symbolName: "lock") }
+
+    /// 􀒲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lockCircle: Self { .init(symbolName: "lock.circle") }
+
+    /// 􀒳
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lockCircleFill: Self { .init(symbolName: "lock.circle.fill") }
+
+    /// 􀎡
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lockFill: Self { .init(symbolName: "lock.fill") }
+
+    /// 􀙵
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var lockIcloud: Self { .init(symbolName: "lock.icloud") }
+
+    /// 􀙶
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var lockIcloudFill: Self { .init(symbolName: "lock.icloud.fill") }
+
+    /// 􀎤
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var lockOpen: Self { .init(symbolName: "lock.open") }
+
+    /// 􀎥
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var lockOpenFill: Self { .init(symbolName: "lock.open.fill") }
+
+    /// 􀑙
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lockRotation: Self { .init(symbolName: "lock.rotation") }
+
+    /// 􀑚
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 16.1, renamed: "lockOpenRotation")
+    @available(macOS, introduced: 11.0, deprecated: 13.0, renamed: "lockOpenRotation")
+    @available(tvOS, introduced: 13.0, deprecated: 16.1, renamed: "lockOpenRotation")
+    @available(watchOS, introduced: 6.0, deprecated: 9.1, renamed: "lockOpenRotation")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "lockOpenRotation")
+    static var lockRotationOpen: Self { .init(symbolName: "lock.rotation.open") }
+
+    /// 􀞙
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var lockShield: Self { .init(symbolName: "lock.shield") }
+
+    /// 􀞚
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var lockShieldFill: Self { .init(symbolName: "lock.shield.fill") }
+
+    /// 􀎢
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var lockSlash: Self { .init(symbolName: "lock.slash") }
+
+    /// 􀎣
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var lockSlashFill: Self { .init(symbolName: "lock.slash.fill") }
+
+    /// 􀀜
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var mCircle: Self { .init(symbolName: "m.circle") }
+
+    /// 􀀝
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var mCircleFill: Self { .init(symbolName: "m.circle.fill") }
+
+    /// 􀂬
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var mSquare: Self { .init(symbolName: "m.square") }
+
+    /// 􀂭
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var mSquareFill: Self { .init(symbolName: "m.square.fill") }
+
+    /// 􀏜
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var macwindow: Self { .init(symbolName: "macwindow") }
+
+    /// 􀊫
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var magnifyingglass: Self { .init(symbolName: "magnifyingglass") }
+
+    /// 􀒒
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var magnifyingglassCircle: Self { .init(symbolName: "magnifyingglass.circle") }
+
+    /// 􀒓
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var magnifyingglassCircleFill: Self { .init(symbolName: "magnifyingglass.circle.fill") }
+
+    /// 􀗍
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var manatsignCircle: Self { .init(symbolName: "manatsign.circle") }
+
+    /// 􀗎
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var manatsignCircleFill: Self { .init(symbolName: "manatsign.circle.fill") }
+
+    /// 􀘍
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var manatsignSquare: Self { .init(symbolName: "manatsign.square") }
+
+    /// 􀘎
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var manatsignSquareFill: Self { .init(symbolName: "manatsign.square.fill") }
+
+    /// 􀙊
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var map: Self { .init(symbolName: "map") }
+
+    /// 􀙋
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var mapFill: Self { .init(symbolName: "map.fill") }
+
+    /// 􀎪
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var mappin: Self { .init(symbolName: "mappin") }
+
+    /// 􀎫
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var mappinAndEllipse: Self { .init(symbolName: "mappin.and.ellipse") }
+
+    /// 􀙉
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var mappinSlash: Self { .init(symbolName: "mappin.slash") }
+
+    /// 􀑖
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var memories: Self { .init(symbolName: "memories") }
+
+    /// 􀑘
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var memoriesBadgeMinus: Self { .init(symbolName: "memories.badge.minus") }
+
+    /// 􀑗
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var memoriesBadgePlus: Self { .init(symbolName: "memories.badge.plus") }
+
+    /// 􀌤
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Messages app.
+    static var message: Self { .init(symbolName: "message") }
+
+    /// 􀌦
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Messages app.
+    static var messageCircle: Self { .init(symbolName: "message.circle") }
+
+    /// 􀌧
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Messages app.
+    static var messageCircleFill: Self { .init(symbolName: "message.circle.fill") }
+
+    /// 􀌥
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Messages app.
+    static var messageFill: Self { .init(symbolName: "message.fill") }
+
+    /// 􀎌
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var metronome: Self { .init(symbolName: "metronome") }
+
+    /// 􀊰
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "microphone")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "microphone")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "microphone")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "microphone")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "microphone")
+    static var mic: Self { .init(symbolName: "mic") }
+
+    /// 􀒩
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "microphoneCircle")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "microphoneCircle")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "microphoneCircle")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "microphoneCircle")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "microphoneCircle")
+    static var micCircle: Self { .init(symbolName: "mic.circle") }
+
+    /// 􀒪
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "microphoneCircleFill")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "microphoneCircleFill")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "microphoneCircleFill")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "microphoneCircleFill")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "microphoneCircleFill")
+    static var micCircleFill: Self { .init(symbolName: "mic.circle.fill") }
+
+    /// 􀊱
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "microphoneFill")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "microphoneFill")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "microphoneFill")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "microphoneFill")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "microphoneFill")
+    static var micFill: Self { .init(symbolName: "mic.fill") }
+
+    /// 􀊲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "microphoneSlash")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "microphoneSlash")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "microphoneSlash")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "microphoneSlash")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "microphoneSlash")
+    static var micSlash: Self { .init(symbolName: "mic.slash") }
+
+    /// 􀊳
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "microphoneSlashFill")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "microphoneSlashFill")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "microphoneSlashFill")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "microphoneSlashFill")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "microphoneSlashFill")
+    static var micSlashFill: Self { .init(symbolName: "mic.slash.fill") }
+
+    /// 􀗉
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var millsignCircle: Self { .init(symbolName: "millsign.circle") }
+
+    /// 􀗊
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var millsignCircleFill: Self { .init(symbolName: "millsign.circle.fill") }
+
+    /// 􀘉
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var millsignSquare: Self { .init(symbolName: "millsign.square") }
+
+    /// 􀘊
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var millsignSquareFill: Self { .init(symbolName: "millsign.square.fill") }
+
+    /// 􀅽
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var minus: Self { .init(symbolName: "minus") }
+
+    /// 􀁎
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var minusCircle: Self { .init(symbolName: "minus.circle") }
+
+    /// 􀁏
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var minusCircleFill: Self { .init(symbolName: "minus.circle.fill") }
+
+    /// 􀊭
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 18.1, macOS 15.1, tvOS 18.1, watchOS 11.1)
+    static var minusMagnifyingglass: Self { .init(symbolName: "minus.magnifyingglass") }
+
+    /// 􀏉
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var minusRectangle: Self { .init(symbolName: "minus.rectangle") }
+
+    /// 􀏊
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var minusRectangleFill: Self { .init(symbolName: "minus.rectangle.fill") }
+
+    /// 􀅻
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "minusForwardslashPlus")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "minusForwardslashPlus")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "minusForwardslashPlus")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "minusForwardslashPlus")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "minusForwardslashPlus")
+    static var minusSlashPlus: Self { .init(symbolName: "minus.slash.plus") }
+
+    /// 􀃞
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var minusSquare: Self { .init(symbolName: "minus.square") }
+
+    /// 􀃟
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var minusSquareFill: Self { .init(symbolName: "minus.square.fill") }
+
+    /// 􀆹
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var moon: Self { .init(symbolName: "moon") }
+
+    /// 􀆻
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var moonCircle: Self { .init(symbolName: "moon.circle") }
+
+    /// 􀆼
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var moonCircleFill: Self { .init(symbolName: "moon.circle.fill") }
+
+    /// 􀆺
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var moonFill: Self { .init(symbolName: "moon.fill") }
+
+    /// 􀇀
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var moonStars: Self { .init(symbolName: "moon.stars") }
+
+    /// 􀇁
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var moonStarsFill: Self { .init(symbolName: "moon.stars.fill") }
+
+    /// 􀆽
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var moonZzz: Self { .init(symbolName: "moon.zzz") }
+
+    /// 􀆾
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var moonZzzFill: Self { .init(symbolName: "moon.zzz.fill") }
+
+    /// 􀅾
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var multiply: Self { .init(symbolName: "multiply") }
+
+    /// 􀁐
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var multiplyCircle: Self { .init(symbolName: "multiply.circle") }
+
+    /// 􀁑
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var multiplyCircleFill: Self { .init(symbolName: "multiply.circle.fill") }
+
+    /// 􀃠
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var multiplySquare: Self { .init(symbolName: "multiply.square") }
+
+    /// 􀃡
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var multiplySquareFill: Self { .init(symbolName: "multiply.square.fill") }
+
+    /// 􀒼
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "musicNoteHouse")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "musicNoteHouse")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "musicNoteHouse")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "musicNoteHouse")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "musicNoteHouse")
+    static var musicHouse: Self { .init(symbolName: "music.house") }
+
+    /// 􀒽
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "musicNoteHouseFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "musicNoteHouseFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "musicNoteHouseFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "musicNoteHouseFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "musicNoteHouseFill")
+    static var musicHouseFill: Self { .init(symbolName: "music.house.fill") }
+
+    /// 􀑫
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "musicMicrophone")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "musicMicrophone")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "musicMicrophone")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "musicMicrophone")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "musicMicrophone")
+    static var musicMic: Self { .init(symbolName: "music.mic") }
+
+    /// 􀑪
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var musicNote: Self { .init(symbolName: "music.note") }
+
+    /// 􀑬
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var musicNoteList: Self { .init(symbolName: "music.note.list") }
+
+    /// 􀀞
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var nCircle: Self { .init(symbolName: "n.circle") }
+
+    /// 􀀟
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var nCircleFill: Self { .init(symbolName: "n.circle.fill") }
+
+    /// 􀂮
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var nSquare: Self { .init(symbolName: "n.square") }
+
+    /// 􀂯
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var nSquareFill: Self { .init(symbolName: "n.square.fill") }
+
+    /// 􀖽
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var nairasignCircle: Self { .init(symbolName: "nairasign.circle") }
+
+    /// 􀖾
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var nairasignCircleFill: Self { .init(symbolName: "nairasign.circle.fill") }
+
+    /// 􀗽
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var nairasignSquare: Self { .init(symbolName: "nairasign.square") }
+
+    /// 􀗾
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var nairasignSquareFill: Self { .init(symbolName: "nairasign.square.fill") }
+
+    /// 􀍼
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var nosign: Self { .init(symbolName: "nosign") }
+
+    /// 􀆃
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var number: Self { .init(symbolName: "number") }
+
+    /// 􀁚
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var numberCircle: Self { .init(symbolName: "number.circle") }
+
+    /// 􀁛
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var numberCircleFill: Self { .init(symbolName: "number.circle.fill") }
+
+    /// 􀃪
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var numberSquare: Self { .init(symbolName: "number.square") }
+
+    /// 􀃫
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var numberSquareFill: Self { .init(symbolName: "number.square.fill") }
+
+    /// 􀀠
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var oCircle: Self { .init(symbolName: "o.circle") }
+
+    /// 􀀡
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var oCircleFill: Self { .init(symbolName: "o.circle.fill") }
+
+    /// 􀂰
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var oSquare: Self { .init(symbolName: "o.square") }
+
+    /// 􀂱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var oSquareFill: Self { .init(symbolName: "o.square.fill") }
+
+    /// 􀆕
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var option: Self { .init(symbolName: "option") }
+
+    /// 􀀢
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pCircle: Self { .init(symbolName: "p.circle") }
+
+    /// 􀀣
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pCircleFill: Self { .init(symbolName: "p.circle.fill") }
+
+    /// 􀂲
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pSquare: Self { .init(symbolName: "p.square") }
+
+    /// 􀂳
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pSquareFill: Self { .init(symbolName: "p.square.fill") }
+
+    /// 􀎑
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var paintbrush: Self { .init(symbolName: "paintbrush") }
+
+    /// 􀎒
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var paintbrushFill: Self { .init(symbolName: "paintbrush.fill") }
+
+    /// 􀐏
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var pano: Self { .init(symbolName: "pano") }
+
+    /// 􀐐
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var panoFill: Self { .init(symbolName: "pano.fill") }
+
+    /// 􀉢
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var paperclip: Self { .init(symbolName: "paperclip") }
+
+    /// 􀈟
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var paperplane: Self { .init(symbolName: "paperplane") }
+
+    /// 􀈠
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var paperplaneFill: Self { .init(symbolName: "paperplane.fill") }
+
+    /// 􀒆
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "paragraphsign")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "paragraphsign")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "paragraphsign")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "paragraphsign")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "paragraphsign")
+    static var paragraph: Self { .init(symbolName: "paragraph") }
+
+    /// 􀊅
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var pause: Self { .init(symbolName: "pause") }
+
+    /// 􀊗
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pauseCircle: Self { .init(symbolName: "pause.circle") }
+
+    /// 􀊘
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pauseCircleFill: Self { .init(symbolName: "pause.circle.fill") }
+
+    /// 􀊆
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var pauseFill: Self { .init(symbolName: "pause.fill") }
+
+    /// 􀊛
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pauseRectangle: Self { .init(symbolName: "pause.rectangle") }
+
+    /// 􀊜
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var pauseRectangleFill: Self { .init(symbolName: "pause.rectangle.fill") }
+
+    /// 􀈊
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var pencil: Self { .init(symbolName: "pencil") }
+
+    /// 􀈏
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "rectangleAndPencilAndEllipsis")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "rectangleAndPencilAndEllipsis")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "rectangleAndPencilAndEllipsis")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "rectangleAndPencilAndEllipsis")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "rectangleAndPencilAndEllipsis")
+    static var pencilAndEllipsisRectangle: Self { .init(symbolName: "pencil.and.ellipsis.rectangle") }
+
+    /// 􀈐
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pencilAndOutline: Self { .init(symbolName: "pencil.and.outline") }
+
+    /// 􀈋
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pencilCircle: Self { .init(symbolName: "pencil.circle") }
+
+    /// 􀈌
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pencilCircleFill: Self { .init(symbolName: "pencil.circle.fill") }
+
+    /// 􀈍
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pencilSlash: Self { .init(symbolName: "pencil.slash") }
+
+    /// 􀒋
+    /// Single Localization, Single Layerset, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to drawing experiences that are based on PencilKit.
+    static var pencilTip: Self { .init(symbolName: "pencil.tip") }
+
+    /// 􀉥
+    /// Single Localization, Single Layerset, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Markup feature.
+    static var pencilTipCropCircle: Self { .init(symbolName: "pencil.tip.crop.circle") }
+
+    /// 􀉧
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Markup feature.
+    static var pencilTipCropCircleBadgeMinus: Self { .init(symbolName: "pencil.tip.crop.circle.badge.minus") }
+
+    /// 􀉦
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Markup feature.
+    static var pencilTipCropCircleBadgePlus: Self { .init(symbolName: "pencil.tip.crop.circle.badge.plus") }
+
+    /// 􀘾
+    /// 2 Localizations, Single Layerset
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var percent: Self { .init(symbolName: "percent") }
+
+    /// 􀉩
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var person: Self { .init(symbolName: "person") }
+
+    /// 􀉫
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var person2: Self { .init(symbolName: "person.2") }
+
+    /// 􀉬
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var person2Fill: Self { .init(symbolName: "person.2.fill") }
+
+    /// 􀓥
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "person2CropSquareStack")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "person2CropSquareStack")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "person2CropSquareStack")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "person2CropSquareStack")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "person2CropSquareStack")
+    static var person2SquareStack: Self { .init(symbolName: "person.2.square.stack") }
+
+    /// 􀓦
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    /// - Multicolor (iOS 17.1, macOS 14.1, tvOS 17.1, watchOS 10.1)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "person2CropSquareStackFill")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "person2CropSquareStackFill")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "person2CropSquareStackFill")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "person2CropSquareStackFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "person2CropSquareStackFill")
+    static var person2SquareStackFill: Self { .init(symbolName: "person.2.square.stack.fill") }
+
+    /// 􀝊
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var person3: Self { .init(symbolName: "person.3") }
+
+    /// 􀝋
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var person3Fill: Self { .init(symbolName: "person.3.fill") }
+
+    /// 􀜗
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personBadgeMinus: Self { .init(symbolName: "person.badge.minus") }
+
+    /// 􀜘
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "personFillBadgeMinus")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "personFillBadgeMinus")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "personFillBadgeMinus")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "personFillBadgeMinus")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "personFillBadgeMinus")
+    static var personBadgeMinusFill: Self { .init(symbolName: "person.badge.minus.fill") }
+
+    /// 􀜕
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personBadgePlus: Self { .init(symbolName: "person.badge.plus") }
+
+    /// 􀜖
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "personFillBadgePlus")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "personFillBadgePlus")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "personFillBadgePlus")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "personFillBadgePlus")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "personFillBadgePlus")
+    static var personBadgePlusFill: Self { .init(symbolName: "person.badge.plus.fill") }
+
+    /// 􀓣
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personCircle: Self { .init(symbolName: "person.circle") }
+
+    /// 􀓤
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personCircleFill: Self { .init(symbolName: "person.circle.fill") }
+
+    /// 􀉭
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var personCropCircle: Self { .init(symbolName: "person.crop.circle") }
+
+    /// 􀉳
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personCropCircleBadgeCheckmark: Self { .init(symbolName: "person.crop.circle.badge.checkmark") }
+
+    /// 􀉷
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "personCropCircleBadgeExclamationmark")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "personCropCircleBadgeExclamationmark")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "personCropCircleBadgeExclamationmark")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "personCropCircleBadgeExclamationmark")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "personCropCircleBadgeExclamationmark")
+    static var personCropCircleBadgeExclam: Self { .init(symbolName: "person.crop.circle.badge.exclam") }
+
+    /// 􀉱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personCropCircleBadgeMinus: Self { .init(symbolName: "person.crop.circle.badge.minus") }
+
+    /// 􀉯
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personCropCircleBadgePlus: Self { .init(symbolName: "person.crop.circle.badge.plus") }
+
+    /// 􀉵
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personCropCircleBadgeXmark: Self { .init(symbolName: "person.crop.circle.badge.xmark") }
+
+    /// 􀉮
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personCropCircleFill: Self { .init(symbolName: "person.crop.circle.fill") }
+
+    /// 􀉴
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personCropCircleFillBadgeCheckmark: Self { .init(symbolName: "person.crop.circle.fill.badge.checkmark") }
+
+    /// 􀉸
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "personCropCircleFillBadgeExclamationmark")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "personCropCircleFillBadgeExclamationmark")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "personCropCircleFillBadgeExclamationmark")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "personCropCircleFillBadgeExclamationmark")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "personCropCircleFillBadgeExclamationmark")
+    static var personCropCircleFillBadgeExclam: Self { .init(symbolName: "person.crop.circle.fill.badge.exclam") }
+
+    /// 􀉲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personCropCircleFillBadgeMinus: Self { .init(symbolName: "person.crop.circle.fill.badge.minus") }
+
+    /// 􀉰
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personCropCircleFillBadgePlus: Self { .init(symbolName: "person.crop.circle.fill.badge.plus") }
+
+    /// 􀉶
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var personCropCircleFillBadgeXmark: Self { .init(symbolName: "person.crop.circle.fill.badge.xmark") }
+
+    /// 􀏏
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var personCropRectangle: Self { .init(symbolName: "person.crop.rectangle") }
+
+    /// 􀏐
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 17.1, macOS 14.1, tvOS 17.1, watchOS 10.1)
+    /// - Multicolor (iOS 17.1, macOS 14.1, tvOS 17.1, watchOS 10.1)
+    static var personCropRectangleFill: Self { .init(symbolName: "person.crop.rectangle.fill") }
+
+    /// 􀉹
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var personCropSquare: Self { .init(symbolName: "person.crop.square") }
+
+    /// 􀉺
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var personCropSquareFill: Self { .init(symbolName: "person.crop.square.fill") }
+
+    /// 􀉪
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var personFill: Self { .init(symbolName: "person.fill") }
+
+    /// 􀙳
+    /// Single Localization, Single Layerset, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var personIcloud: Self { .init(symbolName: "person.icloud") }
+
+    /// 􀙴
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var personIcloudFill: Self { .init(symbolName: "person.icloud.fill") }
+
+    /// 􀉤
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var personalhotspot: Self { .init(symbolName: "personalhotspot") }
+
+    /// 􀒱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var perspective: Self { .init(symbolName: "perspective") }
+
+    /// 􀖯
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pesetasignCircle: Self { .init(symbolName: "pesetasign.circle") }
+
+    /// 􀖰
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pesetasignCircleFill: Self { .init(symbolName: "pesetasign.circle.fill") }
+
+    /// 􀗯
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pesetasignSquare: Self { .init(symbolName: "pesetasign.square") }
+
+    /// 􀗰
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pesetasignSquareFill: Self { .init(symbolName: "pesetasign.square.fill") }
+
+    /// 􀖱
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pesosignCircle: Self { .init(symbolName: "pesosign.circle") }
+
+    /// 􀖲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pesosignCircleFill: Self { .init(symbolName: "pesosign.circle.fill") }
+
+    /// 􀗱
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pesosignSquare: Self { .init(symbolName: "pesosign.square") }
+
+    /// 􀗲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pesosignSquareFill: Self { .init(symbolName: "pesosign.square.fill") }
+
+    /// 􀌾
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phone: Self { .init(symbolName: "phone") }
+
+    /// 􀍂
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phoneArrowDownLeft: Self { .init(symbolName: "phone.arrow.down.left") }
+
+    /// 􀍄
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phoneArrowRight: Self { .init(symbolName: "phone.arrow.right") }
+
+    /// 􀍀
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phoneArrowUpRight: Self { .init(symbolName: "phone.arrow.up.right") }
+
+    /// 􀖎
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phoneBadgePlus: Self { .init(symbolName: "phone.badge.plus") }
+
+    /// 􀒥
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phoneCircle: Self { .init(symbolName: "phone.circle") }
+
+    /// 􀒦
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phoneCircleFill: Self { .init(symbolName: "phone.circle.fill") }
+
+    /// 􀍆
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phoneDown: Self { .init(symbolName: "phone.down") }
+
+    /// 􀒧
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phoneDownCircle: Self { .init(symbolName: "phone.down.circle") }
+
+    /// 􀒨
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phoneDownCircleFill: Self { .init(symbolName: "phone.down.circle.fill") }
+
+    /// 􀍇
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phoneDownFill: Self { .init(symbolName: "phone.down.fill") }
+
+    /// 􀌿
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phoneFill: Self { .init(symbolName: "phone.fill") }
+
+    /// 􀍃
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 16.0, renamed: "phoneArrowDownLeftFill")
+    @available(macOS, introduced: 11.0, deprecated: 13.0, renamed: "phoneArrowDownLeftFill")
+    @available(tvOS, introduced: 13.0, deprecated: 16.0, renamed: "phoneArrowDownLeftFill")
+    @available(watchOS, introduced: 6.0, deprecated: 9.0, renamed: "phoneArrowDownLeftFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "phoneArrowDownLeftFill")
+    static var phoneFillArrowDownLeft: Self { .init(symbolName: "phone.fill.arrow.down.left") }
+
+    /// 􀍅
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 16.0, renamed: "phoneArrowRightFill")
+    @available(macOS, introduced: 11.0, deprecated: 13.0, renamed: "phoneArrowRightFill")
+    @available(tvOS, introduced: 13.0, deprecated: 16.0, renamed: "phoneArrowRightFill")
+    @available(watchOS, introduced: 6.0, deprecated: 9.0, renamed: "phoneArrowRightFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "phoneArrowRightFill")
+    static var phoneFillArrowRight: Self { .init(symbolName: "phone.fill.arrow.right") }
+
+    /// 􀍁
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 16.0, renamed: "phoneArrowUpRightFill")
+    @available(macOS, introduced: 11.0, deprecated: 13.0, renamed: "phoneArrowUpRightFill")
+    @available(tvOS, introduced: 13.0, deprecated: 16.0, renamed: "phoneArrowUpRightFill")
+    @available(watchOS, introduced: 6.0, deprecated: 9.0, renamed: "phoneArrowUpRightFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "phoneArrowUpRightFill")
+    static var phoneFillArrowUpRight: Self { .init(symbolName: "phone.fill.arrow.up.right") }
+
+    /// 􀖏
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var phoneFillBadgePlus: Self { .init(symbolName: "phone.fill.badge.plus") }
+
+    /// 􀏅
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var photo: Self { .init(symbolName: "photo") }
+
+    /// 􀏆
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var photoFill: Self { .init(symbolName: "photo.fill") }
+
+    /// 􀏬
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var photoFillOnRectangleFill: Self { .init(symbolName: "photo.fill.on.rectangle.fill") }
+
+    /// 􀏫
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var photoOnRectangle: Self { .init(symbolName: "photo.on.rectangle") }
+
+    /// 􀎦
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pin: Self { .init(symbolName: "pin") }
+
+    /// 􀎧
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pinFill: Self { .init(symbolName: "pin.fill") }
+
+    /// 􀎨
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var pinSlash: Self { .init(symbolName: "pin.slash") }
+
+    /// 􀎩
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var pinSlashFill: Self { .init(symbolName: "pin.slash.fill") }
+
+    /// 􀊃
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var play: Self { .init(symbolName: "play") }
+
+    /// 􀊕
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var playCircle: Self { .init(symbolName: "play.circle") }
+
+    /// 􀊖
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var playCircleFill: Self { .init(symbolName: "play.circle.fill") }
+
+    /// 􀊄
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var playFill: Self { .init(symbolName: "play.fill") }
+
+    /// 􀊙
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var playRectangle: Self { .init(symbolName: "play.rectangle") }
+
+    /// 􀊚
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var playRectangleFill: Self { .init(symbolName: "play.rectangle.fill") }
+
+    /// 􀊇
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var playpause: Self { .init(symbolName: "playpause") }
+
+    /// 􀊈
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var playpauseFill: Self { .init(symbolName: "playpause.fill") }
+
+    /// 􀅼
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var plus: Self { .init(symbolName: "plus") }
+
+    /// 􀑍
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var plusApp: Self { .init(symbolName: "plus.app") }
+
+    /// 􀑎
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var plusAppFill: Self { .init(symbolName: "plus.app.fill") }
+
+    /// 􀌶
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var plusBubble: Self { .init(symbolName: "plus.bubble") }
+
+    /// 􀌷
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var plusBubbleFill: Self { .init(symbolName: "plus.bubble.fill") }
+
+    /// 􀁌
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var plusCircle: Self { .init(symbolName: "plus.circle") }
+
+    /// 􀁍
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var plusCircleFill: Self { .init(symbolName: "plus.circle.fill") }
+
+    /// 􀊬
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 18.1, macOS 15.1, tvOS 18.1, watchOS 11.1)
+    static var plusMagnifyingglass: Self { .init(symbolName: "plus.magnifyingglass") }
+
+    /// 􀏇
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var plusRectangle: Self { .init(symbolName: "plus.rectangle") }
+
+    /// 􀏈
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var plusRectangleFill: Self { .init(symbolName: "plus.rectangle.fill") }
+
+    /// 􀏪
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var plusRectangleFillOnRectangleFill: Self { .init(symbolName: "plus.rectangle.fill.on.rectangle.fill") }
+
+    /// 􀏩
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var plusRectangleOnRectangle: Self { .init(symbolName: "plus.rectangle.on.rectangle") }
+
+    /// 􀅺
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "plusForwardslashMinus")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "plusForwardslashMinus")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "plusForwardslashMinus")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "plusForwardslashMinus")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "plusForwardslashMinus")
+    static var plusSlashMinus: Self { .init(symbolName: "plus.slash.minus") }
+
+    /// 􀃜
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var plusSquare: Self { .init(symbolName: "plus.square") }
+
+    /// 􀃝
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var plusSquareFill: Self { .init(symbolName: "plus.square.fill") }
+
+    /// 􀐈
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var plusSquareFillOnSquareFill: Self { .init(symbolName: "plus.square.fill.on.square.fill") }
+
+    /// 􀐇
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var plusSquareOnSquare: Self { .init(symbolName: "plus.square.on.square") }
+
+    /// 􀛺
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var plusminus: Self { .init(symbolName: "plusminus") }
+
+    /// 􀍶
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var plusminusCircle: Self { .init(symbolName: "plusminus.circle") }
+
+    /// 􀘝
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var plusminusCircleFill: Self { .init(symbolName: "plusminus.circle.fill") }
+
+    /// 􀆨
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var power: Self { .init(symbolName: "power") }
+
+    /// 􀎚
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var printer: Self { .init(symbolName: "printer") }
+
+    /// 􀎛
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var printerFill: Self { .init(symbolName: "printer.fill") }
+
+    /// 􀆎
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var projective: Self { .init(symbolName: "projective") }
+
+    /// 􀚐
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var purchased: Self { .init(symbolName: "purchased") }
+
+    /// 􀚑
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var purchasedCircle: Self { .init(symbolName: "purchased.circle") }
+
+    /// 􀚒
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var purchasedCircleFill: Self { .init(symbolName: "purchased.circle.fill") }
+
+    /// 􀀤
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var qCircle: Self { .init(symbolName: "q.circle") }
+
+    /// 􀀥
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var qCircleFill: Self { .init(symbolName: "q.circle.fill") }
+
+    /// 􀂴
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var qSquare: Self { .init(symbolName: "q.square") }
+
+    /// 􀂵
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var qSquareFill: Self { .init(symbolName: "q.square.fill") }
+
+    /// 􀖂
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var qrcode: Self { .init(symbolName: "qrcode") }
+
+    /// 􀎻
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var qrcodeViewfinder: Self { .init(symbolName: "qrcode.viewfinder") }
+
+    /// 􀅍
+    /// 2 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var questionmark: Self { .init(symbolName: "questionmark") }
+
+    /// 􀁜
+    /// 2 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var questionmarkCircle: Self { .init(symbolName: "questionmark.circle") }
+
+    /// 􀁝
+    /// 2 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var questionmarkCircleFill: Self { .init(symbolName: "questionmark.circle.fill") }
+
+    /// 􀄢
+    /// 2 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var questionmarkDiamond: Self { .init(symbolName: "questionmark.diamond") }
+
+    /// 􀄣
+    /// 2 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var questionmarkDiamondFill: Self { .init(symbolName: "questionmark.diamond.fill") }
+
+    /// 􀃬
+    /// 2 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var questionmarkSquare: Self { .init(symbolName: "questionmark.square") }
+
+    /// 􀃭
+    /// 2 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var questionmarkSquareFill: Self { .init(symbolName: "questionmark.square.fill") }
+
+    /// 􀍓
+    /// 3 Localizations, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var questionmarkVideo: Self { .init(symbolName: "questionmark.video") }
+
+    /// 􀍔
+    /// 3 Localizations, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var questionmarkVideoFill: Self { .init(symbolName: "questionmark.video.fill") }
+
+    /// 􀌮
+    /// 2 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var quoteBubble: Self { .init(symbolName: "quote.bubble") }
+
+    /// 􀌯
+    /// 2 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var quoteBubbleFill: Self { .init(symbolName: "quote.bubble.fill") }
+
+    /// 􀀦
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rCircle: Self { .init(symbolName: "r.circle") }
+
+    /// 􀀧
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rCircleFill: Self { .init(symbolName: "r.circle.fill") }
+
+    /// 􀂶
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rSquare: Self { .init(symbolName: "r.square") }
+
+    /// 􀂷
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rSquareFill: Self { .init(symbolName: "r.square.fill") }
+
+    /// 􀙱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "wave3Left")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "wave3Left")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "wave3Left")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "wave3Left")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "wave3Left")
+    static var radiowavesLeft: Self { .init(symbolName: "radiowaves.left") }
+
+    /// 􀙲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "wave3Right")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "wave3Right")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "wave3Right")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "wave3Right")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "wave3Right")
+    static var radiowavesRight: Self { .init(symbolName: "radiowaves.right") }
+
+    /// 􀇯
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var rays: Self { .init(symbolName: "rays") }
+
+    /// 􀕼
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var recordingtape: Self { .init(symbolName: "recordingtape") }
+
+    /// 􀏃
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangle: Self { .init(symbolName: "rectangle") }
+
+    /// 􀇴
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "rectangle3Group")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "rectangle3Group")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "rectangle3Group")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "rectangle3Group")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "rectangle3Group")
+    static var rectangle3Offgrid: Self { .init(symbolName: "rectangle.3.offgrid") }
+
+    /// 􀚅
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "rectangle3GroupFill")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "rectangle3GroupFill")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "rectangle3GroupFill")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "rectangle3GroupFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "rectangle3GroupFill")
+    static var rectangle3OffgridFill: Self { .init(symbolName: "rectangle.3.offgrid.fill") }
+
+    /// 􀙮
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleAndArrowUpRightAndArrowDownLeft: Self { .init(symbolName: "rectangle.and.arrow.up.right.and.arrow.down.left") }
+
+    /// 􀙯
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleAndArrowUpRightAndArrowDownLeftSlash: Self { .init(symbolName: "rectangle.and.arrow.up.right.and.arrow.down.left.slash") }
+
+    /// 􀒖
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleAndPaperclip: Self { .init(symbolName: "rectangle.and.paperclip") }
+
+    /// 􀏕
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleBadgeCheckmark: Self { .init(symbolName: "rectangle.badge.checkmark") }
+
+    /// 􀏗
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleBadgeXmark: Self { .init(symbolName: "rectangle.badge.xmark") }
+
+    /// 􀐷
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleCompressVertical: Self { .init(symbolName: "rectangle.compress.vertical") }
+
+    /// 􀏞
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "dockRectangle")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "dockRectangle")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "dockRectangle")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "dockRectangle")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "dockRectangle")
+    static var rectangleDock: Self { .init(symbolName: "rectangle.dock") }
+
+    /// 􀐸
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleExpandVertical: Self { .init(symbolName: "rectangle.expand.vertical") }
+
+    /// 􀏄
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleFill: Self { .init(symbolName: "rectangle.fill") }
+
+    /// 􀏖
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleFillBadgeCheckmark: Self { .init(symbolName: "rectangle.fill.badge.checkmark") }
+
+    /// 􀏘
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleFillBadgeXmark: Self { .init(symbolName: "rectangle.fill.badge.xmark") }
+
+    /// 􀑰
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleFillOnRectangleAngledFill: Self { .init(symbolName: "rectangle.fill.on.rectangle.angled.fill") }
+
+    /// 􀏨
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleFillOnRectangleFill: Self { .init(symbolName: "rectangle.fill.on.rectangle.fill") }
+
+    /// 􀓛
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleGrid1x2: Self { .init(symbolName: "rectangle.grid.1x2") }
+
+    /// 􀚉
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleGrid1x2Fill: Self { .init(symbolName: "rectangle.grid.1x2.fill") }
+
+    /// 􀛦
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleGrid2x2: Self { .init(symbolName: "rectangle.grid.2x2") }
+
+    /// 􀛧
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleGrid2x2Fill: Self { .init(symbolName: "rectangle.grid.2x2.fill") }
+
+    /// 􀇶
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleGrid3x2: Self { .init(symbolName: "rectangle.grid.3x2") }
+
+    /// 􀚆
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleGrid3x2Fill: Self { .init(symbolName: "rectangle.grid.3x2.fill") }
+
+    /// 􀏧
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var rectangleOnRectangle: Self { .init(symbolName: "rectangle.on.rectangle") }
+
+    /// 􀑯
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var rectangleOnRectangleAngled: Self { .init(symbolName: "rectangle.on.rectangle.angled") }
+
+    /// 􀏟
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleSplit3x1: Self { .init(symbolName: "rectangle.split.3x1") }
+
+    /// 􀕸
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleSplit3x1Fill: Self { .init(symbolName: "rectangle.split.3x1.fill") }
+
+    /// 􀏢
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleSplit3x3: Self { .init(symbolName: "rectangle.split.3x3") }
+
+    /// 􀘮
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleSplit3x3Fill: Self { .init(symbolName: "rectangle.split.3x3.fill") }
+
+    /// 􀏭
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleStack: Self { .init(symbolName: "rectangle.stack") }
+
+    /// 􀏳
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleStackBadgeMinus: Self { .init(symbolName: "rectangle.stack.badge.minus") }
+
+    /// 􀏹
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var rectangleStackBadgePersonCrop: Self { .init(symbolName: "rectangle.stack.badge.person.crop") }
+
+    /// 􀏱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleStackBadgePlus: Self { .init(symbolName: "rectangle.stack.badge.plus") }
+
+    /// 􀏮
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rectangleStackFill: Self { .init(symbolName: "rectangle.stack.fill") }
+
+    /// 􀏴
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleStackFillBadgeMinus: Self { .init(symbolName: "rectangle.stack.fill.badge.minus") }
+
+    /// 􀏺
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "rectangleStackBadgePersonCropFill")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "rectangleStackBadgePersonCropFill")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "rectangleStackBadgePersonCropFill")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "rectangleStackBadgePersonCropFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "rectangleStackBadgePersonCropFill")
+    static var rectangleStackFillBadgePersonCrop: Self { .init(symbolName: "rectangle.stack.fill.badge.person.crop") }
+
+    /// 􀏲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rectangleStackFillBadgePlus: Self { .init(symbolName: "rectangle.stack.fill.badge.plus") }
+
+    /// 􀏻
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "personCropRectangleStack")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "personCropRectangleStack")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "personCropRectangleStack")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "personCropRectangleStack")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "personCropRectangleStack")
+    static var rectangleStackPersonCrop: Self { .init(symbolName: "rectangle.stack.person.crop") }
+
+    /// 􀏼
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 17.1, macOS 14.1, tvOS 17.1, watchOS 10.1)
+    /// - Multicolor (iOS 17.1, macOS 14.1, tvOS 17.1, watchOS 10.1)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "personCropRectangleStackFill")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "personCropRectangleStackFill")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "personCropRectangleStackFill")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "personCropRectangleStackFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "personCropRectangleStackFill")
+    static var rectangleStackPersonCropFill: Self { .init(symbolName: "rectangle.stack.person.crop.fill") }
+
+    /// 􀊞
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var `repeat`: Self { .init(symbolName: "repeat") }
+
+    /// 􀊟
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Hindi (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var repeat1: Self { .init(symbolName: "repeat.1") }
+
+    /// 􀅇
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var `return`: Self { .init(symbolName: "return") }
+
+    /// 􀋀
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rhombus: Self { .init(symbolName: "rhombus") }
+
+    /// 􀋁
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rhombusFill: Self { .init(symbolName: "rhombus.fill") }
+
+    /// 􀛯
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var rosette: Self { .init(symbolName: "rosette") }
+
+    /// 􀎮
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rotateLeft: Self { .init(symbolName: "rotate.left") }
+
+    /// 􀎯
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rotateLeftFill: Self { .init(symbolName: "rotate.left.fill") }
+
+    /// 􀎰
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rotateRight: Self { .init(symbolName: "rotate.right") }
+
+    /// 􀎱
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rotateRightFill: Self { .init(symbolName: "rotate.right.fill") }
+
+    /// 􀖥
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rublesignCircle: Self { .init(symbolName: "rublesign.circle") }
+
+    /// 􀖦
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rublesignCircleFill: Self { .init(symbolName: "rublesign.circle.fill") }
+
+    /// 􀗥
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rublesignSquare: Self { .init(symbolName: "rublesign.square") }
+
+    /// 􀗦
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rublesignSquareFill: Self { .init(symbolName: "rublesign.square.fill") }
+
+    /// 􀗏
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rupeesignCircle: Self { .init(symbolName: "rupeesign.circle") }
+
+    /// 􀗐
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rupeesignCircleFill: Self { .init(symbolName: "rupeesign.circle.fill") }
+
+    /// 􀘏
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rupeesignSquare: Self { .init(symbolName: "rupeesign.square") }
+
+    /// 􀘐
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var rupeesignSquareFill: Self { .init(symbolName: "rupeesign.square.fill") }
+
+    /// 􀀨
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sCircle: Self { .init(symbolName: "s.circle") }
+
+    /// 􀀩
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sCircleFill: Self { .init(symbolName: "s.circle.fill") }
+
+    /// 􀂸
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sSquare: Self { .init(symbolName: "s.square") }
+
+    /// 􀂹
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sSquareFill: Self { .init(symbolName: "s.square.fill") }
+
+    /// 􀎬
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Safari browser.
+    static var safari: Self { .init(symbolName: "safari") }
+
+    /// 􀎭
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Safari browser.
+    static var safariFill: Self { .init(symbolName: "safari.fill") }
+
+    /// 􀉈
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var scissors: Self { .init(symbolName: "scissors") }
+
+    /// 􀐩
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var scope: Self { .init(symbolName: "scope") }
+
+    /// 􀓨
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var scribble: Self { .init(symbolName: "scribble") }
+
+    /// 􀑠
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var selectionPinInOut: Self { .init(symbolName: "selection.pin.in.out") }
+
+    /// 􀗋
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "shekelsignCircle")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "shekelsignCircle")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "shekelsignCircle")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "shekelsignCircle")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "shekelsignCircle")
+    static var sheqelsignCircle: Self { .init(symbolName: "sheqelsign.circle") }
+
+    /// 􀗌
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "shekelsignCircleFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "shekelsignCircleFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "shekelsignCircleFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "shekelsignCircleFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "shekelsignCircleFill")
+    static var sheqelsignCircleFill: Self { .init(symbolName: "sheqelsign.circle.fill") }
+
+    /// 􀘋
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "shekelsignSquare")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "shekelsignSquare")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "shekelsignSquare")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "shekelsignSquare")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "shekelsignSquare")
+    static var sheqelsignSquare: Self { .init(symbolName: "sheqelsign.square") }
+
+    /// 􀘌
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "shekelsignSquareFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "shekelsignSquareFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "shekelsignSquareFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "shekelsignSquareFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "shekelsignSquareFill")
+    static var sheqelsignSquareFill: Self { .init(symbolName: "sheqelsign.square.fill") }
+
+    /// 􀙦
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var shield: Self { .init(symbolName: "shield") }
+
+    /// 􀙧
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var shieldFill: Self { .init(symbolName: "shield.fill") }
+
+    /// 􀙨
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "shieldLefthalfFilled")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "shieldLefthalfFilled")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "shieldLefthalfFilled")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "shieldLefthalfFilled")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "shieldLefthalfFilled")
+    static var shieldLefthalfFill: Self { .init(symbolName: "shield.lefthalf.fill") }
+
+    /// 􀞡
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var shieldSlash: Self { .init(symbolName: "shield.slash") }
+
+    /// 􀞢
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var shieldSlashFill: Self { .init(symbolName: "shield.slash.fill") }
+
+    /// 􀆝
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var shift: Self { .init(symbolName: "shift") }
+
+    /// 􀆞
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var shiftFill: Self { .init(symbolName: "shift.fill") }
+
+    /// 􀊝
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var shuffle: Self { .init(symbolName: "shuffle") }
+
+    /// 􀏚
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var sidebarLeft: Self { .init(symbolName: "sidebar.left") }
+
+    /// 􀏛
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var sidebarRight: Self { .init(symbolName: "sidebar.right") }
+
+    /// 􀙤
+    /// 6 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hebrew (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Chinese (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Japanese (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Thai (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var signature: Self { .init(symbolName: "signature") }
+
+    /// 􀍵
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var skew: Self { .init(symbolName: "skew") }
+
+    /// 􀕧
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var slashCircle: Self { .init(symbolName: "slash.circle") }
+
+    /// 􀕨
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var slashCircleFill: Self { .init(symbolName: "slash.circle.fill") }
+
+    /// 􀌆
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var sliderHorizontal3: Self { .init(symbolName: "slider.horizontal.3") }
+
+    /// 􀐗
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sliderHorizontalBelowRectangle: Self { .init(symbolName: "slider.horizontal.below.rectangle") }
+
+    /// 􀇱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var slowmo: Self { .init(symbolName: "slowmo") }
+
+    /// 􀕪
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var smallcircleCircle: Self { .init(symbolName: "smallcircle.circle") }
+
+    /// 􀕫
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var smallcircleCircleFill: Self { .init(symbolName: "smallcircle.circle.fill") }
+
+    /// 􀍷
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "smallcircleFilledCircle")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "smallcircleFilledCircle")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "smallcircleFilledCircle")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "smallcircleFilledCircle")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "smallcircleFilledCircle")
+    static var smallcircleFillCircle: Self { .init(symbolName: "smallcircle.fill.circle") }
+
+    /// 􀕩
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "smallcircleFilledCircleFill")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "smallcircleFilledCircleFill")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "smallcircleFilledCircleFill")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "smallcircleFilledCircleFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "smallcircleFilledCircleFill")
+    static var smallcircleFillCircleFill: Self { .init(symbolName: "smallcircle.fill.circle.fill") }
+
+    /// 􀎸
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "faceSmiling")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "faceSmiling")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "faceSmiling")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "faceSmiling")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "faceSmiling")
+    static var smiley: Self { .init(symbolName: "smiley") }
+
+    /// 􀙌
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "faceSmilingFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "faceSmilingFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "faceSmilingFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "faceSmilingFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "faceSmilingFill")
+    static var smileyFill: Self { .init(symbolName: "smiley.fill") }
+
+    /// 􀇢
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var smoke: Self { .init(symbolName: "smoke") }
+
+    /// 􀇣
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var smokeFill: Self { .init(symbolName: "smoke.fill") }
+
+    /// 􀇥
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "snowflake")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "snowflake")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "snowflake")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "snowflake")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "snowflake")
+    static var snow: Self { .init(symbolName: "snow") }
+
+    /// 􀆿
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var sparkles: Self { .init(symbolName: "sparkles") }
+
+    /// 􀊠
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var speaker: Self { .init(symbolName: "speaker") }
+
+    /// 􀊤
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "speakerWave1")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "speakerWave1")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "speakerWave1")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "speakerWave1")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "speakerWave1")
+    static var speaker1: Self { .init(symbolName: "speaker.1") }
+
+    /// 􀊥
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "speakerWave1Fill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "speakerWave1Fill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "speakerWave1Fill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "speakerWave1Fill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "speakerWave1Fill")
+    static var speaker1Fill: Self { .init(symbolName: "speaker.1.fill") }
+
+    /// 􀊦
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "speakerWave2")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "speakerWave2")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "speakerWave2")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "speakerWave2")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "speakerWave2")
+    static var speaker2: Self { .init(symbolName: "speaker.2") }
+
+    /// 􀊧
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "speakerWave2Fill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "speakerWave2Fill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "speakerWave2Fill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "speakerWave2Fill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "speakerWave2Fill")
+    static var speaker2Fill: Self { .init(symbolName: "speaker.2.fill") }
+
+    /// 􀊨
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "speakerWave3")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "speakerWave3")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "speakerWave3")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "speakerWave3")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "speakerWave3")
+    static var speaker3: Self { .init(symbolName: "speaker.3") }
+
+    /// 􀊩
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "speakerWave3Fill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "speakerWave3Fill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "speakerWave3Fill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "speakerWave3Fill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "speakerWave3Fill")
+    static var speaker3Fill: Self { .init(symbolName: "speaker.3.fill") }
+
+    /// 􀊡
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var speakerFill: Self { .init(symbolName: "speaker.fill") }
+
+    /// 􀊢
+    /// 2 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var speakerSlash: Self { .init(symbolName: "speaker.slash") }
+
+    /// 􀊣
+    /// 2 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var speakerSlashFill: Self { .init(symbolName: "speaker.slash.fill") }
+
+    /// 􀌊
+    /// 2 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var speakerZzz: Self { .init(symbolName: "speaker.zzz") }
+
+    /// 􀑞
+    /// 2 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var speakerZzzFill: Self { .init(symbolName: "speaker.zzz.fill") }
+
+    /// 􀍾
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 17.0, renamed: "gaugeWithDotsNeedle67percent")
+    @available(macOS, introduced: 11.0, deprecated: 14.0, renamed: "gaugeWithDotsNeedle67percent")
+    @available(tvOS, introduced: 13.0, deprecated: 17.0, renamed: "gaugeWithDotsNeedle67percent")
+    @available(watchOS, introduced: 6.0, deprecated: 10.0, renamed: "gaugeWithDotsNeedle67percent")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "gaugeWithDotsNeedle67percent")
+    static var speedometer: Self { .init(symbolName: "speedometer") }
+
+    /// 􀝐
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var sportscourt: Self { .init(symbolName: "sportscourt") }
+
+    /// 􀝑
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var sportscourtFill: Self { .init(symbolName: "sportscourt.fill") }
+
+    /// 􀂒
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var square: Self { .init(symbolName: "square") }
+
+    /// 􀈄
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var squareAndArrowDown: Self { .init(symbolName: "square.and.arrow.down") }
+
+    /// 􀈅
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    static var squareAndArrowDownFill: Self { .init(symbolName: "square.and.arrow.down.fill") }
+
+    /// 􀈈
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var squareAndArrowDownOnSquare: Self { .init(symbolName: "square.and.arrow.down.on.square") }
+
+    /// 􀈉
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    static var squareAndArrowDownOnSquareFill: Self { .init(symbolName: "square.and.arrow.down.on.square.fill") }
+
+    /// 􀈂
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var squareAndArrowUp: Self { .init(symbolName: "square.and.arrow.up") }
+
+    /// 􀈃
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    static var squareAndArrowUpFill: Self { .init(symbolName: "square.and.arrow.up.fill") }
+
+    /// 􀈆
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var squareAndArrowUpOnSquare: Self { .init(symbolName: "square.and.arrow.up.on.square") }
+
+    /// 􀈇
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    static var squareAndArrowUpOnSquareFill: Self { .init(symbolName: "square.and.arrow.up.on.square.fill") }
+
+    /// 􀐑
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareAndLineVerticalAndSquare: Self { .init(symbolName: "square.and.line.vertical.and.square") }
+
+    /// 􀐔
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "squareAndLineVerticalAndSquareFilled")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "squareAndLineVerticalAndSquareFilled")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "squareAndLineVerticalAndSquareFilled")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "squareAndLineVerticalAndSquareFilled")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "squareAndLineVerticalAndSquareFilled")
+    static var squareAndLineVerticalAndSquareFill: Self { .init(symbolName: "square.and.line.vertical.and.square.fill") }
+
+    /// 􀈎
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var squareAndPencil: Self { .init(symbolName: "square.and.pencil") }
+
+    /// 􀂓
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareFill: Self { .init(symbolName: "square.fill") }
+
+    /// 􀐓
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "squareFilledAndLineVerticalAndSquare")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "squareFilledAndLineVerticalAndSquare")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "squareFilledAndLineVerticalAndSquare")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "squareFilledAndLineVerticalAndSquare")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "squareFilledAndLineVerticalAndSquare")
+    static var squareFillAndLineVerticalAndSquare: Self { .init(symbolName: "square.fill.and.line.vertical.and.square") }
+
+    /// 􀐒
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "squareFillAndLineVerticalAndSquareFill")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "squareFillAndLineVerticalAndSquareFill")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "squareFillAndLineVerticalAndSquareFill")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "squareFillAndLineVerticalAndSquareFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "squareFillAndLineVerticalAndSquareFill")
+    static var squareFillAndLineVerticalSquareFill: Self { .init(symbolName: "square.fill.and.line.vertical.square.fill") }
+
+    /// 􀐊
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var squareFillOnCircleFill: Self { .init(symbolName: "square.fill.on.circle.fill") }
+
+    /// 􀐆
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var squareFillOnSquareFill: Self { .init(symbolName: "square.fill.on.square.fill") }
+
+    /// 􀇷
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareGrid2x2: Self { .init(symbolName: "square.grid.2x2") }
+
+    /// 􀚈
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareGrid2x2Fill: Self { .init(symbolName: "square.grid.2x2.fill") }
+
+    /// 􀇵
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareGrid3x2: Self { .init(symbolName: "square.grid.3x2") }
+
+    /// 􀚇
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareGrid3x2Fill: Self { .init(symbolName: "square.grid.3x2.fill") }
+
+    /// 􀓚
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareGrid4x3Fill: Self { .init(symbolName: "square.grid.4x3.fill") }
+
+    /// 􀚓
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "squareLefthalfFilled")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "squareLefthalfFilled")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "squareLefthalfFilled")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "squareLefthalfFilled")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "squareLefthalfFilled")
+    static var squareLefthalfFill: Self { .init(symbolName: "square.lefthalf.fill") }
+
+    /// 􀐉
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var squareOnCircle: Self { .init(symbolName: "square.on.circle") }
+
+    /// 􀐅
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var squareOnSquare: Self { .init(symbolName: "square.on.square") }
+
+    /// 􀚔
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "squareRighthalfFilled")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "squareRighthalfFilled")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "squareRighthalfFilled")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "squareRighthalfFilled")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "squareRighthalfFilled")
+    static var squareRighthalfFill: Self { .init(symbolName: "square.righthalf.fill") }
+
+    /// 􀕰
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareSplit1x2: Self { .init(symbolName: "square.split.1x2") }
+
+    /// 􀕱
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareSplit1x2Fill: Self { .init(symbolName: "square.split.1x2.fill") }
+
+    /// 􀏠
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareSplit2x1: Self { .init(symbolName: "square.split.2x1") }
+
+    /// 􀘜
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareSplit2x1Fill: Self { .init(symbolName: "square.split.2x1.fill") }
+
+    /// 􀕮
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareSplit2x2: Self { .init(symbolName: "square.split.2x2") }
+
+    /// 􀕯
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareSplit2x2Fill: Self { .init(symbolName: "square.split.2x2.fill") }
+
+    /// 􀐋
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareStack: Self { .init(symbolName: "square.stack") }
+
+    /// 􀐠
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "squareStack3dForwardDottedline")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "squareStack3dForwardDottedline")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "squareStack3dForwardDottedline")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "squareStack3dForwardDottedline")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "squareStack3dForwardDottedline")
+    static var squareStack3dDownDottedline: Self { .init(symbolName: "square.stack.3d.down.dottedline") }
+
+    /// 􀐜
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var squareStack3dDownRight: Self { .init(symbolName: "square.stack.3d.down.right") }
+
+    /// 􀐝
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var squareStack3dDownRightFill: Self { .init(symbolName: "square.stack.3d.down.right.fill") }
+
+    /// 􀐞
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var squareStack3dUp: Self { .init(symbolName: "square.stack.3d.up") }
+
+    /// 􀐟
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var squareStack3dUpFill: Self { .init(symbolName: "square.stack.3d.up.fill") }
+
+    /// 􀙒
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var squareStack3dUpSlash: Self { .init(symbolName: "square.stack.3d.up.slash") }
+
+    /// 􀙓
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var squareStack3dUpSlashFill: Self { .init(symbolName: "square.stack.3d.up.slash.fill") }
+
+    /// 􀐌
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var squareStackFill: Self { .init(symbolName: "square.stack.fill") }
+
+    /// 􀏡
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var squaresBelowRectangle: Self { .init(symbolName: "squares.below.rectangle") }
+
+    /// 􀋂
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var star: Self { .init(symbolName: "star") }
+
+    /// 􀋅
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var starCircle: Self { .init(symbolName: "star.circle") }
+
+    /// 􀋆
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var starCircleFill: Self { .init(symbolName: "star.circle.fill") }
+
+    /// 􀋃
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var starFill: Self { .init(symbolName: "star.fill") }
+
+    /// 􀋄
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "starLeadinghalfFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "starLeadinghalfFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "starLeadinghalfFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "starLeadinghalfFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "starLeadinghalfFill")
+    static var starLefthalfFill: Self { .init(symbolName: "star.lefthalf.fill") }
+
+    /// 􀋇
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var starSlash: Self { .init(symbolName: "star.slash") }
+
+    /// 􀋈
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var starSlashFill: Self { .init(symbolName: "star.slash.fill") }
+
+    /// 􀑆
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var staroflife: Self { .init(symbolName: "staroflife") }
+
+    /// 􀑇
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var staroflifeFill: Self { .init(symbolName: "staroflife.fill") }
+
+    /// 􀖝
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sterlingsignCircle: Self { .init(symbolName: "sterlingsign.circle") }
+
+    /// 􀖞
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sterlingsignCircleFill: Self { .init(symbolName: "sterlingsign.circle.fill") }
+
+    /// 􀗝
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sterlingsignSquare: Self { .init(symbolName: "sterlingsign.square") }
+
+    /// 􀗞
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sterlingsignSquareFill: Self { .init(symbolName: "sterlingsign.square.fill") }
+
+    /// 􀛶
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var stop: Self { .init(symbolName: "stop") }
+
+    /// 􀜪
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var stopCircle: Self { .init(symbolName: "stop.circle") }
+
+    /// 􀜫
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var stopCircleFill: Self { .init(symbolName: "stop.circle.fill") }
+
+    /// 􀛷
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var stopFill: Self { .init(symbolName: "stop.fill") }
+
+    /// 􀐯
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var stopwatch: Self { .init(symbolName: "stopwatch") }
+
+    /// 􀐰
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Multicolor (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    static var stopwatchFill: Self { .init(symbolName: "stopwatch.fill") }
+
+    /// 􀅖
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var strikethrough: Self { .init(symbolName: "strikethrough") }
+
+    /// 􀒃
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var suitClub: Self { .init(symbolName: "suit.club") }
+
+    /// 􀊽
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var suitClubFill: Self { .init(symbolName: "suit.club.fill") }
+
+    /// 􀒄
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var suitDiamond: Self { .init(symbolName: "suit.diamond") }
+
+    /// 􀊿
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var suitDiamondFill: Self { .init(symbolName: "suit.diamond.fill") }
+
+    /// 􀒂
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var suitHeart: Self { .init(symbolName: "suit.heart") }
+
+    /// 􀊼
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var suitHeartFill: Self { .init(symbolName: "suit.heart.fill") }
+
+    /// 􀒅
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var suitSpade: Self { .init(symbolName: "suit.spade") }
+
+    /// 􀊾
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var suitSpadeFill: Self { .init(symbolName: "suit.spade.fill") }
+
+    /// 􀘽
+    /// 2 Localizations, Single Layerset
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var sum: Self { .init(symbolName: "sum") }
+
+    /// 􀆵
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var sunDust: Self { .init(symbolName: "sun.dust") }
+
+    /// 􀆶
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sunDustFill: Self { .init(symbolName: "sun.dust.fill") }
+
+    /// 􀆷
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var sunHaze: Self { .init(symbolName: "sun.haze") }
+
+    /// 􀆸
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sunHazeFill: Self { .init(symbolName: "sun.haze.fill") }
+
+    /// 􀆭
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var sunMax: Self { .init(symbolName: "sun.max") }
+
+    /// 􀆮
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var sunMaxFill: Self { .init(symbolName: "sun.max.fill") }
+
+    /// 􀆫
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var sunMin: Self { .init(symbolName: "sun.min") }
+
+    /// 􀆬
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var sunMinFill: Self { .init(symbolName: "sun.min.fill") }
+
+    /// 􀆱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var sunrise: Self { .init(symbolName: "sunrise") }
+
+    /// 􀆲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sunriseFill: Self { .init(symbolName: "sunrise.fill") }
+
+    /// 􀆳
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var sunset: Self { .init(symbolName: "sunset") }
+
+    /// 􀆴
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var sunsetFill: Self { .init(symbolName: "sunset.fill") }
+
+    /// 􀌰
+    /// 3 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hebrew (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.5, renamed: "characterBubble")
+    @available(macOS, introduced: 11.0, deprecated: 11.3, renamed: "characterBubble")
+    @available(tvOS, introduced: 13.0, deprecated: 14.5, renamed: "characterBubble")
+    @available(watchOS, introduced: 6.0, deprecated: 7.4, renamed: "characterBubble")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "characterBubble")
+    static var tBubble: Self { .init(symbolName: "t.bubble") }
+
+    /// 􀌱
+    /// 3 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hebrew (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.5, renamed: "characterBubbleFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.3, renamed: "characterBubbleFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.5, renamed: "characterBubbleFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.4, renamed: "characterBubbleFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "characterBubbleFill")
+    static var tBubbleFill: Self { .init(symbolName: "t.bubble.fill") }
+
+    /// 􀀪
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tCircle: Self { .init(symbolName: "t.circle") }
+
+    /// 􀀫
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tCircleFill: Self { .init(symbolName: "t.circle.fill") }
+
+    /// 􀂺
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tSquare: Self { .init(symbolName: "t.square") }
+
+    /// 􀂻
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tSquareFill: Self { .init(symbolName: "t.square.fill") }
+
+    /// 􀏣
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "tablecells")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "tablecells")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "tablecells")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "tablecells")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "tablecells")
+    static var table: Self { .init(symbolName: "table") }
+
+    /// 􀏥
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "tablecellsBadgeEllipsis")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "tablecellsBadgeEllipsis")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "tablecellsBadgeEllipsis")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "tablecellsBadgeEllipsis")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "tablecellsBadgeEllipsis")
+    static var tableBadgeMore: Self { .init(symbolName: "table.badge.more") }
+
+    /// 􀏦
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "tablecellsBadgeEllipsisFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "tablecellsBadgeEllipsisFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "tablecellsBadgeEllipsisFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "tablecellsBadgeEllipsisFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "tablecellsBadgeEllipsisFill")
+    static var tableBadgeMoreFill: Self { .init(symbolName: "table.badge.more.fill") }
+
+    /// 􀏤
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "tablecellsFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "tablecellsFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "tablecellsFill")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "tablecellsFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "tablecellsFill")
+    static var tableFill: Self { .init(symbolName: "table.fill") }
+
+    /// 􀋡
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var tag: Self { .init(symbolName: "tag") }
+
+    /// 􀋣
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tagCircle: Self { .init(symbolName: "tag.circle") }
+
+    /// 􀋤
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tagCircleFill: Self { .init(symbolName: "tag.circle.fill") }
+
+    /// 􀋢
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var tagFill: Self { .init(symbolName: "tag.fill") }
+
+    /// 􀍈
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Teletype feature.
+    static var teletype: Self { .init(symbolName: "teletype") }
+
+    /// 􀙰
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s Teletype feature.
+    static var teletypeAnswer: Self { .init(symbolName: "teletype.answer") }
+
+    /// 􀖭
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tengesignCircle: Self { .init(symbolName: "tengesign.circle") }
+
+    /// 􀖮
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tengesignCircleFill: Self { .init(symbolName: "tengesign.circle.fill") }
+
+    /// 􀗭
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tengesignSquare: Self { .init(symbolName: "tengesign.square") }
+
+    /// 􀗮
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tengesignSquareFill: Self { .init(symbolName: "tengesign.square.fill") }
+
+    /// 􀌁
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var textAligncenter: Self { .init(symbolName: "text.aligncenter") }
+
+    /// 􀌀
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var textAlignleft: Self { .init(symbolName: "text.alignleft") }
+
+    /// 􀌂
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var textAlignright: Self { .init(symbolName: "text.alignright") }
+
+    /// 􀋾
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var textAppend: Self { .init(symbolName: "text.append") }
+
+    /// 􀋺
+    /// 2 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var textBadgeCheckmark: Self { .init(symbolName: "text.badge.checkmark") }
+
+    /// 􀋹
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var textBadgeMinus: Self { .init(symbolName: "text.badge.minus") }
+
+    /// 􀋸
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var textBadgePlus: Self { .init(symbolName: "text.badge.plus") }
+
+    /// 􀋼
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var textBadgeStar: Self { .init(symbolName: "text.badge.star") }
+
+    /// 􀋻
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var textBadgeXmark: Self { .init(symbolName: "text.badge.xmark") }
+
+    /// 􀌲
+    /// 2 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var textBubble: Self { .init(symbolName: "text.bubble") }
+
+    /// 􀌳
+    /// 2 Localizations, 3 Layersets
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var textBubbleFill: Self { .init(symbolName: "text.bubble.fill") }
+
+    /// 􀅫
+    /// 8 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Chinese (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hebrew (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hindi (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Japanese (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Korean (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Thai (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.5, renamed: "characterCursorIbeam")
+    @available(macOS, introduced: 11.0, deprecated: 11.3, renamed: "characterCursorIbeam")
+    @available(tvOS, introduced: 13.0, deprecated: 14.5, renamed: "characterCursorIbeam")
+    @available(watchOS, introduced: 6.0, deprecated: 7.4, renamed: "characterCursorIbeam")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "characterCursorIbeam")
+    static var textCursor: Self { .init(symbolName: "text.cursor") }
+
+    /// 􀋽
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var textInsert: Self { .init(symbolName: "text.insert") }
+
+    /// 􀌃
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var textJustify: Self { .init(symbolName: "text.justify") }
+
+    /// 􀌄
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.1, renamed: "textJustifyLeft")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "textJustifyLeft")
+    @available(tvOS, introduced: 13.0, deprecated: 15.1, renamed: "textJustifyLeft")
+    @available(watchOS, introduced: 6.0, deprecated: 8.1, renamed: "textJustifyLeft")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "textJustifyLeft")
+    static var textJustifyleft: Self { .init(symbolName: "text.justifyleft") }
+
+    /// 􀌅
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.1, renamed: "textJustifyRight")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "textJustifyRight")
+    @available(tvOS, introduced: 13.0, deprecated: 15.1, renamed: "textJustifyRight")
+    @available(watchOS, introduced: 6.0, deprecated: 8.1, renamed: "textJustifyRight")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "textJustifyRight")
+    static var textJustifyright: Self { .init(symbolName: "text.justifyright") }
+
+    /// 􀋿
+    /// 2 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Left-to-Right
+    /// - Right-to-Left (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var textQuote: Self { .init(symbolName: "text.quote") }
+
+    /// 􀅶
+    /// 8 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Chinese (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hebrew (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hindi (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Japanese (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Korean (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Thai (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 14.5, renamed: "characterTextbox")
+    @available(macOS, introduced: 11.0, deprecated: 11.3, renamed: "characterTextbox")
+    @available(tvOS, introduced: 13.0, deprecated: 14.5, renamed: "characterTextbox")
+    @available(watchOS, introduced: 6.0, deprecated: 7.4, renamed: "characterTextbox")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "characterTextbox")
+    static var textbox: Self { .init(symbolName: "textbox") }
+
+    /// 􀅒
+    /// 21 Localizations, Single Layerset
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Chinese (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Greek (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Hebrew (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Hindi (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Japanese (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Korean (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Thai (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Bengali (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Gujarati (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Kannada (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Malayalam (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Manipuri (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Maranthi (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Oriya (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Punjabi (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Santali (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Sinhala (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Tamil (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Telugu (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var textformat: Self { .init(symbolName: "textformat") }
+
+    /// 􀅱
+    /// 3 Localizations, Single Layerset
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hindi (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "numbers")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "numbers")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "numbers")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "numbers")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "numbers")
+    static var textformat123: Self { .init(symbolName: "textformat.123") }
+
+    /// 􀅯
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "textformatCharacters")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "textformatCharacters")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "textformatCharacters")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "textformatCharacters")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "textformatCharacters")
+    static var textformatAbc: Self { .init(symbolName: "textformat.abc") }
+
+    /// 􀅰
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "textformatCharactersDottedunderline")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "textformatCharactersDottedunderline")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "textformatCharactersDottedunderline")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "textformatCharactersDottedunderline")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "textformatCharactersDottedunderline")
+    static var textformatAbcDottedunderline: Self { .init(symbolName: "textformat.abc.dottedunderline") }
+
+    /// 􀅑
+    /// 21 Localizations, Single Layerset
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Chinese (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Greek (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Hebrew (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Hindi (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Japanese (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Korean (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Thai (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Bengali (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Gujarati (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Kannada (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Malayalam (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Manipuri (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Maranthi (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Oriya (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Punjabi (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Santali (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Sinhala (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Tamil (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Telugu (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var textformatAlt: Self { .init(symbolName: "textformat.alt") }
+
+    /// 􀅐
+    /// 19 Localizations, Single Layerset
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Chinese (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Hebrew (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Hindi (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Japanese (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Korean (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Thai (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Bengali (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Gujarati (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Kannada (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Malayalam (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Manipuri (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Maranthi (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Oriya (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Punjabi (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Santali (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Tamil (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    /// - Telugu (iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var textformatSize: Self { .init(symbolName: "textformat.size") }
+
+    /// 􀓡
+    /// 20 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Chinese (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Hebrew (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Hindi (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Japanese (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Korean (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Thai (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Bengali (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Gujarati (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Kannada (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Malayalam (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Manipuri (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Maranthi (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Oriya (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Punjabi (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Santali (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Sinhala (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Tamil (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Telugu (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var textformatSubscript: Self { .init(symbolName: "textformat.subscript") }
+
+    /// 􀓢
+    /// 20 Localizations, 2 Layersets
+    ///
+    /// Localizations:
+    /// - Latin
+    /// - Arabic (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Chinese (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Hebrew (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Hindi (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Japanese (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Korean (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Thai (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Bengali (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Gujarati (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Kannada (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Malayalam (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Manipuri (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Maranthi (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Oriya (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Punjabi (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Santali (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Sinhala (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Tamil (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    /// - Telugu (iOS 18.4, macOS 15.4, tvOS 18.4, watchOS 11.4)
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var textformatSuperscript: Self { .init(symbolName: "textformat.superscript") }
+
+    /// 􀇬
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 16.0, renamed: "thermometerMedium")
+    @available(macOS, introduced: 11.0, deprecated: 13.0, renamed: "thermometerMedium")
+    @available(tvOS, introduced: 13.0, deprecated: 16.0, renamed: "thermometerMedium")
+    @available(watchOS, introduced: 6.0, deprecated: 9.0, renamed: "thermometerMedium")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "thermometerMedium")
+    static var thermometer: Self { .init(symbolName: "thermometer") }
+
+    /// 􀇫
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var thermometerSnowflake: Self { .init(symbolName: "thermometer.snowflake") }
+
+    /// 􀇪
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var thermometerSun: Self { .init(symbolName: "thermometer.sun") }
+
+    /// 􀇲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var timelapse: Self { .init(symbolName: "timelapse") }
+
+    /// 􀐱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var timer: Self { .init(symbolName: "timer") }
+
+    /// 􀇧
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var tornado: Self { .init(symbolName: "tornado") }
+
+    /// 􀓐
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var tortoise: Self { .init(symbolName: "tortoise") }
+
+    /// 􀓑
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tortoiseFill: Self { .init(symbolName: "tortoise.fill") }
+
+    /// 􀝇
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var tramFill: Self { .init(symbolName: "tram.fill") }
+
+    /// 􀈑
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var trash: Self { .init(symbolName: "trash") }
+
+    /// 􀈓
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var trashCircle: Self { .init(symbolName: "trash.circle") }
+
+    /// 􀈔
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var trashCircleFill: Self { .init(symbolName: "trash.circle.fill") }
+
+    /// 􀈒
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var trashFill: Self { .init(symbolName: "trash.fill") }
+
+    /// 􀜧
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var trashSlash: Self { .init(symbolName: "trash.slash") }
+
+    /// 􀜨
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var trashSlashFill: Self { .init(symbolName: "trash.slash.fill") }
+
+    /// 􀈣
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var tray: Self { .init(symbolName: "tray") }
+
+    /// 􀈩
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var tray2: Self { .init(symbolName: "tray.2") }
+
+    /// 􀈪
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var tray2Fill: Self { .init(symbolName: "tray.2.fill") }
+
+    /// 􀈧
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var trayAndArrowDown: Self { .init(symbolName: "tray.and.arrow.down") }
+
+    /// 􀈨
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var trayAndArrowDownFill: Self { .init(symbolName: "tray.and.arrow.down.fill") }
+
+    /// 􀈥
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var trayAndArrowUp: Self { .init(symbolName: "tray.and.arrow.up") }
+
+    /// 􀈦
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var trayAndArrowUpFill: Self { .init(symbolName: "tray.and.arrow.up.fill") }
+
+    /// 􀈤
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var trayFill: Self { .init(symbolName: "tray.fill") }
+
+    /// 􀈫
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var trayFull: Self { .init(symbolName: "tray.full") }
+
+    /// 􀈬
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var trayFullFill: Self { .init(symbolName: "tray.full.fill") }
+
+    /// 􀛣
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var triangle: Self { .init(symbolName: "triangle") }
+
+    /// 􀛤
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var triangleFill: Self { .init(symbolName: "triangle.fill") }
+
+    /// 􀚕
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "triangleLefthalfFilled")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "triangleLefthalfFilled")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "triangleLefthalfFilled")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "triangleLefthalfFilled")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "triangleLefthalfFilled")
+    static var triangleLefthalfFill: Self { .init(symbolName: "triangle.lefthalf.fill") }
+
+    /// 􀚖
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "triangleRighthalfFilled")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "triangleRighthalfFilled")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "triangleRighthalfFilled")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "triangleRighthalfFilled")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "triangleRighthalfFilled")
+    static var triangleRighthalfFill: Self { .init(symbolName: "triangle.righthalf.fill") }
+
+    /// 􀇨
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var tropicalstorm: Self { .init(symbolName: "tropicalstorm") }
+
+    /// 􀗇
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tugriksignCircle: Self { .init(symbolName: "tugriksign.circle") }
+
+    /// 􀗈
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tugriksignCircleFill: Self { .init(symbolName: "tugriksign.circle.fill") }
+
+    /// 􀘇
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tugriksignSquare: Self { .init(symbolName: "tugriksign.square") }
+
+    /// 􀘈
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tugriksignSquareFill: Self { .init(symbolName: "tugriksign.square.fill") }
+
+    /// 􀎐
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var tuningfork: Self { .init(symbolName: "tuningfork") }
+
+    /// 􀖣
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var turkishlirasignCircle: Self { .init(symbolName: "turkishlirasign.circle") }
+
+    /// 􀖤
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var turkishlirasignCircleFill: Self { .init(symbolName: "turkishlirasign.circle.fill") }
+
+    /// 􀗣
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var turkishlirasignSquare: Self { .init(symbolName: "turkishlirasign.square") }
+
+    /// 􀗤
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var turkishlirasignSquareFill: Self { .init(symbolName: "turkishlirasign.square.fill") }
+
+    /// 􀎲
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tv: Self { .init(symbolName: "tv") }
+
+    /// 􀎳
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tvCircle: Self { .init(symbolName: "tv.circle") }
+
+    /// 􀎴
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var tvCircleFill: Self { .init(symbolName: "tv.circle.fill") }
+
+    /// 􀒶
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var tvFill: Self { .init(symbolName: "tv.fill") }
+
+    /// 􀎵
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "musicNoteTv")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "musicNoteTv")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "musicNoteTv")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "musicNoteTv")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "musicNoteTv")
+    static var tvMusicNote: Self { .init(symbolName: "tv.music.note") }
+
+    /// 􀒷
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    @available(iOS, introduced: 13.0, deprecated: 15.0, renamed: "musicNoteTvFill")
+    @available(macOS, introduced: 11.0, deprecated: 12.0, renamed: "musicNoteTvFill")
+    @available(tvOS, introduced: 13.0, deprecated: 15.0, renamed: "musicNoteTvFill")
+    @available(watchOS, introduced: 6.0, deprecated: 8.0, renamed: "musicNoteTvFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "musicNoteTvFill")
+    static var tvMusicNoteFill: Self { .init(symbolName: "tv.music.note.fill") }
+
+    /// 􀀬
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var uCircle: Self { .init(symbolName: "u.circle") }
+
+    /// 􀀭
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var uCircleFill: Self { .init(symbolName: "u.circle.fill") }
+
+    /// 􀂼
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var uSquare: Self { .init(symbolName: "u.square") }
+
+    /// 􀂽
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var uSquareFill: Self { .init(symbolName: "u.square.fill") }
+
+    /// 􀏝
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var uiwindowSplit2x1: Self { .init(symbolName: "uiwindow.split.2x1") }
+
+    /// 􀙕
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var umbrella: Self { .init(symbolName: "umbrella") }
+
+    /// 􀙖
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var umbrellaFill: Self { .init(symbolName: "umbrella.fill") }
+
+    /// 􀅕
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var underline: Self { .init(symbolName: "underline") }
+
+    /// 􀀮
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var vCircle: Self { .init(symbolName: "v.circle") }
+
+    /// 􀀯
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var vCircleFill: Self { .init(symbolName: "v.circle.fill") }
+
+    /// 􀂾
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var vSquare: Self { .init(symbolName: "v.square") }
+
+    /// 􀂿
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var vSquareFill: Self { .init(symbolName: "v.square.fill") }
+
+    /// 􀍉
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var video: Self { .init(symbolName: "video") }
+
+    /// 􀜮
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var videoBadgePlus: Self { .init(symbolName: "video.badge.plus") }
+
+    /// 􀜯
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    @available(iOS, introduced: 13.0, deprecated: 14.0, renamed: "videoFillBadgePlus")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "videoFillBadgePlus")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "videoFillBadgePlus")
+    @available(watchOS, introduced: 6.0, deprecated: 7.0, renamed: "videoFillBadgePlus")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "videoFillBadgePlus")
+    static var videoBadgePlusFill: Self { .init(symbolName: "video.badge.plus.fill") }
+
+    /// 􀍋
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var videoCircle: Self { .init(symbolName: "video.circle") }
+
+    /// 􀍌
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var videoCircleFill: Self { .init(symbolName: "video.circle.fill") }
+
+    /// 􀍊
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var videoFill: Self { .init(symbolName: "video.fill") }
+
+    /// 􀍍
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var videoSlash: Self { .init(symbolName: "video.slash") }
+
+    /// 􀍎
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s FaceTime app.
+    static var videoSlashFill: Self { .init(symbolName: "video.slash.fill") }
+
+    /// 􀅙
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var view2d: Self { .init(symbolName: "view.2d") }
+
+    /// 􀅪
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var view3d: Self { .init(symbolName: "view.3d") }
+
+    /// 􀎹
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var viewfinder: Self { .init(symbolName: "viewfinder") }
+
+    /// 􀎿
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var viewfinderCircle: Self { .init(symbolName: "viewfinder.circle") }
+
+    /// 􀏀
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var viewfinderCircleFill: Self { .init(symbolName: "viewfinder.circle.fill") }
+
+    /// 􀀰
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var wCircle: Self { .init(symbolName: "w.circle") }
+
+    /// 􀀱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var wCircleFill: Self { .init(symbolName: "w.circle.fill") }
+
+    /// 􀃀
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var wSquare: Self { .init(symbolName: "w.square") }
+
+    /// 􀃁
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var wSquareFill: Self { .init(symbolName: "w.square.fill") }
+
+    /// 􀍱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var wandAndRays: Self { .init(symbolName: "wand.and.rays") }
+
+    /// 􀍲
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var wandAndRaysInverse: Self { .init(symbolName: "wand.and.rays.inverse") }
+
+    /// 􀜍
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "wandAndSparkles")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "wandAndSparkles")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "wandAndSparkles")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "wandAndSparkles")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "wandAndSparkles")
+    static var wandAndStars: Self { .init(symbolName: "wand.and.stars") }
+
+    /// 􀜎
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    @available(iOS, introduced: 13.0, deprecated: 18.0, renamed: "wandAndSparklesInverse")
+    @available(macOS, introduced: 11.0, deprecated: 15.0, renamed: "wandAndSparklesInverse")
+    @available(tvOS, introduced: 13.0, deprecated: 18.0, renamed: "wandAndSparklesInverse")
+    @available(watchOS, introduced: 6.0, deprecated: 11.0, renamed: "wandAndSparklesInverse")
+    @available(visionOS, introduced: 1.0, deprecated: 2.0, renamed: "wandAndSparklesInverse")
+    static var wandAndStarsInverse: Self { .init(symbolName: "wand.and.stars.inverse") }
+
+    /// 􀙫
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var waveform: Self { .init(symbolName: "waveform") }
+
+    /// 􀞈
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var waveformCircle: Self { .init(symbolName: "waveform.circle") }
+
+    /// 􀞉
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var waveformCircleFill: Self { .init(symbolName: "waveform.circle.fill") }
+
+    /// 􀑃
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var waveformPath: Self { .init(symbolName: "waveform.path") }
+
+    /// 􀑅
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var waveformPathBadgeMinus: Self { .init(symbolName: "waveform.path.badge.minus") }
+
+    /// 􀑄
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var waveformPathBadgePlus: Self { .init(symbolName: "waveform.path.badge.plus") }
+
+    /// 􀜟
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var waveformPathEcg: Self { .init(symbolName: "waveform.path.ecg") }
+
+    /// 􀙇
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.2, macOS 11.0, tvOS 14.2, watchOS 7.1)
+    /// - Hierarchical (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var wifi: Self { .init(symbolName: "wifi") }
+
+    /// 􀙥
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var wifiExclamationmark: Self { .init(symbolName: "wifi.exclamationmark") }
+
+    /// 􀙈
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0)
+    static var wifiSlash: Self { .init(symbolName: "wifi.slash") }
+
+    /// 􀇤
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    static var wind: Self { .init(symbolName: "wind") }
+
+    /// 􀇦
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var windSnow: Self { .init(symbolName: "wind.snow") }
+
+    /// 􀖵
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var wonsignCircle: Self { .init(symbolName: "wonsign.circle") }
+
+    /// 􀖶
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var wonsignCircleFill: Self { .init(symbolName: "wonsign.circle.fill") }
+
+    /// 􀗵
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var wonsignSquare: Self { .init(symbolName: "wonsign.square") }
+
+    /// 􀗶
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var wonsignSquareFill: Self { .init(symbolName: "wonsign.square.fill") }
+
+    /// 􀎕
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 16.0, renamed: "wrenchAdjustable")
+    @available(macOS, introduced: 11.0, deprecated: 13.0, renamed: "wrenchAdjustable")
+    @available(tvOS, introduced: 13.0, deprecated: 16.0, renamed: "wrenchAdjustable")
+    @available(watchOS, introduced: 6.0, deprecated: 9.0, renamed: "wrenchAdjustable")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "wrenchAdjustable")
+    static var wrench: Self { .init(symbolName: "wrench") }
+
+    /// 􀎖
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.0, deprecated: 16.0, renamed: "wrenchAdjustableFill")
+    @available(macOS, introduced: 11.0, deprecated: 13.0, renamed: "wrenchAdjustableFill")
+    @available(tvOS, introduced: 13.0, deprecated: 16.0, renamed: "wrenchAdjustableFill")
+    @available(watchOS, introduced: 6.0, deprecated: 9.0, renamed: "wrenchAdjustableFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "wrenchAdjustableFill")
+    static var wrenchFill: Self { .init(symbolName: "wrench.fill") }
+
+    /// 􀀲
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xCircle: Self { .init(symbolName: "x.circle") }
+
+    /// 􀀳
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xCircleFill: Self { .init(symbolName: "x.circle.fill") }
+
+    /// 􀃂
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xSquare: Self { .init(symbolName: "x.square") }
+
+    /// 􀃃
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xSquareFill: Self { .init(symbolName: "x.square.fill") }
+
+    /// 􀓪
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xSquareroot: Self { .init(symbolName: "x.squareroot") }
+
+    /// 􀆄
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xmark: Self { .init(symbolName: "xmark") }
+
+    /// 􀁠
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xmarkCircle: Self { .init(symbolName: "xmark.circle") }
+
+    /// 􀁡
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xmarkCircleFill: Self { .init(symbolName: "xmark.circle.fill") }
+
+    /// 􀌓
+    /// Single Localization, 2 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var xmarkIcloud: Self { .init(symbolName: "xmark.icloud") }
+
+    /// 􀌔
+    /// Single Localization, 3 Layersets, ⚠️ Restricted
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    ///
+    /// - Warning: ⚠️ This symbol may not be modified and may only be used to refer to Apple’s iCloud service.
+    static var xmarkIcloudFill: Self { .init(symbolName: "xmark.icloud.fill") }
+
+    /// 􀒉
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xmarkOctagon: Self { .init(symbolName: "xmark.octagon") }
+
+    /// 􀒊
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xmarkOctagonFill: Self { .init(symbolName: "xmark.octagon.fill") }
+
+    /// 􀏍
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var xmarkRectangle: Self { .init(symbolName: "xmark.rectangle") }
+
+    /// 􀏎
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var xmarkRectangleFill: Self { .init(symbolName: "xmark.rectangle.fill") }
+
+    /// 􀇼
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xmarkSeal: Self { .init(symbolName: "xmark.seal") }
+
+    /// 􀇽
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var xmarkSealFill: Self { .init(symbolName: "xmark.seal.fill") }
+
+    /// 􀞝
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 26.0, macOS 26.0, tvOS 26.0, watchOS 26.0)
+    static var xmarkShield: Self { .init(symbolName: "xmark.shield") }
+
+    /// 􀞞
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var xmarkShieldFill: Self { .init(symbolName: "xmark.shield.fill") }
+
+    /// 􀃰
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xmarkSquare: Self { .init(symbolName: "xmark.square") }
+
+    /// 􀃱
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var xmarkSquareFill: Self { .init(symbolName: "xmark.square.fill") }
+
+    /// 􀀴
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var yCircle: Self { .init(symbolName: "y.circle") }
+
+    /// 􀀵
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var yCircleFill: Self { .init(symbolName: "y.circle.fill") }
+
+    /// 􀃄
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var ySquare: Self { .init(symbolName: "y.square") }
+
+    /// 􀃅
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var ySquareFill: Self { .init(symbolName: "y.square.fill") }
+
+    /// 􀖛
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var yensignCircle: Self { .init(symbolName: "yensign.circle") }
+
+    /// 􀖜
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var yensignCircleFill: Self { .init(symbolName: "yensign.circle.fill") }
+
+    /// 􀗛
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var yensignSquare: Self { .init(symbolName: "yensign.square") }
+
+    /// 􀗜
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var yensignSquareFill: Self { .init(symbolName: "yensign.square.fill") }
+
+    /// 􀀶
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var zCircle: Self { .init(symbolName: "z.circle") }
+
+    /// 􀀷
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var zCircleFill: Self { .init(symbolName: "z.circle.fill") }
+
+    /// 􀃆
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var zSquare: Self { .init(symbolName: "z.square") }
+
+    /// 􀃇
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var zSquareFill: Self { .init(symbolName: "z.square.fill") }
+
+    /// 􀖃
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var zzz: Self { .init(symbolName: "zzz") }
 }
-///V1.1
-@available(iOS 13.1, macOS 10.15, tvOS 6.1, watchOS 6.1, *)
-extension SFSymbolName {
-    public static var arrowUturnLeftCircleBadgeEllipsis: Self{
-        Self(symbolName: "arrow.uturn.left.circle.badge.ellipsis")
-    }
-    public static var aspectratio: Self{
-        Self(symbolName: "aspectratio")
-    }
-    public static var aspectratioFill: Self{
-        Self(symbolName: "aspectratio.fill")
-    }
-    public static var car: Self{
-        Self(symbolName: "car")
-    }
-    public static var circleGrid2x2: Self{
-        Self(symbolName: "circle.grid.2x2")
-    }
-    public static var circleGrid2x2Fill: Self{
-        Self(symbolName: "circle.grid.2x2.fill")
-    }
-    public static var flashlightOffFill: Self{
-        Self(symbolName: "flashlight.off.fill")
-    }
-    public static var flashlightOnFill: Self{
-        Self(symbolName: "flashlight.on.fill")
-    }
-    public static var flipHorizontal: Self{
-        Self(symbolName: "flip.horizontal")
-    }
-    public static var flipHorizontalFill: Self{
-        Self(symbolName: "flip.horizontal.fill")
-    }
-    public static var mappinCircle: Self{
-        Self(symbolName: "mappin.circle")
-    }
-    public static var mappinCircleFill: Self{
-        Self(symbolName: "mappin.circle.fill")
-    }
-    public static var paperclipCircle: Self{
-        Self(symbolName: "paperclip.circle")
-    }
-    public static var paperclipCircleFill: Self{
-        Self(symbolName: "paperclip.circle.fill")
-    }
-    public static var pinCircle: Self{
-        Self(symbolName: "pin.circle")
-    }
-    public static var pinCircleFill: Self{
-        Self(symbolName: "pin.circle.fill")
-    }
-    public static var scissorsBadgeEllipsis: Self{
-        Self(symbolName: "scissors.badge.ellipsis")
-    }
-    public static var studentdesk: Self{
-        Self(symbolName: "studentdesk")
-    }
+
+// 1.1 Symbols
+@available(iOS 13.1, macOS 11.0, tvOS 13.0, watchOS 6.1, visionOS 1.0, *)
+public extension SFSymbolName {
+    /// 􀞸
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var arrowUturnLeftCircleBadgeEllipsis: Self { .init(symbolName: "arrow.uturn.left.circle.badge.ellipsis") }
+
+    /// 􀞖
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var aspectratio: Self { .init(symbolName: "aspectratio") }
+
+    /// 􀞏
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var aspectratioFill: Self { .init(symbolName: "aspectratio.fill") }
+
+    /// 􀙘
+    /// Single Localization, 2 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var car: Self { .init(symbolName: "car") }
+
+    /// 􀞾
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var circleGrid2x2: Self { .init(symbolName: "circle.grid.2x2") }
+
+    /// 􀞿
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var circleGrid2x2Fill: Self { .init(symbolName: "circle.grid.2x2.fill") }
+
+    /// 􀝌
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var flashlightOffFill: Self { .init(symbolName: "flashlight.off.fill") }
+
+    /// 􀞋
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var flashlightOnFill: Self { .init(symbolName: "flashlight.on.fill") }
+
+    /// 􀞒
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.1, deprecated: 14.0, renamed: "arrowLeftAndRightRighttriangleLeftRighttriangleRight")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowLeftAndRightRighttriangleLeftRighttriangleRight")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowLeftAndRightRighttriangleLeftRighttriangleRight")
+    @available(watchOS, introduced: 6.1, deprecated: 7.0, renamed: "arrowLeftAndRightRighttriangleLeftRighttriangleRight")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowLeftAndRightRighttriangleLeftRighttriangleRight")
+    static var flipHorizontal: Self { .init(symbolName: "flip.horizontal") }
+
+    /// 􀞓
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    @available(iOS, introduced: 13.1, deprecated: 14.0, renamed: "arrowLeftAndRightRighttriangleLeftRighttriangleRightFill")
+    @available(macOS, introduced: 11.0, deprecated: 11.0, renamed: "arrowLeftAndRightRighttriangleLeftRighttriangleRightFill")
+    @available(tvOS, introduced: 13.0, deprecated: 14.0, renamed: "arrowLeftAndRightRighttriangleLeftRighttriangleRightFill")
+    @available(watchOS, introduced: 6.1, deprecated: 7.0, renamed: "arrowLeftAndRightRighttriangleLeftRighttriangleRightFill")
+    @available(visionOS, introduced: 1.0, deprecated: 1.0, renamed: "arrowLeftAndRightRighttriangleLeftRighttriangleRightFill")
+    static var flipHorizontalFill: Self { .init(symbolName: "flip.horizontal.fill") }
+
+    /// 􀜇
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var mappinCircle: Self { .init(symbolName: "mappin.circle") }
+
+    /// 􀜈
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var mappinCircleFill: Self { .init(symbolName: "mappin.circle.fill") }
+
+    /// 􀒔
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var paperclipCircle: Self { .init(symbolName: "paperclip.circle") }
+
+    /// 􀒕
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var paperclipCircleFill: Self { .init(symbolName: "paperclip.circle.fill") }
+
+    /// 􀒴
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pinCircle: Self { .init(symbolName: "pin.circle") }
+
+    /// 􀒵
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Multicolor (iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0)
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    static var pinCircleFill: Self { .init(symbolName: "pin.circle.fill") }
+
+    /// 􀞷
+    /// Single Localization, 3 Layersets
+    ///
+    /// Layersets:
+    /// - Monochrome
+    /// - Hierarchical (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0)
+    /// - Multicolor (iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0)
+    static var scissorsBadgeEllipsis: Self { .init(symbolName: "scissors.badge.ellipsis") }
+
+    /// 􀑔
+    /// Single Localization, Single Layerset
+    ///
+    /// Layersets:
+    /// - Monochrome
+    static var studentdesk: Self { .init(symbolName: "studentdesk") }
 }
