@@ -5,6 +5,8 @@
 //  Created by 狄烨 on 2025.06.19.
 //
 import SwiftUI
+/// 导航路径/Navigation path
+/// 为系统的NavigationPath提供便捷的导航方法。/Provides convenient navigation methods for system's NavigationPath.
 @available(iOS 16.0, *, macOS 13.0, *, watchOS 9.0, *, tvOS 16.0, *)
 public class NavigatorPath: ObservableObject {
     

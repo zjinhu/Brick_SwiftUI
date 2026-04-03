@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// 成功视图/Success view
+/// 成功状态显示视图。/Success status display view.
 struct SuccessView: View {
     @EnvironmentObject var manager: LoadingManager
     var body: some View {
@@ -37,6 +39,8 @@ struct SuccessView_Previews: PreviewProvider {
     }
 }
 
+/// 成功形状/Success shape
+/// 勾选图标形状。/Checkmark icon shape.
 struct SuccessShape: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()

@@ -9,7 +9,10 @@ import SwiftUI
 #if os(iOS)
 import UIKit
 
+/// View扩展/View extension
 extension View {
+    /// 恢复滑动返回/Regain swipe back
+    /// 恢复被禁用的滑动返回手势。/Regain the disabled swipe back gesture.
     public func regainSwipeBack() -> some View {
         self.background(
             RegainSwipeBackView()
@@ -17,6 +20,7 @@ extension View {
     }
 }
 
+/// 恢复滑动返回视图/Regain swipe back view
 struct RegainSwipeBackView: UIViewControllerRepresentable {
     
     typealias UIViewControllerType = RegainSwipeBackViewController
@@ -31,6 +35,7 @@ struct RegainSwipeBackView: UIViewControllerRepresentable {
     }
 }
 
+/// 恢复滑动返回视图控制器/Regain swipe back view controller
 class RegainSwipeBackViewController: UIViewController {
     
     override func didMove(toParent parent: UIViewController?) {

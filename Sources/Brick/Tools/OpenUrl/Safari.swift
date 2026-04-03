@@ -70,7 +70,7 @@ public extension Brick<Any>.OpenURLAction.Result {
     }
 
     /// Safari浏览器配置/Safari browser configuration
-    public struct SafariConfiguration {
+    struct SafariConfiguration {
         /// 关闭按钮样式/Dismiss button style
         public enum DismissStyle {
             case done       // 完成/Done

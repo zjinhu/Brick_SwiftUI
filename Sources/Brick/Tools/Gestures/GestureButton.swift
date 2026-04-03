@@ -9,34 +9,38 @@
 import SwiftUI
 
 /**
+ 手势按钮/Gesture button
+ 这个按钮支持以最大化性能的方式触发不同的手势。
  This button supports triggering different gestures in a way
  that maximizes performance.
-
+ 
+ 注意：此按钮不能在ScrollView中使用，因为它会阻塞滚动视图手势。
+ 如需在ScrollView中实现多手势支持，请使用ScrollViewGestureButton。
  This button can't be used in a `ScrollView` since it blocks
  the scroll view gesture. To implement multi-gesture support
  in a `ScrollView`, use a ``ScrollViewGestureButton``.
  */
 public struct GestureButton<Label: View>: View {
 
-    /// Create a gesture button.
+    /// 初始化手势按钮/Initialize gesture button
     ///
     /// - Parameters:
-    ///   - isPressed: The binding used to track pressed state, if any.
-    ///   - pressAction: An action to trigger when the button is pressed, if any.
-    ///   - releaseInsideAction: An action to trigger when the button is released inside, if any.
-    ///   - releaseOutsideAction: An action to trigger when the button is released outside, if any.
-    ///   - longPressDelay: The time it takes for a press to count as a long press, by default ``GestureButtonDefaults/longPressDelay``.
-    ///   - longPressAction: An action to trigger when the button is long pressed, if any.
-    ///   - doubleTapTimeout: The max time between two taps to count as a double tap, by default ``GestureButtonDefaults/doubleTapTimeout``.
-    ///   - doubleTapAction: An action to trigger when the button is double tapped, if any.
-    ///   - repeatDelay: The time it takes for a press to count as a repeat trigger, by default ``GestureButtonDefaults/repeatDelay``.
-    ///   - repeatTimer: The repeat timer to use for the repeat action, by default ``RepeatGestureTimer/shared``.
-    ///   - repeatAction: An action to repeat while the button is being pressed, if any.
-    ///   - dragStartAction: An action to trigger when a drag gesture starts.
-    ///   - dragAction: An action to trigger when a drag gesture changes.
-    ///   - dragEndAction: An action to trigger when a drag gesture ends.
-    ///   - endAction: An action to trigger when a button gesture ends, if any.
-    ///   - label: The button label.
+    ///   - isPressed: 按压状态绑定，用于跟踪按压状态/Pressed state binding to track pressed state
+    ///   - pressAction: 按压时触发的操作/Action to trigger when button is pressed
+    ///   - releaseInsideAction: 在按钮内部释放时触发的操作/Action to trigger when button is released inside
+    ///   - releaseOutsideAction: 在按钮外部释放时触发的操作/Action to trigger when button is released outside
+    ///   - longPressDelay: 按压被视为长按所需的时间，默认为GestureButtonDefaults.longPressDelay/The time for press to count as long press
+    ///   - longPressAction: 长按时触发的操作/Action to trigger on long press
+    ///   - doubleTapTimeout: 两次点击被视为双击的最大时间间隔，默认为GestureButtonDefaults.doubleTapTimeout/Max time between taps for double tap
+    ///   - doubleTapAction: 双击时触发的操作/Action to trigger on double tap
+    ///   - repeatDelay: 按压被视为重复触发所需的时间，默认为GestureButtonDefaults.repeatDelay/Time for press to count as repeat trigger
+    ///   - repeatTimer: 用于重复操作的计时器，默认为RepeatGestureTimer.shared/Repeat timer for repeat action
+    ///   - repeatAction: 按压时重复触发的操作/Action to repeat while button is pressed
+    ///   - dragStartAction: 拖动手势开始时触发的操作/Action to trigger when drag gesture starts
+    ///   - dragAction: 拖动手势变化时触发的操作/Action to trigger when drag gesture changes
+    ///   - dragEndAction: 拖动手势结束时触发的操作/Action to trigger when drag gesture ends
+    ///   - endAction: 按钮手势结束时触发的操作/Action to trigger when button gesture ends
+    ///   - label: 按钮标签视图/Button label view
     public init(
         isPressed: Binding<Bool>? = nil,
         pressAction: Action? = nil,
@@ -73,26 +77,44 @@ public struct GestureButton<Label: View>: View {
         self.label = label
     }
 
+    /// 无参数操作类型/Type for no-parameter action
     public typealias Action = () -> Void
+    /// 拖动手势值操作类型/Type for drag gesture value action
     public typealias DragAction = (DragGesture.Value) -> Void
+    /// 标签构建器类型/Type for label builder
     public typealias LabelBuilder = (_ isPressed: Bool) -> Label
 
     var isPressedBinding: Binding<Bool>
 
+    /// 按压时触发的操作/Action to trigger when pressed
     let pressAction: Action?
+    /// 在按钮内部释放时触发的操作/Action to trigger when released inside
     let releaseInsideAction: Action?
+    /// 在按钮外部释放时触发的操作/Action to trigger when released outside
     let releaseOutsideAction: Action?
+    /// 按压被视为长按所需的时间/Time for press to count as long press
     let longPressDelay: TimeInterval
+    /// 长按时触发的操作/Action to trigger on long press
     let longPressAction: Action?
+    /// 两次点击被视为双击的最大时间间隔/Max time between taps for double tap
     let doubleTapTimeout: TimeInterval
+    /// 双击时触发的操作/Action to trigger on double tap
     let doubleTapAction: Action?
+    /// 按压被视为重复触发所需的时间/Time for press to count as repeat trigger
     let repeatDelay: TimeInterval
+    /// 用于重复操作的计时器/Repeat timer for repeat action
     let repeatTimer: RepeatGestureTimer
+    /// 按压时重复触发的操作/Action to repeat while button is pressed
     let repeatAction: Action?
+    /// 拖动手势开始时触发的操作/Action to trigger when drag gesture starts
     let dragStartAction: DragAction?
+    /// 拖动手势变化时触发的操作/Action to trigger when drag gesture changes
     let dragAction: DragAction?
+    /// 拖动手势结束时触发的操作/Action to trigger when drag gesture ends
     let dragEndAction: DragAction?
+    /// 按钮手势结束时触发的操作/Action to trigger when button gesture ends
     let endAction: Action?
+    /// 按钮标签构建器/Button label builder
     let label: LabelBuilder
 
     @State

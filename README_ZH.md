@@ -18,6 +18,78 @@
 
 1.0.0 之前版本支持 iOS14，1.0.0 及之后版本使用 iOS16+Swift6.0
 
+---
+
+## 🤖 AI 开发指南
+
+BrickKit 提供了完整的 `AGENTS.md` 文件，作为 AI 开发工具（Cursor、opencode、GitHub Copilot 等）的 Skills 参考。该指南帮助 AI 助手理解库的结构并生成正确的代码。
+
+### 如何与 AI 工具配合使用
+
+#### 1. Cursor / opencode / Claude Code
+
+在使用 BrickKit 的项目中，AI 助手会自动读取 `AGENTS.md` 来：
+
+- **理解库结构** - 所有组件的完整目录树
+- **生成正确的代码** - 每个 API 的使用示例
+- **添加双语注释** - 中英文注释格式指南
+- **遵循规范** - `Brick<Wrapped>` 模式、命名约定等
+
+#### 2. 将 AGENTS.md 作为上下文使用
+
+确保 `AGENTS.md` 在项目根目录下。AI 工具会自动将其作为上下文读取：
+
+```
+YourProject/
+├── AGENTS.md          ← AI Skills 参考（从 BrickKit 复制）
+├── Package.swift
+└── Sources/
+```
+
+或者在 AI 工具的配置中直接引用：
+
+```json
+// .cursorrules 或类似配置
+{
+  "contextFiles": ["path/to/BrickKit/AGENTS.md"]
+}
+```
+
+#### 3. Prompt 示例
+
+让 AI 帮助使用 BrickKit 时：
+
+```
+使用 BrickKit，创建一个带下拉刷新和加载更多的列表。
+```
+
+AI 会参考 `AGENTS.md` 并生成：
+
+```swift
+List {
+    ForEach(items) { item in
+        Text(item.name)
+    }
+    LoadMoreView { loadMoreItems() }
+}
+.emptyPlaceholder(items) {
+    Text("暂无数据")
+}
+.enableRefresh(true)
+.onRefresh { refreshItems() }
+```
+
+#### 4. AGENTS.md 包含的内容
+
+| 章节 | 内容 |
+|------|------|
+| **目录结构** | SwiftUI/、Wrapped/、Utilities/、Tools/ 的完整文件树 |
+| **SwiftUI Extensions** | 24 个 SwiftUI 扩展的使用示例 |
+| **Wrapped 用法** | 30 个 Wrapped 组件示例 (`view.ss.xxx`) |
+| **Utilities** | 核心工具（SFSymbols、Keyboard、Adapter 等） |
+| **Tools 用法** | 27 个 Tools 文件夹示例（Toast、Loading、Picker 等） |
+| **注释指南** | 双语注释格式规范 |
+
 ### Wrapped - View 扩展包装器
 
 通过 `Brick<Wrapped>` 模式为 View 添加功能，使用 `view.ss.xxx` 调用
@@ -742,27 +814,102 @@ GridItem.Size.adaptive(100)
 
 | 功能 | 描述 | 用法 |
 |------|------|------|
-| **NavigationStack** | 导航栈 (iOS 16-) | `NavigationStack { ... }` |
+| **NavigationStack** | 导航栈 (iOS 16-) + 导航API | `Brick.NavigationStack { ... }` / `Navigator.push()` |
+| **Navigation** | 导航项、滑动返回、路径辅助 | `.navigationItem()` / `.regainSwipeBack()` |
 | **Toast** | 提示消息，支持位置 (top/bottom) 和动画类型 | `Toast.show("消息")` |
 | **ListPicker** | 通用列表选择器，支持分区、单选/多选 | `ListPicker(selection: $value, items: [])` |
 | **TTextField** | 自定义样式文本框，支持标题、占位符、错误状态 | `TTextField(title: "名称", text: $text)` |
 | **CarouselView** | 水平轮播，支持缩放、自动滚动 | `CarouselView(items: [])` |
 | **FlipView** | 3D 翻转卡片视图 | `FlipView(front: View, back: View)` |
-| **OpenUrl** | URL 打开工具 | `OpenURL(url)` |
+| **OpenUrl** | URL打开：OpenURL、Link、Safari、WebView | `Brick.Link("文本", destination: url)` / `WebView(url: url)` |
 | **WebView** | WebView 组件 | `WebView(url: url)` |
 | **Presentation** | 演示控件: DragIndicator, Detents, CornerRadius | `presentationDetents([.medium, .large])` |
 | **TextEditors** | TextEditor 样式扩展 | `TextEditor(text: $text).style(...)` |
 | **UnderLineText** | 下划线文本输入 | `UnderLineText(text: $text)` |
 | **UIHostingConfiguration** | UIKit 单元格内容配置 | `UIHostingConfiguration { ... }` |
-| **Loading** | 加载动画遮罩 | `.loading(isPresented: $loading) { ... }` |
-| **Refresh** | 下拉刷新 (List/ScrollView) | `.enableRefresh(true)` |
+| **Loading** | 加载动画遮罩 + LoadingManager | `.loading(isPresented: $loading) { ... }` / `LoadingManager()` |
+| **Keychain** | 钥匙串存储工具 | `KeychainService.shared.set(value, forKey: "key")` |
 | **ScrollView** | ScrollView 辅助功能：指示器、键盘 dismissal、启用状态 | `.ss.scrollIndicators(.hidden)` |
 | **ScrollStack** | 延迟加载的可滚动堆栈和网格 | `VScrollStack { ... }` / `HScrollStack { ... }` |
+| **Gestures** | 手势按钮，支持按压、长按、双击、重复、滑动 | `GestureButton { ... }` |
 | **Triangle** | 三角形形状 | `Triangle()` / `Triangle(inverted: true)` |
 | **RoundedCorner** | 圆角形状 | `RoundedCorner(radius: 10)` |
 | **CustomSegmentPicker** | 自定义分段选择器 | `CustomSegmentPicker(selection: $index, segments: [])` |
+| **Others** | 杂项：FlipView、MarqueeText、RadioButton、OtpView、ExpandText等 | `FlipView(front: View, back: View)` |
 
 #### Tools 详细 API 用法
+
+##### Navigation
+
+```swift
+// 导航项自定义
+NavigationView {
+    ContentView()
+}
+.navigationItem(animated: true) { item in
+    item.title = "我的标题"
+}
+
+// 隐藏返回按钮标题
+NavigationView {
+    ContentView()
+}
+.hiddenBackButtonTitle()
+
+// 恢复滑动返回手势
+ContentView()
+    .regainSwipeBack()
+
+// 导航路径 (iOS 16+)
+@StateObject var path = NavigatorPath()
+
+path.path.push("新页面")
+path.path.pop()
+path.path.popTo(index: 0)
+path.path.popToRoot()
+```
+
+##### NavigationStack
+
+```swift
+// 基础导航栈 (跨版本)
+Brick.NavigationStack {
+    VStack {
+        Text("根视图")
+    }
+}
+
+// 带类型化路径
+@State var path: [MyScreen] = []
+
+Brick.NavigationStack(path: $path) {
+    ContentView()
+}
+
+// 使用 Navigator
+@EnvironmentObject var navigator: Navigator<MyScreen>
+
+// 推入页面
+navigator.push(.detail)
+
+// 返回页面
+navigator.pop()        // 返回1页
+navigator.pop(2)       // 返回2页
+navigator.popToRoot()  // 返回根页面
+navigator.popTo(index: 0)
+navigator.popTo(where: { $0 == .home })
+
+// 导航链接
+Brick.NavigationLink("前往详情", value: MyScreen.detail)
+
+// 导航目标
+.navigationDestination(isPresented: $showDetail) {
+    DetailView()
+}
+
+// 使用 SwiftUI NavigationStack 策略
+.useNavigationStack(.whenAvailable)  // 或 .never
+```
 
 ##### CarouselView
 
@@ -832,6 +979,66 @@ VStack {
     )
 }
 .background(Color.black)
+```
+
+##### Animation
+
+```swift
+// 动画完成回调
+@State private var scale: CGFloat = 1.0
+
+Button("动画") {
+    withAnimation(.spring()) {
+        scale = 1.5
+    }
+}
+.onAnimationCompleted(for: scale) {
+    // 动画完成时调用
+    print("动画完成!")
+}
+
+// 带完成处理的动画
+withAnimation(.easeInOut(duration: 0.5), after: 0.5, completion: {
+    print("完成!")
+}) {
+    isAnimated.toggle()
+}
+
+// 延迟动画
+withAnimation(.spring(), after: 1.0) {
+    viewModel.update()
+}
+
+// 检查事务是否正在动画
+let transaction = Transaction(animation: .default)
+let isAnimated = transaction.isAnimated  // true
+
+// 禁用动画
+withoutAnimation {
+    updateWithoutAnimation()
+}
+```
+
+##### Blur
+
+```swift
+// 基础模糊视图 (iOS/tvOS)
+BlurView()
+    .frame(height: 200)
+
+// 玻璃模糊效果 (iOS 15+)
+GlassBlurView(removeAllFilters: false)
+    .frame(height: 180)
+
+// 自定义背景
+GlassBlurView(removeAllFilters: true)
+    .blur(radius: 5, opaque: true)
+    .background(.black.opacity(0.8))
+    .frame(height: 180)
+
+// 玻璃拟态模糊效果
+GlassmorphismBlurView()
+    .frame(width: 300, height: 200)
 ```
 
 ##### Toast
@@ -1055,6 +1262,72 @@ Button("返回根") {
 }
 ```
 
+##### OpenUrl
+
+```swift
+// OpenURL - 自定义URL打开操作
+@Environment(\.openURL) var openURL
+
+Button("打开网站") {
+    if let url = URL(string: "https://www.example.com") {
+        openURL(url)
+    }
+}
+
+// 带完成回调
+openURL(url) { accepted in
+    print(accepted ? "成功" : "失败")
+}
+
+// 自定义URL处理器
+Text("访问 [示例](https://www.example.com)")
+    .environment(\.openURL, Brick.OpenURLAction { url in
+        handleURL(url)
+        return .handled
+    })
+
+// Link - URL链接组件
+Brick.Link("查看条款", destination: URL(string: "https://www.example.com/TOS.html")!)
+
+// 带自定义openURL
+Brick.Link("访问网站", destination: URL(string: "https://www.example.com")!)
+    .environment(\.openURL, Brick.OpenURLAction { url in
+        print("打开 \(url)")
+        return .handled
+    })
+
+// Safari - 在Safari中打开URL（使用SFSafariViewController）
+Brick.OpenURLAction.Result.safari(url)
+
+// 带自定义配置
+Brick.OpenURLAction.Result.safari(url) { config in
+    config.prefersReader = true
+    config.barCollapsingEnabled = false
+    config.dismissStyle = .close
+    config.tintColor = .blue
+}
+
+// WebView - WKWebView组件
+WebView(url: URL(string: "https://www.example.com")!)
+    .showProgress(true)
+    .setProgressColor(.green)
+    .showRefreshControl(true)
+    .clearBackgroundColor()
+    .setCookies([cookie1, cookie2])
+    .localStorageItem("值", forKey: "键")
+    .getWebViewState($state)
+    .getWebViewObject($webView)
+
+// WebView带JS消息处理器
+WebView(url: url)
+    .onMessageHandler(name: "处理器名") { body in
+        print("收到: \(body ?? "")")
+    }
+
+// 清理所有网页数据
+WebView.Coordinator.cleanAllWebsiteDataStoreIfNeeded()
+```
+
 ##### TTextField
 
 ```swift
@@ -1241,6 +1514,146 @@ Button("显示加载") {
     .padding(30)
     .background(Color.gray.opacity(0.8))
     .cornerRadius(10)
+}
+
+// 使用 LoadingManager (编程方式)
+let manager = LoadingManager()
+
+// 添加到根视图
+MyRootView()
+    .addLoading(manager)
+
+// 显示不同类型
+manager.text = "请稍候..."
+manager.showLoading()
+
+manager.text = "加载中: 50%"
+manager.progress = 0.5
+manager.showProgress()
+
+manager.text = "成功！"
+manager.showSuccess()
+
+manager.text = "失败！"
+manager.showFail()
+
+// 隐藏
+manager.hide()
+
+// 自定义样式
+manager.textColor = .white
+manager.textFont = .headline
+manager.accentColor = .blue
+manager.maskColor = .black.opacity(0.5)
+```
+
+##### Keychain
+
+```swift
+// 使用 KeychainService (推荐)
+let service = KeychainService.shared
+
+// 保存值
+service.set("John", forKey: "name")
+service.set(25, forKey: "age")
+service.set(true, forKey: "isEnabled")
+service.set(Data(), forKey: "data")
+
+// 读取值
+let name: String? = service.string(forKey: "name")
+let age: Int? = service.integer(forKey: "age")
+let isEnabled: Bool? = service.bool(forKey: "isEnabled")
+let data: Data? = service.data(forKey: "data")
+
+// 检查值是否存在
+let hasName = service.hasValue(forKey: "name")
+
+// 删除值
+service.removeObject(forKey: "name")
+
+// 删除所有键
+service.removeAllKeys()
+
+// 直接使用 KeychainWrapper
+let wrapper = KeychainWrapper(serviceName: "com.example.app")
+
+wrapper.set("secret", forKey: "password")
+let password = wrapper.string(forKey: "password")
+
+// 设置可访问性
+wrapper.set("data", forKey: "key", with: .whenUnlocked)
+
+// 清除整个钥匙串（谨慎使用！）
+KeychainWrapper.wipeKeychain()
+```
+
+##### Language
+
+```swift
+// 使用 LanguageSettings (单例)
+let settings = LanguageSettings.shared
+
+// 获取当前语言
+let currentLanguage = settings.selectedLanguage
+
+// 设置语言
+settings.selectedLanguage = .en
+settings.selectedLanguage = .zhHans
+
+// 获取设备语言
+let deviceLang = settings.deviceLanguage
+
+// 检查布局方向（用于阿拉伯语、希伯来语等从右到左的语言）
+let isRTL = settings.isRightToLeft
+let layoutDirection = settings.layout
+
+// 使用 LanguageView 包装内容
+LanguageView {
+    VStack {
+        Text("你好")
+        Text("世界")
+    }
+}
+// 自动应用正确的区域设置和布局方向
+
+// 字符串本地化
+let localizedString = "hello_world".localized
+let formattedString = "greeting_message".localized.with("约翰", "你好")
+
+// 获取可用语言列表
+let languages = Localize.getList()
+let available = Localize.availableLanguages()
+```
+
+##### List
+
+```swift
+// 空占位符 - 列表为空时显示视图
+@State private var items: [String] = []
+
+List {
+    ForEach(items, id: \.self) { item in
+        Text(item)
+    }
+}
+.emptyPlaceholder(items) {
+    VStack {
+        Image(systemName: "tray")
+            .font(.largeTitle)
+        Text("暂无数据")
+            .foregroundColor(.secondary)
+    }
+}
+
+// 加载更多 - 进入视图时触发（放在LazyVStack中）
+LazyVStack {
+    ForEach(items, id: \.self) { item in
+        Text(item)
+    }
+    LoadMoreView {
+        // 滚动到底部时加载更多
+        loadMoreItems()
+    }
 }
 ```
 
@@ -1733,6 +2146,94 @@ CustomSegmentPicker(
 )
 ```
 
+##### Others
+
+```swift
+// FlipView - 3D翻转卡片
+@State private var isFlipped = false
+
+FlipView(
+    front: Color.green,
+    back: Color.red,
+    isFlipped: $isFlipped,
+    flipDuration: 0.5,
+    tapDirection: .right,
+    swipeDirections: [.left, .right, .up, .down]
+)
+
+// MarqueeText - 滚动文本
+MarqueeText("这是一段超出宽度的长文本，会自动滚动显示")
+
+MarqueeText("自定义速度", spacing: 10, speed: 2.0)
+
+// RadioButton - 单选按钮
+RadioButton(isSelected: false, label: "选项1") { isSelected in
+    print("选中: \(isSelected)")
+}
+
+// OtpView - OTP验证码输入
+OtpView(activeColor: .blue, inActiveColor: .gray, length: 4) { code in
+    print("输入验证码: \(code)")
+}
+
+// ExpandText - 展开收起文本
+ExpandText(lineLimit: 2, animation: .easeInOut(duration: 0.2)) {
+    Text("这是一段很长的文本，初始只显示2行，点击展开查看完整内容。")
+} moreView: { action in
+    Button(" ... 更多", action: action)
+}
+
+// CountDownTimerText - 倒计时
+CountDownTimerText(timeCount: 60, timeUnit: "s", titleWhenIdle: "获取验证码", titleWhenFinished: "重新发送", mode: .manual) {
+    return true  // 返回true开始倒计时
+}
+
+// AutoHeightTextEditor - 自动高度文本编辑器
+@State private var text = ""
+@State private var placeholder = "输入文本..."
+@FocusState private var isFocused: Bool
+
+AutoHeightTextEditor(
+    inputText: $text,
+    placeholder: $placeholder,
+    textFocused: $isFocused
+)
+
+// RightArrow - 添加右侧箭头
+Text("设置")
+    .addRightArrow()
+
+// RichText - 富文本
+Text(separator: " ") {
+    Text("你好")
+        .font(.headline)
+        .foregroundColor(.red)
+    Text("世界")
+        .fontWeight(.light)
+}
+
+// AnyButtonStyle - 自定义按钮样式
+Button("点击我") {}
+    .buttonStyle { config in
+        config.label
+            .padding()
+            .background(config.isPressed ? Color.gray : Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+    }
+
+// AppColorScheme - 应用主题管理
+@StateObject var colorScheme = AppColorScheme()
+colorScheme.darkModeSetting = .dark  // 或 .light, .system
+
+// AnyViewModifier - 类型擦除的视图修饰器
+let modifier = AnyViewModifier { content in
+    content
+        .padding()
+        .background(Color.blue)
+}
+```
+
 ##### ScrollStack
 
 ```swift
@@ -1792,6 +2293,58 @@ HScrollGrid.singleRow(height: 80, spacing: 12) {
             .frame(width: 100)
     }
 }
+```
+
+##### Gestures
+
+```swift
+// 手势按钮 (不适用于 ScrollView)
+@State private var isPressed = false
+
+GestureButton(
+    isPressed: $isPressed,
+    pressAction: { print("按下") },
+    releaseInsideAction: { print("在内部释放") },
+    releaseOutsideAction: { print("在外部释放") },
+    longPressDelay: 0.8,
+    longPressAction: { print("长按") },
+    doubleTapAction: { print("双击") },
+    repeatAction: { print("重复") },
+    label: { isPressed in
+        Text("按钮")
+            .foregroundColor(isPressed ? .gray : .white)
+            .scaleEffect(isPressed ? 0.9 : 1.0)
+    }
+)
+
+// ScrollView 手势按钮 (可在 ScrollView 内使用)
+ScrollView {
+    LazyVStack {
+        ScrollViewGestureButton(
+            isPressed: $isPressed,
+            pressAction: { print("在滚动视图中按下") },
+            releaseInsideAction: { print("释放") },
+            label: { isPressed in
+                Text("滚动视图按钮")
+            }
+        )
+    }
+}
+
+// 滑动手势
+.onSwipeGesture(
+    maximumTime: 1,
+    minimumDistance: 10,
+    up: { print("上滑") },
+    down: { print("下滑") },
+    left: { print("左滑") },
+    right: { print("右滑") }
+)
+
+// 手势按钮默认配置
+GestureButtonDefaults.longPressDelay = 1.0
+GestureButtonDefaults.doubleTapTimeout = 0.2
+GestureButtonDefaults.repeatDelay = 1.0
 ```
 
 ### Utilities - 核心工具

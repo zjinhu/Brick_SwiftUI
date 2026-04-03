@@ -7,16 +7,29 @@
 
 import SwiftUI
 #if os(iOS)
+
+/// OTP验证码输入视图/OTP verification code input view
+/// 支持数字键盘和自动填充一次性验证码。/Supports number pad and auto-fill one-time code.
 @available(iOS 15.0, *)
 public struct OtpView: View {
+    /// 激活状态颜色/Active state color
     private var activeColor: Color
+    /// 非激活状态颜色/Inactive state color
     private var inActiveColor: Color
+    /// 输入完成回调/Input completion callback
     private let callback: (String) -> Void
+    /// 验证码长度/Verification code length
     private let length: Int
     
     @State private var otpText = ""
     @FocusState private var isKeyboardShowing: Bool
     
+    /// 初始化OTP视图/Initialize OTP view
+    /// - Parameters:
+    ///   - activeColor: 激活状态颜色/Active state color
+    ///   - inActiveColor: 非激活状态颜色/Inactive state color
+    ///   - length: 验证码长度/Verification code length
+    ///   - callback: 输入完成回调/Input completion callback
     public init(activeColor: Color,
                 inActiveColor: Color,
                 length:Int,
@@ -58,6 +71,7 @@ public struct OtpView: View {
         }
     }
     
+    /// OTP输入框/OTP input box
     @ViewBuilder
     func OTPTextBox(_ index: Int) -> some View {
         ZStack{
@@ -86,7 +100,11 @@ public struct OtpView: View {
     }
 }
 
+/// 字符串绑定长度限制扩展/String binding length limit extension
 extension Binding where Value == String {
+    /// 限制字符串长度/Limit string length
+    /// - Parameter length: 最大长度/Maximum length
+    /// - Returns: 限制后的绑定/Limited binding
     func limit(_ length: Int)->Self {
         if self.wrappedValue.count > length {
             DispatchQueue.main.async {

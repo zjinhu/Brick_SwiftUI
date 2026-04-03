@@ -11,29 +11,35 @@ import SwiftUI
 import UIKit
 
 extension View {
-    /// Access the NavigationItem of the underlying `UINavigationController`
+    /// 访问底层UINavigationController的NavigationItem/Access the NavigationItem of the underlying `UINavigationController`
     ///
+    /// 请将navigationItem()或navigationItem(customize:)附加到NavigationView上，或使用NavigationItemView。
     /// Please attach `navigationItem()` or `navigationItem(customize:)` to your `NavigationView` or simply use `NavigationItemView`
-    /// This will expose the underlying `UINavigationController` in the `Environment` for easier
-    /// access.
+    /// 这将把底层的UINavigationController暴露在Environment中以便更方便地访问。
+    /// This will expose the underlying `UINavigationController` in the `Environment` for easier access.
     ///
+    /// 虽然没有这个NavigationItem仍然可以被找到，但在某些情况下可能会延迟或出现故障。
     /// While the `NavigationItem` will still be found without this, it may be delayed or glitchy without this in certain situations.
     ///
-    /// - Parameter animated: Pass `true` to animate the customization; otherwise, pass `false`. Defaults to `true`
-    /// - Parameter customize: Callback with the found `UINavigationItem`
+    /// - Parameter animated: 传递true表示动画显示自定义；否则传递false。默认为true/Pass `true` to animate the customization; otherwise, pass `false`. Defaults to `true`
+    /// - Parameter customize: 带有找到的UINavigationItem的回调/Callback with the found `UINavigationItem`
     public func navigationItem(animated: Bool = true, customize: @escaping (UINavigationItem) -> Void) -> some View {
         modifier(NavigationControllerModifier(animated: animated, customize: customize))
     }
     
+    /// 隐藏返回按钮标题/Hide back button title
+    /// 隐藏导航栏返回按钮的标题。/Hides the title of the navigation bar back button.
     public func hiddenBackButtonTitle() -> some View {
         modifier(
             NavigationControllerModifier(animated: true){ item in
                 item.backButtonDisplayMode = .minimal
-                item.backButtonTitle = ""   // 强制去掉标题
+                item.backButtonTitle = ""   // 强制去掉标题/Force remove title
             }
         )
     }
     
+    /// 隐藏返回按钮标题/Hide back button title
+    /// 隐藏所有返回按钮的标题。/Hides all back button titles.
     public func navigationBackButtonTitleHidden() -> some View {
         modifier(HiddenBackButtonTitlesModifier())
     }
@@ -41,23 +47,22 @@ extension View {
 
 
 extension NavigationView {
-    /// Access the NavigationItem of the underlying `UINavigationController` and expose it in the `Environment`
+    /// 访问UINavigationController的NavigationItem并暴露到Environment中/Access the NavigationItem of the underlying `UINavigationController` and expose it in the `Environment`
     ///
-    /// - Parameter animated: Pass `true` to animate the customization; otherwise, pass `false`. Defaults to `true`
-    /// - Parameter customize: Callback with the found `UINavigationItem`
+    /// - Parameter animated: 传递true表示动画显示自定义；否则传递false。默认为true/Pass `true` to animate the customization; otherwise, pass `false`. Defaults to `true`
+    /// - Parameter customize: 带有找到的UINavigationItem的回调/Callback with the found `UINavigationItem`
     ///
-    /// This is needed on the `NavigationView` in order to be able to expose the `UINavigationController` to all subviews
+    /// 这需要在NavigationView上使用，以便能够将UINavigationController暴露给所有子视图。/This is needed on the `NavigationView` in order to be able to expose the `UINavigationController` to all subviews
     @MainActor public func navigationItem(animated: Bool = true, customize: @escaping ((UINavigationItem) -> Void)) -> some View {
         modifier(NavigationControllerModifier(animated: animated, customize: customize, forceEnvironment: true))
     }
     
-    /// Expose the the NavigationItem of the underlying `UINavigationController` in the `Environment`
+    /// 暴露UINavigationController的NavigationItem到Environment中/Expose the the NavigationItem of the underlying `UINavigationController` in the `Environment`
     ///
-    /// While not strictly necessary to expose the the underlying `UINavigationController`
-    /// in the `Environment` it is advised to do so as it heavily simplifies finding the `UINavigationController`. Without exposure accessing the NavigationItem might be slightly
-    /// delayed and may cause glitches.
+    /// 虽然不是必须将UINavigationController暴露在Environment中，但建议这样做，因为它大大简化了查找UINavigationController的过程。
+    /// While not strictly necessary to expose the the underlying `UINavigationController` in the `Environment` it is advised to do so as it heavily simplifies finding the `UINavigationController`. Without exposure accessing the NavigationItem might be slightly delayed and may cause glitches.
     ///
-    /// This is needed on the `NavigationView` in order to be able to expose the `UINavigationController` to all subviews
+    /// 这需要在NavigationView上使用，以便能够将UINavigationController暴露给所有子视图。/This is needed on the `NavigationView` in order to be able to expose the `UINavigationController` to all subviews
     @MainActor public func navigationItem() -> some View {
         modifier(NavigationControllerModifier(animated: false, customize: nil, forceEnvironment: true))
     }
@@ -66,23 +71,21 @@ extension NavigationView {
 #if swift(>=5.7)
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
 extension NavigationStack {
-    /// Access the NavigationItem of the underlying `UINavigationController` and expose it in the `Environment`
+    /// 访问UINavigationController的NavigationItem并暴露到Environment中/Access the NavigationItem of the underlying `UINavigationController` and expose it in the `Environment`
     ///
-    /// - Parameter animated: Pass `true` to animate the customization; otherwise, pass `false`. Defaults to `true`
-    /// - Parameter customize: Callback with the found `UINavigationItem`
+    /// - Parameter animated: 传递true表示动画显示自定义；否则传递false。默认为true/Pass `true` to animate the customization; otherwise, pass `false`. Defaults to `true`
+    /// - Parameter customize: 带有找到的UINavigationItem的回调/Callback with the found `UINavigationItem`
     ///
-    /// This is needed on the `NavigationView` in order to be able to expose the `UINavigationController` to all subviews
+    /// 这需要在NavigationStack上使用，以便能够将UINavigationController暴露给所有子视图。/This is needed on the `NavigationView` in order to be able to expose the `UINavigationController` to all subviews
     public func navigationItem(animated: Bool = true, customize: @escaping ((UINavigationItem) -> Void)) -> some View {
         modifier(NavigationControllerModifier(animated: animated, customize: customize, forceEnvironment: true))
     }
     
-    /// Expose the the NavigationItem of the underlying `UINavigationController` in the `Environment`
+    /// 暴露UINavigationController的NavigationItem到Environment中/Expose the the NavigationItem of the underlying `UINavigationController` in the `Environment`
     ///
-    /// While not strictly necessary to expose the the underlying `UINavigationController`
-    /// in the `Environment` it is advised to do so as it heavily simplifies finding the `UINavigationController`. Without exposure accessing the NavigationItem might be slightly
-    /// delayed and may cause glitches.
+    /// 虽然不是必须将UINavigationController暴露在Environment中，但建议这样做。/While not strictly necessary to expose the the underlying `UINavigationController` in the `Environment` it is advised to do so as it heavily simplifies finding the `UINavigationController`. Without exposure accessing the NavigationItem might be slightly delayed and may cause glitches.
     ///
-    /// This is needed on the `NavigationStack` in order to be able to expose the `UINavigationController` to all subviews
+    /// 这需要在NavigationStack上使用，以便能够将UINavigationController暴露给所有子视图。/This is needed on the `NavigationStack` in order to be able to expose the `UINavigationController` to all subviews
     public func navigationItem() -> some View {
         modifier(NavigationControllerModifier(animated: false, customize: nil, forceEnvironment: true))
     }
@@ -90,29 +93,28 @@ extension NavigationStack {
 
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
 extension NavigationSplitView {
-    /// Access the NavigationItem of the underlying `UINavigationController` and expose it in the `Environment`
+    /// 访问UINavigationController的NavigationItem并暴露到Environment中/Access the NavigationItem of the underlying `UINavigationController` and expose it in the `Environment`
     ///
-    /// - Parameter animated: Pass `true` to animate the customization; otherwise, pass `false`. Defaults to `true`
-    /// - Parameter customize: Callback with the found `UINavigationItem`
+    /// - Parameter animated: 传递true表示动画显示自定义；否则传递false。默认为true/Pass `true` to animate the customization; otherwise, pass `false`. Defaults to `true`
+    /// - Parameter customize: 带有找到的UINavigationItem的回调/Callback with the found `UINavigationItem`
     ///
-    /// This is needed on the `NavigationView` in order to be able to expose the `UINavigationController` to all subviews
+    /// 这需要在NavigationSplitView上使用，以便能够将UINavigationController暴露给所有子视图。/This is needed on the `NavigationView` in order to be able to expose the `UINavigationController` to all subviews
     @MainActor public func navigationItem(animated: Bool = true, customize: @escaping ((UINavigationItem) -> Void)) -> some View {
         modifier(NavigationControllerModifier(animated: animated, customize: customize, forceEnvironment: true))
     }
     
-    /// Expose the the NavigationItem of the underlying `UINavigationController` in the `Environment`
+    /// 暴露UINavigationController的NavigationItem到Environment中/Expose the the NavigationItem of the underlying `UINavigationController` in the `Environment`
     ///
-    /// While not strictly necessary to expose the the underlying `UINavigationController`
-    /// in the `Environment` it is advised to do so as it heavily simplifies finding the `UINavigationController`. Without exposure accessing the NavigationItem might be slightly
-    /// delayed and may cause glitches.
+    /// 虽然不是必须将UINavigationController暴露在Environment中，但建议这样做。/While not strictly necessary to expose the the underlying `UINavigationController` in the `Environment` it is advised to do so as it heavily simplifies finding the `UINavigationController`. Without exposure accessing the NavigationItem might be slightly delayed and may cause glitches.
     ///
-    /// This is needed on the `NavigationSplitView` in order to be able to expose the `UINavigationController` to all subviews
+    /// 这需要在NavigationSplitView上使用，以便能够将UINavigationController暴露给所有子视图。/This is needed on the `NavigationSplitView` in order to be able to expose the `UINavigationController` to all subviews
     @MainActor public func navigationItem() -> some View {
         modifier(NavigationControllerModifier(animated: false, customize: nil, forceEnvironment: true))
     }
 }
 #endif
 
+/// 隐藏返回按钮标题修饰器/Hide back button titles modifier
 struct HiddenBackButtonTitlesModifier: ViewModifier {
     @State private var applied = false
 
@@ -127,6 +129,7 @@ struct HiddenBackButtonTitlesModifier: ViewModifier {
             )
     }
 
+    /// 应用外观/Apply appearance
     private func applyAppearance(to nc: UINavigationController) {
         let hidden: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.clear]
         let bar = nc.navigationBar
@@ -135,7 +138,7 @@ struct HiddenBackButtonTitlesModifier: ViewModifier {
         std.backButtonAppearance.normal.titleTextAttributes = hidden
         bar.standardAppearance = std
 
-        // 不新建，nil 保持 nil
+        // 不新建，nil 保持 nil/Don't create new, nil keeps nil
         if let edge = bar.scrollEdgeAppearance {
             edge.backButtonAppearance.normal.titleTextAttributes = hidden
             bar.scrollEdgeAppearance = edge

@@ -8,7 +8,7 @@
 
 ### SwiftUI APP Acceleration Development Kit
 
-This Package is related to [Gitee](https://gitee.com/zjinhu/brick). If you feel that the introduction of Github addresses in SPM is slow, you can use Gitee.
+This Package is related to [Gitee](https://gitee.com/zhinhu/brick). If you feel that the introduction of Github addresses in SPM is slow, you can use Gitee.
 
 Built-in various auxiliary development tools, and the newly added API after iOS15 is compatible with iOS14, please run the demo to view the usage of specific functions
 
@@ -17,6 +17,78 @@ Built-in various auxiliary development tools, and the newly added API after iOS1
 |                  |                  |
 
 Versions before 1.0.0 support iOS14, while versions after 1.0.0 use iOS16+Swift6.0
+
+---
+
+## 🤖 AI Development Guide
+
+BrickKit provides a comprehensive `AGENTS.md` file that serves as an AI Skills reference for AI-powered development tools (Cursor, opencode, GitHub Copilot, etc.). This guide helps AI assistants understand the library's structure and generate correct code.
+
+### How to Use with AI Tools
+
+#### 1. Cursor / opencode / Claude Code
+
+When working on a project that uses BrickKit, the AI assistant will automatically reference `AGENTS.md` to:
+
+- **Understand the library structure** - Complete directory tree of all components
+- **Generate correct code** - Usage examples for every API
+- **Add bilingual comments** - Chinese/English comment format guidelines
+- **Follow conventions** - `Brick<Wrapped>` pattern, naming conventions, etc.
+
+#### 2. Using AGENTS.md as Context
+
+Simply ensure `AGENTS.md` is in your project root. AI tools will automatically read it as context:
+
+```
+YourProject/
+├── AGENTS.md          ← AI Skills reference (copy from BrickKit)
+├── Package.swift
+└── Sources/
+```
+
+Or reference it directly in your AI tool's configuration:
+
+```json
+// .cursorrules or similar config
+{
+  "contextFiles": ["path/to/BrickKit/AGENTS.md"]
+}
+```
+
+#### 3. Prompt Examples
+
+When asking AI to help with BrickKit:
+
+```
+Using BrickKit, create a list with pull-to-refresh and load more.
+```
+
+The AI will reference `AGENTS.md` and generate:
+
+```swift
+List {
+    ForEach(items) { item in
+        Text(item.name)
+    }
+    LoadMoreView { loadMoreItems() }
+}
+.emptyPlaceholder(items) {
+    Text("No items")
+}
+.enableRefresh(true)
+.onRefresh { refreshItems() }
+```
+
+#### 4. What AGENTS.md Contains
+
+| Section | Content |
+|---------|---------|
+| **Directory Structure** | Complete file tree of SwiftUI/, Wrapped/, Utilities/, Tools/ |
+| **SwiftUI Extensions** | Usage examples for all 24 SwiftUI extensions |
+| **Wrapped Usage** | 30 Wrapped component examples (`view.ss.xxx`) |
+| **Utilities** | Core utilities (SFSymbols, Keyboard, Adapter, etc.) |
+| **Tools Usage** | 27 Tools folder examples (Toast, Loading, Picker, etc.) |
+| **Comment Guidelines** | Bilingual comment format for consistency |
 
 ### Wrapped - View Extension Wrappers
 
@@ -742,28 +814,106 @@ Pre-built UI components for rapid development.
 
 | Feature | Description | Usage |
 |---------|-------------|-------|
-| **NavigationStack** | Navigation stack (iOS 16-) | `NavigationStack { ... }` |
+| **NavigationStack** | Navigation stack (iOS 16-) + Navigation API | `Brick.NavigationStack { ... }` / `Navigator.push()` |
+| **Navigation** | Navigation item, swipe back, path helpers | `.navigationItem()` / `.regainSwipeBack()` |
 | **Page** | Paging scroll view with PageIndicator | `PageScrollView(pageOutWidth: 50, pagePadding: 10) { ... }` |
+| **Animation** | Animation helpers: onAnimationCompleted, withAnimation completion | `view.onAnimationCompleted(for: value) { }` |
+| **Blur** | Blur effects: BlurView, GlassBlurView, GlassmorphismBlurView | `BlurView()` / `GlassBlurView(removeAllFilters: true)` |
+| **Date** | Date utilities: Date+, DateFormatter, JSONEncoder/Decoder | `Date(year: 2024, month: 1, day: 1)` |
 | **Toast** | Toast messages with position (top/bottom), animation types | `Toast.show("Message")` |
 | **ListPicker** | Generic list picker with sections, single/multi selection | `ListPicker(selection: $value, items: [])` |
 | **TTextField** | Custom styled text field with title, placeholder, error states | `TTextField(title: "Name", text: $text)` |
 | **CarouselView** | Horizontal carousel with scaling, wrapping, auto-scroll | `CarouselView(items: [])` |
 | **FlipView** | 3D flip card view | `FlipView(front: View, back: View)` |
-| **OpenUrl** | URL opening tools | `OpenURL(url)` |
+| **OpenUrl** | URL opening: OpenURL, Link, Safari, WebView | `Brick.Link("Text", destination: url)` / `WebView(url: url)` |
 | **WebView** | WebView component | `WebView(url: url)` |
 | **Presentation** | Presentation controls: DragIndicator, Detents, CornerRadius | `presentationDetents([.medium, .large])` |
 | **TextEditors** | TextEditor style extensions | `TextEditor(text: $text).style(...)` |
 | **UnderLineText** | Underline text input | `UnderLineText(text: $text)` |
 | **UIHostingConfiguration** | UIKit cell content configuration | `UIHostingConfiguration { ... }` |
-| **Loading** | Loading overlay with animation | `.loading(isPresented: $loading) { ... }` |
-| **Refresh** | Pull-to-refresh for List/ScrollView | `.enableRefresh(true)` |
+| **Loading** | Loading overlay with animation + LoadingManager | `.loading(isPresented: $loading) { ... }` / `LoadingManager()` |
+| **Keychain** | Keychain storage utilities | `KeychainService.shared.set(value, forKey: "key")` |
 | **ScrollView** | ScrollView helpers: indicators, keyboard dismiss, enabled | `.ss.scrollIndicators(.hidden)` |
 | **ScrollStack** | Lazy scrollable stacks and grids | `VScrollStack { ... }` / `HScrollStack { ... }` |
+| **Gestures** | Gesture buttons with press, long press, double tap, repeat, swipe | `GestureButton { ... }` |
 | **Triangle** | Triangle shape | `Triangle()` / `Triangle(inverted: true)` |
 | **RoundedCorner** | Rounded corner shape | `RoundedCorner(radius: 10)` |
 | **CustomSegmentPicker** | Custom segmented picker | `CustomSegmentPicker(selection: $index, segments: [])` |
+| **Others** | Misc: FlipView, MarqueeText, RadioButton, OtpView, ExpandText, etc | `FlipView(front: View, back: View)` |
 
 #### Tools Detailed API Usage
+
+##### Navigation
+
+```swift
+// Navigation item customization
+NavigationView {
+    ContentView()
+}
+.navigationItem(animated: true) { item in
+    item.title = "My Title"
+}
+
+// Hide back button title
+NavigationView {
+    ContentView()
+}
+.hiddenBackButtonTitle()
+
+// Restore swipe back gesture
+ContentView()
+    .regainSwipeBack()
+
+// Navigation path (iOS 16+)
+@StateObject var path = NavigatorPath()
+
+path.path.push("NewScreen")
+path.path.pop()
+path.path.popTo(index: 0)
+path.path.popToRoot()
+```
+
+##### NavigationStack
+
+```swift
+// Basic navigation stack (cross-version)
+Brick.NavigationStack {
+    VStack {
+        Text("Root View")
+    }
+}
+
+// With typed path
+@State var path: [MyScreen] = []
+
+Brick.NavigationStack(path: $path) {
+    ContentView()
+}
+
+// Using Navigator
+@EnvironmentObject var navigator: Navigator<MyScreen>
+
+// Push a screen
+navigator.push(.detail)
+
+// Pop screens
+navigator.pop()        // Pop 1
+navigator.pop(2)       // Pop 2
+navigator.popToRoot()  // Pop to root
+navigator.popTo(index: 0)
+navigator.popTo(where: { $0 == .home })
+
+// Navigation link
+Brick.NavigationLink("Go to Detail", value: MyScreen.detail)
+
+// Navigation destination
+.navigationDestination(isPresented: $showDetail) {
+    DetailView()
+}
+
+// Use SwiftUI NavigationStack policy
+.useNavigationStack(.whenAvailable)  // or .never
+```
 
 ##### CarouselView
 
@@ -835,6 +985,112 @@ VStack {
 .background(Color.black)
 ```
 
+##### Animation
+
+```swift
+// Animation completion callback
+@State private var scale: CGFloat = 1.0
+
+Button("Animate") {
+    withAnimation(.spring()) {
+        scale = 1.5
+    }
+}
+.onAnimationCompleted(for: scale) {
+    // Called when animation completes
+    print("Animation completed!")
+}
+
+// With animation completion handler
+withAnimation(.easeInOut(duration: 0.5), after: 0.5, completion: {
+    print("Done!")
+}) {
+    isAnimated.toggle()
+}
+
+// Delayed animation
+withAnimation(.spring(), after: 1.0) {
+    viewModel.update()
+}
+
+// Check if transaction is animated
+let transaction = Transaction(animation: .default)
+let isAnimated = transaction.isAnimated  // true
+
+// Disable animations
+withoutAnimation {
+    updateWithoutAnimation()
+}
+```
+
+##### Blur
+
+```swift
+// Basic blur view (iOS/tvOS)
+BlurView()
+    .frame(height: 200)
+
+// Glass blur effect (iOS 15+)
+GlassBlurView(removeAllFilters: false)
+    .frame(height: 180)
+
+// With custom background
+GlassBlurView(removeAllFilters: true)
+    .blur(radius: 5, opaque: true)
+    .background(.black.opacity(0.8))
+    .frame(height: 180)
+
+// Glassmorphism blur effect
+GlassmorphismBlurView()
+    .frame(width: 300, height: 200)
+```
+
+##### Date
+
+```swift
+// Initialize date with components
+let date = Date(year: 2024, month: 1, day: 15, hour: 12, minute: 30)
+
+// Date comparison
+date.isAfter(anotherDate)  // true/false
+date.isBefore(anotherDate)    // true/false
+date.isSame(as: anotherDate)   // true/false
+
+// Add time
+let tomorrow = date.adding(days: 1)
+let nextHour = date.adding(hours: 1)
+let in30Minutes = date.adding(minutes: 30)
+
+// Remove time
+let yesterday = date.removing(days: 1)
+
+// Get date components
+let year = date.year       // 2024
+let month = date.month      // 1
+let day = date.day         // 15
+let hour = date.hour       // 12
+let minute = date.minute   // 30
+let second = date.second   // 0
+
+// Calculate date difference
+let daysDiff = date.days(from: anotherDate)
+let hoursDiff = date.hours(from: anotherDate)
+let minutesDiff = date.minutes(from: anotherDate)
+
+// Calendar helpers
+let isToday = Calendar.current.isDateToday(date)
+let isThisWeek = Calendar.current.isDateThisWeek(date)
+let isThisMonth = Calendar.current.isDateThisMonth(date)
+
+// DateFormatter
+let formatter = DateFormatter(dateFormat: "yyyy-MM-dd HH:mm:ss")
+let formatted = formatter.string(from: date)
+
+// ISO8601 JSON encoding/decoding
+let encoder = JSONEncoder.iso8601
+let decoder = JSONDecoder.iso8601
+```
+
 ##### NavigationStack
 
 ```swift
@@ -902,6 +1158,72 @@ struct ContentView: View {
         .environment(\.useNavigationStack, .never) // Always use NavigationView (iOS 14-15)
     }
 }
+```
+
+##### OpenUrl
+
+```swift
+// OpenURL - Custom URL open action
+@Environment(\.openURL) var openURL
+
+Button("Open Website") {
+    if let url = URL(string: "https://www.example.com") {
+        openURL(url)
+    }
+}
+
+// With completion handler
+openURL(url) { accepted in
+    print(accepted ? "Success" : "Failure")
+}
+
+// Custom URL handler
+Text("Visit [Example](https://www.example.com)")
+    .environment(\.openURL, Brick.OpenURLAction { url in
+        handleURL(url)
+        return .handled
+    })
+
+// Link - URL link component
+Brick.Link("View Terms", destination: URL(string: "https://www.example.com/TOS.html")!)
+
+// With custom openURL
+Brick.Link("Visit Site", destination: URL(string: "https://www.example.com")!)
+    .environment(\.openURL, Brick.OpenURLAction { url in
+        print("Open \(url)")
+        return .handled
+    })
+
+// Safari - Open in Safari (with SFSafariViewController)
+Brick.OpenURLAction.Result.safari(url)
+
+// With custom configuration
+Brick.OpenURLAction.Result.safari(url) { config in
+    config.prefersReader = true
+    config.barCollapsingEnabled = false
+    config.dismissStyle = .close
+    config.tintColor = .blue
+}
+
+// WebView - WKWebView component
+WebView(url: URL(string: "https://www.example.com")!)
+    .showProgress(true)
+    .setProgressColor(.green)
+    .showRefreshControl(true)
+    .clearBackgroundColor()
+    .setCookies([cookie1, cookie2])
+    .localStorageItem("value", forKey: "key")
+    .getWebViewState($state)
+    .getWebViewObject($webView)
+
+// WebView with JS message handler
+WebView(url: url)
+    .onMessageHandler(name: "handlerName") { body in
+        print("Received: \(body ?? "")")
+    }
+
+// Clean all web data
+WebView.Coordinator.cleanAllWebsiteDataStoreIfNeeded()
 ```
 
 ##### TTextField
@@ -1095,6 +1417,151 @@ Button("Show Loading") {
     .padding(30)
     .background(Color.gray.opacity(0.8))
     .cornerRadius(10)
+}
+
+// Using LoadingManager (programmatic)
+let manager = LoadingManager()
+
+// Add to your root view
+MyRootView()
+    .addLoading(manager)
+
+// Show different types
+manager.text = "Please wait..."
+manager.showLoading()
+
+manager.text = "Loading: 50%"
+manager.progress = 0.5
+manager.showProgress()
+
+manager.text = "Success!"
+manager.showSuccess()
+
+manager.text = "Failed!"
+manager.showFail()
+
+// Hide
+manager.hide()
+
+// Custom styling
+manager.textColor = .white
+manager.textFont = .headline
+manager.accentColor = .blue
+manager.maskColor = .black.opacity(0.5)
+```
+
+##### Keychain
+
+```swift
+// Using KeychainService (recommended)
+let service = KeychainService.shared
+
+// Save values
+service.set("John", forKey: "name")
+service.set(25, forKey: "age")
+service.set(true, forKey: "isEnabled")
+service.set(Data(), forKey: "data")
+
+// Read values
+let name: String? = service.string(forKey: "name")
+let age: Int? = service.integer(forKey: "age")
+let isEnabled: Bool? = service.bool(forKey: "isEnabled")
+let data: Data? = service.data(forKey: "data")
+
+// Check if value exists
+let hasName = service.hasValue(forKey: "name")
+
+// Delete value
+service.removeObject(forKey: "name")
+
+// Delete all keys
+service.removeAllKeys()
+
+// Using KeychainWrapper directly
+let wrapper = KeychainWrapper(serviceName: "com.example.app")
+
+wrapper.set("secret", forKey: "password")
+let password = wrapper.string(forKey: "password")
+
+// With accessibility
+wrapper.set("data", forKey: "key", with: .whenUnlocked)
+
+// Clear entire keychain (use with caution!)
+KeychainWrapper.wipeKeychain()
+```
+
+##### Language
+
+```swift
+// Using LanguageSettings (singleton)
+let settings = LanguageSettings.shared
+
+// Get current language
+let currentLanguage = settings.selectedLanguage
+
+// Set language
+settings.selectedLanguage = .en
+settings.selectedLanguage = .zhHans
+
+// Get device language
+let deviceLang = settings.deviceLanguage
+
+// Check layout direction (for RTL languages like Arabic, Hebrew)
+let isRTL = settings.isRightToLeft
+let layoutDirection = settings.layout
+
+// Using LanguageView to wrap content
+LanguageView {
+    VStack {
+        Text("Hello")
+        Text("World")
+    }
+}
+// This will automatically apply the correct locale and layout direction
+
+// String localization
+let localizedString = "hello_world".localized
+let formattedString = "greeting_message".localized.with("John", "Hello")
+
+// Get available languages
+let languages = Localize.getList()
+let available = Localize.availableLanguages()
+
+// Select language view (navigation ready)
+NavigationStack {
+    SelectLanguageView()
+}
+```
+
+##### List
+
+```swift
+// Empty placeholder - show view when list is empty
+@State private var items: [String] = []
+
+List {
+    ForEach(items, id: \.self) { item in
+        Text(item)
+    }
+}
+.emptyPlaceholder(items) {
+    VStack {
+        Image(systemName: "tray")
+            .font(.largeTitle)
+        Text("No items")
+            .foregroundColor(.secondary)
+    }
+}
+
+// Load more - trigger when scrolled into view (place in LazyVStack)
+LazyVStack {
+    ForEach(items, id: \.self) { item in
+        Text(item)
+    }
+    LoadMoreView {
+        // Load more items when reached
+        loadMoreItems()
+    }
 }
 ```
 
@@ -1558,6 +2025,94 @@ CustomSegmentPicker(
 )
 ```
 
+##### Others
+
+```swift
+// FlipView - 3D flip card
+@State private var isFlipped = false
+
+FlipView(
+    front: Color.green,
+    back: Color.red,
+    isFlipped: $isFlipped,
+    flipDuration: 0.5,
+    tapDirection: .right,
+    swipeDirections: [.left, .right, .up, .down]
+)
+
+// MarqueeText - Scrolling text
+MarqueeText("This is a long text that will scroll automatically")
+
+MarqueeText("Custom speed", spacing: 10, speed: 2.0)
+
+// RadioButton - Radio button with label
+RadioButton(isSelected: false, label: "Option 1") { isSelected in
+    print("Selected: \(isSelected)")
+}
+
+// OtpView - OTP verification code input
+OtpView(activeColor: .blue, inActiveColor: .gray, length: 4) { code in
+    print("Entered code: \(code)")
+}
+
+// ExpandText - Expandable text
+ExpandText(lineLimit: 2, animation: .easeInOut(duration: 0.2)) {
+    Text("This is a long text that will be cropped to 2 lines initially. Tap to expand.")
+} moreView: { action in
+    Button(" ... more", action: action)
+}
+
+// CountDownTimerText - Countdown timer
+CountDownTimerText(timeCount: 60, timeUnit: "s", titleWhenIdle: "Get Code", titleWhenFinished: "Send Again", mode: .manual) {
+    return true  // Return true to start countdown
+}
+
+// AutoHeightTextEditor - Auto height text editor
+@State private var text = ""
+@State private var placeholder = "Enter text..."
+@FocusState private var isFocused: Bool
+
+AutoHeightTextEditor(
+    inputText: $text,
+    placeholder: $placeholder,
+    textFocused: $isFocused
+)
+
+// RightArrow - Add right chevron arrow
+Text("Settings")
+    .addRightArrow()
+
+// RichText - Rich text with separator
+Text(separator: " ") {
+    Text("Hello")
+        .font(.headline)
+        .foregroundColor(.red)
+    Text("World")
+        .fontWeight(.light)
+}
+
+// AnyButtonStyle - Custom button style
+Button("Click me") {}
+    .buttonStyle { config in
+        config.label
+            .padding()
+            .background(config.isPressed ? Color.gray : Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+    }
+
+// AppColorScheme - App theme management
+@StateObject var colorScheme = AppColorScheme()
+colorScheme.darkModeSetting = .dark  // or .light, .system
+
+// AnyViewModifier - Type-erased view modifier
+let modifier = AnyViewModifier { content in
+    content
+        .padding()
+        .background(Color.blue)
+}
+```
+
 ##### ScrollStack
 
 ```swift
@@ -1617,6 +2172,58 @@ HScrollGrid.singleRow(height: 80, spacing: 12) {
             .frame(width: 100)
     }
 }
+```
+
+##### Gestures
+
+```swift
+// Gesture button (not for ScrollView)
+@State private var isPressed = false
+
+GestureButton(
+    isPressed: $isPressed,
+    pressAction: { print("Pressed") },
+    releaseInsideAction: { print("Released inside") },
+    releaseOutsideAction: { print("Released outside") },
+    longPressDelay: 0.8,
+    longPressAction: { print("Long pressed") },
+    doubleTapAction: { print("Double tapped") },
+    repeatAction: { print("Repeat") },
+    label: { isPressed in
+        Text("Button")
+            .foregroundColor(isPressed ? .gray : .white)
+            .scaleEffect(isPressed ? 0.9 : 1.0)
+    }
+)
+
+// ScrollView gesture button (works inside ScrollView)
+ScrollView {
+    LazyVStack {
+        ScrollViewGestureButton(
+            isPressed: $isPressed,
+            pressAction: { print("Pressed in scroll") },
+            releaseInsideAction: { print("Released") },
+            label: { isPressed in
+                Text("Scroll Button")
+            }
+        )
+    }
+}
+
+// Swipe gesture
+.onSwipeGesture(
+    maximumTime: 1,
+    minimumDistance: 10,
+    up: { print("Swiped up") },
+    down: { print("Swiped down") },
+    left: { print("Swiped left") },
+    right: { print("Swiped right") }
+)
+
+// Gesture button defaults
+GestureButtonDefaults.longPressDelay = 1.0
+GestureButtonDefaults.doubleTapTimeout = 0.2
+GestureButtonDefaults.repeatDelay = 1.0
 ```
 
 ### Utilities - Core Utilities

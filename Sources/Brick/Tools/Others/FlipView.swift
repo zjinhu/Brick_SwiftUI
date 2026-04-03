@@ -8,19 +8,32 @@
 
 import SwiftUI
 
+/// 翻转方向/Flip direction
+/// 定义翻转动画的方向。/Defines the direction of flip animation.
 public enum FlipDirection {
     
-    case left, right, up, down
+    /// 向左翻转/Flip left
+    case left
+    /// 向右翻转/Flip right
+    case right
+    /// 向上翻转/Flip up
+    case up
+    /// 向下翻转/Flip down
+    case down
 }
 
-/// This view has a front and a back view and can be flipped
-/// to show the other side when it's tapped, swiped, or both.
-///
-/// For now, this view only supports horizontal flips, since
-/// flipping views both horizontally and vertically can mess
-/// it up, since the view can become upside down.
+/// 翻转视图/Flip view
+/// 具有正面和背面视图的组件，可通过点击或滑动翻转显示另一面。/Component with front and back views that can be flipped by tap or swipe.
 public struct FlipView<FrontView: View, BackView: View>: View {
     
+    /// 初始化翻转视图/Initialize flip view
+    /// - Parameters:
+    ///   - front: 正面视图/Front view
+    ///   - back: 背面视图/Back view
+    ///   - isFlipped: 翻转状态绑定/Flip state binding
+    ///   - flipDuration: 翻转动画时长，默认0.3/Flip animation duration, default 0.3
+    ///   - tapDirection: 点击翻转方向，默认.right/Tap flip direction, default .right
+    ///   - swipeDirections: 支持的滑动翻转方向数组/Supported swipe flip directions array
     public init(
         front: FrontView,
         back: BackView,
@@ -37,12 +50,18 @@ public struct FlipView<FrontView: View, BackView: View>: View {
         self.swipeDirections = swipeDirections
     }
     
+    /// 翻转状态绑定/Flip state binding
     @Binding private var isFlipped: Bool
     
+    /// 正面视图/Front view
     private let front: FrontView
+    /// 背面视图/Back view
     private let back: BackView
+    /// 翻转动画时长/Flip animation duration
     private let flipDuration: Double
+    /// 支持的滑动翻转方向/Supported swipe flip directions
     private let swipeDirections: [FlipDirection]
+    /// 点击翻转方向/Tap flip direction
     private let tapDirection: FlipDirection
     
     @State

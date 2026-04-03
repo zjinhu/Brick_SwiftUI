@@ -8,17 +8,20 @@
 import Foundation
 
 /**
+ 手势重复计时器/Repeat gesture timer
+ 用于处理手势上的重复操作。
  This class is used to handle repeating actions on a gesture.
-
+ 
+ shared实例可用于只能同时按下一个按钮来重复执行特定操作的情况。
  The ``shared`` instance can be used if only a single button
  can be pressed to repeat a certain action at any given time.
  */
 public class RepeatGestureTimer {
 
-    /// Create a repeat gesture timer.
+    /// 创建重复手势计时器/Create a repeat gesture timer.
     ///
     /// - Parameters:
-    ///   - repeatInterval: The repeat time interval.
+    ///   - repeatInterval: 重复时间间隔/The repeat time interval.
     public init(
         repeatInterval: TimeInterval = 0.4
     ) {
@@ -28,10 +31,10 @@ public class RepeatGestureTimer {
     deinit { stop() }
 
     
-    /// A shared singleton instance.
+    /// 共享单例实例/A shared singleton instance.
     @MainActor public static let shared = RepeatGestureTimer()
 
-    /// The repeat time interval.
+    /// 重复时间间隔/The repeat time interval.
     public var repeatInterval: TimeInterval
 
 
@@ -42,16 +45,16 @@ public class RepeatGestureTimer {
 
 public extension RepeatGestureTimer {
 
-    /// The elapsed time since the timer was started.
+    /// 计时器启动后的流逝时间/The elapsed time since the timer was started.
     var duration: TimeInterval? {
         guard let date = startDate else { return nil }
         return Date().timeIntervalSince(date)
     }
 
-    /// Whether or not the timer is active.
+    /// 计时器是否处于激活状态/Whether or not the timer is active.
     var isActive: Bool { timer != nil }
 
-    /// Start the repeat gesture timer with a certain action.
+    /// 启动重复手势计时器/Start the repeat gesture timer with a certain action.
     func start(action: @escaping () -> Void) {
         if isActive { return }
         stop()
@@ -61,7 +64,7 @@ public extension RepeatGestureTimer {
             repeats: true) { _ in action() }
     }
 
-    /// Stop the repeat gesture timer.
+    /// 停止重复手势计时器/Stop the repeat gesture timer.
     func stop() {
         timer?.invalidate()
         timer = nil

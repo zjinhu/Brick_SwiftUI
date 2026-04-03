@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// Loading视图/Loading view
+/// 默认的Loading显示视图。/Default loading display view.
 struct LoadingView: View {
     @EnvironmentObject var manager: LoadingManager
     

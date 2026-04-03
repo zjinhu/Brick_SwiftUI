@@ -7,12 +7,23 @@
 
 import SwiftUI
 
+/// Loading容器视图/Loading container view
+/// - Content: 内容视图类型/Content view type
 struct ContainerView<Content: View>: View {
+    /// 内容构建器类型/Content builder type
     typealias ContentBuilder = (_ isActive: Bool) -> Content
+    /// 内容构建器/Content builder
     private let content: ContentBuilder
-    //绑定显示状态
+    /// 绑定显示状态/Bound display state
     @Binding private var isActive: Bool
+    /// Loading管理器/Loading manager
     let manager: LoadingManager
+    
+    /// 初始化容器视图/Initialize container view
+    /// - Parameters:
+    ///   - isActive: 显示状态绑定/Display state binding
+    ///   - manager: Loading管理器/Loading manager
+    ///   - content: 内容视图构建器/Content view builder
     init(isActive: Binding<Bool>,
          manager: LoadingManager,
          @ViewBuilder content: @escaping ContentBuilder ) {
@@ -52,5 +63,5 @@ struct ContainerView<Content: View>: View {
         .edgesIgnoringSafeArea(.all)
         .opacity(!isActive ? 0 : 1)
     }
- 
+  
 }

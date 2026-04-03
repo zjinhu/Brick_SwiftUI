@@ -7,17 +7,32 @@
 
 import SwiftUI
 #if os(iOS)
+
+/// 自动高度文本编辑器/Auto height text editor
+/// 根据内容自动调整高度的文本编辑器，支持占位符。/Text editor that auto-adjusts height based on content, with placeholder support.
 @available(iOS 15.0, *)
 public struct AutoHeightTextEditor: View {
     
     @State private var textEditorHeight : CGFloat = 20
+    /// 输入文本绑定/Input text binding
     @Binding var inputText: String
+    /// 占位符文本绑定/Placeholder text binding
     @Binding var placeholder: String
+    /// 焦点状态绑定/Focus state binding
     @FocusState.Binding var isTextEditorFocused: Bool
     
+    /// 背景颜色/Background color
     let backgroundColor: Color
+    /// 文本颜色/Text color
     let textColor: Color
     
+    /// 初始化自动高度文本编辑器/Initialize auto height text editor
+    /// - Parameters:
+    ///   - inputText: 输入文本绑定/Input text binding
+    ///   - placeholder: 占位符文本绑定/Placeholder text binding
+    ///   - textFocused: 焦点状态绑定/Focus state binding
+    ///   - textColor: 文本颜色，默认.primary/Text color, default .primary
+    ///   - backgroundColor: 背景颜色，默认灰色半透明/Background color, default gray opacity
     public init(inputText: Binding<String>,
                 placeholder: Binding<String>,
                 textFocused: FocusState<Bool>.Binding,
@@ -74,6 +89,7 @@ public struct AutoHeightTextEditor: View {
     }
 }
 
+/// 视图高度偏好键/View height preference key
 struct ViewHeightKey: PreferenceKey {
     static var defaultValue: CGFloat { 0 }
     static func reduce(value: inout Value, nextValue: () -> Value) {

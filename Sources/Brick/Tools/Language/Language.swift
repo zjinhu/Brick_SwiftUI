@@ -7,12 +7,17 @@
 
 import Foundation
 
+/// 语言/Language
+/// 语言结构体，包含国家名称和语言类型。/Language struct containing country name and language type.
 public struct Language : Identifiable{
     public let id = UUID()
+    /// 国家/地区名称/Country/Region name
     let country: String
+    /// 语言类型/Language type
     let localize: Languages
 }
 
+/// 支持的语言列表/Supported languages list
 public enum Languages: String {
     case ar, en, nl, ja, ko, vi, ru, sv, fr, es, pt, it, de, da, fi, nb, tr, el, id,
          ms, th, hi, hu, pl, cs, sk, uk, hr, ca, ro, he, ur, fa, ku, arc, sl, ml, am
@@ -28,19 +33,26 @@ public enum Languages: String {
     case zhHK = "zh-HK"
     case es419 = "es-419"
     case ptPT = "pt-PT"
+    /// 设备语言/Device language
     case deviceLanguage
 }
 
+/// 本地化工具/Localization utility
 public struct Localize {
+    /// 获取应用可用语言列表/Get list of available languages for the app
+    /// - Parameter excludeBase: 是否排除Base语言/Whether to exclude Base language
+    /// - Returns: 可用语言代码数组/Array of available language codes
     public static func availableLanguages(_ excludeBase: Bool = false) -> [String] {
         var availableLanguages = Bundle.main.localizations
-        // If excludeBase = true, don't include "Base" in available languages
+        // 如果excludeBase为true，不包含Base/If excludeBase = true, don't include "Base" in available languages
         if let indexOfBase = availableLanguages.firstIndex(of: "Base") , excludeBase == true {
             availableLanguages.remove(at: indexOfBase)
         }
         return availableLanguages
     }
     
+    /// 获取语言列表/Get language list
+    /// - Returns: 语言对象数组/Array of Language objects
     public static func getList() -> [Language]{
         var array: [Language] = []
         for local in Bundle.main.localizations{

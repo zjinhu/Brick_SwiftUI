@@ -7,18 +7,18 @@
 
 import SwiftUI
  
+/// 带动画完成的 withAnimation 闭包/withAnimation closure with completion callback
+/// - Parameters:
+///   - animation: 动画/Animation
+///   - delay: 延迟回调时间,应与动画执行时长一致/Delay for callback, should match animation duration
+///   - body: 执行体/Body to execute
+///   - completion: 结束回调/Completion callback
 @available(iOS, deprecated: 17.0)
 @available(macOS, deprecated: 14.0)
 @available(tvOS, deprecated: 17.0)
 @available(watchOS, deprecated: 10.0)
 @inline(__always)
 @_disfavoredOverload
-/// 动画执行完成回调
-/// - Parameters:
-///   - animation: 动画
-///   - delay: 延迟回调时间,应与动画执行时长一致即可
-///   - body:
-///   - completion: 结束回调
 @MainActor
 public func withAnimation<Result>(_ animation: Animation = .default,
                                   after delay: TimeInterval = 0,
@@ -30,6 +30,12 @@ public func withAnimation<Result>(_ animation: Animation = .default,
                         completion: completion)
 }
 
+/// 带事务完成的 withTransaction 闭包/withTransaction closure with completion callback
+/// - Parameters:
+///   - transaction: 事务/Transaction
+///   - delay: 延迟时间/Delay time
+///   - body: 执行体/Body to execute
+///   - completion: 结束回调/Completion callback
 @available(iOS, deprecated: 17.0)
 @available(macOS, deprecated: 14.0)
 @available(tvOS, deprecated: 17.0)
@@ -114,6 +120,7 @@ func _withoutAnimation<T>(_ flag: Bool = true, _ body: () -> T) -> T {
         body()
     }
 }
+
 @MainActor
 func _withoutAppKitOrUIKitAnimation(_ flag: Bool = true, _ body: () -> ()) {
     guard flag else {
@@ -128,6 +135,7 @@ func _withoutAppKitOrUIKitAnimation(_ flag: Bool = true, _ body: () -> ()) {
     body()
     #endif
 }
+
 /// Returns the result of recomputing the view’s body with animations disabled.
 @MainActor
 func withoutAnimation(_ flag: Bool = true, _ body: () -> ()) {

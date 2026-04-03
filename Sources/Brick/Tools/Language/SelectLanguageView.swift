@@ -7,8 +7,11 @@
 
 import SwiftUI
 
+/// 选择语言视图/Select language view
+/// 显示可用语言列表并允许用户选择。/Shows available languages list and allows user to select.
 public struct SelectLanguageView: View {
 
+    /// 初始化选择语言视图/Initialize select language view
     public init() { }
     
     public var body: some View {

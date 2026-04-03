@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// 失败视图/Fail view
+/// 失败状态显示视图。/Failed status display view.
 struct FailView: View {
     @EnvironmentObject var manager: LoadingManager
     @State private var isDrawn = false
@@ -18,7 +20,6 @@ struct FailView: View {
                 .animation(.easeInOut(duration: 0.5), value: UUID())
                 .frame(width: 50, height: 50)
                 .environment(\.sizeCategory, .small)
-
 
             
             if let status = manager.text{
@@ -38,6 +39,8 @@ struct FailedView_Previews: PreviewProvider {
     }
 }
 
+/// X形状/X shape
+/// 叉号图标形状。/X icon shape.
 struct XShape: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()

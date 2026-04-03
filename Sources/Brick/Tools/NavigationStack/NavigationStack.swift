@@ -153,6 +153,10 @@ extension Brick where Wrapped == Any {
 #endif
         }
         
+        /// 初始化导航栈/Initialize navigation stack
+        /// - Parameters:
+        ///   - path: 导航路径绑定/Navigation path binding
+        ///   - content: 根视图内容/Root view content
         public init(path: Binding<[Data]>?, @ViewBuilder content: () -> Content) {
             _externalTypedPath = path ?? .constant([])
             self.content = content()

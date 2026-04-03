@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// 步骤视图/Step view
+/// 带进度条的Loading视图。/Loading view with progress bar.
 struct StepView: View {
     @EnvironmentObject var manager: LoadingManager
     
@@ -35,8 +37,12 @@ struct StepView_Previews: PreviewProvider {
     }
 }
 
+/// 仪表盘进度样式/Gauge progress style
+/// 自定义ProgressViewStyle显示进度百分比。/Custom ProgressViewStyle showing progress percentage.
 struct GaugeProgressStyle: ProgressViewStyle {
+    /// 描边颜色/Stroke color
     var strokeColor = Color.blue
+    /// 描边宽度/Stroke width
     var strokeWidth = 8.0
     
     func makeBody(configuration: Configuration) -> some View {

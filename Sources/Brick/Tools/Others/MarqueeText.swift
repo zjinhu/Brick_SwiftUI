@@ -7,15 +7,21 @@
 
 import SwiftUI
 
+/// 跑马灯文本视图/Marquee text view
+/// 文本超出宽度时自动滚动显示。/Automatically scrolls text when it exceeds width.
 @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 public struct MarqueeText: View {
 
+    /// 文本内容/Text content
     public var text: Text
+    /// 两侧间距/Spacing on both sides
     public var spacing: CGFloat
+    /// 滚动速度/Scroll speed
     public var speed: Double
 
     @State private var startAt: Date = .now
 
+    /// 使用字符串初始化/Initialize with string
     @_disfavoredOverload
     public init<S: StringProtocol>(
         _ text: S,
@@ -29,6 +35,7 @@ public struct MarqueeText: View {
         )
     }
 
+    /// 使用本地化字符串初始化/Initialize with localized string
     public init(
         _ text: LocalizedStringKey,
         spacing: CGFloat = 8,
@@ -41,6 +48,7 @@ public struct MarqueeText: View {
         )
     }
 
+    /// 使用Text初始化/Initialize with Text
     public init(
         _ text: Text,
         spacing: CGFloat = 8,

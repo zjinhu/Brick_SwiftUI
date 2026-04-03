@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+/// 富文本构建器/Rich text builder
+/// 用于构建富文本的ArrayBuilder别名。/ArrayBuilder alias for building rich text.
 public typealias RichText = ArrayBuilder<Text>
 
+/// Text扩展/Rich text init/Text extension for rich text init
 extension Text {
     
+    /// 使用分隔符初始化文本/Initialize text with separator
     @_disfavoredOverload
         @inlinable
         public init<S: StringProtocol>(
@@ -20,6 +24,7 @@ extension Text {
             self.init(separator: Text(separator), blocks: blocks)
         }
 
+    /// 使用本地化分隔符初始化文本/Initialize text with localized separator
         @inlinable
         public init(
             separator: LocalizedStringKey,
@@ -28,6 +33,7 @@ extension Text {
             self.init(separator: Text(separator), blocks: blocks)
         }
 
+    /// 使用Text分隔符初始化文本/Initialize text with Text separator
         @inlinable
         public init(
             separator: Text,
@@ -49,15 +55,19 @@ extension Text {
         }
 }
 
+/// 数组构建器/Array builder
+/// ResultBuilder用于构建元素数组。/ResultBuilder for building arrays of elements.
 @frozen
 @resultBuilder
 public struct ArrayBuilder<Element> {
 
+    /// 构建空块/Build empty block
     @inlinable
     public static func buildBlock() -> [Optional<Element>] {
         []
     }
 
+    /// 构建首个块/Build first block
     @inlinable
     public static func buildPartialBlock(
         first: [Optional<Element>]
@@ -65,6 +75,7 @@ public struct ArrayBuilder<Element> {
         first
     }
 
+    /// 累加下一个块/Accumulate next block
     @inlinable
     public static func buildPartialBlock(
         accumulated: [Optional<Element>],
@@ -73,6 +84,7 @@ public struct ArrayBuilder<Element> {
         accumulated + next
     }
 
+    /// 构建表达式/Build expression
     @inlinable
     public static func buildExpression(
         _ expression: Element
@@ -80,6 +92,7 @@ public struct ArrayBuilder<Element> {
         [expression]
     }
 
+    /// 构建条件分支(first)/Build conditional branch (first)
     @inlinable
     public static func buildEither(
         first component: [Optional<Element>]
@@ -87,6 +100,7 @@ public struct ArrayBuilder<Element> {
         component
     }
 
+    /// 构建条件分支(second)/Build conditional branch (second)
     @inlinable
     public static func buildEither(
         second component: [Optional<Element>]
@@ -94,6 +108,7 @@ public struct ArrayBuilder<Element> {
         component
     }
 
+    /// 构建可选值/Build optional value
     @inlinable
     public static func buildOptional(
         _ component: [Optional<Element>]?
@@ -101,6 +116,7 @@ public struct ArrayBuilder<Element> {
         component ?? []
     }
 
+    /// 构建有限可用性/Build limited availability
     @inlinable
     public static func buildLimitedAvailability(
         _ component: [Optional<Element>]
@@ -108,6 +124,7 @@ public struct ArrayBuilder<Element> {
         component
     }
 
+    /// 构建数组/Build array
     @inlinable
     public static func buildArray(
         _ components: [Optional<Element>]
@@ -115,6 +132,7 @@ public struct ArrayBuilder<Element> {
         components
     }
 
+    /// 构建块/Build block
     @inlinable
     public static func buildBlock(
         _ components: [Optional<Element>]...
@@ -122,6 +140,7 @@ public struct ArrayBuilder<Element> {
         components.flatMap { $0 }
     }
 
+    /// 构建最终结果/Build final result
     public static func buildFinalResult(
         _ component: [Optional<Element>]
     ) -> [Element] {

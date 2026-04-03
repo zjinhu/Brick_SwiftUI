@@ -9,16 +9,22 @@
 import SwiftUI
 
 /**
+ 滚动视图手势按钮/Scroll view gesture button
+ 这个按钮支持在ScrollView中以不同手势触发操作。
  This button supports triggering different gestures in a way
  that works within a `ScrollView`.
  
- This button does npt block scroll view gesture. The code is
+ 不会阻塞滚动视图手势。代码经过大量测试，不会影响滚动。
+ This button does not block scroll view gesture. The code is
  the result of much trial & error and has been tested to not
  affect scrolling.
-
+ 
+ 如果不需要在滚动视图中使用，请使用GestureButton替代。
  If you don't need to use a scroll view, you should consider
- using a ``GestureButton`` instead.-
-
+ using a ``GestureButton`` instead.
+ 
+ 注意：此视图使用ButtonStyle使手势生效，因此不能再应用其他样式。
+ 但可以使用传递给label builder的isPressed值来配置按下状态的按钮样式。
  Note that the view uses an underlying `ButtonStyle` to make
  gestures work. It can thus not apply another style, but you
  can use the `isPressed` value that is passed to the `label`
@@ -26,25 +32,24 @@ import SwiftUI
  */
 public struct ScrollViewGestureButton<Label: View>: View {
 
-    /// Create a gesture button.
+    /// 初始化滚动视图手势按钮/Initialize scroll view gesture button
     ///
     /// - Parameters:
-    ///   - isPressed: The binding used to track pressed state, if any.
-    ///   - pressAction: An action to trigger when the button is pressed, if any.
-    ///   - releaseInsideAction: An action to trigger when the button is released inside, if any.
-    ///   - releaseOutsideAction: An action to trigger when the button is released outside, if any.
-    ///   - longPressDelay: The time it takes for a press to count as a long press, by default ``GestureButtonDefaults/longPressDelay``.
-    ///   - longPressAction: An action to trigger when the button is long pressed, if any.
-    ///   - doubleTapTimeout: The max time between two taps to count as a double tap, by default ``GestureButtonDefaults/doubleTapTimeout``.
-    ///   - doubleTapAction: An action to trigger when the button is double tapped, if any.
-    ///   - repeatDelay: The time it takes for a press to count as a repeat trigger, by default ``GestureButtonDefaults/repeatDelay``.
-    ///   - repeatTimer: The repeat timer to use for the repeat action, by default ``RepeatGestureTimer/shared``.
-    ///   - repeatAction: An action to repeat while the button is being pressed, if any.
-    ///   - dragStartAction: An action to trigger when a drag gesture starts.
-    ///   - dragAction: An action to trigger when a drag gesture changes.
-    ///   - dragEndAction: An action to trigger when a drag gesture ends.
-    ///   - endAction: An action to trigger when a button gesture ends, if any.
-    ///   - label: The button label.
+    ///   - isPressed: 按压状态绑定，用于跟踪按压状态/Pressed state binding to track pressed state
+    ///   - pressAction: 按压时触发的操作/Action to trigger when button is pressed
+    ///   - releaseInsideAction: 在按钮内部释放时触发的操作/Action to trigger when button is released inside
+    ///   - releaseOutsideAction: 在按钮外部释放时触发的操作/Action to trigger when button is released outside
+    ///   - longPressDelay: 按压被视为长按所需的时间，默认为GestureButtonDefaults.longPressDelay/The time for press to count as long press
+    ///   - longPressAction: 长按时触发的操作/Action to trigger on long press
+    ///   - doubleTapTimeout: 两次点击被视为双击的最大时间间隔，默认为GestureButtonDefaults.doubleTapTimeout/Max time between taps for double tap
+    ///   - doubleTapAction: 双击时触发的操作/Action to trigger on double tap
+    ///   - repeatTimer: 用于重复操作的计时器，默认为RepeatGestureTimer.shared/Repeat timer for repeat action
+    ///   - repeatAction: 按压时重复触发的操作/Action to repeat while button is pressed
+    ///   - dragStartAction: 拖动手势开始时触发的操作/Action to trigger when drag gesture starts
+    ///   - dragAction: 拖动手势变化时触发的操作/Action to trigger when drag gesture changes
+    ///   - dragEndAction: 拖动手势结束时触发的操作/Action to trigger when drag gesture ends
+    ///   - endAction: 按钮手势结束时触发的操作/Action to trigger when button gesture ends
+    ///   - label: 按钮标签视图/Button label view
     public init(
         isPressed: Binding<Bool>? = nil,
         pressAction: Action? = nil,
@@ -82,8 +87,11 @@ public struct ScrollViewGestureButton<Label: View>: View {
         ))
     }
 
+    /// 无参数操作类型/Type for no-parameter action
     public typealias Action = () -> Void
+    /// 拖动手势值操作类型/Type for drag gesture value action
     public typealias DragAction = (DragGesture.Value) -> Void
+    /// 标签构建器类型/Type for label builder
     public typealias LabelBuilder = (_ isPressed: Bool) -> Label
 
     var isPressedBinding: Binding<Bool>

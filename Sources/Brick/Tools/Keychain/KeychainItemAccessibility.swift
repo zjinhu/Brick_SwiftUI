@@ -12,9 +12,16 @@ protocol KeychainAttrRepresentable {
 }
 
 /**
+ 钥匙串项目可访问性/Keychain item accessibility
+ 定义钥匙串项目的各种访问范围。
  This enum defines the various access scopes that a keychain
  item can use. The names follow certain conventions that are
  defined in the list below:
+ 
+ - afterFirstUnlock: 设备重启后不可访问，直到用户首次解锁后可用。此选项适用于需要在后台应用或进程中可用的项目。
+ - whenPasscodeSet: 只有在用户已解锁设备且设置了设备密码时才可访问。没有密码则无法在设备上存储项目。
+ - whenUnlocked: 只有在用户解锁设备时才可访问。此选项适用于仅在应用活跃时使用的项目。
+ - *ThisDeviceOnly: 不会包含在加密备份中，因此在从备份恢复应用后将不可用。
  
  * `afterFirstUnlock`
  The attribute cannot be accessed after a restart, until the
@@ -42,12 +49,20 @@ protocol KeychainAttrRepresentable {
 @MainActor
 public enum KeychainItemAccessibility : Sendable{
     
+    /// 首次解锁后可访问/After first unlock
     case afterFirstUnlock
+    /// 首次解锁后可访问，仅限本设备/After first unlock, this device only
     case afterFirstUnlockThisDeviceOnly
+    /// 设置密码后可访问，仅限本设备/When passcode set, this device only
     case whenPasscodeSetThisDeviceOnly
+    /// 解锁时可访问/When unlocked
     case whenUnlocked
+    /// 解锁时可访问，仅限本设备/When unlocked, this device only
     case whenUnlockedThisDeviceOnly
     
+    /// 根据属性值获取可访问性/Get accessibility from attribute value
+    /// - Parameter keychainAttrValue: 钥匙串属性值/Keychain attribute value
+    /// - Returns: 可访问性值或nil/Accessibility value or nil
     static func accessibilityForAttributeValue(_ keychainAttrValue: CFString) -> KeychainItemAccessibility? {
         keychainItemAccessibilityLookup.first { $0.value == keychainAttrValue }?.key
     }

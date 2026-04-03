@@ -1,15 +1,21 @@
 //
-//  SwiftUIView.swift
-//
+//  GlassBlurView.swift
+//  毛玻璃视图/Glass blur view
 //
 //  Created by iOS on 2024/8/23.
 //
 
 import SwiftUI
 #if os(iOS)
+
+/// 玻璃模糊效果视图 (iOS 15+)/Glass blur effect view (iOS 15+)
+/// 提供类似 iOS 毛玻璃的模糊效果/Provides blur effect similar to iOS glass blur
 public struct GlassBlurView: UIViewRepresentable {
+    /// 是否移除所有滤镜/Whether to remove all filters
     public var removeAllFilters: Bool = false
     
+    /// 初始化玻璃模糊视图/Initialize glass blur view
+    /// - Parameter removeAllFilters: 是否移除所有滤镜，仅保留高斯模糊/Whether to remove all filters, keeping only gaussian blur
     public init(removeAllFilters: Bool) {
         self.removeAllFilters = removeAllFilters
     }
@@ -21,7 +27,10 @@ public struct GlassBlurView: UIViewRepresentable {
     public func updateUIView(_ uiView: UIVisualEffectView, context: Context) { }
 }
  
+/// 玻璃模糊内部实现/Glass blur internal implementation
 class GlassBlur: UIVisualEffectView {
+    /// 初始化/Initialize
+    /// - Parameter removeAllFilters: 是否移除所有滤镜/Whether to remove all filters
     init(removeAllFilters: Bool) {
         super.init(effect: UIBlurEffect(style: .systemUltraThinMaterial))
         
@@ -45,6 +54,7 @@ class GlassBlur: UIVisualEffectView {
 }
 
 /***
+ 使用示例/Usage example:
  Rectangle()
      .fill(Color.clear)
      .background{
@@ -55,9 +65,12 @@ class GlassBlur: UIVisualEffectView {
      .frame(height: 180)
  */
 
+/// 玻璃拟态模糊视图/Glassmorphism blur view
+/// 提供磨砂玻璃效果的模糊视图/Provides frosted glass blur effect
 public struct GlassmorphismBlurView: UIViewRepresentable {
     public typealias UIViewType = GlassmorphismView
     
+    /// 初始化玻璃拟态视图/Initialize glassmorphism view
     public init() { }
     
     public func makeUIView(context: Context) -> GlassmorphismView {
@@ -70,12 +83,18 @@ public struct GlassmorphismBlurView: UIViewRepresentable {
     }
 }
 
+/// 玻璃拟态视图内部实现/Glassmorphism view internal implementation
 public class GlassmorphismView: UIView {
 
+    /// 动画控制器/Animator
     private let animator = UIViewPropertyAnimator(duration: 0.5, curve: .linear)
+    /// 模糊视图/Blur view
     private var blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+    /// 动画完成值/Animator completion value
     private var animatorCompletionValue: CGFloat = 0.2
+    /// 背景视图/Background view
     private let backgroundView = UIView()
+    
     public override var backgroundColor: UIColor? {
         get {
             return .clear
@@ -83,6 +102,7 @@ public class GlassmorphismView: UIView {
         set {}
     }
 
+    /// 初始化/Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.initialize()
@@ -104,11 +124,14 @@ public class GlassmorphismView: UIView {
         super.awakeFromNib()
     }
 
+    /// 设置模糊密度/Set blur density
+    /// - Parameter density: 模糊密度 (0-1)/Blur density (0-1)
     func setBlurDensity(with density: CGFloat) {
         self.animatorCompletionValue = (1 - density)
         self.animator.fractionComplete = animatorCompletionValue
     }
 
+    /// 初始化视图/Initialize view
     private func initialize() {
 
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
