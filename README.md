@@ -2429,7 +2429,7 @@ Starting from Xcode 11, the Swift Package Manager is integrated, which is very c
 
 Select `File > Swift Packages > Add Pacakage Dependency` in Xcode's menu bar, and enter in the search bar
 
-`https://github.com/jackiehu/Brick_SwiftUI`, you can complete the integration
+`https://github.com/zjinhu/Brick_SwiftUI`, you can complete the integration
 
 ### Manual Install
 
@@ -2438,19 +2438,19 @@ Brick_SwiftUI also supports manual Install, just drag the Brick_SwiftUI folder i
 
 ## Author
 
-jackiehu, 814030966@qq.com
+zjinhu, 814030966@qq.com
 
 ## More tools to speed up APP development
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=jackiehu&repo=SwiftMediator&theme=radical&locale=cn)](https://github.com/jackiehu/SwiftMediator)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftMediator&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftMediator)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=jackiehu&repo=SwiftBrick&theme=radical&locale=cn)](https://github.com/jackiehu/SwiftBrick)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftBrick&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftBrick)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=jackiehu&repo=SwiftLog&theme=radical&locale=cn)](https://github.com/jackiehu/SwiftLog)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftLog&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftLog)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=jackiehu&repo=SwiftMesh&theme=radical&locale=cn)](https://github.com/jackiehu/SwiftMesh)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftMesh&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftMesh)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=jackiehu&repo=SwiftNotification&theme=radical&locale=cn)](https://github.com/jackiehu/SwiftNotification)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftNotification&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftNotification)
 
 
 ## License

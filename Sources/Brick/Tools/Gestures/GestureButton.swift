@@ -137,6 +137,15 @@ public struct GestureButton<Label: View>: View {
     }
 }
 
+private struct UnsafeSendableAction: @unchecked Sendable {
+
+    let action: () -> Void
+
+    func callAsFunction() {
+        action()
+    }
+}
+
 private extension GestureButton {
 
     var gestureView: some View {
@@ -197,12 +206,13 @@ private extension GestureButton {
 
     func tryTriggerRepeatAfterDelay() {
         guard let action = repeatAction else { return }
+        let sendableAction = UnsafeSendableAction(action: action)
         let date = Date()
         repeatDate = date
         let delay = repeatDelay
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             guard self.repeatDate == date else { return }
-            repeatTimer.start(action: action)
+            repeatTimer.start(action: sendableAction.callAsFunction)
         }
     }
 

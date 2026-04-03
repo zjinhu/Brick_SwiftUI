@@ -2550,7 +2550,7 @@ logger.error("错误: \(error)")
 
 在 Xcode 菜单栏中选择 `File > Swift Packages > Add Package Dependency`，在搜索栏中输入
 
-`https://github.com/jackiehu/Brick_SwiftUI`，即可完成集成
+`https://github.com/zjinhu/Brick_SwiftUI`，即可完成集成
 
 ### 手动安装
 
@@ -2559,19 +2559,19 @@ Brick_SwiftUI 也支持手动安装，只需将 Sources 文件夹中的 Brick_Sw
 
 ## 作者
 
-jackiehu, 814030966@qq.com
+zjinhu, 814030966@qq.com
 
 ## 更多加速 APP 开发的工具
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=jackiehu&repo=SwiftMediator&theme=radical&locale=cn)](https://github.com/jackiehu/SwiftMediator)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftMediator&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftMediator)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=jackiehu&repo=SwiftBrick&theme=radical&locale=cn)](https://github.com/jackiehu/SwiftBrick)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftBrick&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftBrick)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=jackiehu&repo=SwiftLog&theme=radical&locale=cn)](https://github.com/jackiehu/SwiftLog)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftLog&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftLog)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=jackiehu&repo=SwiftMesh&theme=radical&locale=cn)](https://github.com/jackiehu/SwiftMesh)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftMesh&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftMesh)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=jackiehu&repo=SwiftNotification&theme=radical&locale=cn)](https://github.com/jackiehu/SwiftNotification)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftNotification&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftNotification)
 
 
 ## 许可证

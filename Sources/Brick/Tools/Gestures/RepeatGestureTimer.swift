@@ -55,7 +55,7 @@ public extension RepeatGestureTimer {
     var isActive: Bool { timer != nil }
 
     /// 启动重复手势计时器/Start the repeat gesture timer with a certain action.
-    func start(action: @escaping () -> Void) {
+    func start(action: @escaping @Sendable () -> Void) {
         if isActive { return }
         stop()
         startDate = Date()
