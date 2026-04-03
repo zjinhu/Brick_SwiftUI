@@ -2,7 +2,7 @@
 
 [![SPM](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager/)
 ![Xcode 14.0+](https://img.shields.io/badge/Xcode-14.0%2B-blue.svg)
-![iOS 14.0+](https://img.shields.io/badge/iOS-14.0%2B-blue.svg)
+![iOS 16.0+](https://img.shields.io/badge/iOS-16.0%2B-blue.svg)
 ![Swift 5.0+](https://img.shields.io/badge/Swift-5.0%2B-orange.svg)
 ![SwiftUI 3.0+](https://img.shields.io/badge/SwiftUI-3.0%2B-orange.svg)
 
@@ -2442,15 +2442,25 @@ zjinhu, 814030966@qq.com
 
 ## More tools to speed up APP development
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftMediator&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftMediator)
+[![ReadMe Card](https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=zjinhu&repo=SwiftMediator&theme=radical)](https://github.com/zjinhu/SwiftMediator)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftBrick&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftBrick)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftLog&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftLog)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftMesh&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftMesh)
+[![ReadMe Card](https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=zjinhu&repo=SwiftBrick&theme=radical)](https://github.com/zjinhu/SwiftBrick)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=zjinhu&repo=SwiftNotification&theme=radical&locale=cn)](https://github.com/zjinhu/SwiftNotification)
+
+
+[![ReadMe Card](https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=zjinhu&repo=SwiftLog&theme=radical)](https://github.com/zjinhu/SwiftLog)
+
+
+
+[![ReadMe Card](https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=zjinhu&repo=SwiftMesh&theme=radical)](https://github.com/zjinhu/SwiftMesh)
+
+
+
+[![ReadMe Card](https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=zjinhu&repo=SwiftNotification&theme=radical)](https://github.com/zjinhu/SwiftNotification)
+
+
 
 
 ## License
