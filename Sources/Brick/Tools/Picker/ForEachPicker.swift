@@ -8,26 +8,26 @@
 import SwiftUI
 
 /**
- This generic picker lists `Identifiable` items in a SwiftUI
+ 此泛型选择器在 SwiftUI `ForEach` 中列出 `Identifiable` 项目，并将 `selection` 绑定到外部值/This generic picker lists `Identifiable` items in a SwiftUI
  `ForEach` and binds its `selection` to an external value.
  
- You can use this view instead of the native SwiftUI `Picker`
+ 可以使用此视图代替原生 SwiftUI `Picker` 以更好地控制列表项视图/You can use this view instead of the native SwiftUI `Picker`
  to get more control over the list item views. The view uses
  the provided `listItem` to build an item view for each item.
  
- If `dismissAfterPick` is `true` the picker dismisses itself
+ 如果 `dismissAfterPick` 为 `true`，选择器在选择项目后会自动关闭/If `dismissAfterPick` is `true` the picker dismisses itself
  automatically when an item is picked.
  */
 public struct ForEachPicker<Item: Identifiable, ItemView: View>: View {
     
-    /// Create a for-each picker.
+    /// 创建 ForEach 选择器/Create a for-each picker.
     ///
     /// - Parameters:
-    ///   - items: The items to list in the picker.
-    ///   - selection: The current selection.
-    ///   - animatedSelection: Whether or not to animate selections, by default `false`.
-    ///   - dismissAfterPick: Whether or not to dismiss the picker after picking, by default `false`.
-    ///   - listItem: A list view builder.
+    ///   - items: 选择器中列出的项目/The items to list in the picker.
+    ///   - selection: 当前选中项/The current selection.
+    ///   - animatedSelection: 是否动画选中项/Whether or not to animate selections, by default `false`.
+    ///   - dismissAfterPick: 选择后是否关闭选择器/Whether or not to dismiss the picker after picking, by default `false`.
+    ///   - listItem: 列表视图构建器/A list view builder.
     public init(
         items: [Item],
         selection: Binding<Item>,

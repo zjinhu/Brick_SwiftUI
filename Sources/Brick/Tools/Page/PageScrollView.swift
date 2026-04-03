@@ -1,13 +1,24 @@
 #if os(iOS)
 import SwiftUI
 
+/// 分页滚动视图/Paging scroll view
+/// 支持水平分页滚动，支持 iOS 17+ 新 API 和兼容模式/Supports horizontal paging scroll with iOS 17+ new API and compatibility mode
 public struct PageScrollView<Data: RandomAccessCollection, ID: Hashable, Content: View>: View {
     
+    /// 内容视图构建器/Content view builder
     private let content: () -> ForEach<Data, ID, Content>
+    /// 外部边距宽度/Page out width (horizontal padding)
     private let pageOutWidth : CGFloat
+    /// 页面间距/Page padding between items
+    
     private let pagePadding : CGFloat
     
     
+    /// 初始化分页滚动视图/Initialize paging scroll view
+    /// - Parameters:
+    ///   - pageOutWidth: 外部边距宽度/Horizontal padding on both sides
+    ///   - pagePadding: 页面间距/Spacing between pages
+    ///   - content: 内容视图构建器/Content view builder
     public init(pageOutWidth: CGFloat,
                 pagePadding: CGFloat,
                 @ViewBuilder content: @escaping () -> ForEach<Data, ID, Content>) {

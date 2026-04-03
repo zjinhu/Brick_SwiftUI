@@ -743,6 +743,7 @@ Pre-built UI components for rapid development.
 | Feature | Description | Usage |
 |---------|-------------|-------|
 | **NavigationStack** | Navigation stack (iOS 16-) | `NavigationStack { ... }` |
+| **Page** | Paging scroll view with PageIndicator | `PageScrollView(pageOutWidth: 50, pagePadding: 10) { ... }` |
 | **Toast** | Toast messages with position (top/bottom), animation types | `Toast.show("Message")` |
 | **ListPicker** | Generic list picker with sections, single/multi selection | `ListPicker(selection: $value, items: [])` |
 | **TTextField** | Custom styled text field with title, placeholder, error states | `TTextField(title: "Name", text: $text)` |
@@ -794,268 +795,44 @@ CarouselView(
 CarouselAutoScroll.inactive        // No auto scroll
 CarouselAutoScroll.active(5)        // Auto scroll every 5 seconds
 CarouselAutoScroll.defaultActive    // Default 5 seconds
+```
 
-// Use with PageIndicator
-@State private var index = 0
+##### Page
 
-VStack {
-    CarouselView(data, index: $index) { item in
-        item.view
+```swift
+// Basic page scroll view
+@State private var currentPage = 0
+
+PageScrollView(pageOutWidth: 50, pagePadding: 10) {
+    ForEach(0..<10, id: \.self) { index in
+        RoundedRectangle(cornerRadius: 20)
+            .fill(.orange)
+            .overlay {
+                Text("Page \(index)")
+            }
     }
+}
+.frame(height: 228)
+
+// With PageIndicator
+VStack {
+    PageScrollView(pageOutWidth: 40, pagePadding: 20) {
+        ForEach(bannerItems) { item in
+            BannerView(item: item)
+        }
+    }
+    .frame(height: 200)
     
-    PageIndicator(
-        currentIndex: index,
-        totalCount: data.count
+    PageIndicatorView(
+        numPages: bannerItems.count,
+        currentPage: $currentPage,
+        height: 8,
+        currentWidth: 20,
+        spacing: 8,
+        color: .white
     )
 }
-```
-
-##### Toast
-
-```swift
-// Basic toast with CustomToast
-@State private var showToast = false
-
-VStack {
-    Button("Show Toast") {
-        showToast = true
-    }
-}
-.toast(isPresented: $showToast, position: .top, animation: .fade, duration: 2.0) {
-    Text("Hello World")
-        .padding()
-        .background(Color.black.opacity(0.8))
-        .foregroundColor(.white)
-        .cornerRadius(10)
-}
-
-// AlertToast with display modes
-@State private var showAlert = false
-
-// Alert mode (center popup)
-VStack {
-    Button("Show Alert") {
-        showAlert = true
-    }
-}
-.toast(isPresented: $showAlert, duration: 2) {
-    AlertToast(
-        displayMode: .alert,
-        type: .systemImage("checkmark.circle.fill", .green),
-        title: "Success",
-        subTitle: "Operation completed successfully"
-    )
-}
-
-// HUD mode
-.toast(isPresented: $showHUD, duration: 2) {
-    AlertToast(
-        displayMode: .hud,
-        type: .systemImage("star.fill", .orange),
-        title: "Loading...",
-        subTitle: "Please wait"
-    )
-}
-
-// Banner mode (top/bottom slide)
-.toast(isPresented: $showBanner, duration: 2) {
-    AlertToast(
-        displayMode: .banner(.slide),
-        type: .systemImage("info.circle.fill", .blue),
-        title: "New Message",
-        subTitle: "You have a new notification"
-    )
-}
-
-// AlertToast types
-AlertToast(displayMode: .alert, type: .systemImage("heart.fill", .red))
-AlertToast(displayMode: .alert, type: .image("customImage", .blue))
-AlertToast(displayMode: .alert, type: .regular)
-AlertToast(displayMode: .alert, type: .loading)
-
-// Custom styling
-AlertToast(
-    displayMode: .hud,
-    type: .systemImage("star.fill", .orange),
-    title: "Custom",
-        style: .style(
-            backgroundColor: .black.opacity(0.9),
-            titleColor: .white,
-            subTitleColor: .gray,
-            titleFont: .headline,
-            subTitleFont: .caption
-        )
-    )
-}
-```
-
-##### ToastManager
-
-```swift
-// Basic ToastManager usage
-@StateObject private var toastManager = ToastManager()
-
-VStack {
-    Button("Show Toast") {
-        toastManager.showText("Hello World")
-    }
-}
-.addToast(toastManager)
-
-// Custom configuration
-@StateObject private var customToast = ToastManager(position: .top)
-
-customToast.duration = 5.0
-customToast.padding = 20
-
-Button("Show Custom Toast") {
-    customToast.show {
-        VStack {
-            Image(systemName: "checkmark.circle.fill")
-                .foregroundColor(.green)
-            Text("Success!")
-                .font(.headline)
-        }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(10)
-        .shadow(radius: 5)
-    }
-}
-.addToast(customToast)
-
-// Manual dismiss with callback
-Button("Show and Dismiss") {
-    toastManager.show {
-        Text("Auto dismiss in 3 seconds")
-            .padding()
-            .background(Color.black.opacity(0.8))
-            .foregroundColor(.white)
-            .cornerRadius(8)
-    }
-} onTap: {
-    toastManager.dismiss {
-        print("Toast dismissed!")
-    }
-}
-
-// Different positions
-@StateObject private var topToast = ToastManager(position: .top)
-@StateObject private var bottomToast = ToastManager(position: .bottom)
-
-Button("Top Toast") {
-    topToast.showText("Appears from top")
-}
-.addToast(topToast)
-
-Button("Bottom Toast") {
-    bottomToast.showText("Appears from bottom")
-}
-.addToast(bottomToast)
-
-// MessageView customization
-toastManager.show {
-    MessageView(text: "Simple message")
-        .padding(15)
-        .background(Color.blue.opacity(0.9))
-        .cornerRadius(12)
-}
-```
-
-##### OpenUrl
-
-```swift
-// OpenURL action
-@Environment(\.openURL) private var openURL
-
-Button("Open URL") {
-    if let url = URL(string: "https://example.com") {
-        openURL(url)
-    }
-}
-
-// With completion handler
-openURL(url) { accepted in
-    print(accepted ? "Opened successfully" : "Failed to open")
-}
-
-// Custom URL handling
-Text("Visit [Example](https://example.com)")
-    .environment(\.openURL, Brick.OpenURLAction { url in
-        // Custom handling
-        return .handled
-    })
-
-// OpenURLAction results
-.openURL(url)              // System default action
-.openURL(url) { .handled } // Custom handled
-.openURL(url) { .discarded } // Discard
-.openURL(url) { .systemAction(url) } // Force system action
-
-// Safari browser
-@Environment(\.openURL) var openURL
-
-Button("Open in Safari") {
-    if let url = URL(string: "https://example.com") {
-        openURL(url) { _ in
-            Brick.OpenURLAction.Result.safari(url)
-        }
-    }
-}
-
-// Safari with configuration
-openURL(url) { _ in
-    Brick.OpenURLAction.Result.safari(url) { config in
-        config.prefersReader = true
-        config.barCollapsingEnabled = true
-        config.dismissStyle = .done
-        config.tintColor = .blue
-    }
-}
-
-// Brick.Link
-Brick.Link("Visit Website", destination: URL(string: "https://example.com")!)
-
-Brick.Link(destination: URL(string: "https://example.com")!) {
-    Image(systemName: "link")
-    Text("Click here")
-}
-
-// WebView
-@State private var webView: WKWebView? = nil
-@State private var webViewState: WebViewState = .idle
-
-WebView(url: URL(string: "https://example.com")!)
-    .showProgress(true)
-    .getWebViewObject($webView)
-    .getWebViewState($webViewState)
-    .setProgressColor(.green)
-    .clearBackgroundColor()
-    .showRefreshControl(true)
-    .onMessageHandler(name: "native") { message in
-        // Handle JS message
-        print(message)
-    }
-    .additionalConfiguration { webView in
-        webView.customUserAgent = "Custom User Agent"
-    }
-    .policyDecision { webView, action in
-        // Handle navigation policy
-        return .allow
-    }
-
-// WebView states
-switch webViewState {
-case .idle: break
-case .didStart: print("Started loading")
-case .didFail: print("Failed")
-case .didFinish: print("Finished")
-case .didTerminate: print("Terminated")
-case .didCommit: print("Committed")
-}
-
-// Clean WebView data
-WebView.Coordinator.cleanAllWebsiteDataStoreIfNeeded()
+.background(Color.black)
 ```
 
 ##### NavigationStack
@@ -1187,6 +964,58 @@ TTextField(text: $text)
 // Disable auto-correction
 TTextField(text: $text)
     .tTextFieldDisableAutoCorrection(true)
+```
+
+##### ListPicker
+
+```swift
+// Basic single selection picker
+@State private var selectedItem: Item?
+
+ListPicker(selection: $selectedItem, items: items) { item, isSelected in
+    ListSelectItem(isSelected: isSelected) {
+        Text(item.name)
+    }
+}
+
+// With sections
+@State private var selected: Item?
+
+ListPicker(
+    sections: [
+        ListPickerSection(title: "Section 1", items: items1),
+        ListPickerSection(title: "Section 2", items: items2)
+    ],
+    selection: $selected
+) { item, isSelected in
+    ListSelectItem(isSelected: isSelected) {
+        HStack {
+            Image(item.icon)
+            Text(item.name)
+        }
+    }
+}
+
+// Multi selection picker
+@State private var selectedItems: [Item] = []
+
+ListMultiPicker(selection: $selectedItems, items: items) { item, isSelected in
+    ListSelectItem(isSelected: isSelected) {
+        Text(item.name)
+    }
+}
+
+// With custom indicator
+ListSelectItem(isSelected: isSelected, selectIndicator: Image(systemName: "checkmark.circle.fill")) {
+    Text("Item name")
+}
+
+// Optional binding fallback
+@State private var optionalValue: Double?
+
+func doSomething(with binding: Binding<Double>) { ... }
+
+doSomething(with: $optionalValue ?? 0)
 ```
 
 ##### Presentation

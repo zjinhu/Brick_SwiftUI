@@ -796,6 +796,44 @@ CarouselAutoScroll.active(5)       // 每5秒自动滚动
 CarouselAutoScroll.defaultActive  // 默认5秒
 ```
 
+##### Page
+
+```swift
+// 基础分页滚动视图
+@State private var currentPage = 0
+
+PageScrollView(pageOutWidth: 50, pagePadding: 10) {
+    ForEach(0..<10, id: \.self) { index in
+        RoundedRectangle(cornerRadius: 20)
+            .fill(.orange)
+            .overlay {
+                Text("页面 \(index)")
+            }
+    }
+}
+.frame(height: 228)
+
+// 配合 PageIndicator 使用
+VStack {
+    PageScrollView(pageOutWidth: 40, pagePadding: 20) {
+        ForEach(bannerItems) { item in
+            BannerView(item: item)
+        }
+    }
+    .frame(height: 200)
+    
+    PageIndicatorView(
+        numPages: bannerItems.count,
+        currentPage: $currentPage,
+        height: 8,
+        currentWidth: 20,
+        spacing: 8,
+        color: .white
+    )
+}
+.background(Color.black)
+```
+
 ##### Toast
 
 ```swift
@@ -1067,6 +1105,63 @@ TTextField(text: $text)
 // 输入限制
 TTextField(text: $text)
     .tTextFieldLimitCount(20)
+    .tTextFieldTruncationMode(.tail)
+
+// 禁用自动更正
+TTextField(text: $text)
+    .tTextFieldDisableAutoCorrection(true)
+```
+
+##### ListPicker
+
+```swift
+// 基础单选选择器
+@State private var selectedItem: Item?
+
+ListPicker(selection: $selectedItem, items: items) { item, isSelected in
+    ListSelectItem(isSelected: isSelected) {
+        Text(item.name)
+    }
+}
+
+// 带分区
+@State private var selected: Item?
+
+ListPicker(
+    sections: [
+        ListPickerSection(title: "分区1", items: items1),
+        ListPickerSection(title: "分区2", items: items2)
+    ],
+    selection: $selected
+) { item, isSelected in
+    ListSelectItem(isSelected: isSelected) {
+        HStack {
+            Image(item.icon)
+            Text(item.name)
+        }
+    }
+}
+
+// 多选选择器
+@State private var selectedItems: [Item] = []
+
+ListMultiPicker(selection: $selectedItems, items: items) { item, isSelected in
+    ListSelectItem(isSelected: isSelected) {
+        Text(item.name)
+    }
+}
+
+// 自定义指示器
+ListSelectItem(isSelected: isSelected, selectIndicator: Image(systemName: "checkmark.circle.fill")) {
+    Text("项目名称")
+}
+
+// 可选绑定回退
+@State private var optionalValue: Double?
+
+func doSomething(with binding: Binding<Double>) { ... }
+
+doSomething(with: $optionalValue ?? 0)
 ```
 
 ##### Presentation

@@ -8,21 +8,21 @@
 import SwiftUI
 
 /**
- This generic picker lists `Identifiable` items in a SwiftUI
+ 此泛型选择器在 SwiftUI `List` 中列出 `Identifiable` 项目，并将 `selection` 绑定到外部值/This generic picker lists `Identifiable` items in a SwiftUI
  `List` and binds its `selection` to an external value.
  
- You can use this view instead of the native SwiftUI `Picker`
+ 可以使用此视图代替原生 SwiftUI `Picker` 以更好地控制列表项视图/You can use this view instead of the native SwiftUI `Picker`
  to get more control over the list item views. The view uses
  the provided `listItem` to build an item view for each item.
  */
 public struct ListMultiPicker<Item: Identifiable, ItemView: View>: View {
     
-    /// Create a list picker.
+    /// 创建列表选择器/Create a list picker.
     ///
     /// - Parameters:
-    ///   - items: The items to list in the picker.
-    ///   - selection: The current selection.
-    ///   - listItem: A list view builder.
+    ///   - items: 选择器中列出的项目/The items to list in the picker.
+    ///   - selection: 当前选中项/The current selection.
+    ///   - listItem: 列表视图构建器/A list view builder.
     public init(
         items: [Item],
         selection: Binding<[Item]>,
@@ -35,12 +35,12 @@ public struct ListMultiPicker<Item: Identifiable, ItemView: View>: View {
         )
     }
     
-    /// Create a list picker with multiple sections.
+    /// 创建带多个分区的列表选择器/Create a list picker with multiple sections.
     ///
     /// - Parameters:
-    ///   - sections: The sections to list in the picker.
-    ///   - selection: The current selection.
-    ///   - listItem: A list view builder.
+    ///   - sections: 选择器中列出的分区/The sections to list in the picker.
+    ///   - selection: 当前选中项/The current selection.
+    ///   - listItem: 列表视图构建器/A list view builder.
     public init(
         sections: [ListPickerSection<Item>],
         selection: Binding<[Item]>,
