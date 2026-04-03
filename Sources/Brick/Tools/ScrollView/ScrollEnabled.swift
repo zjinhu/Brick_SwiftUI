@@ -6,8 +6,9 @@ import SwiftUI
 @available(watchOS, deprecated: 9)
 extension Brick where Wrapped: View {
 
-    /// Disables or enables scrolling in scrollable views.
+    /// 禁用或启用可滚动视图中的滚动 / Disables or enables scrolling in scrollable views.
     ///
+    /// 使用此修饰符控制 ``ScrollView`` 是否可以滚动：
     /// Use this modifier to control whether a ``ScrollView`` can scroll:
     ///
     ///     @State private var isScrollDisabled = false
@@ -39,7 +40,7 @@ extension Brick where Wrapped: View {
     /// You can also use this modifier to disable scrolling for other kinds
     /// of scrollable views, like a ``List`` or a ``TextEditor``.
     ///
-    /// - Parameter disabled: A Boolean that indicates whether scrolling is
+    /// - Parameter disabled: 指示是否禁用滚动的布尔值。/ A Boolean that indicates whether scrolling is
     ///   disabled.
     @MainActor public func scrollDisabled(_ disabled: Bool) -> some View {
         wrapped

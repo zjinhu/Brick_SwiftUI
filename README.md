@@ -1325,6 +1325,49 @@ UnderLineText()
     .underLineTextHeight(40)
 ```
 
+##### TextEditors
+
+```swift
+// Basic usage
+@State private var text = ""
+
+TextEditors("Enter your text here", text: $text)
+    .frame(height: 150)
+    .border(Color.gray)
+
+// With custom padding
+TextEditors("Placeholder text", text: $text)
+    .padding(10)
+    .background(Color.gray.opacity(0.1))
+    .cornerRadius(8)
+
+// With text limit
+@State private var limitedText = ""
+
+TextEditors("Max 100 characters", text: $limitedText, textLimit: 100)
+    .frame(height: 100)
+```
+
+##### TextEditorStyle
+
+```swift
+// Automatic/Plain style
+TextEditor(text: $text)
+    .textEditorStyle(.automatic)
+
+// Rounded border
+TextEditor(text: $text)
+    .textEditorStyle(.roundedBorder)
+
+// Custom color border
+TextEditor(text: $text)
+    .textEditorStyle(.roundedColorBorder(.blue, 2))
+
+// Custom color with different width
+TextEditor(text: $text)
+    .textEditorStyle(.roundedColorBorder(.red, 5))
+```
+
 ##### UIHostingConfiguration
 
 ```swift
@@ -1369,6 +1412,113 @@ collectionCell.contentConfiguration = UIHostingConfiguration {
 }
 .background(Color.gray.opacity(0.1))
 .margins(.all, 8)
+```
+
+##### Triangle
+
+```swift
+// Basic upward triangle
+Triangle()
+    .fill(Color.blue)
+
+// Inverted (downward) triangle
+Triangle(inverted: true)
+    .fill(Color.red)
+
+// With stroke
+Triangle()
+    .stroke(Color.green, lineWidth: 2)
+
+// Custom size
+Triangle()
+    .frame(width: 100, height: 100)
+    .fill(Color.orange)
+```
+
+##### RoundedCorner
+
+```swift
+// All corners rounded
+RoundedCorner(radius: 20, corners: .allCorners)
+    .fill(Color.gray)
+
+// Specific corners (iOS)
+RoundedCorner(radius: 10, corners: [.topLeft, .topRight])
+    .fill(Color.blue)
+
+RoundedCorner(radius: 15, corners: [.bottomLeft, .bottomRight])
+    .fill(Color.green)
+
+// Single corner
+RoundedCorner(radius: 25, corners: .topLeft)
+    .fill(Color.red)
+
+// Apply to view
+Rectangle()
+    .clipShape(RoundedCorner(radius: 20, corners: .allCorners))
+```
+
+##### CustomSegmentPicker
+
+```swift
+// Define segment items
+struct SegmentItem: Identifiable {
+    let id = UUID()
+    let title: String
+}
+
+@State private var selectedSegment: SegmentItem
+
+// Basic usage
+CustomSegmentPicker(
+    segments: segments,
+    selected: $selectedSegment,
+    content: { item in
+        Text(item.title)
+            .padding()
+    },
+    background: {
+        Capsule()
+    }
+)
+
+// With custom colors
+CustomSegmentPicker(
+    segments: segments,
+    selected: $selectedSegment,
+    normalColor: .gray,
+    selectedColor: .white,
+    selectedBackColor: .blue,
+    bgColor: .gray.opacity(0.2),
+    animation: .easeInOut(duration: 0.3),
+    content: { item in
+        HStack {
+            Image(systemName: item.icon)
+            Text(item.title)
+        }
+        .padding()
+    },
+    background: {
+        RoundedRectangle(cornerRadius: 10)
+    }
+)
+
+// With RoundedRectangle background
+CustomSegmentPicker(
+    segments: items,
+    selected: $selectedItem,
+    normalColor: .black,
+    selectedColor: .white,
+    selectedBackColor: .orange,
+    bgColor: .gray.opacity(0.3),
+    content: { item in
+        Text(item.name)
+            .font(.headline)
+    },
+    background: {
+        RoundedRectangle(cornerRadius: 8)
+    }
+)
 ```
 
 ### Utilities - Core Utilities

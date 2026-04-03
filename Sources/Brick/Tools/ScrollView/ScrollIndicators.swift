@@ -7,8 +7,10 @@ import SwiftUI
 @MainActor 
 extension Brick where Wrapped: View {
 
-    /// Sets the visibility of scroll indicators within this view.
+    /// 设置此视图内滚动指示器的可见性 / Sets the visibility of scroll indicators within this view.
     ///
+    /// 使用此修饰符在 ``ScrollView``、``List`` 或 ``TextEditor`` 等可滚动内容上隐藏或显示滚动指示器。
+    /// 此修饰符将首选可见性应用于视图层次结构内的任何可滚动内容。
     /// Use this modifier to hide or show scroll indicators on scrollable
     /// content in views like a ``ScrollView``, ``List``, or ``TextEditor``.
     /// This modifier applies the prefered visibility to any
@@ -32,8 +34,8 @@ extension Brick where Wrapped: View {
     /// decide whether or not to show their indicators.
     ///
     /// - Parameters:
-    ///   - visibility: The visibility to apply to scrollable views.
-    ///   - axes: The axes of scrollable views that the visibility applies to.
+    ///   - visibility: 要应用于可滚动视图的可见性。/ The visibility to apply to scrollable views.
+    ///   - axes: 可见性适用的可滚动视图轴。/ The axes of scrollable views that the visibility applies to.
     ///
     /// - Returns: A view with the specified scroll indicator visibility.
     public func scrollIndicators(_ visibility: Brick<Any>.ScrollIndicatorVisibility, axes: Axis.Set = [.vertical]) -> some View {

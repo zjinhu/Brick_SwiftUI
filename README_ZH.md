@@ -1199,6 +1199,49 @@ UnderLineText()
     .underLineTextTruncationMode(.tail)
 ```
 
+##### TextEditors
+
+```swift
+// 基础用法
+@State private var text = ""
+
+TextEditors("请输入文本", text: $text)
+    .frame(height: 150)
+    .border(Color.gray)
+
+// 自定义内边距
+TextEditors("占位符文本", text: $text)
+    .padding(10)
+    .background(Color.gray.opacity(0.1))
+    .cornerRadius(8)
+
+// 带文本限制
+@State private var limitedText = ""
+
+TextEditors("最多100个字符", text: $limitedText, textLimit: 100)
+    .frame(height: 100)
+```
+
+##### TextEditorStyle
+
+```swift
+// 自动/普通样式
+TextEditor(text: $text)
+    .textEditorStyle(.automatic)
+
+// 圆角边框
+TextEditor(text: $text)
+    .textEditorStyle(.roundedBorder)
+
+// 自定义颜色边框
+TextEditor(text: $text)
+    .textEditorStyle(.roundedColorBorder(.blue, 2))
+
+// 不同宽度的自定义颜色边框
+TextEditor(text: $text)
+    .textEditorStyle(.roundedColorBorder(.red, 5))
+```
+
 ##### UIHostingConfiguration
 
 ```swift
@@ -1243,6 +1286,113 @@ collectionCell.contentConfiguration = UIHostingConfiguration {
 }
 .background(Color.gray.opacity(0.1))
 .margins(.all, 8)
+```
+
+##### Triangle
+
+```swift
+// 基础向上三角形
+Triangle()
+    .fill(Color.blue)
+
+// 倒置（向下）三角形
+Triangle(inverted: true)
+    .fill(Color.red)
+
+// 带描边
+Triangle()
+    .stroke(Color.green, lineWidth: 2)
+
+// 自定义尺寸
+Triangle()
+    .frame(width: 100, height: 100)
+    .fill(Color.orange)
+```
+
+##### RoundedCorner
+
+```swift
+// 所有角落圆角
+RoundedCorner(radius: 20, corners: .allCorners)
+    .fill(Color.gray)
+
+// 特定角落圆角 (iOS)
+RoundedCorner(radius: 10, corners: [.topLeft, .topRight])
+    .fill(Color.blue)
+
+RoundedCorner(radius: 15, corners: [.bottomLeft, .bottomRight])
+    .fill(Color.green)
+
+// 单个角落
+RoundedCorner(radius: 25, corners: .topLeft)
+    .fill(Color.red)
+
+// 应用到视图
+Rectangle()
+    .clipShape(RoundedCorner(radius: 20, corners: .allCorners))
+```
+
+##### CustomSegmentPicker
+
+```swift
+// 定义段落项
+struct SegmentItem: Identifiable {
+    let id = UUID()
+    let title: String
+}
+
+@State private var selectedSegment: SegmentItem
+
+// 基础用法
+CustomSegmentPicker(
+    segments: segments,
+    selected: $selectedSegment,
+    content: { item in
+        Text(item.title)
+            .padding()
+    },
+    background: {
+        Capsule()
+    }
+)
+
+// 自定义颜色
+CustomSegmentPicker(
+    segments: segments,
+    selected: $selectedSegment,
+    normalColor: .gray,
+    selectedColor: .white,
+    selectedBackColor: .blue,
+    bgColor: .gray.opacity(0.2),
+    animation: .easeInOut(duration: 0.3),
+    content: { item in
+        HStack {
+            Image(systemName: item.icon)
+            Text(item.title)
+        }
+        .padding()
+    },
+    background: {
+        RoundedRectangle(cornerRadius: 10)
+    }
+)
+
+// 使用RoundedRectangle背景
+CustomSegmentPicker(
+    segments: items,
+    selected: $selectedItem,
+    normalColor: .black,
+    selectedColor: .white,
+    selectedBackColor: .orange,
+    bgColor: .gray.opacity(0.3),
+    content: { item in
+        Text(item.name)
+            .font(.headline)
+    },
+    background: {
+        RoundedRectangle(cornerRadius: 8)
+    }
+)
 ```
 
 ### Utilities - 核心工具

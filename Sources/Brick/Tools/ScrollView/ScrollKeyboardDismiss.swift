@@ -7,9 +7,11 @@ import SwiftUI
 @MainActor 
 extension Brick where Wrapped: View {
 
-    /// Configures the behavior in which scrollable content interacts with
+    /// 配置可滚动内容与软件键盘交互的行为 / Configures the behavior in which scrollable content interacts with
     /// the software keyboard.
     ///
+    /// 使用此修饰符自定义可滚动内容与软件键盘的交互方式。
+    /// 例如，可以传递 ``ScrollDismissesKeyboardMode/immediately`` 值表示在滚动拖动手势开始时立即关闭键盘。
     /// You use this modifier to customize how scrollable content interacts
     /// with the software keyboard. For example, you can specify a value of
     /// ``ScrollDismissesKeyboardMode/immediately`` to indicate that you
@@ -37,7 +39,7 @@ extension Brick where Wrapped: View {
     /// ``ScrollDismissesKeyboardMode/never`` to indicate that scrollable
     /// content should never automatically dismiss the keyboard.
     ///
-    /// - Parameter mode: The keyboard dismissal mode that scrollable content
+    ///   - mode: 可滚动内容使用的键盘关闭模式。/ The keyboard dismissal mode that scrollable content
     ///   uses.
     ///
     /// - Returns: A view that uses the specified keyboard dismissal mode.

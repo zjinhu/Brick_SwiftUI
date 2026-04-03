@@ -3,20 +3,33 @@
 //  
 //
 //  Created by iOS on 2024/9/5.
-//
+//  增强的TextEditor组件/Enhanced TextEditor component
+//  支持占位符、文本限制等功能/Supports placeholder, text limit and more
 
 import SwiftUI
 import Combine
 #if os(iOS)
+/// 增强的TextEditor/Enhanced TextEditor (iOS 15+)
 @available(iOS 15.0, *)
 public struct TextEditors: View {
     
+    /// 文本绑定/Text binding
     @Binding var text: String
+    /// 占位符文本/Placeholder text
     private let placeholder: String
+    /// 内容内边距/Content padding
     private let contentPadding: CGFloat
+    /// 占位符内边距/Placeholder padding
     private let placeholderPadding: CGFloat
+    /// 文本限制字符数/Text limit character count
     private let textLimit: Int
-    
+    /// 初始化TextEditors/Initialize TextEditors
+    /// - Parameters:
+    ///   - placeholder: 占位符文本/Placeholder text
+    ///   - text: 文本绑定/Text binding
+    ///   - contentPadding: 内容内边距/Content padding
+    ///   - placeholderPadding: 占位符内边距/Placeholder padding
+    ///   - textLimit: 文本限制字符数（0表示不限制）/Text limit (0 = no limit)
     public init(_ placeholder: String,
                 text: Binding<String>,
                 contentPadding: CGFloat = 8,
@@ -45,6 +58,7 @@ public struct TextEditors: View {
             }
     }
     
+    /// 限制文本长度/Limit text length
     func limitText() {
         if textLimit <= 0 { return }
         
