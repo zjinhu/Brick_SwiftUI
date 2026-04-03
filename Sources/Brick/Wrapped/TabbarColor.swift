@@ -1,6 +1,11 @@
 //
 //  TabbarColor.swift
+//  Brick_SwiftUI
 //
+//  TabBar 颜色设置
+//  TabBar color setting
+//  使用 UIKit appearance API 设置 TabBar 背景色
+//  Use UIKit appearance API to set TabBar background color
 //
 //  Created by iOS on 2024/8/28.
 //
@@ -10,6 +15,8 @@ import SwiftUI
 #if os(iOS)
 import UIKit
 
+/// TabBar 修饰器
+/// TabBar modifier
 struct TabbarModifier: ViewModifier {
     
     var backgroundColor: UIColor?
@@ -34,17 +41,23 @@ struct TabbarModifier: ViewModifier {
     }
 }
 
+/// Brick 扩展：TabBar 颜色
+/// Brick extension: TabBar color
 public extension Brick where Wrapped: View {
+    /// 设置 TabBar 背景色
+    /// Set TabBar background color
+    /// - Parameter backgroundColor: 背景色 / Background color
+    /// - Returns: 修改后的 View / Modified View
     @available(macOS, unavailable)
     @available(tvOS, unavailable)
     @MainActor func tabbarColor(_ backgroundColor: Color) -> some View {
-//        if #available(iOS 16.0, *) {
-//            return wrapped.toolbarBackground(backgroundColor, for: .tabBar)
-//        } else {
         wrapped.modifier(TabbarModifier(backgroundColor: backgroundColor.toUIColor()))
-//        }
     }
  
+    /// 设置 TabBar 背景色 (别名)
+    /// Set TabBar background color (alias)
+    /// - Parameter color: 颜色 / Color
+    /// - Returns: 修改后的 View / Modified View
     @available(macOS, unavailable)
     @available(tvOS, unavailable)
     @MainActor func tabbarBackground(_ color: Color) -> some View {

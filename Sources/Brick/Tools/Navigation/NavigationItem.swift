@@ -33,7 +33,12 @@ extension View {
             }
         )
     }
+    
+    public func navigationBackButtonTitleHidden() -> some View {
+        modifier(HiddenBackButtonTitlesModifier())
+    }
 }
+
 
 extension NavigationView {
     /// Access the NavigationItem of the underlying `UINavigationController` and expose it in the `Environment`
@@ -107,6 +112,41 @@ extension NavigationSplitView {
     }
 }
 #endif
+
+struct HiddenBackButtonTitlesModifier: ViewModifier {
+    @State private var applied = false
+
+    func body(content: Content) -> some View {
+        content
+            .overlay(
+                FindNavigationController { nc in
+                    guard let nc, !applied else { return }
+                    applied = true
+                    applyAppearance(to: nc)
+                }
+            )
+    }
+
+    private func applyAppearance(to nc: UINavigationController) {
+        let hidden: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.clear]
+        let bar = nc.navigationBar
+
+        let std = bar.standardAppearance
+        std.backButtonAppearance.normal.titleTextAttributes = hidden
+        bar.standardAppearance = std
+
+        // 不新建，nil 保持 nil
+        if let edge = bar.scrollEdgeAppearance {
+            edge.backButtonAppearance.normal.titleTextAttributes = hidden
+            bar.scrollEdgeAppearance = edge
+        }
+
+        if let compact = bar.compactAppearance {
+            compact.backButtonAppearance.normal.titleTextAttributes = hidden
+            bar.compactAppearance = compact
+        }
+    }
+}
 
 struct NavigationControllerModifier: ViewModifier {
     var animated: Bool

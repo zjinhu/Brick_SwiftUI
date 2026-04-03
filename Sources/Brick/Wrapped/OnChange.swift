@@ -1,5 +1,8 @@
 import SwiftUI
 import Combine
+
+/// Brick 扩展：统一的 onChange 处理，兼容各 iOS 版本
+/// Brick extension: Unified onChange handler compatible with all iOS versions
 public extension Brick where Wrapped: View {
 
     /// Adds a modifier for this view that fires an action when a specific
@@ -18,6 +21,8 @@ public extension Brick where Wrapped: View {
     ///
     /// - Returns: A view that fires an action when the specified value changes.
 
+    /// 值变化时触发动作 (仅传递新值)
+    /// Fire action when value changes (new value only)
     @ViewBuilder
     func onChange<Value: Equatable>(of value: Value, initial: Bool = false, _ action: @escaping (Value) -> Void) -> some View {
         if #available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *) {
@@ -29,6 +34,8 @@ public extension Brick where Wrapped: View {
         }
     }
     
+    /// 值变化时触发动作 (无参数闭包)
+    /// Fire action when value changes (no parameter closure)
     @ViewBuilder
     func onChange<Value: Equatable>(of value: Value, initial: Bool = false, _ action: @escaping () -> Void) -> some View {
         if #available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *) {
@@ -42,6 +49,12 @@ public extension Brick where Wrapped: View {
         }
     }
   
+    /// 值变化时触发动作 (传递旧值和新值)
+    /// Fire action when value changes (old and new value)
+    /// - Parameters:
+    ///   - value: 要观察的值 / Value to observe
+    ///   - initial: 是否在初始时触发 / Whether to trigger on initial
+    ///   - action: 回调闭包，接收旧值和新值 / Callback with old and new value
     @MainActor @ViewBuilder
     func onChange<Value: Equatable>(of value: Value, initial: Bool = false, _ action: @escaping (Value, Value) -> Void) -> some View {
         if #available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *) {
@@ -62,7 +75,9 @@ public extension Brick where Wrapped: View {
 //    }
 
 }
-///ios13
+
+/// iOS 13 的 onChange 回退修饰器
+/// Backport onChange modifier for iOS 13
 //private struct ChangeModifier<Value: Equatable>: ViewModifier {
 //    let value: Value
 //    let action: (Value) -> Void
@@ -85,6 +100,8 @@ public extension Brick where Wrapped: View {
 //    }
 //}
  
+/// 回退的 onChange 修饰器 (iOS 14-16)
+/// Backport onChange modifier (iOS 14-16)
 struct BackportOnChangeModifier<Value: Equatable>: ViewModifier {
     let value: Value
     let initial: Bool
@@ -100,6 +117,7 @@ struct BackportOnChangeModifier<Value: Equatable>: ViewModifier {
                     hasAppeared = true
                     if initial {
                         // 对于 initial 情况，我们使用相同的值作为 oldValue
+                        // For initial case, use the same value as oldValue
                         action(value, value)
                     }
                 }

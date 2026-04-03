@@ -1,12 +1,20 @@
 //
-//  SwiftUIView.swift
-//  
+//  OnTapLocal.swift
+//  Brick_SwiftUI
+//
+//  本地点击位置获取
+//  Local tap location acquisition
+//  获取点击手势的坐标位置
+//  Get tap gesture coordinate location
 //
 //  Created by 狄烨 on 2023/9/22.
 //
 
 import SwiftUI
 #if os(iOS)
+
+/// 点击位置修饰器
+/// Tap location modifier
 struct OnTap: ViewModifier {
     let response: (CGPoint) -> Void
     
@@ -23,7 +31,13 @@ struct OnTap: ViewModifier {
     }
 }
 
+/// Brick 扩展：获取点击位置
+/// Brick extension: Get tap location
 public extension Brick where Wrapped: View {
+    /// 添加点击手势并获取位置
+    /// Add tap gesture and get location
+    /// - Parameter handler: 位置回调闭包 / Location callback closure
+    /// - Returns: 修改后的 View / Modified View
     @MainActor func onTapGesture(_ handler: @escaping (CGPoint) -> Void) -> some View {
         wrapped.modifier(OnTap(response: handler))
     }

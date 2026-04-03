@@ -1,11 +1,16 @@
 import SwiftUI
 
 #if os(iOS) && !os(visionOS)
+/// iOS 15+ 已废弃，建议使用原生 onSubmit
+/// iOS 15+ deprecated, use native onSubmit
 @available(iOS, deprecated: 15)
+
+/// Brick 扩展：表单提交处理
+/// Brick extension: Form submission handling
 public extension Brick where Wrapped: View {
     /// Adds an action to perform when the user submits a value to this view.
     ///
-    /// Different views may have different triggers for the provided action. A TextField, or SecureField will trigger this action when the user hits the hardware or software return key. This modifier may also bind this action to a default action keyboard shortcut. You may set this action on an individual view or an entire view hierarchy.
+    /// Different views may have different triggers for the provided action. A TextField, or SecureField will trigger this action when the user hits the hardware or software return key.
     ///
     ///     TextField("Username", text: $username)
     ///         .ss.onSubmit {
@@ -13,6 +18,7 @@ public extension Brick where Wrapped: View {
     ///             viewModel.login()
     ///         }
     ///
+    /// - Parameter action: 提交时触发的动作 / Action to perform on submit
     @MainActor @ViewBuilder
     func onSubmit(_ action: @escaping () -> Void) -> some View {
         Group {
@@ -29,8 +35,7 @@ public extension Brick where Wrapped: View {
 
     /// A semantic label describing the label of submission within a view hierarchy.
     ///
-    /// A submit label is a description of a submission action provided to a
-    /// view hierarchy using the ``View/ss.onSubmit(of:_:)`` modifier.
+    /// - Parameter label: 提交标签 / Submit label
     @MainActor @ViewBuilder
     func submitLabel(_ label: Brick<Any>.SubmitLabel) -> some View {
         Group {
@@ -46,11 +51,10 @@ public extension Brick where Wrapped: View {
     }
 }
 
+/// 提交标签枚举
+/// Submit label enum
 public extension Brick where Wrapped == Any {
     /// A semantic label describing the label of submission within a view hierarchy.
-    ///
-    /// A submit label is a description of a submission action provided to a
-    /// view hierarchy using the ``View/onSubmit(of:_:)`` modifier.
     struct SubmitLabel: Equatable {
         internal let returnKeyType: UIReturnKeyType
         fileprivate init(_ type: UIReturnKeyType) {
@@ -77,32 +81,38 @@ private extension SwiftUI.SubmitLabel {
     }
 }
 
+/// 提交标签静态属性
+/// Submit label static properties
 public extension Brick.SubmitLabel {
-    /// Defines a submit label with text of "Continue".
+    /// "Continue" / 继续
     static var `continue`: Self { .init(.continue) }
-    /// Defines a submit label with text of "Done".
+    /// "Done" / 完成
     static var done: Self { .init(.done) }
-    /// Defines a submit label with text of "Go".
+    /// "Go" / 前往
     static var go: Self { .init(.go) }
-    /// Defines a submit label with text of "Join".
+    /// "Join" / 加入
     static var join: Self { .init(.join) }
-    /// Defines a submit label with text of "Next".
+    /// "Next" / 下一步
     static var next: Self { .init(.next) }
-    /// Defines a submit label with text of "Return".
+    /// "Return" / 返回
     static var `return`: Self { .init(.default) }
-    /// Defines a submit label with text of "Route".
+    /// "Route" / 路线
     static var route: Self { .init(.route) }
-    /// Defines a submit label with text of "Search".
+    /// "Search" / 搜索
     static var search: Self { .init(.search) }
-    /// Defines a submit label with text of "Send".
+    /// "Send" / 发送
     static var send: Self { .init(.send) }
 }
 
+/// 提交动作
+/// Submit action
 internal struct SubmitAction {
     let submit: () -> Void
     func callAsFunction() { submit() }
 }
 
+/// 提交环境键
+/// Submit environment key
 private struct SubmitEnvironmentKey: @preconcurrency EnvironmentKey {
     @MainActor static var defaultValue: SubmitAction = .init(submit: { })
 }
@@ -114,6 +124,8 @@ internal extension EnvironmentValues {
     }
 }
 
+/// 提交标签环境键
+/// Submit label environment key
 private struct SubmitLabelEnvironmentKey: @preconcurrency EnvironmentKey {
     @MainActor static var defaultValue: Brick.SubmitLabel = .return
 }
@@ -125,6 +137,8 @@ internal extension EnvironmentValues {
     }
 }
 
+/// 提交修饰器
+/// Submit modifier
 private struct SubmitModifier: ViewModifier {
     @Environment(\.submit) private var submit
     @Environment(\.submitLabel) private var label
@@ -144,6 +158,7 @@ private struct SubmitModifier: ViewModifier {
             }
     }
 
+    /// 协调器 / Coordinator
     final class Coordinator: NSObject, ObservableObject {
         private(set) weak var field: UITextField?
 

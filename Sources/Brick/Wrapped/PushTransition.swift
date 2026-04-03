@@ -1,8 +1,13 @@
 import SwiftUI
+
+/// Brick 扩展：推送过渡动画
+/// Brick extension: Push transition animation
 public extension Brick where Wrapped == AnyTransition {
-    /// Creates a transition that when added to a view will animate the view’s insertion by moving it in from the specified edge while fading it in, and animate its removal by moving it out towards the opposite edge and fading it out.
+    /// Creates a transition that when added to a view will animate the view's insertion by moving it in from the specified edge while fading it in, and animate its removal by moving it out towards the opposite edge and fading it out.
     /// - Parameter edge: the edge from which the view will be animated in.
     /// - Returns: A transition that animates a view by moving and fading it.
+    /// 
+    /// 创建从指定边缘移入的过渡动画，同时淡入；移除时从相反边缘移出，同时淡出
     @available(iOS, deprecated: 16.0)
     @available(watchOS, deprecated: 9.0)
     @available(macOS, deprecated: 13.0)
@@ -26,5 +31,3 @@ public extension Brick where Wrapped == AnyTransition {
         ).combined(with: .opacity)
     }
 }
-
-

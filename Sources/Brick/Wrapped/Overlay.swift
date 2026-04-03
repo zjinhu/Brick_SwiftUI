@@ -1,9 +1,8 @@
 import SwiftUI
-public extension Brick where Wrapped: View {
 
-    /// Layers the views that you specify in front of this view.
-    ///
-    /// Use this modifier to place one or more views in front of another view.
+/// Brick 扩展：叠加层修饰器
+/// Brick extension: Overlay modifier
+public extension Brick where Wrapped: View {
     /// For example, you can place a group of stars on a ``RoundedRectangle``:
     ///
     ///     RoundedRectangle(cornerRadius: 8)
@@ -106,14 +105,16 @@ public extension Brick where Wrapped: View {
     /// ``Material`` as the overlay, use
     /// ``View/overlay(_:ignoresSafeAreaEdges:)`` instead. To specify a
     /// ``Shape``, use ``View/overlay(_:in:fillStyle:)``.
+
+    /// Layers the views that you specify in front of this view.
+    ///
+    /// Use this modifier to place one or more views in front of another view.
     ///
     /// - Parameters:
     ///   - alignment: The alignment that the modifier uses to position the
-    ///     implicit ``ZStack`` that groups the foreground views. The default
-    ///     is ``Alignment/center``.
+    ///     implicit ``ZStack`` that groups the foreground views.
     ///   - content: A ``ViewBuilder`` that you use to declare the views to
-    ///     draw in front of this view, stacked in the order that you list them.
-    ///     The last view that you list appears at the front of the stack.
+    ///     draw in front of this view.
     ///
     /// - Returns: A view that uses the specified content as a foreground.
     func overlay<Content: View>(alignment: Alignment = .center, @ViewBuilder _ content: () -> Content) -> some View {
@@ -121,3 +122,4 @@ public extension Brick where Wrapped: View {
     }
 
 }
+
