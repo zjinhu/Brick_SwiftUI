@@ -272,6 +272,470 @@ Toggle(" Agree to terms", isOn: $agreed)
 | **Task+** | Task 扩展 | `Task.sleep(1000000000)` |
 | **GridItem++** | GridItem 扩展 | `GridItem(.flexible())` |
 
+#### SwiftUI 详细 API 用法
+
+##### View++ (View 扩展)
+
+```swift
+// 链式调用视图修改
+view.then { $0.padding() }
+    .then { $0.background(Color.blue) }
+
+// 条件隐藏
+view.hidden(isHidden)
+
+// 偏移辅助方法
+view.offset(point)
+view.offset(length)
+view.inset(length)
+
+// 填充/适应父视图
+view.fill(alignment: .center)
+view.fit()
+
+// 过渡效果
+view.transition(.scale)
+view.asymmetricTransition(insertion: .opacity, removal: .move(edge: .leading))
+
+// 类型擦除
+view.eraseToAnyView()
+view.any()
+
+// 隐藏键盘 (iOS)
+view.hideKeyboard()
+
+// 条件点击手势
+view.onTapGesture(count: 2, disabled: isDisabled) {
+    // 处理点击
+}
+
+// 填充父视图
+view.fill(alignment: .center)
+
+// 适应父视图 (保持宽高比)
+view.fit()
+
+// 设置着色颜色
+view.tintColor(.red)
+
+// 背景点击手势
+view.onTapGestureOnBackground {
+    // 处理背景点击
+}
+```
+
+##### ForEach++ (ForEach 增强)
+
+```swift
+// 带索引访问
+ForEach(items, id: \.id) { index, item in
+    Text("\(index): \(item.name)")
+}
+
+// 插入分隔符
+ForEach(items) { item in
+    Text(item.name)
+}.interleave(with: Divider())
+
+// 插入分割线
+ForEach(items) { item in
+    Text(item.name)
+}.interdivided()
+
+// 插入间距
+ForEach(items) { item in
+    Text(item.name)
+}.interspaced()
+```
+
+##### View+Geometry (视图几何)
+
+```swift
+@State private var size: CGSize = .zero
+@State private var safeArea: EdgeInsets = .zero
+
+view.bindSize(to: $size)
+view.bindSafeAreaInsets(to: $safeArea)
+```
+
+##### View+Haptic (触觉反馈)
+
+```swift
+// 触觉按钮
+HapticButton {
+    print("tapped")
+} label: {
+    Text("点击我")
+}
+
+// 触觉反馈
+hapticFeedback()
+hapticFeedback(type: .success)
+hapticFeedback(type: .medium)
+
+// 视图触觉修饰器
+view.haptics(onChangeOf: value, type: .success)
+view.haptics(when: status, equalsTo: "success", type: .warning)
+view.haptics(onChangeOf: count, type: .light)
+view.triggersHapticFeedbackWhenAppear()
+```
+
+##### View+Frame (视图框架)
+
+```swift
+// 最小/最大宽高
+view.minWidth(100)
+view.maxWidth(200)
+view.minHeight(50)
+view.maxHeight(150)
+
+// 宽高设置
+view.width(100)
+view.height(50)
+
+// 相对尺寸
+view.relativeWidth(0.5)
+view.relativeHeight(0.3)
+view.relativeSize(width: 0.5, height: 0.3)
+
+// 读取尺寸
+view.readHeight { height in print(height) }
+view.readWidth { width in print(width) }
+
+// 正方形框架
+view.squareFrame()
+view.squareFrame(sideLength: 100)
+
+// 理想框架
+view.idealFrame(width: 100, height: 50)
+```
+
+##### View+Mask (视图蒙版)
+
+```swift
+// 蒙版
+view.mask(Circle())
+
+// 反向蒙版
+view.masking {
+    Circle()
+}
+
+// 反向蒙版 (用于徽章效果)
+view.reverseMask(alignment: .topTrailing) {
+    Circle()
+        .frame(width: 20, height: 20)
+}
+```
+
+##### View+Background (视图背景)
+
+```swift
+// 背景
+view.background(Color.red)
+view.background {
+    Image("bg")
+}
+
+// 填充背景 (忽略安全区域)
+view.backgroundFill(Color.blue)
+view.backgroundFill {
+    LinearGradient(...)
+}
+
+// PassthroughView
+PassthroughView {
+    Color.red
+}
+```
+
+##### Image++
+
+```swift
+// 带配置的符号图标
+Image(systemName: "heart")
+    .symbol(variableColor: .blue)
+    .symbolRenderingMode(.hierarchical)
+
+// 调整图像大小
+Image(systemName: "heart")
+    .resized(toWidth: 100)
+    .resized(toHeight: 50)
+
+// 适应尺寸
+image.sizeToFit()
+
+// 异步加载图像
+AsyncImage(url: url)
+    .loadAsync()
+```
+
+##### View+Conditionals
+
+```swift
+// 启用/禁用视图
+view.enabled(isEnabled)
+view.enabled(isEnabled, removeFromHierarchy: true)
+
+// 条件可见性
+view.hidden(if: isHidden)
+view.visible(if: isVisible)
+
+// 条件修饰器
+view.modifier(if: shouldApply) {
+    SomeModifier()
+}
+```
+
+##### Text++
+
+```swift
+// 文本样式
+Text("Hello")
+    .bold()
+    .italic()
+    .underline()
+    .strikethrough()
+    .monospaced()
+    .smallCaps()
+    .textCase(.uppercase)
+    .textCase(.lowercase)
+
+// 字间距
+Text("Hello")
+    .tracking(2)
+    .tracking(-0.5)
+```
+
+##### Label++
+
+```swift
+// 带图标的标签
+Label("标题", systemImage: "star")
+Label {
+    Text("内容")
+} icon: {
+    Image(systemName: "star")
+}
+```
+
+##### List++
+
+```swift
+// 带样式的列表
+List {
+    // 内容
+}
+.listStyle(.insetGrouped)
+.listStyle(.plain)
+.listStyle(.inset)
+.listStyle(.sidebar)
+
+// 列表行背景
+.listRowBackground(Color.clear)
+```
+
+##### Section++
+
+```swift
+// 带标题的分区
+Section("标题") {
+    Text("内容")
+}
+
+// 带标题和脚注的分区
+Section(header: Text("标题"), footer: Text("脚注")) {
+    Text("内容")
+}
+```
+
+##### NavigationLink++
+
+```swift
+// 推送导航
+NavigationLink(destination: DetailView()) {
+    Text("跳转到详情")
+}
+
+// 基于值的导航
+NavigationLink(value: item) {
+    Text(item.name)
+}
+.navigationDestination(for: Item.self) { item in
+    DetailView(item: item)
+}
+```
+
+##### Shape++
+
+```swift
+// 圆角矩形
+RoundedRectangle(cornerRadius: 10)
+RoundedRectangle(cornerRadius: 10, style: .continuous)
+
+// 胶囊形状
+Capsule()
+Capsule(style: .continuous)
+
+// 自定义形状
+Rectangle()
+Circle()
+Ellipse()
+```
+
+##### Spacer++
+
+```swift
+// 带最小长度的 Spacer
+Spacer(minLength: 20)
+
+// 带框架的 Spacer
+Spacer()
+    .frame(height: 10)
+```
+
+##### Menu++
+
+```swift
+// 基础菜单
+Menu("操作") {
+    Button("操作1") { }
+    Button("操作2") { }
+}
+
+// 带标签的菜单
+Menu {
+    Button("编辑") { }
+    Button("删除") { }
+} label: {
+    Image(systemName: "ellipsis.circle")
+}
+```
+
+##### Angle++
+
+```swift
+// 从度数创建角度
+Angle(degrees: 45)
+
+// 从弧度创建角度
+Angle(radians: .pi / 4)
+
+// 旋转内容
+content
+    .rotationEffect(Angle(degrees: 45))
+```
+
+##### Collection++
+
+```swift
+// 安全下标
+let item = array[safe: 0]  // 超出范围时返回 nil
+
+// 第一个/最后一个
+array[safe: \.first]
+array[safe: \.last]
+
+// 边界安全访问
+array[safe: 0...5]
+array[safe: 0..<5]
+```
+
+##### URL++
+
+```swift
+// 带查询参数的 URL
+var components = URL(string: "https://example.com")
+components?.queryItems = [
+    URLQueryItem(name: "key", value: "value")
+]
+
+// 检查 URL 有效性
+url?.isValid
+```
+
+##### String++
+
+```swift
+// 大小写转换
+"hello".uppercasedFirst()  // "Hello"
+"hello".lowercasedFirst()  // "hello"
+"hello_world".camelcased()  // "helloWorld"
+"HelloWorld".snakecased()  // "hello_world"
+"hello world".titlecased() // "Hello World"
+
+// URL 编码
+"hello world".urlEscaped()  // "hello%20world"
+
+// 换行处理
+"line1\nline2".lines()  // ["line1", "line2"]
+
+// 空白处理
+"  hello  world  ".trimmed()  // "hello world"
+
+// 模式替换
+"hello".replacing("l", with: "r")  // "herro"
+
+// 验证
+"https://example.com".isValidUrl  // true
+"   ".isBlank  // true
+
+// 前缀/后缀移除
+"hello world".droppingPrefix("hello ")  // "world"
+"hello world".droppingSuffix(" world")  // "hello"
+
+// 获取最后几个字符
+"hello".take(last: 3)  // "llo"
+
+// 随机字符串
+String.random(length: 10)
+
+// 截断
+"Hello World".truncate(5)  // "He..."
+"Hello World".truncate(5, position: .head)  // "...rld"
+"Hello World".truncate(5, position: .middle)  // "He...ld"
+
+// 空/空白时返回 nil
+"".nilIfEmpty  // nil
+"   ".nilIfBlank  // nil
+```
+
+##### Task+
+
+```swift
+// 睡眠
+try? await Task.sleep(1_000_000_000) // 1秒
+
+// 带超时的任务
+try? await Task.timeout(after: 1.0) {
+    await someWork()
+}
+```
+
+##### GridItem++
+
+```swift
+// 弹性网格项
+GridItem(.flexible())
+GridItem(.flexible(spacing: 10))
+GridItem(.flexible(spacing: 10, alignment: .leading))
+
+// 固定网格项
+GridItem(.fixed(100))
+GridItem.fixed(100)
+
+// 自适应网格项
+GridItem.adaptive(minimum: 50, maximum: 100)
+
+// 网格项数组
+[GridItem].fixed([100, 200, 100])
+[GridItem].adaptive(minimum: 80, maximum: .infinity)
+[GridItem].flexible(minimum: 50, maximum: 200)
+
+// GridItem.Size
+GridItem.Size.adaptive(100)
+```
+
 ### Tools - UI 组件
 
 预构建的 UI 组件，支持快速开发。

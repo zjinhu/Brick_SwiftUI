@@ -3,15 +3,20 @@
 //  SwiftBrick
 //
 //  Created by 狄烨 on 2023/6/6.
-//
+//  导航栈组件/Navigation stack component
+//  提供跨版本兼容的导航功能，支持iOS 14-15使用NavigationView，iOS 16+使用NavigationStack/Provides cross-version compatible navigation, supports NavigationView on iOS 14-15, NavigationStack on iOS 16+
 
 import SwiftUI
+/// 导航栈（已废弃iOS 16+，请使用SwiftUI原生Navigation API）/Navigation stack (deprecated iOS 16+, use SwiftUI native Navigation API)
 @available(iOS, deprecated: 16, message: "Use SwiftUI's Navigation API iOS 16")
 @available(tvOS, deprecated: 16)
 @available(watchOS, deprecated: 9)
 @available(macOS, deprecated: 13)
 extension Brick where Wrapped == Any {
     
+    /// 导航栈视图/Navigation stack view
+    /// - Content: 根视图内容类型/Root view content type
+    /// - Data: 导航数据类型/Navigation data type
     public struct NavigationStack<Content: View, Data: Hashable>: View {
         @Binding var externalTypedPath: [Data]
         @State var internalTypedPath: [Data] = []

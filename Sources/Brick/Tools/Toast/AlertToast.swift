@@ -1,32 +1,40 @@
 //This file is part of the AlertToast Swift library: https://github.com/elai950/AlertToast
+// 提示吐司组件/Alert Toast component
+// 支持多种显示模式：Alert、HUD、Banner/Supports multiple display modes: Alert, HUD, Banner
+
 import SwiftUI
 #if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
+/// AlertToast提示组件/AlertToast prompt component
 public struct AlertToast: View{
     
+    /// 横幅动画类型/Banner animation type
     public enum BannerAnimation{
         case slide, pop
     }
     
+    /// 显示模式/Display mode
     public enum DisplayMode: Equatable{
-        
+        /// 弹窗模式/Alert mode
         case alert
-        
+        /// HUD模式（居中显示）/HUD mode (center display)
         case hud
-        
+        /// 横幅模式（顶部或底部）/Banner mode (top or bottom)
         case banner(_ transition: BannerAnimation)
     }
     
+    /// 提示类型/Prompt type
     public enum AlertType: Equatable{
-        
+        /// 系统图标（SF Symbol）/System image (SF Symbol)
         case systemImage(_ name: String, _ color: Color)
-        
+        /// 自定义图片/Custom image
         case image(_ name: String, _ color: Color)
-        
+        /// 常规模式（仅文字）/Regular mode (text only)
         case regular
-        
+        /// 加载中/Loading
         case loading
     }
     
+    /// 提示样式/Prompt style
     public enum AlertStyle: Equatable{
         
         case style(backgroundColor: Color? = nil,
@@ -257,24 +265,27 @@ public struct AlertToast: View{
     }
 }
 
+/// AlertToast修饰器/AlertToast modifier
 public struct AlertToastModifier: ViewModifier{
     
-    ///Presentation `Binding<Bool>`
+    /// 显示状态绑定/Presentation `Binding<Bool>`
     @Binding var isPresenting: Bool
     
-    ///Duration time to display the alert
+    /// 显示时长（秒）/Duration time to display the alert
     @State var duration: Double = 2
     
-    ///Tap to dismiss alert
+    /// 点击关闭/Tap to dismiss alert
     @State var tapToDismiss: Bool = true
     
+    /// Y轴偏移量/Y-axis offset
     var offsetY: CGFloat = 0
     
-    ///Init `AlertToast` View
+    /// AlertToast视图构建闭包/Init `AlertToast` View
     var alert: () -> AlertToast
     
-    ///Completion block returns `true` after dismiss
+    /// 点击回调/Completion block returns `true` after dismiss
     var onTap: (() -> ())? = nil
+    /// 完成回调/Completion callback
     var completion: (() -> ())? = nil
     
     @State private var workItem: DispatchWorkItem?
@@ -515,6 +526,16 @@ public extension View{
         modifier(WithFrameModifier(withFrame: withFrame))
     }
     
+    /// 应用AlertToast提示/Apply AlertToast prompt
+    /// - Parameters:
+    ///   - isPresenting: 显示状态绑定/Display state binding
+    ///   - duration: 显示时长（秒）/Display duration (seconds)
+    ///   - tapToDismiss: 是否点击关闭/Whether tap to dismiss
+    ///   - offsetY: Y轴偏移量/Y-axis offset
+    ///   - alert: AlertToast构建闭包/AlertToast build closure
+    ///   - onTap: 点击回调/Tap callback
+    ///   - completion: 完成回调/Completion callback
+    /// - Returns: 应用了提示的视图/View with prompt applied
     func toast(isPresenting: Binding<Bool>, 
                duration: Double = 2,
                tapToDismiss: Bool = true,

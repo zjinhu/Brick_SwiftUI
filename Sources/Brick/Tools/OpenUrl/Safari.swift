@@ -1,12 +1,15 @@
 import SwiftUI
- 
+
 #if canImport(SafariServices)
 import SafariServices
 #endif
 
-
+/// Safari浏览器扩展/Safari browser extension
 @MainActor
 public extension Brick<Any>.OpenURLAction.Result {
+    /// 在Safari浏览器中打开URL/Open URL in Safari browser
+    /// - Parameter url: 要打开的URL/URL to open
+    /// - Returns: 处理结果/Handle result
     static func safari(_ url: URL) -> Self {
 #if os(macOS)
         NSWorkspace.shared.open(url)
@@ -33,6 +36,11 @@ public extension Brick<Any>.OpenURLAction.Result {
     }
 
 #if os(iOS) && canImport(SafariServices)
+    /// 在Safari浏览器中打开URL（带配置）/Open URL in Safari browser (with configuration)
+    /// - Parameters:
+    ///   - url: 要打开的URL/URL to open
+    ///   - configure: Safari配置闭包/Safari configuration closure
+    /// - Returns: 处理结果/Handle result
     static func safari(_ url: URL, configure: (inout SafariConfiguration) -> Void) -> Self {
         let scene = UIApplication.shared.connectedScenes.first { $0.activationState == .foregroundActive } as? UIWindowScene
         let window = scene?.windows.first { $0.isKeyWindow }
@@ -61,11 +69,13 @@ public extension Brick<Any>.OpenURLAction.Result {
         return .handled
     }
 
-    struct SafariConfiguration {
+    /// Safari浏览器配置/Safari browser configuration
+    public struct SafariConfiguration {
+        /// 关闭按钮样式/Dismiss button style
         public enum DismissStyle {
-            case done
-            case close
-            case cancel
+            case done       // 完成/Done
+            case close      // 关闭/Close
+            case cancel     // 取消/Cancel
 
             internal var buttonStyle: SFSafariViewController.DismissButtonStyle {
                 switch self {
@@ -76,9 +86,13 @@ public extension Brick<Any>.OpenURLAction.Result {
             }
         }
 
+        /// 是否启用阅读模式/Whether to enable reader mode
         public var prefersReader: Bool = false
+        /// 是否启用栏折叠/Whether to enable bar collapsing
         public var barCollapsingEnabled: Bool = true
+        /// 关闭按钮样式/Dismiss button style
         public var dismissStyle: DismissStyle = .done
+        /// 主题颜色/Theme color
         public var tintColor: Color = .accentColor
     }
 #endif

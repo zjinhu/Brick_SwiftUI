@@ -1,12 +1,21 @@
 //
-//  File.swift
+//  URL+.swift
 //  Brick_SwiftUI
 //
 //  Created by 狄烨 on 2025.06.05.
+//  URL 扩展 - 提供 URL 查询参数操作功能 / URL extension - provides URL query parameter manipulation
 //
 
 import Foundation
+
+// MARK: - URL Init with Query Parameters / URL 初始化扩展
+
+/// URL 扩展 / URL extension
 extension URL {
+    /// 从字符串和查询参数创建 URL / Create URL from string and query parameters
+    /// - Parameters:
+    ///   - string: URL 字符串 / URL string
+    ///   - queryParameters: 查询参数字典 / Query parameters dictionary
     public init?(string: String, queryParameters: [String: String]) {
         var components = URLComponents(string: string)
         components?.queryItems = queryParameters.map(URLQueryItem.init)
@@ -18,8 +27,9 @@ extension URL {
         self.init(string: string)
     }
 
-    /// Query value associated with the request.
-    ///
+    /// 获取指定名称的查询值 / Get query value associated with the request
+    /// - Parameter name: 查询参数名称 / Query parameter name
+    /// - Returns: 查询值 / Query value
     /// ```
     /// let url = URL(string: "https://example.com/?q=HelloWorld")!
     /// print(url.queryItem(named: "q")) // "HelloWorld"
@@ -33,11 +43,15 @@ extension URL {
     }
 }
 
-// MARK: - Appening Query Items
+// MARK: - Appending Query Items / 添加查询参数
 
+/// URL 查询参数添加扩展 / URL append query items extension
 extension URL {
-    /// Appends the given query item to the URL.
-    ///
+    /// 添加查询参数 / Appends the given query item to the URL
+    /// - Parameters:
+    ///   - name: 参数名称 / Parameter name
+    ///   - value: 参数值 / Parameter value
+    /// - Returns: 新 URL / New URL
     /// ```
     /// let url = URL(string: "https://example.com/?q=HelloWorld")!
     /// print(url.appendQueryItem(named: "lang", value: "Swift")) // "https://example.com/?q=HelloWorld&lang=Swift"
@@ -46,18 +60,16 @@ extension URL {
         appendQueryItem(.init(name: name, value: value))
     }
 
-    /// Appends the given query item to the URL.
-    ///
-    /// ```
-    /// let url = URL(string: "https://example.com/?q=HelloWorld")!
-    /// print(url.appendQueryItem(URLQueryItem(name: "lang", value: "Swift")) // "https://example.com/?q=HelloWorld&lang=Swift"
-    /// ```
+    /// 添加 URLQueryItem / Appends the given query item to the URL
+    /// - Parameter item: URLQueryItem
+    /// - Returns: 新 URL / New URL
     public func appendQueryItem(_ item: URLQueryItem) -> URL {
         appendQueryItems([item])
     }
 
-    /// Appends the given list of query items to the URL.
-    ///
+    /// 批量添加查询参数 / Appends the given list of query items to the URL
+    /// - Parameter items: URLQueryItem 数组 / Array of URLQueryItem
+    /// - Returns: 新 URL / New URL
     /// ```
     /// let url = URL(string: "https://example.com/?q=HelloWorld")!
     /// print(url.appendQueryItems([URLQueryItem(name: "lang", value: "Swift")]) // "https://example.com/?q=HelloWorld&lang=Swift"
@@ -78,11 +90,12 @@ extension URL {
     }
 }
 
-// MARK: - Removing Query Items
+// MARK: - Removing Query Items / 删除查询参数
 
+/// URL 查询参数删除扩展 / URL remove query items extension
 extension URL {
-    /// Removes all the query items.
-    ///
+    /// 删除所有查询参数 / Removes all the query items
+    /// - Returns: 新 URL / New URL
     /// ```
     /// let url = URL(string: "https://example.com/?q=HelloWorld")!
     /// print(url.removingQueryItems()) // "https://example.com"
@@ -97,8 +110,9 @@ extension URL {
         return components.url ?? self
     }
 
-    /// Removes all the query items that are in the given list.
-    ///
+    /// 删除指定名称的查询参数 / Removes all the query items that are in the given list
+    /// - Parameter names: 要删除的参数名称数组 / Array of parameter names to remove
+    /// - Returns: 新 URL / New URL
     /// ```
     /// let url = URL(string: "https://example.com/?q=HelloWorld&lang=swift")!
     /// print(url.removingQueryItems(["q", "lang"]) // "https://example.com/"
@@ -119,8 +133,9 @@ extension URL {
         return components.url ?? self
     }
 
-    /// Removes all the query items that match the given name.
-    ///
+    /// 删除指定名称的查询参数 / Removes all the query items that match the given name
+    /// - Parameter name: 要删除的参数名称 / Parameter name to remove
+    /// - Returns: 新 URL / New URL
     /// ```
     /// let url = URL(string: "https://example.com/?q=HelloWorld&lang=swift")!
     /// print(url.removingQueryItem(named: "q")) // "https://example.com/?lang=swift"
@@ -145,8 +160,11 @@ extension URL {
         return components.url ?? self
     }
 
-    /// Replaces value of all query items that match the given name.
-    ///
+    /// 替换指定名称的查询参数值 / Replaces value of all query items that match the given name
+    /// - Parameters:
+    ///   - name: 要替换的参数名称 / Parameter name to replace
+    ///   - value: 新值 / New value
+    /// - Returns: 新 URL / New URL
     /// ```
     /// let url = URL(string: "https://example.com/?q=HelloWorld&lang=swift")!
     /// print(url.replacingQueryItem(named: "q", with: "World")) // "https://example.com/?q=World&lang=swift"
@@ -167,8 +185,11 @@ extension URL {
         return components.url ?? self
     }
 
-    /// Replaces value of given list of query items with the new provided value.
-    ///
+    /// 批量替换查询参数值 / Replaces value of given list of query items with the new provided value
+    /// - Parameters:
+    ///   - names: 要替换的参数名称数组 / Array of parameter names to replace
+    ///   - value: 新值 / New value
+    /// - Returns: 新 URL / New URL
     /// ```
     /// let url = URL(string: "https://example.com/?q=HelloWorld&lang=swift")!
     /// print(url.replacingQueryItems(["q", "swift"], with: "xxxx")) // "https://example.com/?q=xxxx&lang=xxxx"
@@ -194,8 +215,9 @@ extension URL {
         return components.url ?? self
     }
 
-    /// Masks all query parameters from the `URL`.
-    ///
+    /// 掩码所有查询参数 / Masks all query parameters from the URL
+    /// - Parameter mask: 掩码字符 / Mask character
+    /// - Returns: 新 URL / New URL
     /// ```
     /// let url = URL(string: "https://example.com/?q=HelloWorld&lang=swift")!
     /// print(url.maskingAllQueryItems()) // "https://example.com/?q=xxxx&lang=xxxx"
@@ -217,13 +239,12 @@ extension URL {
     }
 }
 
-// MARK: - Removing Components
+// MARK: - Removing Components / 移除组件
 
+/// URL 组件移除扩展 / URL remove components extension
 extension URL {
-    /// Returns a URL constructed by removing the fragment from self.
-    ///
-    /// If the URL has no fragment (e.g., `http://www.example.com`),
-    /// then this function will return the URL unchanged.
+    /// 移除锚点 / Returns a URL constructed by removing the fragment from self
+    /// - Returns: 新 URL / New URL
     public func removingFragment() -> URL {
         guard let fragment else {
             return self
@@ -233,8 +254,8 @@ extension URL {
         return URL(string: urlString) ?? self
     }
 
-    /// Returns string representation of the URL without scheme if present;
-    /// otherwise, `absoluteString`.
+    /// 移除协议头 / Returns string representation of the URL without scheme if present
+    /// - Returns: 字符串 / String
     public func removingScheme() -> String {
         guard
             scheme != nil,
@@ -247,14 +268,16 @@ extension URL {
     }
 }
 
-// MARK: - Matches
+// MARK: - Matches / 匹配
 
+/// URL 匹配扩展 / URL matches extension
 extension URL {
-    /// A Boolean property indicating whether the url's host matches given domain.
-    ///
-    /// **Usage**
-    ///
-    /// ```swift
+    /// 检查 URL 主机是否匹配指定域名 / A Boolean property indicating whether the url's host matches given domain
+    /// - Parameters:
+    ///   - domain: 域名 / Domain name
+    ///   - includingSubdomains: 是否包含子域名 / Whether to include subdomains
+    /// - Returns: 是否匹配 / Whether matches
+    /// ```
     /// let url = URL(string: "https://www.example.com")!
     /// print(url.matches("example.com")) // true
     /// print(url.matches("example.org")) // false
@@ -263,13 +286,6 @@ extension URL {
     /// print(url.matches("example.com")) // true
     /// print(url.matches("example.com", includingSubdomains: false)) // false
     /// ```
-    ///
-    /// - Parameters:
-    ///   - domain: The domain name to evaluate against the `host` property.
-    ///   - includingSubdomains: A property to indicate if `domain` doesn't match,
-    ///     attempt to evaluate subdomains against the `host` property to find a
-    ///     match.
-    /// - Returns: `true` if matches; otherwise, `false`.
     public func matches(_ domain: String, includingSubdomains: Bool = true) -> Bool {
         if matches(host: domain) {
             return true
@@ -286,10 +302,11 @@ extension URL {
     }
 }
 
-// MARK: - Scheme
+// MARK: - Scheme / 协议
 
+/// URL Scheme 扩展 / URL scheme extension
 extension URL {
-    /// The scheme of the `URL`.
+    /// URL 协议类型 / The scheme of the URL
     public var schemeType: Scheme {
         guard let scheme else {
             return .none
@@ -299,6 +316,7 @@ extension URL {
     }
 }
 
+/// URL Scheme 类型 / URL scheme type
 extension URL {
     public struct Scheme: RawRepresentable, Sendable, Hashable, CustomStringConvertible {
         public let rawValue: String
@@ -313,12 +331,14 @@ extension URL {
     }
 }
 
+/// URL.Scheme 可字符串字面量初始化 / URL.Scheme expressible by string literal
 extension URL.Scheme: ExpressibleByStringLiteral {
     public init(stringLiteral value: StringLiteralType) {
         self.rawValue = value
     }
 }
 
+/// URL.Scheme 常用值 / URL.Scheme common values
 extension URL.Scheme {
     public static let none: Self = ""
     public static let https: Self = "https"

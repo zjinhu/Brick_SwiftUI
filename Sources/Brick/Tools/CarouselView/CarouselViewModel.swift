@@ -3,10 +3,14 @@
 //  Example
 //
 //  Created by iOS on 2023/5/31.
-//
+//  走马灯视图模型/Carousel view model
+//  管理走马灯的数据、状态和交互逻辑/Manages carousel data, state, and interaction logic
 
 import SwiftUI
 import Combine
+/// 走马灯视图模型/Carousel view model
+/// - Data: 数据集合类型/Data collection type
+/// - ID: 元素标识类型/Element identifier type
 @MainActor
 class CarouselViewModel<Data, ID>: ObservableObject where Data : RandomAccessCollection, ID : Hashable {
 

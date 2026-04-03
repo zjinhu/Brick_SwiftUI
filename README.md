@@ -272,6 +272,470 @@ SwiftUI type extensions providing convenient functionality for SwiftUI developme
 | **Task+** | Task extensions | `Task.sleep(1000000000)` |
 | **GridItem++** | GridItem extensions | `GridItem(.flexible())` |
 
+#### SwiftUI Detailed API Usage
+
+##### View++ (View Extension)
+
+```swift
+// Chain view modifications
+view.then { $0.padding() }
+    .then { $0.background(Color.blue) }
+
+// Conditional hiding
+view.hidden(isHidden)
+
+// Offset helpers
+view.offset(point)
+view.offset(length)
+view.inset(length)
+
+// Fill/Fit parent view
+view.fill(alignment: .center)
+view.fit()
+
+// Transition
+view.transition(.scale)
+view.asymmetricTransition(insertion: .opacity, removal: .move(edge: .leading))
+
+// Type erasure
+view.eraseToAnyView()
+view.any()
+
+// Hide keyboard (iOS)
+view.hideKeyboard()
+
+// Conditional tap gesture
+view.onTapGesture(count: 2, disabled: isDisabled) {
+    // handle tap
+}
+
+// Fill parent view
+view.fill(alignment: .center)
+
+// Fit parent view (maintain aspect ratio)
+view.fit()
+
+// Set tint color
+view.tintColor(.red)
+
+// Conditional tap on background
+view.onTapGestureOnBackground {
+    // handle background tap
+}
+```
+
+##### ForEach++ (ForEach Enhancement)
+
+```swift
+// With index access
+ForEach(items, id: \.id) { index, item in
+    Text("\(index): \(item.name)")
+}
+
+// Interleave with separator
+ForEach(items) { item in
+    Text(item.name)
+}.interleave(with: Divider())
+
+// Interdivide (with Divider)
+ForEach(items) { item in
+    Text(item.name)
+}.interdivided()
+
+// Interspaced (with Spacer)
+ForEach(items) { item in
+    Text(item.name)
+}.interspaced()
+```
+
+##### View+Geometry
+
+```swift
+@State private var size: CGSize = .zero
+@State private var safeArea: EdgeInsets = .zero
+
+view.bindSize(to: $size)
+view.bindSafeAreaInsets(to: $safeArea)
+```
+
+##### View+Haptic (Haptic Feedback)
+
+```swift
+// Haptic button
+HapticButton {
+    print("tapped")
+} label: {
+    Text("Tap me")
+}
+
+// Haptic feedback
+hapticFeedback()
+hapticFeedback(type: .success)
+hapticFeedback(type: .medium)
+
+// View haptics modifiers
+view.haptics(onChangeOf: value, type: .success)
+view.haptics(when: status, equalsTo: "success", type: .warning)
+view.haptics(onChangeOf: count, type: .light)
+view.triggersHapticFeedbackWhenAppear()
+```
+
+##### View+Frame
+
+```swift
+// Min/Max width & height
+view.minWidth(100)
+view.maxWidth(200)
+view.minHeight(50)
+view.maxHeight(150)
+
+// Width & height
+view.width(100)
+view.height(50)
+
+// Relative size
+view.relativeWidth(0.5)
+view.relativeHeight(0.3)
+view.relativeSize(width: 0.5, height: 0.3)
+
+// Read size
+view.readHeight { height in print(height) }
+view.readWidth { width in print(width) }
+
+// Square frame
+view.squareFrame()
+view.squareFrame(sideLength: 100)
+
+// Ideal frame
+view.idealFrame(width: 100, height: 50)
+```
+
+##### View+Mask
+
+```swift
+// Mask
+view.mask(Circle())
+
+// Masking (inverse)
+view.masking {
+    Circle()
+}
+
+// Reverse mask (for badge effects)
+view.reverseMask(alignment: .topTrailing) {
+    Circle()
+        .frame(width: 20, height: 20)
+}
+```
+
+##### View+Background
+
+```swift
+// Background
+view.background(Color.red)
+view.background {
+    Image("bg")
+}
+
+// Background fill (ignoring safe area)
+view.backgroundFill(Color.blue)
+view.backgroundFill {
+    LinearGradient(...)
+}
+
+// PassthroughView
+PassthroughView {
+    Color.red
+}
+```
+
+##### Image++
+
+```swift
+// Symbol with config
+Image(systemName: "heart")
+    .symbol(variableColor: .blue)
+    .symbolRenderingMode(.hierarchical)
+
+// Resize image
+Image(systemName: "heart")
+    .resized(toWidth: 100)
+    .resized(toHeight: 50)
+
+// Size to fit
+image.sizeToFit()
+
+// Load async image
+AsyncImage(url: url)
+    .loadAsync()
+```
+
+##### View+Conditionals
+
+```swift
+// Enable/disable view
+view.enabled(isEnabled)
+view.enabled(isEnabled, removeFromHierarchy: true)
+
+// Conditional visibility
+view.hidden(if: isHidden)
+view.visible(if: isVisible)
+
+// Conditional modifier
+view.modifier(if: shouldApply) {
+    SomeModifier()
+}
+```
+
+##### Text++
+
+```swift
+// Text styling
+Text("Hello")
+    .bold()
+    .italic()
+    .underline()
+    .strikethrough()
+    .monospaced()
+    .smallCaps()
+    .textCase(.uppercase)
+    .textCase(.lowercase)
+
+// Tracking
+Text("Hello")
+    .tracking(2)
+    .tracking(-0.5)
+```
+
+##### Label++
+
+```swift
+// Label with icon
+Label("Title", systemImage: "star")
+Label {
+    Text("Content")
+} icon: {
+    Image(systemName: "star")
+}
+```
+
+##### List++
+
+```swift
+// List with style
+List {
+    // content
+}
+.listStyle(.insetGrouped)
+.listStyle(.plain)
+.listStyle(.inset)
+.listStyle(.sidebar)
+
+// List row background
+.listRowBackground(Color.clear)
+```
+
+##### Section++
+
+```swift
+// Section with header
+Section("Header") {
+    Text("Content")
+}
+
+// Section with header and footer
+Section(header: Text("Header"), footer: Text("Footer")) {
+    Text("Content")
+}
+```
+
+##### NavigationLink++
+
+```swift
+// Push navigation
+NavigationLink(destination: DetailView()) {
+    Text("Go to Detail")
+}
+
+// Value-based navigation
+NavigationLink(value: item) {
+    Text(item.name)
+}
+.navigationDestination(for: Item.self) { item in
+    DetailView(item: item)
+}
+```
+
+##### Shape++
+
+```swift
+// Rounded rectangle
+RoundedRectangle(cornerRadius: 10)
+RoundedRectangle(cornerRadius: 10, style: .continuous)
+
+// Capsule
+Capsule()
+Capsule(style: .continuous)
+
+// Custom shapes
+Rectangle()
+Circle()
+Ellipse()
+```
+
+##### Spacer++
+
+```swift
+// Spacer with min length
+Spacer(minLength: 20)
+
+// Spacer with frame
+Spacer()
+    .frame(height: 10)
+```
+
+##### Menu++
+
+```swift
+// Basic menu
+Menu("Actions") {
+    Button("Action 1") { }
+    Button("Action 2") { }
+}
+
+// Menu with label
+Menu {
+    Button("Edit") { }
+    Button("Delete") { }
+} label: {
+    Image(systemName: "ellipsis.circle")
+}
+```
+
+##### Angle++
+
+```swift
+// Angle from degrees
+Angle(degrees: 45)
+
+// Angle from radians
+Angle(radians: .pi / 4)
+
+// Rotate content
+content
+    .rotationEffect(Angle(degrees: 45))
+```
+
+##### Collection++
+
+```swift
+// Safe subscript
+let item = array[safe: 0]  // Returns nil if out of bounds
+
+// First/last
+array[safe: \.first]
+array[safe: \.last]
+
+// Boundary safe
+array[safe: 0...5]
+array[safe: 0..<5]
+```
+
+##### URL++
+
+```swift
+// URL with query parameters
+var components = URL(string: "https://example.com")
+components?.queryItems = [
+    URLQueryItem(name: "key", value: "value")
+]
+
+// Check URL validity
+url?.isValid
+```
+
+##### String++
+
+```swift
+// Case transformations
+"hello".uppercasedFirst()  // "Hello"
+"hello".lowercasedFirst()  // "hello"
+"hello_world".camelcased()  // "helloWorld"
+"HelloWorld".snakecased()  // "hello_world"
+"hello world".titlecased() // "Hello World"
+
+// URL encoding
+"hello world".urlEscaped()  // "hello%20world"
+
+// Line handling
+"line1\nline2".lines()  // ["line1", "line2"]
+
+// Whitespace handling
+"  hello  world  ".trimmed()  // "hello world"
+
+// Pattern replacement
+"hello".replacing("l", with: "r")  // "herro"
+
+// Validation
+"https://example.com".isValidUrl  // true
+"   ".isBlank  // true
+
+// Prefix/suffix removal
+"hello world".droppingPrefix("hello ")  // "world"
+"hello world".droppingSuffix(" world")  // "hello"
+
+// Take last characters
+"hello".take(last: 3)  // "llo"
+
+// Random string
+String.random(length: 10)
+
+// Truncation
+"Hello World".truncate(5)  // "He..."
+"Hello World".truncate(5, position: .head)  // "...rld"
+"Hello World".truncate(5, position: .middle)  // "He...ld"
+
+// Nil if empty/blank
+"".nilIfEmpty  // nil
+"   ".nilIfBlank  // nil
+```
+
+##### Task+
+
+```swift
+// Sleep
+try? await Task.sleep(1_000_000_000) // 1 second
+
+// Task with timeout
+try? await Task.timeout(after: 1.0) {
+    await someWork()
+}
+```
+
+##### GridItem++
+
+```swift
+// Flexible grid item
+GridItem(.flexible())
+GridItem(.flexible(spacing: 10))
+GridItem(.flexible(spacing: 10, alignment: .leading))
+
+// Fixed grid item
+GridItem(.fixed(100))
+GridItem.fixed(100)
+
+// Adaptive grid item
+GridItem.adaptive(minimum: 50, maximum: 100)
+
+// Array of grid items
+[GridItem].fixed([100, 200, 100])
+[GridItem].adaptive(minimum: 80, maximum: .infinity)
+[GridItem].flexible(minimum: 50, maximum: 200)
+
+// GridItem.Size
+GridItem.Size.adaptive(100)
+```
+
 ### Tools - UI Components
 
 Pre-built UI components for rapid development.
@@ -289,6 +753,507 @@ Pre-built UI components for rapid development.
 | **Presentation** | Presentation controls: DragIndicator, Detents, CornerRadius | `presentationDetents([.medium, .large])` |
 | **TextEditors** | TextEditor style extensions | `TextEditor(text: $text).style(...)` |
 | **UnderLineText** | Underline text input | `UnderLineText(text: $text)` |
+
+#### Tools Detailed API Usage
+
+##### CarouselView
+
+```swift
+// Basic carousel
+CarouselView(items, id: \.id) { item in
+    Image(item.imageURL)
+        .resizable()
+        .aspectRatio(contentMode: .fill)
+}
+.index($currentIndex)
+
+// With custom configuration
+CarouselView(
+    items,
+    id: \.id,
+    index: $currentIndex,
+    spacing: 10,
+    headspace: 20,
+    sidesScaling: 0.85,
+    isWrap: true,
+    autoScroll: .active(3),
+    canMove: true
+) { item in
+    BannerView(item: item)
+}
+
+// Auto scroll options
+CarouselAutoScroll.inactive        // No auto scroll
+CarouselAutoScroll.active(5)        // Auto scroll every 5 seconds
+CarouselAutoScroll.defaultActive    // Default 5 seconds
+
+// Use with PageIndicator
+@State private var index = 0
+
+VStack {
+    CarouselView(data, index: $index) { item in
+        item.view
+    }
+    
+    PageIndicator(
+        currentIndex: index,
+        totalCount: data.count
+    )
+}
+```
+
+##### Toast
+
+```swift
+// Basic toast with CustomToast
+@State private var showToast = false
+
+VStack {
+    Button("Show Toast") {
+        showToast = true
+    }
+}
+.toast(isPresented: $showToast, position: .top, animation: .fade, duration: 2.0) {
+    Text("Hello World")
+        .padding()
+        .background(Color.black.opacity(0.8))
+        .foregroundColor(.white)
+        .cornerRadius(10)
+}
+
+// AlertToast with display modes
+@State private var showAlert = false
+
+// Alert mode (center popup)
+VStack {
+    Button("Show Alert") {
+        showAlert = true
+    }
+}
+.toast(isPresented: $showAlert, duration: 2) {
+    AlertToast(
+        displayMode: .alert,
+        type: .systemImage("checkmark.circle.fill", .green),
+        title: "Success",
+        subTitle: "Operation completed successfully"
+    )
+}
+
+// HUD mode
+.toast(isPresented: $showHUD, duration: 2) {
+    AlertToast(
+        displayMode: .hud,
+        type: .systemImage("star.fill", .orange),
+        title: "Loading...",
+        subTitle: "Please wait"
+    )
+}
+
+// Banner mode (top/bottom slide)
+.toast(isPresented: $showBanner, duration: 2) {
+    AlertToast(
+        displayMode: .banner(.slide),
+        type: .systemImage("info.circle.fill", .blue),
+        title: "New Message",
+        subTitle: "You have a new notification"
+    )
+}
+
+// AlertToast types
+AlertToast(displayMode: .alert, type: .systemImage("heart.fill", .red))
+AlertToast(displayMode: .alert, type: .image("customImage", .blue))
+AlertToast(displayMode: .alert, type: .regular)
+AlertToast(displayMode: .alert, type: .loading)
+
+// Custom styling
+AlertToast(
+    displayMode: .hud,
+    type: .systemImage("star.fill", .orange),
+    title: "Custom",
+        style: .style(
+            backgroundColor: .black.opacity(0.9),
+            titleColor: .white,
+            subTitleColor: .gray,
+            titleFont: .headline,
+            subTitleFont: .caption
+        )
+    )
+}
+```
+
+##### OpenUrl
+
+```swift
+// OpenURL action
+@Environment(\.openURL) private var openURL
+
+Button("Open URL") {
+    if let url = URL(string: "https://example.com") {
+        openURL(url)
+    }
+}
+
+// With completion handler
+openURL(url) { accepted in
+    print(accepted ? "Opened successfully" : "Failed to open")
+}
+
+// Custom URL handling
+Text("Visit [Example](https://example.com)")
+    .environment(\.openURL, Brick.OpenURLAction { url in
+        // Custom handling
+        return .handled
+    })
+
+// OpenURLAction results
+.openURL(url)              // System default action
+.openURL(url) { .handled } // Custom handled
+.openURL(url) { .discarded } // Discard
+.openURL(url) { .systemAction(url) } // Force system action
+
+// Safari browser
+@Environment(\.openURL) var openURL
+
+Button("Open in Safari") {
+    if let url = URL(string: "https://example.com") {
+        openURL(url) { _ in
+            Brick.OpenURLAction.Result.safari(url)
+        }
+    }
+}
+
+// Safari with configuration
+openURL(url) { _ in
+    Brick.OpenURLAction.Result.safari(url) { config in
+        config.prefersReader = true
+        config.barCollapsingEnabled = true
+        config.dismissStyle = .done
+        config.tintColor = .blue
+    }
+}
+
+// Brick.Link
+Brick.Link("Visit Website", destination: URL(string: "https://example.com")!)
+
+Brick.Link(destination: URL(string: "https://example.com")!) {
+    Image(systemName: "link")
+    Text("Click here")
+}
+
+// WebView
+@State private var webView: WKWebView? = nil
+@State private var webViewState: WebViewState = .idle
+
+WebView(url: URL(string: "https://example.com")!)
+    .showProgress(true)
+    .getWebViewObject($webView)
+    .getWebViewState($webViewState)
+    .setProgressColor(.green)
+    .clearBackgroundColor()
+    .showRefreshControl(true)
+    .onMessageHandler(name: "native") { message in
+        // Handle JS message
+        print(message)
+    }
+    .additionalConfiguration { webView in
+        webView.customUserAgent = "Custom User Agent"
+    }
+    .policyDecision { webView, action in
+        // Handle navigation policy
+        return .allow
+    }
+
+// WebView states
+switch webViewState {
+case .idle: break
+case .didStart: print("Started loading")
+case .didFail: print("Failed")
+case .didFinish: print("Finished")
+case .didTerminate: print("Terminated")
+case .didCommit: print("Committed")
+}
+
+// Clean WebView data
+WebView.Coordinator.cleanAllWebsiteDataStoreIfNeeded()
+```
+
+##### NavigationStack
+
+```swift
+// Basic NavigationStack (iOS 14-15 compatible, deprecated on iOS 16+)
+@State private var path: [String] = []
+
+Brick.NavigationStack(path: $path) {
+    List {
+        ForEach(items, id: \.self) { item in
+            NavigationLink(item, value: item)
+        }
+    }
+    .navigationDestination(for: String.self) { item in
+        DetailView(item: item)
+    }
+}
+
+// Without path binding (internal path management)
+Brick.NavigationStack {
+    List {
+        NavigationLink("Detail", value: "detail1")
+        NavigationLink("Detail", value: "detail2")
+    }
+    .navigationDestination(for: String.self) { value in
+        DetailView(title: value)
+    }
+}
+
+// Using Navigator (programmatic navigation)
+@EnvironmentObject var navigator: Navigator<String>
+
+Button("Push Detail") {
+    navigator.push("newDetail")
+}
+
+Button("Pop") {
+    navigator.pop()
+}
+
+Button("Pop to Root") {
+    navigator.popToRoot()
+}
+
+Button("Pop to Index") {
+    navigator.popTo(index: 2)
+}
+
+Button("Pop to Condition") {
+    navigator.popTo(where: { $0 == "target" })
+}
+
+// Using PathNavigator (AnyHashable)
+@EnvironmentObject var pathNavigator: PathNavigator
+
+pathNavigator.push("newScreen")
+pathNavigator.popTo(String.self)
+
+// Custom Navigation Policy
+struct ContentView: View {
+    var body: some View {
+        NavigationStack(path: $path) {
+            // Content
+        }
+        .environment(\.useNavigationStack, .whenAvailable) // Use NavigationStack when available (iOS 16+)
+        .environment(\.useNavigationStack, .never) // Always use NavigationView (iOS 14-15)
+    }
+}
+```
+
+##### TTextField
+
+```swift
+// Basic usage
+@State private var text = ""
+
+TTextField(text: $text)
+    .tTextFieldTitle("Username")
+    .tTextFieldPlaceHolderText("Enter username")
+    .tTextFieldTextColor(.black)
+    .tTextFieldTitleColor(.gray)
+
+// With error state
+@State private var hasError = false
+@State private var errorMessage = "Invalid input"
+
+TTextField(text: $text, error: $hasError, errorText: $errorMessage)
+    .tTextFieldTitle("Email")
+    .tTextFieldPlaceHolderText("Enter email")
+
+// Secure text field
+TTextField(text: $password)
+    .tTextFieldSecure(true)
+    .tTextFieldSecureImage(open: .eye, close: .eyeSlash)
+
+// Custom styling
+TTextField(text: $text)
+    .tTextFieldTitleFont(.headline)
+    .tTextFieldErrorFont(.caption)
+    .tTextFieldPlaceHolderFont(.subheadline)
+    .tTextFieldBackgroundColor(.white)
+    .tTextFieldBorderColor(.gray)
+    .tTextFieldErrorTextColor(.red)
+    .tTextFieldFocusedBorderColor(.blue)
+    .tTextFieldFocusedBorderColorEnable(true)
+    .tTextFieldBorderType(.square)
+    .tTextFieldBorderWidth(1)
+    .tTextFieldCornerRadius(8)
+    .tTextFieldHeight(44)
+
+// With leading/trailing views
+TTextField(text: $text)
+    .tTextFieldLeadingView {
+        Image(systemName: "person")
+            .foregroundColor(.gray)
+    }
+    .tTextFieldTrailingView {
+        Button(action: {}) {
+            Image(systemName: "xmark.circle.fill")
+        }
+    }
+
+// Input limits
+TTextField(text: $text)
+    .tTextFieldLimitCount(20)
+    .tTextFieldTruncationMode(.tail)
+
+// Disable auto-correction
+TTextField(text: $text)
+    .tTextFieldDisableAutoCorrection(true)
+```
+
+##### Presentation
+
+```swift
+// Detents (iOS 15+)
+.sheet(isPresented: $showSheet) {
+    ContentView()
+        .presentationDetents([.medium, .large])
+        .presentationDragIndicator(.visible)
+}
+
+// With selection binding
+@State private var selectedDetent: PresentationDetent = .medium
+
+.sheet(isPresented: $showSheet) {
+    ContentView()
+        .presentationDetents([.medium, .large], selection: $selectedDetent)
+}
+
+// Interactive dismiss
+.sheet(isPresented: $showSheet) {
+    ContentView()
+        .interactiveDismissDisabled()  // Disable dismiss
+}
+
+// Custom corner radius (iOS 15+)
+.sheet(isPresented: $showSheet) {
+    ContentView()
+        .presentationCornerRadius(20)
+}
+
+// Background interaction
+.sheet(isPresented: $showSheet) {
+    ContentView()
+        .presentationBackground(Color.clear)
+        .presentationBackgroundInteraction(.upwards)
+}
+
+// Content interaction
+.sheet(isPresented: $showSheet) {
+    ContentView()
+        .contentShapeSumo(.rect)
+}
+```
+
+##### Loading
+
+```swift
+// Basic loading
+@State private var isLoading = false
+
+Button("Show Loading") {
+    isLoading = true
+}
+.loading(isPresented: $isLoading) {
+    ProgressView()
+        .scaleEffect(1.5)
+}
+
+// With options
+.loading(
+    isPresented: $isLoading,
+    options: LoadingOptions(
+        hideAfter: 3.0,          // Auto hide after 3 seconds
+        backdrop: .black.opacity(0.5),  // Dark backdrop
+        animation: .easeInOut,
+        modifierType: .fade,    // or .scale
+        dismissOnTap: true       // Tap to dismiss
+    )
+) {
+    VStack {
+        ProgressView()
+        Text("Loading...")
+            .foregroundColor(.white)
+    }
+    .padding(30)
+    .background(Color.gray.opacity(0.8))
+    .cornerRadius(10)
+}
+```
+
+##### Refresh
+
+```swift
+// With default header
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+
+// Custom header
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+.refreshHeader {
+    CustomRefreshHeaderView()
+}
+
+// Custom footer
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+.refreshFooter {
+    CustomRefreshFooterView()
+}
+```
+
+##### UnderLineText
+
+```swift
+// Basic usage
+@State private var text = ""
+@State private var date = Date()
+
+UnderLineText()
+    .underLineText(text)
+    .underLineTitle("Name")
+    .underLineColor(.gray)
+    .onChange(of: text) { newValue in
+        // Handle text change
+    }
+
+// With leading/trailing views
+UnderLineText()
+    .underLineText("Some Text")
+    .underLineTitle("Label")
+    .underLineLeadingView {
+        Image(systemName: "person")
+    }
+    .underLineTrailingView {
+        DatePicker("", selection: $date, displayedComponents: .date)
+    }
+
+// Custom styling
+UnderLineText()
+    .underLineText("Custom")
+    .underLineTitle("Title")
+    .underLineTitleColor(.gray)
+    .underLineTitleFont(.headline)
+    .underLineTextColor(.black)
+    .underLineTextFont(.body)
+    .underLineColor(.blue)
+    .underLineHeight(1)
+    .underLineTextHeight(40)
+```
 
 ### Utilities - Core Utilities
 

@@ -3,9 +3,14 @@
 //  Example
 //
 //  Created by iOS on 2023/5/31.
-//
+//  走马灯视图/Carousel view
+//  支持循环滚动、自动播放、左右两侧缩放效果/Supports loop scrolling, auto-play, and side scaling effects
 
 import SwiftUI
+/// 走马灯视图/Carousel view
+/// - Data: 数据集合类型/Data collection type
+/// - ID: 元素标识类型/Element identifier type
+/// - Content: 视图内容类型/View content type
 public struct CarouselView<Data, ID, Content> : View where Data : RandomAccessCollection, ID : Hashable, Content : View {
     
     @ObservedObject
@@ -103,18 +108,23 @@ extension CarouselView where ID == Data.Element.ID, Data.Element : Identifiable 
     
 }
 
+/// 自动滚动模式/Auto scroll mode
 public enum CarouselAutoScroll {
+    /// 不自动滚动/Do not auto scroll
     case inactive
+    /// 自动滚动，参数为滚动间隔（秒）/Auto scroll, parameter is scroll interval (seconds)
     case active(TimeInterval)
 }
 
 
 public extension CarouselAutoScroll {
 
+    /// 默认自动滚动间隔（5秒）/Default auto scroll interval (5 seconds)
     static var defaultActive: Self {
         return .active(5)
     }
 
+    /// 是否处于激活状态/Whether it is in active state
     var isActive: Bool {
         switch self {
         case .active(let t): return t > 0
@@ -122,6 +132,7 @@ public extension CarouselAutoScroll {
         }
     }
 
+    /// 滚动间隔（秒）/Scroll interval (seconds)
     var interval: TimeInterval {
         switch self {
         case .active(let t): return t

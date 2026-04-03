@@ -1,22 +1,22 @@
 //
-//  ShadowStyle.swift
+//  View+Shadow.swift
 //  SwiftUIKit
 //
 //  Created by Daniel Saidi on 2020-03-05.
+//  视图阴影样式扩展 - 提供类型安全的阴影样式 / View shadow style extension - provides type-safe shadow styles
 //  Copyright © 2020-2024 Daniel Saidi. All rights reserved.
 //
 
 import SwiftUI
 
 /**
- This styles defines shadow values, to allow strong typing.
- 
- You can specify your own standard styles by creating static,
- calculated extension properties, for instance:
+ 阴影样式定义 / Shadow style definition
+ 允许强类型化指定阴影值 / Allows strong typing for shadow values
+
+ 你可以通过创建静态计算属性来指定自己的标准样式 / You can specify your own standard styles by creating static, calculated extension properties, for instance:
  
  ```swift
  extension ShadowStyle {
- 
      static let badge = Self(
          color: Color.black.opacity(0.1),
          radius: 3,
@@ -25,12 +25,17 @@ import SwiftUI
      )
  }
  ```
- 
- You can apply the style with the `.font(_ style:)` modifier.
- ```
+
+ 使用方式: `.shadow(_ style:)` 修饰器 / Usage: `.shadow(_ style:)` modifier
  */
 public struct ViewShadowStyle : Sendable{
     
+    /// 初始化阴影样式 / Initialize shadow style
+    /// - Parameters:
+    ///   - color: 阴影颜色 / Shadow color
+    ///   - radius: 模糊半径 / Blur radius
+    ///   - x: X 偏移 / X offset
+    ///   - y: Y 偏移 / Y offset
     public init(
         color: Color? = nil,
         radius: CGFloat = 0,
@@ -52,25 +57,25 @@ public struct ViewShadowStyle : Sendable{
 @MainActor
 public extension ViewShadowStyle {
     
-    /// This style applies no shadow.
+    /// 无阴影 / No shadow
     static let none = ViewShadowStyle(color: .clear)
     
-    /// The shadow of a badge that is attached to its parent
-    /// view, but in a slightly separated layer.
+    /// 徽章阴影 - 附着在父视图上但略微分离的层 / Badge shadow - attached to parent but slightly separated layer
     static var badge = ViewShadowStyle(radius: 1, y: 1)
     
-    /// The shadow of a solid element that is elevated a bit
-    /// above its parent view.
+    /// 提升阴影 - 略微高于父视图的实心元素 / Elevated shadow - solid element elevated above parent view
     static var elevated = ViewShadowStyle(radius: 3, x: 0, y: 2)
     
-    /// The shadow of a thin sticker that is attached to its
-    /// parent view.
+    /// 贴纸阴影 - 附着在父视图上的薄贴纸 / Sticker shadow - thin sticker attached to parent view
     static var sticker = ViewShadowStyle(radius: 0, y: 1)
 }
 
+/// View 阴影扩展 / View shadow extension
 public extension View {
 
-    /// Apply a ``ViewShadowStyle`` to the view.
+    /// 应用 ViewShadowStyle 到视图 / Apply a ViewShadowStyle to the view
+    /// - Parameter style: 阴影样式 / Shadow style
+    /// - Returns: 带阴影的视图 / View with shadow
     @ViewBuilder
     func shadow(_ style: ViewShadowStyle) -> some View {
         if let color = style.color {

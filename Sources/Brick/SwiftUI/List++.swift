@@ -1,13 +1,22 @@
 //
-//  SwiftUIView.swift
-//  
+//  List++.swift
+//  Brick_SwiftUI
 //
 //  Created by iOS on 2023/6/28.
+//  List 扩展 - 提供带选中状态的 List 初始化方法 / List extension - provides List initialization with selection state
 //
 
 import SwiftUI
 
+// MARK: - List Extension with Selection / List 带选中的扩展
+
+/// List 扩展 / List extension
 extension List {
+    /// 初始化带多选的 List / Initialize List with multi-selection (ID based)
+    /// - Parameters:
+    ///   - data: 数据集合 / Data collection
+    ///   - selection: 选中项绑定 / Selection binding
+    ///   - rowContent: 行内容闭包 / Row content closure
     #if swift(>=5.5.1) || (swift(>=5.5) && !targetEnvironment(macCatalyst) && !os(macOS))
     @available(watchOS, unavailable)
     public init<Data: RandomAccessCollection, RowContent: View>(
@@ -20,6 +29,7 @@ extension List {
         })
     }
     
+    /// 初始化带多选的 List / Initialize List with multi-selection (Element based)
     @available(watchOS, unavailable)
     public init<Data: RandomAccessCollection, RowContent: View>(
         _ data: Data,

@@ -3,22 +3,26 @@
 //  MetagAI
 //
 //  Created by iOS on 9/18/24.
-//
+//  Web视图组件/Web view component
+//  基于WKWebView的SwiftUI WebView实现/ WKWebView-based SwiftUI WebView implementation
 
 import SwiftUI
 //https://github.com/zmian/xcore/blob/main/Sources/Xcore/SwiftUI/Components/WebView/WebView.swift
 #if os(iOS)
 @preconcurrency import WebKit
 
+/// WebView加载状态/WebView loading state
 public enum WebViewState: Error {
-    case idle
-    case didStart
-    case didFail
-    case didFinish
-    case didTerminate
-    case didCommit
+    case idle         // 空闲/Idle
+    case didStart     // 开始加载/Started loading
+    case didFail      // 加载失败/Failed to load
+    case didFinish    // 加载完成/Finished loading
+    case didTerminate // 已终止/Terminated
+    case didCommit    // 已提交/Committed
 }
 
+/// WebView组件/WebView component
+/// - iOS平台可用/Available on iOS platform
 public struct WebView: UIViewRepresentable {
     public typealias MessageHandler = @MainActor (_ body: String?) async throws -> Void
     public typealias PolicyDecision = @MainActor (_ webView: WKWebView,
