@@ -754,6 +754,497 @@ GridItem.Size.adaptive(100)
 | **TextEditors** | TextEditor 样式扩展 | `TextEditor(text: $text).style(...)` |
 | **UnderLineText** | 下划线文本输入 | `UnderLineText(text: $text)` |
 
+#### Tools 详细 API 用法
+
+##### CarouselView
+
+```swift
+// 基础走马灯
+CarouselView(items, id: \.id) { item in
+    Image(item.imageURL)
+        .resizable()
+        .aspectRatio(contentMode: .fill)
+}
+.index($currentIndex)
+
+// 自定义配置
+CarouselView(
+    items,
+    id: \.id,
+    index: $currentIndex,
+    spacing: 10,
+    headspace: 20,
+    sidesScaling: 0.85,
+    isWrap: true,
+    autoScroll: .active(3),
+    canMove: true
+) { item in
+    BannerView(item: item)
+}
+
+// 自动滚动选项
+CarouselAutoScroll.inactive        // 不自动滚动
+CarouselAutoScroll.active(5)       // 每5秒自动滚动
+CarouselAutoScroll.defaultActive  // 默认5秒
+```
+
+##### Toast
+
+```swift
+// 基础Toast (CustomToast)
+@State private var showToast = false
+
+VStack {
+    Button("显示Toast") {
+        showToast = true
+    }
+}
+.toast(isPresented: $showToast, position: .top, animation: .fade, duration: 2.0) {
+    Text("你好世界")
+        .padding()
+        .background(Color.black.opacity(0.8))
+        .foregroundColor(.white)
+        .cornerRadius(10)
+}
+
+// AlertToast显示模式
+@State private var showAlert = false
+
+// 弹窗模式
+.toast(isPresented: $showAlert, duration: 2) {
+    AlertToast(
+        displayMode: .alert,
+        type: .systemImage("checkmark.circle.fill", .green),
+        title: "成功",
+        subTitle: "操作完成"
+    )
+}
+
+// HUD模式
+.toast(isPresented: $showHUD, duration: 2) {
+    AlertToast(
+        displayMode: .hud,
+        type: .systemImage("star.fill", .orange),
+        title: "加载中...",
+        subTitle: "请稍候"
+    )
+}
+
+// 横幅模式
+.toast(isPresented: $showBanner, duration: 2) {
+    AlertToast(
+        displayMode: .banner(.slide),
+        type: .systemImage("info.circle.fill", .blue),
+        title: "新消息",
+        subTitle: "您有一条新通知"
+    )
+}
+```
+
+##### ToastManager
+
+```swift
+// 基础ToastManager用法
+@StateObject private var toastManager = ToastManager()
+
+VStack {
+    Button("显示Toast") {
+        toastManager.showText("你好世界")
+    }
+}
+.addToast(toastManager)
+
+// 自定义配置
+@StateObject private var customToast = ToastManager(position: .top)
+
+customToast.duration = 5.0
+customToast.padding = 20
+
+Button("显示自定义Toast") {
+    customToast.show {
+        VStack {
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundColor(.green)
+            Text("成功!")
+            .font(.headline)
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(radius: 5)
+    }
+}
+.addToast(customToast)
+
+// 手动关闭（带回调）
+Button("显示后关闭") {
+    toastManager.show {
+        Text("3秒后自动关闭")
+            .padding()
+            .background(Color.black.opacity(0.8))
+            .foregroundColor(.white)
+            .cornerRadius(8)
+    }
+} onTap: {
+    toastManager.dismiss {
+        print("Toast已关闭!")
+    }
+}
+
+// 不同位置
+@StateObject private var topToast = ToastManager(position: .top)
+@StateObject private var bottomToast = ToastManager(position: .bottom)
+
+Button("顶部Toast") {
+    topToast.showText("从顶部出现")
+}
+.addToast(topToast)
+
+Button("底部Toast") {
+    bottomToast.showText("从底部出现")
+}
+.addToast(bottomToast)
+
+// MessageView自定义
+toastManager.show {
+    MessageView(text: "简单消息")
+        .padding(15)
+        .background(Color.blue.opacity(0.9))
+        .cornerRadius(12)
+}
+```
+
+##### OpenUrl
+
+```swift
+// OpenURL操作
+@Environment(\.openURL) private var openURL
+
+Button("打开URL") {
+    if let url = URL(string: "https://example.com") {
+        openURL(url)
+    }
+}
+
+// 带完成处理
+openURL(url) { accepted in
+    print(accepted ? "打开成功" : "打开失败")
+}
+
+// 自定义URL处理
+Text("访问 [示例](https://example.com)")
+    .environment(\.openURL, Brick.OpenURLAction { url in
+        return .handled
+    })
+
+// Safari浏览器
+openURL(url) { _ in
+    Brick.OpenURLAction.Result.safari(url)
+}
+
+// Safari带配置
+openURL(url) { _ in
+    Brick.OpenURLAction.Result.safari(url) { config in
+        config.prefersReader = true
+        config.dismissStyle = .done
+        config.tintColor = .blue
+    }
+}
+
+// Brick.Link
+Brick.Link("访问网站", destination: URL(string: "https://example.com")!)
+
+// WebView
+WebView(url: URL(string: "https://example.com")!)
+    .showProgress(true)
+    .getWebViewObject($webView)
+    .getWebViewState($webViewState)
+    .clearBackgroundColor()
+    .showRefreshControl(true)
+    .onMessageHandler(name: "native") { message in
+        print(message)
+    }
+```
+
+##### NavigationStack
+
+```swift
+// 基础NavigationStack (iOS 14-15兼容)
+@State private var path: [String] = []
+
+Brick.NavigationStack(path: $path) {
+    List {
+        ForEach(items, id: \.self) { item in
+            NavigationLink(item, value: item)
+        }
+    }
+    .navigationDestination(for: String.self) { item in
+        DetailView(item: item)
+    }
+}
+
+// 不带path绑定（内部path管理）
+Brick.NavigationStack {
+    List {
+        NavigationLink("详情", value: "detail1")
+    }
+    .navigationDestination(for: String.self) { value in
+        DetailView(title: value)
+    }
+}
+
+// 使用Navigator（编程式导航）
+@EnvironmentObject var navigator: Navigator<String>
+
+Button("推入详情") {
+    navigator.push("newDetail")
+}
+
+Button("返回") {
+    navigator.pop()
+}
+
+Button("返回根") {
+    navigator.popToRoot()
+}
+```
+
+##### TTextField
+
+```swift
+// 基础用法
+@State private var text = ""
+
+TTextField(text: $text)
+    .tTextFieldTitle("用户名")
+    .tTextFieldPlaceHolderText("请输入用户名")
+    .tTextFieldTextColor(.black)
+
+// 错误状态
+@State private var hasError = false
+@State private var errorMessage = "输入无效"
+
+TTextField(text: $text, error: $hasError, errorText: $errorMessage)
+    .tTextFieldTitle("邮箱")
+    .tTextFieldPlaceHolderText("请输入邮箱")
+
+// 密码框
+TTextField(text: $password)
+    .tTextFieldSecure(true)
+
+// 自定义样式
+TTextField(text: $text)
+    .tTextFieldTitleFont(.headline)
+    .tTextFieldBackgroundColor(.white)
+    .tTextFieldBorderColor(.gray)
+    .tTextFieldErrorTextColor(.red)
+    .tTextFieldFocusedBorderColor(.blue)
+    .tTextFieldBorderType(.square)
+    .tTextFieldBorderWidth(1)
+    .tTextFieldCornerRadius(8)
+    .tTextFieldHeight(44)
+
+// 左侧/右侧视图
+TTextField(text: $text)
+    .tTextFieldLeadingView {
+        Image(systemName: "person")
+            .foregroundColor(.gray)
+    }
+    .tTextFieldTrailingView {
+        Button(action: {}) {
+            Image(systemName: "xmark.circle.fill")
+        }
+    }
+
+// 输入限制
+TTextField(text: $text)
+    .tTextFieldLimitCount(20)
+```
+
+##### Presentation
+
+```swift
+// 面板高度停留位置 (iOS 15+)
+.sheet(isPresented: $showSheet) {
+    ContentView()
+        .presentationDetents([.medium, .large])
+        .presentationDragIndicator(.visible)
+}
+
+// 带选择绑定
+@State private var selectedDetent: PresentationDetent = .medium
+
+.sheet(isPresented: $showSheet) {
+    ContentView()
+        .presentationDetents([.medium, .large], selection: $selectedDetent)
+}
+
+// 交互式关闭
+.sheet(isPresented: $showSheet) {
+    ContentView()
+        .interactiveDismissDisabled()
+
+// 自定义圆角 (iOS 15+)
+.sheet(isPresented: $showSheet) {
+    ContentView()
+        .presentationCornerRadius(20)
+}
+
+// 背景交互
+.sheet(isPresented: $showSheet) {
+    ContentView()
+        .presentationBackground(Color.clear)
+        .presentationBackgroundInteraction(.upwards)
+}
+```
+
+##### Loading
+
+```swift
+// 基础加载
+@State private var isLoading = false
+
+Button("显示加载") {
+    isLoading = true
+}
+.loading(isPresented: $isLoading) {
+    ProgressView()
+        .scaleEffect(1.5)
+}
+
+// 带选项
+.loading(
+    isPresented: $isLoading,
+    options: LoadingOptions(
+        hideAfter: 3.0,                    // 3秒后自动隐藏
+        backdrop: .black.opacity(0.5),      // 黑色背景
+        animation: .easeInOut,
+        modifierType: .fade,                // 或 .scale
+        dismissOnTap: true                  // 点击关闭
+    )
+) {
+    VStack {
+        ProgressView()
+        Text("加载中...")
+            .foregroundColor(.white)
+    }
+    .padding(30)
+    .background(Color.gray.opacity(0.8))
+    .cornerRadius(10)
+}
+```
+
+##### Refresh
+
+```swift
+// 带默认头部
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+
+// 自定义头部
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+.refreshHeader {
+    CustomRefreshHeaderView()
+}
+
+// 自定义底部
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+.refreshFooter {
+    CustomRefreshFooterView()
+}
+```
+
+##### UnderLineText
+
+```swift
+// 基础用法
+@State private var text = ""
+@State private var date = Date()
+
+UnderLineText()
+    .underLineText(text)
+    .underLineTitle("名称")
+    .underLineColor(.gray)
+
+// 带左侧/右侧视图
+UnderLineText()
+    .underLineText("一些文本")
+    .underLineTitle("标签")
+    .underLineLeadingView {
+        Image(systemName: "person")
+    }
+    .underLineTrailingView {
+        DatePicker("", selection: $date, displayedComponents: .date)
+    }
+
+// 自定义样式
+UnderLineText()
+    .underLineText("自定义")
+    .underLineTitle("标题")
+    .underLineTitleColor(.gray)
+    .underLineTitleFont(.headline)
+    .underLineTextColor(.black)
+    .underLineTextFont(.body)
+    .underLineColor(.blue)
+    .underLineHeight(1)
+    .underLineTextHeight(40)
+    .underLineTextTruncationMode(.tail)
+```
+
+##### UIHostingConfiguration
+
+```swift
+// 用于UITableViewCell
+cell.contentConfiguration = UIHostingConfiguration {
+    HStack {
+        Image(systemName: "star")
+            .foregroundStyle(.purple)
+        Text("收藏")
+        Spacer()
+    }
+}
+
+// 带背景
+cell.contentConfiguration = UIHostingConfiguration {
+    HStack {
+        Image(systemName: "star")
+            .foregroundStyle(.purple)
+        Text("收藏")
+        Spacer()
+    }
+}
+.background {
+    Color.blue
+}
+
+// 带边距
+cell.contentConfiguration = UIHostingConfiguration {
+    Text("我的内容")
+}
+.margins(.horizontal, 20)
+.margins(.vertical, 10)
+
+// 用于UICollectionViewCell
+collectionCell.contentConfiguration = UIHostingConfiguration {
+    VStack {
+        Image(systemName: "photo")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+        Text("图片标题")
+    }
+}
+.background(Color.gray.opacity(0.1))
+.margins(.all, 8)
+```
+
 ### Utilities - 核心工具
 
 核心工具为应用开发提供基础功能支持。

@@ -881,6 +881,79 @@ AlertToast(
 }
 ```
 
+##### ToastManager
+
+```swift
+// Basic ToastManager usage
+@StateObject private var toastManager = ToastManager()
+
+VStack {
+    Button("Show Toast") {
+        toastManager.showText("Hello World")
+    }
+}
+.addToast(toastManager)
+
+// Custom configuration
+@StateObject private var customToast = ToastManager(position: .top)
+
+customToast.duration = 5.0
+customToast.padding = 20
+
+Button("Show Custom Toast") {
+    customToast.show {
+        VStack {
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundColor(.green)
+            Text("Success!")
+                .font(.headline)
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(radius: 5)
+    }
+}
+.addToast(customToast)
+
+// Manual dismiss with callback
+Button("Show and Dismiss") {
+    toastManager.show {
+        Text("Auto dismiss in 3 seconds")
+            .padding()
+            .background(Color.black.opacity(0.8))
+            .foregroundColor(.white)
+            .cornerRadius(8)
+    }
+} onTap: {
+    toastManager.dismiss {
+        print("Toast dismissed!")
+    }
+}
+
+// Different positions
+@StateObject private var topToast = ToastManager(position: .top)
+@StateObject private var bottomToast = ToastManager(position: .bottom)
+
+Button("Top Toast") {
+    topToast.showText("Appears from top")
+}
+.addToast(topToast)
+
+Button("Bottom Toast") {
+    bottomToast.showText("Appears from bottom")
+}
+.addToast(bottomToast)
+
+// MessageView customization
+toastManager.show {
+    MessageView(text: "Simple message")
+        .padding(15)
+        .background(Color.blue.opacity(0.9))
+        .cornerRadius(12)
+}
+```
+
 ##### OpenUrl
 
 ```swift
@@ -1227,9 +1300,6 @@ UnderLineText()
     .underLineText(text)
     .underLineTitle("Name")
     .underLineColor(.gray)
-    .onChange(of: text) { newValue in
-        // Handle text change
-    }
 
 // With leading/trailing views
 UnderLineText()
@@ -1253,6 +1323,52 @@ UnderLineText()
     .underLineColor(.blue)
     .underLineHeight(1)
     .underLineTextHeight(40)
+```
+
+##### UIHostingConfiguration
+
+```swift
+// For UITableViewCell
+cell.contentConfiguration = UIHostingConfiguration {
+    HStack {
+        Image(systemName: "star")
+            .foregroundStyle(.purple)
+        Text("Favorites")
+        Spacer()
+    }
+}
+
+// With background
+cell.contentConfiguration = UIHostingConfiguration {
+    HStack {
+        Image(systemName: "star")
+            .foregroundStyle(.purple)
+        Text("Favorites")
+        Spacer()
+    }
+}
+.background {
+    Color.blue
+}
+
+// With margins
+cell.contentConfiguration = UIHostingConfiguration {
+    Text("My Contents")
+}
+.margins(.horizontal, 20)
+.margins(.vertical, 10)
+
+// For UICollectionViewCell
+collectionCell.contentConfiguration = UIHostingConfiguration {
+    VStack {
+        Image(systemName: "photo")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+        Text("Image Title")
+    }
+}
+.background(Color.gray.opacity(0.1))
+.margins(.all, 8)
 ```
 
 ### Utilities - Core Utilities
