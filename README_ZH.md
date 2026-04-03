@@ -753,6 +753,14 @@ GridItem.Size.adaptive(100)
 | **Presentation** | 演示控件: DragIndicator, Detents, CornerRadius | `presentationDetents([.medium, .large])` |
 | **TextEditors** | TextEditor 样式扩展 | `TextEditor(text: $text).style(...)` |
 | **UnderLineText** | 下划线文本输入 | `UnderLineText(text: $text)` |
+| **UIHostingConfiguration** | UIKit 单元格内容配置 | `UIHostingConfiguration { ... }` |
+| **Loading** | 加载动画遮罩 | `.loading(isPresented: $loading) { ... }` |
+| **Refresh** | 下拉刷新 (List/ScrollView) | `.enableRefresh(true)` |
+| **ScrollView** | ScrollView 辅助功能：指示器、键盘 dismissal、启用状态 | `.ss.scrollIndicators(.hidden)` |
+| **ScrollStack** | 延迟加载的可滚动堆栈和网格 | `VScrollStack { ... }` / `HScrollStack { ... }` |
+| **Triangle** | 三角形形状 | `Triangle()` / `Triangle(inverted: true)` |
+| **RoundedCorner** | 圆角形状 | `RoundedCorner(radius: 10)` |
+| **CustomSegmentPicker** | 自定义分段选择器 | `CustomSegmentPicker(selection: $index, segments: [])` |
 
 #### Tools 详细 API 用法
 
@@ -1083,6 +1091,7 @@ TTextField(text: $text)
 .sheet(isPresented: $showSheet) {
     ContentView()
         .interactiveDismissDisabled()
+}
 
 // 自定义圆角 (iOS 15+)
 .sheet(isPresented: $showSheet) {
@@ -1094,7 +1103,13 @@ TTextField(text: $text)
 .sheet(isPresented: $showSheet) {
     ContentView()
         .presentationBackground(Color.clear)
-        .presentationBackgroundInteraction(.upwards)
+        .presentationBackgroundInteraction(.enabled)
+}
+
+// 内容交互
+.sheet(isPresented: $showSheet) {
+    ContentView()
+        .presentationContentInteraction(.scrolls)
 }
 ```
 
@@ -1134,6 +1149,81 @@ Button("显示加载") {
 }
 ```
 
+##### Progress
+
+```swift
+// 线性进度条
+@State private var progress: Double = 0.5
+
+LinearProgressBar(progress: progress)
+    .linearProgressBarStyle(.standard)
+
+// 自定义样式
+LinearProgressBar(progress: 0.8)
+    .linearProgressBarStyle(.padding)
+
+LinearProgressBar(progress: 0.6)
+    .linearProgressBarStyle(.tallPadding)
+
+// 自定义样式
+extension LinearProgressBar.Style {
+    static var customStyle: LinearProgressBar.Style = {
+        var style = LinearProgressBar.Style.standard
+        style.backgroundColor = .gray.opacity(0.2)
+        style.barColor = .blue
+        style.height = 8
+        style.animation = .easeInOut
+        return style
+    }()
+}
+
+LinearProgressBar(progress: 0.7)
+    .linearProgressBarStyle(.customStyle)
+
+// 圆形进度条
+CircularProgressBar(progress: 0.65)
+    .circularProgressBarStyle(.standard)
+
+// 不显示文字
+CircularProgressBar(progress: 0.8)
+    .circularProgressBarStyle(.noText)
+
+// 自定义圆形样式
+CircularProgressBar(progress: 0.9)
+    .circularProgressBarStyle(CircularProgressBar.Style(
+        animation: .easeIn(duration: 3),
+        backgroundColor: .blue,
+        decimals: 2,
+        strokeColor: .yellow,
+        strokeWidth: 5,
+        startAngle: 45,
+        progressColor: .yellow,
+        progressWidth: 15,
+        titleColor: .yellow,
+        titleFont: .title.bold()
+    ))
+
+// 自定义高度的 ProgressView
+ProgressView(value: 0.5)
+    .progressViewStyle(.heightBar(height: 10, foregroundColor: .blue))
+
+ProgressView(value: 0.7)
+    .progressViewStyle(.heightBar(
+        height: 6,
+        foregroundColor: .green,
+        backgroundColor: .gray.opacity(0.3)
+    ))
+
+// 圆形进度样式
+ProgressView(value: 0.6)
+    .progressViewStyle(CircularProgressStyle(strokeColor: .blue, strokeWidth: 8))
+
+// 闪烁视图（加载动画）
+FlickeringView(count: 5)
+    .frame(width: 100, height: 100)
+    .foregroundColor(.blue)
+```
+
 ##### Refresh
 
 ```swift
@@ -1159,6 +1249,159 @@ List(items, id: \.id) { item in
 .enableRefresh(true)
 .refreshFooter {
     CustomRefreshFooterView()
+}
+```
+
+##### Refresh
+
+```swift
+// 启用 List 下拉刷新
+@State private var isRefreshing = false
+
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+
+// 使用默认头部
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+.refreshHeader {
+    DefaultRefreshHeader(refreshing: $isRefreshing, refreshText: "下拉刷新") {
+        // 刷新操作 - 加载新数据
+        await loadData()
+        isRefreshing = false
+    }
+}
+
+// 自定义头部（带进度）
+@State private var refreshing = false
+
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+.refreshHeader {
+    Refresh.Header(refreshing: $refreshing) { progress in
+        // progress: 0.0 到 1.0+ (超过1.0触发刷新)
+        VStack {
+            if refreshing {
+                ProgressView()
+            } else {
+                Text("下拉进度: \(Int(progress * 100))%")
+            }
+        }
+    } action: {
+        await loadData()
+    }
+}
+
+// 使用默认底部（加载更多）
+@State private var isLoadingMore = false
+
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+.refreshFooter {
+    DefaultFooter(refreshing: $isLoadingMore, noMoreText: "没有更多数据") {
+        await loadMore()
+    }
+}
+
+// 自定义底部（无更多数据状态）
+@State private var loading = false
+@State private var hasMoreData = true
+
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+.refreshFooter {
+    Refresh.Footer(refreshing: $loading) {
+        HStack {
+            if loading {
+                ProgressView()
+                Text("加载中...")
+            }
+        }
+    }
+    .noMore(!hasMoreData)  // 无更多数据时隐藏底部
+    .preload(offset: 50)  // 距离底部50pt时触发加载
+}
+
+// Refresh 命名空间类型别名
+typealias RefreshHeader = Refresh.Header
+typealias RefreshFooter = Refresh.Footer
+typealias DefaultRefreshHeader = Refresh.DefaultHeader
+typealias DefaultRefreshFooter = Refresh.DefaultFooter
+```
+
+##### ScrollView
+
+```swift
+// 隐藏滚动指示器
+ScrollView {
+    VStack(alignment: .leading) {
+        ForEach(0..<100) {
+            Text("行 \($0)")
+        }
+    }
+}
+.ss.scrollIndicators(.hidden)
+
+// 显示指定轴的指示器
+ScrollView {
+    LazyVStack {
+        ForEach(0..<50, id: \.self) { i in
+            Text("项 \(i)")
+        }
+    }
+}
+.ss.scrollIndicators(.visible, axes: .vertical)
+
+// 禁用滚动
+@State private var isScrollDisabled = false
+
+ScrollView {
+    VStack {
+        Toggle("禁用", isOn: $isScrollDisabled)
+        MyContent()
+    }
+}
+.ss.scrollDisabled(isScrollDisabled)
+
+// 键盘关闭行为
+@State var text = ""
+
+ScrollView {
+    TextField("提示", text: $text)
+    ForEach(0 ..< 50) { index in
+        Text("\(index)")
+            .padding()
+    }
+}
+.ss.scrollDismissesKeyboard(.immediately)
+
+// 不同的键盘关闭模式
+.ss.scrollDismissesKeyboard(.automatic)  // 默认行为
+.ss.scrollDismissesKeyboard(.interactively)  // 交互式关闭
+.ss.scrollDismissesKeyboard(.never)  // 绝不关闭
+
+// ScrollViewTracking - 跟踪滚动位置
+@State private var currentScroll: CGFloat = 0
+
+ScrollTrackingView(currentScroll: $currentScroll) {
+    ForEach(0..<20, id: \.self) { index in
+        Text("项 \(index)")
+            .padding()
+    }
+}
+// 使用 onScroll 监听滚动变化
+.onScroll { offset in
+    print("滚动偏移: \(offset)")
 }
 ```
 
@@ -1393,6 +1636,67 @@ CustomSegmentPicker(
         RoundedRectangle(cornerRadius: 8)
     }
 )
+```
+
+##### ScrollStack
+
+```swift
+// 垂直滚动堆栈 (带滚动的 VStack)
+VScrollStack(spacing: 10, showsIndicators: true) {
+    ForEach(0..<20, id: \.self) { index in
+        Text("项 \(index)")
+            .padding()
+    }
+}
+
+// 水平滚动堆栈 (带滚动的 HStack)
+HScrollStack(spacing: 15, showsIndicators: false) {
+    ForEach(0..<10, id: \.self) { index in
+        Image(systemName: "star.fill")
+            .font(.largeTitle)
+    }
+}
+
+// 垂直滚动网格 (3列)
+VScrollGrid(rowsCount: 3, spacing: 10) {
+    ForEach(0..<12, id: \.self) { index in
+        RoundedRectangle(cornerRadius: 8)
+            .fill(Color.blue.opacity(0.6))
+            .frame(height: 60)
+    }
+}
+
+// 水平滚动网格 (2行)
+HScrollGrid(rowsCount: 2, spacing: 10) {
+    ForEach(0..<8, id: \.self) { index in
+        RoundedRectangle(cornerRadius: 8)
+            .fill(Color.green.opacity(0.6))
+            .frame(width: 80)
+    }
+}
+
+// 固定宽度列
+VScrollGrid.fixedColumns(widths: [80, 120, 80], spacing: 8) {
+    ForEach(0..<9, id: \.self) { index in
+        Text("列 \(index)")
+    }
+}
+
+// 自适应列 (自动填充)
+VScrollGrid.adaptiveColumns(minimum: 100, spacing: 10) {
+    ForEach(0..<15, id: \.self) { index in
+        Text("项 \(index)")
+    }
+}
+
+// 单行水平网格 (水平列表常用)
+HScrollGrid.singleRow(height: 80, spacing: 12) {
+    ForEach(0..<10, id: \.self) { index in
+        RoundedRectangle(cornerRadius: 12)
+            .fill(Color.mint.opacity(0.7))
+            .frame(width: 100)
+    }
+}
 ```
 
 ### Utilities - 核心工具

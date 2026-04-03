@@ -1,12 +1,22 @@
 import SwiftUI
 
-/// A scrollable `HStack` that respects elemnts like `Spacer()`
+/// 尊重如 `Spacer()` 元素的可滚动水平堆栈 / A scrollable `HStack` that respects elemnts like `Spacer()`
 public struct HScrollStack<Content: View>: View {
+    /// 垂直对齐方式 / Vertical alignment
     private let alignment: VerticalAlignment
+    /// 元素间距 / Spacing between elements
     private let spacing: CGFloat?
+    /// 是否显示滚动指示器 / Whether to show scroll indicators
     private let showsIndicators: Bool
+    /// 内容视图 / Content view
     private let content: Content
     
+    /// 初始化水平滚动堆栈 / Initialize horizontal scroll stack
+    /// - Parameters:
+    ///   - alignment: 垂直对齐方式 / Vertical alignment (default: .center)
+    ///   - spacing: 元素间距 / Spacing between elements (default: nil)
+    ///   - showsIndicators: 是否显示滚动指示器 / Show scroll indicators (default: false)
+    ///   - content: 内容视图构建器 / Content view builder
     public init(alignment: VerticalAlignment = .center, spacing: CGFloat? = nil, showsIndicators: Bool = false, @ViewBuilder content: () -> Content) {
         self.alignment = alignment
         self.spacing = spacing
@@ -23,14 +33,26 @@ public struct HScrollStack<Content: View>: View {
     }
 }
 
+/// 可滚动的水平网格视图 / A scrollable horizontal grid view
 public struct HScrollGrid<Content: View>: View {
+    /// 垂直对齐方式 / Vertical alignment
     private let alignment: VerticalAlignment
+    /// 元素间距 / Spacing between elements
     private let spacing: CGFloat?
+    /// 是否显示滚动指示器 / Whether to show scroll indicators
     private let showsIndicators: Bool
+    /// 内容视图 / Content view
     private let content: Content
+    /// 行配置数组 / Rows configuration array
     private let rows: [GridItem]
     
-    // 使用行数初始化（保持向后兼容）
+    /// 使用行数初始化 / Initialize with rows count (backward compatible)
+    /// - Parameters:
+    ///   - rowsCount: 行数 / Number of rows
+    ///   - alignment: 垂直对齐方式 / Vertical alignment
+    ///   - spacing: 元素间距 / Spacing between elements
+    ///   - showsIndicators: 是否显示滚动指示器 / Show scroll indicators
+    ///   - content: 内容视图构建器 / Content view builder
     public init(rowsCount: Int,
                 alignment: VerticalAlignment = .center,
                 spacing: CGFloat? = nil,
@@ -43,7 +65,13 @@ public struct HScrollGrid<Content: View>: View {
         self.rows = Array(repeating: GridItem(.flexible(), spacing: spacing), count: rowsCount)
     }
     
-    // 使用自定义 GridItem 数组初始化
+    /// 使用自定义 GridItem 数组初始化 / Initialize with custom GridItem array
+    /// - Parameters:
+    ///   - rows: 自定义行配置 / Custom rows configuration
+    ///   - alignment: 垂直对齐方式 / Vertical alignment
+    ///   - spacing: 元素间距 / Spacing between elements
+    ///   - showsIndicators: 是否显示滚动指示器 / Show scroll indicators
+    ///   - content: 内容视图构建器 / Content view builder
     public init(rows: [GridItem],
                 alignment: VerticalAlignment = .center,
                 spacing: CGFloat? = nil,
@@ -67,10 +95,17 @@ public struct HScrollGrid<Content: View>: View {
     }
 }
 
-// MARK: - 便利扩展
+// MARK: - 便利扩展 / Convenience Extensions
 public extension HScrollGrid {
     
-    // 创建固定高度行的便利初始化器
+    /// 创建固定高度行的便利初始化器 / Convenience initializer for fixed height rows
+    /// - Parameters:
+    ///   - heights: 固定高度数组 / Array of fixed heights
+    ///   - alignment: 垂直对齐方式 / Vertical alignment
+    ///   - spacing: 元素间距 / Spacing between elements
+    ///   - showsIndicators: 是否显示滚动指示器 / Show scroll indicators
+    ///   - content: 内容视图构建器 / Content view builder
+    /// - Returns: 水平滚动网格 / HScrollGrid instance
     static func fixedRows(heights: [CGFloat],
                          alignment: VerticalAlignment = .center,
                          spacing: CGFloat? = nil,
@@ -84,7 +119,15 @@ public extension HScrollGrid {
                           content: content)
     }
     
-    // 创建自适应行的便利初始化器
+    /// 创建自适应行的便利初始化器 / Convenience initializer for adaptive rows
+    /// - Parameters:
+    ///   - minimum: 最小高度 / Minimum height
+    ///   - maximum: 最大高度 / Maximum height
+    ///   - alignment: 垂直对齐方式 / Vertical alignment
+    ///   - spacing: 元素间距 / Spacing between elements
+    ///   - showsIndicators: 是否显示滚动指示器 / Show scroll indicators
+    ///   - content: 内容视图构建器 / Content view builder
+    /// - Returns: 水平滚动网格 / HScrollGrid instance
     static func adaptiveRows(minimum: CGFloat,
                             maximum: CGFloat = .infinity,
                             alignment: VerticalAlignment = .center,
@@ -99,7 +142,15 @@ public extension HScrollGrid {
                           content: content)
     }
     
-    // 创建混合类型行的便利初始化器
+    /// 创建混合类型行的便利初始化器 / Convenience initializer for mixed type rows
+    /// - Parameters:
+    ///   - flexibleCount: 灵活行数量 / Number of flexible rows
+    ///   - fixedHeights: 固定高度数组 / Array of fixed heights
+    ///   - alignment: 垂直对齐方式 / Vertical alignment
+    ///   - spacing: 元素间距 / Spacing between elements
+    ///   - showsIndicators: 是否显示滚动指示器 / Show scroll indicators
+    ///   - content: 内容视图构建器 / Content view builder
+    /// - Returns: 水平滚动网格 / HScrollGrid instance
     static func mixedRows(flexibleCount: Int,
                          fixedHeights: [CGFloat] = [],
                          alignment: VerticalAlignment = .center,
@@ -108,10 +159,10 @@ public extension HScrollGrid {
                          @ViewBuilder content: () -> Content) -> HScrollGrid {
         var rows: [GridItem] = []
         
-        // 添加灵活行
+        // 添加灵活行 / Add flexible rows
         rows.append(contentsOf: Array(repeating: GridItem(.flexible(), spacing: spacing), count: flexibleCount))
         
-        // 添加固定高度行
+        // 添加固定高度行 / Add fixed height rows
         rows.append(contentsOf: fixedHeights.map { GridItem(.fixed($0), spacing: spacing) })
         
         return HScrollGrid(rows: rows,
@@ -121,7 +172,14 @@ public extension HScrollGrid {
                           content: content)
     }
     
-    // 创建单行水平滚动网格的便利初始化器
+    /// 创建单行水平滚动网格的便利初始化器 / Convenience initializer for single row horizontal scroll grid
+    /// - Parameters:
+    ///   - height: 固定高度（可选）/ Fixed height (optional)
+    ///   - alignment: 垂直对齐方式 / Vertical alignment
+    ///   - spacing: 元素间距 / Spacing between elements
+    ///   - showsIndicators: 是否显示滚动指示器 / Show scroll indicators
+    ///   - content: 内容视图构建器 / Content view builder
+    /// - Returns: 水平滚动网格 / HScrollGrid instance
     static func singleRow(height: CGFloat? = nil,
                          alignment: VerticalAlignment = .center,
                          spacing: CGFloat? = nil,

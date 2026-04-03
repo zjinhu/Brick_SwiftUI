@@ -8,17 +8,16 @@
 import SwiftUI
 
 /**
- This view displays progress as a circle progress view, with
+ 以圆形进度条显示进度，圆形中心显示进度文本/This view displays progress as a circle progress view, with
  the progress text in the center of the circle.
  
- ``startAngle`` is the clockwise degrees from the circle top.
- If `0`, the arc starts from the top, if `90` the right, etc.
+ ``startAngle`` 是从圆顶开始的顺时针角度/``startAngle`` is the clockwise degrees from the circle top.
+ 如果为 `0`，弧从顶部开始，如果为 `90`，则从右边开始/If `0`, the arc starts from the top, if `90` the right, etc.
 
- The view can be styled with a ``CircularProgressBar/Style``. 
- There are some built-in styles to choose from. You can also
- create your own styles.
- 
- You can apply a style with `.circularProgressBarStyle(...)`.
+ 可以使用 ``CircularProgressBar/Style`` 对视图进行样式设置/There are some built-in styles to choose from.
+ 也可以创建自定义样式/You can can also create your own styles.
+
+ 使用 `.circularProgressBarStyle(...)` 应用样式/You can apply a style with `.circularProgressBarStyle(...)`.
  */
 public struct CircularProgressBar: View {
 

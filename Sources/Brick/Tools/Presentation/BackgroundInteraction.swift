@@ -5,11 +5,12 @@ import SwiftUI
 @available(macOS, deprecated: 13.3)
 @available(watchOS, deprecated: 9.4)
 extension Brick<Any> {
-    /// The kinds of interaction available to views behind a presentation.
+    /// 弹出视图后方可用的交互类型/The kinds of interaction available to views behind a presentation.
     ///
-    /// Use values of this type with the
+    /// 与 ``View/presentationBackgroundInteraction(_:)`` 修饰符一起使用/Use values of this type with the
     /// ``View/presentationBackgroundInteraction(_:)`` modifier.
     public struct PresentationBackgroundInteraction: Hashable {
+        /// 交互类型/Interaction type
         enum Interaction: Hashable {
             case automatic
             case enabled
@@ -19,23 +20,23 @@ extension Brick<Any> {
 
         let interaction: Interaction
 
-        /// The default background interaction for the presentation.
+        /// 弹出视图的默认背景交互/The default background interaction for the presentation.
         public static var automatic: Self { .init(interaction: .automatic) }
 
-        /// People can interact with the view behind a presentation.
+        /// 用户可以与弹出视图后面的视图交互/People can interact with the view behind a presentation.
         public static var enabled: Self { .init(interaction: .enabled) }
 
-        /// People can interact with the view behind a presentation up through a
+        /// 用户可以在指定高度范围内与弹出视图后面的视图交互/People can interact with the view behind a presentation up through a
         /// specified detent.
         ///
-        /// At detents larger than the one you specify, SwiftUI disables
+        /// 在大于指定高度时，SwiftUI 会禁用交互/At detents larger than the one you specify, SwiftUI disables
         /// interaction.
         ///
-        /// - Parameter detent: The largest detent at which people can interact with
+        /// - Parameter detent: 用户可以交互的最大高度/The largest detent at which people can interact with
         ///   the view behind the presentation.
         public static func enabled(upThrough detent: Brick.PresentationDetent) -> Self { .init(interaction: .upThrough(detent: detent))}
 
-        /// People can't interact with the view behind a presentation.
+        /// 用户无法与弹出视图后面的视图交互/People can't interact with the view behind a presentation.
         public static var disabled: Self { .init(interaction: .disabled) }
     }
 }
@@ -45,14 +46,13 @@ extension Brick<Any> {
 @available(macOS, deprecated: 13.3)
 @available(watchOS, deprecated: 9.4)
 public extension Brick where Wrapped: View {
-    /// Controls whether people can interact with the view behind a
+    /// 控制用户是否可以与弹出视图后面的视图交互/Controls whether people can interact with the view behind a
     /// presentation.
     ///
-    /// On many platforms, SwiftUI automatically disables the view behind a
+    /// 在许多平台上，SwiftUI 会自动禁用弹出视图后面的视图交互/On many platforms, SwiftUI automatically disables the view behind a
     /// sheet that you present, so that people can't interact with the backing
-    /// view until they dismiss the sheet. Use this modifier if you want to
+    /// view until they dismiss the sheet. 如果希望启用交互，请使用此修饰符/Use this modifier if you want to
     /// enable interaction.
-    ///
     /// The following example enables people to interact with the view behind
     /// the sheet when the sheet is at the smallest detent, but not at the other
     /// detents:
@@ -75,7 +75,7 @@ public extension Brick where Wrapped: View {
     ///     }
     ///
     /// - Parameters:
-    ///   - interaction: A specification of how people can interact with the
+    ///   - interaction: 用户如何与弹出视图后面视图交互的规范/A specification of how people can interact with the
     ///     view behind a presentation.
     @ViewBuilder @MainActor
     func presentationBackgroundInteraction(_ interaction: Brick<Any>.PresentationBackgroundInteraction) -> some View {
@@ -108,10 +108,15 @@ private extension Brick where Wrapped == Any {
 }
 @available(iOS 15, *)
 private extension Brick.Representable {
+    /// 背景交互控制器/Background interaction controller
     final class Controller: UIViewController, UISheetPresentationControllerDelegate {
+        /// 交互类型/Interaction type
         var interaction: Brick<Any>.PresentationBackgroundInteraction
+        /// 委托/Delegate
         weak var _delegate: UISheetPresentationControllerDelegate?
 
+        /// 初始化/Initialize
+        /// - Parameter interaction: 交互类型/Interaction type
         init(interaction: Brick<Any>.PresentationBackgroundInteraction) {
             self.interaction = interaction
             super.init(nibName: nil, bundle: nil)
@@ -131,6 +136,8 @@ private extension Brick.Representable {
             update(interaction: interaction)
         }
 
+        /// 更新交互类型/Update interaction type
+        /// - Parameter interaction: 新的交互类型/New interaction type
         func update(interaction: Brick<Any>.PresentationBackgroundInteraction) {
             self.interaction = interaction
 

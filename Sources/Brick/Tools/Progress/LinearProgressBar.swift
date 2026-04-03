@@ -45,7 +45,7 @@ public struct LinearProgressBar: View {
     /// Create a linear progress bar.
     ///
     /// - Parameters:
-    ///   - progress: The percentage progress, from `0` to `1`.
+    ///   - progress: 进度百分比，从 `0` 到 `1`/The percentage progress, from `0` to `1`.
     public init(progress: Double) {
         self.progress = progress
     }

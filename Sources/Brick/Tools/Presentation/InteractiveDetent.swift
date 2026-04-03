@@ -1,9 +1,13 @@
 import SwiftUI
 
+// MARK: 交互式高度控制器/Interactive Detent Controller
+// MARK: 用于控制弹出视图的交互式高度/Controls interactive detents for sheet presentation
 #if os(iOS) || targetEnvironment(macCatalyst)
 @available(iOS 15, *)
 private extension Brick where Wrapped == Any {
+    /// 交互式高度表示器/Interactive detent representable
     struct Representable: UIViewControllerRepresentable {
+        /// 高度标识符/Detent identifier
         let identifier: Brick<Any>.PresentationDetent.Identifier?
 
         func makeUIViewController(context: Context) -> Brick.Representable.Controller {
@@ -17,10 +21,14 @@ private extension Brick where Wrapped == Any {
 }
 @available(iOS 15, *)
 private extension Brick.Representable {
+    /// 交互式高度控制器/Interactive detent controller
     final class Controller: UIViewController {
 
+        /// 高度标识符/Detent identifier
         var identifier: Brick<Any>.PresentationDetent.Identifier?
 
+        /// 初始化/Initialize
+        /// - Parameter identifier: 高度标识符/Detent identifier
         init(identifier: Brick<Any>.PresentationDetent.Identifier?) {
             self.identifier = identifier
             super.init(nibName: nil, bundle: nil)
@@ -35,6 +43,8 @@ private extension Brick.Representable {
             update(identifier: identifier)
         }
 
+        /// 更新高度标识符/Update detent identifier
+        /// - Parameter identifier: 新的高度标识符/New detent identifier
         func update(identifier: Brick<Any>.PresentationDetent.Identifier?) {
             self.identifier = identifier
 

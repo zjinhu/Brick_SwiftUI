@@ -6,9 +6,9 @@ import SwiftUI
 @available(watchOS, deprecated: 9)
 public extension Brick where Wrapped: View {
 
-    /// Sets the visibility of the drag indicator on top of a sheet.
+    /// 设置弹出视图顶部拖动指示器的可见性/Sets the visibility of the drag indicator on top of a sheet.
     ///
-    /// You can show a drag indicator when it isn't apparent that a
+    /// 可以在弹出视图无法调整大小或无法交互式关闭时显示拖动指示器/You can show a drag indicator when it isn't apparent that a
     /// sheet can resize or when the sheet can't dismiss interactively.
     ///
     ///     struct ContentView: View {
@@ -26,7 +26,7 @@ public extension Brick where Wrapped: View {
     ///         }
     ///     }
     ///
-    /// - Parameter visibility: The preferred visibility of the drag indicator.
+    /// - Parameter visibility: 拖动指示器的首选可见性/The preferred visibility of the drag indicator.
     @ViewBuilder @MainActor
     func presentationDragIndicator(_ visibility: SwiftUI.Visibility) -> some View {
         #if os(iOS) || targetEnvironment(macCatalyst)
@@ -59,10 +59,14 @@ private extension Brick where Wrapped == Any {
 }
 @available(iOS 15, *)
 private extension Brick.Representable {
+    /// 拖动指示器控制器/Drag indicator controller
     final class Controller: UIViewController {
 
+        /// 可见性/Visibility
         var visibility: Visibility
 
+        /// 初始化/Initialize
+        /// - Parameter visibility: 可见性/Visibility
         init(visibility: Visibility) {
             self.visibility = visibility
             super.init(nibName: nil, bundle: nil)
@@ -82,6 +86,8 @@ private extension Brick.Representable {
             update(visibility: visibility)
         }
 
+        /// 更新可见性/Update visibility
+        /// - Parameter visibility: 新的可见性/New visibility
         func update(visibility: Visibility) {
             self.visibility = visibility
 

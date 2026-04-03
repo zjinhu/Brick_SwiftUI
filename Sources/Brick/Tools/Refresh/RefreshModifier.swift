@@ -6,19 +6,31 @@
 //
 
 import SwiftUI
+
+// MARK: 刷新修饰器/Refresh Modifier
 extension Refresh {
-    
+    /// 刷新修饰器/Refresh modifier
+    /// 用于管理下拉刷新和上拉加载的状态/Manages pull-to-refresh and load more states
     struct Modifier {
+        /// 是否启用/Whether enabled
         let isEnabled: Bool
         
+        /// 视图ID/View ID
         @State private var id: Int = 0
+        /// 头部更新状态/Header update state
         @State private var headerUpdate: HeaderUpdateKey.Value
+        /// 头部内边距/Header padding
         @State private var headerPadding: CGFloat = 0
+        /// 上一次进度/Previous progress
         @State private var headerPreviousProgress: CGFloat = 0
         
+        /// 底部更新状态/Footer update state
         @State private var footerUpdate: FooterUpdateKey.Value
+        /// 上一次刷新时间/Previous refresh time
         @State private var footerPreviousRefreshAt: Date?
         
+        /// 初始化/Initialize
+        /// - Parameter enable: 是否启用/Whether enabled
         init(enable: Bool) {
             isEnabled = enable
             _headerUpdate = State(initialValue: .init(enable: enable))
@@ -29,8 +41,12 @@ extension Refresh {
     }
 }
 
+// MARK: ViewModifier 实现/ViewModifier Implementation
 extension Refresh.Modifier: ViewModifier {
     
+    /// 修饰内容/Modify content
+    /// - Parameter content: 原始视图/Original view
+    /// - Returns: 应用了刷新功能的视图/View with refresh functionality
     func body(content: Content) -> some View {
         return GeometryReader { proxy in
             content
@@ -50,6 +66,10 @@ extension Refresh.Modifier: ViewModifier {
         }
     }
     
+    /// 更新头部状态/Update header state
+    /// - Parameters:
+    ///   - proxy: 几何代理/Geometry proxy
+    ///   - value: 头部锚点值/Header anchor value
     func update(proxy: GeometryProxy, value: Refresh.HeaderAnchorKey.Value) {
         guard let item = value.first else { return }
         guard !footerUpdate.refresh else { return }
@@ -77,6 +97,10 @@ extension Refresh.Modifier: ViewModifier {
         headerPreviousProgress = update.progress
     }
     
+    /// 更新底部状态/Update footer state
+    /// - Parameters:
+    ///   - proxy: 几何代理/Geometry proxy
+    ///   - value: 底部锚点值/Footer anchor value
     func update(proxy: GeometryProxy, value: Refresh.FooterAnchorKey.Value) {
         guard let item = value.first else { return }
         guard headerUpdate.progress == 0 else { return }

@@ -5,10 +5,10 @@ import SwiftUI
 @available(macOS, deprecated: 13.3)
 @available(watchOS, deprecated: 9.4)
 public extension Brick<Any> {
-    /// A behavior that you can use to influence how a presentation responds to
+    /// 用于影响弹出视图如何响应滑动手势的行为/A behavior that you can use to influence how a presentation responds to
     /// swipe gestures.
     ///
-    /// Use values of this type with the
+    /// 与 ``View/presentationContentInteraction(_:)`` 修饰符一起使用/Use values of this type with the
     /// ``View/presentationContentInteraction(_:)`` modifier.
     struct PresentationContentInteraction: Hashable {
         enum Interaction: Hashable {
@@ -19,14 +19,14 @@ public extension Brick<Any> {
 
         let interaction: Interaction
 
-        /// The default swipe behavior for the presentation.
+        /// 弹出视图的默认滑动手势行为/The default swipe behavior for the presentation.
         public static var automatic: PresentationContentInteraction { .init(interaction: .automatic) }
 
-        /// A behavior that prioritizes resizing a presentation when swiping, rather
+        /// 优先调整弹出视图大小而非滚动内容的行为/A behavior that prioritizes resizing a presentation when swiping, rather
         /// than scrolling the content of the presentation.
         public static var resizes: PresentationContentInteraction { .init(interaction: .resizes) }
 
-        /// A behavior that prioritizes scrolling the content of a presentation when
+        /// 优先滚动弹出视图内容而非调整大小的行为/A behavior that prioritizes scrolling the content of a presentation when
         /// swiping, rather than resizing the presentation.
         public static var scrolls: PresentationContentInteraction { .init(interaction: .scrolls) }
     }
@@ -38,6 +38,8 @@ public extension Brick<Any> {
 @available(watchOS, deprecated: 9.4)
 
 public extension Brick where Wrapped: View {
+    /// 设置弹出视图的内容交互行为/Sets how the presentation responds to swipe gestures.
+    /// - Parameter interaction: 内容交互行为/The content interaction behavior
     @ViewBuilder @MainActor
     func presentationContentInteraction(_ interaction: Brick<Any>.PresentationContentInteraction) -> some View {
         #if os(iOS) || targetEnvironment(macCatalyst)

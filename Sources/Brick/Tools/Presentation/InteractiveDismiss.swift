@@ -1,70 +1,18 @@
 import SwiftUI
 public extension Brick where Wrapped: View {
 
-    /// Conditionally prevents interactive dismissal of a popover or a sheet.
+    /// 条件性地阻止弹出视图或浮层的交互式关闭/Conditionally prevents interactive dismissal of a popover or a sheet.
     ///
-    /// Users can dismiss certain kinds of presentations using built-in
-    /// gestures. In particular, a user can dismiss a sheet by dragging it down,
-    /// or a popover by clicking or tapping outside of the presented view. Use
-    /// the `interactiveDismissDisabled(_:)` modifier to conditionally prevent
-    /// this kind of dismissal. You typically do this to prevent the user from
-    /// dismissing a presentation before providing needed data or completing
+    /// 用户可以使用内置手势关闭某些类型的演示/Users can dismiss certain kinds of presentations using built-in
+    /// 手势。特别是，用户可以通过向下滑动手势关闭弹出视图/gestures. In particular, a user can dismiss a sheet by dragging it down,
+    /// 或通过点击/轻触弹出视图外部关闭浮层/or a popover by clicking or tapping outside of the presented view. Use
+    /// the `interactiveDismissDisabled(_:)` 修饰符有条件地阻止这种关闭/the `interactiveDismissDisabled(_:)` modifier to conditionally prevent
+    /// 这通常用于防止用户在提供所需数据或完成/this kind of dismissal. You typically do this to prevent the user from
+    /// 所需操作之前关闭演示/dismissing a presentation before providing needed data or completing
     /// a required action.
     ///
-    /// For instance, suppose you have a view that displays a licensing
-    /// agreement that the user must acknowledge before continuing:
-    ///
-    ///     struct TermsOfService: View {
-    ///         @Binding var areTermsAccepted: Bool
-    ///         @Environment(\.BrickDismiss) private var dismiss
-    ///
-    ///         var body: some View {
-    ///             Form {
-    ///                 Text("License Agreement")
-    ///                     .font(.title)
-    ///                 Text("Terms and conditions go here.")
-    ///                 Button("Accept") {
-    ///                     areTermsAccepted = true
-    ///                     dismiss()
-    ///                 }
-    ///             }
-    ///         }
-    ///     }
-    ///
-    /// If you present this view in a sheet, the user can dismiss it by either
-    /// tapping the button --- which calls ``EnvironmentValues/BrickDismiss``
-    /// from its `action` closure --- or by dragging the sheet down. To
-    /// ensure that the user accepts the terms by tapping the button,
-    /// disable interactive dismissal, conditioned on the `areTermsAccepted`
-    /// property:
-    ///
-    ///     struct ContentView: View {
-    ///         @State private var isSheetPresented = false
-    ///         @State private var areTermsAccepted = false
-    ///
-    ///         var body: some View {
-    ///             Button("Use Service") {
-    ///                 isSheetPresented = true
-    ///             }
-    ///             .sheet(isPresented: $isSheetPresented) {
-    ///                 TermsOfService()
-    ///                     .Brick.interactiveDismissDisabled(!areTermsAccepted)
-    ///             }
-    ///         }
-    ///     }
-    ///
-    /// You can apply the modifier to any view in the sheet's view hierarchy,
-    /// including to the sheet's top level view, as the example demonstrates,
-    /// or to any child view, like the ``Form`` or the Accept ``Button``.
-    ///
-    /// The modifier has no effect on programmatic dismissal, which you can
-    /// invoke by updating the ``Binding`` that controls the presentation, or
-    /// by calling the environment's ``EnvironmentValues/BrickDismiss`` action.
-    ///
-    /// > This modifier currently has no effect on macOS, tvOS or watchOS.
-    ///
-    /// - Parameter isDisabled: A Boolean value that indicates whether to
-    ///   prevent nonprogrammatic dismissal of the containing view hierarchy
+    /// - Parameter isDisabled: 布尔值，指示是否阻止在弹出视图或浮层中展示时/ A Boolean value that indicates whether to
+    ///   的包含视图层次结构的非程序化关闭/prevent nonprogrammatic dismissal of the containing view hierarchy
     ///   when presented in a sheet or popover.
     @ViewBuilder @MainActor
     @available(iOS, deprecated: 16)
@@ -139,13 +87,11 @@ public extension Brick where Wrapped: View {
     /// invoke by updating the ``Binding`` that controls the presentation, or
     /// by calling the environment's ``EnvironmentValues/BrickDismiss`` action.
     ///
-    /// > This modifier currently has no effect on macOS, tvOS or watchOS.
+    ///     > This modifier currently has no effect on macOS, tvOS or watchOS.
     ///
-    /// - Parameter isDisabled: A Boolean value that indicates whether to
-    ///   prevent nonprogrammatic dismissal of the containing view hierarchy
-    ///   when presented in a sheet or popover.
-    /// - Parameter onAttempt: A closure that will be called when an interactive dismiss attempt occurs.
-    ///   You can use this as an opportunity to present an confirmation or prompt to the user.
+    /// - Parameter isDisabled: 布尔值，指示是否阻止非程序化关闭/A Boolean value that indicates whether to prevent nonprogrammatic dismissal
+    /// - Parameter onAttempt: 交互式关闭尝试发生时调用的闭包/A closure that will be called when an interactive dismiss attempt occurs.
+    ///   可用于向用户显示确认或提示/You can use this as an opportunity to present a confirmation or prompt to the user.
     @ViewBuilder @MainActor
     func interactiveDismissDisabled(_ isDisabled: Bool = true, onAttempt: @escaping () -> Void) -> some View {
         #if os(iOS)

@@ -753,6 +753,14 @@ Pre-built UI components for rapid development.
 | **Presentation** | Presentation controls: DragIndicator, Detents, CornerRadius | `presentationDetents([.medium, .large])` |
 | **TextEditors** | TextEditor style extensions | `TextEditor(text: $text).style(...)` |
 | **UnderLineText** | Underline text input | `UnderLineText(text: $text)` |
+| **UIHostingConfiguration** | UIKit cell content configuration | `UIHostingConfiguration { ... }` |
+| **Loading** | Loading overlay with animation | `.loading(isPresented: $loading) { ... }` |
+| **Refresh** | Pull-to-refresh for List/ScrollView | `.enableRefresh(true)` |
+| **ScrollView** | ScrollView helpers: indicators, keyboard dismiss, enabled | `.ss.scrollIndicators(.hidden)` |
+| **ScrollStack** | Lazy scrollable stacks and grids | `VScrollStack { ... }` / `HScrollStack { ... }` |
+| **Triangle** | Triangle shape | `Triangle()` / `Triangle(inverted: true)` |
+| **RoundedCorner** | Rounded corner shape | `RoundedCorner(radius: 10)` |
+| **CustomSegmentPicker** | Custom segmented picker | `CustomSegmentPicker(selection: $index, segments: [])` |
 
 #### Tools Detailed API Usage
 
@@ -1261,31 +1269,231 @@ Button("Show Loading") {
 }
 ```
 
+##### Progress
+
+```swift
+// Linear Progress Bar
+@State private var progress: Double = 0.5
+
+LinearProgressBar(progress: progress)
+    .linearProgressBarStyle(.standard)
+
+// With custom style
+LinearProgressBar(progress: 0.8)
+    .linearProgressBarStyle(.padding)
+
+LinearProgressBar(progress: 0.6)
+    .linearProgressBarStyle(.tallPadding)
+
+// Custom style
+extension LinearProgressBar.Style {
+    static var customStyle: LinearProgressBar.Style = {
+        var style = LinearProgressBar.Style.standard
+        style.backgroundColor = .gray.opacity(0.2)
+        style.barColor = .blue
+        style.height = 8
+        style.animation = .easeInOut
+        return style
+    }()
+}
+
+LinearProgressBar(progress: 0.7)
+    .linearProgressBarStyle(.customStyle)
+
+// Circular Progress Bar
+CircularProgressBar(progress: 0.65)
+    .circularProgressBarStyle(.standard)
+
+// Without text
+CircularProgressBar(progress: 0.8)
+    .circularProgressBarStyle(.noText)
+
+// Custom circular style
+CircularProgressBar(progress: 0.9)
+    .circularProgressBarStyle(CircularProgressBar.Style(
+        animation: .easeIn(duration: 3),
+        backgroundColor: .blue,
+        decimals: 2,
+        strokeColor: .yellow,
+        strokeWidth: 5,
+        startAngle: 45,
+        progressColor: .yellow,
+        progressWidth: 15,
+        titleColor: .yellow,
+        titleFont: .title.bold()
+    ))
+
+// ProgressView with custom style
+ProgressView(value: 0.5)
+    .progressViewStyle(.heightBar(height: 10, foregroundColor: .blue))
+
+ProgressView(value: 0.7)
+    .progressViewStyle(.heightBar(
+        height: 6,
+        foregroundColor: .green,
+        backgroundColor: .gray.opacity(0.3)
+    ))
+
+// Circular progress style
+ProgressView(value: 0.6)
+    .progressViewStyle(CircularProgressStyle(strokeColor: .blue, strokeWidth: 8))
+
+// Flickering view (loading animation)
+FlickeringView(count: 5)
+    .frame(width: 100, height: 100)
+    .foregroundColor(.blue)
+```
+
 ##### Refresh
 
 ```swift
+// Enable pull-to-refresh on List
+@State private var isRefreshing = false
+
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+
 // With default header
 List(items, id: \.id) { item in
     Text(item.name)
 }
 .enableRefresh(true)
+.refreshHeader {
+    DefaultRefreshHeader(refreshing: $isRefreshing, refreshText: "Pull to refresh") {
+        // Refresh action - load new data
+        await loadData()
+        isRefreshing = false
+    }
+}
 
-// Custom header
+// Custom header with progress
+@State private var refreshing = false
+
 List(items, id: \.id) { item in
     Text(item.name)
 }
 .enableRefresh(true)
 .refreshHeader {
-    CustomRefreshHeaderView()
+    Refresh.Header(refreshing: $refreshing) { progress in
+        // progress: 0.0 to 1.0+ (triggers refresh at > 1.0)
+        VStack {
+            if refreshing {
+                ProgressView()
+            } else {
+                Text("Pull down: \(Int(progress * 100))%")
+            }
+        }
+    } action: {
+        await loadData()
+    }
 }
 
-// Custom footer
+// With default footer (load more)
+@State private var isLoadingMore = false
+
 List(items, id: \.id) { item in
     Text(item.name)
 }
 .enableRefresh(true)
 .refreshFooter {
-    CustomRefreshFooterView()
+    DefaultFooter(refreshing: $isLoadingMore, noMoreText: "No more data") {
+        await loadMore()
+    }
+}
+
+// Custom footer with no more state
+@State private var loading = false
+@State private var hasMoreData = true
+
+List(items, id: \.id) { item in
+    Text(item.name)
+}
+.enableRefresh(true)
+.refreshFooter {
+    Refresh.Footer(refreshing: $loading) {
+        HStack {
+            if loading {
+                ProgressView()
+                Text("Loading more...")
+            }
+        }
+    }
+    .noMore(!hasMoreData)  // Hide footer when no more data
+    .preload(offset: 50)  // Trigger 50pt before reaching bottom
+}
+
+// Refresh namespace types
+typealias RefreshHeader = Refresh.Header
+typealias RefreshFooter = Refresh.Footer
+typealias DefaultRefreshHeader = Refresh.DefaultHeader
+typealias DefaultRefreshFooter = Refresh.DefaultFooter
+```
+
+##### ScrollView
+
+```swift
+// Hide scroll indicators
+ScrollView {
+    VStack(alignment: .leading) {
+        ForEach(0..<100) {
+            Text("Row \($0)")
+        }
+    }
+}
+.ss.scrollIndicators(.hidden)
+
+// Show specific axis indicators
+ScrollView {
+    LazyVStack {
+        ForEach(0..<50, id: \.self) { i in
+            Text("Item \(i)")
+        }
+    }
+}
+.ss.scrollIndicators(.visible, axes: .vertical)
+
+// Disable scrolling
+@State private var isScrollDisabled = false
+
+ScrollView {
+    VStack {
+        Toggle("Disable", isOn: $isScrollDisabled)
+        MyContent()
+    }
+}
+.ss.scrollDisabled(isScrollDisabled)
+
+// Keyboard dismiss behavior
+@State var text = ""
+
+ScrollView {
+    TextField("Prompt", text: $text)
+    ForEach(0 ..< 50) { index in
+        Text("\(index)")
+            .padding()
+    }
+}
+.ss.scrollDismissesKeyboard(.immediately)
+
+// Different keyboard dismissal modes
+.ss.scrollDismissesKeyboard(.automatic)  // Default behavior
+.ss.scrollDismissesKeyboard(.interactively)  // Interactive dismissal
+.ss.scrollDismissesKeyboard(.never)  // Never dismiss
+
+// ScrollViewTracking - Track scroll position
+@State private var currentScroll: CGFloat = 0
+
+ScrollTrackingView(currentScroll: $currentScroll) {
+    ForEach(0..<20, id: \.self) { index in
+        Text("Item \(index)")
+            .padding()
+    }
+}
+// Use onScroll to listen to scroll changes
+.onScroll { offset in
+    print("Scroll offset: \(offset)")
 }
 ```
 
@@ -1519,6 +1727,67 @@ CustomSegmentPicker(
         RoundedRectangle(cornerRadius: 8)
     }
 )
+```
+
+##### ScrollStack
+
+```swift
+// Vertical scroll stack (VStack with scrolling)
+VScrollStack(spacing: 10, showsIndicators: true) {
+    ForEach(0..<20, id: \.self) { index in
+        Text("Item \(index)")
+            .padding()
+    }
+}
+
+// Horizontal scroll stack (HStack with scrolling)
+HScrollStack(spacing: 15, showsIndicators: false) {
+    ForEach(0..<10, id: \.self) { index in
+        Image(systemName: "star.fill")
+            .font(.largeTitle)
+    }
+}
+
+// Vertical scroll grid (3 columns)
+VScrollGrid(rowsCount: 3, spacing: 10) {
+    ForEach(0..<12, id: \.self) { index in
+        RoundedRectangle(cornerRadius: 8)
+            .fill(Color.blue.opacity(0.6))
+            .frame(height: 60)
+    }
+}
+
+// Horizontal scroll grid (2 rows)
+HScrollGrid(rowsCount: 2, spacing: 10) {
+    ForEach(0..<8, id: \.self) { index in
+        RoundedRectangle(cornerRadius: 8)
+            .fill(Color.green.opacity(0.6))
+            .frame(width: 80)
+    }
+}
+
+// Fixed width columns
+VScrollGrid.fixedColumns(widths: [80, 120, 80], spacing: 8) {
+    ForEach(0..<9, id: \.self) { index in
+        Text("Col \(index)")
+    }
+}
+
+// Adaptive columns (auto-fit)
+VScrollGrid.adaptiveColumns(minimum: 100, spacing: 10) {
+    ForEach(0..<15, id: \.self) { index in
+        Text("Item \(index)")
+    }
+}
+
+// Single row horizontal grid (common for horizontal lists)
+HScrollGrid.singleRow(height: 80, spacing: 12) {
+    ForEach(0..<10, id: \.self) { index in
+        RoundedRectangle(cornerRadius: 12)
+            .fill(Color.mint.opacity(0.7))
+            .frame(width: 100)
+    }
+}
 ```
 
 ### Utilities - Core Utilities

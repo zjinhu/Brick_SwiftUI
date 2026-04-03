@@ -1,16 +1,23 @@
 //
-//  SwiftUIView.swift
-//  
+//  CircularProgressStyle.swift
+//  圆形进度条样式/Circular progress view style
 //
 //  Created by iOS on 2024/9/2.
 //
 
 import SwiftUI
 
+/// 圆形进度条样式/Circular progress view style
 public struct CircularProgressStyle: ProgressViewStyle {
+    /// 描边颜色/Stroke color
     public var strokeColor: Color = .blue
+    /// 描边宽度/Stroke width
     public var strokeWidth: CGFloat = 10.0
     
+    /// 初始化/Initialize
+    /// - Parameters:
+    ///   - strokeColor: 描边颜色/Stroke color
+    ///   - strokeWidth: 描边宽度/Stroke width
     public init(strokeColor: Color, strokeWidth: CGFloat) {
         self.strokeColor = strokeColor
         self.strokeWidth = strokeWidth

@@ -5,6 +5,9 @@ import SwiftUI
 @available(macOS, deprecated: 13.3)
 @available(watchOS, deprecated: 9.4)
 public extension Brick where Wrapped: View {
+    /// 设置弹出视图的圆角半径/Sets the corner radius of a sheet.
+    ///
+    /// - Parameter cornerRadius: 圆角半径值/Pass nil to use the system default corner radius.
     @ViewBuilder
     func presentationCornerRadius(_ cornerRadius: CGFloat?) -> some View {
 #if os(iOS) || targetEnvironment(macCatalyst)
