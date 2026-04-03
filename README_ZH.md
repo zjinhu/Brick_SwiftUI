@@ -244,60 +244,243 @@ Toggle(" Agree to terms", isOn: $agreed)
 
 ### SwiftUI - SwiftUI 类型扩展
 
-- [x] **View++** - 通用 View 扩展: `.then()`, `.hidden()`, `.offset()`, `.fill()`, `.fit()`, `.hideKeyboard()`, `.tintColor()`
-- [x] **ForEach++** - ForEach 增强: 索引访问、枚举支持、`.interleave()`, `.interdivided()`, `.interspaced()`
-- [x] **View+Geometry** - 绑定视图几何: `bindSafeAreaInsets`, `bindSize`
-- [x] **View+Haptic** - 触觉反馈: `HapticButton`, 点击/变更/选择反馈
-- [x] **View+Frame** - 框架扩展: `.minWidth()`, `.maxWidth()`, `.height()`, `.width()`, `.readHeight()`, `.readWidth()`, `.squareFrame()`
-- [x] **View+Mask** - 蒙版扩展: `.mask()`, `.masking()`, `.reverseMask()`
-- [x] **View+Background** - 背景扩展: `PassthroughView`, `.backgroundFill()`
-- [x] **Image++** - Image 扩展: `.symbol()`, `.resized()`, `.sizeToFit()`
-- [x] **View+Conditionals** - 条件视图: `.enabled()`, `.hidden(if)`, `.visible(if)`
-- [x] **Text++** - Text 扩展
-- [x] **Label++** - Label 扩展
-- [x] **List++** - List 扩展
-- [x] **Section++** - Section 扩展
-- [x] **NavigationLink++** - NavigationLink 扩展
-- [x] **Shape++** - Shape 扩展
-- [x] **Spacer++** - Spacer 扩展
-- [x] **Menu++** - Menu 扩展
-- [x] **Angle++** - Angle 扩展
-- [x] **Collection++** - Collection 扩展
-- [x] **URL++** - URL 扩展
-- [x] **String++** - String 扩展
-- [x] **Task+** - Task 扩展
-- [x] **GridItem++** - GridItem 扩展
+提供便捷功能的 SwiftUI 类型扩展。
 
-### Tools - 工具组件
+| 功能 | 描述 | 用法 |
+|------|------|------|
+| **View++** | View 扩展: `.then()`, `.hidden()`, `.offset()`, `.fill()`, `.fit()`, `.hideKeyboard()` | `view.then { $0.padding() }` |
+| **ForEach++** | ForEach 增强: 索引访问、`.interleave()`, `.interdivided()`, `.interspaced()` | `ForEach(items) { item in }` |
+| **View+Geometry** | 绑定视图几何: `bindSafeAreaInsets`, `bindSize` | `view.bindSize($size)` |
+| **View+Haptic** | 触觉反馈: `HapticButton`, 点击/变更/选择反馈 | `.hapticFeedback(.success)` |
+| **View+Frame** | 框架扩展: `.minWidth()`, `.maxWidth()`, `.height()`, `.readHeight()` | `.minWidth(100)` |
+| **View+Mask** | 蒙版扩展: `.mask()`, `.masking()`, `.reverseMask()` | `.reverseMask { Circle() }` |
+| **View+Background** | 背景扩展: `PassthroughView`, `.backgroundFill()` | `.backgroundFill(Color.blue)` |
+| **Image++** | Image 扩展: `.symbol()`, `.resized()`, `.sizeToFit()` | `Image(systemName: "heart").symbol(...)` |
+| **View+Conditionals** | 条件视图: `.enabled()`, `.hidden(if)`, `.visible(if)` | `.hidden(if: isHidden)` |
+| **Text++** | Text 扩展 | `Text("Hello").bold()` |
+| **Label++** | Label 扩展 | `Label("标题", systemImage: "star")` |
+| **List++** | List 扩展 | `List { ... }.listStyle(.insetGrouped)` |
+| **Section++** | Section 扩展 | `Section("标题") { ... }` |
+| **NavigationLink++** | NavigationLink 扩展 | `NavigationLink(destination: View)` |
+| **Shape++** | Shape 扩展 | `Circle()`, `RoundedRectangle()` |
+| **Spacer++** | Spacer 扩展 | `Spacer().frame(height: 10)` |
+| **Menu++** | Menu 扩展 | `Menu { ... }` |
+| **Angle++** | Angle 扩展 | `Angle(degrees: 45)` |
+| **Collection++** | Collection 扩展 | `[1,2,3].safeSubscript(0)` |
+| **URL++** | URL 扩展 | `URL(string: "...")` |
+| **String++** | String 扩展 | `"hello".localized` |
+| **Task+** | Task 扩展 | `Task.sleep(1000000000)` |
+| **GridItem++** | GridItem 扩展 | `GridItem(.flexible())` |
 
-- [x] **NavigationStack** - 导航堆栈 (iOS 16-)
-- [x] **Toast** - 提示框，支持位置(top/bottom)、动画类型(fade/slide/scale)
-- [x] **ListPicker** - 通用列表选择器，支持分组、单选/多选
-- [x] **TTextField** - 自定义样式文本字段，支持标题、占位符、错误状态
-- [x] **CarouselView** - 水平轮播，支持缩放、循环、自动滚动
-- [x] **FlipView** - 3D 翻转卡片视图
-- [x] **OpenUrl** - URL 打开工具
-- [x] **WebView** - WebView 组件
-- [x] **Presentation** - 演示控件: DragIndicator, Detents, InteractiveDismiss, ContentInteraction, CornerRadius
-- [x] **TextEditors** - TextEditor 样式扩展
-- [x] **UnderLineText** - 下划线文本输入
+### Tools - UI 组件
+
+预构建的 UI 组件，支持快速开发。
+
+| 功能 | 描述 | 用法 |
+|------|------|------|
+| **NavigationStack** | 导航栈 (iOS 16-) | `NavigationStack { ... }` |
+| **Toast** | 提示消息，支持位置 (top/bottom) 和动画类型 | `Toast.show("消息")` |
+| **ListPicker** | 通用列表选择器，支持分区、单选/多选 | `ListPicker(selection: $value, items: [])` |
+| **TTextField** | 自定义样式文本框，支持标题、占位符、错误状态 | `TTextField(title: "名称", text: $text)` |
+| **CarouselView** | 水平轮播，支持缩放、自动滚动 | `CarouselView(items: [])` |
+| **FlipView** | 3D 翻转卡片视图 | `FlipView(front: View, back: View)` |
+| **OpenUrl** | URL 打开工具 | `OpenURL(url)` |
+| **WebView** | WebView 组件 | `WebView(url: url)` |
+| **Presentation** | 演示控件: DragIndicator, Detents, CornerRadius | `presentationDetents([.medium, .large])` |
+| **TextEditors** | TextEditor 样式扩展 | `TextEditor(text: $text).style(...)` |
+| **UnderLineText** | 下划线文本输入 | `UnderLineText(text: $text)` |
 
 ### Utilities - 核心工具
 
-- [x] **Brick** - 核心包装类型 `Brick<Wrapped>`
-- [x] **SFSymbols** - SF Symbol 类型安全封装 (V1-V7)
-- [x] **Keyboard** - 键盘管理，跟踪键盘高度
-- [x] **Color+** - 颜色扩展，Hex 初始化、动态颜色、随机颜色
-- [x] **UIColor++** - UIColor 扩展
-- [x] **UIView++** - UIView 扩展
-- [x] **Screen++** - 屏幕尺寸扩展
-- [x] **CGSize++** - CGSize 扩展
-- [x] **Image+** - 图片扩展
-- [x] **Adapter** - 适配器工具
-- [x] **CurrentLanguage** - 当前语言检测
-- [x] **Application** - 应用信息
-- [x] **BrickLog** - 日志工具
-- [x] **ViewLifeCycle** - 视图生命周期: onFirstAppear, didDisappear, willDisappear
+核心工具为应用开发提供基础功能支持。
+
+| 功能 | 描述 | 用法 |
+|------|------|------|
+| **Brick** | 核心包装类型 `Brick<Wrapped>`，支持 `view.ss.xxx` 语法 | `view.ss.tabBar(.hidden)` |
+| **SFSymbols** | SF Symbol 类型安全封装 (V1-V7) | `Image(systemName: SFSymbols.V1.heart)` |
+| **Keyboard** | 键盘管理器，跟踪键盘高度 | `KeyboardManager.shared.keyboardHeight` |
+| **Color+** | 颜色扩展: Hex 初始化、动态颜色、随机颜色 | `Color(hex: "#FF5733")` |
+| **UIColor++** | UIColor 扩展: Hex 初始化、RGB 初始化、动态颜色 | `UIColor(hex: 0xFF5733)` |
+| **UIView++** | UIView/NSView 扩展: parentController、allSubviews() | `view.allSubviews()` |
+| **Screen++** | 屏幕工具: 安全区域、尺寸、设备检测 | `Screen.width`, `Screen.safeArea` |
+| **CGSize++** | CGSize 扩展: greatestFiniteSize、最小/最大维度 | `CGSize.greatestFiniteSize` |
+| **Image+** | 图片扩展: 缩放、着色、旋转、保存到相册 | `image.resized(toWidth: 500)` |
+| **Adapter** | 响应式设计适配器，缩放计算 | `100.zoom()`, `10.screen.width(...)` |
+| **CurrentLanguage** | 当前语言检测 | `Brick.Language.currentLanguage` |
+| **Application** | 应用信息: appName、version、buildNumber、appState | `Brick.Application.appName` |
+| **BrickLog** | 日志: debug、info、warning、error、fault | `Log.info("消息")` |
+| **ViewLifeCycle** | 视图生命周期: onFirstAppear、onDidDisappear、onWillDisappear | `view.onFirstAppear { }` |
+
+#### Utilities 详细 API
+
+##### BrickLog
+
+```swift
+// 静态方法
+Log.info("信息消息")
+Log.debug("调试消息")
+Log.warning("警告消息")
+Log.error("错误消息")
+Log.fault("故障消息")
+
+// 实例方法
+let logger = BrickLog.create(category: "MyLog")
+logger.info("自定义日志")
+logger.error("错误: \(error)")
+```
+
+##### Color
+
+```swift
+// Hex 初始化
+Color(hex: 0xFF5733)           // UInt64
+Color(hex: "#FF5733")           // String
+Color.hex(0xFF5733)             // 静态方法
+
+// 动态颜色 (浅色/深色)
+Color.dynamic(light: "#FFFFFF", dark: "#000000")
+
+// 随机颜色
+Color.random()
+Color.random(in: 0.5...1.0, randomOpacity: true)
+```
+
+##### Keyboard
+
+```swift
+@StateObject private var keyboardManager = KeyboardManager()
+
+var body: some View {
+    VStack {
+        Text("键盘高度: \(keyboardManager.keyboardHeight)")
+    }
+    .onAppear {
+        // 隐藏键盘
+        KeyboardManager.hideKeyboard()
+    }
+}
+```
+
+##### Application
+
+```swift
+// 应用信息
+Brick.Application.appName           // 应用名称
+Brick.Application.appBundleID       // Bundle ID
+Brick.Application.versionNumber      // 版本号 (如 "1.0.0")
+Brick.Application.buildNumber        // 构建号
+Brick.Application.completeAppVersion // "1.0.0 (100)"
+
+// 应用状态
+Brick.AppState.isDebug               // 调试模式检测
+Brick.AppState.state                 // .debug / .testFlight / .appStore
+```
+
+##### CurrentLanguage
+
+```swift
+let language = Brick.Language.currentLanguage  // "en", "zh" 等
+```
+
+##### ViewLifeCycle
+
+```swift
+view.onFirstAppear {
+    print("首次出现!")
+}
+
+view.onWillDisappear {
+    print("即将消失")
+}
+
+view.onDidDisappear {
+    print("已消失")
+}
+```
+
+##### Screen & Device
+
+```swift
+// 屏幕尺寸
+Screen.width
+Screen.height
+Screen.safeArea
+Screen.scale
+
+// 设备检测
+Device.isIpad        // iPad 检测
+Device.idiom          // .pad / .phone / .tv
+
+// 窗口/视图控制器
+UIWindow.keyWindow
+UIViewController.currentViewController()
+UIViewController.currentNavigationController()
+```
+
+##### Adapter
+
+```swift
+// 缩放计算 (响应式设计)
+let size = 100.zoom()  // 根据屏幕宽度自动缩放
+let width = 375.zoom() // 从设计宽度转换 (375pt)
+
+// 按屏幕宽度范围适配
+let value = 10.screen.width(0..<375, is: 10, zoomed: 8)
+
+// 按屏幕英寸适配
+let height = 20.screen.inch(._6_1, is: 20, zoomed: 18)
+
+// 按屏幕级别适配 (compact/regular/full)
+let padding = 16.screen.level(.full, is: 20, zoomed: 16)
+
+// 设置自定义缩放转换
+UIAdapter.Zoom.set { origin in
+    return origin * (UIScreen.main.bounds.width / 375.0)
+}
+```
+
+##### Image (ImageRepresentable)
+
+```swift
+// 缩放图像
+let resized = image.resized(toWidth: 500)
+let byHeight = image.resized(toHeight: 300)
+let maxWidth = image.resized(toMaxWidth: 200)
+
+// 获取 JPEG 数据
+if let jpgData = image.jpegData(resizedToWidth: 1000, withCompressionQuality: 0.8) {
+    // 使用 JPEG 数据
+}
+
+// 图像格式检测
+let format = ImageFormat.get(from: data)
+
+// iOS 特有功能
+image.copyToPasteboard()  // 复制到剪贴板
+image.saveToPhotos { error in }  // 保存到相册
+
+// 着色
+let tinted = image.tinted(with: .red, blendMode: .sourceAtop)
+
+// 旋转
+let rotated = image.rotated(withRadians: .pi / 4)
+```
+
+##### BrickLog
+
+```swift
+// 静态方法
+Log.info("信息消息")
+Log.debug("调试消息")
+Log.warning("警告消息")
+Log.error("错误消息")
+Log.fault("故障消息")
+
+// 实例方法
+let logger = BrickLog.create(category: "MyLog")
+logger.info("自定义日志")
+logger.error("错误: \(error)")
+```
 
 ## 使用方法
 

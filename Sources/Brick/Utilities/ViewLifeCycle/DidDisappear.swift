@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+
 #if os(iOS)
 import UIKit
 
+// MARK: - 消失处理 / Did Disappear Handler
 struct DidDisappearHandler: UIViewControllerRepresentable {
 
     let onDidDisappear: () -> Void
@@ -38,7 +40,11 @@ struct DidDisappearHandler: UIViewControllerRepresentable {
     }
 }
 
+// MARK: - View 扩展 / View Extension
 public extension View {
+    /// 视图消失后执行操作 / Perform action after view did disappear
+    /// - Parameter perform: 要执行的操作 / Action to perform
+    /// - Returns: 修改后的视图 / Modified view
     func onDidDisappear(_ perform: @escaping () -> Void) -> some View {
         background(DidDisappearHandler(onDidDisappear: perform))
     }

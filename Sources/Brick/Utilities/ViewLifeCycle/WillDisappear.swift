@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+
 #if os(iOS)
 import UIKit
 
+// MARK: - 即将消失处理 / Will Disappear Handler
 struct WillDisappearHandler: UIViewControllerRepresentable {
 
     let onWillDisappear: () -> Void
@@ -38,7 +40,11 @@ struct WillDisappearHandler: UIViewControllerRepresentable {
     }
 }
 
+// MARK: - View 扩展 / View Extension
 public extension View {
+    /// 视图即将消失时执行操作 / Perform action when view will disappear
+    /// - Parameter perform: 要执行的操作 / Action to perform
+    /// - Returns: 修改后的视图 / Modified view
     func onWillDisappear(_ perform: @escaping () -> Void) -> some View {
         background(WillDisappearHandler(onWillDisappear: perform))
     }

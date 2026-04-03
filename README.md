@@ -244,60 +244,243 @@ Toggle(" Agree to terms", isOn: $agreed)
 
 ### SwiftUI - SwiftUI Type Extensions
 
-- [x] **View++** - View extensions: `.then()`, `.hidden()`, `.offset()`, `.fill()`, `.fit()`, `.hideKeyboard()`, `.tintColor()`
-- [x] **ForEach++** - ForEach enhancement: index access, enumeration support, `.interleave()`, `.interdivided()`, `.interspaced()`
-- [x] **View+Geometry** - Bind view geometry: `bindSafeAreaInsets`, `bindSize`
-- [x] **View+Haptic** - Haptic feedback: `HapticButton`, tap/change/selection feedback
-- [x] **View+Frame** - Frame extensions: `.minWidth()`, `.maxWidth()`, `.height()`, `.width()`, `.readHeight()`, `.readWidth()`, `.squareFrame()`
-- [x] **View+Mask** - Mask extensions: `.mask()`, `.masking()`, `.reverseMask()`
-- [x] **View+Background** - Background extensions: `PassthroughView`, `.backgroundFill()`
-- [x] **Image++** - Image extensions: `.symbol()`, `.resized()`, `.sizeToFit()`
-- [x] **View+Conditionals** - Conditional views: `.enabled()`, `.hidden(if)`, `.visible(if)`
-- [x] **Text++** - Text extensions
-- [x] **Label++** - Label extensions
-- [x] **List++** - List extensions
-- [x] **Section++** - Section extensions
-- [x] **NavigationLink++** - NavigationLink extensions
-- [x] **Shape++** - Shape extensions
-- [x] **Spacer++** - Spacer extensions
-- [x] **Menu++** - Menu extensions
-- [x] **Angle++** - Angle extensions
-- [x] **Collection++** - Collection extensions
-- [x] **URL++** - URL extensions
-- [x] **String++** - String extensions
-- [x] **Task+** - Task extensions
-- [x] **GridItem++** - GridItem extensions
+SwiftUI type extensions providing convenient functionality for SwiftUI development.
+
+| Feature | Description | Usage |
+|---------|-------------|-------|
+| **View++** | View extensions: `.then()`, `.hidden()`, `.offset()`, `.fill()`, `.fit()`, `.hideKeyboard()` | `view.then { $0.padding() }` |
+| **ForEach++** | ForEach enhancement: index access, `.interleave()`, `.interdivided()`, `.interspaced()` | `ForEach(items) { item in }` |
+| **View+Geometry** | Bind view geometry: `bindSafeAreaInsets`, `bindSize` | `view.bindSize($size)` |
+| **View+Haptic** | Haptic feedback: `HapticButton`, tap/change/selection feedback | `.hapticFeedback(.success)` |
+| **View+Frame** | Frame extensions: `.minWidth()`, `.maxWidth()`, `.height()`, `.readHeight()` | `.minWidth(100)` |
+| **View+Mask** | Mask extensions: `.mask()`, `.masking()`, `.reverseMask()` | `.reverseMask { Circle() }` |
+| **View+Background** | Background extensions: `PassthroughView`, `.backgroundFill()` | `.backgroundFill(Color.blue)` |
+| **Image++** | Image extensions: `.symbol()`, `.resized()`, `.sizeToFit()` | `Image(systemName: "heart").symbol(...)` |
+| **View+Conditionals** | Conditional views: `.enabled()`, `.hidden(if)`, `.visible(if)` | `.hidden(if: isHidden)` |
+| **Text++** | Text extensions | `Text("Hello").bold()` |
+| **Label++** | Label extensions | `Label("Title", systemImage: "star")` |
+| **List++** | List extensions | `List { ... }.listStyle(.insetGrouped)` |
+| **Section++** | Section extensions | `Section("Header") { ... }` |
+| **NavigationLink++** | NavigationLink extensions | `NavigationLink(destination: View)` |
+| **Shape++** | Shape extensions | `Circle()`, `RoundedRectangle()` |
+| **Spacer++** | Spacer extensions | `Spacer().frame(height: 10)` |
+| **Menu++** | Menu extensions | `Menu { ... }` |
+| **Angle++** | Angle extensions | `Angle(degrees: 45)` |
+| **Collection++** | Collection extensions | `[1,2,3].safeSubscript(0)` |
+| **URL++** | URL extensions | `URL(string: "...")` |
+| **String++** | String extensions | `"hello".localized` |
+| **Task+** | Task extensions | `Task.sleep(1000000000)` |
+| **GridItem++** | GridItem extensions | `GridItem(.flexible())` |
 
 ### Tools - UI Components
 
-- [x] **NavigationStack** - Navigation stack (iOS 16-)
-- [x] **Toast** - Toast messages with position (top/bottom), animation types (fade/slide/scale)
-- [x] **ListPicker** - Generic list picker with sections, single/multi selection
-- [x] **TTextField** - Custom styled text field with title, placeholder, error states
-- [x] **CarouselView** - Horizontal carousel with scaling, wrapping, auto-scroll
-- [x] **FlipView** - 3D flip card view
-- [x] **OpenUrl** - URL opening tools
-- [x] **WebView** - WebView component
-- [x] **Presentation** - Presentation controls: DragIndicator, Detents, InteractiveDismiss, ContentInteraction, CornerRadius
-- [x] **TextEditors** - TextEditor style extensions
-- [x] **UnderLineText** - Underline text input
+Pre-built UI components for rapid development.
+
+| Feature | Description | Usage |
+|---------|-------------|-------|
+| **NavigationStack** | Navigation stack (iOS 16-) | `NavigationStack { ... }` |
+| **Toast** | Toast messages with position (top/bottom), animation types | `Toast.show("Message")` |
+| **ListPicker** | Generic list picker with sections, single/multi selection | `ListPicker(selection: $value, items: [])` |
+| **TTextField** | Custom styled text field with title, placeholder, error states | `TTextField(title: "Name", text: $text)` |
+| **CarouselView** | Horizontal carousel with scaling, wrapping, auto-scroll | `CarouselView(items: [])` |
+| **FlipView** | 3D flip card view | `FlipView(front: View, back: View)` |
+| **OpenUrl** | URL opening tools | `OpenURL(url)` |
+| **WebView** | WebView component | `WebView(url: url)` |
+| **Presentation** | Presentation controls: DragIndicator, Detents, CornerRadius | `presentationDetents([.medium, .large])` |
+| **TextEditors** | TextEditor style extensions | `TextEditor(text: $text).style(...)` |
+| **UnderLineText** | Underline text input | `UnderLineText(text: $text)` |
 
 ### Utilities - Core Utilities
 
-- [x] **Brick** - Core wrapper type `Brick<Wrapped>`
-- [x] **SFSymbols** - SF Symbol type-safe wrapper (V1-V7)
-- [x] **Keyboard** - Keyboard manager, track keyboard height
-- [x] **Color+** - Color extensions, Hex init, dynamic colors, random colors
-- [x] **UIColor++** - UIColor extensions
-- [x] **UIView++** - UIView extensions
-- [x] **Screen++** - Screen size extensions
-- [x] **CGSize++** - CGSize extensions
-- [x] **Image+** - Image extensions
-- [x] **Adapter** - Adapter utilities
-- [x] **CurrentLanguage** - Current language detection
-- [x] **Application** - Application info
-- [x] **BrickLog** - Logging utilities
-- [x] **ViewLifeCycle** - View lifecycle: onFirstAppear, didDisappear, willDisappear
+Core utility tools providing essential functionality for app development.
+
+| Feature | Description | Usage |
+|---------|-------------|-------|
+| **Brick** | Core wrapper type `Brick<Wrapped>`, enables `view.ss.xxx` syntax | `view.ss.tabBar(.hidden)` |
+| **SFSymbols** | SF Symbol type-safe wrapper (V1-V7) | `Image(systemName: SFSymbols.V1.heart)` |
+| **Keyboard** | Keyboard manager, track keyboard height | `KeyboardManager.shared.keyboardHeight` |
+| **Color+** | Color extensions: Hex init, dynamic colors, random colors | `Color(hex: "#FF5733")` |
+| **UIColor++** | UIColor extensions: Hex init, RGB init, dynamic colors | `UIColor(hex: 0xFF5733)` |
+| **UIView++** | UIView/NSView extensions: parentController, allSubviews() | `view.allSubviews()` |
+| **Screen++** | Screen utilities: safeArea, dimensions, device detection | `Screen.width`, `Screen.safeArea` |
+| **CGSize++** | CGSize extensions: greatestFiniteSize, min/max dimension | `CGSize.greatestFiniteSize` |
+| **Image+** | Image extensions: resize, tint, rotate, save to photos | `image.resized(toWidth: 500)` |
+| **Adapter** | Responsive design adapter, zoom calculations | `100.zoom()`, `10.screen.width(...)` |
+| **CurrentLanguage** | Current language detection | `Brick.Language.currentLanguage` |
+| **Application** | App info: appName, version, buildNumber, appState | `Brick.Application.appName` |
+| **BrickLog** | Logging: debug, info, warning, error, fault | `Log.info("message")` |
+| **ViewLifeCycle** | View lifecycle: onFirstAppear, onDidDisappear, onWillDisappear | `view.onFirstAppear { }` |
+
+#### Utilities Detailed API
+
+##### BrickLog
+
+```swift
+// Static methods
+Log.info("Info message")
+Log.debug("Debug message")
+Log.warning("Warning message")
+Log.error("Error message")
+Log.fault("Fault message")
+
+// Instance methods
+let logger = BrickLog.create(category: "MyLog")
+logger.info("Custom log")
+logger.error(.init("Error: \(error)"))
+```
+
+##### Color
+
+```swift
+// Hex initialization
+Color(hex: 0xFF5733)           // UInt64
+Color(hex: "#FF5733")           // String
+Color.hex(0xFF5733)             // Static method
+
+// Dynamic colors (light/dark)
+Color.dynamic(light: "#FFFFFF", dark: "#000000")
+
+// Random colors
+Color.random()
+Color.random(in: 0.5...1.0, randomOpacity: true)
+```
+
+##### Keyboard
+
+```swift
+@StateObject private var keyboardManager = KeyboardManager()
+
+var body: some View {
+    VStack {
+        Text("Keyboard height: \(keyboardManager.keyboardHeight)")
+    }
+    .onAppear {
+        // Hide keyboard
+        KeyboardManager.hideKeyboard()
+    }
+}
+```
+
+##### Application
+
+```swift
+// App information
+Brick.Application.appName           // App name
+Brick.Application.appBundleID       // Bundle ID
+Brick.Application.versionNumber      // Version (e.g. "1.0.0")
+Brick.Application.buildNumber        // Build number
+Brick.Application.completeAppVersion // "1.0.0 (100)"
+
+// App state
+Brick.AppState.isDebug               // Debug mode check
+Brick.AppState.state                 // .debug / .testFlight / .appStore
+```
+
+##### CurrentLanguage
+
+```swift
+let language = Brick.Language.currentLanguage  // "en", "zh", etc.
+```
+
+##### ViewLifeCycle
+
+```swift
+view.onFirstAppear {
+    print("First appeared!")
+}
+
+view.onWillDisappear {
+    print("Will disappear")
+}
+
+view.onDidDisappear {
+    print("Did disappear")
+}
+```
+
+##### Screen & Device
+
+```swift
+// Screen dimensions
+Screen.width
+Screen.height
+Screen.safeArea
+Screen.scale
+
+// Device detection
+Device.isIpad        // iPad check
+Device.idiom          // .pad / .phone / .tv
+
+// Window/ViewController
+UIWindow.keyWindow
+UIViewController.currentViewController()
+UIViewController.currentNavigationController()
+```
+
+##### Adapter
+
+```swift
+// Zoom calculation (responsive design)
+let size = 100.zoom()  // Auto scale based on screen width
+let width = 375.zoom() // Convert from design width (375pt)
+
+// Screen adaptation by width range
+let value = 10.screen.width(0..<375, is: 10, zoomed: 8)
+
+// Screen adaptation by screen inch
+let height = 20.screen.inch(._6_1, is: 20, zoomed: 18)
+
+// Screen adaptation by level (compact/regular/full)
+let padding = 16.screen.level(.full, is: 20, zoomed: 16)
+
+// Set custom zoom conversion
+UIAdapter.Zoom.set { origin in
+    return origin * (UIScreen.main.bounds.width / 375.0)
+}
+```
+
+##### Image (ImageRepresentable)
+
+```swift
+// Resize image
+let resized = image.resized(toWidth: 500)
+let byHeight = image.resized(toHeight: 300)
+let maxWidth = image.resized(toMaxWidth: 200)
+
+// Get JPEG data
+if let jpgData = image.jpegData(resizedToWidth: 1000, withCompressionQuality: 0.8) {
+    // Use JPEG data
+}
+
+// Image format detection
+let format = ImageFormat.get(from: data)
+
+// iOS specific
+image.copyToPasteboard()  // Copy to clipboard
+image.saveToPhotos { error in }  // Save to album
+
+// Tint color
+let tinted = image.tinted(with: .red, blendMode: .sourceAtop)
+
+// Rotate
+let rotated = image.rotated(withRadians: .pi / 4)
+```
+
+##### BrickLog
+
+```swift
+// Static methods
+Log.info("Info message")
+Log.debug("Debug message")
+Log.warning("Warning message")
+Log.error("Error message")
+Log.fault("Fault message")
+
+// Instance methods
+let logger = BrickLog.create(category: "MyLog")
+logger.info("Custom log")
+logger.error("Error: \(error)")
+```
 
 ## Usage
 

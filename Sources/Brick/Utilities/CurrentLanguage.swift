@@ -7,10 +7,12 @@
 
 import SwiftUI
 import Foundation
+
+// MARK: - 语言检测 / Language Detection
 extension Brick{
     public struct Language {
         /// The current language of the system.
-        ///
+        /// 系统当前语言
         public static var currentLanguage: String? {
             
             if #available(macOS 13, iOS 16, tvOS 16, watchOS 9, *) {

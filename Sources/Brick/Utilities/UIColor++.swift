@@ -5,15 +5,24 @@
 //  Created by iOS on 25/11/2019.
 //  Copyright © 2019 狄烨 . All rights reserved.
 //
+
 #if os(iOS)
 import UIKit
+
+// MARK: - UIColor 扩展 / UIColor Extensions
 extension UIColor {
     
+    /// 动态颜色 (支持明暗模式) / Dynamic color (light/dark mode)
+    /// - Parameters:
+    ///   - light: 浅色模式颜色 / Light mode color
+    ///   - dark: 深色模式颜色 / Dark mode color
     static func dynamicColor(light: UIColor, dark: UIColor) -> UIColor {
         return UIColor { $0.userInterfaceStyle == .dark ? dark : light }
     }
     
-    ///根据16进制字符串生成颜色.支持 0x 或 # 开头字符串
+    /// 根据16进制字符串生成颜色.支持 0x 或 # 开头字符串
+    /// Create color from hex string. Supports 0x or # prefix
+    /// - Parameter hex: 十六进制字符串 / Hex string
     convenience init(hex: String) {
         var string = ""
         if hex.lowercased().hasPrefix("0x") {
@@ -42,7 +51,12 @@ extension UIColor {
         self.init(r: Int(r), g: Int(g), b: Int(b), a: CGFloat(a))
     }
     
-    ///根据RGB生成颜色
+    /// 根据RGB生成颜色 / Create color from RGB
+    /// - Parameters:
+    ///   - r: 红色 (0-255) / Red (0-255)
+    ///   - g: 绿色 (0-255) / Green (0-255)
+    ///   - b: 蓝色 (0-255) / Blue (0-255)
+    ///   - a: 透明度 (0-1) / Alpha (0-1)
     convenience init(r: Int, g: Int, b: Int, a: CGFloat = 1) {
         var trans = a
         if trans < 0 { trans = 0 }
