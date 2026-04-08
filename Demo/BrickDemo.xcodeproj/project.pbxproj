@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,6 +41,7 @@
 		81F75BA52CA550AC006B17FB /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F75BA42CA550AC006B17FB /* TestView.swift */; };
 		81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969682A54216D0052619E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		85884E1B2F86027C00444CA4 /* BrickKit in Frameworks */ = {isa = PBXBuildFile; productRef = 85884E1A2F86027C00444CA4 /* BrickKit */; };
 		8C0E3D342C3E23500090D8BF /* SecondDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E3D332C3E23500090D8BF /* SecondDemoView.swift */; };
 		8C7411DA2C009F12009F7127 /* QuicklookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7411D92C009F12009F7127 /* QuicklookView.swift */; };
 		8C7513F12BDDE96100A3CA8D /* BrickKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C7513F02BDDE96100A3CA8D /* BrickKit */; };
@@ -98,7 +99,6 @@
 		81F9696E2A5421CB0052619E /* libswiftQuickLookUI.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLookUI.tbd; path = usr/lib/swift/libswiftQuickLookUI.tbd; sourceTree = SDKROOT; };
 		8C0E3D332C3E23500090D8BF /* SecondDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDemoView.swift; sourceTree = "<group>"; };
 		8C7411D92C009F12009F7127 /* QuicklookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklookView.swift; sourceTree = "<group>"; };
-		8C7513EF2BDDE95200A3CA8D /* Brick_SwiftUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Brick_SwiftUI; path = ..; sourceTree = "<group>"; };
 		8C91274C2C2A6B180010A7FD /* GeometryDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryDemo.swift; sourceTree = "<group>"; };
 		8CB0E6602C0714810017A1EB /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		8CB0E6622C071BC70017A1EB /* 512.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 512.gif; sourceTree = "<group>"; };
@@ -117,6 +117,7 @@
 				81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */,
 				81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */,
 				8C7513F12BDDE96100A3CA8D /* BrickKit in Frameworks */,
+				85884E1B2F86027C00444CA4 /* BrickKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +369,6 @@
 		81156A052A4842430089C52D = {
 			isa = PBXGroup;
 			children = (
-				8C7513EF2BDDE95200A3CA8D /* Brick_SwiftUI */,
 				6079891B2ABC41B40029652F /* BrickBrickDemo-Info.plist */,
 				81156A102A4842430089C52D /* Demo */,
 				81156A0F2A4842430089C52D /* Products */,
@@ -479,6 +479,7 @@
 			name = BrickBrickDemo;
 			packageProductDependencies = (
 				8C7513F02BDDE96100A3CA8D /* BrickKit */,
+				85884E1A2F86027C00444CA4 /* BrickKit */,
 			);
 			productName = Demo;
 			productReference = 81156A0E2A4842430089C52D /* BrickBrickDemo.app */;
@@ -509,6 +510,7 @@
 			);
 			mainGroup = 81156A052A4842430089C52D;
 			packageReferences = (
+				85884E192F86027C00444CA4 /* XCLocalSwiftPackageReference "../../BrickKit" */,
 			);
 			productRefGroup = 81156A0F2A4842430089C52D /* Products */;
 			projectDirPath = "";
@@ -834,7 +836,18 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		85884E192F86027C00444CA4 /* XCLocalSwiftPackageReference "../../BrickKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../BrickKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		85884E1A2F86027C00444CA4 /* BrickKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BrickKit;
+		};
 		8C7513F02BDDE96100A3CA8D /* BrickKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BrickKit;
