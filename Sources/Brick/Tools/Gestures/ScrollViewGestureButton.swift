@@ -132,10 +132,9 @@ public struct ScrollViewGestureButton<Label: View>: View {
 extension ScrollViewGestureButton {
 
     class GestureState: ObservableObject {
-
-        @Published
-        var doubleTapDate = Date()
+        @Published var doubleTapDate = Date()
     }
+    
     @MainActor
     struct GestureConfiguration {
         let state: GestureState

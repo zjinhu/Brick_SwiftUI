@@ -12,7 +12,9 @@ import BrickKit
 struct ContentView: View {
 
     var body: some View {
-        TabbarView()
+        LanguageView {
+            TabbarView()
+        }
     }
     
 }

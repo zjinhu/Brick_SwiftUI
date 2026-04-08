@@ -15,18 +15,32 @@ struct SecondDemoView: View {
         .init(iconSystemName: "wifi", action: {}),
         .init(iconSystemName: "case.fill", action: {})
     ]
-    
+
     var body: some View {
-        ZStack {
-            LinearGradient(
-                gradient: Gradient(colors: [Color.purple, Color.blue, Color.green]),
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            ).ignoresSafeArea()
-            
-            
-            FloatingButton(items: floatingButtons)
+        Brick.NavigationStack {
+            LanguageView {
+                ZStack {
+                    LinearGradient(
+                        gradient: Gradient(colors: [Color.purple, Color.blue, Color.green]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ).ignoresSafeArea()
+                    
+                    
+                    FloatingButton(items: floatingButtons)
+                }
+                .overlay(alignment: .top) {
+                    NavigationLink {
+                        SelectLanguageView()
+
+                    } label: {
+                        Text("Select Language")
+                    }
+
+                }
+            }
         }
+        
     }
 }
 @available(tvOS 16.0, *)

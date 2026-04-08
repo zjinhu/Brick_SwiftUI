@@ -9,12 +9,17 @@ import Foundation
 
 /// 语言/Language
 /// 语言结构体，包含国家名称和语言类型。/Language struct containing country name and language type.
-public struct Language : Identifiable{
-    public let id = UUID()
+public struct Language : Identifiable, Hashable{
+    public var id: String { localize.rawValue }
     /// 国家/地区名称/Country/Region name
-    let country: String
+    public let country: String
     /// 语言类型/Language type
-    let localize: Languages
+    public let localize: Languages
+    
+    public init(country: String, localize: Languages) {
+        self.country = country
+        self.localize = localize
+    }
 }
 
 /// 支持的语言列表/Supported languages list
@@ -63,13 +68,13 @@ public struct Localize {
                 array.append(Language(country: "عربي", localize: .ar))
             case "ja":
                 array.append(Language(country: "日本", localize: .ja))
-            case "en":
+            case "en","en-GB","en-AU","en-CA","en-IN":
                 array.append(Language(country: "English", localize: .en))
             case "nb":
                 array.append(Language(country: "Norsk bokmål", localize: .nb))
-            case "zh-Hant":
+            case "zh-Hant", "zh-HK":
                 array.append(Language(country: "繁体中文", localize: .zhHant))
-            case "es":
+            case "es", "es-419", "es-MX", "es-US":
                 array.append(Language(country: "España", localize: .es))
             case "zh-Hans":
                 array.append(Language(country: "简体中文", localize: .zhHans))
@@ -93,9 +98,9 @@ public struct Localize {
                 array.append(Language(country: "Việt Nam", localize: .vi))
             case "ru":
                 array.append(Language(country: "Россия", localize: .ru))
-            case "pt-PT":
+            case "pt-PT", "pt", "pt-BR":
                 array.append(Language(country: "Português", localize: .ptPT))
-            case "fr":
+            case "fr", "fr-CA":
                 array.append(Language(country: "France", localize: .fr))
             case "id":
                 array.append(Language(country: "Indonesia", localize: .id))

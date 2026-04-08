@@ -23,7 +23,6 @@ public struct LanguageView<Content: View>: View {
         content
             .environment(\.locale, settings.local)
             .environment(\.layoutDirection, settings.layout)
-            .id(settings.uuid)
             .environmentObject(settings)
     }
 }

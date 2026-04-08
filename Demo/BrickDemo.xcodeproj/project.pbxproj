@@ -42,6 +42,7 @@
 		81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F969682A54216D0052619E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		85884E1B2F86027C00444CA4 /* BrickKit in Frameworks */ = {isa = PBXBuildFile; productRef = 85884E1A2F86027C00444CA4 /* BrickKit */; };
+		85884E1D2F861C1500444CA4 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 85884E1C2F861C1500444CA4 /* Localizable.xcstrings */; };
 		8C0E3D342C3E23500090D8BF /* SecondDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E3D332C3E23500090D8BF /* SecondDemoView.swift */; };
 		8C7411DA2C009F12009F7127 /* QuicklookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7411D92C009F12009F7127 /* QuicklookView.swift */; };
 		8C7513F12BDDE96100A3CA8D /* BrickKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C7513F02BDDE96100A3CA8D /* BrickKit */; };
@@ -97,6 +98,7 @@
 		81F9696A2A54217B0052619E /* libswiftAVFoundation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftAVFoundation.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/swift/libswiftAVFoundation.tbd; sourceTree = DEVELOPER_DIR; };
 		81F9696C2A5421BE0052619E /* libswiftQuickLook.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLook.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/swift/libswiftQuickLook.tbd; sourceTree = DEVELOPER_DIR; };
 		81F9696E2A5421CB0052619E /* libswiftQuickLookUI.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftQuickLookUI.tbd; path = usr/lib/swift/libswiftQuickLookUI.tbd; sourceTree = SDKROOT; };
+		85884E1C2F861C1500444CA4 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		8C0E3D332C3E23500090D8BF /* SecondDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDemoView.swift; sourceTree = "<group>"; };
 		8C7411D92C009F12009F7127 /* QuicklookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklookView.swift; sourceTree = "<group>"; };
 		8C91274C2C2A6B180010A7FD /* GeometryDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryDemo.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 				60C2C5E52CF6CED20004ABC4 /* Launch */,
 				60C2C5E62CF6CEEE0004ABC4 /* AutoHeightTextEditor_Usage */,
 				81156A152A4842450089C52D /* Assets.xcassets */,
+				85884E1C2F861C1500444CA4 /* Localizable.xcstrings */,
 				81156A172A4842450089C52D /* Demo.entitlements */,
 				81156A182A4842450089C52D /* Preview Content */,
 			);
@@ -507,6 +510,12 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-HK",
+				"zh-Hans",
+				"zh-Hant",
+				fr,
+				"fr-CA",
+				de,
 			);
 			mainGroup = 81156A052A4842430089C52D;
 			packageReferences = (
@@ -534,6 +543,7 @@
 				813925D62A4BFEC500E8BDE6 /* 3.jpg in Resources */,
 				8CB0E6612C0714810017A1EB /* giphy.gif in Resources */,
 				813925D72A4BFEC500E8BDE6 /* 1.jpg in Resources */,
+				85884E1D2F861C1500444CA4 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +654,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
 				TVOS_DEPLOYMENT_TARGET = 15.0;
@@ -704,6 +715,7 @@
 				MTL_FAST_MATH = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 6.0;
 				TVOS_DEPLOYMENT_TARGET = 15.0;
