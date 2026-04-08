@@ -7,6 +7,12 @@
 
 import Foundation
 
+/// 支持的语言列表/Supported languages list
+public enum Languages: String {
+    case ar, en, nl, ja, ko, vi, ru, sv, fr, es, pt, it, de, da, fi, nb, tr, el, id,
+         ms, th, hi, hu, pl, cs, sk, uk, hr, ca, ro, he, ur, fa, ku, arc, sl, ml, am, zh, cn
+}
+
 /// 语言/Language
 /// 语言结构体，包含国家名称和语言类型。/Language struct containing country name and language type.
 public struct Language : Identifiable, Hashable{
@@ -20,26 +26,6 @@ public struct Language : Identifiable, Hashable{
         self.country = country
         self.localize = localize
     }
-}
-
-/// 支持的语言列表/Supported languages list
-public enum Languages: String {
-    case ar, en, nl, ja, ko, vi, ru, sv, fr, es, pt, it, de, da, fi, nb, tr, el, id,
-         ms, th, hi, hu, pl, cs, sk, uk, hr, ca, ro, he, ur, fa, ku, arc, sl, ml, am
-    case enGB = "en-GB"
-    case enAU = "en-AU"
-    case enCA = "en-CA"
-    case enIN = "en-IN"
-    case frCA = "fr-CA"
-    case esMX = "es-MX"
-    case ptBR = "pt-BR"
-    case zhHans = "zh-Hans"
-    case zhHant = "zh-Hant"
-    case zhHK = "zh-HK"
-    case es419 = "es-419"
-    case ptPT = "pt-PT"
-    /// 设备语言/Device language
-    case deviceLanguage
 }
 
 /// 本地化工具/Localization utility
@@ -56,64 +42,52 @@ public struct Localize {
         return availableLanguages
     }
     
-    /// 获取语言列表/Get language list
-    /// - Returns: 语言对象数组/Array of Language objects
-    public static func getList() -> [Language]{
+    public static func getList() -> [Language] {
+        let codes = Bundle.main.localizations.filter { $0 != "Base" }
+        var seen = Set<String>()
         var array: [Language] = []
-        for local in Bundle.main.localizations{
+
+        for local in codes {
+            let normalized: String
             switch local {
-            case "de":
-                array.append(Language(country: "Deutsch", localize: .de))
-            case "ar":
-                array.append(Language(country: "عربي", localize: .ar))
-            case "ja":
-                array.append(Language(country: "日本", localize: .ja))
-            case "en","en-GB","en-AU","en-CA","en-IN":
-                array.append(Language(country: "English", localize: .en))
-            case "nb":
-                array.append(Language(country: "Norsk bokmål", localize: .nb))
-            case "zh-Hant", "zh-HK":
-                array.append(Language(country: "繁体中文", localize: .zhHant))
-            case "es", "es-419", "es-MX", "es-US":
-                array.append(Language(country: "España", localize: .es))
-            case "zh-Hans":
-                array.append(Language(country: "简体中文", localize: .zhHans))
-            case "it":
-                array.append(Language(country: "Italia", localize: .it))
-            case "sk":
-                array.append(Language(country: "Slovensko", localize: .sk))
-            case "ms":
-                array.append(Language(country: "Malaysia", localize: .ms))
-            case "sv":
-                array.append(Language(country: "Sverige", localize: .sv))
-            case "ko":
-                array.append(Language(country: "남한", localize: .ko))
-            case "hu":
-                array.append(Language(country: "Magyarország", localize: .hu))
-            case "tr":
-                array.append(Language(country: "Türkiye", localize: .tr))
-            case "pl":
-                array.append(Language(country: "Polska", localize: .pl))
-            case "vi":
-                array.append(Language(country: "Việt Nam", localize: .vi))
-            case "ru":
-                array.append(Language(country: "Россия", localize: .ru))
-            case "pt-PT", "pt", "pt-BR":
-                array.append(Language(country: "Português", localize: .ptPT))
-            case "fr", "fr-CA":
-                array.append(Language(country: "France", localize: .fr))
-            case "id":
-                array.append(Language(country: "Indonesia", localize: .id))
-            case "nl":
-                array.append(Language(country: "Nederlands", localize: .nl))
-            case "th":
-                array.append(Language(country: "ประเทศไทย", localize: .th))
-            case "ro":
-                array.append(Language(country: "România", localize: .ro))
-            case "hr":
-                array.append(Language(country: "Hrvatska", localize: .hr))
-            default:
-                break
+            case "en-GB", "en-AU", "en-CA", "en-IN":  normalized = "en"
+            case "zh-HK", "zh-Hant":                  normalized = "zh"
+            case "zh-Hans":                           normalized = "cn"
+            case "es-419", "es-MX", "es-US":          normalized = "es"
+            case "pt-BR", "pt-PT":                    normalized = "pt"
+            case "fr-CA":                             normalized = "fr"
+            default:                                  normalized = local
+            }
+
+            guard seen.insert(normalized).inserted else { continue }
+
+            switch normalized {
+            case "de":      array.append(Language(country: "Deutsch",        localize: .de))
+            case "ar":      array.append(Language(country: "عربي",           localize: .ar))
+            case "ja":      array.append(Language(country: "日本語",          localize: .ja))
+            case "en":      array.append(Language(country: "English",        localize: .en))
+            case "nb":      array.append(Language(country: "Norsk bokmål",   localize: .nb))
+            case "zh":      array.append(Language(country: "繁體中文",         localize: .zh))
+            case "es":      array.append(Language(country: "Español",        localize: .es))
+            case "cn":      array.append(Language(country: "简体中文",         localize: .cn))
+            case "it":      array.append(Language(country: "Italiano",       localize: .it))
+            case "sk":      array.append(Language(country: "Slovenčina",     localize: .sk))
+            case "ms":      array.append(Language(country: "Melayu",         localize: .ms))
+            case "sv":      array.append(Language(country: "Svenska",        localize: .sv))
+            case "ko":      array.append(Language(country: "한국어",           localize: .ko))
+            case "hu":      array.append(Language(country: "Magyar",         localize: .hu))
+            case "tr":      array.append(Language(country: "Türkçe",         localize: .tr))
+            case "pl":      array.append(Language(country: "Polski",         localize: .pl))
+            case "vi":      array.append(Language(country: "Tiếng Việt",     localize: .vi))
+            case "ru":      array.append(Language(country: "Русский",        localize: .ru))
+            case "pt":      array.append(Language(country: "Português",      localize: .pt))
+            case "fr":      array.append(Language(country: "Français",       localize: .fr))
+            case "id":      array.append(Language(country: "Indonesia",      localize: .id))
+            case "nl":      array.append(Language(country: "Nederlands",     localize: .nl))
+            case "th":      array.append(Language(country: "ภาษาไทย",         localize: .th))
+            case "ro":      array.append(Language(country: "Română",         localize: .ro))
+            case "hr":      array.append(Language(country: "Hrvatski",       localize: .hr))
+            default:        break
             }
         }
         return array

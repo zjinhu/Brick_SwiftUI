@@ -12,10 +12,7 @@ import Combine
 /// 全局语言设置管理类，管理应用语言选择和布局方向。/Global language settings manager for app language selection and layout direction.
 @MainActor
 public class LanguageSettings: ObservableObject {
-    
-    /// 共享单例实例/Shared singleton instance.
-    public static let shared = LanguageSettings(defaultLanguage: .deviceLanguage)
-    
+
     /// 当前语言区域设置/Current locale setting
     public var local: Locale {
         Locale(identifier: selectedLanguage.rawValue)
@@ -46,7 +43,7 @@ public class LanguageSettings: ObservableObject {
     }
     
     /// 当前选中的语言/Currently selected language
-    @Published public var selectedLanguage: Languages = .deviceLanguage
+    @Published public var selectedLanguage: Languages = .en
     /// 当前显示语言/Current display language
     @AppStorage("currentDisplayLanguage") public var currentDisplayLanguage: String = ""
     
@@ -56,10 +53,9 @@ public class LanguageSettings: ObservableObject {
     
     
     /// 初始化语言设置/Initialize language settings
-    /// - Parameter defaultLanguage: 默认语言/Default language
-    public init(defaultLanguage: Languages) {
+    public init() {
         if language == nil {
-            language = (defaultLanguage == .deviceLanguage ? deviceLanguage : defaultLanguage).map { $0.rawValue }
+            language = deviceLanguage.map { $0.rawValue }
         }
         
         selectedLanguage = Languages(rawValue: language!)!
