@@ -235,20 +235,20 @@ import AppKit
 /// macOS 屏幕信息类 / macOS screen information class
 public class Screen {
     /// 安全区域 / Safe area
-    public static var safeArea: NSEdgeInsets = NSScreen.safeArea
+    @MainActor public static var safeArea: NSEdgeInsets = NSScreen.safeArea
     /// 主屏幕 / Main screen
     public static var main: NSScreen { NSScreen.main! }
     /// 屏幕宽度 / Screen width
-    public static var width = Screen.main.frame.size.width
+    @MainActor public static var width = Screen.main.frame.size.width
     /// 屏幕高度 / Screen height
-    public static var height = Screen.main.frame.size.height
+    @MainActor public static var height = Screen.main.frame.size.height
     /// 缩放比例 / Scale factor
     public static var scale: CGFloat { NSScreen.main?.backingScaleFactor ?? 1.0}
 }
 
 /// NSScreen 安全区域扩展 / NSScreen safe area extension
 fileprivate extension NSScreen {
-    static var safeArea: NSEdgeInsets =
+    @MainActor static var safeArea: NSEdgeInsets =
     NSApplication.shared
         .mainWindow?
         .contentView?

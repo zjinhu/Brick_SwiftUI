@@ -24,7 +24,6 @@ struct NavigationStackTView: View {
         .ss.tabBar(.hidden)
 #endif
             .ss.useNavigationStack()
-            .hiddenBackButtonTitle()
             .ss.navigationDestination(for: NumberList.self, destination: { numberList in
               NumberListView(numberList: numberList)
             })

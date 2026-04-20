@@ -205,7 +205,6 @@ struct DemoStackView: View {
 #endif
             
         }
-        .hiddenBackButtonTitle()
     }
     
     

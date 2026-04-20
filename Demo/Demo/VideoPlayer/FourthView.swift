@@ -80,7 +80,6 @@ struct VideoPlayerView: View {
         
         VideoPlayer(player: viewModel.getPlayer())
             .edgesIgnoringSafeArea(.all)
-            .navigationBarBackButtonHidden()
             .onAppear{
                 viewModel.playPause()
             }

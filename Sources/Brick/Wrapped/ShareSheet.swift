@@ -11,6 +11,7 @@
 //
 
 import SwiftUI
+#if canImport(UIKit)
 import UIKit
 
 /// 分享按钮组件
@@ -91,5 +92,6 @@ public struct ShareSheetView: UIViewControllerRepresentable {
         return controller
     }
     
-    public func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) { }
+public func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) { }
 }
+#endif

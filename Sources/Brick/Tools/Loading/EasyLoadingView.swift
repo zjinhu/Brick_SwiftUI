@@ -43,7 +43,7 @@ public struct EasyLoadingView<Content: View, LoadingView: View>: View{
             
             self.content() 
             
-#if os(iOS) || os(macOS) || os(tvOS) || targetEnvironment(macCatalyst)
+#if os(iOS) || os(tvOS)
             if let maskColor = easyLoadingMaskColor{
                 maskColor
                     .opacity(isShowing ? 1 : 0)

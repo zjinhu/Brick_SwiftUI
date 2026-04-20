@@ -34,7 +34,7 @@ struct ContainerView<Content: View>: View {
     
     var body: some View {
         ZStack{
-#if os(iOS) || os(macOS) || os(tvOS) || targetEnvironment(macCatalyst)
+#if os(iOS) || os(tvOS)
             if let maskColor = manager.maskColor{
                 maskColor
                     .ignoresSafeArea()

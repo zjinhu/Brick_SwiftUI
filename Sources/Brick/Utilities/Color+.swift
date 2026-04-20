@@ -10,8 +10,103 @@ import SwiftUI
 
 #if os(iOS)
 import UIKit
-
 // MARK: - Color Hex 初始化 / Color Hex Initialization
+public extension Color {
+
+    /// 转换为十六进制字符串 / Convert to hex string
+    func toHex() -> String? {
+        let uic = UIColor(self)
+        guard let components = uic.cgColor.components, components.count >= 3 else {
+            return nil
+        }
+        let r = Float(components[0])
+        let g = Float(components[1])
+        let b = Float(components[2])
+        var a = Float(1.0)
+        
+        if components.count >= 4 {
+            a = Float(components[3])
+        }
+        
+        if a != Float(1.0) {
+            return String(format: "%02lX%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255), lroundf(a * 255))
+        } else {
+            return String(format: "%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255))
+        }
+    }
+}
+
+// MARK: - 动态颜色 / Dynamic Colors
+public extension Color {
+    /// 动态颜色 (支持明暗模式) / Dynamic color (light/dark mode support)
+    /// - Parameters:
+    ///   - light: 浅色模式颜色 / Light mode color
+    ///   - dark: 深色模式颜色 / Dark mode color
+    static func dynamic(light: String, dark: String) -> Color {
+        let l = UIColor(hex: light)
+        let d = UIColor(hex: dark)
+        return UIColor.dynamicColor(light: l, dark: d).toColor()
+    }
+    
+    
+    static func dynamic(light: Color, dark: Color) -> Color {
+        let l = UIColor(light)
+        let d = UIColor(dark)
+        return UIColor.dynamicColor(light: l, dark: d).toColor()
+    }
+    
+    
+    /// 转换为 UIColor / Convert to UIColor
+    func toUIColor() -> UIColor {
+        return UIColor(self)
+    }
+}
+
+public extension UIColor {
+    /// 转换为 Color / Convert to Color
+    func toColor() -> Color {
+        return Color(self)
+    }
+}
+
+/// 主题变化检测修饰器 / Theme change detection modifier
+struct DetectThemeChange: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    
+    func body(content: Content) -> some View {
+        
+        if(colorScheme == .dark){
+            content.colorInvert()
+        }else{
+            content
+        }
+    }
+}
+
+/// 视图扩展: 深色主题反转 / View extension: dark theme invert
+public extension View {
+    func invertOnDarkTheme() -> some View {
+        modifier(DetectThemeChange())
+    }
+}
+#endif
+
+// MARK: - 主题相关颜色 / Theme Colors
+public extension Color {
+    /// 默认背景色 / Default background color
+    static let defaultBackground = Color(light: .white, dark: .black)
+    
+    /// List 背景色 (适配明暗模式) / List background (light/dark mode)
+    @ViewBuilder
+    static func listBackground(forScheme scheme: ColorScheme) -> some View {
+        if scheme == .light {
+            Color.primary.colorInvert()
+        } else {
+            Color.primary.opacity(0.102)
+        }
+    }
+}
+
 public extension Color {
     /// 使用 UInt64 十六进制值初始化颜色 / Initialize color with UInt64 hex value
     /// - Parameters:
@@ -79,106 +174,7 @@ public extension Color {
         
         self.init(red: r, green: g, blue: b, opacity: a)
     }
-    
-    /// 转换为十六进制字符串 / Convert to hex string
-    func toHex() -> String? {
-        let uic = UIColor(self)
-        guard let components = uic.cgColor.components, components.count >= 3 else {
-            return nil
-        }
-        let r = Float(components[0])
-        let g = Float(components[1])
-        let b = Float(components[2])
-        var a = Float(1.0)
-        
-        if components.count >= 4 {
-            a = Float(components[3])
-        }
-        
-        if a != Float(1.0) {
-            return String(format: "%02lX%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255), lroundf(a * 255))
-        } else {
-            return String(format: "%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255))
-        }
-    }
 }
-
-// MARK: - 动态颜色 / Dynamic Colors
-public extension Color {
-    /// 动态颜色 (支持明暗模式) / Dynamic color (light/dark mode support)
-    /// - Parameters:
-    ///   - light: 浅色模式颜色 / Light mode color
-    ///   - dark: 深色模式颜色 / Dark mode color
-    static func dynamic(light: String, dark: String) -> Color {
-        let l = UIColor(hex: light)
-        let d = UIColor(hex: dark)
-        return UIColor.dynamicColor(light: l, dark: d).toColor()
-    }
-    
-    
-    static func dynamic(light: Color, dark: Color) -> Color {
-        let l = UIColor(light)
-        let d = UIColor(dark)
-        return UIColor.dynamicColor(light: l, dark: d).toColor()
-    }
-    
-    
-    /// 转换为 UIColor / Convert to UIColor
-    func toUIColor() -> UIColor {
-        return UIColor(self)
-    }
-}
-
-public extension UIColor {
-    /// 转换为 Color / Convert to Color
-    func toColor() -> Color {
-        return Color(self)
-    }
-}
-
-// MARK: - 主题相关颜色 / Theme Colors
-public extension Color {
-    /// 默认背景色 / Default background color
-    static let defaultBackground = Color(light: .white, dark: .black)
-    
-    /// 使用浅色/深色初始化 / Initialize with light/dark colors
-    init(light: Color, dark: Color) {
-        self.init(UIColor.dynamicColor(light: light.toUIColor(), dark: dark.toUIColor()))
-    }
-    
-    /// List 背景色 (适配明暗模式) / List background (light/dark mode)
-    @ViewBuilder
-    static func listBackground(forScheme scheme: ColorScheme) -> some View {
-        if scheme == .light {
-            Color.primary.colorInvert()
-        } else {
-            Color.primary.opacity(0.102)
-        }
-    }
-}
-
-/// 主题变化检测修饰器 / Theme change detection modifier
-struct DetectThemeChange: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
-    
-    func body(content: Content) -> some View {
-        
-        if(colorScheme == .dark){
-            content.colorInvert()
-        }else{
-            content
-        }
-    }
-}
-
-/// 视图扩展: 深色主题反转 / View extension: dark theme invert
-public extension View {
-    func invertOnDarkTheme() -> some View {
-        modifier(DetectThemeChange())
-    }
-}
-#endif
-
 
 // MARK: - 随机颜色 / Random Colors
 extension Color {
@@ -263,6 +259,8 @@ import class AppKit.NSColor
  with colors in a multi-platform context.
  */
 public typealias ColorRepresentable = NSColor
+
+
 #endif
 
 #if canImport(UIKit)

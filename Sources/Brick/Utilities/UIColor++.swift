@@ -5,6 +5,30 @@
 //  Created by iOS on 25/11/2019.
 //  Copyright © 2019 狄烨 . All rights reserved.
 //
+import SwiftUI
+#if os(macOS)
+import AppKit
+typealias NativeColor = NSColor
+#else
+import UIKit
+typealias NativeColor = UIColor
+#endif
+
+extension Color {
+    init(light: NativeColor, dark: NativeColor) {
+        #if os(macOS)
+        let dynamic = NSColor(name: nil) { appearance in
+            appearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua ? dark : light
+        } ?? light
+        self.init(nsColor: dynamic)
+        #else
+        self.init(UIColor { trait in
+            trait.userInterfaceStyle == .dark ? dark : light
+        })
+        #endif
+    }
+
+}
 
 #if os(iOS)
 import UIKit
