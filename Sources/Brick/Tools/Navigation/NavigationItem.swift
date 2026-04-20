@@ -116,38 +116,34 @@ extension NavigationSplitView {
 
 /// 隐藏返回按钮标题修饰器/Hide back button titles modifier
 struct HiddenBackButtonTitlesModifier: ViewModifier {
-    @State private var applied = false
-
     func body(content: Content) -> some View {
         content
-            .overlay(
-                FindNavigationController { nc in
-                    guard let nc, !applied else { return }
-                    applied = true
-                    applyAppearance(to: nc)
+            .background(
+                FindNavigationController { navigationController in
+                    guard let navigationController else { return }
+                    applyHiddenBackButtonTitle(to: navigationController)
                 }
+                .frame(width: 0, height: 0)
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
             )
     }
 
-    /// 应用外观/Apply appearance
-    private func applyAppearance(to nc: UINavigationController) {
-        let hidden: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.clear]
-        let bar = nc.navigationBar
-
-        let std = bar.standardAppearance
-        std.backButtonAppearance.normal.titleTextAttributes = hidden
-        bar.standardAppearance = std
-
-        // 不新建，nil 保持 nil/Don't create new, nil keeps nil
-        if let edge = bar.scrollEdgeAppearance {
-            edge.backButtonAppearance.normal.titleTextAttributes = hidden
-            bar.scrollEdgeAppearance = edge
+    /// 应用返回按钮标题隐藏设置/Apply hidden back button title configuration
+    private func applyHiddenBackButtonTitle(to navigationController: UINavigationController) {
+        navigationController.viewControllers.forEach { viewController in
+            applyHiddenBackButtonTitle(to: viewController.navigationItem)
         }
 
-        if let compact = bar.compactAppearance {
-            compact.backButtonAppearance.normal.titleTextAttributes = hidden
-            bar.compactAppearance = compact
+        if let visibleViewController = navigationController.visibleViewController {
+            applyHiddenBackButtonTitle(to: visibleViewController.navigationItem)
         }
+    }
+
+    /// 隐藏单个导航项的返回按钮标题/Hide back button title for a navigation item
+    private func applyHiddenBackButtonTitle(to navigationItem: UINavigationItem) {
+        navigationItem.backButtonDisplayMode = .minimal
+        navigationItem.backButtonTitle = ""
     }
 }
 
