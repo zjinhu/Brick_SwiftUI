@@ -22,19 +22,6 @@ extension View {
     }
 }
 
-// MARK: - View.overlay
-/// View overlay 扩展 / View overlay extension
-extension View {
-    @_disfavoredOverload
-    @inlinable
-    public func overlay<Overlay: View>(
-        alignment: Alignment = .center,
-        @ViewBuilder _ overlay: () -> Overlay
-    ) -> some View {
-        self.overlay(overlay(), alignment: alignment)
-    }
-}
-
 /// 条件隐藏视图 / Hides view conditionally
 extension View {
     /// 条件隐藏视图 / Hides view conditionally

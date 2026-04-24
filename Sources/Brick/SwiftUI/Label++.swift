@@ -71,3 +71,21 @@ public extension View {
         }
     }
 }
+
+// 1. 定义自定义样式
+public struct RightIconLabelStyle: LabelStyle {
+    var spacing: CGFloat = 2
+    
+    public func makeBody(configuration: Configuration) -> some View {
+        HStack(alignment: .center, spacing: spacing) {
+            configuration.title // 先放文字
+            configuration.icon  // 后放图标
+        }
+    }
+}
+
+// 2. 扩展 LabelStyle，支持优雅的“点语法”调用
+extension LabelStyle where Self == RightIconLabelStyle {
+    public static var rightIcon: RightIconLabelStyle { .init() }
+    public static func rightIcon(spacing: CGFloat) -> RightIconLabelStyle { .init(spacing: spacing) }
+}

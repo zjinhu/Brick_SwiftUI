@@ -12,6 +12,11 @@ struct Toast: View {
     @EnvironmentObject private var toast: ToastManager
     @State var showToast: Bool = false
     @State var showToast1: Bool = false
+    
+    @StateObject var toastQueue = StackToast(
+        position: .bottom
+    )
+    
     var body: some View {
         List {
             
@@ -88,11 +93,23 @@ struct Toast: View {
                     Text("AlertToast")
                 }
                 
+                Button {
+                    toastQueue.show { Text("Toast 1") }
+                } label: {
+                    Text("ToastQueue")
+                }
+                
+                Button {
+                    toastQueue.showText("简便方法")
+                } label: {
+                    Text("ToastQueue")
+                }
             } header: {
                 Text("CustomToast")
             }
         }
         .addToast(toast)
+        .stackToast(toastQueue)
         .ss.tabBar(.hidden)
         .toast(isPresenting: $showToast1){
             AlertToast(displayMode: .hud,
