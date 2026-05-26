@@ -244,6 +244,7 @@ public class Screen {
     @MainActor public static var height = Screen.main.frame.size.height
     /// 缩放比例 / Scale factor
     public static var scale: CGFloat { NSScreen.main?.backingScaleFactor ?? 1.0}
+    public static let lineHeight = CGFloat(1)
 }
 
 /// NSScreen 安全区域扩展 / NSScreen safe area extension

@@ -8,10 +8,10 @@
 import SwiftUI
 #if os(macOS)
 import AppKit
-typealias NativeColor = NSColor
+public typealias NativeColor = NSColor
 #else
 import UIKit
-typealias NativeColor = UIColor
+public typealias NativeColor = UIColor
 #endif
 
 extension Color {
