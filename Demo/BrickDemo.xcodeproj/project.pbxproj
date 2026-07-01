@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		60276C772CE4823F0071BAA9 /* FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60276C762CE4823F0071BAA9 /* FourthView.swift */; };
+		603275502FF4EE4900D727FD /* BrickKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6032754F2FF4EE4900D727FD /* BrickKit */; };
 		608162752A5D8E360083DE04 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608162742A5D8E360083DE04 /* DemoView.swift */; };
 		608162772A5D91660083DE04 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608162762A5D91660083DE04 /* TabbarView.swift */; };
 		81156A122A4842430089C52D /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81156A112A4842430089C52D /* DemoApp.swift */; };
@@ -119,6 +120,7 @@
 				81F9696B2A54217B0052619E /* libswiftAVFoundation.tbd in Frameworks */,
 				81F969692A54216D0052619E /* AVFoundation.framework in Frameworks */,
 				8C7513F12BDDE96100A3CA8D /* BrickKit in Frameworks */,
+				603275502FF4EE4900D727FD /* BrickKit in Frameworks */,
 				85884E1B2F86027C00444CA4 /* BrickKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +485,7 @@
 			packageProductDependencies = (
 				8C7513F02BDDE96100A3CA8D /* BrickKit */,
 				85884E1A2F86027C00444CA4 /* BrickKit */,
+				6032754F2FF4EE4900D727FD /* BrickKit */,
 			);
 			productName = Demo;
 			productReference = 81156A0E2A4842430089C52D /* BrickBrickDemo.app */;
@@ -519,7 +522,7 @@
 			);
 			mainGroup = 81156A052A4842430089C52D;
 			packageReferences = (
-				85884E192F86027C00444CA4 /* XCLocalSwiftPackageReference "../../BrickKit" */,
+				6032754E2FF4EE4900D727FD /* XCLocalSwiftPackageReference "../../Brick_SwiftUI" */,
 			);
 			productRefGroup = 81156A0F2A4842430089C52D /* Products */;
 			projectDirPath = "";
@@ -849,13 +852,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		85884E192F86027C00444CA4 /* XCLocalSwiftPackageReference "../../BrickKit" */ = {
+		6032754E2FF4EE4900D727FD /* XCLocalSwiftPackageReference "../../Brick_SwiftUI" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../BrickKit;
+			relativePath = ../../Brick_SwiftUI;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6032754F2FF4EE4900D727FD /* BrickKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BrickKit;
+		};
 		85884E1A2F86027C00444CA4 /* BrickKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BrickKit;
